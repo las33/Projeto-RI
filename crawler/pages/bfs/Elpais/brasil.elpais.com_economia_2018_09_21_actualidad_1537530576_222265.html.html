@@ -1,0 +1,2122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQEDUVdSCxAIVVVUBggHVw=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(20),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{h?h-=1:o(c||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:s.now();i("err",[t,n])}var i=t("handle"),a=t(21),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",h=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(13),t(12),"addEventListener"in window&&t(6),s.xhrWrappable&&t(14),d=!0)}c.on("fn-start",function(t,e,n){d&&(h+=1)}),c.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),c.on("fn-end",function(){d&&!this.thrown&&h>0&&(h-=1)}),c.on("internal-error",function(t){i("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){M++,S=y.hash,this[u]=b.now()}function o(){M--,y.hash!==S&&i(0,!0);var t=b.now();this[l]=~~this[l]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=b.now()})}var c="-start",s="-end",f="-body",u="fn"+c,d="fn"+s,p="cb"+c,h="cb"+s,l="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,b=t("loader");if(w[v]&&b.xhrWrappable){var g=t(10),x=t(11),E=t(8),P=t(6),O=t(13),R=t(7),T=t(14),L=t(9),j=t("ee"),N=j.get("tracer");t(15),b.features.spa=!0;var S,M=0;j.on(u,r),j.on(p,r),j.on(d,o),j.on(h,o),j.buffer([u,d,"xhr-done","xhr-resolved"]),P.buffer([u]),O.buffer(["setTimeout"+s,"clearTimeout"+c,u]),T.buffer([u,"new-xhr","send-xhr"+c]),R.buffer([m+c,m+"-done",m+f+c,m+f+s]),E.buffer(["newURL"]),g.buffer([u]),x.buffer(["propagate",p,h,"executor-err","resolve"+c]),N.buffer([u,"no-"+u]),L.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,"send-xhr"+c),a(j,"xhr-resolved"),a(j,"xhr-done"),a(R,m+c),a(R,m+"-done"),a(L,"new-jsonp"),a(L,"jsonp-end"),a(L,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,M>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),c=t(12),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",h="-start",l="-end",m="fn"+h,v="fn"+l,w="bstTimer",y="pushState",b=t("loader");b.features.stn=!0,t(8);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=b.now())}),o.on(v,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,b.now()])}),a.on(m,function(t,e,n){this.bstStart=b.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),this.bstType])}),c.on(m,function(){this.bstStart=b.now()}),c.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),"requestAnimationFrame"])}),o.on(y+h,function(t){this.time=b.now(),this.startPath=location.pathname+location.hash}),o.on(y+l,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(23)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(20);e.exports=o;var a=window,c="fetch-",s=c+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,h="prototype";u&&d&&p&&(i(f,function(t,e){r(u[h],e,s),r(d[h],e,s)}),r(a,"fetch",c),o.on(c+"end",function(t,e){var n=this;e?e.clone().arrayBuffer().then(function(t){n.rxSize=t.byteLength,o.emit(c+"done",[null,e],n)}):o.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(23)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){s.emit("jsonp-error",[],p),s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=c(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),s.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function c(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var s=t("ee").get("jsonp"),f=t(23)(s);if(e.exports=s,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,h=["appendChild","insertBefore","replaceChild"];f.inPlace(HTMLElement.prototype,h,"dom-"),f.inPlace(HTMLHeadElement.prototype,h,"dom-"),f.inPlace(HTMLBodyElement.prototype,h,"dom-"),s.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t(23)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=c(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(23),a=t("ee").get("promise"),c=i(a),s=t(20),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;s(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),c=f.resolve(i);return c}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),s(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=c(t[0],"resolve-",this),t[1]=c(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),c.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=c(t[0],"cb-",this),t[1]=c(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t(23)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(23)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",c)}function i(t){b.push(t),l&&(x?x.then(a):v?v(a):(E=-E,P.data=E))}function a(){for(var t=0;t<b.length;t++)r([],b[t]);b.length&&(b=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(23)(u),p=NREUM.o,h=p.XHR,l=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],b=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(h,g),g.prototype=h.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),l){var x=m&&m.resolve();if(!v&&!m){var E=1,P=document.createTextNode(E);new l(a).observe(P,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=a.now()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return l(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(16),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,p=t("id"),h=t(19),l=t(18),m=window.XMLHttpRequest;a.features.xhr=!0,t(14),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=l(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<d;c++)e.addEventListener(u[c],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)})}},{}],16:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],17:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(20),c=t(21),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var l=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(h+"tracer",[f.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){l[e]=o(h+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],21:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],22:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],23:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(21),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),c=l(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([b,n,r,a]),a}}function h(t,e){w[t]=l(t).concat(e)}function l(t){return w[t]||[]}function m(t){return d[t]=d[t]||o(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var w={},y={},b={on:h,emit:n,get:m,listeners:l,context:e,buffer:v,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var c="nr@context",s=t("gos"),f=t(20),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!x++){var t=g.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)}),s("mark",["onload",a()+g.offset],null,"api");var n=p.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===p.readyState&&i()}function i(){s("mark",["domContent",a()+g.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-g.offset}var c=(new Date).getTime(),s=t("handle"),f=t(20),u=t("ee"),d=window,p=d.document,h="addEventListener",l="attachEvent",m=d.XMLHttpRequest,v=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1071.min.js"},b=m&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:c,now:a,origin:w,features:{},xhrWrappable:b};t(17),p[h]?(p[h]("DOMContentLoaded",i,!1),d[h]("load",r,!1)):(p[l]("onreadystatechange",o),d[l]("onload",r)),s("mark",["firstbyte",c],null,"api");var x=0,E=t(22)},{}]},{},["loader",2,15,5,3,4]);</script>
+<meta name="format-detection" content="address=no,email=no,telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title> España deja de ingresar casi 2.000 millones de euros en IVA por fraude y errores | Economía</title>
+<meta name="lang" 			content="es" />
+<meta name="author" 		content="Lluís Pellicer" />
+<meta name="description" 	content="Bruselas urge a la reforma del impuesto al constatar la pérdida de 150.000 millones por ese tributo en toda la UE" />
+<meta name="keywords" 		content="españa, dejar, ingresar, 2.000 millones de euros, iva, fraude, error, bruselas, urgir, reforma, impuesto, constatar, pérdida, 150.000 millones, tributo, ue" />
+<meta name="date" scheme="W3CDTF" content="2018-09-21T13:49:36+02:00" />
+<meta name="DC.date.issued" scheme="W3CDTF" content="2018-09-21" />
+<meta name="DC.date" 		scheme="W3CDTF" 	content="2018-09-21" />
+<meta name="organization" content="Ediciones EL PAÍS S.L."/>
+<meta property="article:modified_time" content="2018-09-21T13:49:36+02:00" />
+<meta property="article:publisher" content="https://www.facebook.com/elpais" />
+<meta property="article:published_time" content="2018-09-21" />
+<meta property="article:section" content="economia" />
+<meta property="article:tag" content="IVA" />
+<meta property="article:tag" content="Pierre Moscovici" />
+<meta property="article:tag" content="Comisión Europea" />
+<meta property="article:tag" content="Fraude fiscal" />
+<meta property="article:tag" content="Impuestos" />
+<meta property="article:tag" content="Tributos" />
+<meta property="article:tag" content="Delitos fiscales" />
+<meta property="article:tag" content="Finanzas públicas" />
+<meta property="article:tag" content="UE" />
+<meta property="article:tag" content="Delitos" />
+<meta name="news_keywords" content="IVA,Pierre Moscovici,Comisión Europea,Fraude fiscal,Impuestos,Tributos,Delitos fiscales,Finanzas públicas,UE,Delitos"/>
+<meta property="og:title" content="España deja de ingresar casi 2.000 millones de euros en IVA por fraude y errores"/>
+<meta property="og:description" content="Bruselas urge a la reforma del impuesto al constatar la pérdida de 150.000 millones por ese tributo en toda la UE"/>
+<meta property="og:image" content="https://ep00.epimg.net/economia/imagenes/2016/09/06/actualidad/1473164768_693959_1473164891_noticia_normal.jpg"/>
+<meta property="og:image:width" content="980">
+<meta property="og:image:height" content="654">
+<meta property="og:updated_time" content="2018-09-21T13:49:36+02:00" />
+<meta property="og:url" 		content="https://elpais.com/economia/2018/09/21/actualidad/1537530576_222265.html" />
+<meta property="og:type" 		content="article"/>
+<meta property="og:site_name"    	content="EL PAÍS"/>
+<meta property="fb:app_id" 		content="94039431626"/>
+<meta property="twitter:card" 	content="summary_large_image" />
+<meta property="twitter:site" 	content="@elpais_economia" />
+<link rel="alternate" href="https://elpais.com/rss/economia/portada.xml" type="application/rss+xml" title="'RSS de la portada de Economia''"/>
+<link rel="amphtml" href="https://elpais.com/economia/2018/09/21/actualidad/1537530576_222265.amp.html" />
+<link rel="canonical" href="https://elpais.com/economia/2018/09/21/actualidad/1537530576_222265.html" />
+<link rel="icon" 		href="https://ep01.epimg.net/favicon.png" type="image/png" />
+<link rel="publisher" 	href="https://plus.google.com/+elpais"/>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": ["ReportageNewsArticle"],
+    "mainEntityOfPage": "https://elpais.com/economia/2018/09/21/actualidad/1537530576_222265.html",
+    "headline": "España deja de ingresar casi 2.000 millones de euros en IVA por fraude y errores",
+    "description": "Bruselas urge a la reforma del impuesto al constatar la pérdida de 150.000 millones por ese tributo en toda la UE",
+    "datePublished": "2018-09-21T13:49:36+02:00",
+    "dateModified": "2018-09-21T13:49:36+02:00",
+    "image": { "@type": "ImageObject", "url": "https://ep00.epimg.net/economia/imagenes/2016/09/06/actualidad/1473164768_693959_1473164891_noticia_normal.jpg", "width": 980, "height": 654 },
+
+    "author": [         {
+        "@type"   : "Person",
+        "name"    : "Lluís Pellicer",
+        "sameAs" : "https://elpais.com/tag/autor/lluis_pellicer/a/"
+        }        ],
+
+    "publisher": {
+        "@type": "NewsMediaOrganization", "name" : "Ediciones EL PAÍS S.L.",
+        "logo" : {"@type":"ImageObject","url":"https://ep01.epimg.net/iconos/v1.x/v1.0/promos/promo_og_elpais.png"}
+    },
+    "publishingPrinciples": "https://elpais.com/estaticos/codigo-etico/"
+}
+</script>
+<link href="//ep01.epimg.net/estilos/v2.x/v2.1/normalizado.css"  rel="stylesheet" />
+<link href="//ep01.epimg.net/estilos/v2.x/v2.2/comunes.css"  rel="stylesheet" />
+<link href="//ep01.epimg.net/estilos/v2.x/v2.1/cabecera.css"  rel="stylesheet" />
+<link href="//ep01.epimg.net/estilos/v2.x/v2.1/noticia.css"  rel="stylesheet" />
+<link href="//ep01.epimg.net/estilos/v2.x/v2.1/imprimir.css" media="print" rel="stylesheet" />
+<link href="//ep01.epimg.net/estilos/v2.x/v2.1/cintillos.css"  rel="stylesheet" />
+<link href="//ep01.epimg.net/estilos/v2.x/v2.1/comercial.css"  rel="stylesheet" />
+<link href="//ep01.epimg.net/elpais/estilos/v2.x/v2.1/economia/economia.css" rel="stylesheet" />
+<script type="text/javascript" src="//ep01.epimg.net/js/v4.x/v4.1/noticia.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	var videoPublicityDown = false;
+	var videoFuente = "0";
+	var url_cache = "//ep02.epimg.net";
+	var url_reproductor_epet = "/reproductores/playerPEP.swf";
+
+        var id_player_mediateca_PEP = "141";
+        var id_cuenta_mediateca_PEP = "elpais";
+        var mediateca_activo_PEP    = true;
+
+        var UrlPublicidad = "//pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=%2F7811748%2Felpais_finanzas_economia_web%2Fplayer_video%2Fflash&ciu_szs=&impl=s&gdfp_req=1&env=vp&output=vast&correlator={random}&unviewed_position_start=1&description_url=[description_url]";
+
+	var publicidad_HTML5 = true;
+	var postroll_HTML5 = true;
+	var marcado_logtrust = true;
+	var modoSiguientesVideos = 0;
+	var retransmisiones = {"akamai_001":"akamaihls_001",
+	"level3_001":"level3hls_001"
+	};
+	var prebidVideoPEP = true;
+
+	var PEPedition = 'brasil';
+	var listado_norm_tags = 'delitos_a,organizaciones_internacionales_a,europa_a,relaciones_exteriores_a,finanzas_a,justicia_a,iva_impuesto_valor_anadido_a,pierre_moscovici_a,comision_europea_a,fraude_fiscal_a,impuestos_a,tributos_a,delitos_fiscales_a,finanzas_publicas_a,ue_union_europea_a';
+	var DFP_tags = ["delitos_a","organizaciones_internacionales_a","europa_a","relaciones_exteriores_a","finanzas_a","justicia_a","iva_impuesto_valor_anadido_a","pierre_moscovici_a","comision_europea_a","fraude_fiscal_a","impuestos_a","tributos_a","delitos_fiscales_a","finanzas_publicas_a","ue_union_europea_a"];
+	var listado_id_tags = '26127,62489,82424,68452,32541,49797,40711,65443,81357,89595,39362,76733,26134,32547,84018';
+	var listado_id_autores = '153';
+	var listado_norm_autores = 'lluis_pellicer_a';
+
+	var referrer = document.referrer;
+	if (referrer.indexOf("//t.co/") >-1 || (referrer.indexOf("twitter.com") > 0 && referrer.indexOf("twitter.com") < 30) )
+	{
+		if (typeof(DFP_tags) != "undefined")
+			DFP_tags.push("fromtwitter");
+		else
+			var DFP_tags = ["fromtwitter"];
+	}
+
+	var reg_ref_noticia = /http.?:\/\/[^\/]*\/[^\/]*\/\d+\/\d+\/\d+\/[^\/]*\/(.*?)\.html/i;
+	var result_rrn = reg_ref_noticia.exec(document.location.href);
+	if (result_rrn)
+	{
+		if (typeof(DFP_tags) != "undefined")
+			DFP_tags.push(result_rrn[1]);
+		else
+			var DFP_tags = [result_rrn[1]];
+	}
+
+//]]>
+</script>
+<script language="Javascript" type="text/javascript" src="//ep01.epimg.net/js/comun/cx/recomendador.min.js"></script></head>
+<body id="salida_articulo" class="salida_articulo"><div id="pxlhddncntrl" style="display:none"><script type="text/javascript" src="//ep00.epimg.net/js/prisa/user.js?i=1"></script><script type="text/javascript" src="//ep00.epimg.net/js/v4.x/v4.0/user.js"></script><script type="text/javascript" src="https://ep00.epimg.net/js/comun/avisopcgdpr.js?u=2018"></script><script type="text/javascript" src="https://gdpr.prisa.com/cmp.bundle.js?u=2018"></script><script type="text/javascript" src="//ep00.epimg.net/js/gdt/577c3689ea990d22d8d98c00c4aa568bec64a426/satelliteLib-28ad3885d20336165372ce7de5caf99dd332388c.js?20171005"></script><script type="text/javascript" src="//ep00.epimg.net/js/comun/comun.js"></script></div>
+<script type="text/javascript" src="//ep00.epimg.net/js/pbs/pbs.slots.js?20180917"></script>
+<div id="AdsCode" style="display:none">
+<script type="text/javascript">
+		var gtpadunit= '';
+		var gtpdivid= 'elpais_gpt';
+		var listadoKW = [];
+
+		if (typeof(DFP_tags) != "undefined" )
+			listadoKW = DFP_tags;
+
+		if (document.referrer == "https://elpais.com/" )
+		{
+			listadoKW.push("articuloportada");
+		}
+
+		var la_kw_edicion_y_pais = ['p_3','g_BR'];
+		listadoKW = listadoKW.concat(la_kw_edicion_y_pais);
+
+		if ( "" != "") {
+                    // Kw de directo
+                    listadoKW.push("");
+		}
+
+		if (typeof(PBS) != "undefined")
+		{
+
+			var lo_bit	 = "";
+			var pbs_dimensiones = EPETBrowserDims();
+			var lb_es_movil =  (dispositivoMovil) ? dispositivoMovil : false;
+
+			var gtpadunit="";
+
+			//WEB
+			if (lb_es_movil == false)
+				var ls_publi_tipo_acceso = "web";
+			//MOVIL
+			else
+				var ls_publi_tipo_acceso= "mob";
+
+			if ("economia" == "elpais"){
+				switch ("actualidad") {
+			        case 'icon':
+			            gtpadunit = "icon_"+ls_publi_tipo_acceso+"/"+"noticias";
+			            break;
+			        case 'ciencia':
+			            gtpadunit = "elpais_materia_"+ls_publi_tipo_acceso+"/"+"noticias";
+			            break;
+			        case 'buenavida':
+			            gtpadunit = "elpais_buenavida_"+ls_publi_tipo_acceso+"/"+"noticias";
+			            break;
+			        case 'eps':
+			            gtpadunit = "elpais_eps_"+ls_publi_tipo_acceso+"/"+"noticias";
+			            break;
+			        default:
+			            gtpadunit = "elpais_"+ls_publi_tipo_acceso+"/"+"actualidad";
+			            break;
+			  	}
+			}else if ("economia" == "elviajero"){
+				gtpadunit = "elviajero_"+ls_publi_tipo_acceso+"/"+"noticias";
+			}else if ("economia" == "economia"){
+				gtpadunit = "elpais_finanzas_economia_"+ls_publi_tipo_acceso;
+			}else if ("economia" == "deportes"){
+				switch ("actualidad") {
+                                    case 'mundial_futbol':
+                                        gtpadunit = "elpais_"+ls_publi_tipo_acceso+"/"+"economia"+"/"+"actualidad";
+                                        break;
+                                    case 'actualidad':
+                                    default:
+                                        gtpadunit = "elpais_"+ls_publi_tipo_acceso+"/"+"economia";
+                                        break;
+                                }
+			}else{
+				gtpadunit = "elpais_"+ls_publi_tipo_acceso+"/"+"economia";
+			}
+
+
+
+			if (pbs_dimensiones.ancho >= 980){
+					var huecosPBS = {
+						'inter':true,
+						'skin':true,
+		                'ldb1':[[728, 90],[980, 90],[980,180],[980,220],[980,250],[970,250]],
+		                'ldb2':[[728, 90], [980, 90]],
+		                'ldb3':[980, 90],
+		                'mpu1':[[300, 250],[300, 600]],
+		                'mpu2':[300, 250],
+		                'mpu3':[300, 250]
+					};
+					lo_bit = "";
+			}else if (pbs_dimensiones.ancho >= 728) {
+					var huecosPBS = {
+						'inter':true,
+						'ldb1':[728, 90],
+						'ldb2':[728, 90],
+						'ldb3':[728, 90],
+						'mpu3':[300,250]
+					};
+					lo_bit = [{
+	                    sel:'#cuerpo_noticia > p, #cuerpo > p',
+	                    min:2,
+	                    cls:"publi_luto_vertical",
+	                    pos:{
+	                        'mpu1': [1,[[300,600],[300,250]]],
+	                        'mpu2': [5,[300,250]]
+	                      }
+	                	}];
+			}else{
+					var huecosPBS = {
+						'mldb1':[[320, 50],[320,100]],
+						'mldb3':[320, 50],
+						'mpu3':[300,250]
+					};
+
+					lo_bit = [{
+	                    sel:'#cuerpo_noticia > p, #cuerpo > p',
+	                    min:2,
+	                    cls:"publi_luto_vertical",
+	                    pos:{
+	                        'mpu1': [1,[[300,600],[300,250]]],
+	                        'mpu2': [5,[300,250]]
+	                      }
+	                	}];
+			}
+
+			// ----------------------------------------------------------- //
+			// Noticias sin columna dos, NO llevan robas MPU1, MPU2, MPU3
+			// ----------------------------------------------------------- //
+			if (false == true){
+				lo_bit = "";
+				//elimina los robas
+				if (typeof(huecosPBS.mpu1) != "undefined") delete(huecosPBS.mpu1);
+				if (typeof(huecosPBS.mpu2) != "undefined") delete(huecosPBS.mpu2);
+				if (typeof(huecosPBS.mpu3) != "undefined") delete(huecosPBS.mpu3);
+			}
+			// ----------------------------------------------------------- //
+
+			var la_opciones_publicidad = {
+				asy:true,
+				adunit:gtpadunit,
+				divid:gtpdivid,
+				key:{ paiskey:listadoKW },
+				ads:huecosPBS,
+				ced:true,
+				viT:{
+                   "sel":'#cuerpo_noticia > p, #cuerpo > p',
+                   "c":{
+                      "ch":300,
+                      "el":2,
+                      "mb":"20px",
+                      "f": "1D",
+                      "fc":"fr_pbs_VAST"
+                   }
+                }
+			};
+
+
+			if (lo_bit != ""){
+				la_opciones_publicidad["biT"] = lo_bit;
+			}
+
+			//En salida especial no pedimos publicidad
+                        if (document.body.className.indexOf('salida_articulo_especial') > -1){
+                                la_opciones_publicidad.ads = {};
+                                la_opciones_publicidad.viT = {};
+			}
+
+			//
+			PBS.setAds(la_opciones_publicidad);
+		}
+		else
+			var PBS = {display:function(){}};
+	</script>
+</div>
+<div class="envoltorio_publi estirar">
+<script type='text/javascript'>
+if (pbs_dimensiones.ancho >= 980) {
+	document.write("<div id='elpais_gpt-INTER'>	<script type='text/javascript'>	PBS.display('INTER');<\/script></div><div id='elpais_gpt-SKIN'><script type='text/javascript'>PBS.display('SKIN');<\/script></div>");
+}
+</script>
+</div>
+<div id="contenedor" class="contenedor">
+<main class="principal" id="principal">
+<div class="cabecera__envoltorio">
+<div class="envoltorio_publi envoltorio_publi_billboard  estirar">
+<script type='text/javascript'>
+
+	if ( pbs_dimensiones.ancho  >= 728){
+		document.write("<div id='elpais_gpt-LDB1' class='publi_luto_vertical'><script type='text/javascript'>PBS.display('LDB1');<\/script></div>");
+	}
+	else
+		document.write("<div id='elpais_gpt-MLDB1' class='publi_luto_vertical'><script type='text/javascript'>PBS.display('MLDB1');<\/script></div>");
+</script>
+</div>
+<header class="cabecera" id="cabecera">
+<div class="cabecera__interior" id="cabecera__interior">
+<div class="cabecera-superior">
+<div class="cabecera-superior__interior">
+<div class="contenedor_centro">
+<div class="ediciones">
+<div class="ediciones__interior">
+<span class="ediciones-titulo">Seleccione Edição</span>
+<nav class="ediciones-navegacion">
+<ul class="ediciones-navegacion-listado">
+<li class=""><a href="/s/setEspana.html"><abbr title="Edição Espanha">ESP</abbr></a></li>
+<li class=""><a href="/s/setAmerica.html"><abbr title="Edição América">AME</abbr></a></li>
+<li class="activo"><a href="/s/setBrasil.html"><abbr title="Edição Brasil">BRA</abbr></a></li>
+<li class=""><a href="/s/setCat.html"><abbr title="Edição Catalunha">CAT</abbr></a></li>
+<li class=""><a href="//elpais.com/elpais/inenglish.html"><abbr title="Edição In English">ENG</abbr></a></li>
+</ul>
+</nav> 
+</div> 
+</div> 
+</div> 
+<div class="contenedor_derecha">
+<div class="navegacion-sucripcion">
+<ul itemtype="https://schema.org/SiteNavigationElement" itemscope="" class="sucripcion-listado">
+<li class="newsletter" itemprop="name"><a href="//usuarios.elpais.com/newsletters/?id_externo_promo=rpv_newsletters_bar_ep" itemprop="url">Newsletter</a></li>
+<li class="suscribete" itemprop="name"><a href="//suscripciones.elpais.com/?id_externo_promo=suscrip_cabecera_ep.com" itemprop="url">Suscríbete</a></li>
+</ul>
+</div>
+<div class="usuario" id="usuario">
+<a class="boton_usuario" id="boton_usuario" href="https://plus.elpais.com/conectar?prod=REG&o=CABEP&backURL=https%3A%2F%2Felpais.com%2Feconomia%2F2018%2F09%2F21%2Factualidad%2F1537530576_222265.html">Con&eacute;ctate</a>
+<div id="usuario__interior"  class="oculto">
+<button class="boton_cerrar" id="cerrar_usuario">Cerrar</button>
+<div class="usuario-estado"></div>
+</div>
+</div> 
+<div class="buscador" id="buscador">
+<button class="boton_buscador" id="boton_buscador">Buscador</button>
+<div class="buscador__interior">
+<button class="boton_cerrar" id="cerrar_buscador">Cerrar</button>
+<div class="buscador-formulario">
+<form name="formulario_busquedas" action="/buscador/" method="POST">
+<input type="search" name="qt" placeholder="Buscar contenido" value="" autocomplete="off">
+<button class="boton_buscar" id="boton_buscar">Buscar</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cabecera-inferior">
+<div class="cabecera-inferior__interior">
+<div class="elpais" id="elpais">
+<div class="elpais-menu" id="elpais-menu">
+<button id="boton_elpais-menu" class="boton boton_elpais-menu"><span>Secciones</span> <span></span> <span></span> <span></span></button>
+<div class="elpais-menu__interior">
+<button id="cerrar_elpais-menu" class="boton_cerrar"><span>Cerrar</span> <span></span> <span></span> <span></span></button>
+<div class="ediciones">
+<div class="ediciones__interior">
+<span class="ediciones-titulo">Seleccione Edição</span>
+<nav class="ediciones-navegacion">
+<ul class="ediciones-navegacion-listado">
+<li class=""><a href="/s/setEspana.html"><abbr title="Edição Espanha">ESP</abbr></a></li>
+<li class=""><a href="/s/setAmerica.html"><abbr title="Edição América">AME</abbr></a></li>
+<li class="activo"><a href="/s/setBrasil.html"><abbr title="Edição Brasil">BRA</abbr></a></li>
+<li class=""><a href="/s/setCat.html"><abbr title="Edição Catalunha">CAT</abbr></a></li>
+<li class=""><a href="//elpais.com/elpais/inenglish.html"><abbr title="Edição In English">ENG</abbr></a></li>
+</ul>
+</nav> 
+</div> 
+</div> 
+<div id="tamanoletra" class="tamanoletra"> <span class="tamanoletra-nombre">Tamaño letra</span>
+<button id="tamanoletra--disminuir" title="Disminuir tamaño de letra">a<sup>-</sup></button>
+<button id="tamanoletra--aumentar"  title="Aumentar tamaño de letra">A<sup>+</sup></button>
+</div>
+<div class="altocontraste" id="altocontraste">
+<button id="boton_altocontraste" class="boton_altocontraste"><span class="boton-nombre">Alto contraste</span> <span class="control"><span class="control-punto"></span></span> </button>
+</div>
+<nav class="elpais-navegacion">
+<div class="navegacion navegacion_secciones"> 
+<ul itemscope="" itemtype="https://schema.org/SiteNavigationElement" class="navegacion-listado" id="navegacion-listado">
+<li id="subnavegacion_internacional" itemprop="name" class="internacional navegacion_secciones--submenu">
+<a itemprop="url" href="//elpais.com/internacional/">Internacional</a>
+<button id="boton_subnavegacion_internacional">mostrar/ocultar menú Internacional</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/europa/a/">Europa</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/internacional/estados_unidos.html">Estados Unidos</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/internacional/mexico.html">México</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/latinoamerica/a/">América Latina</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/oriente_proximo/a/">Oriente Próximo</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/c/fc0affdd9ca95b29da5e148791d8b5d0">Asia</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/africa/a/">África</a></li>
+</ul>
+</div>
+</li>
+<li id="subnavegacion_opinion" itemprop="name" class="opinion navegacion_secciones--submenu">
+<a itemprop="url" href="//elpais.com/elpais/opinion.html">Opinión</a>
+<button id="boton_subnavegacion_opinion">mostrar/ocultar menú Opinión</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/c/aac32d0cdce5eeb99b187a446e57a9f7">Editoriales </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/c/514bd6a205caa1702b2026725f48a60d">Tribunas </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/c/ec7a643a2efd84d02c5948f7a9c86aa7">Viñetas </a></li>
+</ul>
+</div>
+</li>
+<li id="subnavegacion_politica" itemprop="name" class="politica navegacion_secciones--submenu">
+<a itemprop="url" href="//elpais.com/politica">España</a>
+<button id="boton_subnavegacion_politica">mostrar/ocultar menú España</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/andalucia/a/">Andalucía </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/ccaa/catalunya.html">Cataluña </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/comunidad_valenciana/a/">C. Valenciana </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/galicia/a/">Galicia </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/ccaa/madrid.html">Madrid </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/pais_vasco/a/">País Vasco </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/ccaa/">Más comunidades </a></li>
+</ul>
+</div>
+</li>
+<li id="subnavegacion_sociedad" itemprop="name" class="sociedad navegacion_secciones--submenu">
+<a itemprop="url" href="//elpais.com/sociedad/">Sociedad</a>
+<button id="boton_subnavegacion_sociedad">mostrar/ocultar menú Sociedad</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="/tag/educacion/a/">Educaci&oacute;n </a></li>
+<li itemprop="name"><a itemprop="url" href="/tag/medio_ambiente/a/">Medio Ambiente </a></li>
+<li itemprop="name"><a itemprop="url" href="/tag/igualdad_oportunidades/a/">Igualdad </a></li>
+<li itemprop="name"><a itemprop="url" href="/tag/sanidad/a/">Sanidad </a></li>
+<li itemprop="name"><a itemprop="url" href="/tag/consumo/a/">Consumo </a></li>
+<li itemprop="name"><a itemprop="url" href="/tag/asuntos_sociales/a/">Asuntos sociales </a></li>
+<li itemprop="name"><a itemprop="url" href="/tag/laicismo/a/">Laicismo </a></li>
+<li itemprop="name"><a itemprop="url" href="/tag/comunicacion/a/">Comunicaci&oacute;n </a></li>
+</ul>
+</div>
+</li>
+<li id="subnavegacion_economia" itemprop="name" class="economia navegacion_secciones--submenu">
+<a itemprop="url" href="//elpais.com/economia">Economía </a>
+<button id="boton_subnavegacion_economia">mostrar/ocultar menú Economía</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/mercados_financieros/a/">Mercados </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/agr/ahorros/a/">Mis ahorros</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/economia/vivienda.html">Vivienda </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/agr/mis_derechos/a/">Mis Derechos </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/agr/formacion/a/">Formación</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/agr/negocios/a/"><strong>Negocios </strong></a></li>
+<li itemprop="name"><a itemprop="url" href="//cincodias.elpais.com/"><strong>Cincodías </strong></a></li>
+<li itemprop="name"><a itemprop="url" href="//retina.elpais.com/"><strong>Retina </strong></a></li>
+</ul>
+</div>
+</li>
+<li id="subnavegacion_ciencia" itemprop="name" class="ciencia"> <a itemprop="url" href="//elpais.com/elpais/ciencia.html">Ciencia</a> </li>
+<li id="subnavegacion_tecnologia" itemprop="name" class="tecnologia navegacion_secciones--submenu">
+<a itemprop="url" href="//elpais.com/tecnologia/">Tecnología</a>
+<button id="boton_subnavegacion_tecnologia">mostrar/ocultar menú Tecnología</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/tecnologias_movilidad/a/">Móviles</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/redes_sociales/a/">Redes sociales</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/agr/banco_de_pruebas_gadgets/a">Banco de pruebas</a></li>
+<li itemprop="name"><a itemprop="url" href="//retina.elpais.com/">Retina</a></li>
+<li itemprop="name"><a itemprop="url" href="http://www.meristation.com/">Meristation</a></li>
+</ul>
+</div>
+</li>
+<li id="subnavegacion_cultura" itemprop="name" class="cultura navegacion_secciones--submenu">
+<a itemprop="url" href="//elpais.com/cultura/">Cultura</a>
+<button id="boton_subnavegacion_cultura">mostrar/ocultar menú Cultura</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/libros/a/">Literatura </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/cine/a/">Cine </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/musica/a/">Música </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/teatro/a/">Teatro </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/danza/a/">Danza </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/arte/a/">Arte </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/arquitectura/a/">Arquitectura </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/toros/a/">Toros </a></li>
+</ul>
+</div>
+</li>
+<li id="subnavegacion_gente" itemprop="name" class="gente navegacion_secciones--submenu">
+<a itemprop="url" href="//elpais.com/tag/gente/a">Gente</a>
+<button id="boton_subnavegacion_gente">mostrar/ocultar menú Gente</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="//elpais.com/elpais/estilo.html">Estilo </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/agr/viva_la_diva/a">Viva la Diva </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/agr/tendenciosas/a">Tendenciosas </a></li>
+<li itemprop="name"><a itemprop="url" href="//horoscopo.elpais.com">Horóscopo </a></li>
+</ul>
+</div>
+</li>
+<li id="subnavegacion_estilo" itemprop="name" class="estilo navegacion_secciones--submenu">
+<a itemprop="url" href="//elpais.com/elpais/estilo.html">Estilo</a>
+<button id="boton_subnavegacion_estilo">mostrar/ocultar menú Estilo</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/moda/a/">Moda </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/gastronomia/a/">Gastronomía </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/gente/a/">Gente </a></li>
+</ul>
+</div>
+</li>
+<li id="subnavegacion_deportes" itemprop="name" class="activo navegacion_secciones--submenu">
+<a itemprop="url" class="deportes" href="//elpais.com/deportes/">Deportes</a>
+<button id="boton_subnavegacion_deportes">mostrar/ocultar menú Deportes</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/futbol/a/">Fútbol </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/baloncesto/a/">Baloncesto </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/tenis/a/">Tenis </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/ciclismo/a/">Ciclismo </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/formula_1/a/">Fórmula 1 </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/motociclismo/a/">Motociclismo </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/golf/a/">Golf </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/c/71ddc71077b77126d68866b37ca75576">Otros deportes </a></li>
+</ul>
+</div>
+</li>
+<li id="subnavegacion_television" itemprop="name" class="television navegacion_secciones--submenu">
+<a itemprop="url" href="//elpais.com/cultura/television.html">Televisión</a>
+<button id="boton_subnavegacion_television">mostrar/ocultar menú Televisión</button>
+<div class="subnavegacion">
+<ul class="navegacion-listado">
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/series_tv/a">Series</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/agr/quinta_temporada/a">Quinta Temporada</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/c/7d625399e46888dd89ed95dffc053da9">Programas</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/c/9ad0cb2811e406a7c7b0a939844d33e2">Comunicación</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/critica_television/a">Crítica TV</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/avance_television/a">Avances</a></li>
+<li itemprop="name"><a itemprop="url" href="http://programacion-tv.elpais.com/">Programación TV</a></li>
+</ul>
+</div>
+</li>
+<li itemprop="name" class="inenglish"> <a itemprop="url" href="//elpais.com/elpais/inenglish.html">In english</a> </li>
+<li itemprop="name" class="motor"> <a itemprop="url" href="http://motor.elpais.com">Motor</a> </li>
+</ul>
+</div>
+<div class="navegacion navegacion_suplementos"> 
+<ul class="navegacion-listado" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+<li itemprop="name" class="retina"><a itemprop="url" href="//retina.elpais.com">Retina</a></li>
+<li itemprop="name" class="cinco_dias"><a itemprop="url" href="//cincodias.elpais.com">Cinco Días</a></li>
+<li itemprop="name" class="eps"><a itemprop="url" href="http://elpaissemanal.elpais.com/">EL PAÍS SEMANAL</a></li>
+<li itemprop="name" class="babelia"><a itemprop="url" href="//elpais.com/cultura/babelia.html">Babelia</a></li>
+<li itemprop="name" class="el_viajero"><a itemprop="url" href="//elviajero.elpais.com/">El Viajero</a></li>
+<li itemprop="name" class="negocios"><a itemprop="url" href="//elpais.com/agr/negocios/a/">Negocios</a></li>
+<li itemprop="name" class="ideas"><a itemprop="url" href="//elpais.com/agr/ideas/a/">Ideas</a></li>
+<li itemprop="name" class="verne"><a itemprop="url" href="https://verne.elpais.com">Verne</a></li>
+<li itemprop="name" class="planeta_futuro"><a itemprop="url" href="//elpais.com/elpais/planeta_futuro.html">Planeta Futuro</a></li>
+<li itemprop="name" class="el_comidista"><a itemprop="url" href="https://elcomidista.elpais.com/" >El Comidista</a></li>
+<li itemprop="name" class="smoda"><a itemprop="url" href="http://smoda.elpais.com/">Smoda</a></li>
+<li itemprop="name" class="buenavida"><a itemprop="url" href="//elpais.com/elpais/buenavida.html">BuenaVida</a></li>
+<li itemprop="name" class="icon"><a itemprop="url" href="//elpais.com/elpais/icon.html">ICON</a></li>
+<li itemprop="name" class="tentaciones"><a itemprop="url" href="//elpais.com/elpais/tentaciones.html">Tentaciones</a></li>
+<li itemprop="name" class="mamas_papas"><a itemprop="url" href="//elpais.com/agr/mamas_papas/">Mamas & Papas</a></li>
+</ul>
+</div>
+<div class="navegacion navegacion_ademas"> 
+<ul class="navegacion-listado" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+<li itemprop="name" class="fotos"><a itemprop="url" href="//elpais.com/elpais/album.html">Fotos</a></li>
+<li itemprop="name" class="vinetas"><a itemprop="url" href="//elpais.com/tag/c/ec7a643a2efd84d02c5948f7a9c86aa7">Viñetas</a></li>
+<li itemprop="name" class="especiales"><a itemprop="url" href="//elpais.com/elpais/especiales.html">Especiales</a></li>
+<li itemprop="name" class="obituarios"><a itemprop="url" href="//elpais.com/tag/obituario/a/">Obituarios</a></li>
+<li itemprop="name" class="hemeroteca"><a itemprop="url" href="//elpais.com/diario/">Hemeroteca</a></li>
+<li itemprop="name" class="el_tiempo"><a itemprop="url" href="http://servicios.elpais.com/el-tiempo/">El tiempo</a></li>
+<li itemprop="name" class="servicios"><a itemprop="url" href="http://servicios.elpais.com/">Servicios</a></li>
+<li itemprop="name" class="blogs"><a itemprop="url" href="//elpais.com/elpais/blogs.html">Blogs</a></li>
+<li itemprop="name" class="promociones"><a href="//elpais.com/promociones/" itemprop="url">Promociones</a></li>
+<li itemprop="name" class="estudiantes"><a href="//elpais.com/elpais/escaparate.html" itemprop="url">Escaparate</a></li>
+<li itemprop="name" class="estudiantes"><a href="http://estudiantes.elpais.com/" itemprop="url">El País de los estudiantes</a></li>
+<li itemprop="name" class="escuela"><a href="http://escuela.elpais.com/" itemprop="url">Escuela de periodismo</a></li>
+<li itemprop="name" class="promociones"><a href="//elpais.com/suscripciones/elpaismas.html" itemprop="url">El País +</a></li>
+<li itemprop="name" class="descuentos"><a href="//descuentos.elpais.com" itemprop="url">Descuentos</a></li>
+</ul>
+</div>
+<div class="navegacion-inferior">
+<div class="elpais-social" id="organizacion" itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization"> <span class="elpais-social-nombre">Síguenos en</span>
+<meta itemprop="url" content="https://elpais.com" />
+<meta itemprop="name" content="EL PAÍS" />
+<ul>
+<li><a itemprop="sameAs" rel="nofollow" class="boton_twitter" href="https://twitter.com/el_pais">Síguenos en Twitter</a></li>
+<li><a itemprop="sameAs" rel="nofollow" class="boton_facebook" href="https://www.facebook.com/elpais">Síguenos en Facebook</a></li>
+<li><a itemprop="sameAs" rel="nofollow" class="boton_googleplus" href="https://plus.google.com/+elpais/">Síguenos en Twitter</a></li>
+<li><a itemprop="sameAs" rel="nofollow" class="boton_instagram" href="https://www.instagram.com/el_pais/">Síguenos en Instagram</a></li>
+</ul>
+<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+<meta itemprop="url" content="https://ep01.epimg.net/iconos/v2.x/v2.0/logos/elpais.png">
+<meta itemprop="width" content="267">
+<meta itemprop="height" content="60">
+</div>
+</div>
+<div class="navegacion-sucripcion">
+<ul class="sucripcion-listado" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+<li itemprop="name" class="newsletter"><a itemprop="url" href="//usuarios.elpais.com/newsletters/?id_externo_promo=rpv_newsletters_ham_ep">Newsletter</a></li>
+<li itemprop="name" class="suscribete"><a itemprop="url" href="//elpais.com/suscripciones/?id_externo_promo=rpv_sus_ham_ep">Suscríbete</a></li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+</div>
+<div itemtype="https://data-vocabulary.org/Breadcrumb" itemscope="" class="elpais-logo">
+<a href="//elpais.com" itemprop="url"><span itemprop="title">EL PAÍS</span></a>
+</div>
+</div>
+<div class="cabecera-seccion " id="cabecera-seccion">
+<div class="seccion">
+<div class="seccion-migas">
+<span itemtype="https://data-vocabulary.org/Breadcrumb" itemscope="" class="miga miga_seccion"> 
+<a class="enlace" title="Ir a 'Economía'"
+href="/economia/" itemprop="url">
+<span itemprop="title">Economía</span>
+</a> 
+</span>
+</div> 
+<div class="seccion-submenu">
+<div class="seccion-submenu__interior">
+<nav class="seccion-submenu-navegacion">
+<ul class="seccion-submenu-navegacion-listado" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+<li itemprop="name"><a itemprop="url" href="//resultados.elpais.com/mercados/indices/">Mercados </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/agr/ahorros/a/">Mis ahorros</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/economia/vivienda.html">Vivienda </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/agr/mis_derechos/a/">Mis Derechos </a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/agr/formacion/a/">Formación</a></li>
+<li itemprop="name"><a itemprop="url" href="//elpais.com/tag/fecha/ultimahora/" class="titulares">Titulares &raquo;</a></li>
+<li itemprop="name" class="negocios_submenu"><a itemprop="url" href="//elpais.com/agr/negocios/a">Negocios </a></li>
+<li itemprop="name" class="cincodias_submenu"><a itemprop="url" href="//cincodias.elpais.com/">CincoDías </a></li>
+<li itemprop="name" class="retina_submenu"><a itemprop="url" href="//retina.elpais.com/">Retina </a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div> 
+</div>
+</div>
+</div>
+</div>
+</header>
+</div>
+<div class="articulo__envoltorio">
+<article class="articulo articulo--nointro " itemscope itemprop="mainEntity" itemtype="https://schema.org/ReportageNewsArticle" itemref="organizacion">
+<div class="articulo__interior" id="articulo_interior">
+<div class="articulo__apertura">
+<header class="articulo-encabezado " id="articulo-encabezado" >
+<div class="articulo-encabezado-texto">
+<div class="articulo-titulares" id="articulo-titulares">
+<h1 class="articulo-titulo " id="articulo-titulo" itemprop="headline">España deja de ingresar casi 2.000 millones de euros en IVA por fraude y errores</h1>
+<meta itemprop="url" content="//elpais.com/economia/2018/09/21/actualidad/1537530576_222265.html"/>
+<div class="articulo-subtitulos"><h2  itemprop="alternativeHeadline"  class="articulo-subtitulo">Bruselas urge a la reforma del impuesto al constatar la pérdida de 150.000 millones por ese tributo en toda la UE</h2>
+</div>                         </div> 
+</div>
+<aside class="compartir" id="compartir_superior">
+<div class="compartir__interior">
+<div class="compartir-social" id="compartir_social">
+<button class="boton_facebook" id="superior_fb"><span class="boton-nombre">Compartir en Facebook</span> </button>
+<button class="boton_twitter" id="superior_twit"><span class="boton-nombre">Compartir en Twitter</span> </button>
+<div class="compartir-otros" id="compartir-otros_sup">
+<button class="boton_compartir-otros" id="boton_compartir-otros_sup">Otros</button>
+<div class="compartir-otros__interior">
+<button class="boton_cerrar"     id="cerrar_compartir-otros_sup">Cerrar</button>
+<button class="boton_linkedin"   id="superior_linkedin">Compartir en Linkedin</button>
+<button class="boton_googleplus" id="superior_gp">Compartir en GooglePlus</button>
+<button class="boton_pinterest"  id="superior_pinit">Compartir en Pinterest</button>
+</div>
+</div>
+<a href="#comentarios" id="boton_comentarios" class="boton_comentarios"><span class="boton-nombre">Ver comentarios</span> <span id="num_comentarios_header_compartir_1537530576-906e701f429b78bc9c3138c2491afc12" class="boton-contador"></span></a>
+</div>
+<div class="compartir-varios">
+<div class="favoritos" id="favoritos"> </div>
+<div class="correo" id="correo"> </div>
+<button class="boton_imprimir" id="boton_imprimir"><span class="nombre">Imprimir</span></button>
+</div>
+</div>
+<script>
+        if(typeof EPETMail != "undefined")       new EPETMail ( document.getElementById('superior_enviar'), document.getElementById('superior_capaEnviarCorreo'));
+        if(typeof EPETTwitter != "undefined")    new EPETTwitter ( document.getElementById('superior_twit'), params );
+        if(typeof EPETFacebook != "undefined")   new EPETFacebook ( document.getElementById('superior_fb'), params );
+        if(typeof EPETGooglePlus != "undefined") new EPETGooglePlus ( document.getElementById('superior_gp'), params );
+        if(typeof EPETLinkedin != "undefined")   new EPETLinkedin ( document.getElementById('superior_linkedin'), params );
+        if(typeof EPETPinterest != "undefined")  new EPETPinterest ( document.getElementById('superior_pinit'), params );
+    </script>
+</aside>                                </header>
+<div class="articulo-apertura ">
+<div class="firma ">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<figure class="foto" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<meta itemprop="url" content="https://ep00.epimg.net/miperfil/avatares/2/AA/lpellicer.jpg"/>
+<a class="enlace" href="//elpais.com/autor/lluis_pellicer/a/">
+<meta itemprop="width" content="80">
+<meta itemprop="height" content="80">
+<img src="//ep00.epimg.net/miperfil/avatares/2/AA/lpellicer.jpg" width="80" height="80" alt="Lluís Pellicer"/>
+</a>
+</figure>
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name">
+<a itemprop="url" href="//elpais.com/autor/lluis_pellicer/a/" title="Ver todas las noticias de Lluís Pellicer">Lluís Pellicer</a>
+</span>
+<div class="autor-perfiles">
+<ul class="autor-perfiles-listado">
+<li><a class="boton_twitter" itemprop="sameAs" href="http://twitter.com/lluispellicer" rel="nofollow" target="_blank">Twitter</a></li>                                
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="articulo-datos">
+<span class="articulo-localizaciones">
+<span class="articulo-localizacion" itemprop="contentLocation">
+Bruselas
+</span>
+</span>
+<time datetime="2018-09-21T08:49:36-03:00" class="articulo-actualizado">
+<meta content="2018-09-21T08:49:36-03:00" itemprop="datePublished">
+<meta content="2018-09-21T08:49:36-03:00" itemprop="dateModified">
+<a href="//elpais.com/tag/fecha/20180921 " title="Ver todas las noticias de esta fecha">
+21 SEP 2018 - 08:49					<abbr title="Brasilia Time">BRT</abbr>				</a>
+</time>
+</div>
+</div> 
+</div>
+<div class="articulo__contenedor" id="articulo_contenedor">
+<figure class="foto centro foto_w980" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img src="//ep01.epimg.net/economia/imagenes/2016/09/06/actualidad/1473164768_693959_1473164891_noticia_normal.jpg" width="980" height="654"  srcset="//ep01.epimg.net/economia/imagenes/2016/09/06/actualidad/1473164768_693959_1473164891_noticia_normal_recorte1.jpg 1960w, //ep01.epimg.net/economia/imagenes/2016/09/06/actualidad/1473164768_693959_1473164891_noticia_normal_recorte2.jpg 720w, //ep01.epimg.net/economia/imagenes/2016/09/06/actualidad/1473164768_693959_1473164891_noticia_normal.jpg 980w"   alt="El comisario europeo de Asuntos Econ&oacute;micos y Financieros, Pierre Moscovici" />
+<meta itemprop="width"    content="980">
+<meta itemprop="height"   content="654">
+<meta itemprop="url"      content="https://ep01.epimg.net/economia/imagenes/2016/09/06/actualidad/1473164768_693959_1473164891_noticia_normal.jpg">
+<meta itemprop="representativeOfPage" content="true">
+<figcaption class="foto-pie"  itemprop="caption"> <span class="foto-texto">El comisario europeo de Asuntos Econ&oacute;micos y Financieros, Pierre Moscovici</span> <span class="foto-firma"> <span itemprop="copyrightHolder" class="foto-agencia">EFE</span></span></figcaption>
+</figure>
+<div class="articulo-cuerpo" id="cuerpo_noticia" itemprop="articleBody">
+<p>España ha logrado ir cerrando en los últimos años el boquete que había en sus arcas públicas por la recaudación del IVA debido al fraude fiscal, retrasos, impagos por quiebras empresariales y otros errores. Sin embargo, la brecha no ha quedado aún sellada. El Estado dejó de percibir 1.966 millones de euros en 2016 –el último año con datos disponibles—, según un estudio que ha difundido hoy la <a href="//elpais.com/tag/comision_europea/a" target="_blank">Comisión Europea</a>. Esa cifra es una cuarta parte del monto a la que ascendía ese desfase hace cuatro años, cuando superó los 8.000 millones. En el conjunto de Europa, los presupuestos nacionales se vieron privados de casi 150.000 millones de euros que se perdieron por el camino. De estos, estima que 50.000 corresponden al fraude o crimen organizado. Bruselas lo considera “inaceptable”.</p>
+<p>La <a href="//elpais.com/tag/mhyap_ministerio_hacienda_administraciones_publicas/a" target="_blank">Hacienda española</a> ha sido una de las que más ha logrado reducir en los últimos años el desfase entre todo lo que podría recaudar con sus tipos actuales y lo que efectivamente entra en sus arcas. El estudio, coordinado por el Centro para Investigación Económica y Social (CASE) y en el que ha participado el Instituto de Economía de Barcelona (IEB), concluye que una de las razones fundamentales ha sido el crecimiento económico. Por ejemplo, si la economía crece hay menos quiebras e impagos.</p>
+<section class="sumario_apoyos derecha" id="sumario_1|apoyos">
+<a name="sumario_1"></a>
+<div class="sumario__interior">
+<header class="sumario-encabezado"><h3 class="sumario-titulo"><span class="sin_enlace">MÁS INFORMACIÓN</span></h3></header>
+<div class="sumario-texto">
+<div class="apoyos">
+<ul class="apoyos-listado">
+<li class="apoyo_ apoyo_sinfoto">
+<span class="apoyo-titulo">
+<a href="https://cincodias.elpais.com/cincodias/2017/10/04/midinero/1507105926_111834.html">
+Bruselas lanza la mayor reforma del IVA en un cuarto de siglo
+</a>
+</span>
+</li>
+<li class="apoyo_ apoyo_sinfoto">
+<span class="apoyo-titulo">
+<a href="//elpais.com/economia/2016/09/06/actualidad/1473164768_693959.html">
+España dejó de ingresar más de 6.200 millones en IVA por errores y fraude
+</a>
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div> 
+</section>
+<p>A pesar de pasar con nota ese primer test, España sale mucho peor parada cuando se examina lo que deja de recaudar por exenciones. Ahí, las administraciones solo aprovechan el 40% de su potencial. Ello se debe al abanico de exenciones, pero también a los regímenes especiales como, según el estudio, los de Canarias, Ceuta y Melilla.</p>
+<p>Sin embargo, en el conjunto de la Uninón Europea, un volumen de 150.000 millones de euros siguen esfumándose en el camino que debería llevarlos desde la transacción hasta las arcas públicas. Y eso es “inaceptable”, en palabras del Comisario de Economía y Asuntos Monetarios, <a href="//elpais.com/tag/pierre_moscovici/a" target="_blank">Pierre Moscovici</a>. “Sobre todo cuando 50.000 millones van a parar al bolsillo de delincuentes, timadores y probablemente hasta terroristas”, ha señalado este viernes en un comunicado. La brecha fiscal media se situó en el 9,9% en el conjunto de la UE. Con la reducción de los últimos años, España se situó entre los países con mejores resultados junto a Luxemburgo, Suecia y Croacia. En cambio, el boquete es enorme en Rumania (35,8%), Grecia (29,2) e Italia (25,9%).</p>
+<p>El estudio también examina por primera vez los factores que pueden conducir a esa brecha. "Hemos identificado que la estructura productiva de un país tiene que ver con esa brecha. No es lo mismo un país con un gran sector minorista, que es el último eslabón del consumidor final, que otro con un gran peso del sector de las telecomunicaciones", explica el investigador del IEB José María Durán, quien añade que también tiene un papel importante la situación económica. "Las restricciones financieras que puedan sufrir las empresas de un país o el gasto en nuevas tecnologías de la administración tributaria son otros elementos que explican esa brecha", añade.</p>
+<p>Las cifras ponen sobre la mesa de nuevo el debate sobre la reforma del IVA en la Unión Europea. Hace justo un año, la Comisión propuso la que denominó <a href="https://cincodias.elpais.com/cincodias/2017/10/04/midinero/1507105926_111834.html" target="_blank">“la mayor reforma de las normas” sobre ese tributo.</a> En concreto, Bruselas quería atajar esos 50.000 millones a los que ha aludido Moscovici y que corresponden al fraude transfronterizo y que Bruselas cree que podrían usarse para financiar organizaciones delictivas. Esta se basaba en aplicar el llamado “principio de destino”, que consiste en que el Estado en el que se efectúa la transacción recaude el IVA del país donde se dirige la compra y luego se lo ingrese. “Animo a los Estados miembros a avanzar hacia el sistema definitivo de IVA antes de las elecciones al Parlamento Europeo en 2019”, ha reclamado Moscovici.</p>
+</div> 
+<aside class="compartir" id="compartir_inferior">
+<div class="compartir__interior">
+<div class="compartir-social" id="compartir_social_inferior">
+<button class="boton_facebook" id="inferior_fb"><span class="boton-nombre">Compartir en Facebook</span> </button>
+<button class="boton_twitter" id="inferior_twit"><span class="boton-nombre">Compartir en Twitter</span> </button>
+<div class="compartir-otros" id="compartir-otros_inf">
+<button class="boton_compartir-otros" id="boton_compartir-otros_inf">Otros</button>
+<div class="compartir-otros__interior">
+<button class="boton_cerrar" id="cerrar_compartir-otros_inf">Cerrar</button>
+<button class="boton_linkedin" id="inferior_linkedin">Compartir en Linkedin</button>
+<button class="boton_googleplus" id="inferior_gp">Compartir en GooglePlus</button>
+<button class="boton_pinterest" id="inferior_pinit">Compartir en Pinterest</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+        //if(typeof EPETMail != "undefined")       new EPETMail ( document.getElementById('inferior_enviar'), document.getElementById('inferior_capaEnviarCorreo'));
+        if(typeof EPETTwitter != "undefined")    new EPETTwitter ( document.getElementById('inferior_twit'), params );
+        if(typeof EPETFacebook != "undefined")   new EPETFacebook ( document.getElementById('inferior_fb'), params );
+        if(typeof EPETGooglePlus != "undefined") new EPETGooglePlus ( document.getElementById('inferior_gp'), params );
+        if(typeof EPETLinkedin != "undefined")   new EPETLinkedin ( document.getElementById('inferior_linkedin'), params );
+        if(typeof EPETPinterest != "undefined")  new EPETPinterest ( document.getElementById('inferior_pinit'), params );
+    </script>
+</aside>            
+<section class="articulo-apoyos" id="articulo-apoyos">
+<header class="articulo-apoyos-encabezado">
+<h3 class="articulo-apoyos-titulo"><span class="sin_enlace">Más información</span></h3>
+</header>
+<div class="articulo-apoyos__interior">
+<div class="apoyos">
+<ul class="apoyos-listado">
+<li class="apoyo_">
+<span class="apoyo-titulo">
+<a href="//elpais.com/economia/2018/09/19/actualidad/1537355014_150183.html?rel=mas"   target="_blank" >                                         Bruselas descarta que McDonald’s recibiera trato de favor de Luxemburgo
+</a>                 </span>
+</li>
+<li class="apoyo_">
+<span class="apoyo-titulo">
+<a href="//elpais.com/economia/2018/09/18/actualidad/1537285172_121563.html?rel=mas"   target="_blank" >                                         Apple paga a Irlanda los 14.300 millones que Bruselas le reclamó por ventajas fiscales
+</a>                 </span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="articulo-tags" id="articulo-tags">
+<header class="articulo-tags-encabezado ">
+<button class="articulo-tags-titulo" id="boton_articulo-tags">
+Archivado en:
+</button>
+</header>
+<div class="articulo-tags__interior" id="articulo-tags__interior">
+<ul class="listado" id="listado">
+<li itemprop="keywords"><a href="//elpais.com/tag/iva_impuesto_valor_anadido/a/" title="Ver m&aacute;s noticias de [IVA]">IVA</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/pierre_moscovici/a/" title="Ver m&aacute;s noticias de [Pierre Moscovici]">Pierre Moscovici</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/comision_europea/a/" title="Ver m&aacute;s noticias de [Comisión Europea]">Comisión Europea</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/fraude_fiscal/a/" title="Ver m&aacute;s noticias de [Fraude fiscal]">Fraude fiscal</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/impuestos/a/" title="Ver m&aacute;s noticias de [Impuestos]">Impuestos</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/tributos/a/" title="Ver m&aacute;s noticias de [Tributos]">Tributos</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/delitos_fiscales/a/" title="Ver m&aacute;s noticias de [Delitos fiscales]">Delitos fiscales</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/finanzas_publicas/a/" title="Ver m&aacute;s noticias de [Finanzas públicas]">Finanzas públicas</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/ue_union_europea/a/" title="Ver m&aacute;s noticias de [UE]">UE</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/delitos/a/" title="Ver m&aacute;s noticias de [Delitos]">Delitos</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/organizaciones_internacionales/a/" title="Ver m&aacute;s noticias de [Organizaciones internacionales]">Organizaciones internacionales</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/europa/a/" title="Ver m&aacute;s noticias de [Europa]">Europa</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/relaciones_exteriores/a/" title="Ver m&aacute;s noticias de [Relaciones exteriores]">Relaciones exteriores</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/finanzas/a/" title="Ver m&aacute;s noticias de [Finanzas]">Finanzas</a></li>
+<li itemprop="keywords"><a href="//elpais.com/tag/justicia/a/" title="Ver m&aacute;s noticias de [Justicia]">Justicia</a></li>
+</ul>
+</div>
+</section>
+<script>
+if (typeof EPETshowHideTags == 'function') {
+
+				//EPETshowHideTags('contenedorLista');
+				EPETshowHideTags('articulo-tags__interior');
+
+}
+</script>
+</div> 
+<div class="envoltorio_publi" id="roba_principal">
+<div id='elpais_gpt-MPU1' class='publi_luto_horizontal'>
+<script type='text/javascript'>
+			PBS.display('MPU1');
+		</script>
+</div>
+</div>
+<aside class="articulo-extras">
+<div class="widget widget_newsletter">
+<div class="widget__interior">
+<a href="https://usuarios.elpais.com/newsletters/?id_externo_promo=not_newsletters_gen">
+<span class="widget_newsletter__icon">
+<img src="https://ep01.epimg.net/iconos/v2.x/v2.1/newsletters.svg" alt="newsletters icono">
+</span>
+<span class="widget_newsletter__text">
+<strong>newsletters</strong>
+Recibe la mejor información en tu bandeja de entrada      </span>
+</a>
+</div>
+</div>
+</aside>
+</div>
+</article>
+<aside class="lateral">
+<div id="lateral__interior" class="lateral__interior">
+<style>
+.caja_relacionadas .miniatura {
+float: right;
+margin-left: 10px;
+width: 140px;
+}
+.caja_relacionadas .foto{
+height:auto;
+max-height:100px;
+overflow:hidden;
+}
+</style>
+<div id="caja_relacionadas_cxense" class="caja caja_relacionadas oculto">
+<script type="text/javascript">
+  if(EpetwidgetCxense) EpetwidgetCxense(document.querySelector('meta[name="lang"]').getAttribute("content"));  
+</script>
+</div>
+<div class="envoltorio_publi estirar">
+<div id='elpais_gpt-MPU2' class='publi_luto_horizontal'>
+<script type='text/javascript'>
+			PBS.display('MPU2');
+		</script>
+</div>
+</div>
+<script>var active_tab = "apartment";</script><style>
+.hide{display: none;}
+</style>
+<div class="contenedor_clasificados">
+<div id="bloque-menu_clasificados" class="bloque-menu">
+<button class="boton_bloque-menu" id="boton_bloque-menu_clasificados"><span>Secciones</span></button>
+<div class="bloque-menu__interior">
+<nav class="bloque-menu-navegacion">
+<ul id="ads_tab_selector" class="bloque-menu-navegacion-listado">
+<li id="li_pestana_descuentos" class="">
+<button id="tab_descuentos">Descuentos</button>
+</li>
+<li id="li_pestana_vivienda" class="
+marcado">
+<button id="tab_apartment">Vivienda</button>
+</li>
+<li id="li_pestana_cursos" class="">
+<button id="tab_courses">Cursos</button>
+</li>
+<li id="li_pestana_directorio" class="">
+<button id="tab_directorio">Centros</button>
+</li>
+<li id="li_pestana_viajes" class="">
+<button id="tab_viajes" title="Viajes" href="#">Viajes</button>
+</li>
+<li id="li_pestana_epcolecciones" class="">
+<button id="tab_epcolecciones">Colecciones</button>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<div id="descuentos" class="contenedor_clasificados__interior descuentos
+oculto">
+<section id="clasificados" class="bloque_clasificados">
+<div class="bloque__interior">
+<div class="cont-flex">
+<header class="bloque-cabecera">
+<a id="DescuentosC2" href="https://descuentos.elpais.com/?&utm_source=ElPaisWidgetLogo_logoizquierda_Boost&utm_medium=referral&utm_content=BannerHP&utm_campaign=ES_bannerhome_Special" target="_blank">Descuentos</a>
+</header>
+
+<div class="articulos">
+<div class="articulos__interior">
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://descuentos.elpais.com/codigo-descuento-ebay">
+<img data-custom-lazyload-src="/tematicos/imagenes/2018/04/26/modulo_clasificados/1524759211_328935_1524759226_miniatura_normal.jpg" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ver noticia" href="https://descuentos.elpais.com/codigo-descuento-ebay">Cupón eBay</a>
+</h2>
+<p class="articulo-entradilla">Encuéntralos en Descuentos EL PAÍS</p>							</div>
+</article>
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://descuentos.elpais.com/el-corte-ingles-rebajas">
+<img data-custom-lazyload-src="/tematicos/imagenes/2018/04/26/modulo_clasificados/1524759140_495552_1524759179_miniatura_normal.jpg" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ver noticia" href="https://descuentos.elpais.com/el-corte-ingles-rebajas">Código promocional El Corte Inglés</a>
+</h2>
+<p class="articulo-entradilla">Consigue hasta un 50% de descuento</p>							</div>
+</article>
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://descuentos.elpais.com/zooplus-codigo-descuento?&utm_source=ElPaisWidget_zooplus_Boost&utm_medium=referral&utm_content=BannerHP&utm_campaign=ES_bannerhome_Special">
+<img data-custom-lazyload-src="/tematicos/imagenes/2016/07/18/modulo_clasificados/1468834906_814653_1520944452_miniatura_normal.jpg" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ver noticia" href="https://descuentos.elpais.com/zooplus-codigo-descuento?&utm_source=ElPaisWidget_zooplus_Boost&utm_medium=referral&utm_content=BannerHP&utm_campaign=ES_bannerhome_Special">Código descuento Zooplus</a>
+</h2>
+<p class="articulo-entradilla">Consigue un 10% de descuento</p>							</div>
+</article>
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://descuentos.elpais.com/codigo-descuento-groupon?&utm_source=ElPaisWidget_groupon_Boost&utm_medium=referral&utm_content=BannerHP&utm_campaign=ES_bannerhome_Special">
+<img data-custom-lazyload-src="/tematicos/imagenes/2016/07/18/modulo_clasificados/1468835038_035886_1474357611_miniatura_normal.jpg" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ver noticia" href="https://descuentos.elpais.com/codigo-descuento-groupon?&utm_source=ElPaisWidget_groupon_Boost&utm_medium=referral&utm_content=BannerHP&utm_campaign=ES_bannerhome_Special">Código descuento Groupon</a>
+</h2>
+<p class="articulo-entradilla">Aprovecha nuestro cupón de 6€</p>							</div>
+</article>
+</div>
+</div>
+</div>			                			            </div>
+</section>
+</div>
+<div id="apartment" class="contenedor_clasificados__interior idealista
+">
+<section id="clasificados" class="bloque_clasificados">
+<div class="bloque__interior">
+<div class="cont-flex">
+<header class="bloque-cabecera">
+<a rel="nofollow" id="IdealistaC2" title="el portal inmobiliario líder en España" href="http://www.idealista.com/?xts=352991&amp;xtor=AD-111-[caja_busqueda_home]-[0]-[caja]-[prisa__elpais.com]-[GT]-[logo]&amp;source=101" target="_blank">idealista</a>
+</header>
+
+<div class="articulos">
+<div class="articulos__interior">
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://www.idealista.com/news/inmobiliario/top-idealista/2014/07/14/729781-casas-reformadas#xts=352991&xtor=ad-186-[node/729781]-[]-[0]-[prisa__elpais.com]-[]-[destacado_home_elpais_titulo]&source=101">
+<img data-custom-lazyload-src="/tematicos/imagenes/2018/04/26/modulo_clasificados/1524759345_789440_1537343360_miniatura_normal.jpg" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ir a noticia" target="_blank" rel="nofollow" href="https://www.idealista.com/news/inmobiliario/top-idealista/2014/07/14/729781-casas-reformadas#xts=352991&xtor=ad-186-[node/729781]-[]-[0]-[prisa__elpais.com]-[]-[destacado_home_elpais_titulo]&source=101">Estrena casa con reforma incluida</a>
+</h2>
+<p class="articulo-entradilla">Casas reformadas listas para entrar a vivir</p>							</div>
+</article>
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://www.idealista.com/news/inmobiliario/top-idealista/2017/11/02/748724-los-aticos-de-lujo-en-venta-con-mejores-vistas#xts=352991&xtor=ad-186-[node/748724]-[]-[0]-[prisa__elpais.com]-[]-[destacado_home_elpais_titulo]&source=101">
+<img data-custom-lazyload-src="/tematicos/imagenes/2018/04/26/modulo_clasificados/1524759297_160232_1537169720_miniatura_normal.jpg" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ir a noticia" target="_blank" rel="nofollow" href="https://www.idealista.com/news/inmobiliario/top-idealista/2017/11/02/748724-los-aticos-de-lujo-en-venta-con-mejores-vistas#xts=352991&xtor=ad-186-[node/748724]-[]-[0]-[prisa__elpais.com]-[]-[destacado_home_elpais_titulo]&source=101">Los 10 áticos de lujo en venta con mejores vistas</a>
+</h2>
+<p class="articulo-entradilla">Un capricho al alcance de muy pocos, pero a la vista de todos</p>							</div>
+</article>
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://www.idealista.com/news/inmobiliario/top-idealista/2014/10/27/732285-los-pisos-mas-baratos-que-urge-vender-en-las-capitales-de-provincia#xts=352991&xtor=ad-186-[node/732285]-[]-[0]-[prisa__elpais.com]-[]-[destacado_home_elpais_titulo]&source=101">
+<img data-custom-lazyload-src="/tematicos/imagenes/2016/09/05/modulo_clasificados/1473077159_789075_1537169779_miniatura_normal.jpg" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ir a noticia" target="_blank" rel="nofollow" href="https://www.idealista.com/news/inmobiliario/top-idealista/2014/10/27/732285-los-pisos-mas-baratos-que-urge-vender-en-las-capitales-de-provincia#xts=352991&xtor=ad-186-[node/732285]-[]-[0]-[prisa__elpais.com]-[]-[destacado_home_elpais_titulo]&source=101">¡Urge Venta!</a>
+</h2>
+<p class="articulo-entradilla">Los pisos que urge vender en las capitales</p>							</div>
+</article>
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://www.idealista.com/news/vacacional/destinos-turisticos/2016/05/25/742245-5-espectaculares-cuevas-en-espana-que-probablemente-desconozcas#xts=352991&xtor=ad-186-[node/742245]-[]-[0]-[prisa__elpais.com]-[]-[destacado_home_elpais_titulo]&source=101">
+<img data-custom-lazyload-src="/tematicos/imagenes/2016/06/17/modulo_clasificados/1466152169_651935_1537514579_miniatura_normal.jpg" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ir a noticia" target="_blank" rel="nofollow" href="https://www.idealista.com/news/vacacional/destinos-turisticos/2016/05/25/742245-5-espectaculares-cuevas-en-espana-que-probablemente-desconozcas#xts=352991&xtor=ad-186-[node/742245]-[]-[0]-[prisa__elpais.com]-[]-[destacado_home_elpais_titulo]&source=101">6 cuevas que no te puedes perder</a>
+</h2>
+<p class="articulo-entradilla">Espectaculares cuevas que probablemente desconozcas</p>							</div>
+</article>
+</div>
+</div>
+</div>			                			            </div>
+</section>
+</div>
+<div id="courses" class="contenedor_clasificados__interior emagister
+oculto">
+<section id="clasificados" class="bloque_clasificados">
+<div class="bloque__interior">
+<div class="cont-flex">
+<header class="bloque-cabecera">
+<a rel="nofollow" id="CursosC2" href="https://www.emagister.com/landing/main/?pfichas=10808&sid=27&utm_source=elpais&utm_medium=cpc&utm_content=logo_widget_home&utm_campaign=logo_widget_home" target="_blank">emagister.com</a>
+</header>
+
+<div class="articulos">
+<div class="articulos__interior">
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://www.emagister.com/cursolanding?idBusqueda=3333442&sid=27&pfichas=15552&utm_source=elpais&utm_medium=cpc&utm_content=widget_home_cursos_1&utm_campaign=escritura_creativa_desarts">
+<img data-custom-lazyload-src="/tematicos/imagenes/2016/04/27/modulo_clasificados/1461752148_894721_1532515374_miniatura_normal.jpg" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ir a noticia" target="_blank" rel="nofollow" href="https://www.emagister.com/cursolanding?idBusqueda=3333442&sid=27&pfichas=15552&utm_source=elpais&utm_medium=cpc&utm_content=widget_home_cursos_1&utm_campaign=escritura_creativa_desarts">Máster en Escritura y Narración Creativa</a>
+</h2>
+<p class="articulo-entradilla">A distancia con 75% de descuento</p>							</div>
+</article>
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://www.emagister.com/express/eneb/posgrado-coaching-pnl-liderazgo-equipos-titulacion-universitaria-cursos-3009561.htm?pfichas=10020&utm_source=elpais&utm_medium=cpc&utm_content=widget_home_cursos_2_express&utm_campaign=coaching_eneb">
+<img data-custom-lazyload-src="/tematicos/imagenes/2018/04/26/modulo_clasificados/1524759412_038358_1533207514_miniatura_normal.jpg" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ir a noticia" target="_blank" rel="nofollow" href="https://www.emagister.com/express/eneb/posgrado-coaching-pnl-liderazgo-equipos-titulacion-universitaria-cursos-3009561.htm?pfichas=10020&utm_source=elpais&utm_medium=cpc&utm_content=widget_home_cursos_2_express&utm_campaign=coaching_eneb">Posgrado en Coaching, PNL y Liderazgo</a>
+</h2>
+<p class="articulo-entradilla">Con 95% de descuento</p>							</div>
+</article>
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://www.emagister.com/express/postgrado-online-experto-nutricion-dietetica-cursos-3400656.htm?pfichas=10007&utm_source=elpais&utm_medium=cpc&utm_content=widget_home_cursos_3_express&utm_campaign=nutricion_elbs">
+<img data-custom-lazyload-src="/tematicos/imagenes/2016/04/27/modulo_clasificados/1461752542_698724_1537436334_miniatura_normal.jpg" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ir a noticia" target="_blank" rel="nofollow" href="https://www.emagister.com/express/postgrado-online-experto-nutricion-dietetica-cursos-3400656.htm?pfichas=10007&utm_source=elpais&utm_medium=cpc&utm_content=widget_home_cursos_3_express&utm_campaign=nutricion_elbs">Postgrado Online en Nutrición y Dietética</a>
+</h2>
+<p class="articulo-entradilla">Con 87% de descuento</p>							</div>
+</article>
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://www.emagister.com/express/mba-master-project-management-cursos-3407589.htm?pfichas=10008&utm_source=elpais&utm_medium=cpc&utm_content=widget_home_cursos_4_express&utm_campaign=project_management_eneb">
+<img data-custom-lazyload-src="/tematicos/imagenes/2018/04/26/modulo_clasificados/1524759460_902366_1534928474_miniatura_normal.jpg" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ir a noticia" target="_blank" rel="nofollow" href="https://www.emagister.com/express/mba-master-project-management-cursos-3407589.htm?pfichas=10008&utm_source=elpais&utm_medium=cpc&utm_content=widget_home_cursos_4_express&utm_campaign=project_management_eneb">MBA + Máster en Project Management</a>
+</h2>
+<p class="articulo-entradilla">Con 96% de descuento</p>							</div>
+</article>
+</div>
+</div>
+</div>			                			            </div>
+</section>
+</div>
+<div id="directorio" class="contenedor_clasificados__interior directorio
+oculto">
+<section id="clasificados" class="bloque_clasificados">
+<div class="bloque__interior">
+<div class="cont-flex">
+<header class="bloque-cabecera">
+<a id="DirectorioC2" href="https://www.emagister.com/landing/main/?pfichas=10808&sid=27&utm_source=elpais&utm_medium=cpc&utm_content=logo_widget_home&utm_campaign=logo_widget_home" target="_blank">EMagister</a>
+</header>
+
+<div class="articulos">
+<div class="articulos__interior">
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://www.emagister.com/express/informatica-10/mba-master-big-data-business-intelligence-cursos-3453730.htm?pfichas=10019&utm_source=elpais&utm_medium=cpc&utm_content=widget_home_centros_1_express&utm_campaign=business_intelligence_eneb">
+<img data-custom-lazyload-src="/tematicos/imagenes/2018/04/26/modulo_clasificados/1524759522_177777_1534928341_miniatura_normal.jpg" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ir a noticia" target="_blank" rel="nofollow" href="https://www.emagister.com/express/informatica-10/mba-master-big-data-business-intelligence-cursos-3453730.htm?pfichas=10019&utm_source=elpais&utm_medium=cpc&utm_content=widget_home_centros_1_express&utm_campaign=business_intelligence_eneb">MBA + Máster en Big Data y Business Intelligence</a>
+</h2>
+<p class="articulo-entradilla">Con 96% de descuento</p>							</div>
+</article>
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://www.emagister.com/cursolanding?idBusqueda=3432794&sid=27&pfichas=15555&utm_source=elpais&utm_medium=cpc&utm_content=widget_home_centros_2&utm_campaign=inteligencia_artificial_viu">
+<img data-custom-lazyload-src="/tematicos/imagenes/2018/04/26/modulo_clasificados/1524759569_464257_1536762826_miniatura_normal.jpg" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ir a noticia" target="_blank" rel="nofollow" href="https://www.emagister.com/cursolanding?idBusqueda=3432794&sid=27&pfichas=15555&utm_source=elpais&utm_medium=cpc&utm_content=widget_home_centros_2&utm_campaign=inteligencia_artificial_viu">Máster en Inteligencia Artificial</a>
+</h2>
+<p class="articulo-entradilla">Formación 100% online</p>							</div>
+</article>
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://www.emagister.com/express/master/mba-master-administracion-direccion-empresas-cursos-3024328.htm?pfichas=10009&utm_source=elpais&utm_medium=cpc&utm_content=widget_home_centros_3_express&utm_campaign=mba_eneb">
+<img data-custom-lazyload-src="/tematicos/imagenes/2016/04/18/modulo_clasificados/1460974941_167617_1536745112_miniatura_normal.jpg" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ir a noticia" target="_blank" rel="nofollow" href="https://www.emagister.com/express/master/mba-master-administracion-direccion-empresas-cursos-3024328.htm?pfichas=10009&utm_source=elpais&utm_medium=cpc&utm_content=widget_home_centros_3_express&utm_campaign=mba_eneb">MBA con Titulación Universitaria</a>
+</h2>
+<p class="articulo-entradilla">Por solo 249€</p>							</div>
+</article>
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://www.emagister.com/cursolanding?idBusqueda=3432778&sid=27&pfichas=15969&utm_source=elpais&utm_medium=cpc&utm_content=widget_home_centros_4&utm_campaign=psicologia_educacion_viu">
+<img data-custom-lazyload-src="/tematicos/imagenes/2016/04/18/modulo_clasificados/1460975015_578031_1536059009_miniatura_normal.jpg" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ir a noticia" target="_blank" rel="nofollow" href="https://www.emagister.com/cursolanding?idBusqueda=3432778&sid=27&pfichas=15969&utm_source=elpais&utm_medium=cpc&utm_content=widget_home_centros_4&utm_campaign=psicologia_educacion_viu">Máster en Coaching y Psicología en Educación</a>
+</h2>
+<p class="articulo-entradilla">Online con 1 año de duración</p>							</div>
+</article>
+</div>
+</div>
+</div>			                			            </div>
+</section>
+</div>
+<div id="viajes" class="contenedor_clasificados__interior viajes
+oculto">
+<section id="clasificados" class="bloque_clasificados">
+<div class="bloque__interior">
+<div class="cont-flex">
+<header class="bloque-cabecera">
+<a id="ViajesC2" href="http://www.elpaisviajes.com/?utm_source=elpaisviajes&utm_medium=cpc&utm_term=widget_home&utm_content=logo&utm_campaign=widget_home_logo" target="_blank">El País Viajes</a>
+</header>
+
+<div class="articulos">
+<div class="articulos__interior">
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://www.elpaisviajes.com/viajes/olivos-y-castillos?utm_source=ep_home&utm_campaign=olivos&utm_medium=widget2">
+<img data-custom-lazyload-src="/tematicos/imagenes/2018/04/26/modulo_clasificados/1524759877_480807_1535533005_miniatura_normal.jpg" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ver noticia" href="https://www.elpaisviajes.com/viajes/olivos-y-castillos?utm_source=ep_home&utm_campaign=olivos&utm_medium=widget2">Olivos y Castillos</a>
+</h2>
+<p class="articulo-entradilla">Explora la comarca de la cultura del Aceite de Oliva</p>							</div>
+</article>
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://www.elpaisviajes.com/viajes/japon-xperience?utm_source=ep_home&utm_campaign=Japon&utm_medium=widget1">
+<img data-custom-lazyload-src="/tematicos/imagenes/2018/04/26/modulo_clasificados/1524759828_700605_1535534169_miniatura_normal.jpg" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ver noticia" href="https://www.elpaisviajes.com/viajes/japon-xperience?utm_source=ep_home&utm_campaign=Japon&utm_medium=widget1">Japón Xperience</a>
+</h2>
+<p class="articulo-entradilla">Disfruta de un país que no te dejará indiferente</p>							</div>
+</article>
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://www.elpaisviajes.com/viajes/antartida-mar-weddel?utm_source=ep_home&utm_campaign=Weddel&utm_medium=widget2">
+<img data-custom-lazyload-src="/tematicos/imagenes/2016/04/18/modulo_clasificados/1460981671_445110_1535533813_miniatura_normal.jpg" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ver noticia" href="https://www.elpaisviajes.com/viajes/antartida-mar-weddel?utm_source=ep_home&utm_campaign=Weddel&utm_medium=widget2">El mar de Weddel</a>
+</h2>
+<p class="articulo-entradilla">Acompaña a Sebastián Álvaro en su regreso a la Antártida</p>							</div>
+</article>
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://www.elpaisviajes.com/viajes/navarra-gastronomica?utm_source=ep_home&utm_campaign=Navarra&utm_medium=widget2">
+<img data-custom-lazyload-src="/tematicos/imagenes/2016/04/18/modulo_clasificados/1460981260_050111_1535533355_miniatura_normal.jpg" width="360" height="257"    alt="" />
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ver noticia" href="https://www.elpaisviajes.com/viajes/navarra-gastronomica?utm_source=ep_home&utm_campaign=Navarra&utm_medium=widget2">Navarra gastronómica</a>
+</h2>
+<p class="articulo-entradilla">Conoce con nuestro experto sus secretos</p>							</div>
+</article>
+</div>
+</div>
+</div>			                			            </div>
+</section>
+</div>
+<div id="epcolecciones" class="contenedor_clasificados__interior epcolecciones
+oculto">
+<section id="clasificados" class="bloque_clasificados">
+<div class="bloque__interior">
+<div class="cont-flex">
+<header class="bloque-cabecera">
+<a id="ColeccionesC2" href="https://colecciones.elpais.com/?utm_date=20180801&utm_source=EP&utm_medium=ELPAIS&utm_product=Home&utm_category=Home&id_externo_promo=epcol_20180801_Widget_EP_ELPAIS_Home_Home" target="_blank">Colecciones</a>
+</header>
+<div class="articulos">
+<div class="articulos__interior">
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://colecciones.elpais.com/literatura/98-la-historia-de-la-peseta-a-traves-de-sus-billetes-y-sellos.html?utm_date=20180914&utm_source=EP&utm_medium=ELPAIS&utm_product=Peseta-1&utm_category=Infantil&id_externo_promo=epcol_20180914_Widget_EP_ELPAIS_Peseta-1_Infantil" class="enlace" >
+<img data-custom-lazyload-src="/tematicos/imagenes/2018/08/10/modulo_clasificados/1533891411_613168_1537170383_miniatura_normal.jpg" width="360" height="257"    alt="" />
+<span class="boton_ampliar">pulsa en la foto</span>
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ver noticia" href="https://colecciones.elpais.com/literatura/98-la-historia-de-la-peseta-a-traves-de-sus-billetes-y-sellos.html?utm_date=20180914&utm_source=EP&utm_medium=ELPAIS&utm_product=Peseta-1&utm_category=Infantil&id_externo_promo=epcol_20180914_Widget_EP_ELPAIS_Peseta-1_Infantil">La Historia de la Peseta</a>
+</h2>
+<p class="articulo-entradilla">Historia a través de los billetes y sellos de la Peseta</p>							</div>
+</article>
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://colecciones.elpais.com/literatura/95-novela-guerra-civil-espanola.html?utm_date=20180917&utm_source=EP&utm_medium=ELPAIS&utm_product=Guerracivil&utm_category=Literatura&id_externo_promo=epcol_20180917_Widget_EP_ELPAIS_Guerracivil_Literatura" class="enlace" >
+<img data-custom-lazyload-src="/tematicos/imagenes/2018/08/10/modulo_clasificados/1533891338_649012_1537177889_miniatura_normal.jpg" width="360" height="257"    alt="" />
+<span class="boton_ampliar">pulsa en la foto</span>
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ver noticia" href="https://colecciones.elpais.com/literatura/95-novela-guerra-civil-espanola.html?utm_date=20180917&utm_source=EP&utm_medium=ELPAIS&utm_product=Guerracivil&utm_category=Literatura&id_externo_promo=epcol_20180917_Widget_EP_ELPAIS_Guerracivil_Literatura">La mejor novela de la Guerra civil</a>
+</h2>
+<p class="articulo-entradilla">La guerra civil española narrada en 5 excelentes novelas</p>							</div>
+</article>
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://colecciones.elpais.com/literatura/99-mis-pequenos-heroes.html?utm_date=20180914&utm_source=EP&utm_medium=ELPAIS&utm_product=Heroes-1&utm_category=Infantil&id_externo_promo=epcol_20180914_Widget_EP_ELPAIS_Heroes-1_Infantil" class="enlace" >
+<img data-custom-lazyload-src="/tematicos/imagenes/2018/08/10/modulo_clasificados/1533891267_099234_1537170606_miniatura_normal.jpg" width="360" height="257"    alt="" />
+<span class="boton_ampliar">pulsa en la foto</span>
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ver noticia" href="https://colecciones.elpais.com/literatura/99-mis-pequenos-heroes.html?utm_date=20180914&utm_source=EP&utm_medium=ELPAIS&utm_product=Heroes-1&utm_category=Infantil&id_externo_promo=epcol_20180914_Widget_EP_ELPAIS_Heroes-1_Infantil">Mis pequeños héroes</a>
+</h2>
+<p class="articulo-entradilla">Auténticos héroes que han cambiado el mundo</p>							</div>
+</article>
+<article class="articulo ">
+<div class="articulo__interior">
+<figure class="foto  foto_w360">
+<a href="https://colecciones.elpais.com/infantil/64-estrellas-disney.html?utm_date=20180801&utm_source=EP&utm_medium=ELPAIS&utm_product=DisneyII-General&utm_category=Infantil&id_externo_promo=epcol_20180801_Widget_EP_ELPAIS_DisneyII-General_Infantil" class="enlace" >
+<img data-custom-lazyload-src="/tematicos/imagenes/2018/08/10/modulo_clasificados/1533891175_917025_1533891192_miniatura_normal.jpg" width="360" height="257"    alt="" />
+<span class="boton_ampliar">pulsa en la foto</span>
+</a>
+</figure>
+<h2 class="articulo-titulo">
+<a title="Ver noticia" href="https://colecciones.elpais.com/infantil/64-estrellas-disney.html?utm_date=20180801&utm_source=EP&utm_medium=ELPAIS&utm_product=DisneyII-General&utm_category=Infantil&id_externo_promo=epcol_20180801_Widget_EP_ELPAIS_DisneyII-General_Infantil">El mejor Disney a 9,95€</a>
+</h2>
+<p class="articulo-entradilla">Las principales historias de Disney. Libro + película.</p>							</div>
+</article>
+</div>
+</div>
+</div>													</div>
+</section>
+</div>
+</div>
+<script type="text/javascript">
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+	script.async = true;
+    script.src = '/js/clasificados/modulo_clasificados.min.js';
+    document.body.appendChild(script);
+</script>
+<script type="text/javascript">
+
+function salta_a_lo_mas_visto()
+{
+	if (document.getElementById('li_lmv_elpais').className.indexOf("activo") > -1)
+	{
+		if (document.getElementById('li_lmv_america').className.indexOf("activo") > -1)
+			document.location = "//elpais.com/lomasvisto/america.html";
+		else
+			document.location = "//elpais.com/lomasvisto/";
+	}
+    else {
+       	if (document.getElementById('li_lmv_verne').className.indexOf("activo") > -1)
+            document.location = "//elpais.com/lomasvisto/verne.html";
+        else
+            if (document.getElementById('li_lmv_twitter').className.indexOf("activo") > -1)
+                document.location = "//elpais.com/lomasvisto/twitter.html";
+            else
+                document.location = "//elpais.com/lomasvisto/";
+    }
+}
+
+function lmv_cambia_pestana(idpestana)
+{
+	//Por defecto activo las vistas desde cualquier sitio
+	document.getElementById('lmv_america').style.display = "none";
+	switch (idpestana)
+	{
+		case "lmv_elpais" :
+			document.getElementById('lmv_todo').style.display = "block";
+			document.getElementById('lmv_twitter').style.display = "none";
+			document.getElementById('lmv_verne').style.display = "none";
+			document.getElementById('lmv_seccion').style.display = "none";
+			document.getElementById('li_lmv_elpais').className = "activo";
+			document.getElementById('li_lmv_twitter').className = "";
+			document.getElementById('li_lmv_verne').className = "";
+			document.getElementById('li_lmv_seccion').className = "";
+			document.getElementById('lmv_subpestanas').style.display = "block";
+			lmv_cambia_subpestana("lmv_todo");
+		break;
+
+		case "lmv_twitter" :
+			document.getElementById('lmv_todo').style.display = "none";
+			document.getElementById('lmv_twitter').style.display = "block";
+			document.getElementById('lmv_verne').style.display = "none";
+			document.getElementById('lmv_seccion').style.display = "none";
+			document.getElementById('li_lmv_elpais').className = "";
+			document.getElementById('li_lmv_twitter').className = "activo";
+			document.getElementById('li_lmv_verne').className = "";
+			document.getElementById('li_lmv_seccion').className = "";
+			document.getElementById('lmv_subpestanas').style.display = "none";
+		break;
+
+		case "lmv_verne" :
+			document.getElementById('lmv_todo').style.display = "none";
+			document.getElementById('lmv_twitter').style.display = "none";
+			document.getElementById('lmv_verne').style.display = "block";
+			document.getElementById('lmv_seccion').style.display = "none";
+			document.getElementById('li_lmv_elpais').className = "";
+			document.getElementById('li_lmv_twitter').className = "";
+			document.getElementById('li_lmv_verne').className = "activo";
+			document.getElementById('li_lmv_seccion').className = "";
+			document.getElementById('lmv_subpestanas').style.display = "none";
+		break;
+
+		case "lmv_seccion" :
+			document.getElementById('lmv_todo').style.display = "none";
+			document.getElementById('lmv_twitter').style.display = "none";
+			document.getElementById('lmv_verne').style.display = "none";
+			document.getElementById('lmv_seccion').style.display = "block";
+			document.getElementById('li_lmv_elpais').className = "";
+			document.getElementById('li_lmv_twitter').className = "";
+			document.getElementById('li_lmv_verne').className = "";
+			document.getElementById('li_lmv_seccion').className = "activo";
+			document.getElementById('lmv_subpestanas').style.display = "none";
+		break;
+
+	}
+}
+
+function lmv_cambia_subpestana(idpestana)
+{
+	//twitter, seccion ocultas
+	document.getElementById('lmv_twitter').style.display = "none";
+	document.getElementById('lmv_verne').style.display = "none";
+	document.getElementById('lmv_seccion').style.display = "none";
+	switch (idpestana)
+	{
+		case "lmv_todo" :
+			document.getElementById('lmv_todo').style.display = "block";
+			document.getElementById('lmv_america').style.display = "none";
+			document.getElementById('li_lmv_todo').className = "activo";
+			document.getElementById('li_lmv_america').className = "";
+		break;
+		case "lmv_america" :
+			document.getElementById('lmv_todo').style.display = "none";
+			document.getElementById('lmv_america').style.display = "block";
+			document.getElementById('li_lmv_todo').className = "";
+			document.getElementById('li_lmv_america').className = "activo";
+		break;
+	}
+}
+
+</script>
+<div class="caja lo_mas_visto" id="caja_lo_mas_visto">
+<h3><span class="bolillo"></span><span class="sin_enlace">Lo más visto en...</span></h3>
+<a class="vermas" href="javascript:void(0)" onclick="salta_a_lo_mas_visto()" title="Ver listado completo">&raquo; Top 50</a>
+<div class="pestanas">
+<ul class="estirar">
+<li id="li_lmv_elpais"><a href="javascript:void(0)" onclick="lmv_cambia_pestana('lmv_elpais')">EL PAÍS</a></li>
+<li id="li_lmv_twitter"><a href="javascript:void(0)" onclick="lmv_cambia_pestana('lmv_twitter')">Twitter</a></li>
+<li id="li_lmv_verne"><a href="javascript:void(0)" onclick="lmv_cambia_pestana('lmv_verne')">Verne</a></li>
+<li id="li_lmv_seccion" class="activo"><a href="javascript:void(0)" onclick="lmv_cambia_pestana('lmv_seccion')">Economía</a></li>
+</ul>
+<div id="lmv_subpestanas" class="subpestanas" style="display:none">
+<ul class="estirar">
+<li id="li_lmv_todo" class="activo"><a href="javascript:void(0)" onclick="lmv_cambia_subpestana('lmv_todo')">Desde España</a></li>
+<li id="li_lmv_america"><a href="javascript:void(0)" onclick="lmv_cambia_subpestana('lmv_america')">Desde América</a></li>
+</ul>
+</div>
+</div>
+<div class="contenido" id="lmv_seccion">
+<ol>
+<li class="estirar"><span class="numero">1</span><a href="//elpais.com/economia/2018/09/20/actualidad/1537462870_909518.html" title="Ver noticia">CaixaBank vende su participación del 9,4% en Repsol y sale del consejo de la petrolera</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//elpais.com/economia/2018/09/20/actualidad/1537457726_067000.html" title="Ver noticia">Un carguero ruso se queda varado en Motril sin dinero y sin combustible</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//elpais.com/economia/2018/09/20/actualidad/1537455521_960276.html" title="Ver noticia">Vueling contratará a 200 pilotos para cumplir los objetivos de crecimiento</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//elpais.com/economia/2018/09/21/actualidad/1537524630_242232.html" title="Ver noticia">S&P y Moody’s advierten de la escasa internacionalización de El Corte Inglés y su creciente competencia</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//elpais.com/economia/2018/09/20/actualidad/1537431928_586812.html" title="Ver noticia">La OCDE advierte de que las tensiones comerciales están pasando factura al crecimiento global</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//elpais.com/economia/2018/09/21/actualidad/1537519522_386821.html" title="Ver noticia">La CNMV pide explicaciones a Telefónica sobre posibles sanciones por corrupción</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//elpais.com/economia/2018/09/20/actualidad/1537435055_064348.html" title="Ver noticia">El plan del Gobierno contra los abusos lleva a las empresas a convertir en fijos 46.524 contratos</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//elpais.com/economia/2018/09/19/actualidad/1537347459_108140.html" title="Ver noticia"><span title="Vídeo" class="video">Vídeo</span>Castilla y León propone que las tiendas cobren por probarse la ropa</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//elpais.com/economia/2018/09/19/actualidad/1537365575_977137.html" title="Ver noticia"><span title="Vídeo" class="video">Vídeo</span>El Gobierno anulará el impuesto de generación eléctrica y potenciará los bonos sociales</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//elpais.com/economia/2018/09/18/actualidad/1537282442_363262.html" title="Ver noticia">Solchaga: “Los pensionistas no tienen razón, no han pagado ni la mitad de lo que perciben”</a></li>
+</ol>
+</div>			<div class="contenido" id="lmv_todo" style="display:none">
+<ol>
+<li class="estirar"><span class="numero">1</span><a href="//elpais.com/elpais/2018/09/20/icon/1537432213_000379.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>La guerra sucia entre Schwarzenegger y Stallone que ha salido a la luz 25 años después</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//elpais.com/cultura/2018/09/20/actualidad/1537468705_154479.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>La Sagrada Familia crece sin control</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//elpais.com/elpais/2018/09/14/planeta_futuro/1536940957_042749.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El primer país al que puede engullir el mar por el cambio climático</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//elpais.com/elpais/2018/09/20/ciencia/1537456289_128396.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>'Dickinsonia', el animal más antiguo que se conoce</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//elpais.com/internacional/2018/09/20/actualidad/1537433053_253518.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El secreto colonial de la isla Diego García</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//elpais.com/internacional/2018/09/20/actualidad/1537445005_999903.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>La UE rechaza el plan de May y deja a Londres ante el abismo de un Brexit inaceptable</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//elpais.com/politica/2018/09/20/actualidad/1537463759_384202.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>González y Aznar se unen para defender la Constitución y pedir lealtad al Govern</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//elpais.com/elpais/2018/09/21/gente/1537516689_973797.html" title="Ver Noticia">Carlota Casiraghi se apunta a la teoría de las ‘malas madres’</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//elpais.com/elpais/2018/09/21/mundo_animal/1537520629_308105.html" title="Ver Noticia">La policía sospecha de una agresión sexual a la turista que tenía una tortuga en la vagina</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//elpais.com/politica/2018/09/20/actualidad/1537426438_774065.html" title="Ver Noticia">Halladas en Cuba en manos de una santera una española y su hija de 6 años desaparecidas en Madrid</a></li>
+</ol>
+</div>			<div class="contenido" id="lmv_america" style="display:none">
+<ol>
+<li class="estirar"><span class="numero">1</span><a href="//brasil.elpais.com/brasil/2018/09/19/politica/1537384517_967736.html" title="Ver Noticia">“Haddad está no segundo turno, Bolsonaro ainda não”, diz estatístico de campanhas</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//brasil.elpais.com/brasil/2018/01/12/politica/1515787762_592872.html" title="Ver Noticia">A semana em que as primeiras pedras atingiram a vidraça de Jair Bolsonaro</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//brasil.elpais.com/brasil/2018/09/20/opinion/1537447119_621795.html" title="Ver Noticia">Mudança no imposto de renda que planeja economista de Bolsonaro pode agravar a desigualdade e a crise</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//brasil.elpais.com/brasil/2018/09/20/opinion/1537466622_097329.html" title="Ver Noticia">Enquanto pastores evangélicos apoiam Bolsonaro, cúpula católica lava as mãos</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//brasil.elpais.com/brasil/2018/09/20/politica/1537480241_544328.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Haddad e Bolsonaro, os dois maiores alvos de ataque no quarto debate presidencial</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//brasil.elpais.com/brasil/2018/09/19/politica/1537367458_048104.html" title="Ver Noticia">PM confunde guarda-chuva com fuzil e mata garçom no Rio, afirmam testemunhas</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//elpais.com/elpais/2018/09/14/planeta_futuro/1536940957_042749.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El primer país al que puede engullir el mar por el cambio climático</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//elpais.com/politica/2018/09/20/actualidad/1537426438_774065.html" title="Ver Noticia">Halladas en Cuba en manos de una santera una española y su hija de 6 años desaparecidas en Madrid</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//brasil.elpais.com/brasil/2018/09/20/politica/1537467412_871279.html" title="Ver Noticia">Como reconhecer uma notícia falsa para não compartilhar mentiras</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//brasil.elpais.com/brasil/2018/09/13/politica/1536853605_958656.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Fremdschämen, a constrangedora aula sobre nazismo que os brasileiros tentaram dar aos alemães</a></li>
+</ol>
+</div>			<div class="contenido" id="lmv_twitter" style="display:none">
+<ol>
+<li class="estirar"><span class="numero">1</span><a href="//brasil.elpais.com/brasil/2018/09/20/politica/1537467412_871279.html" title="Ver Noticia">Como reconhecer uma notícia falsa para não compartilhar mentiras</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//brasil.elpais.com/brasil/2018/09/19/politica/1537384517_967736.html" title="Ver Noticia">“Haddad está no segundo turno, Bolsonaro ainda não”, diz estatístico de campanhas</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//elpais.com/elcomidista/2018/09/07/receta/1536314349_641389.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Cómo freír berenjenas</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//brasil.elpais.com/brasil/2018/01/12/politica/1515787762_592872.html" title="Ver Noticia">A semana em que as primeiras pedras atingiram a vidraça de Jair Bolsonaro</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//brasil.elpais.com/brasil/2018/09/20/opinion/1537466622_097329.html" title="Ver Noticia">Enquanto pastores evangélicos apoiam Bolsonaro, cúpula católica lava as mãos</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//brasil.elpais.com/brasil/2018/09/20/opinion/1537447119_621795.html" title="Ver Noticia">Mudança no imposto de renda que planeja economista de Bolsonaro pode agravar a desigualdade e a crise</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//cat.elpais.com/cat/2018/09/20/catalunya/1537461504_722213.html" title="Ver Noticia">El jutge investiga si la fortuna dels Pujol procedeix de l’espoli de Grand Tibidabo</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//brasil.elpais.com/brasil/2018/09/21/internacional/1537506790_712177.html" title="Ver Noticia">Trump: “Não permitirei que os Estados Unidos virem a Venezuela”</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//brasil.elpais.com/brasil/2018/06/21/deportes/1529536206_588160.html" title="Ver Noticia">A seleção dos filhos sem pai</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//elpais.com/elviajero/2018/09/20/actualidad/1537433533_155868.html" title="Ver Noticia">De La Gomera a Berlín, 25 viajes para estrenar el otoño</a></li>
+</ol>
+</div>			<div class="contenido" id="lmv_verne" style="display:none">
+<ol>
+<li class="estirar"><span class="numero">1</span><a href="//verne.elpais.com/verne/2018/09/20/articulo/1537447649_123381.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Hablamos con estudiantes de carreras con pocas salidas (y mucha motivación)</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//verne.elpais.com/verne/2018/09/04/articulo/1536052945_876493.html" title="Ver Noticia">A qué hora amanecerá y anochecerá en tu provincia si se elimina el cambio de hora</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//verne.elpais.com/verne/2018/09/18/articulo/1537286566_909735.html" title="Ver Noticia">O sea, la de muletillas que usamos, ¿sabes?</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//verne.elpais.com/verne/2018/09/21/articulo/1537528144_276605.html" title="Ver Noticia">¿Puede un iPhone ser machista?</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//verne.elpais.com/verne/2018/09/20/mexico/1537473454_908033.html" title="Ver Noticia">Una universidad en Pátzcuaro adopta a tres perros callejeros y los convierte en policías</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//verne.elpais.com/verne/2018/09/20/mexico/1537398139_855555.html" title="Ver Noticia">¿Puede ser sostenible una copa menstrual desechable?</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//verne.elpais.com/verne/2018/09/13/articulo/1536854231_811826.html" title="Ver Noticia">Lo que pasa en tu cuerpo cuando se te repite el ajo</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//verne.elpais.com/verne/2018/09/19/articulo/1537376745_463736.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>'OT 2017' es ya oficialmente nostalgia en la gala 0 de 'OT 2018'</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//verne.elpais.com/verne/2018/09/20/articulo/1537453782_660438.html" title="Ver Noticia">'Yo tengo ganas de OT'</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//verne.elpais.com/verne/2018/09/20/articulo/1537457442_558506.html" title="Ver Noticia">El especial '28 días' sobre la regla, entre los tres finalistas del Premio García Márquez de Innovación</a></li>
+</ol>
+</div>
+<div class="envoltorio_publi estirar">
+</div>
+</div>
+<script language="javaScript" type="text/javascript">
+    if (typeof aniade_track_caja == 'function') { 
+        aniade_track_caja('caja_lo_mas_visto', 'rel=lom');
+    }
+</script>
+<div class="envoltorio_publi estirar">
+<div id='elpais_gpt-MPU3' class='publi_luto_horizontal'>
+<script type='text/javascript'>
+			PBS.display('MPU3');
+		</script>
+</div>
+</div>
+</div>
+</aside>
+<aside class="otros">
+<div class="otros__interior">
+<div class="envoltorio_publi estirar">
+<script type='text/javascript'>
+	if ( pbs_dimensiones.ancho  >= 728)
+		document.write("<div id='elpais_gpt-LDB2' class='publi_luto_vertical'><script type='text/javascript'>PBS.display('LDB2');<\/script></div>");
+</script>
+</div>
+<div id="outbrain" class="outbrain">
+<div class="OUTBRAIN" data-src="http://elpais.com/economia/2018/09/21/actualidad/1537530576_222265.html" data-widget-id="AR_6" data-ob-template="elpais" ></div>
+<div class="OUTBRAIN" data-src="http://elpais.com/economia/2018/09/21/actualidad/1537530576_222265.html" data-widget-id="AR_5" data-ob-template="elpais" ></div>
+<div class="OUTBRAIN" data-src="http://elpais.com/economia/2018/09/21/actualidad/1537530576_222265.html" data-widget-id="AR_4" data-ob-template="elpais" ></div>
+<script type="text/javascript" async src="//widgets.outbrain.com/outbrain.js"></script>
+</div>
+<a name="comentarios"></a>
+<script type="text/javascript">
+var getScript=function(js){
+	var allScripts = document.getElementsByTagName('script');
+	for (var i = 0; i < allScripts.length; i++) {
+		if (allScripts[i].src.indexOf(js) > -1)
+            return true;
+    }
+	return false;
+}
+if (!getScript('lazyload')){
+	var head = document.getElementsByTagName('head').item(0);
+    var script = document.createElement('script');
+    script.setAttribute('type', 'text/javascript');
+    script.setAttribute('src', '/js/comun/ll/lazyload.20160120.js');
+    head.appendChild(script);
+}
+</script>
+<section id="articulo-comentarios" class="articulo-comentarios">
+<header class="articulo-comentarios-encabezado">
+<button id="boton_articulo-comentarios" class="articulo-comentarios-titulo">Comentarios				<span id="articulo-comentarios-contador" class="articulo-comentarios-contador"></span>
+</button>
+<a href="//elpais.com/estaticos/normas-de-participacion/" class="articulo-comentarios-normas">Normas</a>
+</header>
+<div id="articulo-comentarios__interior" class="articulo-comentarios__interior">
+<div id="articulo-comentarios-form" class="articulo-comentarios"  style="display: none;">
+<form class="formulario formulario_comentarios" method="POST" action="https://plus.elpais.com/conectar?prod=REG&o=COM&backURL=https%3A%2F%2Felpais.com%2Feconomia%2F2018%2F09%2F21%2Factualidad%2F1537530576_222265.html" id="formulario_inicio_sesion_comentarios" name="formulario_inicio_sesion_comentarios">
+<div class="formulario-encabezado">Entra en EL PAÍS para participar</div>
+<fieldset class="formulario-campos">
+<div class="campo_linea">
+<label class="campo-titulo" for="cajalogin_camponombreusuario_comentarios">E-mail</label>
+<div class="campo-valor"><input type="text" autocorrect="off" placeholder="correo electrónico" id="cajalogin_camponombreusuario_comentarios" name="id"></div>
+</div>
+<div class="campo_linea">
+<label class="campo-titulo" for="cajalogin_campocontrasena_comentarios">Contraseña</label>
+<input type="password" placeholder="clave" id="cajalogin_campocontrasena_comentarios" name="pass">
+</div>
+<input name="backURL"   type="hidden" value="https://elpais.com/economia/2018/09/21/actualidad/1537530576_222265.html#bloque_comentarios" style="display: none" />
+<input type="hidden" value="1" name="o">
+<input type="hidden" value="1" id="id_rememberme" name="rememberme">
+<input type="hidden" value="ESKUP" name="prod">
+</fieldset>
+<div class="formulario-acciones">
+<button class="boton_enviar">Entra</button>
+<ul>
+<li><a href="https://plus.elpais.com/recontrasena">Recupera contraseña</a></li>
+<li>¿No estás registrado? <a href="https://plus.elpais.com/registro?prod=REG&o=COM">Crea tu cuenta</a></li>
+</ul>
+</div>
+</form>
+</div>
+<div class="articulo-comentarios-iframe">
+<script language="javaScript" type="text/javascript" src="//ep01.epimg.net/Comentarios/comentarios_js.html?ghi=1537530576-906e701f429b78bc9c3138c2491afc12&vCom=1&gcss=/estilos/v2.x/v2.0/comentarios/eskup_comentarios_noticia.css&gjs=1&gll=1"></script>
+<script language="javaScript"  type="text/javascript" >
+
+var _urlThreadeskup        = '/Threadeskup';
+var _urlThreadeskupSimple  = '/ThreadeskupSimple';
+
+function EPET_checkURLparaMostrarCajaComentarios(idComentariosNoticia) {
+
+    var frameId = "comentarios_noticia_" + idComentariosNoticia;
+
+    if(window.location.href.indexOf("#") > 0){
+       var urlS = window.location.href.split('#');
+       var specialParams = urlS[1].split(';');
+         for (var i = 0; i < specialParams.length; i++){
+            paramsKeyValue = specialParams[i].split('=');
+            valsparam = paramsKeyValue[1];
+
+            switch(paramsKeyValue[0]){
+                case 'skp_idwdg':
+                    if (valsparam == frameId) {
+                        if (document.getElementById('articulo-comentarios') &&
+                            typeof Responsive != 'undefined') {
+                            Responsive.anade_quita_class("articulo-comentarios","visible");
+                        }
+                    }
+                break;
+            }
+        }
+    }
+
+}
+
+function EPET_obtenerYPintarNumComentarios(idComentariosNoticia) {
+
+    EPET_checkURLparaMostrarCajaComentarios(idComentariosNoticia);
+
+    EPETUtils_makeHttpRequestGet(function(httpRequest) {
+
+        // Por defecto sale vacío el hueco del número de comentarios
+        var _numeroComentariosNoticia = "";
+
+        if (httpRequest.status != 200) {
+            // ante un error, no pintamos nada
+        } else {
+
+            var _hashTMP = Array();
+            var data = httpRequest.responseText;
+
+            eval("_hashTMP = " + data);
+
+            // Se obtiene el numero de mensajes del hilo
+            if (typeof _hashTMP.perfilesHilos != "undefined" &&
+                typeof _hashTMP.perfilesHilos['_' + idComentariosNoticia] != "undefined" &&
+                typeof _hashTMP.perfilesHilos['_' + idComentariosNoticia].numero_mensajes != "undefined") {
+
+                _numeroComentariosNoticia = _hashTMP.perfilesHilos['_' + idComentariosNoticia].numero_mensajes;
+
+            }
+        }
+
+        EPET_pintaNumComentarios(idComentariosNoticia, _numeroComentariosNoticia);
+
+    }, _urlThreadeskupSimple + "?action=info&th=" + idComentariosNoticia + "&rnd=" + Math.random());
+
+}
+
+function EPET_pintaNumComentarios(idComentariosNoticia, _numeroComentariosNoticia) {
+
+    // Protegemos el pintado si el valor viene negativo.
+    if (_numeroComentariosNoticia < 0) {
+        _numeroComentariosNoticia = 0;
+    }
+
+    var _objDivNumComentariosFirma  = document.getElementById('num_comentarios_noticia_firma_' + idComentariosNoticia);
+    if (_objDivNumComentariosFirma) {
+        if (_numeroComentariosNoticia < 1) {
+            _objDivNumComentariosFirma.innerHTML = "";
+            _objDivNumComentariosFirma.style.display = "none";
+        } else {
+            _objDivNumComentariosFirma.innerHTML = _numeroComentariosNoticia;
+            _objDivNumComentariosFirma.style.display = "inline-block";
+        }
+    }
+
+    var _objDivNumComentariosWidget = document.getElementById('num_comentarios_noticia_' + idComentariosNoticia);
+    if (_objDivNumComentariosWidget) {
+        if (_numeroComentariosNoticia < 1) {
+            _objDivNumComentariosWidget.innerHTML = "";
+        } else {
+            _objDivNumComentariosWidget.innerHTML = '<span class="numero">' + _numeroComentariosNoticia + '</span> comentario';
+            if (_numeroComentariosNoticia > 1) {
+                _objDivNumComentariosWidget.innerHTML += 's';
+            }
+        }
+    }
+
+    var _objDivNumComentariosHSup = document.getElementById('num_comentarios_header_superior_' + idComentariosNoticia);
+    if (_objDivNumComentariosHSup) {
+       if (_numeroComentariosNoticia == 0) {
+           _objDivNumComentariosHSup.innerHTML = "";
+       } else {
+           if (_objDivNumComentariosHSup.innerHTML != _numeroComentariosNoticia) {
+               _objDivNumComentariosHSup.innerHTML = _numeroComentariosNoticia;
+           }
+       }
+    }
+
+    var _objDivNumComentariosHInf = document.getElementById('num_comentarios_header_inferior_' + idComentariosNoticia);
+    if (_objDivNumComentariosHInf) {
+        if (_numeroComentariosNoticia == 0) {
+            _objDivNumComentariosHInf.innerHTML = "";
+        } else {
+            if (_objDivNumComentariosHInf.innerHTML != _numeroComentariosNoticia) {
+                _objDivNumComentariosHInf.innerHTML = _numeroComentariosNoticia;
+            }
+        }
+    }
+
+    var _objSpanNumComentariosCompartir = document.getElementById('numero_comentarios');
+    if (_objDivNumComentariosHInf) {
+        if (_numeroComentariosNoticia == 0) {
+            _objDivNumComentariosHInf.innerHTML = "";
+        } else {
+            if (_objDivNumComentariosHInf.innerHTML != _numeroComentariosNoticia) {
+                _objDivNumComentariosHInf.innerHTML = _numeroComentariosNoticia;
+            }
+        }
+    }
+
+    var _objDivNumComentariosHInf = document.getElementById('num_comentarios_header_compartir_' + idComentariosNoticia);
+    if (_objDivNumComentariosHInf) {
+        if (_numeroComentariosNoticia == 0) {
+            _objDivNumComentariosHInf.innerHTML = "";
+        } else {
+            if (_objDivNumComentariosHInf.innerHTML != _numeroComentariosNoticia) {
+                _objDivNumComentariosHInf.innerHTML = _numeroComentariosNoticia;
+            }
+        }
+    }
+
+    var _objDivNumComentariosBtn = document.getElementById('articulo-comentarios-contador');
+    if (_objDivNumComentariosBtn) {
+        if (_numeroComentariosNoticia == 0) {
+            _objDivNumComentariosBtn.innerHTML = "";
+        } else {
+            if (_objDivNumComentariosBtn.innerHTML != _numeroComentariosNoticia) {
+                _objDivNumComentariosBtn.innerHTML = '('+_numeroComentariosNoticia+')';
+            }
+        }
+    }
+
+}
+
+var _idComentariosNoticia = '1537530576-906e701f429b78bc9c3138c2491afc12';
+EPET_obtenerYPintarNumComentarios(_idComentariosNoticia);
+
+function EPET_setNumMensajescomentarios(num) {
+    EPET_pintaNumComentarios('1537530576-906e701f429b78bc9c3138c2491afc12', num);
+}
+ESKUP.setOnReceiveNumMensajes("comentarios_noticia_1537530576-906e701f429b78bc9c3138c2491afc12", EPET_setNumMensajescomentarios);
+
+</script>
+</div>
+</div>
+</section>
+<div class="envoltorio_publi estirar">
+<script type='text/javascript'>
+	if ( pbs_dimensiones.ancho  >= 728)
+		document.write("<div id='elpais_gpt-LDB3' class='publi_luto_vertical'><script type='text/javascript'>PBS.display('LDB3');<\/script></div>");
+	else
+		document.write("<div id='elpais_gpt-MLDB3' class='publi_luto_vertical'><script type='text/javascript'>PBS.display('MLDB3');<\/script></div>");
+</script>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<footer id="pie" class="pie">
+<div class="pie__interior">
+<div class="corporativo">
+<ul class="corporativo-menu">
+<li itemtype="http://schema.org/CreativeWork" itemscope=""><a href="//elpais.com/corporativos/" target="_blank"><span itemprop="copyrightHolder">&copy; <strong>EDICIONES EL PAÍS S.L.</strong></span></a></li>
+<li><a rel="nofollow" href="//elpais.com/estaticos/contacte/" title="Contacto">Contacto</a></li>
+<li><a href="http://www.prisanewsservices.com" target="_blank" title="Sindicación y venta de contenidos">Venta de contenidos</a></li>
+<li><a href="//elpais.com/estaticos/publicidad/" target="_blank" title="Publicidad">Publicidad</a></li>
+<li><a rel="nofollow" href="//elpais.com/estaticos/aviso-legal/">Aviso legal</a></li>
+<li><a rel="nofollow" href="http://www.prisa.com/es/pagina/politica-de-cookies/" target="_blank">Política cookies</a></li>
+<li><a href="//elpais.com/estaticos/mapa-web/">Mapa</a></li>
+<li><a href="//elpais.com/suscripciones/">EL PAÍS en KIOSKOyMÁS</a></li>
+<li><a href="//elpais.com/tag/listado/">Índice</a></li>
+<li><a href="//servicios.elpais.com/rss/">RSS</a></li>
+</ul>
+</div>
+<script type="text/javascript">var var_eptz="BR";</script>
+<link href="//ep01.epimg.net/estilos/pie/v3.x/v3.10/pie-comunes.css" rel="stylesheet">
+<div id="pie-comun9">
+<div class="inside">
+<div class="medios-destacados">
+<a id="pc_prisa" href="http://www.prisa.com/es/" target="_blank"  title="Ir a la web del Grupo Prisa">Una empresa de PRISA</a>
+<a id="pbt-medios" href="javascript:void(0);" title="medios Grupo Prisa">Medios Grupo Prisa</a>
+<ul class="primerafila estirar">
+<li><a id="pc_elpais" href="https://elpais.com" target="_blank"  title="EL PA&Iacute;S">El PA&Iacute;S</a></li>
+<li><a id="pc_los40" href="http://los40.com" target="_blank"  title="Ir a la web de Los 40">Los 40 principales</a></li>
+<li><a id="pc_santillana" href="http://www.santillana.com/es/" target="_blank"  title="Ir a la web de Santillana">Santillana</a></li>
+<li><a id="pc_compartir" href="http://santillanacompartir.com/" target="_blank"  title="Ir a la web de Santillana Compartir">Santillana Compartir</a></li>
+<li><a id="pc_tvi" href="http://www.tvi.iol.pt" target="_blank"  title="Ir a la web de tvi">tvi</a></li>
+<li><a id="pc_ser" href="http://cadenaser.com" target="_blank"  title="Ir a la web de Cadena SER">Cadena SER</a></li>
+<li><a id="pc_as" href="https://as.com" target="_blank" title="Ir a la web de AS">AS.com</a></li>
+<li><a id="pc_adn" href="http://www.adnradio.cl" target="_blank"  title="Ir a la web de ADN">adn</a></li>
+<li><a id="pc_caracol" href="http://www.caracol.com.co/" target="_blank"  title="Ir a la web de Caracol">Caracol</a></li>
+</ul>
+<ul class="estirar">
+<li><a id="pc_huffington" href="http://www.huffingtonpost.es/" target="_blank" title="Ir a la web de Huffington Post">Huffington Post</a></li>
+<li><a id="pc_uno" href="http://www.sistemauno.com/web/index.html" target="_blank" title="Ir a la web de Sistema UNO">UNO</a></li>
+<li><a id="pc_wradio" href="http://www.wradio.com.co" target="_blank"  title="Ir a la web de wradio">wradio</a></li>
+<li><a id="pc_cincodias" href="https://cincodias.elpais.com" target="_blank" title="Ir a la web de Cinco D&iacute;as">Cinco D&iacute;as</a> </li>
+<li><a id="pc_continental" href="http://www.continental.com.ar" target="_blank"  title="Ir a la web de Radio Continental">continental</a></li>
+<li><a id="pc_maxima" href="http://www.maxima.fm" target="_blank"  title="Ir a la web de M&aacute;xima FM">M&aacute;xima</a></li>
+<li><a id="pc_m80" href="http://www.m80radio.com" target="_blank"  title="Ir a la web de M80 radio">M80 radio</a></li>
+<li><a id="pc_dial" href="http://www.cadenadial.com" target="_blank"  title="Ir a la web de Cadena Dial">Cadena Dial</a></li>
+<li><a id="pc_kebuena" href="http://kebuena.es/" target="_blank"  title="Ir a la web de Kebuena">Kebuena</a></li>
+<li><a id="pc_podium" href="http://www.podiumpodcast.com/" target="_blank"  title="Ir a la web de Podium Podcast">Podium podcasts</a></li>
+</ul>
+<ul class="estirar">
+<li><a id="pc_richmond" href="http://www.richmondelt.com/" target="_blank"  title="Ir a la web de Richmond">Richmond</a></li>
+<li><a id="pc_moderna" href="http://www.moderna.com.br/pagina-inicial.htm" target="_blank"  title="Ir a la web de Moderna">Moderna</a></li>
+<li><a id="pc_plural" href="http://pluralportugal.pt/" target="_blank"  title="Ir a la web de plural">Plural</a></li>
+<li><a id="pc_tvi24" href="http://www.tvi24.iol.pt/" target="_blank"  title="Ir a la web de tvi">tvi24</a></li>
+<li><a id="pc_icon" href="https://elpais.com/elpais/icon.html" target="_blank"  title="Ir a la web de El Pa&iacute;s ICON">El Pa&iacute;s ICON</a></li>
+<li><a id="pc_verne" href="https://elpais.com/elpais/planeta_futuro.html" target="_blank"  title="Ir a la web de Planeta futuro">Planeta futuro</a></li>
+<li><a id="pc_loqueleo" href="http://www.loqueleo.com/" target="_blank"  title="Ir a la web de loqueleo">loqueleo</a></li>
+<li><a id="pc_meristation" href="http://www.meristation.com/" target="_blank"  title="Ir a la web de Meristation">Meristation</a></li>
+<li><a id="pc_elviajero" href="http://smoda.elpais.com/" target="_blank"  title="Ir a la web de S moda">S moda</a></li>
+<li><a id="pc_clasificados" href="http://radiocomercial.iol.pt/" target="_blank"  title="Ir a la web de R&aacute;dio Comercial">R&aacute;dio Comercial</a>
+</ul>
+</div>
+<div id="capa-webs-grupo" class="muestra-medios"> 
+<div class="capa-medios">
+<div class="cabecera-capa estirar">
+<h3>Webs de PRISA</h3>
+<a href="javascript:void(0);" title="cerrar" id="cierrame">cerrar ventana</a>
+</div>
+
+<ul class="webs-grupo">
+<li class="webs-grupo-col">
+<ul>
+<li class="tit-principal">SANTILLANA</li>
+<li class="encabezado"><a href="http://www.santillana.com" target="_blank" rel="nofollow" title="SANTILLANA Global">SANTILLANA Global</a></li>
+<li class="encabezado subrayado"><a href="http://www.richmondelt.com/" target="_blank" rel="nofollow" title="Richmond Publishing">Richmond</a></li>
+<li class="tit-seccion">SANTILLANA</li>
+<li><a href="http://www.santillana.com.ar" target="_blank" rel="nofollow" title="Argentina">Argentina</a></li>
+<li><a href="http://www.santillana.com.bo/" target="_blank" rel="nofollow" title="Bolivia">Bolivia</a></li>
+<li><a href="http://www.santillana.com.br/" target="_blank" rel="nofollow" title="Brasil">Brasil</a></li>
+<li><a href="http://www.santillana.cl/" target="_blank" rel="nofollow" title="Chile">Chile</a></li>
+<li><a href="http://www.santillana.com.co/websantillana/" target="_blank" rel="nofollow" title="Colombia">Colombia</a></li>
+<li><a href="http://www.santillana.cr/" target="_blank" rel="nofollow" title="Costa Rica">Costa Rica</a></li>
+<li><a href="http://www.santillana.com.ec/" target="_blank" rel="nofollow" title="Ecuador">Ecuador</a></li>
+<li><a href="http://www.santillana.com.sv/" target="_blank" rel="nofollow" title="El Salvador">El Salvador</a></li>
+<li><a href="http://www.santillana.es/" target="_blank" rel="nofollow" title="Espa&ntilde;a">Espa&ntilde;a</a></li>
+<li><a href="http://www.santillanausa.com/" target="_blank" rel="nofollow" title="Estados Unidos">Estados Unidos</a></li>
+<li><a href="http://www.santillana.com.gt/" target="_blank" rel="nofollow" title="Guatemala">Guatemala</a></li>
+<li><a href="http://www.santillana.com.hn/" target="_blank" rel="nofollow" title="Honduras">Honduras</a></li>
+<li><a href="http://www.santillana.com.mx/" target="_blank" rel="nofollow" title="M&eacute;xico">M&eacute;xico</a></li>
+<li><a href="http://www.santillana.com.pa/" target="_blank" rel="nofollow" title="Panam&aacute;">Panam&aacute;</a></li>
+<li><a href="http://www.santillana.com.py/" target="_blank" rel="nofollow" title="Paraguay">Paraguay</a></li>
+<li><a href="http://www.santillana.com.pe/" target="_blank" rel="nofollow" title="Per&uacute;">Per&uacute;</a></li>
+<li><a href="http://www.santillana.pt/" target="_blank" rel="nofollow" title="Portugal">Portugal</a></li>
+<li><a href="http://gruposantillanapr.com/" target="_blank" rel="nofollow" title="Puerto Rico">Puerto Rico</a></li>
+<li><a href="http://santillana.com.do/" target="_blank" rel="nofollow" title="Rep. Dominicana">Rep. Dominicana</a></li>
+<li><a href="http://www.santillana.com.uy/" target="_blank" rel="nofollow" title="Uruguay">Uruguay</a></li>
+<li><a href="http://www.santillana.com.ve/" target="_blank" rel="nofollow" title="Venezuela">Venezuela</a></li>
+<li class="encabezado subrayado"><a href="http://www.loqueleo.com/" target="_blank" rel="nofollow" title="loqueleo">loqueleo</a></li>
+<li class="encabezado subrayado"><a href="http://www.santillanaele.com/" target="_blank" rel="nofollow" title="SANTILLANA ESPA&Ntilde;OL">SANTILLANA ESPA&Ntilde;OL</a></li>
+<li class="encabezado subrayado"><a href="http://www.santillanafrancais.com/" target="_blank" rel="nofollow" title="SANTILLANA FRANCES">SANTILLANA FRANCES</a></li>
+<li class="encabezado subrayado"><a href="http://www.sistemauno.com/web/inicio.html" target="_blank" rel="nofollow" title="Sistema UNO de Ensino">Sistema UNO</a></li>
+<li class="encabezado subrayado"><a href="http://santillanacompartir.com/" target="_blank" rel="nofollow" title="Santillana Compartir">Santillana Compartir</a></li>
+<li class="encabezado subrayado"><a href="http://ineverycrea.net/" target="_blank" rel="nofollow" title="IneveryCREA">IneveryCREA</a></li>
+<li class="encabezado subrayado"><a href="https://www.bejob.com/" target="_blank" rel="nofollow" title="Bejob">Bejob</a></li>
+<li class="tit-seccion">Fundaci&oacute;n Santillana</li>
+<li><a href="http://www.fundacaosantillana.com.br/" target="_blank" rel="nofollow" title="Brasil">Brasil</a></li>
+<li><a href="http://www.fundacionsantillana.com/" target="_blank" rel="nofollow" title="Espa&ntilde;a">Espa&ntilde;a</a></li>
+<li><a href="http://www.fundacionsantillana.org.co/" target="_blank" rel="nofollow" title="Colombia">Colombia</a></li>
+<li><a href="http://www.periodismocultural.es/" target="_blank" rel="nofollow" title="Seminario Periodismo Cultural">Seminario Periodismo Cultural</a></li>
+<li><a href="http://www.foroindustriasculturales.org/" target="_blank" rel="nofollow" title="Foro de industrias culturales">Foro de industrias culturales</a></li>
+<li><a href="http://www.essayandscience.com" target="_blank" rel="nofollow" title="Essay & Science">Essay & Science</a></li>
+<li><a href="http://www.premiovivalectura.org.ar/" target="_blank" rel="nofollow" title="Premio Viva Lectura">Premio Viva Lectura</a></li>
+<li><a href="http://www.elboomeran.com/" target="_blank" rel="nofollow" title="El Boomeran(g)">El Boomeran(g)</a></li>
+</ul>
+</li>
+<li class="webs-grupo-col">
+<ul>
+<li class="tit-principal">PRISA NOTICIAS</li>
+<li class="encabezado"><a href="http://www.prisa.com/es/info/noticias" target="_blank" rel="nofollow" title="PRISA Noticias">PRISA Noticias</a></li>
+<li class="tit-seccion"><a href="https://elpais.com/" target="_blank" title="EL PA&Iacute;S">EL PA&Iacute;S</a></li>
+<li><a href="https://elpais.com/elpais/portada_america.html?nrd=1" target="_blank" title="EL PA&Iacute;S Am&eacute;rica">EL PA&Iacute;S Am&eacute;rica</a></li>
+<li><a href="https://brasil.elpais.com/?nrd=1" target="_blank" title="EL PA&Iacute;S Brasil">EL PA&Iacute;S Brasil</a></li>
+<li><a href="https://elpais.com/elpais/inenglish.html" target="_blank" title="EL PA&Iacute;S in English">EL PA&Iacute;S in English</a></li>
+<li><a href="https://cat.elpais.com/?nrd=1" target="_blank" title="EL PA&Iacute;S Catalu&ntilde;a">EL PA&Iacute;S Catalu&ntilde;a</a></li>
+<li><a href="http://epv.elpais.com/" target="_blank" title="EL PA&Iacute;S V&iacute;deo">EL PA&Iacute;S V&iacute;deo</a></li>
+<li><a href="https://elpais.com/elpais/blogs.html" target="_blank" title="Blogs EL PA&Iacute;S">Blogs EL PA&Iacute;S</a></li>
+<li><a href="https://elpais.com/cultura/babelia.html" target="_blank" title="Babelia">Babelia</a></li>
+<li><a href="http://elpaissemanal.elpais.com/" target="_blank" title="EL PA&Iacute;S Semanal">EL PA&Iacute;S Semanal</a></li>
+<li><a href="https://elpais.com/elpais/icon.html" target="_blank" title="ICON">ICON</a></li>
+<li><a href="https://elpais.com/elpais/planeta_futuro.html" target="_blank" title="Planeta Futuro">Planeta Futuro</a></li>
+<li><a href="https://elpais.com/elpais/tentaciones.html" target="_blank" title="Tentaciones">Tentaciones</a></li>
+<li><a href="https://verne.elpais.com/" target="_blank" title="Verne">Verne</a></li>
+<li><a href="https://elviajero.elpais.com/" target="_blank" title="El Viajero">El Viajero</a></li>
+<li><a href="http://smoda.elpais.com/" target="_blank" title="S Moda">S Moda</a></li>
+<li><a href="https://elpais.com/elpais/buenavida.html" target="_blank" title="BuenaVida">BuenaVida</a></li>
+<li><a href="https://elcomidista.elpais.com/" target="_blank" title="El Comidista">El Comidista</a></li>
+<li><a href="https://suscripciones.elpais.com/" target="_blank" title="EL PA&Iacute;S +">EL PA&Iacute;S +</a></li>
+<li><a href="http://escuela.elpais.com/" target="_blank" title="Escuela de Periodismo">Escuela de Periodismo</a></li>
+<li><a href="http://estudiantes.elpais.com/" target="_blank" title="EL PA&Iacute;S de los Estudiantes">EL PA&Iacute;S de los Estudiantes</a></li>
+<li><a href="http://librotea.com/" target="_blank" title="Librotea">Librotea</a></li>
+<li class="sep peq"><a href="http://descuentos.elpais.com/" target="_blank" title="Descuentos EL PA&Iacute;S">Descuentos EL PA&Iacute;S</a></li>
+<li class="peq"><a href="http://www.elpaisclubdevinos.com/" target="_blank" title="EL PA&Iacute;S Club de Vinos">EL PA&Iacute;S Club de Vinos</a></li>
+<li class="peq"><a href="http://servicios.elpais.com/clasificados/" target="_blank" title="Clasificados EL PA&Iacute;S">Clasificados EL PA&Iacute;S</a></li>
+<li class="peq"><a href="http://cursos.elpais.com/" target="_blank" title="Directorio de centros">Directorio de centros</a></li>
+<li class="peq"><a href="http://elpaisviajes.com/" target="_blank"  title="EL PA&Iacute;S Viajes">EL PA&Iacute;S Viajes</a></li>
+<li class="peq"><a href="https://seleccion.elpais.com/" target="_blank" title="Selecci&oacute;n EL PA&Iacute;S">Selecci&oacute;n EL PA&Iacute;S</a></li>
+<li class="peq"><a href="https://colecciones.elpais.com/" target="_blank" title="Colecciones EL PA&Iacute;S">Colecciones EL PA&Iacute;S</a></li>
+<li class="tit-seccion"><a href="https://as.com/?nrd=1" target="_blank" rel="nofollow" title="Diario Deportivo AS">AS</a></li>
+<li><a title="AS Chile" href="https://chile.as.com/chile/?nrd=1" target="_blank" rel="nofollow"> AS Chile</a></li>
+<li><a title="AS Colombia" href="https://colombia.as.com/colombia/?nrd=1" target="_blank" rel="nofollow"> AS Colombia</a></li>
+<li><a title="AS M&eacute;xico" href="https://mexico.as.com/mexico/?nrd=1" target="_blank" rel="nofollow"> AS M&eacute;xico</a></li>
+<li><a title="AS USA" href="https://us.as.com/us/?nrd=1" target="_blank" rel="nofollow"> AS USA</a></li>
+<li><a title="AS Am&eacute;rica" href="https://as.com/diarioas/america.html?nrd=1" target="_blank" rel="nofollow">AS Am&eacute;rica</a></li>
+<li><a title="AS English" href="https://en.as.com/en/?nrd=1" target="_blank" rel="nofollow">AS English</a></li>
+<li><a title="Resultados deportivos" href="https://resultados.as.com/resultados/" target="_blank" rel="nofollow">Resultados deportivos</a></li>
+<li><a title="ASTV" href="https://as.com/videos/" target="_blank" rel="nofollow">ASTV</a></li>
+<li><a title="TikiTakas" href="https://as.com/tikitakas/" target="_blank" rel="nofollow">TikiTakas</a></li>
+<li><a title="Epik" href="https://as.com/epik/" target="_blank" rel="nofollow">Epik</a></li>
+<li><a title="BeTech" href="https://as.com/betech/" target="_blank" rel="nofollow">BeTech</a></li>
+<li><a title="Descuentos" href="http://descuentos.as.com/" target="_blank" >AS Descuentos</a></li>
+<li><a title="Megastore" href="https://megastore.as.com/" target="_blank">Megastore</a></li>
+<li><a title="Promociones" href="https://as.com/diarioas/promociones.html" target="_blank" rel="nofollow">Promociones</a></li>
+<li><a title="Concursos" href=" https://as.com/diarioas/concursos.html" target="_blank" rel="nofollow">Concursos</a></li>
+<li><a title="AS Outlet" href="https://as-outlet.es/" target="_blank">AS-outlet</a></li>
+<li class="tit-seccion"><a href="https://cincodias.elpais.com/" target="_blank" title="Diario Econ&oacute;mico">Cinco D&iacute;as</a></li>
+<li><a title="Compa&ntilde;&iacute;as" href="https://cincodias.elpais.com/seccion/companias" target="_blank">Compa&ntilde;&iacute;as</a></li>
+<li><a title="Mercados" href="https://cincodias.elpais.com/seccion/mercados" target="_blank">Mercados</a></li>
+<li><a title="Mi Dinero" href="https://cincodias.elpais.com/seccion/midinero" target="_blank">Mi Dinero</a></li>
+<li><a title="Fortuna" href="https://cincodias.elpais.com/seccion/fortunas" target="_blank">Fortuna</a></li>
+<li><a title="Smartlife" href="https://cincodias.elpais.com/smartlife" target="_blank">Smartlife</a></li>
+<li><a title="Territorio Pyme" href="https://cincodias.elpais.com/territorio_pyme" target="_blank">Territorio Pyme</a></li>
+<li><a title="Cinco Sentidos" href="https://cincodias.elpais.com/seccion/sentidos" target="_blank">Cinco Sentidos</a></li>
+<li><a title="Zona Trading" href="https://cincodias.elpais.com/seccion/zona_trading" target="_blank">Zona Trading</a></li>
+<li class="encabezado subrayado"><a href="http://motor.elpais.com/" target="_blank" title="El Motor">El Motor</a></li>
+<li class="encabezado subrayado"><a href="https://retina.elpais.com/" target="_blank" title="Retina">Retina</a></li>
+<li class="encabezado subrayado"><a href="http://www.huffingtonpost.es/" target="_blank" rel="nofollow" title="Huffington Post">El Huffington Post</a></li>
+<li class="encabezado subrayado"><a href="http://www.meristation.com/" target="_blank" title="MeriStation">MeriStation</a></li>
+<li><a title="MeriStation M&eacute;xico" href="http://www.meristation.com.mx/" target="_blank"> MeriStation M&eacute;xico</a></li>
+</ul>
+</li>
+
+<li class="webs-grupo-col">
+<ul>
+<li class="tit-principal">PRISA RADIO</li>
+<li class="encabezado"><a href="http://www.prisa.com/es/info/radio" target="_blank" rel="nofollow" title="PRISA Radio">PRISA Radio</a></li>
+<li class="tit-seccion">RADIO HABLADA</li>
+<li class="nolink"><a href="http://www.adnradio.cl/" target="_blank" rel="nofollow" title="ADN Radio">ADN Radio</a></li>
+<li class="nolink"><a href="http://cadenaser.com/" target="_blank" rel="nofollow" title="Cadena SER">Cadena SER</a></li>
+<li class="nolink"><a href="http://www.caracol.com.co/" target="_blank" rel="nofollow" title="Caracol Radio (Colombia)">Caracol Radio</a></li>
+<li class="nolink"><a href="http://www.caracol1260.com/" target="_blank" rel="nofollow" title="Caracol 1260 (Miami)">Caracol 1260</a></li>
+<li class="nolink"><a href="http://www.continental.com.ar/" target="_blank" rel="nofollow" title="Radio Continental">Radio Continental</a></li>
+<li class="nolink"><a href="http://www.radiopanama.com.pa/" target="_blank" rel="nofollow" title="Radio Panam&aacute;">Radio Panam&aacute;</a></li>
+<li class="nolink">W Radio</li>
+<li class="sub"><a href="http://www.wradio690.com/" target="_blank" rel="nofollow" title="EE UU">EE UU</a></li>
+<li class="sub"><a href="http://www.wradio.com.co/" target="_blank" rel="nofollow" title="Colombia">Colombia</a></li>
+<li class="sub"><a href="http://www.wradio.com.mx/" target="_blank" rel="nofollow" title="M&eacute;xico">M&eacute;xico</a></li>
+<li class="sub"><a href="http://www.wradio.com.mx/" target="_blank" rel="nofollow" title="Estadio W">Estadio W</a></li>
+<li class="sub"><a href="http://www.wradio.com.pa/" target="_blank" rel="nofollow" title="Panam&aacute;">Panam&aacute;</a></li>
+<li class="tit-seccion">RADIO MUSICAL</li>
+<li class="nolink">LOS40</li>
+<li class="sub"><a href="http://los40.com.ar/" target="_blank" rel="nofollow" title="Argentina">Argentina</a></li>
+<li class="sub"><a href="http://los40.cl/" target="_blank" rel="nofollow" title="Chile">Chile</a></li>
+<li class="sub"><a href="http://los40.com.co/" target="_blank" rel="nofollow" title="Colombia">Colombia</a></li>
+<li class="sub"><a href="http://los40.co.cr/" target="_blank" rel="nofollow" title="Costa Rica">Costa Rica</a></li>
+<li class="sub"><a href="http://www.los40.com.ec/" target="_blank" rel="nofollow" title="Ecuador">Ecuador</a></li>
+<li class="sub"><a href="http://los40.com" target="_blank" rel="nofollow" title="Espa&ntilde;a">Espa&ntilde;a</a></li>
+<li class="sub"><a href="http://www.los40.com.gt/" target="_blank" rel="nofollow" title="Guatemala">Guatemala</a></li>
+<li class="sub"><a href="http://los40.com.mx/" target="_blank" rel="nofollow" title="M&eacute;xico">M&eacute;xico</a></li>
+<li class="sub"><a href="http://los40.com.pa/" target="_blank" rel="nofollow" title="Panam&aacute;">Panam&aacute;</a></li>
+<li class="sub"><a href="http://www.los40.com.py/" target="_blank" rel="nofollow" title="Paraguay">Paraguay</a></li>
+<li class="sub"><a href="http://www.los40.do/" target="_blank" rel="nofollow" title="Rep. Dominicana">Rep. Dominicana</a></li>
+<li class="nolink">B&eacute;same</li>
+<li class="sub"><a href="http://www.besame.fm/" target="_blank" rel="nofollow" title="Colombia">Colombia</a></li>
+<li class="sub"><a href="http://www.besame.co.cr/" target="_blank" rel="nofollow" title="Costa Rica">Costa Rica</a></li>
+<li class="sub"><a href="http://www.besame.com.pa/" target="_blank" rel="nofollow" title="Panam&aacute;">Panam&aacute;</a></li>
+<li class="nolink"><a href="http://www.cadenadial.com/" target="_blank" rel="nofollow" title="Cadena DIAL">Cadena DIAL</a></li>
+<li class="nolink"><a href="http://www.concierto.cl/" target="_blank" rel="nofollow" title="Concierto">Concierto</a></li>
+<li class="nolink"><a href="http://www.corazon.cl/" target="_blank" rel="nofollow" title="Coraz&oacute;n">Coraz&oacute;n</a></li>
+<li class="nolink"><a href="http://fmdos.cl/" target="_blank" rel="nofollow" title="FMDOS">FMDOS</a></li>
+<li class="nolink"><a href="http://www.futuro.cl/" target="_blank" rel="nofollow" title="Futuro">Futuro</a></li>
+<li class="nolink">KeBuena</li>
+<li class="sub"><a href="http://www.kebuena.es/" target="_blank" rel="nofollow" title="Espa&ntilde;a">Espa&ntilde;a</a></li>
+<li class="sub"><a href="http://www.kebuena.com.mx/" target="_blank" rel="nofollow" title="M&eacute;xico">M&eacute;xico</a></li>
+<li class="nolink"><a href="http://www.maxima.fm/" target="_blank" rel="nofollow" title="M&aacute;xima FM">M&aacute;xima FM</a></li>
+<li class="nolink"><a href="http://www.m80radio.com/" target="_blank" rel="nofollow" title="M80 Radio">M80 Radio</a></li>
+<li class="nolink"><a href="http://www.oxigeno.fm/" target="_blank" rel="nofollow" title="Ox&iacute;geno">Ox&iacute;geno</a></li>
+<li class="nolink"><a href="http://www.pudahuel.cl/" target="_blank" rel="nofollow" title="Pudahuel">Pudahuel</a></li>
+<li class="nolink"><a href="http://www.qhuboradio.com/" target="_blank" rel="nofollow" title="Q Hubo">Q Hubo</a></li>
+<li class="nolink"><a href="http://www.radioacktiva.com/" target="_blank" rel="nofollow" title="Radioacktiva (Colombia)">Radioacktiva </a></li>
+<li class="nolink"><a href="http://www.radioactiva.cl/" target="_blank" rel="nofollow" title="Radioactiva (Chile)">Radioactiva </a></li>
+<li class="nolink"><a href="http://www.radioimagina.cl/" target="_blank" rel="nofollow" title="Radio Imagina">Radio Imagina</a></li>
+<li class="nolink"><a href="http://www.radiounochile.cl/" target="_blank" rel="nofollow" title="Radio Uno">Radio Uno</a></li>
+<li class="nolink"><a href="http://www.radiole.com/" target="_blank" rel="nofollow" title="Radiol&eacute;">Radiol&eacute;</a></li>
+<li class="nolink"><a href="http://rockandpop.cl/" target="_blank" rel="nofollow" title="Rock&amp;Pop">Rock&amp;Pop</a></li>
+<li class="nolink"><a href="http://www.tropicanafm.com/" target="_blank" rel="nofollow" title="Tropicana">Tropicana</a></li>
+<li class="nolink"><a href="http://www.lavallenata.com/" target="_blank" rel="nofollow" title="Vallenata">La Vallenata</a></li>
+<li class="tit-seccion">M&Uacute;SICA</li>
+<li class="nolink"><a title="Merchandising On Stage" target="_blank" rel="nofollow" href="http://www.onstage.es/">Merchandising On Stage</a></li>
+<li class="nolink"><a title="Planet Events" target="_blank" rel="nofollow" href="http://www.planetevents.es/">Planet Events</a></li>
+<li class="nolink"><a href="http://www.tyronaeventos.com/" target="_blank" rel="nofollow" title="Tyrona Eventos">Tyrona Eventos</a></li>
+</ul>
+</li>
+
+<li class="webs-grupo-col">
+<ul>
+<li class="tit-principal nolink"><a href="http://www.prisa.com/es/info/audiovisual" target="_blank" rel="nofollow">PRISA Audiovisual</a></li>
+<li class="encabezado"><a href="http://www.mediacapital.pt/ " target="_blank" rel="nofollow" title="MEDIA CAPITAL TV">MEDIA CAPITAL</a></li>
+<li class="tit-seccion">TV</li>
+<li><a href="http://www.tvi.iol.pt/" target="_blank" rel="nofollow" title="TVI">TVI</a></li>
+<li><a href="http://www.tvi24.iol.pt/" target="_blank" rel="nofollow" title="TVI24">TVI24</a></li>
+<li><a href="http://www.tvi.iol.pt/internacional" target="_blank" rel="nofollow" title="TVI Internacional">TVI Internacional</a></li>
+<li><a href="http://www.tvi.iol.pt/tvificcao" target="_blank" rel="nofollow" title="TVI Fic&ccedil;&atilde;o">TVI Fic&ccedil;&atilde;o</a></li>
+<li><a href="http://www.tvi.iol.pt/tvireality" target="_blank" rel="nofollow" title="TVI Reality">TVI Reality</a></li>
+<li><a href="http://www.tvi.iol.pt/tviafrica" target="_blank" rel="nofollow" title="TVI &Aacute;frica">TVI &Aacute;frica</a></li>
+<li><a href="http://tviplayer.iol.pt/" target="_blank" rel="nofollow" title="TVI Player">TVI Player</a></li>
+<li class="tit-seccion dos">PRODUCCI&Oacute;N AUDIOVISUAL</li>
+<li><a href="http://pluralportugal.pt/" target="_blank" rel="nofollow" title="Plural Entertainment">Plural Entertainment</a></li>
+<li class="tit-seccion dos">RADIO</li>
+<li><a href="http://radiocomercial.iol.pt " target="_blank" rel="nofollow" title="Radio Comercial">Radio Comercial</a></li>
+<li><a href="http://m80.iol.pt" target="_blank" rel="nofollow" title="M80">M80</a></li>
+<li><a href="http://www.smoothfm.iol.pt" target="_blank" rel="nofollow" title="SmoothFM">SmoothFM</a></li>
+<li><a href="http://cidade.iol.pt/" target="_blank" rel="nofollow" title="Cidade FM">Cidade FM</a></li>
+<li><a href="http://www.vodafone.fm/ " target="_blank" rel="nofollow" title="Vodafone FM ">Vodafone FM </a></li>
+<li class="tit-seccion dos">DIGITAL</li>
+<li><a href="http://www.iol.pt" target="_blank" rel="nofollow" title="IOL">IOL</a> </li>
+<li><a href="http://www.maisfutebol.iol.pt/" target="_blank" rel="nofollow" title="Maisfutebol">Maisfutebol</a></li>
+<li><a href="http://www.autoportal.iol.pt/" target="_blank" rel="nofollow" title="Autoportal">Autoportal</a></li>
+<li><a href="http://www.iol.pt/blogs" target="_blank" rel="nofollow" title="Blogs">Blogs</a></li>
+<li><a href="http://www.iolnegocios.pt/" target="_blank" rel="nofollow" title="Neg&oacute;cios">Neg&oacute;cios</a></li>
+</ul>
+</li>
+
+<li class="webs-grupo-col ultimo">
+<ul>
+<li class="tit-principal">PRISA</li>
+<li class="encabezado"><a href="http://www.prisa.com/es/" target="_blank" rel="nofollow" title="PRISA Corporativa">PRISA</a></li>
+<li class="encabezado"><a href="http://prisainn.com/" target="_blank" rel="nofollow" title="PRISA INN">PRISA INN</a></li>
+<li class="encabezado"><a href="http://toyoutome.es/" target="_blank" rel="nofollow" title="Blog de tendecias digitales">toyoutome blog</a></li>
+<li class="tit-principal">COMERCIAL Y MARKETING</li>
+<li class="encabezado"><a href="http://www.prisabs.com/" target="_blank" rel="nofollow" title="PRISA Brand Solutions">PRISA Brand Solutions</a></li>
+</ul>
+</li>
+
+</ul>
+
+
+<div class="pc-sombreado">
+<a href="javascript:void(0);" id="cierrame2">cerrar</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+if(typeof window['ampliaFoto'] == 'function'){
+    window['ampliaFoto'] = EP.photo.ampliaFoto;
+}
+
+
+	function quitaYpon(){
+		if(document.getElementById("capa-webs-grupo")){
+			var capa = document.getElementById("capa-webs-grupo");
+			if(capa.className.match(/activado/)){
+				capa.className = capa.className.replace("activado","");
+				return;
+			}else{
+				capa.className = capa.className + " activado";
+				return;
+			}
+		}
+		return;
+	}
+	if(document.getElementById("pbt-medios") && document.getElementById("cierrame") && document.getElementById("cierrame2")){
+		if(document.addEventListener){
+			document.getElementById("pbt-medios").addEventListener("click", quitaYpon, false);
+			document.getElementById("cierrame").addEventListener("click", quitaYpon, false);
+			document.getElementById("cierrame2").addEventListener("click", quitaYpon, false);
+		}else{
+			document.getElementById("pbt-medios").attachEvent("onclick", quitaYpon);
+			document.getElementById("cierrame").attachEvent("onclick", quitaYpon);
+			document.getElementById("cierrame2").attachEvent("onclick", quitaYpon);
+		}
+	}
+
+</script></div>
+</footer>
+</div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"de584669e4","applicationID":"81461901","transactionName":"MwFaYEIDWEZQVEENCQpLbUZZTVNWXllaCQ8FSxIbGk0cGlBUQREHCA1cVVRNGB9ZQ1gI","queueTime":0,"applicationTime":57,"atts":"H0ZZFgoZS0g=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

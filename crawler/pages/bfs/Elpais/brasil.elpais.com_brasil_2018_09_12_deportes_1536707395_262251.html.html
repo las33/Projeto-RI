@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQEDUVdSCxAIVVVUBggHVw=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(20),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{h?h-=1:o(c||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:s.now();i("err",[t,n])}var i=t("handle"),a=t(21),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",h=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(13),t(12),"addEventListener"in window&&t(6),s.xhrWrappable&&t(14),d=!0)}c.on("fn-start",function(t,e,n){d&&(h+=1)}),c.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),c.on("fn-end",function(){d&&!this.thrown&&h>0&&(h-=1)}),c.on("internal-error",function(t){i("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){M++,S=y.hash,this[u]=b.now()}function o(){M--,y.hash!==S&&i(0,!0);var t=b.now();this[l]=~~this[l]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=b.now()})}var c="-start",s="-end",f="-body",u="fn"+c,d="fn"+s,p="cb"+c,h="cb"+s,l="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,b=t("loader");if(w[v]&&b.xhrWrappable){var g=t(10),x=t(11),E=t(8),P=t(6),O=t(13),R=t(7),T=t(14),L=t(9),j=t("ee"),N=j.get("tracer");t(15),b.features.spa=!0;var S,M=0;j.on(u,r),j.on(p,r),j.on(d,o),j.on(h,o),j.buffer([u,d,"xhr-done","xhr-resolved"]),P.buffer([u]),O.buffer(["setTimeout"+s,"clearTimeout"+c,u]),T.buffer([u,"new-xhr","send-xhr"+c]),R.buffer([m+c,m+"-done",m+f+c,m+f+s]),E.buffer(["newURL"]),g.buffer([u]),x.buffer(["propagate",p,h,"executor-err","resolve"+c]),N.buffer([u,"no-"+u]),L.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,"send-xhr"+c),a(j,"xhr-resolved"),a(j,"xhr-done"),a(R,m+c),a(R,m+"-done"),a(L,"new-jsonp"),a(L,"jsonp-end"),a(L,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,M>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),c=t(12),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",h="-start",l="-end",m="fn"+h,v="fn"+l,w="bstTimer",y="pushState",b=t("loader");b.features.stn=!0,t(8);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=b.now())}),o.on(v,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,b.now()])}),a.on(m,function(t,e,n){this.bstStart=b.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),this.bstType])}),c.on(m,function(){this.bstStart=b.now()}),c.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),"requestAnimationFrame"])}),o.on(y+h,function(t){this.time=b.now(),this.startPath=location.pathname+location.hash}),o.on(y+l,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(23)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(20);e.exports=o;var a=window,c="fetch-",s=c+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,h="prototype";u&&d&&p&&(i(f,function(t,e){r(u[h],e,s),r(d[h],e,s)}),r(a,"fetch",c),o.on(c+"end",function(t,e){var n=this;e?e.clone().arrayBuffer().then(function(t){n.rxSize=t.byteLength,o.emit(c+"done",[null,e],n)}):o.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(23)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){s.emit("jsonp-error",[],p),s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=c(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),s.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function c(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var s=t("ee").get("jsonp"),f=t(23)(s);if(e.exports=s,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,h=["appendChild","insertBefore","replaceChild"];f.inPlace(HTMLElement.prototype,h,"dom-"),f.inPlace(HTMLHeadElement.prototype,h,"dom-"),f.inPlace(HTMLBodyElement.prototype,h,"dom-"),s.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t(23)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=c(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(23),a=t("ee").get("promise"),c=i(a),s=t(20),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;s(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),c=f.resolve(i);return c}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),s(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=c(t[0],"resolve-",this),t[1]=c(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),c.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=c(t[0],"cb-",this),t[1]=c(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t(23)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(23)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",c)}function i(t){b.push(t),l&&(x?x.then(a):v?v(a):(E=-E,P.data=E))}function a(){for(var t=0;t<b.length;t++)r([],b[t]);b.length&&(b=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(23)(u),p=NREUM.o,h=p.XHR,l=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],b=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(h,g),g.prototype=h.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),l){var x=m&&m.resolve();if(!v&&!m){var E=1,P=document.createTextNode(E);new l(a).observe(P,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=a.now()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return l(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(16),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,p=t("id"),h=t(19),l=t(18),m=window.XMLHttpRequest;a.features.xhr=!0,t(14),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=l(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<d;c++)e.addEventListener(u[c],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)})}},{}],16:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],17:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(20),c=t(21),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var l=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(h+"tracer",[f.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){l[e]=o(h+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],21:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],22:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],23:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(21),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),c=l(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([b,n,r,a]),a}}function h(t,e){w[t]=l(t).concat(e)}function l(t){return w[t]||[]}function m(t){return d[t]=d[t]||o(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var w={},y={},b={on:h,emit:n,get:m,listeners:l,context:e,buffer:v,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var c="nr@context",s=t("gos"),f=t(20),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!x++){var t=g.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)}),s("mark",["onload",a()+g.offset],null,"api");var n=p.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===p.readyState&&i()}function i(){s("mark",["domContent",a()+g.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-g.offset}var c=(new Date).getTime(),s=t("handle"),f=t(20),u=t("ee"),d=window,p=d.document,h="addEventListener",l="attachEvent",m=d.XMLHttpRequest,v=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1071.min.js"},b=m&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:c,now:a,origin:w,features:{},xhrWrappable:b};t(17),p[h]?(p[h]("DOMContentLoaded",i,!1),d[h]("load",r,!1)):(p[l]("onreadystatechange",o),d[l]("onload",r)),s("mark",["firstbyte",c],null,"api");var x=0,E=t(22)},{}]},{},["loader",2,15,5,3,4]);</script>
+<meta name="format-detection" content="address=no,email=no,telephone:no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title> A sina dos torcedores mortos por policiais e vigilantes | Esportes | EL PA&Iacute;S Brasil</title>
+<meta name="lang" 			content="pt-br" />
+<meta name="author" 		content="Breiller Pires" />
+<meta name="description" 	content="Agentes de segurança acusados de homicídios em estádios escapam de punição enquanto familiares das vítimas sofrem para receber indenizações" />
+<meta name="keywords" 		content="sina, torcedor, morto, policial, vigilante, agente, segurança, acusar, homicídio, estádio, escapar, punição, familiar, vítima, sofrer, receber, indenizações, justiça" />
+<meta name="date" scheme="W3CDTF" content="2018-09-13T21:00:46+02:00" />
+<meta name="DC.date.issued" scheme="W3CDTF" content="2018-09-13" />
+<meta name="DC.date" 		scheme="W3CDTF" 	content="2018-09-13" />
+<meta name="organization" content="Ediciones EL PAÍS S.L."/>
+<meta property="article:modified_time" content="2018-09-13T21:00:46+02:00" />
+<meta property="article:publisher" content="https://www.facebook.com/elpaisbrasil" />
+<meta property="article:published_time" content="2018-09-13" />
+<meta property="article:section" content="deportes" />
+<meta property="article:tag" content="Tentativa assassinato" />
+<meta property="article:tag" content="Torcidas Organizadas" />
+<meta property="article:tag" content="Seguranças privados" />
+<meta property="article:tag" content="Polícia militar" />
+<meta property="article:tag" content="Violência policial" />
+<meta property="article:tag" content="Ação policial" />
+<meta property="article:tag" content="Ultras" />
+<meta property="article:tag" content="Polícia" />
+<meta property="article:tag" content="Assassinatos" />
+<meta property="article:tag" content="Violência esportiva" />
+<meta name="news_keywords" content="Tentativa assassinato,Torcidas Organizadas,Seguranças privados,Polícia militar,Violência policial,Ação policial,Ultras,Polícia,Assassinatos,Violência esportiva"/>
+<meta property="og:title" content="A sina dos torcedores mortos por policiais e vigilantes"/>
+<meta property="og:description" content="Agentes de segurança acusados de homicídios em estádios escapam de punição enquanto familiares das vítimas sofrem para receber indenizações"/>
+<meta property="og:image" content="https://ep00.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536707812_rrss_normal.jpg"/>
+<meta property="og:updated_time" content="2018-09-13T21:00:46+02:00" />
+<meta property="og:url" 	content="https://brasil.elpais.com/brasil/2018/09/12/deportes/1536707395_262251.html" />
+<meta property="og:type" 		content="article"/>
+<meta property="og:site_name"    	content="EL PAÍS"/>
+<meta property="fb:pages"       content="589843594408928" />
+<meta property="fb:app_id" 		content="94039431626"/>
+<meta property="twitter:card" 	content="summary_large_image" />
+<meta property="twitter:site" 	content="@elpais_brasil" />
+<link rel="alternate" href="https://brasil.elpais.com/seccion/rss/deportes/" type="application/rss+xml" title="RSS sobre Esportes"/>
+<link rel="amphtml" href="https://brasil.elpais.com/brasil/2018/09/12/deportes/1536707395_262251.amp.html" />
+<link rel="canonical" href="https://brasil.elpais.com/brasil/2018/09/12/deportes/1536707395_262251.html" />
+<link rel="icon" 		href="https://ep01.epimg.net/favicon.png" type="image/png" />
+<link rel="publisher" 	href="https://plus.google.com/+elpais"/>
+<link href="//ep01.epimg.net/estilos/v2.x/v2.1/normalizado.css"  rel="stylesheet" />
+<link href="//ep01.epimg.net/estilos/v2.x/v2.2/comunes.css"  rel="stylesheet" />
+<link href="//ep01.epimg.net/estilos/v2.x/v2.1/cabecera.css"  rel="stylesheet" />
+<link href="//ep01.epimg.net/estilos/v2.x/v2.1/noticia.css"  rel="stylesheet" />
+<link href="//ep01.epimg.net/estilos/v2.x/v2.1/imprimir.css" media="print" rel="stylesheet" />
+<link href="//ep01.epimg.net/estilos/v2.x/v2.1/cintillos.css"  rel="stylesheet" />
+<link href="//ep01.epimg.net/estilos/v2.x/v2.1/comercial.css"  rel="stylesheet" />
+<link href="//ep01.epimg.net/brasil/estilos/v2.x/v2.1/brasil.css" rel="stylesheet" />
+<script type="text/javascript" src="//ep01.epimg.net/js/v4.x/v4.1/noticia.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	var videoPublicityDown = false;
+	var videoFuente = "0";
+	var url_cache = "//ep02.epimg.net";
+	var url_reproductor_epet = "/reproductores/playerPEP.swf";
+
+        var id_player_mediateca_PEP = "141";
+        var id_cuenta_mediateca_PEP = "elpais";
+        var mediateca_activo_PEP    = true;
+
+	var publicidad_HTML5 = true;
+	var postroll_HTML5 = true;
+	var marcado_logtrust = true;
+	var prebidVideoPEP = true;
+
+	var DFP_agrupados = 'para_ler_com_calma_a';
+	var listado_norm_tags = 'violencia_deportiva_a,violencia_a,penas_deportivas_a,futbol_a,brasil_a,fuerzas_seguridad_a,aficion_deportiva_a,sudamerica_a,latinoamerica_a,sucesos_a,intento_asesinato_a,delitos_a,deportes_a,america_a,problemas_sociales_a,justicia_a,sociedad_a,torcidas_organizadas_a,vigilantes_jurados_a,policia_militar_a,violencia_policial_a,accion_policial_a,ultras_a,policia_a,asesinatos_a,para_ler_com_calma_a';
+	var DFP_tags = ["violencia_deportiva_a","violencia_a","penas_deportivas_a","futbol_a","brasil_a","fuerzas_seguridad_a","aficion_deportiva_a","sudamerica_a","latinoamerica_a","sucesos_a","intento_asesinato_a","delitos_a","deportes_a","america_a","problemas_sociales_a","justicia_a","sociedad_a","torcidas_organizadas_a","vigilantes_jurados_a","policia_militar_a","violencia_policial_a","accion_policial_a","ultras_a","policia_a","asesinatos_a","para_ler_com_calma_a"];
+	var listado_id_tags = '79181,79178,127032,34352,18940,34278,9773,83879,82947,74336,40052,26127,26253,81609,66424,49797,73526,192702,78590,65930,150157,9332,84032,65926,15866,170159';
+	var listado_id_autores = '166699';
+	var listado_norm_autores = 'breiller_silva_pires_a';
+
+	var referrer = document.referrer;
+	if (referrer.indexOf("//t.co/") >-1 || (referrer.indexOf("twitter.com") > 0 && referrer.indexOf("twitter.com") < 30) )
+	{
+		if (typeof(DFP_tags) != "undefined")
+			DFP_tags.push("fromtwitter");
+		else
+			var DFP_tags = ["fromtwitter"];
+	}
+
+	var reg_ref_noticia = /http.?:\/\/[^\/]*\/[^\/]*\/\d+\/\d+\/\d+\/[^\/]*\/(.*?)\.html/i;
+	var result_rrn = reg_ref_noticia.exec(document.location.href);
+	if (result_rrn)
+	{
+		if (typeof(DFP_tags) != "undefined")
+			DFP_tags.push(result_rrn[1]);
+		else
+			var DFP_tags = [result_rrn[1]];
+	}
+
+	var LANG = 'pt-br';
+
+//]]>
+</script>
+<script language="Javascript" type="text/javascript" src="//ep01.epimg.net/js/comun/cx/recomendador.min.js"></script></head>
+<body id="salida_articulo" class="salida_articulo salida_articulo_especial salida_articulo_especial"><div id="pxlhddncntrl" style="display:none"><script type="text/javascript" src="//ep00.epimg.net/js/prisa/user.js?i=1"></script><script type="text/javascript" src="//ep00.epimg.net/js/v4.x/v4.0/user.js"></script><script type="text/javascript" src="https://ep00.epimg.net/js/comun/avisopcgdpr.js?u=2018"></script><script type="text/javascript" src="https://gdpr.prisa.com/cmp.bundle.js?u=2018"></script><script type="text/javascript" src="//ep00.epimg.net/js/gdt/577c3689ea990d22d8d98c00c4aa568bec64a426/satelliteLib-28ad3885d20336165372ce7de5caf99dd332388c.js?20171005"></script><script type="text/javascript" src="//ep00.epimg.net/js/comun/comun.js"></script></div>
+<div id="contenedor" class="contenedor">
+<main class="principal" id="principal">
+<div class="cabecera__envoltorio">
+<header class="cabecera" id="cabecera">
+<div class="cabecera__interior" id="cabecera__interior">
+<div class="cabecera-superior">
+<div class="cabecera-superior__interior">
+<div class="contenedor_centro">
+<div class="ediciones">
+<div class="ediciones__interior">
+<span class="ediciones-titulo">Seleccione Edição</span>
+<nav class="ediciones-navegacion">
+<ul class="ediciones-navegacion-listado">
+<li class=""><a href="/s/setEspana.html"><abbr title="Edição Espanha">ESP</abbr></a></li>
+<li class=""><a href="/s/setAmerica.html"><abbr title="Edição América">AME</abbr></a></li>
+<li class=""><a href="/s/setBrasil.html"><abbr title="Edição Brasil">BRA</abbr></a></li>
+<li class=""><a href="/s/setCat.html"><abbr title="Edição Catalunha">CAT</abbr></a></li>
+<li class=""><a href="//elpais.com/elpais/inenglish.html"><abbr title="Edição In English">ENG</abbr></a></li>
+</ul>
+</nav> 
+</div> 
+</div> 
+</div> 
+<div class="contenedor_derecha">
+<div class="navegacion-sucripcion">
+<ul itemtype="https://schema.org/SiteNavigationElement" itemscope="" class="sucripcion-listado">
+<li class="newsletter" itemprop="name"><a href="//usuarios.elpais.com/newsletters/?cp=3#?id_externo_promo=rpv_newsletters_bar_ep_br" itemprop="url">Newsletter</a></li>
+<li class="suscribete" itemprop="name"><a href="//suscripciones.elpais.com/?id_externo_promo=suscrip_cabecera_ep.com" itemprop="url">Assine</a></li>
+</ul>
+</div>
+<div class="usuario" id="usuario">
+<a class="boton_usuario" id="boton_usuario" href="https://plus.elpais.com/conectar?prod=REG&o=CABEP&backURL=https%3A%2F%2Fbrasil.elpais.com%2Fbrasil%2F2018%2F09%2F12%2Fdeportes%2F1536707395_262251.html">Login</a>
+<div id="usuario__interior"  class="oculto">
+<button class="boton_cerrar" id="cerrar_usuario">Cerrar</button>
+<div class="usuario-estado"></div>
+</div>
+</div> 
+<div class="buscador" id="buscador">
+<button class="boton_buscador" id="boton_buscador">Buscador</button>
+<div class="buscador__interior">
+<button class="boton_cerrar" id="cerrar_buscador">Cerrar</button>
+<div class="buscador-formulario">
+<form name="formulario_busquedas" action="/buscador/" method="POST">
+<input type="search" name="qt" placeholder="Buscar conteúdo" value="" autocomplete="off">
+<button class="boton_buscar" id="boton_buscar">Buscar</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cabecera-inferior">
+<div class="cabecera-inferior__interior">
+<div class="elpais" id="elpais">
+<div class="elpais-menu" id="elpais-menu">
+<button id="boton_elpais-menu" class="boton boton_elpais-menu"><span>Seções</span> <span></span> <span></span> <span></span></button>
+<div class="elpais-menu__interior">
+<button id="cerrar_elpais-menu" class="boton_cerrar"><span>Fechar</span> <span></span> <span></span> <span></span></button>
+<div class="ediciones">
+<div class="ediciones__interior">
+<span class="ediciones-titulo">Seleccione Edição</span>
+<nav class="ediciones-navegacion">
+<ul class="ediciones-navegacion-listado">
+<li class=""><a href="/s/setEspana.html"><abbr title="Edição Espanha">ESP</abbr></a></li>
+<li class=""><a href="/s/setAmerica.html"><abbr title="Edição América">AME</abbr></a></li>
+<li class=""><a href="/s/setBrasil.html"><abbr title="Edição Brasil">BRA</abbr></a></li>
+<li class=""><a href="/s/setCat.html"><abbr title="Edição Catalunha">CAT</abbr></a></li>
+<li class=""><a href="//elpais.com/elpais/inenglish.html"><abbr title="Edição In English">ENG</abbr></a></li>
+</ul>
+</nav> 
+</div> 
+</div> 
+<div id="tamanoletra" class="tamanoletra"> <span class="tamanoletra-nombre">Tamanho de letra</span>
+<button id="tamanoletra--disminuir" title="Diminuir o tamanho da letra">a<sup>-</sup></button>
+<button id="tamanoletra--aumentar"  title="Aumentar o tamanho da letra">A<sup>+</sup></button>
+</div>
+<div class="altocontraste" id="altocontraste">
+<button id="boton_altocontraste" class="boton_altocontraste"><span class="boton-nombre">Alto contraste</span>
+<div class="control"><span class="control-punto"></span></div>
+</button>
+</div>
+<nav class="elpais-navegacion">
+<div class="navegacion navegacion_secciones">
+<ul itemscope="" itemtype="https://www.schema.org/SiteNavigationElement" class="navegacion-listado">
+<li itemprop="name" class="internacional"><a itemprop="url" href="/seccion/internacional">Internacional</a></li>
+<li itemprop="name" class="opinion"><a itemprop="url" href="/seccion/opinion">Opinião</a></li>
+<li itemprop="name" class="politica"><a itemprop="url" href="/seccion/politica">Brasil</a></li>
+<li itemprop="name" class="economia"><a itemprop="url" href="/seccion/economia">Economia</a></li>
+<li itemprop="name" class="ciencia"><a itemprop="url" href="/seccion/ciencia">Ciência</a></li>
+<li itemprop="name" class="tecnologia"><a itemprop="url" href="/seccion/tecnologia">Tecnologia</a></li>
+<li itemprop="name" class="cultura"><a itemprop="url" href="/seccion/cultura">Cultura</a></li>
+<li itemprop="name" class="estilo"><a itemprop="url" href="/seccion/estilo">Estilo</a></li>
+<li itemprop="name" class="activo"><a itemprop="url" class="deportes" href="/seccion/deportes">Esportes</a></li>
+<li itemprop="name" class="el_viajero"><a itemprop="url" href="/seccion/elviajero">El Viajero</a></li>
+<li itemprop="name" class="fotos"><a itemprop="url" href="/brasil/album.html">Fotos</a></li>
+<li itemprop="name" class="videos"><a itemprop="url" href="/brasil/videos.html">Vídeos</a></li>
+</ul>
+</div>
+<div class="navegacion-inferior">
+<div class="elpais-social" id="organizacion" itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization"> <span class="elpais-social-nombre">Siga-nos em</span>
+<ul>
+<meta itemprop="url" content="http://elpais.com" />
+<li><a itemprop="sameAs" rel="nofollow" class="boton_twitter" href="https://twitter.com/#!/elpais_brasil">Siga-nos em Twitter</a></li>
+<li><a itemprop="sameAs" rel="nofollow" class="boton_facebook" href="https://www.facebook.com/elpaisbrasil">Siga-nos em Facebook</a></li>
+</ul>
+<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+<meta itemprop="url" content="https://ep01.epimg.net/iconos/v2.x/v2.0/logos/elpais.png">
+<meta itemprop="width" content="267">
+<meta itemprop="height" content="60">
+</div>
+</div>
+<div class="navegacion-sucripcion">
+<ul class="sucripcion-listado" itemscope="" itemtype="https://www.schema.org/SiteNavigationElement">
+<li itemprop="name" class="newsletter"><a itemprop="url" href="//usuarios.elpais.com/newsletters/?cp=3#?id_externo_promo=rpv_newsletters_ham_ep">Newsletter</a></li>
+<li itemprop="name" class="suscribete"><a itemprop="url" href="//elpais.com/suscripciones/?id_externo_promo=rpv_sus_ham_ep">Assine</a></li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+</div>
+<div itemtype="https://data-vocabulary.org/Breadcrumb" itemscope="" class="elpais-logo">
+<a href="//elpais.com" itemprop="url"><span itemprop="title">EL PAÍS</span></a>
+</div>
+</div>
+<div class="cabecera-seccion " id="cabecera-seccion">
+<div class="seccion">
+<div class="seccion-migas">
+<span itemtype="https://data-vocabulary.org/Breadcrumb" itemscope="" class="miga miga_seccion"> 
+<a class="enlace" title="Ir a 'Esportes'"
+href="/seccion/deportes" itemprop="url">
+<span itemprop="title">Esportes</span>
+</a> 
+</span>
+</div> 
+</div> 
+</div>
+</div>
+</div>
+</div>
+</header>
+</div>
+<div class="articulo__envoltorio">
+<article class="articulo articulo--nointro articulo_especial" itemscope itemprop="mainEntity" itemtype="https://schema.org/NewsArticle" itemref="organizacion">
+<div class="articulo__interior" id="articulo_interior">
+<div class="articulo__apertura">
+<header class="articulo-encabezado " id="articulo-encabezado" >
+<div class="articulo-encabezado-texto">
+<div class="articulo-antetitulo ">
+<a class="enlace" href="//brasil.elpais.com/tag/abuso_policial">REPORTAGEM ESPECIAL</a>
+</div>
+<div class="articulo-titulares" id="articulo-titulares">
+<h1 class="articulo-titulo " id="articulo-titulo" itemprop="headline">A sina dos torcedores mortos por policiais e vigilantes</h1>
+<meta itemprop="url" content="//brasil.elpais.com/brasil/2018/09/12/deportes/1536707395_262251.html"/>
+<div class="articulo-subtitulos"><h2  itemprop="alternativeHeadline"  class="articulo-subtitulo">Agentes de segurança acusados de homicídios em estádios escapam de punição enquanto familiares das vítimas sofrem para receber indenizações na Justiça</h2>
+</div>                   </div> 
+</div>
+<aside class="compartir" id="compartir_superior">
+<div class="compartir__interior">
+<div class="compartir-social" id="compartir_social">
+<button class="boton_facebook" id="superior_fb" title="Recomendar no Facebook"><span class="boton-nombre">Recomanar no Facebook</span> </button>
+<button class="boton_twitter" id="superior_twit" title="Twittear"><span class="boton-nombre">Twittear</span></button>
+<div class="compartir-otros" id="compartir-otros_sup">
+<button class="boton_compartir-otros" id="boton_compartir-otros_sup">Otros</button>
+<div class="compartir-otros__interior">
+<button class="boton_cerrar" id="cerrar_compartir-otros_sup">Fechar</button>
+<button class="boton_linkedin" id="superior_linkedin" title="Recomendar no Linkedin">Recomendar no Linkedin</button>
+<button class="boton_googleplus" id="superior_gp" title="Recomendar no GooglePlus">Recomendar no GooglePlus</button>
+<button class="boton_pinterest" id="superior_pinit" title="Recomendar no Pinterest">Recomendar no Pinterest</button>
+</div>
+</div>
+</div>
+<div class="compartir-varios">
+<div class="favoritos" id="favoritos"> </div>
+<div class="correo" id="correo"> </div>
+<button class="boton_imprimir" id="boton_imprimir"><span class="nombre">Imprimir</span></button>
+</div>
+</div>
+<script>
+        if(typeof EPETMail != "undefined")    	new EPETMail ( document.getElementById('superior_enviar'), document.getElementById('superior_capaEnviarCorreo'), '' );
+        if(typeof EPETTwitter != "undefined") new EPETTwitter ( document.getElementById('superior_twit'), params );
+        if(typeof EPETFacebook != "undefined") new EPETFacebook ( document.getElementById('superior_fb'), params );
+        if(typeof EPETGooglePlus != "undefined") new EPETGooglePlus ( document.getElementById('superior_gp'), params );
+        if(typeof EPETLinkedin != "undefined") new EPETLinkedin ( document.getElementById('superior_linkedin'), params );
+        if(typeof EPETPinterest != "undefined") new EPETPinterest ( document.getElementById('superior_pinit'), params );
+    </script>
+</aside>
+</header>
+<div class="articulo-apertura ">
+<figure class="foto centro foto_w980" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img src="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536707796_noticia_normal.jpg" width="980" height="654"  srcset="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536707796_noticia_normal_recorte1.jpg 1960w, //ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536707796_noticia_normal_recorte2.jpg 720w, //ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536707796_noticia_normal.jpg 980w"   alt="Torcedores assassinados policiais" />
+<meta itemprop="width"    content="980">
+<meta itemprop="height"   content="654">
+<meta itemprop="url"      content="https://ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536707796_noticia_normal.jpg">
+<meta itemprop="representativeOfPage" content="true">
+<figcaption class="foto-pie"  itemprop="caption"> <span class="foto-texto">Pamela Gabrielle e o filho de Eros Dátilo, torcedor do Cruzeiro morto no Mineirão.</span> <span class="foto-firma"><span itemprop="author" class="foto-autor">Nindy Barros</span> </span></figcaption>
+</figure>
+<div class="firma ">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<figure class="foto" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<meta itemprop="url" content="https://ep01.epimg.net/miperfil/avatares/D/A5/xwx_905166a34599c58b.jpg"/>
+<a class="enlace" href="//brasil.elpais.com/autor/breiller_silva_pires/a/">
+<meta itemprop="width" content="80">
+<meta itemprop="height" content="80">
+<img src="//ep01.epimg.net/miperfil/avatares/D/A5/xwx_905166a34599c58b.jpg" width="80" height="80" alt="Breiller Pires"/>
+</a>
+</figure>
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name">
+<a itemprop="url" href="//brasil.elpais.com/autor/breiller_silva_pires/a/" title="Ver todas as notícias de Breiller Pires">Breiller Pires</a>
+</span>
+<div class="autor-perfiles">
+<ul class="autor-perfiles-listado">
+<li><a class="boton_twitter" itemprop="sameAs" href="http://twitter.com/breiller" rel="nofollow" target="_blank">Twitter</a></li>                                
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="articulo-datos">
+<span class="articulo-localizaciones">
+<span class="articulo-localizacion" itemprop="contentLocation">
+São Paulo
+</span>
+</span>
+<time datetime="2018-09-13T21:00:46+02:00" class="articulo-actualizado">
+<meta content="2018-09-12T01:09:55+02:00" itemprop="datePublished">
+<meta content="2018-09-13T21:00:46+02:00" itemprop="dateModified">
+<a href="//brasil.elpais.com/tag/fecha/20180913 " title="Ver todas as notícias desta data">
+13 SET 2018 - 21:00					<abbr title="Central European Summer Time">CEST</abbr>				</a>
+</time>
+</div>
+</div> 
+</div>
+<div class="articulo__contenedor" id="articulo_contenedor">
+<div class="articulo-cuerpo" id="cuerpo_noticia" itemprop="articleBody">
+<p>Todas as manhãs, religiosamente, o operário aposentado João Lopes, 77, percorre o caminho de casa até o cemitério de Santa Cruz, subúrbio do Rio de Janeiro, para visitar o túmulo do filho. No último dia 8 de julho, fez um ano que Davi Rocha Lopes, 27, foi atingido por um tiro no peito quando deixava o estádio de São Januário após a derrota de seu <a href="//brasil.elpais.com/brasil/2018/04/19/deportes/1524145383_709350.html">time do coração, o Vasco</a><a href="//brasil.elpais.com/brasil/2018/04/19/deportes/1524145383_709350.html">,</a> para o Flamengo. A mãe Maria Rita até hoje não se conforma. Para Juciara, nove anos mais velha, os sonhos recorrentes com o irmão ajudam a amenizar a dor. “Ele era como um filho para mim. Dizia que, se morresse um dia, que fosse vendo o Vasco jogar.”</p>
+<section class="sumario_apoyos derecha" id="sumario_3|apoyos">
+<a name="sumario_3"></a>
+<div class="sumario__interior">
+<header class="sumario-encabezado"><h3 class="sumario-titulo"><span class="sin_enlace">MAIS INFORMAÇÕES</span></h3></header>
+<div class="sumario-texto">
+<div class="apoyos">
+<ul class="apoyos-listado">
+<li class="apoyo_ apoyo_foto">
+<figure class="foto foto_w140" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<a href="//brasil.elpais.com/brasil/2017/03/03/deportes/1488572872_937970.html" class="enlace">
+<img  width="140" height="100" alt="A sina dos torcedores mortos por policiais e vigilantes" src="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536761451_sumarioapoyo_normal.jpg"  srcset="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536761451_sumarioapoyo_normal_recorte1.jpg 280w, //ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536761451_sumarioapoyo_normal.jpg 140w"  />
+<meta itemprop="width"  content="140">
+<meta itemprop="height" content="100">
+<meta itemprop="url"    content="https://ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536761451_sumarioapoyo_normal.jpg">
+</a>
+</figure>
+<span class="apoyo-titulo">
+<a href="//brasil.elpais.com/brasil/2017/03/03/deportes/1488572872_937970.html">
+Morte trágica estremece a Mancha Verde
+</a>
+</span>
+</li>
+<li class="apoyo_ apoyo_foto">
+<figure class="foto foto_w140" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<a href="//brasil.elpais.com/brasil/2018/07/29/politica/1532872992_020023.html" class="enlace">
+<img  width="140" height="100" alt="A sina dos torcedores mortos por policiais e vigilantes" src="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536761530_sumarioapoyo_normal.jpg"  srcset="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536761530_sumarioapoyo_normal_recorte1.jpg 280w, //ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536761530_sumarioapoyo_normal.jpg 140w"  />
+<meta itemprop="width"  content="140">
+<meta itemprop="height" content="100">
+<meta itemprop="url"    content="https://ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536761530_sumarioapoyo_normal.jpg">
+</a>
+</figure>
+<span class="apoyo-titulo">
+<a href="//brasil.elpais.com/brasil/2018/07/29/politica/1532872992_020023.html">
+Justiça condena Estado por abordagem violenta da Polícia Militar
+</a>
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div> 
+</section>
+<p>O disparo que matou Davi partiu da arma do soldado Renan Pongeluppe Freitas. Ele descarregou três tiros em um confronto entre policiais e torcedores nas imediações de São Januário. Era fim de clássico, marcado por tumultos. Vascaínos que não haviam conseguido entrar no estádio se aglomeraram em um dos portões. Muitos arremessavam pedaços de pau, pedras e garrafas em direção a viaturas da polícia, que respondia com bombas de efeito moral e balas de borracha. Foi aí que, mesmo diante de famílias com crianças que tentavam se desvencilhar do fogo cruzado, o oficial da PM resolveu acionar a pistola calibre .380 para conter os mais exaltados. Outras duas pessoas acabaram baleadas. Elas foram socorridas por torcedores, juntamente com Davi, que chegou sem vida ao hospital em decorrência de uma hemorragia interna na região do tórax.</p>
+<p>Conhecido pelo apelido de “Jacaré”, ele trabalhou como gari na Prefeitura do Rio, mas estava desempregado. Nas fotos guardadas por amigos, aparece sempre sorrindo. Era distinguido pela desenvoltura de seus passinhos nos bailes funk em Santa Cruz. “O rei da dancinha”, lembra a família. Quando não conseguia juntar dinheiro, pedia emprestado aos mais chegados para comprar ingresso e frequentar os jogos do Vasco. Na manhã do sábado de sua morte, mandou mensagem para o celular de uma prima: “Reza por mim”. Maria Rita não queria que o filho fosse a São Januário. Sentiu uma queimação no peito. Teve o pressentimento de que alguma coisa ruim pudesse lhe acontecer. Testemunhas que o viram cair depois dos estrondos de tiros afirmam que ele não participava dos ataques aos policiais. Em busca de um refúgio no meio da confusão, relatam torcedores que o socorreram, Davi não teria percebido que o soldado sacou a arma e seguiu em frente – ele enxergava apenas do olho esquerdo.</p>
+<section class="sumario_foto centro" id="sumario_5|foto">
+<a name="sumario_5"></a>
+<div class="sumario__interior">
+<figure class="foto foto_w980" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<img src="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536765960_sumario_normal.jpg" width="980" height="493" alt="Família protesta pela morte do vascaíno Davi Rocha." srcset="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536765960_sumario_normal_recorte1.jpg 1960w, //ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536765960_sumario_normal_recorte2.jpg 720w, //ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536765960_sumario_normal.jpg 980w" />
+<meta itemprop="width"  content="980">
+<meta itemprop="height" content="493">
+<meta itemprop="url"    content="https://ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536765960_sumario_normal.jpg">
+<figcaption class="foto-pie"  itemprop="caption"> <span class="foto-texto">Família protesta pela morte do vascaíno Davi Rocha.</span> <span class="foto-firma"> <span itemprop="copyrightHolder" class="foto-agencia">ARQUIVO PESSOAL</span></span></figcaption>
+</figure>
+<div class="sumario-texto">
+</div>
+</div>
+</section>
+<p>No inquérito sobre a morte, a Delegacia de Homicídios concluiu que o policial agiu em legítima defesa. Questionada pelo EL PAÍS, a Polícia Militar do Rio de Janeiro (PMERJ) não respondeu se o agente sofreu penalidade interna e informou apenas que o processo está a cargo da Polícia Civil, que não retornou os contatos da reportagem. No dia do enterro, familiares, incluindo seus nove irmãos, protestaram com um cartaz: “PMERJ vergonha, luto Davi Rocha”. Porém, nunca receberam explicações a respeito da ação policial tampouco condolências do Estado. “Não foi legítima defesa. Meu irmão morreu com um tiro à queima roupa. E quem atirou ainda se negou a prestar socorro”, diz Juciara. “É muito triste. Torcedor vai ao estádio para torcer, não para morrer.”</p>
+<h3>Filme repetido</h3>
+<p>A cada policial morto em serviço, outras 36 pessoas morrem em ocorrências envolvendo agentes da segurança pública no Rio de Janeiro. Davi Rocha entrou para as estatísticas no Estado da <a href="//brasil.elpais.com/brasil/2017/04/04/politica/1491332481_132999.html">polícia que mais morre</a> e também que mais mata, onde os índices de homicídios cometidos por policiais atingiu seu maior pico nos últimos 15 anos. No contexto do futebol, em que apenas 3% dos <a href="//brasil.elpais.com/brasil/2017/12/28/deportes/1514427700_914142.html">atos de violência</a> relacionados às torcidas resultam em condenação na Justiça, segundo levantamento da Pesquisa de Mestrado da Universo em sociologia do esporte, <a href="//brasil.elpais.com/brasil/2017/12/11/politica/1513002815_459310.html">roteiros semelhantes</a> se reproduzem pelo país, não inibem a utilização de armas letais pela PM em eventos esportivos e deixam um rastro de impunidade.</p>
+<p>É o caso de Maicon Doglas de Lima. Ele levou dois tiros nas costas em uma briga entre torcedores do Novo Hamburgo e Aimoré, em São Leopoldo, no Rio Grande do Sul. Tinha 16 anos. Amigos de Maicon contam que a confusão já havia dispersado com a chegada dos agentes da Brigada Militar. Ainda assim, policiais teriam atirado e rendido integrantes de uma torcida organizada do Novo Hamburgo. O laudo da perícia apontou que os PMs agiram para adulterar a cena do crime e, em imagens captadas pelas câmeras do hospital, aparecem entrando no leito do adolescente, onde teriam trocado uma das balas que o mataram.</p>
+<section class="sumario_foto derecha" id="sumario_6|foto">
+<a name="sumario_6"></a>
+<div class="sumario__interior">
+<figure class="foto foto_w360" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<img src="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536766102_sumario_normal.jpg" width="360" height="378" alt="Maicon Doglas, 16 anos, morto pela polícia com dois tiros nas costas." srcset="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536766102_sumario_normal_recorte1.jpg 720w, //ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536766102_sumario_normal.jpg 360w" />
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="378">
+<meta itemprop="url"    content="https://ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536766102_sumario_normal.jpg">
+<figcaption class="foto-pie"  itemprop="caption"> <span class="foto-texto">Maicon Doglas, 16 anos, morto pela polícia com dois tiros nas costas.</span> <span class="foto-firma"> <span itemprop="copyrightHolder" class="foto-agencia">ARQUIVO PESSOAL</span></span></figcaption>
+</figure>
+<div class="sumario-texto">
+</div>
+</div>
+</section>
+<p>Depois de seis meses de investigação, a Justiça de São Leopoldo indiciou oito policiais, dois deles por homicídio triplamente qualificado. Segundo o inquérito obtido pelo EL PAÍS, os agentes Fabiano Francisco Assmann e Moysés Augusto Ribeiro Stein atiraram várias vezes contra o grupo de torcedores que não oferecia resistência ou ameaça à Brigada, acertaram pelas costas uma vítima indefesa e atuaram de maneira imprudente ao efetuar disparos em via pública. Eles ainda respondem por fraude processual pela troca da bala, em que supostamente contaram com a ajuda dos brigadianos Valentim Martins Torres Neto e Júlio César Barros. Os PMs Ângela Peppe Christofari, Ulisses de Mattos Quos e Edinei Matos também foram processados por fraude pelo recolhimento indevido de projéteis na rua em que ocorreu o assassinato. Já o sargento Antonio Rony Gonçalves Rodrigues é réu por prevaricação. Ele teria tentado eximir os subordinados de responsabilidade pela autoria do crime.</p>
+<p>Assmann, Stein, Christofari e Quos chegaram a ficar um mês detidos provisoriamente no presídio militar de Porto Alegre, mas foram soltos por determinação da 1ª Vara Criminal de São Leopoldo, que negou o pedido de prisão preventiva do Ministério Público. No processo, eles alegam ter agido em legítima defesa – Christofari e Quos também são indiciados por tortura, acusados de agredir e fraturar o pulso de outro adolescente integrante do mesmo grupo de Maicon.</p>
+<p>Após deixarem o presídio, os quatro policiais foram recebidos com festa no 21º Batalhão de Polícia Militar em São Leopoldo, onde os oito agentes indiciados seguem lotados em funções administrativas enquanto respondem <a href="//brasil.elpais.com/brasil/2017/03/10/deportes/1489184463_907431.html">ao processo em liberdade</a>. Na época, o tenente-coronel Jefferson Jaques, corregedor-geral da Brigada Militar, pregou respeito aos familiares da vítima e considerou inadequada a confraternização no batalhão, prometendo providências sobre o caso. Entretanto, nenhuma investigação foi aberta pela corregedoria.</p>
+<p>Passados três anos e meio da morte de Maicon, a angústia da família promete ser ainda mais longa. Como a prioridade do Tribunal de Justiça do Rio Grande do Sul são processos com réus presos, as próximas audiências para ouvir testemunhas de defesa e acusação estão previstas somente para maio de 2019. De acordo com o TJ, não há uma estimativa para o julgamento. “A gente teme que o caso do Maicon caia no esquecimento”, afirma a mãe, Sara Espíndola. “Não é fácil conviver com a perda dele e toda essa demora.”</p>
+<p>O advogado da família, Diego Scheva, reforça que o o longo tempo do processo alimenta os sentimentos de impotência e injustiça. “Tenho o maior respeito pela Brigada Militar. Os policiais que cometeram esse crime não representam a instituição. Mas é impossível não sentir certa frustração”, diz Scheva. “Testemunhas se recusaram a depor por medo de retaliações. Os garotos foram a um jogo de futebol para se divertir, a confusão já tinha acabado. A Brigada não precisava agir daquela forma.”</p>
+<section class="sumario_foto derecha" id="sumario_7|foto">
+<a name="sumario_7"></a>
+<div class="sumario__interior">
+<figure class="foto foto_w360" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<img src="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536766296_sumario_normal.jpg" width="360" height="224" alt="Torcida do Coritiba protesta após a morte de Leonardo Brandão." srcset="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536766296_sumario_normal_recorte1.jpg 720w, //ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536766296_sumario_normal.jpg 360w" />
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="224">
+<meta itemprop="url"    content="https://ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536766296_sumario_normal.jpg">
+<figcaption class="foto-pie"  itemprop="caption"> <span class="foto-texto">Torcida do Coritiba protesta após a morte de Leonardo Brandão.</span> <span class="foto-firma"> <span itemprop="copyrightHolder" class="foto-agencia">Divulgação</span></span></figcaption>
+</figure>
+<div class="sumario-texto">
+</div>
+</div>
+</section>
+<p>No Paraná, em fevereiro do ano passado, outro jovem torcedor foi morto pelas mãos da polícia. Leonardo Henrique da Rocha Brandão, de 17 anos, deu um beijo na mãe, Vanderleia, disse que a amava e partiu para o clássico entre Coritiba e Atlético. Como o jogo seria no estádio do rival, Leonardo e um amigo seguiram para a concentração nos arredores do Couto Pereira, de onde a PM escoltaria a torcida coxa-branca rumo à Arena da Baixada. Uma viatura pedia passagem entre os torcedores do Coritiba. De repente, ouviu-se o barulho de tiro e Leonardo caiu. Ele havia sido atingido por um disparo de submetralhadora .40. Imediatamente, agentes da Rotam recolheram o corpo do asfalto e o acomodaram na viatura, que saiu em disparada. Leonardo morreu no hospital.</p>
+<p>Segundo o 12° Batalhão da Polícia Militar, a arma de um sargento, que não teve a identidade divulgada, <a href="//brasil.elpais.com/brasil/2018/04/23/politica/1524496451_378897.html">disparou acidentalmente</a> enquanto o oficial colocava a bandoleira. A viatura estava com os vidros abertos e o tiro acertou em cheio o peito de Leonardo. O sargento ficou 15 dias afastado sob acompanhamento psicológico, mas retornou à corporação em atividades administrativas. A PM não informa o resultado da perícia realizada na submetralhadora. Indica apenas que o caso está em análise por uma sindicância na Vara da Auditoria da Justiça Militar Estadual.</p>
+<p>O comandante do batalhão, Wagner Lúcio dos Santos, emprega as palavras “tragédia” e “acidente” ao descrever a morte, observando que o uso de <a href="//brasil.elpais.com/brasil/2018/06/05/politica/1528201240_021277.html">armamento letal</a> em operações nos jogos em Curitiba é um “procedimento padrão”. Ademir Brandão, pai de Leonardo, ainda não engoliu o pedido de desculpas da instituição. “Arma não dispara à toa. Por causa do despreparo da polícia, meu filho saiu para ver um jogo e voltou dentro de um caixão.” Na partida seguinte, o Coritiba prestou homenagens a Leonardo. E a torcida protestou com faixas nas arquibancadas do Couto Pereira: “Não atire, quero torcer. Menos armas, mais diálogo”.</p>
+<h3>Famílias sem pai</h3>
+<p>Em todos os jogos do Cruzeiro no Mineirão, a torcida Pavilhão Independente exibe uma bandeira em memória a Eros Dátilo Belisário. O diretor do grupo morreu nas dependências do estádio em outubro de 2016. Mandante da partida em Belo Horizonte, o Cruzeiro <a href="//brasil.elpais.com/brasil/2018/05/16/deportes/1526423399_026430.html">enfrentava o Grêmio</a> pela semifinal da Copa do Brasil. Quando o jogo já havia começado, Eros e uma amiga tentaram mudar de lugar, mas o segurança Gleison Alexandre dos Santos os impediu de acessar outro setor do estádio. Na segunda investida, Eros forçou a passagem e, em seguida, foi agarrado por Gleison, que tentava imobilizá-lo com um mata-leão. Adentraram uma porta do almoxarifado enquanto mais dois vigilantes se aproximavam. O torcedor foi retirado da sala desacordado.</p>
+<section class="sumario_video centro" id="sumario_4|video">
+<a name="sumario_4"></a>
+<div id="sumario__interior">
+<div id="videonoticia" class="media">
+<figure class="foto  media" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<script type="text/javascript">
+//<![CDATA[
+    // Hash con los datos para el reproductor de video
+    var datosVideo_2018091211462929 = {};
+
+    
+    var anchoReproductor_2018091211462929 = 460;
+    var altoReproductor_2018091211462929  = 258;
+
+
+    datosVideo_2018091211462929.tipo          = 'mediateca';
+    datosVideo_2018091211462929.id_multimedia = '2018091211462929';
+    datosVideo_2018091211462929.urlNoticia    = '/brasil/2018/09/12/deportes/1536707395_262251.html';
+
+    datosVideo_2018091211462929.anchoPlayer   = anchoReproductor_2018091211462929;
+    datosVideo_2018091211462929.altoPlayer    = altoReproductor_2018091211462929;
+    datosVideo_2018091211462929.caratula      = '/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536764531_sumario_fotograma.jpg';
+    datosVideo_2018091211462929.publiActiva   = true;
+    datosVideo_2018091211462929.tagsIds               = '40052,192702,78590,65930,150157,9332,84032,65926,15866,79181,79178,127032,34352,18940,34278,9773,83879,82947,74336,26127';
+    datosVideo_2018091211462929.tagsNombreNormalizado = 'intento_asesinato_a,torcidas_organizadas_a,vigilantes_jurados_a,policia_militar_a,violencia_policial_a,accion_policial_a,ultras_a,policia_a,asesinatos_a,violencia_deportiva_a,violencia_a,penas_deportivas_a,futbol_a,brasil_a,fuerzas_seguridad_a,aficion_deportiva_a,sudamerica_a,latinoamerica_a,sucesos_a,delitos_a';
+    datosVideo_2018091211462929.keywordsVideo         = 'brasil,deportes';
+
+    datosVideo_2018091211462929.tituloPlayer  = '';
+    datosVideo_2018091211462929.duracionVideo = '41500';
+    datosVideo_2018091211462929.portal_creacion  = 'brasil';
+    datosVideo_2018091211462929.seccion_creacion = 'deportes';
+    datosVideo_2018091211462929.un_creacion      = 'ep';
+        
+    // Llamada para pintar el reproductor de video
+    reproductorMultimedia(datosVideo_2018091211462929);
+
+
+//]]>
+</script>
+<figcaption class="foto-pie" itemprop="caption"> <span class="foto-texto">Câmera interna do estádio registrou o momento em que Eros é abordado pelo segurança.</span></figcaption>
+<meta itemprop="url" content="https://ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536764531_sumario_fotograma.jpg">
+<meta itemprop="width" content="980">
+<meta itemprop="height" content="552">
+</figure>
+</div>
+<div class="sumario-texto">
+</div>
+</div>
+</section>
+<p>Eros ficou caído no chão por quase cinco minutos à espera de socorro. A caminho do hospital, sofreu seis paradas cardíacas. Aos 37 anos, não resistiu e deixou dois filhos: Mayra, 5, e Eros Dátilo, 1. Pamela Gabrielle Lopes, que vivia com Eros havia dois anos, estava em seu primeiro mês de gravidez ao ver o namorado sair de ambulância do estádio. Também integrante da torcida, ela o conheceu frequentando jogos com a Pavilhão e encontrava-se no setor para onde Eros tentava migrar. Chegou ao local do incidente no momento em que ele era retirado pelos paramédicos. Hoje, ela mora na pequena Santa Bárbara, faz terapia para superar o trauma e, resignada, espera que o filho cresça com dignidade. “Ele não teve nem a chance de conhecer o pai.”</p>
+<p>Um mês depois do jogo fatídico, a Polícia Civil divulgou o laudo da perícia, constatando que Eros teria morrido por causa de um choque elétrico. Segundo a reconstituição, ao tentar se desprender dos braços de Gleison, o torcedor caiu sobre um benjamim com fiação exposta dentro do almoxarifado e levou um choque de 220 volts. O delegado responsável pela investigação, Luiz Otávio Mattosinhos, qualificou a morte como “caso fortuito, que foge do controle da vontade humana”. Porém, integrantes da Pavilhão, incluindo uma amiga que estava com Eros, contestam a versão oficial. Afirmam que os seguranças não só o estrangularam, como também teriam desferido golpes em sua cabeça no interior da sala. De acordo com o boletim médico, Eros chegou ao hospital com “múltiplos traumas” pelo corpo.</p>
+<p>Por verificar inconsistências na perícia, o <a href="//brasil.elpais.com/brasil/2018/03/22/politica/1521756265_713032.html">Ministério Público</a> determinou a elaboração de um novo laudo, que está sob supervisão do 1º Tribunal do Júri de Minas Gerais. O órgão não indica um prazo para concluir o relatório. “Eros foi brutalmente espancado. Não aceitamos de forma alguma a hipótese de que ele tenha falecido por choque elétrico”, diz o advogado Daniel Deslandes, que representa a família no processo. Como a polícia entendeu que o caso se tratou de um acidente, ninguém foi indiciado pela morte. Após o episódio, a Prosegur, que cuidava da segurança privada no Mineirão, transferiu os vigilantes que atuaram na intervenção. Três meses depois, a Minas Arena, administradora do estádio, não renovou o contrato de prestação de serviços com a Prosegur. “Questões de custos operacionais”, ponderou a empresa.</p>
+<p>Em depoimento na Assembleia Legislativa de Minas Gerais, o gerente de operações da Minas Arena, Sandro Afonso Teatini Sales, que é coronel da reserva da PM, afirmou que a concessionária cumpriu os procedimentos recomendados. No entanto, o protocolo interno prevê que a segurança terceirizada no estádio não tem poder de prisão –em ocorrências mais graves, como a de Eros, policiais militares de prontidão na área externa devem ser acionados. Em nota, a administradora se limita a lamentar o óbito e diz ter empenhado “todos os esforços para colaborar com as investigações”.</p>
+<section class="sumario_foto centro" id="sumario_8|foto">
+<a name="sumario_8"></a>
+<div class="sumario__interior">
+<figure class="foto foto_w980" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<img src="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536766430_sumario_normal.jpg" width="980" height="653" alt="Pamela Gabrielle e o filho Eros, de um ano." srcset="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536766430_sumario_normal_recorte1.jpg 1960w, //ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536766430_sumario_normal_recorte2.jpg 720w, //ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536766430_sumario_normal.jpg 980w" />
+<meta itemprop="width"  content="980">
+<meta itemprop="height" content="653">
+<meta itemprop="url"    content="https://ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536766430_sumario_normal.jpg">
+<figcaption class="foto-pie"  itemprop="caption"> <span class="foto-texto">Pamela Gabrielle e o filho Eros, de um ano.</span> <span class="foto-firma"><span itemprop="author" class="foto-autor">Nindy Barros</span> </span></figcaption>
+</figure>
+<div class="sumario-texto">
+</div>
+</div>
+</section>
+<p>No mesmo ano da morte de Eros, Gustavo Anderson Araújo Silva, o Dim, de 19 anos, torcedor do Fortaleza, foi atingido por um tiro após o jogo de seu time contra o River-PI. Ele havia se tornado pai no dia anterior. Com o celular na mão, filmava o momento em que <a href="//brasil.elpais.com/brasil/2017/07/14/deportes/1500064846_528777.html">um grupo de torcedores</a> corria da polícia depois de uma briga com rivais do Ceará. Amigos que o acompanhavam contam que os tiros partiram dos policiais militares. Ainda com a câmera do celular ligada, Dim desabou ao sentir um dos disparos perfurar suas costas. Tentava gritar enquanto filmava a própria agonia. Acudido por colegas, morreu a caminho do hospital.</p>
+<p>Menos de um mês depois, outro torcedor do time tricolor, integrante da Torcida Uniformizada do Fortaleza (TUF), foi morto com um tiro de .40, munição utilizada pela PM no Estado. Jullian de Sousa Cavalcante, 20, também perdeu a vida alvejado pelas costas durante a dispersão de um confronto com torcedores do Ceará. “Ao invés de controlar o tumulto, a polícia chegou atirando”, contou um diretor da TUF. Mais de dois anos decorridos das mortes, os inquéritos abertos pela Divisão de Homicídios e Proteção à Pessoa da Polícia Civil não identificaram os responsáveis pelos assassinatos.</p>
+<section class="sumario_apoyos izquierda" id="sumario_9|apoyos">
+<a name="sumario_9"></a>
+<div class="sumario__interior">
+<header class="sumario-encabezado"><h3 class="sumario-titulo"><span class="sin_enlace">MAIS INFORMAÇÕES</span></h3></header>
+<div class="sumario-texto">
+<div class="apoyos">
+<ul class="apoyos-listado">
+<li class="apoyo_ apoyo_foto">
+<figure class="foto foto_w140" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<a href="//brasil.elpais.com/brasil/2017/12/21/deportes/1513879545_895915.html" class="enlace">
+<img  width="140" height="100" alt="A sina dos torcedores mortos por policiais e vigilantes" src="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536778754_sumarioapoyo_normal.jpg"  srcset="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536778754_sumarioapoyo_normal_recorte1.jpg 280w, //ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536778754_sumarioapoyo_normal.jpg 140w"  />
+<meta itemprop="width"  content="140">
+<meta itemprop="height" content="100">
+<meta itemprop="url"    content="https://ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536778754_sumarioapoyo_normal.jpg">
+</a>
+</figure>
+<span class="apoyo-titulo">
+<a href="//brasil.elpais.com/brasil/2017/12/21/deportes/1513879545_895915.html">
+Sinalizadores, a cruzada das torcidas pela liberação da festa nos estádios
+</a>
+</span>
+</li>
+<li class="apoyo_ apoyo_foto">
+<figure class="foto foto_w140" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<a href="//brasil.elpais.com/brasil/2018/02/04/politica/1517776179_990604.html" class="enlace">
+<img  width="140" height="100" alt="A sina dos torcedores mortos por policiais e vigilantes" src="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536778809_sumarioapoyo_normal.jpg"  srcset="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536778809_sumarioapoyo_normal_recorte1.jpg 280w, //ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536778809_sumarioapoyo_normal.jpg 140w"  />
+<meta itemprop="width"  content="140">
+<meta itemprop="height" content="100">
+<meta itemprop="url"    content="https://ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536778809_sumarioapoyo_normal.jpg">
+</a>
+</figure>
+<span class="apoyo-titulo">
+<a href="//brasil.elpais.com/brasil/2018/02/04/politica/1517776179_990604.html">
+Total de mortos por policiais em São Paulo é maior registrado desde 1996
+</a>
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div> 
+</section>
+<p>Em fevereiro deste ano, o borracheiro Lucas Pereira Neves passava de moto pela avenida Anhanguera, no centro de Goiânia, quando cruzou com um ônibus lotado de torcedores do Vila Nova. Ele era membro da Força Jovem, maior torcida organizada do Goiás, rival do clube colorado. Em questão de minutos, estava caído com um tiro no braço e outro nas costas. Três agentes da Guarda Civil Metropolitana (GCM) que estavam de folga, sem farda, efetuaram cerca de 10 disparos em sua direção.</p>
+<p>Segundo eles, Lucas teria atirado contra o ônibus dos vilanovenses e resistido à ordem para largar o revólver. Porém, de acordo com a Metrobus, administradora da frota de coletivos na cidade, não havia sinais de tiros na lataria do veículo e os vidros haviam sido quebrados por pedras. Imagens de câmeras de segurança mostram que um dos agentes pisa sobre o corpo do torcedor, ainda com a arma engatilhada, antes de acionar viaturas da Guarda.</p>
+<p>Os policiais da CGM entregaram suas armas à corregedoria e foram deslocados para funções administrativas. O processo da Polícia Civil para averiguação do caso ainda não foi concluído, sete meses depois. Logo após a ocorrência, o comando da Guarda prestou solidariedade aos agentes à paisana, alegando <a href="//brasil.elpais.com/brasil/2018/03/15/politica/1521116550_982421.html">legítima defesa</a> e informando que a vítima tinha três passagens na polícia. Em pronunciamento no plenário da Câmara de Goiânia, o vereador Romário Policarpo (PTC), servidor licenciado da CGM, elogiou a abordagem dos guardas. “Um bandido a menos, já vai tarde. Felizmente a Guarda Civil o matou. E podia ter matado outros, que acabam com o futebol goiano”, discursou Policarpo.</p>
+<p>Maria de Lourdes Pereira Neves, mãe do borracheiro, espera que a morte do filho não fique impune. “Meu filho era um rapaz trabalhador, não um bandido. Esse crime deveria ser investigado com rigor.” Lucas morreu aos 24 anos, algumas horas depois de ser atendido no hospital. Deixou a mulher grávida de seis meses.</p>
+<h3>Martírio por justiça e reparação</h3>
+<p>Em 7 de dezembro, completa-se uma década do hexacampeonato brasileiro do São Paulo. Milhares de são-paulinos percorreram cerca de 1.000 quilômetros para o jogo decisivo contra o Goiás, realizado no estádio Bezerrão, no Gama, cidade-satélite de Brasília. Nilton César de Jesus, ou apenas César, era um deles. Presidente de honra da organizada <a href="//brasil.elpais.com/brasil/2018/02/09/deportes/1518191073_126812.html">Dragões da Real</a>, jamais hesitava em encarar horas de viagem para acompanhar o tricolor paulista. Desacostumado a receber grandes eventos, o município do Distrito Federal não estava preparado para tantos torcedores que chegavam de vários cantos. Antes da bola rolar, a desorganização era flagrante nas imediações do estádio. Ambiente propício para as torcidas dos dois times entrarem em confronto com paus e pedras.</p>
+<p>Desnorteado, César se dividia entre as tentativas de se juntar aos companheiros de torcida e escapar do tumulto. Entra em cena, então, a figura do sargento da Polícia Militar, José Luiz Carvalho Barreto. Ele corre atrás de César, que levanta as mãos para o alto sem oferecer resistência. Toda movimentação é captada por uma câmera da <em>TV Record</em>. Com a arma em punho, o sargento dá uma coronhada na nuca do torcedor, mas o revólver dispara. O tiro à queima roupa atinge a cabeça do são-paulino. Ele foi atendido por médicos na porta do estádio e levado para a UTI do Hospital de Base de Brasília, onde morreu depois de quatro dias internado.</p>
+<section class="sumario_foto centro" id="sumario_2|foto">
+<a name="sumario_2"></a>
+<div class="sumario__interior">
+<figure class="foto foto_w980" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<img src="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536708256_sumario_normal.jpg" width="980" height="560" alt="Nilton Cesar Dragoes da Real policial" srcset="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536708256_sumario_normal_recorte1.jpg 1960w, //ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536708256_sumario_normal_recorte2.jpg 720w, //ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536708256_sumario_normal.jpg 980w" />
+<meta itemprop="width"  content="980">
+<meta itemprop="height" content="560">
+<meta itemprop="url"    content="https://ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536708256_sumario_normal.jpg">
+<figcaption class="foto-pie"  itemprop="caption"> <span class="foto-texto">Homenagem a Nilton César na sede da Dragões da Real.</span> <span class="foto-firma"><span itemprop="author" class="foto-autor">B.P.</span> </span></figcaption>
+</figure>
+<div class="sumario-texto">
+</div>
+</div>
+</section>
+<p>Autuado em flagrante por lesão corporal grave, o sargento Barreto acabou liberado no mesmo dia. Em 2012, o agente da PM foi condenado pela Auditoria Militar do Distrito Federal a dois anos e dois meses em regime aberto por homicídio culposo (sem intenção de matar). Se a morte de César lhe rendeu menos de 24 horas de detenção, os quase 30 anos de serviços prestados à polícia também foram generosos com o sargento. Em fevereiro de 2017, ele se aposentou com salário de 9.200 reais e embolsou 75.000 reais em verbas indenizatórias por férias e licenças acumuladas.</p>
+<p>Já dona Agdalina Rosa de Jesus, que nunca mais teve coragem de assistir às imagens em que César aparece inconsciente em volta de uma poça de sangue, em frente ao estádio Bezerrão, sofreu para conseguir na Justiça o direito de ser indenizada pelo assassinato do filho. Foram nove anos de batalha nos tribunais. Somente em outubro do ano passado, a 6ª Vara da Fazenda Pública fez valer a decisão que condenou o Distrito Federal ao pagamento de indenização a Agdalina por danos morais e materiais devido à trágica ação policial. Enquanto o processo corria, a mãe de César, que era o encarregado do sustento da casa com trabalhos informais, teve luz e telefone cortados e passou dificuldades para ajudar a criar o neto Júlio César – tinha só um ano e meio quando o pai morreu.</p>
+<section class="sumario_html centro" id="sumario_10|html">
+<a name="sumario_10"></a>
+<div class="sumario__interior">
+<div class="sumario-texto">
+<p class="texto_grande">“Quando se trata da morte de um torcedor organizado, não se investiga, não se pune como deveria”</p>
+</div> 
+</div> 
+</section>
+<p>Ao longo dos recursos que impetrou a fim de não indenizar a mãe, o Estado do DF chegou a afirmar que a morte teria sido provocada “por exclusiva culpa da vítima, pessoa ligada à prática de atos de vandalismo e violência associados aos <a href="//brasil.elpais.com/brasil/2017/04/27/deportes/1493325637_630349.html">confrontos entre torcidas organizadas</a> de clubes de futebol”. No entanto, o juiz da 6ª Vara interpretou a conduta do sargento Barreto como “irresponsável e tresloucada”, argumentado na sentença que “nada justifica o fato de uma autoridade policial militar, agente público que deveria ser preparado pelo Estado para enfrentar e conter a violência, acabar praticando violação maior do que a combatida”. “Infelizmente, o César foi vítima do despreparo de um policial”, afirma André Azevedo, atual presidente da Dragões da Real e um dos fundadores da Associação Nacional das Torcidas Organizadas (Anatorg), que, no dia do incidente, acompanhou o amigo na ambulância até o hospital. “Quando se trata da morte de um torcedor organizado, <a href="//brasil.elpais.com/brasil/2014/04/11/internacional/1397169392_238530.html">não se investiga, não se pune</a> como deveria.”</p>
+<p>Tal qual o suplício da família de César, Pamela ainda não recebeu nem sequer o seguro de acidentes pessoais do ingresso garantido pelo Estatuto do Torcedor. Como o primeiro inquérito da Polícia Civil não atribuiu responsabilidades pela morte no Mineirão, ela precisa esperar a revisão do laudo antes de reivindicar indenização da Prosegur ou da Minas Arena, que bancou apenas as despesas do velório de Eros. Para sustentar o filho, conta com a ajuda de parentes e do dinheiro arrecadado em eventos beneficentes da torcida Pavilhão Independente. “Não é fácil dar todo o suporte que uma criança necessita sozinha”, diz Pamela, que tem 23 anos e trabalha como vendedora autônoma.</p>
+<p>Na maioria dos episódios, agentes que mataram torcedores alegam ter apertado o gatilho em legítima defesa, o que atravanca pedidos de indenização na Justiça. Há casos como o do vascaíno Davi em que os parentes desistiram de buscar seus direitos por falta de apoio dos clubes e de <a href="//brasil.elpais.com/brasil/2017/07/14/deportes/1500068233_300420.html?rel=mas">dinheiro para custear o processo</a>. Entre as mortes levantadas pela reportagem, somente o Coritiba se dispôs a prestar auxílio jurídico aos familiares das vítimas. Ainda assim, a ação movida pelos pais de Leonardo Brandão contra o Estado deve levar tempo para ser julgada, já que, por se tratar de um militar como réu, os ritos se desenrolam em varas especiais, onde a tramitação dos processos costuma ser ainda mais lenta que na Justiça comum.</p>
+<p>Leonardo trabalhava desde os 15 anos. Ajudava nas despesas de casa com o salário que ganhava lavando carros em um bairro na periferia de Curitiba. Mas os desembargadores da 2ª Câmara Cível do Paraná negaram o pedido de pensão da família antes da conclusão do processo na instância superior. Em São Leopoldo, Maicon Doglas estudava à noite e, durante o dia, auxiliava o pai Vitor Augusto Batista de Lima como servente de pedreiro. Os familiares se cansaram de esperar o julgamento e decidiram antecipar a ação indenizatória contra o Estado do Rio Grande do Sul.</p>
+<p>Em busca de reparação pela tragédia que representou não só um abalo emocional, mas também econômico para a família, Vitor passou o <a href="//brasil.elpais.com/brasil/2018/06/21/deportes/1529536206_588160.html">último Dia dos Pais</a> se desdobrando para não perder o chão. “Bate uma saudade danada do Maicon. Tenho uma filha mais nova pra criar, preciso manter as forças, mas não está sendo fácil segurar a barra sem ele.”</p>
+<section class="sumario_despiece centro" id="sumario_1|despiece">
+<a name="sumario_1"></a>
+<div class="sumario__interior">
+<header class="sumario-encabezado">
+<h4 class="sumario-titulo"><span class="sin_enlace">As marcas da violência policial nos estádios</span></h4>
+</header> 
+<div class="sumario-texto">
+<p>Ao comentar a morte de Davi Rocha, o então presidente do Vasco, <a href="//brasil.elpais.com/brasil/2018/01/23/deportes/1516665586_808224.html">Eurico Miranda</a>, culpou “a desmedida, desarrazoada e desproporcional atuação da PMERJ (Polícia Militar do Estado do Rio de Janeiro)” pela confusão que rendeu punição à equipe de São Januário com a perda de seis mandos de campo e multa de 75.000 reais. Menos de um ano depois, já sob a gestão de Alexandre Campello, a segurança particular do clube foi acusada de executar disparos com armas de fogo durante invasão de torcedores em um treinamento no estádio. Ninguém ficou ferido.</p>
+<p>Casos de violência protagonizados por <a href="http://www.espn.com.br/noticia/583011_cade-a-merenda-pm-contradiz-federacao-e-veta-protestos-de-torcida-na-rua-javari">seguranças e policiais</a> se tornaram rotina no futebol brasileiro. No último dia 20 de agosto, duas torcedoras do Santa Cruz denunciaram um policial militar por agressão e abuso de autoridade na entrada do estádio Arruda, em Recife. Em julho, o vendedor Rodrigo Carvalho Avelar, de 39 anos, foi espancado por policiais dentro do estádio Brinco de Ouro, em Campinas. O torcedor do Guarani acusou a PM de tortura e tentativa de homicídio. “Apanhei na frente da minha família e fui torturado dentro de uma salinha. Nunca vou esquecer essa humilhação”, diz Avelar. Por sua vez, o comando do policiamento no estádio alega que o torcedor, supostamente embriagado, tentou passar por uma das catracas com bebida alcóolica, o que teria justificado o “uso de força moderada para contê-lo”.</p>
+<p>Em novembro do ano passado, Campinas já havia sido palco de um flagrante episódio de abuso policial registrado por câmeras de TV, dessa vez no estádio da Ponte Preta, rival do Guarani. Gideão Messias da Silva, acuado diante de um tumulto na arquibancada do Moisés Lucarelli, tentava proteger o filho Ryan Lucas, de 9 anos, quando foi perseguido e agredido por um PM. “Uma humilhação em rede nacional”, resume Gideão. “Hoje, quando vejo uma viatura da polícia, não me sinto seguro. Sinto medo.” Apesar da promessa da Secretaria de Segurança Pública de São Paulo de apurar um possível excesso autoritário nas imagens, o agente não recebeu nenhuma punição.</p>
+</div> 
+</div> 
+</section>
+</div> 
+<aside class="compartir" id="compartir_superior">
+<div class="compartir__interior">
+<div class="compartir-social" id="compartir_social_inferior">
+<button class="boton_facebook" id="inferior_fb" title="Recomendar no Facebook"><span class="boton-nombre">Recomanar no Facebook</span> </button>
+<button class="boton_twitter" id="inferior_twit" title="Twittear"><span class="boton-nombre">Twittear</span></button>
+<div class="compartir-otros" id="compartir-otros_inf">
+<button class="boton_compartir-otros" id="boton_compartir-otros_inf">Otros</button>
+<div class="compartir-otros__interior">
+<button class="boton_cerrar" id="cerrar_compartir-otros_inf">Fechar</button>
+<button class="boton_linkedin" id="inferior_linkedin" title="Recomendar no Linkedin">Recomendar no Linkedin</button>
+<button class="boton_googleplus" id="inferior_gp" title="Recomendar no GooglePlus">Recomendar no GooglePlus</button>
+<button class="boton_pinterest" id="inferior_pinit" title="Recomendar no Pinterest">Recomendar no Pinterest</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+        //if(typeof EPETMail != "undefined")    	new EPETMail ( document.getElementById('inferior_enviar'), document.getElementById('inferior_capaEnviarCorreo'), '' );
+        if(typeof EPETTwitter != "undefined") new EPETTwitter ( document.getElementById('inferior_twit'), params );
+        if(typeof EPETFacebook != "undefined") new EPETFacebook ( document.getElementById('inferior_fb'), params );
+        if(typeof EPETGooglePlus != "undefined") new EPETGooglePlus ( document.getElementById('inferior_gp'), params );
+        if(typeof EPETLinkedin != "undefined") new EPETLinkedin ( document.getElementById('inferior_linkedin'), params );
+        if(typeof EPETPinterest != "undefined") new EPETPinterest ( document.getElementById('inferior_pinit'), params );
+    </script>
+</aside>
+<section class="articulo-apoyos" id="articulo-apoyos">
+<header class="articulo-apoyos-encabezado">
+<h3 class="articulo-apoyos-titulo"><span class="sin_enlace">MAIS INFORMAÇÕES</span></h3>
+</header>
+<div class="articulo-apoyos__interior">
+<div class="apoyos">
+<ul class="apoyos-listado">
+<li class="apoyo_">
+<figure class="foto foto_w360" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/12/28/deportes/1514427700_914142.html?rel=mas">
+<img itemprop="url" width="360" height="257" alt="A violência no futebol como um retrato do Brasil" title="A violência no futebol como um retrato do Brasil" src="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536761164_noticiarelacionadaprincipal_normal.jpg" srcset="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536761164_noticiarelacionadaprincipal_normal_recorte1.jpg 720w, //ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536761164_noticiarelacionadaprincipal_normal.jpg 360w" />
+<meta itemprop="width" content="360">
+<meta itemprop="height" content="257">
+</a>                 </figure>
+<span class="apoyo-titulo">
+<a href="//brasil.elpais.com/brasil/2017/12/28/deportes/1514427700_914142.html?rel=mas"   >                                         A violência no futebol como um retrato do Brasil
+</a>                 </span>
+</li>
+<li class="apoyo_">
+<figure class="foto foto_w360" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/07/21/politica/1500662148_452392.html?rel=mas">
+<img itemprop="url" width="360" height="257" alt="PMs, juízes, promotores: o ciclo da violência policial" title="PMs, juízes, promotores: o ciclo da violência policial" src="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536761239_noticiarelacionadaprincipal_normal.jpg" srcset="//ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536761239_noticiarelacionadaprincipal_normal_recorte1.jpg 720w, //ep01.epimg.net/brasil/imagenes/2018/09/12/deportes/1536707395_262251_1536761239_noticiarelacionadaprincipal_normal.jpg 360w" />
+<meta itemprop="width" content="360">
+<meta itemprop="height" content="257">
+</a>                 </figure>
+<span class="apoyo-titulo">
+<a href="//brasil.elpais.com/brasil/2017/07/21/politica/1500662148_452392.html?rel=mas"   >                                         PMs, juízes, promotores: o ciclo da violência policial
+</a>                 </span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="articulo-tags" id="articulo-tags">
+<header class="articulo-tags-encabezado ">
+<button class="articulo-tags-titulo" id="boton_articulo-tags">
+Arquivado em:
+</button>
+</header>
+<div class="articulo-tags__interior" id="articulo-tags__interior">
+<ul class="listado" id="listado">
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/intento_asesinato/a/" title="Ver m&aacute;s noticias de [Tentativa assassinato]">Tentativa assassinato</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/torcidas_organizadas/a/" title="Ver m&aacute;s noticias de [Torcidas Organizadas]">Torcidas Organizadas</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/vigilantes_jurados/a/" title="Ver m&aacute;s noticias de [Seguranças privados]">Seguranças privados</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/policia_militar/a/" title="Ver m&aacute;s noticias de [Polícia militar]">Polícia militar</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/violencia_policial/a/" title="Ver m&aacute;s noticias de [Violência policial]">Violência policial</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/accion_policial/a/" title="Ver m&aacute;s noticias de [Ação policial]">Ação policial</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/ultras/a/" title="Ver m&aacute;s noticias de [Ultras]">Ultras</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/policia/a/" title="Ver m&aacute;s noticias de [Polícia]">Polícia</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/asesinatos/a/" title="Ver m&aacute;s noticias de [Assassinatos]">Assassinatos</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/violencia_deportiva/a/" title="Ver m&aacute;s noticias de [Violência esportiva]">Violência esportiva</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/violencia/a/" title="Ver m&aacute;s noticias de [Violência]">Violência</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/penas_deportivas/a/" title="Ver m&aacute;s noticias de [Clubes esportivos]">Clubes esportivos</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/futbol/a/" title="Ver m&aacute;s noticias de [Futebol]">Futebol</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/brasil/a/" title="Ver m&aacute;s noticias de [Brasil]">Brasil</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/fuerzas_seguridad/a/" title="Ver m&aacute;s noticias de [Força segurança]">Força segurança</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/aficion_deportiva/a/" title="Ver m&aacute;s noticias de [Passatempo esportivo]">Passatempo esportivo</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/sudamerica/a/" title="Ver m&aacute;s noticias de [América do Sul]">América do Sul</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/latinoamerica/a/" title="Ver m&aacute;s noticias de [América Latina]">América Latina</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/sucesos/a/" title="Ver m&aacute;s noticias de [Acontecimentos]">Acontecimentos</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/delitos/a/" title="Ver m&aacute;s noticias de [Delitos]">Delitos</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/deportes/a/" title="Ver m&aacute;s noticias de [Esportes]">Esportes</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/america/a/" title="Ver m&aacute;s noticias de [América]">América</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/problemas_sociales/a/" title="Ver m&aacute;s noticias de [Problemas sociais]">Problemas sociais</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/justicia/a/" title="Ver m&aacute;s noticias de [Justiça]">Justiça</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/sociedad/a/" title="Ver m&aacute;s noticias de [Sociedade]">Sociedade</a></li>
+</ul>
+</div>
+</section>
+<script>
+if (typeof EPETshowHideTags == 'function') {
+
+				//EPETshowHideTags('contenedorLista');
+				EPETshowHideTags('articulo-tags__interior');
+
+}
+</script>
+</div> 
+</div>
+</article>
+<aside class="otros">
+<div class="otros__interior">
+</div>
+</aside>
+</div>
+</main>
+<footer id="pie" class="pie">
+<div class="pie__interior">
+<div class="corporativo">
+<ul class="corporativo-menu">
+<li itemscope="" itemtype="https://schema.org/CreativeWork"> <a itemprop="url" target="_blank" href="//elpais.com/corporativos/"><span itemprop="copyrightHolder">© <strong itemprop="name">EDICIONES EL PAÍS, S.L.</strong></span></a></li>
+<li itemscope="" itemtype="https://schema.org/ContactPoint"><a itemprop="url" href="/brasil/estaticos/contacte/" rel="nofollow">Contato</a></li>
+<li><a rel="nofollow" target="_blank" href="//www.prisanewsservices.com/">Venda de Conteúdos</a></li>
+<li><a target="_blank" href="//elpais.com/estaticos/publicidad/">Publicidade</a></li>
+<li><a rel="nofollow" href="/brasil/estaticos/aviso-legal/">Aviso legal</a></li>
+<li><a rel="nofollow" target="_blank" href="//www.prisa.com/es/info/politica-de-cookies">Política cookies</a></li>
+<li><a href="//elpais.com/estaticos/mapa-web/">Mapa</a></li>
+<li><a href="//elpais.com/suscripciones/">EL PAÍS no KIOSKOyMÁS</a></li>
+<li><a href="/tag/listado/">Índice</a></li>
+<li><a href="/rss/brasil/portada_completo.xml">RSS</a></li>
+</ul>
+</div>
+<!-- date 2018-09-21 07:14:11 PM-->
+<script type="text/javascript">
+(function(){if(PBS.slm&&PBS.slm.cf&&PBS.slm.cf.biT_){var biT_=function(BIT){var ps=document.querySelectorAll(BIT.sel),el,cls=BIT.cls||"",pos=BIT.pos,min=BIT.min||0,ads=PBS.slm.cf.ads,axm=PBS.axm,sh=0,tel,tds;if(ps&&ps.length&&ps.length>0)for(el in pos){tds=ps[pos[el][0]-1];if(tds||min>sh){tel=axm.h.el("div",{"id":PBS.slm.cf.divid+"-"+el.toUpperCase(),"Cn":cls});tds&&tds.parentNode.insertBefore(tel,tds.nextSibling)||ps[ps.length-1].parentNode.appendChild(tel)}sh++}},c;for(c=0;c<PBS.slm.cf.biT_.length;c++)biT_(PBS.slm.cf.biT_[c])}var publiPbsLoad=document.querySelectorAll("div[class*='publiLoad']");if("object"==typeof publiPbsLoad[0]){var _M=PBS.axm.C.isMovil(),_P=_M?.5:.3,size=[],i=PBS.axm.C.screen().ancho,o=PBS.axm.C.screen().alto;PBS.slm.log.onview={};window.addEventListener("scroll",function(e){for(l=0;l<publiPbsLoad.length;l++){var d=document.getElementById(publiPbsLoad[l].id),s=d.getBoundingClientRect().top,n=d.id.split(gtpdivid+"-")[1];if((o*_P)+o>s&&typeof PBS.slm.log.onview[n]=="undefined"){PBS.slm.log.onview[n]=!0;if(-1!=n.indexOf("MPU")){size=[[300,250]]}else if(-1!=n.indexOf("LDB")){if(i>=980){size=[[728,90],[980,90]]}else if(i>=728){size=[[728,90]]}else{n="M"+n;size=[[320,50]]}}else if(-1!=n.indexOf("NSTD")){size=!1}else if(-1!=n.indexOf("NATAD")){size=[[300,250],"fluid"]};PBS.axm.h.slr([{d:d.id,p:n.toLowerCase(),s:size}]);size=[]}}})}})();
+</script>
+<link href="//ep01.epimg.net/estilos/pie/v3.x/v3.10/pie-comunes.css" rel="stylesheet">
+<div id="pie-comun9">
+<div class="inside">
+<div class="medios-destacados">
+<a id="pc_prisa" href="http://www.prisa.com/es/" target="_blank"  title="Ir a la web del Grupo Prisa">Una empresa de PRISA</a>
+<a id="pbt-medios" href="javascript:void(0);" title="medios Grupo Prisa">Medios Grupo Prisa</a>
+<ul class="primerafila estirar">
+<li><a id="pc_elpais" href="https://elpais.com" target="_blank"  title="EL PA&Iacute;S">El PA&Iacute;S</a></li>
+<li><a id="pc_los40" href="http://los40.com" target="_blank"  title="Ir a la web de Los 40">Los 40 principales</a></li>
+<li><a id="pc_santillana" href="http://www.santillana.com/es/" target="_blank"  title="Ir a la web de Santillana">Santillana</a></li>
+<li><a id="pc_compartir" href="http://santillanacompartir.com/" target="_blank"  title="Ir a la web de Santillana Compartir">Santillana Compartir</a></li>
+<li><a id="pc_tvi" href="http://www.tvi.iol.pt" target="_blank"  title="Ir a la web de tvi">tvi</a></li>
+<li><a id="pc_ser" href="http://cadenaser.com" target="_blank"  title="Ir a la web de Cadena SER">Cadena SER</a></li>
+<li><a id="pc_as" href="https://as.com" target="_blank" title="Ir a la web de AS">AS.com</a></li>
+<li><a id="pc_adn" href="http://www.adnradio.cl" target="_blank"  title="Ir a la web de ADN">adn</a></li>
+<li><a id="pc_caracol" href="http://www.caracol.com.co/" target="_blank"  title="Ir a la web de Caracol">Caracol</a></li>
+</ul>
+<ul class="estirar">
+<li><a id="pc_huffington" href="http://www.huffingtonpost.es/" target="_blank" title="Ir a la web de Huffington Post">Huffington Post</a></li>
+<li><a id="pc_uno" href="http://www.sistemauno.com/web/index.html" target="_blank" title="Ir a la web de Sistema UNO">UNO</a></li>
+<li><a id="pc_wradio" href="http://www.wradio.com.co" target="_blank"  title="Ir a la web de wradio">wradio</a></li>
+<li><a id="pc_cincodias" href="https://cincodias.elpais.com" target="_blank" title="Ir a la web de Cinco D&iacute;as">Cinco D&iacute;as</a> </li>
+<li><a id="pc_continental" href="http://www.continental.com.ar" target="_blank"  title="Ir a la web de Radio Continental">continental</a></li>
+<li><a id="pc_maxima" href="http://www.maxima.fm" target="_blank"  title="Ir a la web de M&aacute;xima FM">M&aacute;xima</a></li>
+<li><a id="pc_m80" href="http://www.m80radio.com" target="_blank"  title="Ir a la web de M80 radio">M80 radio</a></li>
+<li><a id="pc_dial" href="http://www.cadenadial.com" target="_blank"  title="Ir a la web de Cadena Dial">Cadena Dial</a></li>
+<li><a id="pc_kebuena" href="http://kebuena.es/" target="_blank"  title="Ir a la web de Kebuena">Kebuena</a></li>
+<li><a id="pc_podium" href="http://www.podiumpodcast.com/" target="_blank"  title="Ir a la web de Podium Podcast">Podium podcasts</a></li>
+</ul>
+<ul class="estirar">
+<li><a id="pc_richmond" href="http://www.richmondelt.com/" target="_blank"  title="Ir a la web de Richmond">Richmond</a></li>
+<li><a id="pc_moderna" href="http://www.moderna.com.br/pagina-inicial.htm" target="_blank"  title="Ir a la web de Moderna">Moderna</a></li>
+<li><a id="pc_plural" href="http://pluralportugal.pt/" target="_blank"  title="Ir a la web de plural">Plural</a></li>
+<li><a id="pc_tvi24" href="http://www.tvi24.iol.pt/" target="_blank"  title="Ir a la web de tvi">tvi24</a></li>
+<li><a id="pc_icon" href="https://elpais.com/elpais/icon.html" target="_blank"  title="Ir a la web de El Pa&iacute;s ICON">El Pa&iacute;s ICON</a></li>
+<li><a id="pc_verne" href="https://elpais.com/elpais/planeta_futuro.html" target="_blank"  title="Ir a la web de Planeta futuro">Planeta futuro</a></li>
+<li><a id="pc_loqueleo" href="http://www.loqueleo.com/" target="_blank"  title="Ir a la web de loqueleo">loqueleo</a></li>
+<li><a id="pc_meristation" href="http://www.meristation.com/" target="_blank"  title="Ir a la web de Meristation">Meristation</a></li>
+<li><a id="pc_elviajero" href="http://smoda.elpais.com/" target="_blank"  title="Ir a la web de S moda">S moda</a></li>
+<li><a id="pc_clasificados" href="http://radiocomercial.iol.pt/" target="_blank"  title="Ir a la web de R&aacute;dio Comercial">R&aacute;dio Comercial</a>
+</ul>
+</div>
+<div id="capa-webs-grupo" class="muestra-medios"> 
+<div class="capa-medios">
+<div class="cabecera-capa estirar">
+<h3>Webs de PRISA</h3>
+<a href="javascript:void(0);" title="cerrar" id="cierrame">cerrar ventana</a>
+</div>
+
+<ul class="webs-grupo">
+<li class="webs-grupo-col">
+<ul>
+<li class="tit-principal">SANTILLANA</li>
+<li class="encabezado"><a href="http://www.santillana.com" target="_blank" rel="nofollow" title="SANTILLANA Global">SANTILLANA Global</a></li>
+<li class="encabezado subrayado"><a href="http://www.richmondelt.com/" target="_blank" rel="nofollow" title="Richmond Publishing">Richmond</a></li>
+<li class="tit-seccion">SANTILLANA</li>
+<li><a href="http://www.santillana.com.ar" target="_blank" rel="nofollow" title="Argentina">Argentina</a></li>
+<li><a href="http://www.santillana.com.bo/" target="_blank" rel="nofollow" title="Bolivia">Bolivia</a></li>
+<li><a href="http://www.santillana.com.br/" target="_blank" rel="nofollow" title="Brasil">Brasil</a></li>
+<li><a href="http://www.santillana.cl/" target="_blank" rel="nofollow" title="Chile">Chile</a></li>
+<li><a href="http://www.santillana.com.co/websantillana/" target="_blank" rel="nofollow" title="Colombia">Colombia</a></li>
+<li><a href="http://www.santillana.cr/" target="_blank" rel="nofollow" title="Costa Rica">Costa Rica</a></li>
+<li><a href="http://www.santillana.com.ec/" target="_blank" rel="nofollow" title="Ecuador">Ecuador</a></li>
+<li><a href="http://www.santillana.com.sv/" target="_blank" rel="nofollow" title="El Salvador">El Salvador</a></li>
+<li><a href="http://www.santillana.es/" target="_blank" rel="nofollow" title="Espa&ntilde;a">Espa&ntilde;a</a></li>
+<li><a href="http://www.santillanausa.com/" target="_blank" rel="nofollow" title="Estados Unidos">Estados Unidos</a></li>
+<li><a href="http://www.santillana.com.gt/" target="_blank" rel="nofollow" title="Guatemala">Guatemala</a></li>
+<li><a href="http://www.santillana.com.hn/" target="_blank" rel="nofollow" title="Honduras">Honduras</a></li>
+<li><a href="http://www.santillana.com.mx/" target="_blank" rel="nofollow" title="M&eacute;xico">M&eacute;xico</a></li>
+<li><a href="http://www.santillana.com.pa/" target="_blank" rel="nofollow" title="Panam&aacute;">Panam&aacute;</a></li>
+<li><a href="http://www.santillana.com.py/" target="_blank" rel="nofollow" title="Paraguay">Paraguay</a></li>
+<li><a href="http://www.santillana.com.pe/" target="_blank" rel="nofollow" title="Per&uacute;">Per&uacute;</a></li>
+<li><a href="http://www.santillana.pt/" target="_blank" rel="nofollow" title="Portugal">Portugal</a></li>
+<li><a href="http://gruposantillanapr.com/" target="_blank" rel="nofollow" title="Puerto Rico">Puerto Rico</a></li>
+<li><a href="http://santillana.com.do/" target="_blank" rel="nofollow" title="Rep. Dominicana">Rep. Dominicana</a></li>
+<li><a href="http://www.santillana.com.uy/" target="_blank" rel="nofollow" title="Uruguay">Uruguay</a></li>
+<li><a href="http://www.santillana.com.ve/" target="_blank" rel="nofollow" title="Venezuela">Venezuela</a></li>
+<li class="encabezado subrayado"><a href="http://www.loqueleo.com/" target="_blank" rel="nofollow" title="loqueleo">loqueleo</a></li>
+<li class="encabezado subrayado"><a href="http://www.santillanaele.com/" target="_blank" rel="nofollow" title="SANTILLANA ESPA&Ntilde;OL">SANTILLANA ESPA&Ntilde;OL</a></li>
+<li class="encabezado subrayado"><a href="http://www.santillanafrancais.com/" target="_blank" rel="nofollow" title="SANTILLANA FRANCES">SANTILLANA FRANCES</a></li>
+<li class="encabezado subrayado"><a href="http://www.sistemauno.com/web/inicio.html" target="_blank" rel="nofollow" title="Sistema UNO de Ensino">Sistema UNO</a></li>
+<li class="encabezado subrayado"><a href="http://santillanacompartir.com/" target="_blank" rel="nofollow" title="Santillana Compartir">Santillana Compartir</a></li>
+<li class="encabezado subrayado"><a href="http://ineverycrea.net/" target="_blank" rel="nofollow" title="IneveryCREA">IneveryCREA</a></li>
+<li class="encabezado subrayado"><a href="https://www.bejob.com/" target="_blank" rel="nofollow" title="Bejob">Bejob</a></li>
+<li class="tit-seccion">Fundaci&oacute;n Santillana</li>
+<li><a href="http://www.fundacaosantillana.com.br/" target="_blank" rel="nofollow" title="Brasil">Brasil</a></li>
+<li><a href="http://www.fundacionsantillana.com/" target="_blank" rel="nofollow" title="Espa&ntilde;a">Espa&ntilde;a</a></li>
+<li><a href="http://www.fundacionsantillana.org.co/" target="_blank" rel="nofollow" title="Colombia">Colombia</a></li>
+<li><a href="http://www.periodismocultural.es/" target="_blank" rel="nofollow" title="Seminario Periodismo Cultural">Seminario Periodismo Cultural</a></li>
+<li><a href="http://www.foroindustriasculturales.org/" target="_blank" rel="nofollow" title="Foro de industrias culturales">Foro de industrias culturales</a></li>
+<li><a href="http://www.essayandscience.com" target="_blank" rel="nofollow" title="Essay & Science">Essay & Science</a></li>
+<li><a href="http://www.premiovivalectura.org.ar/" target="_blank" rel="nofollow" title="Premio Viva Lectura">Premio Viva Lectura</a></li>
+<li><a href="http://www.elboomeran.com/" target="_blank" rel="nofollow" title="El Boomeran(g)">El Boomeran(g)</a></li>
+</ul>
+</li>
+<li class="webs-grupo-col">
+<ul>
+<li class="tit-principal">PRISA NOTICIAS</li>
+<li class="encabezado"><a href="http://www.prisa.com/es/info/noticias" target="_blank" rel="nofollow" title="PRISA Noticias">PRISA Noticias</a></li>
+<li class="tit-seccion"><a href="https://elpais.com/" target="_blank" title="EL PA&Iacute;S">EL PA&Iacute;S</a></li>
+<li><a href="https://elpais.com/elpais/portada_america.html?nrd=1" target="_blank" title="EL PA&Iacute;S Am&eacute;rica">EL PA&Iacute;S Am&eacute;rica</a></li>
+<li><a href="https://brasil.elpais.com/?nrd=1" target="_blank" title="EL PA&Iacute;S Brasil">EL PA&Iacute;S Brasil</a></li>
+<li><a href="https://elpais.com/elpais/inenglish.html" target="_blank" title="EL PA&Iacute;S in English">EL PA&Iacute;S in English</a></li>
+<li><a href="https://cat.elpais.com/?nrd=1" target="_blank" title="EL PA&Iacute;S Catalu&ntilde;a">EL PA&Iacute;S Catalu&ntilde;a</a></li>
+<li><a href="http://epv.elpais.com/" target="_blank" title="EL PA&Iacute;S V&iacute;deo">EL PA&Iacute;S V&iacute;deo</a></li>
+<li><a href="https://elpais.com/elpais/blogs.html" target="_blank" title="Blogs EL PA&Iacute;S">Blogs EL PA&Iacute;S</a></li>
+<li><a href="https://elpais.com/cultura/babelia.html" target="_blank" title="Babelia">Babelia</a></li>
+<li><a href="http://elpaissemanal.elpais.com/" target="_blank" title="EL PA&Iacute;S Semanal">EL PA&Iacute;S Semanal</a></li>
+<li><a href="https://elpais.com/elpais/icon.html" target="_blank" title="ICON">ICON</a></li>
+<li><a href="https://elpais.com/elpais/planeta_futuro.html" target="_blank" title="Planeta Futuro">Planeta Futuro</a></li>
+<li><a href="https://elpais.com/elpais/tentaciones.html" target="_blank" title="Tentaciones">Tentaciones</a></li>
+<li><a href="https://verne.elpais.com/" target="_blank" title="Verne">Verne</a></li>
+<li><a href="https://elviajero.elpais.com/" target="_blank" title="El Viajero">El Viajero</a></li>
+<li><a href="http://smoda.elpais.com/" target="_blank" title="S Moda">S Moda</a></li>
+<li><a href="https://elpais.com/elpais/buenavida.html" target="_blank" title="BuenaVida">BuenaVida</a></li>
+<li><a href="https://elcomidista.elpais.com/" target="_blank" title="El Comidista">El Comidista</a></li>
+<li><a href="https://suscripciones.elpais.com/" target="_blank" title="EL PA&Iacute;S +">EL PA&Iacute;S +</a></li>
+<li><a href="http://escuela.elpais.com/" target="_blank" title="Escuela de Periodismo">Escuela de Periodismo</a></li>
+<li><a href="http://estudiantes.elpais.com/" target="_blank" title="EL PA&Iacute;S de los Estudiantes">EL PA&Iacute;S de los Estudiantes</a></li>
+<li><a href="http://librotea.com/" target="_blank" title="Librotea">Librotea</a></li>
+<li class="sep peq"><a href="http://descuentos.elpais.com/" target="_blank" title="Descuentos EL PA&Iacute;S">Descuentos EL PA&Iacute;S</a></li>
+<li class="peq"><a href="http://www.elpaisclubdevinos.com/" target="_blank" title="EL PA&Iacute;S Club de Vinos">EL PA&Iacute;S Club de Vinos</a></li>
+<li class="peq"><a href="http://servicios.elpais.com/clasificados/" target="_blank" title="Clasificados EL PA&Iacute;S">Clasificados EL PA&Iacute;S</a></li>
+<li class="peq"><a href="http://cursos.elpais.com/" target="_blank" title="Directorio de centros">Directorio de centros</a></li>
+<li class="peq"><a href="http://elpaisviajes.com/" target="_blank"  title="EL PA&Iacute;S Viajes">EL PA&Iacute;S Viajes</a></li>
+<li class="peq"><a href="https://seleccion.elpais.com/" target="_blank" title="Selecci&oacute;n EL PA&Iacute;S">Selecci&oacute;n EL PA&Iacute;S</a></li>
+<li class="peq"><a href="https://colecciones.elpais.com/" target="_blank" title="Colecciones EL PA&Iacute;S">Colecciones EL PA&Iacute;S</a></li>
+<li class="tit-seccion"><a href="https://as.com/?nrd=1" target="_blank" rel="nofollow" title="Diario Deportivo AS">AS</a></li>
+<li><a title="AS Chile" href="https://chile.as.com/chile/?nrd=1" target="_blank" rel="nofollow"> AS Chile</a></li>
+<li><a title="AS Colombia" href="https://colombia.as.com/colombia/?nrd=1" target="_blank" rel="nofollow"> AS Colombia</a></li>
+<li><a title="AS M&eacute;xico" href="https://mexico.as.com/mexico/?nrd=1" target="_blank" rel="nofollow"> AS M&eacute;xico</a></li>
+<li><a title="AS USA" href="https://us.as.com/us/?nrd=1" target="_blank" rel="nofollow"> AS USA</a></li>
+<li><a title="AS Am&eacute;rica" href="https://as.com/diarioas/america.html?nrd=1" target="_blank" rel="nofollow">AS Am&eacute;rica</a></li>
+<li><a title="AS English" href="https://en.as.com/en/?nrd=1" target="_blank" rel="nofollow">AS English</a></li>
+<li><a title="Resultados deportivos" href="https://resultados.as.com/resultados/" target="_blank" rel="nofollow">Resultados deportivos</a></li>
+<li><a title="ASTV" href="https://as.com/videos/" target="_blank" rel="nofollow">ASTV</a></li>
+<li><a title="TikiTakas" href="https://as.com/tikitakas/" target="_blank" rel="nofollow">TikiTakas</a></li>
+<li><a title="Epik" href="https://as.com/epik/" target="_blank" rel="nofollow">Epik</a></li>
+<li><a title="BeTech" href="https://as.com/betech/" target="_blank" rel="nofollow">BeTech</a></li>
+<li><a title="Descuentos" href="http://descuentos.as.com/" target="_blank" >AS Descuentos</a></li>
+<li><a title="Megastore" href="https://megastore.as.com/" target="_blank">Megastore</a></li>
+<li><a title="Promociones" href="https://as.com/diarioas/promociones.html" target="_blank" rel="nofollow">Promociones</a></li>
+<li><a title="Concursos" href=" https://as.com/diarioas/concursos.html" target="_blank" rel="nofollow">Concursos</a></li>
+<li><a title="AS Outlet" href="https://as-outlet.es/" target="_blank">AS-outlet</a></li>
+<li class="tit-seccion"><a href="https://cincodias.elpais.com/" target="_blank" title="Diario Econ&oacute;mico">Cinco D&iacute;as</a></li>
+<li><a title="Compa&ntilde;&iacute;as" href="https://cincodias.elpais.com/seccion/companias" target="_blank">Compa&ntilde;&iacute;as</a></li>
+<li><a title="Mercados" href="https://cincodias.elpais.com/seccion/mercados" target="_blank">Mercados</a></li>
+<li><a title="Mi Dinero" href="https://cincodias.elpais.com/seccion/midinero" target="_blank">Mi Dinero</a></li>
+<li><a title="Fortuna" href="https://cincodias.elpais.com/seccion/fortunas" target="_blank">Fortuna</a></li>
+<li><a title="Smartlife" href="https://cincodias.elpais.com/smartlife" target="_blank">Smartlife</a></li>
+<li><a title="Territorio Pyme" href="https://cincodias.elpais.com/territorio_pyme" target="_blank">Territorio Pyme</a></li>
+<li><a title="Cinco Sentidos" href="https://cincodias.elpais.com/seccion/sentidos" target="_blank">Cinco Sentidos</a></li>
+<li><a title="Zona Trading" href="https://cincodias.elpais.com/seccion/zona_trading" target="_blank">Zona Trading</a></li>
+<li class="encabezado subrayado"><a href="http://motor.elpais.com/" target="_blank" title="El Motor">El Motor</a></li>
+<li class="encabezado subrayado"><a href="https://retina.elpais.com/" target="_blank" title="Retina">Retina</a></li>
+<li class="encabezado subrayado"><a href="http://www.huffingtonpost.es/" target="_blank" rel="nofollow" title="Huffington Post">El Huffington Post</a></li>
+<li class="encabezado subrayado"><a href="http://www.meristation.com/" target="_blank" title="MeriStation">MeriStation</a></li>
+<li><a title="MeriStation M&eacute;xico" href="http://www.meristation.com.mx/" target="_blank"> MeriStation M&eacute;xico</a></li>
+</ul>
+</li>
+
+<li class="webs-grupo-col">
+<ul>
+<li class="tit-principal">PRISA RADIO</li>
+<li class="encabezado"><a href="http://www.prisa.com/es/info/radio" target="_blank" rel="nofollow" title="PRISA Radio">PRISA Radio</a></li>
+<li class="tit-seccion">RADIO HABLADA</li>
+<li class="nolink"><a href="http://www.adnradio.cl/" target="_blank" rel="nofollow" title="ADN Radio">ADN Radio</a></li>
+<li class="nolink"><a href="http://cadenaser.com/" target="_blank" rel="nofollow" title="Cadena SER">Cadena SER</a></li>
+<li class="nolink"><a href="http://www.caracol.com.co/" target="_blank" rel="nofollow" title="Caracol Radio (Colombia)">Caracol Radio</a></li>
+<li class="nolink"><a href="http://www.caracol1260.com/" target="_blank" rel="nofollow" title="Caracol 1260 (Miami)">Caracol 1260</a></li>
+<li class="nolink"><a href="http://www.continental.com.ar/" target="_blank" rel="nofollow" title="Radio Continental">Radio Continental</a></li>
+<li class="nolink"><a href="http://www.radiopanama.com.pa/" target="_blank" rel="nofollow" title="Radio Panam&aacute;">Radio Panam&aacute;</a></li>
+<li class="nolink">W Radio</li>
+<li class="sub"><a href="http://www.wradio690.com/" target="_blank" rel="nofollow" title="EE UU">EE UU</a></li>
+<li class="sub"><a href="http://www.wradio.com.co/" target="_blank" rel="nofollow" title="Colombia">Colombia</a></li>
+<li class="sub"><a href="http://www.wradio.com.mx/" target="_blank" rel="nofollow" title="M&eacute;xico">M&eacute;xico</a></li>
+<li class="sub"><a href="http://www.wradio.com.mx/" target="_blank" rel="nofollow" title="Estadio W">Estadio W</a></li>
+<li class="sub"><a href="http://www.wradio.com.pa/" target="_blank" rel="nofollow" title="Panam&aacute;">Panam&aacute;</a></li>
+<li class="tit-seccion">RADIO MUSICAL</li>
+<li class="nolink">LOS40</li>
+<li class="sub"><a href="http://los40.com.ar/" target="_blank" rel="nofollow" title="Argentina">Argentina</a></li>
+<li class="sub"><a href="http://los40.cl/" target="_blank" rel="nofollow" title="Chile">Chile</a></li>
+<li class="sub"><a href="http://los40.com.co/" target="_blank" rel="nofollow" title="Colombia">Colombia</a></li>
+<li class="sub"><a href="http://los40.co.cr/" target="_blank" rel="nofollow" title="Costa Rica">Costa Rica</a></li>
+<li class="sub"><a href="http://www.los40.com.ec/" target="_blank" rel="nofollow" title="Ecuador">Ecuador</a></li>
+<li class="sub"><a href="http://los40.com" target="_blank" rel="nofollow" title="Espa&ntilde;a">Espa&ntilde;a</a></li>
+<li class="sub"><a href="http://www.los40.com.gt/" target="_blank" rel="nofollow" title="Guatemala">Guatemala</a></li>
+<li class="sub"><a href="http://los40.com.mx/" target="_blank" rel="nofollow" title="M&eacute;xico">M&eacute;xico</a></li>
+<li class="sub"><a href="http://los40.com.pa/" target="_blank" rel="nofollow" title="Panam&aacute;">Panam&aacute;</a></li>
+<li class="sub"><a href="http://www.los40.com.py/" target="_blank" rel="nofollow" title="Paraguay">Paraguay</a></li>
+<li class="sub"><a href="http://www.los40.do/" target="_blank" rel="nofollow" title="Rep. Dominicana">Rep. Dominicana</a></li>
+<li class="nolink">B&eacute;same</li>
+<li class="sub"><a href="http://www.besame.fm/" target="_blank" rel="nofollow" title="Colombia">Colombia</a></li>
+<li class="sub"><a href="http://www.besame.co.cr/" target="_blank" rel="nofollow" title="Costa Rica">Costa Rica</a></li>
+<li class="sub"><a href="http://www.besame.com.pa/" target="_blank" rel="nofollow" title="Panam&aacute;">Panam&aacute;</a></li>
+<li class="nolink"><a href="http://www.cadenadial.com/" target="_blank" rel="nofollow" title="Cadena DIAL">Cadena DIAL</a></li>
+<li class="nolink"><a href="http://www.concierto.cl/" target="_blank" rel="nofollow" title="Concierto">Concierto</a></li>
+<li class="nolink"><a href="http://www.corazon.cl/" target="_blank" rel="nofollow" title="Coraz&oacute;n">Coraz&oacute;n</a></li>
+<li class="nolink"><a href="http://fmdos.cl/" target="_blank" rel="nofollow" title="FMDOS">FMDOS</a></li>
+<li class="nolink"><a href="http://www.futuro.cl/" target="_blank" rel="nofollow" title="Futuro">Futuro</a></li>
+<li class="nolink">KeBuena</li>
+<li class="sub"><a href="http://www.kebuena.es/" target="_blank" rel="nofollow" title="Espa&ntilde;a">Espa&ntilde;a</a></li>
+<li class="sub"><a href="http://www.kebuena.com.mx/" target="_blank" rel="nofollow" title="M&eacute;xico">M&eacute;xico</a></li>
+<li class="nolink"><a href="http://www.maxima.fm/" target="_blank" rel="nofollow" title="M&aacute;xima FM">M&aacute;xima FM</a></li>
+<li class="nolink"><a href="http://www.m80radio.com/" target="_blank" rel="nofollow" title="M80 Radio">M80 Radio</a></li>
+<li class="nolink"><a href="http://www.oxigeno.fm/" target="_blank" rel="nofollow" title="Ox&iacute;geno">Ox&iacute;geno</a></li>
+<li class="nolink"><a href="http://www.pudahuel.cl/" target="_blank" rel="nofollow" title="Pudahuel">Pudahuel</a></li>
+<li class="nolink"><a href="http://www.qhuboradio.com/" target="_blank" rel="nofollow" title="Q Hubo">Q Hubo</a></li>
+<li class="nolink"><a href="http://www.radioacktiva.com/" target="_blank" rel="nofollow" title="Radioacktiva (Colombia)">Radioacktiva </a></li>
+<li class="nolink"><a href="http://www.radioactiva.cl/" target="_blank" rel="nofollow" title="Radioactiva (Chile)">Radioactiva </a></li>
+<li class="nolink"><a href="http://www.radioimagina.cl/" target="_blank" rel="nofollow" title="Radio Imagina">Radio Imagina</a></li>
+<li class="nolink"><a href="http://www.radiounochile.cl/" target="_blank" rel="nofollow" title="Radio Uno">Radio Uno</a></li>
+<li class="nolink"><a href="http://www.radiole.com/" target="_blank" rel="nofollow" title="Radiol&eacute;">Radiol&eacute;</a></li>
+<li class="nolink"><a href="http://rockandpop.cl/" target="_blank" rel="nofollow" title="Rock&amp;Pop">Rock&amp;Pop</a></li>
+<li class="nolink"><a href="http://www.tropicanafm.com/" target="_blank" rel="nofollow" title="Tropicana">Tropicana</a></li>
+<li class="nolink"><a href="http://www.lavallenata.com/" target="_blank" rel="nofollow" title="Vallenata">La Vallenata</a></li>
+<li class="tit-seccion">M&Uacute;SICA</li>
+<li class="nolink"><a title="Merchandising On Stage" target="_blank" rel="nofollow" href="http://www.onstage.es/">Merchandising On Stage</a></li>
+<li class="nolink"><a title="Planet Events" target="_blank" rel="nofollow" href="http://www.planetevents.es/">Planet Events</a></li>
+<li class="nolink"><a href="http://www.tyronaeventos.com/" target="_blank" rel="nofollow" title="Tyrona Eventos">Tyrona Eventos</a></li>
+</ul>
+</li>
+
+<li class="webs-grupo-col">
+<ul>
+<li class="tit-principal nolink"><a href="http://www.prisa.com/es/info/audiovisual" target="_blank" rel="nofollow">PRISA Audiovisual</a></li>
+<li class="encabezado"><a href="http://www.mediacapital.pt/ " target="_blank" rel="nofollow" title="MEDIA CAPITAL TV">MEDIA CAPITAL</a></li>
+<li class="tit-seccion">TV</li>
+<li><a href="http://www.tvi.iol.pt/" target="_blank" rel="nofollow" title="TVI">TVI</a></li>
+<li><a href="http://www.tvi24.iol.pt/" target="_blank" rel="nofollow" title="TVI24">TVI24</a></li>
+<li><a href="http://www.tvi.iol.pt/internacional" target="_blank" rel="nofollow" title="TVI Internacional">TVI Internacional</a></li>
+<li><a href="http://www.tvi.iol.pt/tvificcao" target="_blank" rel="nofollow" title="TVI Fic&ccedil;&atilde;o">TVI Fic&ccedil;&atilde;o</a></li>
+<li><a href="http://www.tvi.iol.pt/tvireality" target="_blank" rel="nofollow" title="TVI Reality">TVI Reality</a></li>
+<li><a href="http://www.tvi.iol.pt/tviafrica" target="_blank" rel="nofollow" title="TVI &Aacute;frica">TVI &Aacute;frica</a></li>
+<li><a href="http://tviplayer.iol.pt/" target="_blank" rel="nofollow" title="TVI Player">TVI Player</a></li>
+<li class="tit-seccion dos">PRODUCCI&Oacute;N AUDIOVISUAL</li>
+<li><a href="http://pluralportugal.pt/" target="_blank" rel="nofollow" title="Plural Entertainment">Plural Entertainment</a></li>
+<li class="tit-seccion dos">RADIO</li>
+<li><a href="http://radiocomercial.iol.pt " target="_blank" rel="nofollow" title="Radio Comercial">Radio Comercial</a></li>
+<li><a href="http://m80.iol.pt" target="_blank" rel="nofollow" title="M80">M80</a></li>
+<li><a href="http://www.smoothfm.iol.pt" target="_blank" rel="nofollow" title="SmoothFM">SmoothFM</a></li>
+<li><a href="http://cidade.iol.pt/" target="_blank" rel="nofollow" title="Cidade FM">Cidade FM</a></li>
+<li><a href="http://www.vodafone.fm/ " target="_blank" rel="nofollow" title="Vodafone FM ">Vodafone FM </a></li>
+<li class="tit-seccion dos">DIGITAL</li>
+<li><a href="http://www.iol.pt" target="_blank" rel="nofollow" title="IOL">IOL</a> </li>
+<li><a href="http://www.maisfutebol.iol.pt/" target="_blank" rel="nofollow" title="Maisfutebol">Maisfutebol</a></li>
+<li><a href="http://www.autoportal.iol.pt/" target="_blank" rel="nofollow" title="Autoportal">Autoportal</a></li>
+<li><a href="http://www.iol.pt/blogs" target="_blank" rel="nofollow" title="Blogs">Blogs</a></li>
+<li><a href="http://www.iolnegocios.pt/" target="_blank" rel="nofollow" title="Neg&oacute;cios">Neg&oacute;cios</a></li>
+</ul>
+</li>
+
+<li class="webs-grupo-col ultimo">
+<ul>
+<li class="tit-principal">PRISA</li>
+<li class="encabezado"><a href="http://www.prisa.com/es/" target="_blank" rel="nofollow" title="PRISA Corporativa">PRISA</a></li>
+<li class="encabezado"><a href="http://prisainn.com/" target="_blank" rel="nofollow" title="PRISA INN">PRISA INN</a></li>
+<li class="encabezado"><a href="http://toyoutome.es/" target="_blank" rel="nofollow" title="Blog de tendecias digitales">toyoutome blog</a></li>
+<li class="tit-principal">COMERCIAL Y MARKETING</li>
+<li class="encabezado"><a href="http://www.prisabs.com/" target="_blank" rel="nofollow" title="PRISA Brand Solutions">PRISA Brand Solutions</a></li>
+</ul>
+</li>
+
+</ul>
+
+
+<div class="pc-sombreado">
+<a href="javascript:void(0);" id="cierrame2">cerrar</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+if(typeof window['ampliaFoto'] == 'function'){
+    window['ampliaFoto'] = EP.photo.ampliaFoto;
+}
+
+
+	function quitaYpon(){
+		if(document.getElementById("capa-webs-grupo")){
+			var capa = document.getElementById("capa-webs-grupo");
+			if(capa.className.match(/activado/)){
+				capa.className = capa.className.replace("activado","");
+				return;
+			}else{
+				capa.className = capa.className + " activado";
+				return;
+			}
+		}
+		return;
+	}
+	if(document.getElementById("pbt-medios") && document.getElementById("cierrame") && document.getElementById("cierrame2")){
+		if(document.addEventListener){
+			document.getElementById("pbt-medios").addEventListener("click", quitaYpon, false);
+			document.getElementById("cierrame").addEventListener("click", quitaYpon, false);
+			document.getElementById("cierrame2").addEventListener("click", quitaYpon, false);
+		}else{
+			document.getElementById("pbt-medios").attachEvent("onclick", quitaYpon);
+			document.getElementById("cierrame").attachEvent("onclick", quitaYpon);
+			document.getElementById("cierrame2").attachEvent("onclick", quitaYpon);
+		}
+	}
+
+</script></div>
+</footer>
+</div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"de584669e4","applicationID":"81461901","transactionName":"MwFaYEIDWEZQVEENCQpLbUZZTVRHUERcCElOSxIbGk1SUEFYRxADF0sWHlgWW1k=","queueTime":0,"applicationTime":48,"atts":"H0ZZFgoZS0g=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
