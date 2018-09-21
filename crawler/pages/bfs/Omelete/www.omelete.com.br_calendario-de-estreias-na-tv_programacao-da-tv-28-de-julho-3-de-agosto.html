@@ -1,0 +1,1860 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.ome.lt/static/omelete/css/style.min.css?v=1"/>
+
+  <title>Programação da TV - 28 de julho a 3 de agosto</title>
+  <link rel="preload" href="https://cdn.ome.lt/static/omelete/img/omelete_logo.svg" as="image">
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"licenseKey":"48f7507bbb","beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","queueTime":0,"transactionName":"NlYGMEoAD0UEARZYDA8cIhFWAhVfCgxNRQsAXQsXFhIIQgBMD0QPFVpKElEEFkVLAANCBltQCwpMBA9COgQHRQAJ","applicationID":"135988681","agent":"","applicationTime":145}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="icon" type="image/png" sizes="96x96" href="https://cdn.ome.lt/static/omelete/img/favicon.png">
+
+<!-- Outbrain -->
+<script type="text/javascript" src="https://widgets.outbrain.com/outbrain.js"></script>
+<!-- End of Outbrain -->
+
+  <meta name="description" content="">
+
+  
+
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Omelete">
+  
+  <meta property="fb:pages" content="166251050655700" />
+  
+  
+<meta name="twitter:site" content="@omelete" />
+<meta name="twitter:creator" content="@omelete" />
+<meta name="twitter:url" content="https://www.omelete.com.br/calendario-de-estreias-na-tv/programacao-da-tv-28-de-julho-3-de-agosto" />
+<meta name="twitter:domain" content="https://www.omelete.com.br/" />
+<meta name="twitter:title" content="Programação da TV - 28 de julho a 3 de agosto" />
+<meta name="twitter:description" content="A quarta temporada de The Killing, Sharknado 2, Mad Men na TV Cultura e mais" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://cdn.ome.lt/6oj8tCx9om7LxOWES2T5gBgf604=/1200x630/smart/extras/conteudos/conteudo_89344_12.jpg" />
+<meta property="og:title" content="Programação da TV - 28 de julho a 3 de agosto" />
+<meta property="og:description" content="A quarta temporada de The Killing, Sharknado 2, Mad Men na TV Cultura e mais" />
+<meta property="og:url" content="https://www.omelete.com.br/calendario-de-estreias-na-tv/programacao-da-tv-28-de-julho-3-de-agosto" />
+<meta property="og:image" content="https://cdn.ome.lt/6oj8tCx9om7LxOWES2T5gBgf604=/1200x630/smart/extras/conteudos/conteudo_89344_12.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:type" content="article" />
+<meta property="article:author" content="Ederli Fortunato" />
+<meta property="article:section" content="Séries e TV">
+<meta property="article:published_time" content="2014-07-26 20:54:17+00:00" />
+<meta property="article:modified_time" content="2018-06-29 05:34:31.428000+00:00" />
+
+
+  <script>
+    var allGalleries = {};
+    var contentAlreadyParsed = {};
+  </script>
+  
+
+<!-- TailTarget Tag Manager TT-9804-3/CT-153 -->
+<script>
+  (function(i) {
+  var ts = document.createElement('script');
+  ts.type = 'text/javascript';
+  ts.async = true;
+  ts.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tags.t.tailtarget.com/t3m.js?i=' + i;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ts, s);
+  })('TT-9804-3/CT-153');
+</script>
+<!-- End TailTarget Tag Manager -->
+
+<!-- Global site tag (gtag.js) - AdWords: 1062127218 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1062127218"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){
+    dataLayer.push(arguments);
+  } gtag('js', new Date());
+  gtag('config', 'AW-1062127218');
+</script>
+
+<!-- Inicio da tag TT de segmencatao -->
+<script id="tailtarget" type="text/javascript">
+// <![CDATA[
+var _ttprofiles = _ttprofiles || [];
+_ttprofiles.profiles = [];
+_ttprofiles.push(['_setAccount', 'TT-9804-3']); // _setAccount
+_ttprofiles.push(['_enableServices']);
+document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? "https:" : "http:") + "//d.tailtarget.com/profiles.js'></scr" + "ipt>");
+// ]]>
+</script>
+
+<!-- Final da tag TT de segmentacao -->
+
+  
+  <link rel="canonical" href="https://www.omelete.com.br/calendario-de-estreias-na-tv/programacao-da-tv-28-de-julho-3-de-agosto" />
+  
+  <link rel="amphtml" href="https://www.omelete.com.br/amp/calendario-de-estreias-na-tv/programacao-da-tv-28-de-julho-3-de-agosto">
+  
+  <meta property="fb:article_style" content="default">
+  
+  <script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Article",
+      "name" : "Programação da TV - 28 de julho a 3 de agosto",
+      "author" : {
+        "@type" : "Person",
+        "name" : "Ederli Fortunato"
+      },
+      "datePublished" : "2014-07-26 20:54:17+00:00",
+      "dateModified" : "2018-06-29 05:34:31.428000+00:00",
+      "image" : [
+    
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/BLh6yurByXQYSdwRF9im7nYbiCc=/837x0/smart/uploads/conteudo/fotos/Sharknado-2.jpg",
+          "caption" : "Syfy Brasil, 31/7, 20h"
+        }
+      
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/4z60-RxdT3XqyqZXbTe3nEkD9jg=/837x0/smart/uploads/conteudo/fotos/RIPD___.jpg",
+          "caption" : "Telecine Premium, 1/8, 22h"
+        }
+      
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/h6YUEjoy1bv0ysLQQsgTZF4SdZw=/837x0/smart/uploads/conteudo/fotos/Under-the-Dome____.jpg",
+          "caption" : "TNT, 28/7, 22h30"
+        }
+      
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/iJj-De5KaY9iKF6aKDhtK_0rpH0=/837x0/smart/uploads/conteudo/fotos/Mad-Men__________.jpg",
+          "caption" : "TV Cultura, 2/8, 1h"
+        }
+      
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/XjzmpeRcpGltrYEvyxY_RMFqHdY=/837x0/smart/uploads/conteudo/fotos/Universidade-Monstros__.jpg",
+          "caption" : "Telecine Premium, 2/8, 22h"
+        }
+      
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/jZKU99R_Sa4q9eV9iGcMoI81Nxc=/837x0/smart/uploads/conteudo/fotos/Killing.jpg",
+          "caption" : "Netflix, 1/8 "
+        }
+      
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/Mx4hS25SK5E3Juc-tf_S1ZoTUt4=/837x0/smart/uploads/conteudo/fotos/Rookie-Blue__.jpg",
+          "caption" : "Universal, 2/8, 19h "
+        }
+      
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/3fd5PWYdsNvIQqGUS_cw59zLBYw=/837x0/smart/uploads/conteudo/fotos/Ta-Chovendo-Hamburguer-2_.jpg",
+          "caption" : "HBO, 2/8, 22h"
+        }
+      
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/xbiMRS7NO-M4teV5w91MbLDqYxA=/837x0/smart/uploads/conteudo/fotos/Unforgettable.jpg",
+          "caption" : "AXN, 31/7, 22h "
+        }
+      ] ,
+      "video" : [] ,
+      "articleSection" : "Séries e TV",
+      "headline" : "Programação da TV - 28 de julho a 3 de agosto",
+      "publisher" : {
+    "@type": "Organization",
+    "name": "Omelete",
+    "url": "https://www.omelete.com.br",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://cdn.ome.lt/static/omelete/img/omelete_logo.svg"
+    },
+    "sameAs": [
+      "https://www.youtube.com/user/omeleteve",
+      "https://www.facebook.com/SiteOmelete/",
+      "https://twitter.com/omelete",
+      "https://www.instagram.com/omelete/"
+    ]
+  }
+
+    }
+  
+  </script>
+
+
+
+</head>
+
+<body>
+
+
+<header class="header">
+
+<div class="container container--venom">
+    <div class="row header__wrapper">
+      <div class="col-4 d-md-none">
+        <div class="header__wrapper__menu">
+          <button class="btn-menu">
+            <span class="btn-menu__line"></span>
+            <span class="btn-menu__line"></span>
+            <span class="btn-menu__line"></span>
+          </button>
+          </button>
+        </div>
+      </div>
+      <div class="col-16 col-md-20 col-lg-18 col-xl-20">
+        <div class="header__wrapper__logo">
+          <div class="logo" style="visibility: hidden;">
+            <a href="/">
+              
+                <img class="logo__img" src="https://cdn.ome.lt/static/omelete/img/omelete_logo.svg" alt="Omelete">
+              
+            </a>
+          </div>          
+
+          <div class="links links--category links--mobile">
+            
+            
+            <ul class="links__list links__list--underline">
+              <li class="links__list__item d-block d-md-none"><a href="/">HOME</a></li>
+              <li class="links__list__item"><a href="/filmes">FILMES</a></li>
+              <li class="links__list__item"><a href="/series-tv">SÉRIES e TV</a></li>
+              <li class="links__list__item"><a href="/quadrinhos">HQs e LIVROS</a></li>
+              <li class="links__list__item"><a href="/musica">MÚSICA</a></li>
+              <li class="links__list__item"><a href="/videos">VÍDEOS</a></li>
+              <li class="links__list__item links__list__item--special"><a href="https://store.omelete.com.br/?utm_source=site_omelete&utm_medium=link&utm_campaign=link_site_omelete" target="_blank">OMELETE STORE</a></li>
+            </ul>
+
+            <div class="links--mobile__social">
+                <div class="links links--social">
+  <ul class="links__list links__list--icon">
+    <li class="links__list__item"><a class="icon-facebook" href="https://www.facebook.com/SiteOmelete/" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-instagram" href="https://www.instagram.com/omelete/" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-twitter" href="https://twitter.com/omelete" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-youtube-play" href="https://www.youtube.com/user/omeleteve" target="_blank"></a></li>
+  </ul>
+</div>
+            </div>
+
+            <div class="links__overlay"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 col-md-4 col-lg-6 col-xl-4">
+        <div class="header__wrapper__search">
+          <div class="search search--open">
+            <i class="icon icon-search"></i>
+            <div class="search__input">
+            </div>
+          </div>
+
+          <div class="separator d-none d-md-block"></div>
+
+          <div class="social  d-none d-md-block">
+              <div class="links links--social">
+  <ul class="links__list links__list--icon">
+    <li class="links__list__item"><a class="icon-facebook" href="https://www.facebook.com/SiteOmelete/" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-instagram" href="https://www.instagram.com/omelete/" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-twitter" href="https://twitter.com/omelete" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-youtube-play" href="https://www.youtube.com/user/omeleteve" target="_blank"></a></li>
+  </ul>
+</div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="logo-venom">
+      <iframe src="https://cdn.ome.lt/static/omelete/specials/venom/logo-venom.html">
+      </iframe>
+      <div class="logo-venom__clickable"></div>
+    </div>
+</div>
+ 
+</header>
+
+<main class="page page--content">
+  <div class="main">
+    
+    
+  
+
+  
+    
+    <div class="banner banner--mast-head  ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-superior" ></div>
+      </div>
+    </div>
+    
+  
+
+    
+
+    
+
+
+
+
+<section class="section section--content section--main" data-dsq-domain="omelete.com.br" data-ref-id="89344" data-content-url="/calendario-de-estreias-na-tv/programacao-da-tv-28-de-julho-3-de-agosto" data-content-type="news">
+  
+  
+  <script type="text/javascript">
+    window._seedtagq = window._seedtagq || [];
+    window._seedtagq.push(['_setId', '0546-2759-01']);
+    (function () {
+      var st = document.createElement('script');
+      st.type = 'text/javascript';
+      st.async = true;
+      st.src = ('https:' == document.location.protocol
+        ? 'https'
+        : 'http') + '://config.seedtag.com/loader.js?v=' + Math.random();
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(st, s);
+    })();
+  </script>
+  
+  
+
+  
+  
+
+  
+
+  
+
+  <div class="container section__wrapper">
+    <div class="row">
+      <div class="col-24">
+        <article class="article">
+          
+          
+          <div class="row article__cover">
+            <div class="offset-0 offset-sm-2 col-24 col-sm-20">
+              <div class="article__cover__wrapper article__cover__wrapper--image">
+                
+                <img class="article__cover__image" data-lazy-src="//cdn.ome.lt/L_A7KOxE7s_rj7quFQD1jQDS3oY=/987x0/smart/uploads/conteudo/fotos/Sharknado-2.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Programação da TV - 28 de julho a 3 de agosto" title="None">
+                
+                <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+              </div>
+              
+            </div>
+          </div>
+          
+          
+
+          
+          <div class="row article__header">
+            <div class="offset-0 offset-sm-2 col-24 col-sm-20 no-relative">
+              
+
+
+
+
+
+  <div class="article__header__tag">
+    
+<div class="tag tag--series-tv">
+  <p>Séries e TV</p>
+  <div class="tag__label">
+     <span>Notícia</span> 
+    
+  </div>
+  <div class="tag__time"></div>
+</div>
+
+  </div>
+  <div class="article__header__title">
+    <h1 class="title">Programação da TV - 28 de julho a 3 de agosto</h1>
+  </div>
+  <div class="article__header__subtitle">
+    <h2 class="subtitle">A quarta temporada de The Killing, Sharknado 2, Mad Men na TV Cultura e mais</h2>
+  </div>
+  <div class="article__header__social">
+    <div class="links links--social">
+    <ul class="links__list links__list--icon links__list--column links__list--circle">
+      
+      <li class="links__list__item"><a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//omelete.com.br/calendario-de-estreias-na-tv/programacao-da-tv-28-de-julho-3-de-agosto"></a></li>
+      <li class="links__list__item"><a class="icon icon-twitter" target="_blank" href="https://twitter.com/intent/tweet?text=Programa%C3%A7%C3%A3o%20da%20TV%20-%2028%20de%20julho%20a%203%20de%20agosto https%3A//omelete.com.br/calendario-de-estreias-na-tv/programacao-da-tv-28-de-julho-3-de-agosto"></a></li>
+      <li class="links__list__item"><a class="icon icon-email" target="_blank" href="mailto:?subject=Programa%C3%A7%C3%A3o%20da%20TV%20-%2028%20de%20julho%20a%203%20de%20agosto&body=https%3A//omelete.com.br/calendario-de-estreias-na-tv/programacao-da-tv-28-de-julho-3-de-agosto"></a></li>
+      <li class="links__list__item"><a class="icon icon-whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=Programa%C3%A7%C3%A3o%20da%20TV%20-%2028%20de%20julho%20a%203%20de%20agosto https%3A//omelete.com.br/calendario-de-estreias-na-tv/programacao-da-tv-28-de-julho-3-de-agosto"></a></li>
+    </ul>
+  </div>
+  </div>
+  <div class="article__header__info">
+    <div class="info">
+      <div class="info__by">Ederli Fortunato</div>
+
+      
+      
+      
+
+      <div class="info__date">26.07.2014</div>
+      <div class="info__time">17h54</div>
+
+      
+      <div class="d-none d-md-block">Atualizada em </div>
+      <div class="d-none d-md-block">29.06.2018</div>
+      <div class="d-none d-md-block">02h34</div>
+      <div class="d-block d-md-none">Atualizada em 29.06.2018 às 02h34</div>
+        
+    </div>
+
+    
+  </div>
+
+            </div>
+          </div>
+          
+
+          
+          <div class="row ">
+            <div class="offset-0 col-24 offset-md-2 col-md-20 col-lg-12 col-xl-13">
+              
+
+
+
+
+
+
+
+
+
+
+
+<div class="article__body article--content">
+  
+    
+      
+
+
+    <div class="media media--full media--news" data-list-index="1" data-width="" data-height="">
+      <div class="media__wrapper">
+
+        
+        <h3 class="media__wrapper__title">Unforgettable</h3>
+        
+
+        
+
+        
+        <div class="media__wrapper__image ">
+            <img data-lazy-src="//cdn.ome.lt/utqR9CzARC3M03d8oPafHKacquA=/fit-in/837x500/smart/uploads/conteudo/fotos/Unforgettable.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="None">
+            <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+        </div>
+        
+
+        
+          
+          <div class="media__wrapper__bottom">
+            
+            <div class="media__wrapper__description">AXN, 31/7, 22h </div>
+            
+            
+          </div>
+          
+        
+
+      </div>
+    </div>
+
+      
+
+
+
+      
+    
+      
+
+
+    <div class="media media--full media--news" data-list-index="2" data-width="" data-height="">
+      <div class="media__wrapper">
+
+        
+        <h3 class="media__wrapper__title">Tá Chovendo Hamburguer</h3>
+        
+
+        
+
+        
+        <div class="media__wrapper__image ">
+            <img data-lazy-src="//cdn.ome.lt/bKfZofPjZvxeU03x5rbTdtUj5i8=/fit-in/837x500/smart/uploads/conteudo/fotos/Ta-Chovendo-Hamburguer-2_.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="None">
+            <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+        </div>
+        
+
+        
+          
+          <div class="media__wrapper__bottom">
+            
+            <div class="media__wrapper__description">HBO, 2/8, 22h</div>
+            
+            
+          </div>
+          
+        
+
+      </div>
+    </div>
+
+      
+
+
+
+      
+    
+      
+
+
+    <div class="media media--full media--news" data-list-index="3" data-width="" data-height="">
+      <div class="media__wrapper">
+
+        
+        <h3 class="media__wrapper__title">Rookie Blue</h3>
+        
+
+        
+
+        
+        <div class="media__wrapper__image ">
+            <img data-lazy-src="//cdn.ome.lt/UajFIG-C7bTbptonlabS8wCRflU=/fit-in/837x500/smart/uploads/conteudo/fotos/Rookie-Blue__.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="None">
+            <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+        </div>
+        
+
+        
+          
+          <div class="media__wrapper__bottom">
+            
+            <div class="media__wrapper__description">Universal, 2/8, 19h </div>
+            
+            
+          </div>
+          
+        
+
+      </div>
+    </div>
+
+      
+
+
+
+      
+    
+      
+
+
+    <div class="media media--full media--news" data-list-index="4" data-width="" data-height="">
+      <div class="media__wrapper">
+
+        
+        <h3 class="media__wrapper__title">The Killing</h3>
+        
+
+        
+
+        
+        <div class="media__wrapper__image ">
+            <img data-lazy-src="//cdn.ome.lt/rbLVSCMQmhp6k_uOGxyCx7jqp0A=/fit-in/837x500/smart/uploads/conteudo/fotos/Killing.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="None">
+            <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+        </div>
+        
+
+        
+          
+          <div class="media__wrapper__bottom">
+            
+            <div class="media__wrapper__description">Netflix, 1/8 </div>
+            
+            
+          </div>
+          
+        
+
+      </div>
+    </div>
+
+      
+
+
+
+      
+    
+      
+
+
+    <div class="media media--full media--news" data-list-index="5" data-width="" data-height="">
+      <div class="media__wrapper">
+
+        
+        <h3 class="media__wrapper__title">Universidade Monstros</h3>
+        
+
+        
+
+        
+        <div class="media__wrapper__image ">
+            <img data-lazy-src="//cdn.ome.lt/IF7tLPcloVfqQIBk8_LE9_2JorE=/fit-in/837x500/smart/uploads/conteudo/fotos/Universidade-Monstros__.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="None">
+            <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+        </div>
+        
+
+        
+          
+          <div class="media__wrapper__bottom">
+            
+            <div class="media__wrapper__description">Telecine Premium, 2/8, 22h</div>
+            
+            
+          </div>
+          
+        
+
+      </div>
+    </div>
+
+      
+
+
+
+      
+    
+      
+
+
+    <div class="media media--full media--news" data-list-index="6" data-width="" data-height="">
+      <div class="media__wrapper">
+
+        
+        <h3 class="media__wrapper__title">Mad Men</h3>
+        
+
+        
+
+        
+        <div class="media__wrapper__image ">
+            <img data-lazy-src="//cdn.ome.lt/i_d5w-LsVcqUMXqV9YO67WI91Ug=/fit-in/837x500/smart/uploads/conteudo/fotos/Mad-Men__________.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="None">
+            <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+        </div>
+        
+
+        
+          
+          <div class="media__wrapper__bottom">
+            
+            <div class="media__wrapper__description">TV Cultura, 2/8, 1h</div>
+            
+            
+          </div>
+          
+        
+
+      </div>
+    </div>
+
+      
+
+
+
+      
+    
+      
+
+
+    <div class="media media--full media--news" data-list-index="7" data-width="" data-height="">
+      <div class="media__wrapper">
+
+        
+        <h3 class="media__wrapper__title">Under the Dome</h3>
+        
+
+        
+
+        
+        <div class="media__wrapper__image ">
+            <img data-lazy-src="//cdn.ome.lt/XyXgQjgRWEH_u4b0EMsJvIfXwUQ=/fit-in/837x500/smart/uploads/conteudo/fotos/Under-the-Dome____.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="None">
+            <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+        </div>
+        
+
+        
+          
+          <div class="media__wrapper__bottom">
+            
+            <div class="media__wrapper__description">TNT, 28/7, 22h30</div>
+            
+            
+          </div>
+          
+        
+
+      </div>
+    </div>
+
+      
+
+
+
+      
+    
+      
+
+
+    <div class="media media--full media--news" data-list-index="8" data-width="" data-height="">
+      <div class="media__wrapper">
+
+        
+        <h3 class="media__wrapper__title">RIPD Agentes do Alem</h3>
+        
+
+        
+
+        
+        <div class="media__wrapper__image ">
+            <img data-lazy-src="//cdn.ome.lt/1BxYYepfOSa5T-TvJoXOWTEEnZg=/fit-in/837x500/smart/uploads/conteudo/fotos/RIPD___.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="None">
+            <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+        </div>
+        
+
+        
+          
+          <div class="media__wrapper__bottom">
+            
+            <div class="media__wrapper__description">Telecine Premium, 1/8, 22h</div>
+            
+            
+          </div>
+          
+        
+
+      </div>
+    </div>
+
+      
+
+
+
+      
+    
+      <p>Conheça os destaques da programação da TV entre 28 de julho e 3 de agosto:</p>
+      
+
+
+
+      
+    
+      <div class="progtvnav">
+<ul>
+<li><a href="#especiais">Especiais</a></li>
+<li><a href="#filmes">Filmes</a></li>
+<li><a href="#infantojuvenil">Infanto-Juvenil</a></li>
+<li><a href="#series">Séries</a></li>
+<li><a href="#entrevistas">Entrevistas</a></li>
+</ul>
+</div>
+      
+
+
+
+      
+    
+      <h2><a name="especiais"></a> <strong><span style="color: #cc0000;">Especiais</span></strong></h2>
+      
+
+
+
+      
+    
+      <p><strong><em>Música Libre - República Dominicana</em>:</strong> O documentário sobre os gêneros musicais do país como o merengue, que saiu da República Dominicana e conquistou outros mercados. O objetivo é também mostrar a conexão de ritmos como bachata e atabales com a África e a importância cultural da música.<br/> Curta!, 28/7, 20h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Guerras Mundiais</em>:</strong> Minissérie com seis horas de duração e estreia simultânea em toda a América Latina. Indicada ao Emmy 2014 na categoria Melhor Documentário ou Série de Não-Ficção, a minissérie mostra os eventos de três décadas narrados a partir do ponto de vista de homens que se transformaram em líderes da Segunda Guerra Mundial. O ponto de partida é a Primeira Guerra Mundial, mostrando onde estavam Roosevelt, Hitler, Mussolini, Churchill, De Gaulle, Tojo, MacArthur, Patton e Stálin durante o conflito e de que forma os eventos da Guerra de 1914 a 1918 influenciou e definiu o destino de cada um. A ideia é inovar em um assunto bastante explorado em documentários e também na ficção, mostrando como esses jovens sobreviveram e como o tratado que encerrou a Primeira Guerra criou as condições necessárias para o surgimento de Hitler e Mussolini, bem como para uma nova guerra de grandes proporções. Para contar a história, reconstituições e depoimentos de pessoas como o ex-Primeiro-Ministro italiano Mario Monti, o ex-Primeiro-Ministro britânico John Major, e o general Colin Powell , entre outros.<br/> History, 28 a 30/7, 22h (Maratorna, 2/8, 18h15)</p>
+      
+
+
+
+      
+    
+      <p><strong><em>O Caminho dos Heróis</em>:</strong> Documentário dirigido por João Barone, que vai à Europa e mostra os locais onde os pracinhas brasileiros estiveram em combate na Itália. Grande conhecedor do assunto, o músico do Paralamas do Sucesso e autor dos livros <em>1942 - O Brasil e Sua Guerra quase desconhecida</em> e <em>A Minha Segunda Guerra</em>, além de produtor do documentário <em>Um Brasileiro no Dia D</em>, levou dois jipes da FEB - Força Expedicionária Brasileira para uma visita a quinze cidades para relembrar as histórias de homens que moravam nas cidades libertadas pelos brasileiros, soldados feridos que fugiram do hospital para voltar ao combate e outros que enfrentaram o momento com bravura e coragem. O documentário também lembra que os envolvidos eram homens comuns, que seguiam com a vida e empregos também comuns até serem convocados e se transformarem em soldados.<br/> History, 31/7, 23h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>II Guerra Mundial - Filmes Perdidos</em>:</strong> Especial com duas horas de duração com cenas inéditas que mostram a ação de uma Divisão da Força Aérea dos Estados Unidos e narração de veteranos.<br/> BIO, 28/7, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Controladores da Mente</em>:</strong> Nova série em que quatro especialistas mostram como é possível influenciar qualquer pessoa.  Pressão social, noções de conformidade e obediência, além de ilusionismo e hipnose são usados para fazer um homem perder a força, um rapaz esquecer a noiva e testemunhar contra um inocente.<br/> Discovery, 28/7, 22h20</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Macklemore &amp; Ryan Lewis - The Ride</em>: </strong>A nova série do canal busca depoimentos de artistas sobre o instante que transformou suas vidas. No primeiro programa, o duo de hip-hop Macklemore &amp; Ryan Lewis relembram como se conheceram, falam sobre o sucesso de "Thrift Shop" e problemas pessoais.<br/> MTV, 29/7, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>O Titanic Nazista</em>: </strong>Durante a Segunda Guerra Mundial, o ministro da propaganda nazista, Joseph Goebbels, decidiu fazer um filme baseado no naufrágio do Titanic. O objetivo, como em todo governo totalitário, era mostrar a força do país e do regime, mas o projeto acabou sendo motivo de discórdia com o diretor Helbert Selpin, que foi preso e morto pela Gestapo.<br/> BIO, 29/7, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Leonardo em Vinci</em>:</strong> Documentário que busca mostrar o gênio criativo de Da Vinci em suas diversas obras e trabalho mecânicos. O programa também mostra de perto obras como <em>A Adoração dos Magos</em> e <em>A Última Ceia</em>, e revela como os sinais do tempo enriquecem os trabalhos de Da Vinci.<br/> TV Cultura, 29, 0h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em>A Arte da Guerra</em>:</strong> General, estrategista e filósofo, Sun Tzu é o autor do livro <em>A Arte da Guerra</em>, que se tornou volume de cabeceira de executivos por toda a parte. Além da filosofia, o especial mostra ainda os detalhes do livro como ilustração aos ensinamentos do general.<br/> BIO, 31/7, 20h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Hollywood on Set</em>:</strong> Os bastidores de <em>Tammy</em>, a nova comédia com Melissa McCarthy sobre uma mulher que faz uma viagem com a mãe após uma desilusão amorosa. Em seguida, as filmagens de <em>Livrai-nos do Mal</em>, sobre um policial que investiga casos incomuns ligados a um religioso especialista em exorcismo, história baseada no livro de um policial que garante ter vivido tudo isso. E para terminar, <em>Amante a Domicílio</em>, com Woody Allen interpretando um homem em dificuldades financeiras que convence seu amigo a tornar-se um gigolô.<br/> MGM 31/7, 21h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em>A Fuga de Hitler</em>: </strong>O documentário volta às histórias de que Hitler teria sobrevivido aos últimos dias da guerra e se refugiado na Patagônia. A investigação segue o caminho dessa suposta viagem, incluindo uma visita à base de submarinos alemã de onde o líder nazista teria fugido, e entrevista testemunhas que dizem que Hitler viveu na Argentina até sua morte vários anos após o fim da Segunda Guerra Mundial.<br/> BIO, 30/7, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Entrelinhas</em>:</strong> O programa faz uma visita à livraria Shakespeare and Company, em Paris. Fundada por Sylvia Beach , a livraria tornou-se ponto de encontro para grandes escritores, além de espaço para saraus e lançamentos. Na mesma noite, a poesia de Alice Ruiz e a carreira do dramaturgo Manoel Carlos Karam.<br/> TV Cultura, 30/7, 23h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em>República do Stand-Up</em>:</strong> Estreia da segunda temporada do programa que exibe humoristas de todo o país. Ao todo, 34 profissionais foram reunidos em três dias de gravação para criar um grande espetáculo de humor em piadas sobre relacionamentos, cotidiano e também preconceito.<br/> Comedy Central, 30/7, 23h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Continente Nazi</em>: </strong>Refúgio de muitos nazistas após a Segunda Guerra Mundial, a América Latina teve também papel importante na ascensão e expansão do nazismo. O documentário inédito mostra que mesmo antes de invadir a Polônia, ação que deu início à Segunda Guerra, Hitler tinha os países do nosso continente inseridos em seus planos e refaz os passos de líderes nazistas em países como México, Argentina, Colômbia e Brasil.<br/> History, 1/8, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Terceiro Reich - A Ascenção e Terceiro Reich - A Queda</em>:</strong> Especial em duas partes que explica o surgimento do nazismo e investiga fatos pouco conhecidos sobre as pessoas que integravam o regime. Um governo totalitário que mergulhou o mundo em quatro anos de guerra, mas também recuperou economicamente a Alemanha destruída pela Primeira Guerra Mundial e merece análise.<br/> BIO, 2/8, 20h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Desafios Mentais</em>:</strong> Um engenheiro sai do laboratório e realiza experimentos para provar que o mundo real tem maravilhas mais interessantes que qualquer truque. Vale o desafio.<br/> Nat Geo, 2/8, 20h45</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Hugh Laurie: Let Them Talk</em>: </strong>Em uma viagem à Nova Orleans, Laurie mostra o lado musical de sua carreira com músicas do álbum <em>Let Them Talk</em>, gravado em parceria com Allen Toussaint, Irma Thomas e Tom Jones.<br/> Film&amp;Arts, 2/8, 21h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Breaking Ponte</em>:</strong> O documentário abre os bastidores do Ballet West de Salt Lake City, mostrando tanto a beleza e graça que vai ao palco quanto as exigências físicas e psicológicas de uma carreira na dança. Outro lado também pouco explorado vai para diante das câmeras, a competitividade e os ciúmes entre os bailarinos.<br/> Film&amp;Arts, 3/8, 19h</p>
+      
+
+
+
+      
+    
+      <h2><a name="filmes"></a> <strong><span style="color: #cc0000;">Filmes</span></strong></h2>
+      
+
+
+
+      
+    
+      <p><strong><em>Parque dos Dinossauros</em>:</strong> Os dois primeiros filmes da franquia dos dinossauros exibidos na sequência para encerrar a segunda brava:</p>
+      
+
+
+
+      
+    
+      <p style="padding-left: 30px;">17h30 - <em><strong>Jurassic Park: Parque dos Dinossauros</strong></em><strong></strong><br/> 19h45 - <em><strong>O Mundo Perdido: Jurassic Park</strong></em><strong></strong></p>
+      
+
+
+
+      
+    
+      <p style="padding-left: 30px;">Universal, 28/7</p>
+      
+
+
+
+      
+    
+      <p><strong><em>A Onda</em>:</strong> Um professor é incumbido de ensinar sobre autocracia em um curso no ensino médio e percebe que os alunos não acreditam que seria possível existir um regime totalitário hoje na Alemanha. Ele resolve, então, fazer um exercício para explicar na prática como é possível manipular um grupo que sente a necessidade de uma liderança forte. Antes da exibição do filme, os apresentadores da Mostra Internacional de Cinema na Cultura conversam com o professor de história e sociólogo Marcos Horácio Gomes Dias.<br/> TV Cultura, 28/7, 0h30</p>
+      
+
+
+
+      
+    
+      <p><strong>Programa Duplo <em>Transformers</em>: </strong>Para quem quer ir para a cama com o som de explosões e o estilo Michael Bay de resolver problemas usando explosivos, dois filmes da franquia na sequência.</p>
+      
+
+
+
+      
+    
+      <p style="padding-left: 30px;">19h20 - <em><strong><a href="https://omelete.com.br/cinema/critica-transformers-2-a-vinganca-dos-derrotados/">Transformers - A Vingança dos Derrotados</a></strong></em><br/> 22h - <em><strong><a href="https://omelete.com.br/cinema/transformers-3-o-lado-oculto-da-lua-critica/">Transformers - O Lado Oculto da Lua</a></strong></em></p>
+      
+
+
+
+      
+    
+      <p style="padding-left: 30px;">Telecine Action, 29/7</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/cinema/critica-o-pequeno-nicolau/">O Pequeno Nicolau</a></em>:</strong> Produção franco-bela ambientada nos anos 50. Nicolau é um garoto com uma vida tranquila com os pais e os amigos. Até o dia em que ouve escondido uma conversa da mãe e acredita que ela está grávida e pior, que vai ser abandonado quando o bebê nascer.<br/> Telecine Cult HD, 30/7, 18h25</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/cinema/io-amor-custa-caroi/">O Amor Custa Caro</a></em>:</strong> Um advogado especializado em divórcios encontra uma adversária à altura de sua astúcia, uma especialista em obter pensões de ex-maridos. Para complicar, ele se apaixona por ela.<br/> MGM, 30/7, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Sharknado 2:</em></strong> <em><strong>A Segunda Onda</strong></em><strong>: </strong>Depois do ataque a Los Angeles, chega a hora de atacar Nova York com um tornado de tubarões no filme que teve o título decidido em um concurso promovido no Twitter.<br/> Syfy, 31/7, 20h</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/cinema/o-menino-do-pijama-listrado/">O Menino do Pijama Listrado</a></em>: </strong>Bruno é filho de um oficial nazista que assume um posto no interior da Alemanha nos anos 40. A família segue junto e Bruno descobre em um de seus passeios um menino que está sempre vestido de pijama listrado do outro lado de uma cerca eletrificada.<br/> Telecine Cult e Cult HD, 31/7, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/ripd/cinema/ripd-agentes-do-alem-critica/">R.I.P.D. - Agentes do Além</a></em>:</strong> Baseado nos quadrinhos, o filme segue a linha de <em>Homens de Preto</em>, mostrando o trabalho de agentes que cuidam da nossa realidade sem que saibamos. Só que o alvo aqui é a vida após a morte, com Jeff Bridges como o agente experiente e Ryan Reynolds como o novato.<br/> Telecine Premium, 1/8, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Tubarão</em>:</strong> Um grande tubarão branco ameaça uma praia e o chefe de polícia entra em choque com as autoridades, que temem afastar os turistas. Música inesquecível, sustos e um tubarão que nas filmagens ganhou o nome de Bruce.<br/> Telecine Cult e Cult HD, 1/8, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/cinema/critica-querido-john/">Querido John</a></em>: </strong>Channing Tatum é um militar em licença que conhece uma garota. Os dois se apaixonam e vivem um romance à distância enquanto ele segue em missões do exército. Baseado em um livro de Nicholas Sparks, o que significa que os fãs do escritor adoram a história super romântica.<br/> Megapix, 1/8, 22h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/ta-chovendo-hamburguer-2/cinema/ta-chovendo-hamburguer-2-critica/">Tá Chovendo Hambúrguer 2</a></em>:</strong> Depois de ser obrigado a abandonar Boca Grande, Flint e seus amigos junta-se à The Live Corp Company. Mas quando descobre que sua maquia de fazer comida ainda está ativa e agora cria comidas mutantes, é hora de volta e salvar o mundo.<br/> HBO, 2/8, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/monsters-university-monstros-sa-2/cinema/universidade-monstros-critica/">Universidade Monstros</a></em>:</strong> O filme volta para o passado de Sulley e Mike, mostrando como os dois se conheceram na Universidade. Ao contrário da amizade do primeiro filme, a nova história mostra um Sulley metido e Mike como o garoto estudioso.<br/> Telecine Premium, 2/8, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/cinema/critica-2012/">2012</a></em>:</strong> Filme desastre sobre as profecias que falavam que o mundo iria acabar em 2012, com muitos efeitos especiais envolvendo cidades em todo o mundo.<br/> Fox, 3/8, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Lore</em>:</strong> Em uma semana com muita programação sobre a Primeira e a Segunda Guerra Mundiais, o destaque vai para o filme que mostra o outro lado. Aqui, três irmãos caem na estrada quando a Alemanha é invadida pelos Aliados, já que seus pais são simpatizantes do nazismo, e acabam encontrando ajuda em um refugiado de um campo de concentração.<br/> Max, 3/8, 22h</p>
+      
+
+
+
+      
+    
+      <h2><a name="infantojuvenil"></a> <strong><span style="color: #cc0000;">Infanto-Juvenil</span></strong></h2>
+      
+
+
+
+      
+    
+      <p><strong><em>Winx</em>:</strong> Estreia do sexto ano, quando as Winx resgatam as fadas alunas de Tir Nan Org e provam que são dignas de receber as varinhas mágicas.<br/> Nickelodeon, 2/8, 7h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Experimentos Extraordinários</em>:</strong> Estreia da série em que Iberê Thenório, do canal Manual do Mundo no You Tube, que mostra os bastidores de um programa sobre experimentos. Cada episódio mostra a reunião de pauta que vai definir o tema do dia, mostra o experimento final, que pode ser uma catapulta para lançar balões de água ou foguetes movidos a vinagre, e que pode ou não dar certo, e confusões nos bastidores.<br/> Cartoon Network, 2/8, 11h30</p>
+      
+
+
+
+      
+    
+      <h2><a name="series"></a> <strong><span style="color: #cc0000;">Séries</span></strong></h2>
+      
+
+
+
+      
+    
+      <p><strong>Séries Globosat: </strong>As temporadas completas das séries nacionais <em>Questão de Família, As Canalhas e Paulo Gustavo na Estrada</em>, e da alemã <em>The Last Cop - O Último Policial</em>, estão disponíveis no Globosat Play.</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Beauty and the Beast</em>:</strong> Maratona para marcar o final da segunda temporada com três episódios. Logo em seguida, serão exibidos "Cat and Mouse", "Cold Case" e "Ever After", que encerram o segundo, lembrando que a série foi renovada para a terceira temporada.<br/> Universal, 28/7, 14h45</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/under-dome/">Under the Dome</a></em>: </strong>Após estabelecer a situação e apresentar os personagens, agora é hora de começar a revelar segredos com a estreia da segunda temporada da série. Os novos episódios prometem também a morte de duas pessoas, começando a história um ano após o surgimento do domo.<br/> TNT, 28/7, 22h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Chicago P.D.</em>:</strong> Maratona com três episódios para quem perdeu a sequência.<br/> Universal, 29/7, 14h45</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Collision</em>:</strong> Final da minissérie inglesa que começa com um acidente de trânsito e suas consequências para os envolvidos. No final, o detetive Tolin fecha o caso com um depoimento chocante e a descoberta de um filme amador.<br/> Film&amp;Arts, 30/7, 20h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Unforgettable</em>:</strong> Estreia da terceira temporada com a agente que se lembra de absolutamente tudo. A única coisa que Carrie esqueceu é como e quem matou sua irmã.<br/> AXN, 31/7, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/bates-motel/">Bates Motel</a></em>:</strong> Em "Shadow of a Doubt", Norman pressiona Bradley para saber por que ela está fugindo e ela confessa ter cometido um crime. Enquanto isso, Norma conversa com uma médica sobre os apagões que seu filho tem tido, mas ela mente e diz que a pessoa com problemas é a irmã dela.<br/> Universal, 31/7, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/the-killing/">The Killing</a></em>:</strong> Estreia da quarta temporada da versão americana da série dinamarquesa. A história segue logo após os eventos da terceira temporada, com Linden e Holder lidando com as consequências de seus atos e também investigando um novo caso que envolve uma academia militar. Joan Allen entra como convidada da temporada interpretando a chefe da academia.<br/> Netflix, 1/8</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Chaves</em>: </strong>O seriado mexicano é um caso de amor e ódio. Quem gosta não se importa em assistir reprises indefinidamente. Quem não gosta, sequer assistiu a todos os episódios. Aqui sai ganhando quem gosta e não tem tempo para matinê, o canal incluiu a série também em um horário noturno.<br/> TBS, 1/8, 13h10 e 22h15</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/mad-men/">Mad Men</a></em>:</strong> Estreia da segunda temporada com Don e Duck divergindo sobre a contratação de novos talentos. Enquanto isso, a equipe tenta encontrar a solução para a conta de uma companhia aérea e Betty encontra uma antiga colega.<br/> TV Cultura, 2/8, 1h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Rookie Blue</em>:</strong> Estreia da quarta temporada com promessa de problemas e surpresas. Os novos episódios começam com Andy e Nick infiltrados na tentativa de prender dois traficantes, Von e PJ. Enquanto Oliver e Dov são enviados para o trabalho com trânsito, os traficantes aparecem no apartamento de Andy e Nick e levam o policial.<br/> Universal, 2/8, 19h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Padre Brown</em>:</strong> A Igreja de Apolo e seu líder, Kalon, chega à cidade trazendo o culto ao sol como caminho para a felicidade. Susie acha as palavras do líder interessantes, mas o Padre Brown tenta avisar que tudo não passa de charlatanismo, mas a discussão muda de tom quando a esposa de Kalon é assassinada.<br/> Film&amp;Arts, 3/8, 21h</p>
+      
+
+
+
+      
+    
+      <h2><a name="entrevistas"></a> <strong><span style="color: #cc0000;">Entrevistas</span></strong></h2>
+      
+
+
+
+      
+    
+      <p><strong><em>Provocações</em>: </strong>Em homenagem ao escritor Rubem Alves, falecido no último dia 19, o programa exibe a entrevista em que o também psicanalista, educador e teólogo fala sobre o sistema educacional. No programa, Alves defendeu um sistema educacional que favoreça o desenvolvimento da criança. <br/> TV Cultura, 29/7, 23h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em>The Tonight Show com Jimmy Fallon</em>:</strong> Destaque essa semana para Robin Wright e Morgan Freeman.</p>
+      
+
+
+
+      
+    
+      <p style="padding-left: 30px;">28/07 - Kate Hudson, Ellar Coltrane e a dupla Nico &amp; Vinz<br/> 29/07 - Dwayne Johnson, a ex-spice girl Mel B e Chronixx.<br/> 30/07 - Robin Wright, Josh Charles e a banda Weezer. <br/> 31/07 - Morgan Freeman, Kesha e Tweedy.<br/> 01/07 - Jon Hamm, a apresentadora Martha Stewart e Brit Marling.</p>
+      
+
+
+
+      
+    
+      <p style="padding-left: 30px;">GNT, segunda à sexta, 23h30</p>
+      
+
+
+
+      
+    
+      <p>Confira também o <a href="https://omelete.com.br/programacao-da-tv/series-e-tv/programacao-da-tv-8-14-de-abril/omelete.uol.com.br/calendario-de-estreias-na-tv/">Calendário de Estreias da TV</a>, completo com datas de estreia das séries no Brasil, EUA, Inglaterra e mais.</p>
+      
+        
+          
+          
+            
+            
+  <div class="col all-about">
+    <a href="/calendario-de-estreias-na-tv" class="all-about__link">
+      
+      
+        
+      
+      <div class="title">
+          <h3><small>Tudo sobre</small>Calendário de Estreias na TV</h3>
+      </div>
+      <div class="text">
+      </div>
+    </a>
+  </div>
+
+          
+        
+      
+
+
+
+      
+    
+  
+
+  
+</div>
+
+              
+  <div class="comments d-flex flex-column">
+    <a href="" id="showComments" class="btn">Ver comentários</a>
+    <div class="comments__wrapper" style="display: none">
+      <div id="disqus_thread" data-om-disqus=""></div>
+    </div>
+  </div>
+
+              <div class="">
+  <div class="OUTBRAIN"
+    data-src="https://www.omelete.com.br/calendario-de-estreias-na-tv/programacao-da-tv-28-de-julho-3-de-agosto"
+    data-widget-id="AR_1"
+    data-ob-template="Omelete">
+  </div>
+  <script type="text/javascript"> OBR.extern.researchWidget(); </script>
+</div>
+            </div>
+
+            
+            <div class="offset-lg-2 col-lg-8 col-xl-7 d-none d-lg-block scroll-wrapper">
+              <aside>
+                
+                
+  
+
+  
+    
+    <div class="banner banner--aside banner--scroll ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-meio" ></div>
+      </div>
+    </div>
+    
+  
+
+                
+              </aside>
+            </div>
+            
+          </div>
+          
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="d-none d-sm-block">
+    
+    
+  
+
+  
+    
+    <div class="banner banner--bottom  banner--parallax">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-inferior" ></div>
+      </div>
+    </div>
+    
+  
+
+    
+  </div>
+  
+
+  
+  <div class="d-small d-sm-none">
+    
+    
+  
+
+  
+    
+    <div class="banner banner--small  ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-arroba-m1" style="width: 300px; height: 250px;"></div>
+      </div>
+    </div>
+    
+  
+
+    
+  </div>
+  
+</section>
+
+  </div>
+  <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+</main>
+<script>
+  
+  var disqus_shortname = 'omeletebr';
+  var disqus_config = function () {
+    this.page.identifier = 'conteudo:conteudo#89344';
+    this.page.title = 'Programação da TV - 28 de julho a 3 de agosto';
+  };
+  
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+
+<section class="m-search">
+  <div class="container">
+    <div class="row">
+      <div class="m-search__wrapper">
+        <form method="get" action="/busca">
+          <div class="input-group">
+            <button class="icon-search" type="submit"></button>
+            <input placeholder="Faça a sua busca" name="q"/>            
+            <button type="button" class="close icon-close search--close"></button>
+          </div>          
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.ome.lt/static/omelete/js/scripts.min.js?v=1"></script>
+<footer>
+  
+  <script>
+    (function(i) {
+    var ts = document.createElement('script');
+    ts.type = 'text/javascript';
+    ts.async = true;
+    ts.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tags.t.tailtarget.com/t3m.js?i=' + i;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ts, s);
+    })('TT-9804-3/CT-153');
+  </script>
+  
+
+  <section class="m-search">
+  <div class="container">
+    <div class="row">
+      <div class="m-search__wrapper">
+        <form method="get" action="/busca">
+          <div class="input-group">
+            <button class="icon-search" type="submit"></button>
+            <input placeholder="Faça a sua busca" name="q"/>            
+            <button type="button" class="close icon-close search--close"></button>
+          </div>          
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+    
+  
+
+  
+    
+    <div class="banner banner--mobile-footer  ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-rodape" style="width: 320px; height: 50px;"></div>
+      </div>
+    </div>
+    
+  
+
+  
+  <div class="footer__group">
+    <div class="container">
+      <div class="row group">
+
+        <div class="group__about col-xl-7 col-md-10 offset-lg-1">
+          
+        </div>
+
+        <div class="group__logos col-xl-15 col-lg-23 offset-lg-1">
+          <div class="item item--text">
+            <p>Empresas<br/> da Omelete Company:</p>
+          </div>
+          <div class="item item--omelete">
+            <a href="https://www.omelete.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/omelete.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Omelete">
+            </a>
+          </div>
+
+          <div class="item item--ccxp">
+            <a href="https://www.ccxp.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/ccxp.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Comic Con">
+            </a>
+          </div>
+
+          <div class="item item--gamexp">
+            <a href="https://www.gamexp.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/gamexp.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Game XP">
+            </a>
+          </div>          
+
+          <div class="item item--theenemy">
+            <a href="https://www.theenemy.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/theenemy.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="The Enemy">
+            </a>
+          </div>
+
+          <!--<div class="item item--mundogeek">
+            <a href="https://www.lojamundogeek.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/mundogeek.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Mundo Geek">
+            </a>
+          </div>
+
+          <div class="item item--omeletebox">
+            <a href="https://www.omeletebox.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/omeletebox.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Omelete Box">
+            </a>
+          </div>-->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <nav class="footer__nav d-none d-md-block">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-5 col-lg-5 offset-sm-1 footer__nav__list">
+         <h3>Filmes</h3>
+         <ul>
+           <li><a href="/oscar">OSCAR</a></li>
+           <li><a href="/bilheteria-usa/">BILHETERIAS USA</a></li>
+           <li><a href="/bilheteria-brasil/">BILHETERIAS BRASIL</a></li>
+           <li><a href="/estreias-da-semana/">ESTREIAS DA SEMANA</a></li>
+           <li><a href="/criticas?section=filmes">CRÍTICAS</a></li>
+           <li><a href="/noticias?section=filmes">NOTÍCIAS</a></li>
+         </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-xl-5 footer__nav__list">
+          <h3>SÉRIES e TV</h3>
+          <ul>
+            <li><a href="/emmy">EMMY</a></li>
+            <li><a href="/calendario-de-estreias-na-tv/">CALENDÁRIO DE ESTREIAS</a></li>
+            <li><a href="/series-tv/temporada-2018-2019-as-series-de-tv-canceladas-renovadas-e-todas-as-novidades/">CALENDÁRIO 2018</a></li>
+            <li><a href="/criticas?section=series-tv">CRÍTICAS</a></li>
+            <li><a href="/noticias?section=series-tv">NOTÍCIAS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-xl-5 footer__nav__list">
+          <h3>HQs e LIVROS</h3>
+          <ul>
+            <li><a href="/comic-con">SAN DIEGO COMIC CON</a></li>
+            <li><a href="/criticas?section=quadrinhos">CRÍTICAS</a></li>
+            <li><a href="/noticias?section=quadrinhos">NOTÍCIAS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-4 footer__nav__list">
+          <h3>Música</h3>
+          <ul>
+            <li><a href="/criticas?section=musica">CRÍTICAS</a></li>
+            <li><a href="/noticias?section=musica">NOTÍCIAS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xl-1 col-lg-2 col-md-2 offset-xl-2">
+          <div class="search search--open">
+            <i class="icon icon-search"></i>
+            <div class="search__input"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+</footer>
+
+
+
+  
+
+
+<script type="text/javascript">
+  // Adding json and gpt info to the jS
+  var slots = {"desktop": {"booster": {"div_id": "div-gpt-ad-booster", "name": "booster", "sizes": [1695, 920], "tag": "/18178082/omelete/booster"}, "contagem": {"div_id": "div-gpt-ad-contagem", "name": "contagem", "sizes": [300, 150], "tag": "/18178082/omelete/contagem"}, "arroba-1": {"div_id": "div-gpt-ad-arroba-1", "name": "arroba-1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_1"}, "background": {"div_id": "div-gpt-ad-background", "name": "background", "sizes": [1800, 1000], "tag": "/18178082/omelete/background"}, "arroba-2": {"div_id": "div-gpt-ad-arroba-2", "name": "arroba-2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_2"}, "meio": {"div_id": "div-gpt-ad-meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "tag": "/18178082/omelete/meio"}, "rodape": {"div_id": "div-gpt-ad-rodape", "name": "rodape", "sizes": [320, 50], "tag": "/18178082/omelete/rodape"}, "superheader": {"div_id": "div-gpt-ad-superheader", "name": "superheader", "sizes": [320, 100], "tag": "/18178082/omelete/superheader"}, "superior": {"div_id": "div-gpt-ad-superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "tag": "/18178082/omelete/superior"}, "arroba-m1": {"div_id": "div-gpt-ad-arroba-m1", "name": "arroba-m1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m1"}, "arroba-m2": {"div_id": "div-gpt-ad-arroba-m2", "name": "arroba-m2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m2"}, "inferior": {"div_id": "div-gpt-ad-inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "tag": "/18178082/omelete/inferior"}}, "mobile": {"booster": {"div_id": "div-gpt-ad-booster", "name": "booster", "sizes": [1695, 920], "tag": "/18178082/omelete/booster"}, "contagem": {"div_id": "div-gpt-ad-contagem", "name": "contagem", "sizes": [300, 150], "tag": "/18178082/omelete/contagem"}, "arroba-1": {"div_id": "div-gpt-ad-arroba-1", "name": "arroba-1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_1"}, "background": {"div_id": "div-gpt-ad-background", "name": "background", "sizes": [1800, 1000], "tag": "/18178082/omelete/background"}, "arroba-2": {"div_id": "div-gpt-ad-arroba-2", "name": "arroba-2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_2"}, "meio": {"div_id": "div-gpt-ad-meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "tag": "/18178082/omelete/meio"}, "rodape": {"div_id": "div-gpt-ad-rodape", "name": "rodape", "sizes": [320, 50], "tag": "/18178082/omelete/rodape"}, "superheader": {"div_id": "div-gpt-ad-superheader", "name": "superheader", "sizes": [320, 100], "tag": "/18178082/omelete/superheader"}, "superior": {"div_id": "div-gpt-ad-superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "tag": "/18178082/omelete/superior"}, "arroba-m1": {"div_id": "div-gpt-ad-arroba-m1", "name": "arroba-m1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m1"}, "arroba-m2": {"div_id": "div-gpt-ad-arroba-m2", "name": "arroba-m2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m2"}, "inferior": {"div_id": "div-gpt-ad-inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "tag": "/18178082/omelete/inferior"}}};
+  var gpt_keys = {"content_type": "news", "section": "series-tv", "page_type": "content", "environment": "production", "tags": ["A Onda", "Under The Dome", "R.I.P.D. - Agentes Do Al\u00e9m", "A Segunda Onda", "Rookie Blue", "T\u00e1 Chovendo Hamb\u00farguer 2", "Mad Men", "Programa\u00e7\u00e3o Da Tv", "Universidade Monstros", "Sharknado 2:", "Sharknado 2: A Segunda Onda", "Unforgettable"], "themes": ["calendario-de-estreias-na-tv"]};
+  var sponsors = {"logo_especial_3": "/18178082/omelete/logo_especial_3", "logo_especial_2": "/18178082/omelete/logo_especial_2", "logo_chamada": "/18178082/omelete/logo_chamada", "logo_especial_1": "/18178082/omelete/logo_especial_1", "logo_internas": "/18178082/omelete/logo_internas"};
+
+  function createCookie(name,value,days) {
+    var expires = '';
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = '; expires=' + date.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+
+  function readCookie(name) {
+      var nameEQ = name + '=';
+      var ca = document.cookie.split(';');
+      for(var i=0;i < ca.length;i++) {
+          var c = ca[i];
+          while (c.charAt(0) === ' ') {
+            c = c.substring(1,c.length);
+          }
+          if (c.indexOf(nameEQ) === 0) {
+            return c.substring(nameEQ.length,c.length);
+          }
+      }
+      return null;
+  }
+</script>
+
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var isMobile = false;
+  if (window.innerWidth <= 768) {
+    isMobile = true;
+  }
+
+  var gptAdSlots = {};
+  var googletag = googletag || {};
+
+  var desk = ['arroba-1', 'arroba-2', 'meio', 'inferior', 'superior',
+              'background', 'booster', 'contagem'];
+  var mob = ['arroba-m1', 'arroba-m2', 'rodape', 'superheader',
+             'contagem'];
+
+  var allSlots = Object.keys(slots.desktop).map(function(key) { return slots.desktop[key]; });
+
+  var desktopSlots = allSlots.filter(function(slot) {return desk.includes(slot.name);});
+
+  var mobileSlots = allSlots.filter(function(slot) {return mob.includes(slot.name);});
+
+  window.addEventListener("load", function () {
+    googletag.cmd = googletag.cmd || [];
+    googletag.cmd.push(function() {
+      if (!isMobile) {
+        gptAdSlots.desktop = [];
+
+        desktopSlots.forEach(function(slot){
+          gptAdSlots[slot.div_id] = googletag.defineSlot(slot.tag, slot.sizes, slot.div_id).addService(googletag.pubads());
+          gptAdSlots.desktop.push(gptAdSlots[slot.div_id]);
+        });
+
+//        for (slot_name in desktopSlots) {
+//            var slot = slots.desktop[slot_name];
+//            gptAdSlots[slot.div_id] = googletag.defineSlot(slot.tag, slot.sizes, slot.div_id).addService(googletag.pubads());
+//            // adding key_value
+//            gptAdSlots.desktop.push(gptAdSlots[slot.div_id]);
+//        }
+      } else {
+        gptAdSlots.mobile = [];
+
+        mobileSlots.forEach(function(slot){
+          gptAdSlots[slot.div_id] = googletag.defineSlot(slot.tag, slot.sizes, slot.div_id).addService(googletag.pubads());
+          gptAdSlots.mobile.push(gptAdSlots[slot.div_id]);
+        });
+//
+//        for (slot_name in slots.mobile) {
+//          var slot = slots.mobile[slot_name];
+//          gptAdSlots[slot.div_id] = googletag.defineSlot(slot.tag, slot.sizes, slot.div_id).addService(googletag.pubads());
+//          gptAdSlots.mobile.push(gptAdSlots[slot.div_id]);
+//        }
+      }
+
+      // var sponsoredBannerWhite = document.querySelectorAll('.sponsored-banner-white');
+      // var sponsoredBannerBlue = document.querySelectorAll('.sponsored-banner-blue');
+      var sponsorSlots = document.querySelectorAll('.sponsor-slots');
+      sponsorSlots.forEach(function(el, idx) {
+        var sponsorTag = el.dataset.sponsor;
+        var sizes = el.dataset.sizes.split(',');
+        var tagID = sponsorTag + '-' + idx;
+        var slotName = sponsors[sponsorTag];
+        if (slotName) {
+          el.setAttribute('id', tagID);
+          googletag.defineSlot(slotName, [parseInt(sizes[0]), parseInt(sizes[1])], tagID).addService(googletag.pubads());
+        } else {
+        }
+      });
+
+      // sponsoredBannerWhite.forEach(function(el, idx) {
+      //   var tagID = 'sponsored-banner-white-' + idx;
+      //   el.attr('id', tagID);
+      //   googletag.defineSlot('/283405803/Logo_Oferecimento', [153, 14], tagID).addService(googletag.pubads());
+      // });
+
+      // sponsoredBannerBlue.forEach(function(el, idx) {
+      //   var tagID = 'sponsored-banner-blue-' + idx;
+      //   el.attr('id', tagID);
+      //   googletag.defineSlot('/283405803/Logo_Oferecimento_2', [153, 14], tagID).addService(googletag.pubads());
+      // });
+
+      // sponsoredBannerWhiteBig.forEach(function(el, idx) {
+      //   var tagID = 'sponsored-banner-white-big-' + idx;
+      //   el.attr('id', tagID);
+      //   googletag.defineSlot('/283405803/Logo_Oferecimento_3', [160, 35], tagID).addService(googletag.pubads());
+      // });
+
+      googletag.pubads().addEventListener('slotRenderEnded', function (event) {
+
+        var elementId = event.slot.getSlotElementId();
+
+        if (event.isEmpty) {
+            if (elementId == "div-gpt-ad-superior") {
+              $('.banner.banner--mast-head').remove();
+              $('.background--enemy').removeClass('background--enemy--mast-head');
+              $('.background--grey').removeClass('background--grey--mast-head');
+            } else if (elementId.startsWith("div-gpt-ad-background")) {
+              $('html').removeClass('has-background-banner');
+              $('.banner--background').remove();
+            } else if (elementId == "div-gpt-ad-booster") {
+              // removed fadeOut because of jquery.slim
+              $('.banner--trailer-booster').remove();
+            } else {
+              
+            }
+        } else {
+            if (elementId == "div-gpt-ad-superior") {
+              $('.banner.banner--mast-head').addClass('banner--mast-head--visible');
+              $('.background--enemy').addClass('background--enemy--mast-head');
+              $('.background--grey').addClass('background--grey--mast-head');
+            } else if (elementId == "div-gpt-ad-background") {
+              $('.banner.banner--mast-head').remove();
+            } else if (elementId.startsWith('div-gpt-ad-background')) {
+              $(elementId).closest('.banner--background').addClass('banner--background--visible');
+            } else if (elementId == "div-gpt-ad-booster") {
+              setTimeout(function() {
+                // removed fadeOut because of jquery.slim
+                $('.banner--trailer-booster').remove();
+              }, 35000);
+            }
+
+            // set 'inferior' ad size correctly
+            if (elementId.startsWith('div-gpt-ad-inferior') && event.size.length == 2) {
+              var inferiorAd = $('#' + elementId);
+              inferiorAd.width(event.size[0]).height(event.size[1]);
+              inferiorAd.parent().width(event.size[0]);
+
+              if( event.size[0] !== 1260 && event.size[1] !== 700 ){
+                inferiorAd.closest('.banner--parallax').addClass('parallax--inactive')
+              }
+            }
+
+            // set 'mast-head' ad size correctly
+            if (elementId.startsWith('div-gpt-ad-superior') && event.size.length == 2) {
+              var superiorAd = $('#' + elementId);
+              superiorAd.width(event.size[0]).height(event.size[1]);
+              superiorAd.parent().width(event.size[0]);
+            }
+        }
+
+      });
+
+      googletag.pubads().disableInitialLoad();
+      googletag.pubads().enableSingleRequest();
+
+      // tail
+      var _ttprofiles = window._ttprofiles || [];
+
+      googletag.pubads().setTargeting("age", _ttprofiles.getAge);
+      googletag.pubads().setTargeting("equipment", _ttprofiles.getEquipment);
+      googletag.pubads().setTargeting("customaudiences", _ttprofiles.getCustomAudience);
+      googletag.pubads().setTargeting("gender", _ttprofiles.getGender);
+      googletag.pubads().setTargeting("microsegments", _ttprofiles.getMicrosegments);
+      googletag.pubads().setTargeting("profiles", _ttprofiles.getProfiles);
+      googletag.pubads().setTargeting("socialclass", _ttprofiles.getSocialClass);
+      googletag.pubads().setTargeting("subjects", _ttprofiles.getSubjects);
+      googletag.pubads().setTargeting("team", _ttprofiles.getTeam);
+
+      // key value
+      for (var key in gpt_keys) {
+        var key_value = gpt_keys[key];
+        googletag.pubads().setTargeting(key, key_value);
+      }
+
+      googletag.enableServices();
+
+      if (!isMobile) {
+
+        desktopSlots.forEach( function(slot){
+          googletag.display(slot.div_id);
+        });
+//          for (slot_name in slots.desktop) {
+//            var slot = slots.desktop[slot_name];
+//            googletag.display(slot.div_id);
+//          }
+          googletag.pubads().refresh(gptAdSlots.desktop);
+      } else {
+
+        mobileSlots.forEach( function(slot){
+          googletag.display(slot.div_id);
+        });
+//          for (slot_name in slots.mobile) {
+//            var slot = slots.mobile[slot_name];
+//            googletag.display(slot.div_id);
+//          }
+          googletag.pubads().refresh(gptAdSlots.mobile);
+      }
+
+      // sponsoredBannerWhite.forEach(function(el, idx) {
+      //   googletag.display(el.attr('id'));
+      // });
+
+      // sponsoredBannerBlue.forEach(function(el, idx) {
+      //   googletag.display(el.attr('id'));
+      // });
+
+      // sponsoredBannerWhiteBig.forEach(function(el, idx) {
+      //   googletag.display(el.attr('id'));
+      // });
+    });
+  }, false);
+
+  function refreshGalleryAd(id) {
+    googletag.cmd.push(function() {
+        googletag.pubads().refresh([gptAdSlots[id]]);
+    });
+  };
+
+  function refreshAds(ids) {
+    if (!ids || !Array.isArray(ids)) {
+      return;
+    }
+    googletag.cmd.push(function() {
+      ids.forEach(function (id) {
+        googletag.display(id);
+        googletag.pubads().refresh([gptAdSlots[id]]);
+      });
+    });
+  }
+</script>
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-1826697-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+<meta name="google-site-verification" content="hCFQMJWhgJvgAHP8WyJTpZfMfHVNMSa9GsTj39662_k" />
+
+
+<meta name="google-site-verification" content="iTPXZ1POnZq80tracAvjJuIfkwym9JjdRDOk-glyL1I" />
+
+
+<meta name="p:domain_verify" content="e666affb1012fb19c957d470e41d349e" />
+
+
+<link href="https://plus.google.com/115416604494251056860" rel="publisher" />
+
+
+<script id="tailtarget" type="text/javascript">
+  // <![CDATA[
+  var _ttprofiles = _ttprofiles || [];
+  _ttprofiles.profiles = [];
+  _ttprofiles.push(['_setAccount', 'TT-9804-3']); // _setAccount
+  _ttprofiles.push(['_enableServices']);
+  document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? "https:" : "http:") + "//d.tailtarget.com/profiles.js'></scr" + "ipt>");
+  // ]]>
+</script>
+
+
+
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','//connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1022132447830898');
+  fbq('track', "PageView");
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1022132447830898&ev=PageView&noscript=1"/></noscript>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1062127218"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-1062127218'); </script>
+
+
+<!-- jQUery mobile -->
+<script src="https://cdn.ome.lt/static/omelete/js/vendor/jquery.mobile.custom.min.js"></script>
+<!-- End of jQUery mobile -->
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  window.addEventListener("load", function () {
+    (function () {
+      var u = "//analytics.ome.lt/";
+      _paq.push(['setTrackerUrl', u + 'piwik.php']);
+      _paq.push(['setSiteId', '4']);
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
+    })();
+  }, false);
+</script>
+<noscript>
+  <p>
+    <img src="//analytics.ome.lt/piwik.php?idsite=4&rec=1" style="border:0;" alt="" />
+  </p>
+</noscript>
+<!-- End Matomo Code -->
+
+</body>
+</html>

@@ -1,0 +1,2151 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.ome.lt/static/omelete/css/style.min.css?v=1"/>
+
+  <title>Programação da TV - 5 a 11 de janeiro</title>
+  <link rel="preload" href="https://cdn.ome.lt/static/omelete/img/omelete_logo.svg" as="image">
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"queueTime":0,"licenseKey":"48f7507bbb","applicationID":"135988681","agent":"","errorBeacon":"bam.nr-data.net","transactionName":"NlYGMEoAD0UEARZYDA8cIhFWAhVfCgxNRQsAXQsXFhIIQgBMD0QPFVpKElEEFkVLAANCBltQCwpMBA9COgQHRQAJ","beacon":"bam.nr-data.net","applicationTime":63}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="icon" type="image/png" sizes="96x96" href="https://cdn.ome.lt/static/omelete/img/favicon.png">
+
+<!-- Outbrain -->
+<script type="text/javascript" src="https://widgets.outbrain.com/outbrain.js"></script>
+<!-- End of Outbrain -->
+
+  <meta name="description" content="">
+
+  
+
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Omelete">
+  
+  <meta property="fb:pages" content="166251050655700" />
+  
+  
+<meta name="twitter:site" content="@omelete" />
+<meta name="twitter:creator" content="@omelete" />
+<meta name="twitter:url" content="https://www.omelete.com.br/programacao-da-tv/garota-exemplar/programacao-da-tv-5-11-de-janeiro" />
+<meta name="twitter:domain" content="https://www.omelete.com.br/" />
+<meta name="twitter:title" content="Programação da TV - 5 a 11 de janeiro" />
+<meta name="twitter:description" content="007 - Operação Skyfall, RoboCop, Alemão, Girls, Once Upon a Time, Downton Abbey, Globo de Ouro e People's Choice Awards" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://cdn.ome.lt/mKvWnKBqW5THZdGgavlvfNZ6kJU=/1200x630/smart/extras/conteudos/conteudo_93196.jpg" />
+<meta property="og:title" content="Programação da TV - 5 a 11 de janeiro" />
+<meta property="og:description" content="007 - Operação Skyfall, RoboCop, Alemão, Girls, Once Upon a Time, Downton Abbey, Globo de Ouro e People's Choice Awards" />
+<meta property="og:url" content="https://www.omelete.com.br/programacao-da-tv/garota-exemplar/programacao-da-tv-5-11-de-janeiro" />
+<meta property="og:image" content="https://cdn.ome.lt/mKvWnKBqW5THZdGgavlvfNZ6kJU=/1200x630/smart/extras/conteudos/conteudo_93196.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:type" content="article" />
+<meta property="article:author" content="Ederli Fortunato" />
+<meta property="article:section" content="Séries e TV">
+<meta property="article:published_time" content="2015-01-02 17:02:19+00:00" />
+<meta property="article:modified_time" content="2018-06-29 05:44:41.697000+00:00" />
+
+
+  <script>
+    var allGalleries = {};
+    var contentAlreadyParsed = {};
+  </script>
+  
+
+<!-- TailTarget Tag Manager TT-9804-3/CT-153 -->
+<script>
+  (function(i) {
+  var ts = document.createElement('script');
+  ts.type = 'text/javascript';
+  ts.async = true;
+  ts.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tags.t.tailtarget.com/t3m.js?i=' + i;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ts, s);
+  })('TT-9804-3/CT-153');
+</script>
+<!-- End TailTarget Tag Manager -->
+
+<!-- Global site tag (gtag.js) - AdWords: 1062127218 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1062127218"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){
+    dataLayer.push(arguments);
+  } gtag('js', new Date());
+  gtag('config', 'AW-1062127218');
+</script>
+
+<!-- Inicio da tag TT de segmencatao -->
+<script id="tailtarget" type="text/javascript">
+// <![CDATA[
+var _ttprofiles = _ttprofiles || [];
+_ttprofiles.profiles = [];
+_ttprofiles.push(['_setAccount', 'TT-9804-3']); // _setAccount
+_ttprofiles.push(['_enableServices']);
+document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? "https:" : "http:") + "//d.tailtarget.com/profiles.js'></scr" + "ipt>");
+// ]]>
+</script>
+
+<!-- Final da tag TT de segmentacao -->
+
+  
+  <link rel="canonical" href="https://www.omelete.com.br/programacao-da-tv/garota-exemplar/programacao-da-tv-5-11-de-janeiro" />
+  
+  <link rel="amphtml" href="https://www.omelete.com.br/amp/programacao-da-tv/garota-exemplar/programacao-da-tv-5-11-de-janeiro">
+  
+  <meta property="fb:article_style" content="default">
+  
+  <script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Article",
+      "name" : "Programação da TV - 5 a 11 de janeiro",
+      "author" : {
+        "@type" : "Person",
+        "name" : "Ederli Fortunato"
+      },
+      "datePublished" : "2015-01-02 17:02:19+00:00",
+      "dateModified" : "2018-06-29 05:44:41.697000+00:00",
+      "image" : [
+    
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/vgID8z0byIjmyIIg0hFxrMveUdE=/837x0/smart/uploads/conteudo/fotos/Mordomo-da-Casa-Branca_.jpg",
+          "caption" : "HBO, 10/1, 22h"
+        }
+      
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/6A1E_zRGWNTewh7-71cCRANIH0o=/837x0/smart/uploads/conteudo/fotos/RoboCop____.jpg",
+          "caption" : "Telecine Premium HD, 7/1, 22h"
+        }
+      
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/0nXsVD52Bh1CZ_KidKP5xkuayTw=/837x0/smart/uploads/conteudo/fotos/Alemao_.jpg",
+          "caption" : "Telecine Premium HD, 10/1, 22h"
+        }
+      
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/VMmJ-T-sxXEreKcMztEQTXUEMjM=/837x0/smart/uploads/conteudo/fotos/Hercules____.jpg",
+          "caption" : "Net Now, 6/1"
+        }
+      
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/DhV4rqjw5xXSENWEUn4G9ilZ6Ew=/837x0/smart/uploads/conteudo/fotos/Garota-Exemplar_.jpg",
+          "caption" : "Net Now, 8/1"
+        }
+      
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/2TVoZpV0I7wzMcdhp6dW7fiLDTU=/837x0/smart/uploads/conteudo/fotos/Mercenarios-3_.jpg",
+          "caption" : "Net Now, 9/1"
+        }
+      
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/8Eb_PAERq0HUCKevrxAYRU_cUuY=/837x0/smart/uploads/conteudo/fotos/Inside-Llewyn-Davis_.jpg",
+          "caption" : "Telecine Cult, 5/1, 16h20"
+        }
+      
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/OyR0ZCnXsMpB5DVDIS5TRc6eLUk=/837x0/smart/uploads/conteudo/fotos/Downton-Abbey________.jpg",
+          "caption" : "GNT, 10/1, 22h30"
+        }
+      
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/y0aDgZnPVAjNaKLbid3Mr81hPfc=/837x0/smart/uploads/conteudo/fotos/Once-Upon-a-Time_____.jpg",
+          "caption" : "Sony, 11/1, 21h30"
+        }
+      
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/SnPYQSHShyQPR5lRbDSSkj7mfZE=/837x0/smart/uploads/conteudo/fotos/Globo-de-Ouro__.jpg",
+          "caption" : "TNT, 11/1, 23h"
+        }
+      
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/ARrNeasm_t2dt_5j4m3nQyDoATo=/837x0/smart/uploads/conteudo/fotos/Teen-Wolf___.jpg",
+          "caption" : "Sony, 9/1, 21h30"
+        }
+      
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/MAsEjsMKwXCIaeJzSts-9EhJB9A=/837x0/smart/uploads/conteudo/fotos/Peoples-Choice-Awards_.jpg",
+          "caption" : "Warner, 7/1, 23h59"
+        }
+      ] ,
+      "video" : [] ,
+      "articleSection" : "Séries e TV",
+      "headline" : "Programação da TV - 5 a 11 de janeiro",
+      "publisher" : {
+    "@type": "Organization",
+    "name": "Omelete",
+    "url": "https://www.omelete.com.br",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://cdn.ome.lt/static/omelete/img/omelete_logo.svg"
+    },
+    "sameAs": [
+      "https://www.youtube.com/user/omeleteve",
+      "https://www.facebook.com/SiteOmelete/",
+      "https://twitter.com/omelete",
+      "https://www.instagram.com/omelete/"
+    ]
+  }
+
+    }
+  
+  </script>
+
+
+
+</head>
+
+<body>
+
+
+<header class="header">
+
+<div class="container container--venom">
+    <div class="row header__wrapper">
+      <div class="col-4 d-md-none">
+        <div class="header__wrapper__menu">
+          <button class="btn-menu">
+            <span class="btn-menu__line"></span>
+            <span class="btn-menu__line"></span>
+            <span class="btn-menu__line"></span>
+          </button>
+          </button>
+        </div>
+      </div>
+      <div class="col-16 col-md-20 col-lg-18 col-xl-20">
+        <div class="header__wrapper__logo">
+          <div class="logo" style="visibility: hidden;">
+            <a href="/">
+              
+                <img class="logo__img" src="https://cdn.ome.lt/static/omelete/img/omelete_logo.svg" alt="Omelete">
+              
+            </a>
+          </div>          
+
+          <div class="links links--category links--mobile">
+            
+            
+            <ul class="links__list links__list--underline">
+              <li class="links__list__item d-block d-md-none"><a href="/">HOME</a></li>
+              <li class="links__list__item"><a href="/filmes">FILMES</a></li>
+              <li class="links__list__item"><a href="/series-tv">SÉRIES e TV</a></li>
+              <li class="links__list__item"><a href="/quadrinhos">HQs e LIVROS</a></li>
+              <li class="links__list__item"><a href="/musica">MÚSICA</a></li>
+              <li class="links__list__item"><a href="/videos">VÍDEOS</a></li>
+              <li class="links__list__item links__list__item--special"><a href="https://store.omelete.com.br/?utm_source=site_omelete&utm_medium=link&utm_campaign=link_site_omelete" target="_blank">OMELETE STORE</a></li>
+            </ul>
+
+            <div class="links--mobile__social">
+                <div class="links links--social">
+  <ul class="links__list links__list--icon">
+    <li class="links__list__item"><a class="icon-facebook" href="https://www.facebook.com/SiteOmelete/" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-instagram" href="https://www.instagram.com/omelete/" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-twitter" href="https://twitter.com/omelete" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-youtube-play" href="https://www.youtube.com/user/omeleteve" target="_blank"></a></li>
+  </ul>
+</div>
+            </div>
+
+            <div class="links__overlay"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 col-md-4 col-lg-6 col-xl-4">
+        <div class="header__wrapper__search">
+          <div class="search search--open">
+            <i class="icon icon-search"></i>
+            <div class="search__input">
+            </div>
+          </div>
+
+          <div class="separator d-none d-md-block"></div>
+
+          <div class="social  d-none d-md-block">
+              <div class="links links--social">
+  <ul class="links__list links__list--icon">
+    <li class="links__list__item"><a class="icon-facebook" href="https://www.facebook.com/SiteOmelete/" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-instagram" href="https://www.instagram.com/omelete/" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-twitter" href="https://twitter.com/omelete" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-youtube-play" href="https://www.youtube.com/user/omeleteve" target="_blank"></a></li>
+  </ul>
+</div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="logo-venom">
+      <iframe src="https://cdn.ome.lt/static/omelete/specials/venom/logo-venom.html">
+      </iframe>
+      <div class="logo-venom__clickable"></div>
+    </div>
+</div>
+ 
+</header>
+
+<main class="page page--content">
+  <div class="main">
+    
+    
+  
+
+  
+    
+    <div class="banner banner--mast-head  ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-superior" ></div>
+      </div>
+    </div>
+    
+  
+
+    
+
+    
+
+
+
+
+<section class="section section--content section--main" data-dsq-domain="omelete.com.br" data-ref-id="93196" data-content-url="/programacao-da-tv/garota-exemplar/programacao-da-tv-5-11-de-janeiro" data-content-type="news">
+  
+  
+  <script type="text/javascript">
+    window._seedtagq = window._seedtagq || [];
+    window._seedtagq.push(['_setId', '0546-2759-01']);
+    (function () {
+      var st = document.createElement('script');
+      st.type = 'text/javascript';
+      st.async = true;
+      st.src = ('https:' == document.location.protocol
+        ? 'https'
+        : 'http') + '://config.seedtag.com/loader.js?v=' + Math.random();
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(st, s);
+    })();
+  </script>
+  
+  
+
+  
+  
+
+  
+
+  
+
+  <div class="container section__wrapper">
+    <div class="row">
+      <div class="col-24">
+        <article class="article">
+          
+          
+          
+
+          
+          <div class="row article__header">
+            <div class="offset-0 offset-sm-2 col-24 col-sm-20 no-relative">
+              
+
+
+
+
+
+  <div class="article__header__tag">
+    
+<div class="tag tag--series-tv">
+  <p>Séries e TV</p>
+  <div class="tag__label">
+     <span>Notícia</span> 
+    
+  </div>
+  <div class="tag__time"></div>
+</div>
+
+  </div>
+  <div class="article__header__title">
+    <h1 class="title">Programação da TV - 5 a 11 de janeiro</h1>
+  </div>
+  <div class="article__header__subtitle">
+    <h2 class="subtitle">007 - Operação Skyfall, RoboCop, Alemão, Girls, Once Upon a Time, Downton Abbey, Globo de Ouro e People&#39;s Choice Awards</h2>
+  </div>
+  <div class="article__header__social">
+    <div class="links links--social">
+    <ul class="links__list links__list--icon links__list--column links__list--circle">
+      
+      <li class="links__list__item"><a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//omelete.com.br/programacao-da-tv/garota-exemplar/programacao-da-tv-5-11-de-janeiro"></a></li>
+      <li class="links__list__item"><a class="icon icon-twitter" target="_blank" href="https://twitter.com/intent/tweet?text=Programa%C3%A7%C3%A3o%20da%20TV%20-%205%20a%2011%20de%20janeiro https%3A//omelete.com.br/programacao-da-tv/garota-exemplar/programacao-da-tv-5-11-de-janeiro"></a></li>
+      <li class="links__list__item"><a class="icon icon-email" target="_blank" href="mailto:?subject=Programa%C3%A7%C3%A3o%20da%20TV%20-%205%20a%2011%20de%20janeiro&body=https%3A//omelete.com.br/programacao-da-tv/garota-exemplar/programacao-da-tv-5-11-de-janeiro"></a></li>
+      <li class="links__list__item"><a class="icon icon-whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=Programa%C3%A7%C3%A3o%20da%20TV%20-%205%20a%2011%20de%20janeiro https%3A//omelete.com.br/programacao-da-tv/garota-exemplar/programacao-da-tv-5-11-de-janeiro"></a></li>
+    </ul>
+  </div>
+  </div>
+  <div class="article__header__info">
+    <div class="info">
+      <div class="info__by">Ederli Fortunato</div>
+
+      
+      
+      
+
+      <div class="info__date">02.01.2015</div>
+      <div class="info__time">15h02</div>
+
+      
+      <div class="d-none d-md-block">Atualizada em </div>
+      <div class="d-none d-md-block">29.06.2018</div>
+      <div class="d-none d-md-block">02h44</div>
+      <div class="d-block d-md-none">Atualizada em 29.06.2018 às 02h44</div>
+        
+    </div>
+
+    
+  </div>
+
+            </div>
+          </div>
+          
+
+          
+          <div class="row ">
+            <div class="offset-0 col-24 offset-md-2 col-md-20 col-lg-12 col-xl-13">
+              
+
+
+
+
+
+
+
+
+
+
+
+<div class="article__body article--content">
+  
+    
+      <p>Conheça os destaques da programação da TV entre 5 e 11 de janeiro:</p>
+      
+
+
+
+      
+    
+      
+
+
+    <div class="media media--full media--news" data-list-index="1" data-width="" data-height="">
+      <div class="media__wrapper">
+
+        
+        <h3 class="media__wrapper__title">PCA</h3>
+        
+
+        
+
+        
+        <div class="media__wrapper__image ">
+            <img data-lazy-src="//cdn.ome.lt/u9ZspI-1sRNjP6EDjz8LprVq7pM=/fit-in/837x500/smart/uploads/conteudo/fotos/Peoples-Choice-Awards_.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="None">
+            <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+        </div>
+        
+
+        
+          
+          <div class="media__wrapper__bottom">
+            
+            <div class="media__wrapper__description">Warner, 7/1, 23h59</div>
+            
+            
+          </div>
+          
+        
+
+      </div>
+    </div>
+
+      
+
+
+
+      
+    
+      
+
+
+    <div class="media media--full media--news" data-list-index="2" data-width="" data-height="">
+      <div class="media__wrapper">
+
+        
+        <h3 class="media__wrapper__title">Teen Wolf</h3>
+        
+
+        
+
+        
+        <div class="media__wrapper__image ">
+            <img data-lazy-src="//cdn.ome.lt/Z_5GQG5D_iO_02gKDAIPaSb3NeM=/fit-in/837x500/smart/uploads/conteudo/fotos/Teen-Wolf___.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="None">
+            <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+        </div>
+        
+
+        
+          
+          <div class="media__wrapper__bottom">
+            
+            <div class="media__wrapper__description">Sony, 9/1, 21h30</div>
+            
+            
+          </div>
+          
+        
+
+      </div>
+    </div>
+
+      
+
+
+
+      
+    
+      
+
+
+    <div class="media media--full media--news" data-list-index="3" data-width="" data-height="">
+      <div class="media__wrapper">
+
+        
+        <h3 class="media__wrapper__title">Globo de Ouro</h3>
+        
+
+        
+
+        
+        <div class="media__wrapper__image ">
+            <img data-lazy-src="//cdn.ome.lt/MT1mGCFLuDs661Dsl9-zPgeFLSA=/fit-in/837x500/smart/uploads/conteudo/fotos/Globo-de-Ouro__.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="None">
+            <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+        </div>
+        
+
+        
+          
+          <div class="media__wrapper__bottom">
+            
+            <div class="media__wrapper__description">TNT, 11/1, 23h</div>
+            
+            
+          </div>
+          
+        
+
+      </div>
+    </div>
+
+      
+
+
+
+      
+    
+      
+
+
+    <div class="media media--full media--news" data-list-index="4" data-width="" data-height="">
+      <div class="media__wrapper">
+
+        
+        <h3 class="media__wrapper__title">Once Upon a Time</h3>
+        
+
+        
+
+        
+        <div class="media__wrapper__image ">
+            <img data-lazy-src="//cdn.ome.lt/SNn0Or27p_MFFuFKKWsGABh5NW8=/fit-in/837x500/smart/uploads/conteudo/fotos/Once-Upon-a-Time_____.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="None">
+            <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+        </div>
+        
+
+        
+          
+          <div class="media__wrapper__bottom">
+            
+            <div class="media__wrapper__description">Sony, 11/1, 21h30</div>
+            
+            
+          </div>
+          
+        
+
+      </div>
+    </div>
+
+      
+
+
+
+      
+    
+      
+
+
+    <div class="media media--full media--news" data-list-index="5" data-width="" data-height="">
+      <div class="media__wrapper">
+
+        
+        <h3 class="media__wrapper__title">Downton Abbey</h3>
+        
+
+        
+
+        
+        <div class="media__wrapper__image ">
+            <img data-lazy-src="//cdn.ome.lt/1SsO8HodfgcWfOZ6BbyGLiwDWIk=/fit-in/837x500/smart/uploads/conteudo/fotos/Downton-Abbey________.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="None">
+            <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+        </div>
+        
+
+        
+          
+          <div class="media__wrapper__bottom">
+            
+            <div class="media__wrapper__description">GNT, 10/1, 22h30</div>
+            
+            
+          </div>
+          
+        
+
+      </div>
+    </div>
+
+      
+
+
+
+      
+    
+      
+
+
+    <div class="media media--full media--news" data-list-index="6" data-width="" data-height="">
+      <div class="media__wrapper">
+
+        
+        <h3 class="media__wrapper__title">Inside Llewyn Davies</h3>
+        
+
+        
+
+        
+        <div class="media__wrapper__image ">
+            <img data-lazy-src="//cdn.ome.lt/syomvLuVl6VJvq5qo766WCTpuzU=/fit-in/837x500/smart/uploads/conteudo/fotos/Inside-Llewyn-Davis_.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="None">
+            <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+        </div>
+        
+
+        
+          
+          <div class="media__wrapper__bottom">
+            
+            <div class="media__wrapper__description">Telecine Cult, 5/1, 16h20</div>
+            
+            
+          </div>
+          
+        
+
+      </div>
+    </div>
+
+      
+
+
+
+      
+    
+      
+
+
+    <div class="media media--full media--news" data-list-index="7" data-width="" data-height="">
+      <div class="media__wrapper">
+
+        
+        <h3 class="media__wrapper__title">Os Mercenarios 3</h3>
+        
+
+        
+
+        
+        <div class="media__wrapper__image ">
+            <img data-lazy-src="//cdn.ome.lt/idItFKbitfVc-cLQJlBagicDdls=/fit-in/837x500/smart/uploads/conteudo/fotos/Mercenarios-3_.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="None">
+            <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+        </div>
+        
+
+        
+          
+          <div class="media__wrapper__bottom">
+            
+            <div class="media__wrapper__description">Net Now, 9/1</div>
+            
+            
+          </div>
+          
+        
+
+      </div>
+    </div>
+
+      
+
+
+
+      
+    
+      
+
+
+    <div class="media media--full media--news" data-list-index="8" data-width="" data-height="">
+      <div class="media__wrapper">
+
+        
+        <h3 class="media__wrapper__title">Garota Exemplar</h3>
+        
+
+        
+
+        
+        <div class="media__wrapper__image ">
+            <img data-lazy-src="//cdn.ome.lt/m37OxYfuzuONKkvY6bCzMbNbHSw=/fit-in/837x500/smart/uploads/conteudo/fotos/Garota-Exemplar_.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="None">
+            <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+        </div>
+        
+
+        
+          
+          <div class="media__wrapper__bottom">
+            
+            <div class="media__wrapper__description">Net Now, 8/1</div>
+            
+            
+          </div>
+          
+        
+
+      </div>
+    </div>
+
+      
+
+
+
+      
+    
+      
+
+
+    <div class="media media--full media--news" data-list-index="9" data-width="" data-height="">
+      <div class="media__wrapper">
+
+        
+        <h3 class="media__wrapper__title">Hercules</h3>
+        
+
+        
+
+        
+        <div class="media__wrapper__image ">
+            <img data-lazy-src="//cdn.ome.lt/COoaQY9P6FZJ5NeI48_FGILcaAk=/fit-in/837x500/smart/uploads/conteudo/fotos/Hercules____.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="None">
+            <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+        </div>
+        
+
+        
+          
+          <div class="media__wrapper__bottom">
+            
+            <div class="media__wrapper__description">Net Now, 6/1</div>
+            
+            
+          </div>
+          
+        
+
+      </div>
+    </div>
+
+      
+
+
+
+      
+    
+      
+
+
+    <div class="media media--full media--news" data-list-index="10" data-width="" data-height="">
+      <div class="media__wrapper">
+
+        
+        <h3 class="media__wrapper__title">Alemao</h3>
+        
+
+        
+
+        
+        <div class="media__wrapper__image ">
+            <img data-lazy-src="//cdn.ome.lt/ywyAWfE7vZw6hHege3ngfr4Lmgk=/fit-in/837x500/smart/uploads/conteudo/fotos/Alemao_.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="None">
+            <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+        </div>
+        
+
+        
+          
+          <div class="media__wrapper__bottom">
+            
+            <div class="media__wrapper__description">Telecine Premium HD, 10/1, 22h</div>
+            
+            
+          </div>
+          
+        
+
+      </div>
+    </div>
+
+      
+
+
+
+      
+    
+      
+
+
+    <div class="media media--full media--news" data-list-index="11" data-width="" data-height="">
+      <div class="media__wrapper">
+
+        
+        <h3 class="media__wrapper__title">RoboCop</h3>
+        
+
+        
+
+        
+        <div class="media__wrapper__image ">
+            <img data-lazy-src="//cdn.ome.lt/_-UQScaJnjAKiW25C4aTV_G9Bik=/fit-in/837x500/smart/uploads/conteudo/fotos/RoboCop____.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="None">
+            <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+        </div>
+        
+
+        
+          
+          <div class="media__wrapper__bottom">
+            
+            <div class="media__wrapper__description">Telecine Premium HD, 7/1, 22h</div>
+            
+            
+          </div>
+          
+        
+
+      </div>
+    </div>
+
+      
+
+
+
+      
+    
+      
+
+
+    <div class="media media--full media--news" data-list-index="12" data-width="" data-height="">
+      <div class="media__wrapper">
+
+        
+        <h3 class="media__wrapper__title">O Mordomo da Casa Branca</h3>
+        
+
+        
+
+        
+        <div class="media__wrapper__image ">
+            <img data-lazy-src="//cdn.ome.lt/3yzEgPzkKztrT_oTkJEnt_wNy2I=/fit-in/837x500/smart/uploads/conteudo/fotos/Mordomo-da-Casa-Branca_.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="None">
+            <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+        </div>
+        
+
+        
+          
+          <div class="media__wrapper__bottom">
+            
+            <div class="media__wrapper__description">HBO, 10/1, 22h</div>
+            
+            
+          </div>
+          
+        
+
+      </div>
+    </div>
+
+      
+
+
+
+      
+    
+      <div class="progtvnav">
+<ul>
+<li><a href="#especiais">Especiais</a></li>
+<li><a href="#filmes">Filmes</a></li>
+<li><a href="#infanto-juvenil">Infanto-Juvenil</a></li>
+<li><a href="#series">Séries</a></li>
+<li><a href="#entrevistas">Entrevistas</a></li>
+</ul>
+</div>
+      
+
+
+
+      
+    
+      <h2><a name="especiais"></a><strong><span style="color: #cc0000;">Especiais</span></strong></h2>
+      
+
+
+
+      
+    
+      <p><strong><em>Guerras Mundiais</em>:</strong> Maratona com os seis episódios exibidos em três noites consecutivas. Produzida pelo próprio canal, a minissérie recria a biografia de seis homens que tiveram suas personalidades moldadas durante a Primeira Guerra Mundial e que viriam a ter um papel essencial no conflito seguinte: Churchill, Hitler, Stalin, De Gaulle e Mussolini. Tudo começa em Sarajevo, onde o assassinato do Arquiduque Francisco Ferdinando da Áustria dá início a uma série de eventos que levou o mundo a um conflito que chegou a ser chamado de "a guerra para acabar com todas as guerras", mas acabou pavimentando o caminho para a Segunda Guerra Mundial.<br/> History, 5 a 7/1, 20h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>AC/DC: Live At Donington 1991</em>:</strong> O show é antigo, mas nada melhor para iniciar um novo ano do que ver 72 mil pessoas acompanhando o grupo em um de seus melhores momentos.<br/> Bis, 5/1, 21h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>A História Oculta de King Kong</em>:</strong> A série examina as relações entres os diretores Merian Cooper e Ernest B. Schoedsack na produção de 1933. Considerado um dos maiores filmes de monstros de todos os tempos, <em>King Kong</em> é também o retrato de sua época e um exemplo dos avanços tecnológicos do cinema na década de 30.<br/> Film&amp;Arts, 6/1, 18h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>People's Choice Awards</em>:</strong> A cerimônia de entrega do prêmio que reúne indicados da TV, cinema e música fica mais animada a cada ano. Um dos motivos está na escolha através de voto popular online, o que gera verdadeiras guerras de fãs, que passam horas votando furiosamente e só este ano somaram mais de 70 milhões de votos. Os editores do Omelete Aline Diniz e o Érico Borgo apresentam tudo ao vivo.<br/>Warner, 7/1, 23h59</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Fugidos do Caos</em>:</strong> A nova série acompanha cinco homens que decidiram abandonar a civilização e viver em um ponto isolado dos Estados Unidos. Além da distância, os cinco também compartilham a ideia de viver de forma independente, usando apenas os recursos disponíveis e morar em casas construídas por eles mesmos. Claro que todos podem deixar as decisões de lado diante de uma doença grave e não precisam se preocupar com acesso a escolas e outras necessidades para os filhos, mas é interessante ver pessoas que decidiram abandonar não só o que há de ruim na civilização, mas também o que há de bom.<br/> NatGeo, 8/1, 23h30</p>
+      
+
+
+
+      
+    
+      <p><em><strong>Especial Jesus Cristo</strong></em><strong>:</strong> O Natal já passou e a Semana Santa ainda não chegou, mas o canal escolheu começar o ano com uma maratona de especiais sobre Jesus. Começando pelos estudos que tentam definir como era o rosto de Jesus, a maratona segue com "O Mistério do Santo Sepulcro" e termina às 22h com o especial de duas horas de duração sobre o relato de que Jesus andou pela Terra durante 40 dias antes de subir aos céus. Em busca de informações, a produção sai da Bíblia e vai aos livros apócrifos e também aos escritos do historiador Flávio Josefo.<br/> History, 9/1,20h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Norah Jones at Front Row Center</em>:</strong> Repertório que inclui jazz, blues, folk e country no show da filha de Ravi Shankar para fechar a primeira semana "séria" do ano.<br/> Bis, 10/1, 0h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>1000 Dias para o Planeta</em>: </strong>Dez episódios produzidos a partir das viagens do veleiro Sedna IV, que parte no primeiro programa mostrando a recuperação da iguana azul nas Ilhas Cayman. Em seguida, a série mostra ecossistemas, plantas e animais que estão em processo rápido de extinção vitimados pela expansão do homem pelo planeta.<br/> +Globosat 10/01, 8h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Hollywood on Set</em>:</strong> Os bastidores de <em>O Hobbit: A Batalha dos Cinco Exércitos</em>, seguidos por detalhes da nova adaptação de <em>Annie</em>. Terceiro filme sobre a órfã adotada por um milionário, a produção tem Quvenzhané Wallis no papel principal. Encerrando a trinca do dia, os bastidores de <em>Invencível</em>, filme dirigido por Angelina Jolie sobre a história do corredor olímpico Louis Zamperini, que teve a carreira interrompida quando foi convocado para combater na Segunda Guerra Mundial e terminou prisioneiro dos japoneses.<br/> MGM, 11/1, 15h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Yo-Yo Ma at the Tanglewood</em>:</strong> O violoncelista que transita tanto pelo ambiente dos concertos clássicos como pelas trilhas sonoras de filmes e músicas populares apresenta-se com o The Silk Road Ensemble.<br/> Film&amp;Arts, 11/1, 17h</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/globo-de-ouro/">Globo de Ouro</a></em>:</strong> A temporada de premiações acelera em direção ao Oscar com a entrega do prêmio promovido pela Associação dos Correspondentes Estrangeiros de Hollywood. A melhor parte é que estão na mesma festa as produções de cinema e TV, ainda mais agora que a separação entre os dois ambientes é cada vez mais difusa.</p>
+      
+
+
+
+      
+    
+      <p style="padding-left: 30px;">11/1<br/>18h - Countdown, E!Entertainment <br/> 21h - Live From the Red Carpet, E! Entertainment<br/> 22h - Tapete Vermelho, TNT<br/> 23h - Cerimônia, TNT</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Cream: Royal Albert Hall London 2005</em>:</strong> Jack Bruce, Ginger Baker e Eric Clapton se reúnem após 40 anos para apresentar seus maiores sucessos. No auditório para o evento, gente como Jimmy Page, Roger Waters e Brian May.<br/> Bis, 11/1, 21h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Destino Selvagem - Nilo</em>:</strong> Série em quatro episódios mostrando um safari pelo Nilo. No rio que marcou a grande civilização dos faraós, a viagem mostra crocodilos, girafas, hipopótamos, leopardos e outros animais que habitam e dependem do Nilo. Destaque também para detalhes como a importância das chuvas em Ruanda e Burundi e do degelo da neve das montanhas Rwenzori na manutenção do rio.<br/> NatGeo, 11/1, 0h15</p>
+      
+
+
+
+      
+    
+      <h2><a name="filmes"></a><strong><span style="color: #cc0000;">Filmes</span></strong></h2>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/inside-llewyn-davis-balada-de-um-homem-comum/">Inside Llewyn Davis:</a></em></strong> <a href="https://omelete.com.br/inside-llewyn-davis-balada-de-um-homem-comum/"><em><strong>Balada de Um Homem Comum</strong></em></a><strong>:</strong> Os irmãos Coen mergulham na história de um músico que tenta sobreviver de seu ofício. Sem sorte, sem dinheiro, incapaz de manter relacionamentos, incapaz de tratar bem os amigos que ainda restam, ele vaga por uma semana entre bares que compunham o cenário musical de Nova York nos anos 1960.<br/> Telecine Cult, 5/1, 16h20</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Esse Viver Ninguém Me Tira</em>: </strong>O documentário resgata a vida e o trabalho de Aracy Moebius de Carvalho. Chefe do setor de passaportes do consulado brasileiro em Hamburgo nos anos 40, onde conheceu o segundo marido, o escritor Guimarães Rosa, Aracy atuou contra as ordens dos governos alemão e brasileiro facilitando a fuga de judeus. Seu trabalho fez dela a única brasileira a ter o nome inscrito na Avenida dos Justos entre as Nações no Museu do Holocausto, em Jerusalém. Vítima do Mal de Alzheimer, Aracy tem sua história reconstruída a partir de depoimentos de amigos, familiares e de pessoas salvas por ela.<br/>Arte 1, 6/1, 20h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/hercules-legend-hercules/">Hércules</a></em>:</strong> Dwayne Johnson e o diretor Brett Ratner fazem sua versão do semideus como um líder de um grupo de mercenários que treinam um exército da Trácia contra um grupo rival.<br/> Net Now, 6/1</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/especial-estrada/">A Estrada</a></em>:</strong> Num futuro pós-apocalíptico, Viggo Mortensen é o homem que cruza um território devastado com o filho. Adaptação do premiado romance homônimo de Cormac McCarthy.<br/> A&amp;E, 6/1, 17h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Romeu e Julieta</em>:</strong> Nova adaptação da tragédia de Shakespeare, essa com Douglas Booth e Hailee Steinfeld interpretando o casal que se apaixona apesar de suas famílias serem inimigas.<br/> Telecine Pipoca HD, 6/1,22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>O Canto da Sereia</em>:</strong> A emissora dá início ao seu projeto Luz, Câmera 50 Anos, que vai comemorar o meio século da empresa com a exibição de 12 séries e minisséries transformadas em longas-metragens. Além de <em>O Canto da Sereia</em>, história da morte de uma cantora de sucesso, entram na lista <em>Anos Dourados, As Noivas de Copacabana, Maysa, Quando Fala o Coração</em> e <em>A Teia</em>, entre outros títulos.<br/> Globo, 6/1, 22h14</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/motoqueiro-fantasma/">Motoqueiro Fantasma 2: Espírito de Vingança</a></em>:</strong> Johnny Blaze tenta se livrar da maldição de ser o Motoqueiro Fantasma. Para isso, ele precisa impedir que o Diabo sequestre um garoto especial.<br/> Megapix, 7/1, 20h40</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/real-steel/">Gigantes de Aço</a></em>: </strong>Hugh Jackman é um boxeador falido vivendo num futuro próximo em que os humanos foram substituídos nos ringues por robôs. Obrigado a passar algum tempo com o filho, ele e o garoto acabam levando para o ringue um velho robô tirado do ferro-velho mas que surpreendentemente começa a vencer lutas.<br/> Space, 7/1, 21h45</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/robocop/">RoboCop</a></em>:</strong> Hollywood continua indo para o passado em busca de roteiros e ideias que diminuam os riscos, dessa vez com uma nova versão da história do policial transformado em ciborgue. José Padilha dirige o remake.<br/> Telecine Premium HD, 7/1, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Grease - Nos Tempos da Brilhantina</em>:</strong> John Travolta no auge da fama e Olivia Newton-John interpretam um casal de namorados na década de 50. O musical deu origem a um revival das músicas e do visual da época e elevou ainda mais a fama de Travolta antes de o ator mergulhar em um período de ostracismo.<br/> Fox, 7/1, 0h15</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/garota-exemplar/">Garota Exemplar</a></em>:</strong> Com pré-lançamento marcado para o dia 8 de janeiro, traz a história de Amy Dunne (Rosamund Pike), que desaparece no dia do seu aniversário de casamento, deixando o marido Nick (Ben Affleck) em apuros. Ele se torna o suspeito número um do crime.<br/> Net Now, 8/1</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/as-bem-armadas/">As Bem-Armadas</a></em>: </strong>Ashburn é uma agente do FBI que se relaciona mal com os colegas. Para conseguir uma promoção, ela pede para trabalhar na investigação de um traficante de drogas, mas isso a leva para Boston, onde entra em choque com uma policial local. Mas a dupla acaba entrando num acordo para prender o bandido.<br/> Telecine Premium e Premium HD, 8/1, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/os-mercenarios-3/">Os Mercenários 3</a></em>:</strong> Sylvester Stallone volta a agir com seu bando de velhinhos para enfrentar um comerciante de armas, vivido por Mel Gibson.<br/> Net Now, 9/1</p>
+      
+
+
+
+      
+    
+      <p><strong>Programa Duplo <em><a href="https://omelete.com.br/cronicas-de-narnia/">Crônicas de Nárnia</a></em>:</strong> A ideia era fazer da obra de C.S. Lewis uma franquia tão poderosa quanto a gerada pelos livros de seu amigo J.R.R. Tolkien. Mas o resultado ficou muito abaixo da bilheteria de <em>O Senhor dos Anéis</em>. Aqui as duas histórias que seguem após <em>O Leão, a Feiticeira e o Guarda-Roupa, </em>que inicia as aventuras dos irmãos Pevensie, que encontram em um guarda-roupa um portal para a terra de Nárnia.</p>
+      
+
+
+
+      
+    
+      <p style="padding-left: 30px;"><strong><em><a href="https://omelete.com.br/cinema/as-cronicas-de-narnia-principe-caspian/">As Crônicas de Nárnia: Príncipe Caspian</a></em>:</strong> Os irmãos voltam a Nárnia para ajudar o príncipe Caspian a recuperar o trono.<br/> 9/1, 19h50</p>
+      
+
+
+
+      
+    
+      <p style="padding-left: 30px;"><strong><em><a href="https://omelete.com.br/cinema/cronicas-de-narnia-viagem-do-peregrino-da-alvorada-critica/">As Crônicas de Nárnia: A Viagem do Peregrino da Alvorada</a></em>:</strong> Lucy e Edmundo voltam a Nárnia com o primo Eustáquio e encontram Caspian, agora rei, em uma aventura pelos mares.<br/> 9/1, 22h30</p>
+      
+
+
+
+      
+    
+      <p style="padding-left: 30px;">Megapix</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/cinema/leoes-e-cordeiros/">Leões e Cordeiros</a></em>:</strong> Uma crítica ao envolvimento dos Estados Unidos em conflitos no Oriente Médio e a políticos que enviam soldados para a guerra sem preocupação com suas vidas. O enredo acompanha histórias que se cruzam, partindo de um professor universitário, dois de seus alunos que se alistam e se integram ao exército americano no Afeganistão, um senador que pode ser o próximo presidente dos Estados Unidos e a jornalista que o entrevista.<br/> MGM, 9/1, 21h</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/007-skyfall/">007 - Operação Skyfall</a></em>:</strong> James Bond fracassa em uma missão e o MI6 é atacado, dando início à aventura que muda a estrutura da franquia para os próximos filmes. No centro do enredo, o roubo de um HD com informações sigilosas e um rival do passado de M.<br/> Telecine Action e Action HD, 9/1, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/cinema/ia-festa-nunca-terminai/">A Festa Nunca Termina</a></em>:</strong> A história de como um show mudou o cenário da música. Em 1976, o apresentador Tony Wilson comparece a um show do Sex Pistols e decide criar a Factory Records. A gravadora foi responsável pela contratação do Joy Division, mais tarde New Order, e James and the Happy Mondays, grupos que marcaram época no cenário que fez de Manchester o lugar para estar naquele momento.<br/> Telecine Cult e Cult HD, 9/1, 23h45</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/cinema/critica-wall-e/">Wall-E</a></em>:</strong> Após destruírem a Terra com poluição e lixo, os humanos deixam o planeta para trás em uma grande nave espacial. Séculos depois, tudo o que resta da civilização é um pequeno robô especializado em compactar lixo que um dia encontra uma sonda que vem ao planeta em busca de vida.<br/> TNT, 10/1, 19h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/cinema/critica-principe-da-persia-areias-do-tempo/">Príncipe da Pérsia: As Areias do Tempo</a></em>:</strong> Filme baseado no game homônimo com Jake Gyllenhaal como um príncipe que tem de usar uma adaga com as areias do tempo para corrigir erros do passado recente.<br/> TNT, 10/1, 21h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/festival-do-rio/cinema/o-mordomo-da-casa-branca-critica/">O Mordomo da Casa Branca</a></em>:</strong> Forest Whitaker interpreta um mordomo que por trabalhar na Casa Branca fica mais próximo dos grandes acontecimentos do que especialistas e a imprensa. A história pessoal do personagem segue lado a lado com grandes alterações no país e no mundo, incluindo a luta pelos direitos civis, a morte de Kennedy e o envolvimento dos Estados Unidos no Vietnã.<br/> HBO, 10/1, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/alemao/">Alemão</a></em>:</strong> Cinco policiais infiltrados no Morro do Alemão no Rio de Janeiro têm a missão de elaborar o plano de invasão das forças de segurança para a instalação de Unidade de Polícia Pacificadora. Mas a missão é descoberta pelos traficantes, que começam uma busca para matar os policiais.<br/> Telecine Premium HD, 10/1, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Corações em Conflito</em>:</strong> Um empresário viaja para Cingapura a negócios enquanto sua esposa segue trabalhando como cirurgiã e a filha do casal tem mais contato com a empregada do que com os pais. Mas o caso de um garoto esfaqueado pela própria mãe faz a médica repensar seu relacionamento com a filha.<br/> MGM, 11/1, 20h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/cinema/em-segredo/">Em Segredo</a></em>:</strong> Baseado no livro <em>Thérèse Raquin </em>de Émile Zola, o filme tem Elizabeth Olsen como uma moça presa a um casamento arranjado. Seus dias se limitam a seguir com a vida sem graça até conhecer Laurent e iniciar um romance proibido. No papel do marido, a chance de ver Tom Felton fora da franquia <em>Harry Potter</em>.<br/> Max, 11/1, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Meu Amigo Harvey</em>:</strong> Elwood é um homem de meia-idade que apresenta a todo mundo seu amigo invisível, o coelho gigante Harvey. Bem aceito pelo barman, o amigo invisível é o terror da irmã de Elwood, que não sabe se o coelho é sinal de loucura ou excesso de álcool, até que surge uma solução para o problema.<br/> Telecine Cult e Cult HD, 11/1, 22h</p>
+      
+
+
+
+      
+    
+      <h2><a name="infanto-juvenil"></a><strong><span style="color: #cc0000;">Infanto-Juvenil</span></strong></h2>
+      
+
+
+
+      
+    
+      <p><strong><em>Sadie J</em>:</strong> Sadie é uma menina que vive cercada de meninos. Além do pai, ela tem um irmão e um cachorrinho. A família é completada pelo ajudante do pai e o melhor amigo do irmão e pelos melhores amigos de Sadie, Kit e Dede, com quem vive muitas aventuras.<br/> Gloob, 5/1, 22h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em>O Pequeno Vampiro</em>:</strong> Tony é um garoto de nove anos que acaba de se mudar para a Escócia e tem dificuldades para se enturmar no novo país. Mas tudo muda quando ele conhece Rudolph, um vampiro de nove anos e os dois se tornam amigos.<br/> Gloob, 11/1, 9h30</p>
+      
+
+
+
+      
+    
+      <h2><a name="series"></a><strong><span style="color: #cc0000;">Séries</span></strong></h2>
+      
+
+
+
+      
+    
+      <p><strong><em>Portlandia</em>: </strong>A quarta temporada da comédia que critica os hábitos da cidade de Portland e tem participações especiais de Kyle MacLachlan, Steve Buscemi e Gus Van Sant, entre outros, já está no catálogo do serviço por demanda. Para quem ainda não conhece o programa, as três temporadas anteriores também estão disponíveis.<br/> Globosat Play</p>
+      
+
+
+
+      
+    
+      <p><strong><em>O Terceiro Olho</em>: </strong>Série dinamarquesa que acompanha o trabalho do detetive Viggo Lust, que tenta encontrar sua filha desaparecida enquanto investiga os crimes locais. Viggo conta com uma ajuda: seus poderes de clarividência.<br/> Globosat Play</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Filhos da Anarquia</em>: </strong>Aproveitando o período de férias, o canal exibe várias séries já conhecidas na TV por assinatura. Ambientada em um clube de motoqueiros, Sons of Anarchy, série recém-encerrada nos EUA, acompanha os problemas de liderança e o envolvimento do grupo com o comércio ilegal de armas.<br/> Band, 5/1, 1h05</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Deadbeat</em>:</strong> Criada pelo mesmo time de <em>Wilfred</em>, a comédia exibida nos Estados Unidos pelo serviço de streaming Hulu acompanha o médium Kevin Pacalioglu. Em contato com várias pessoas que já desencarnaram, o trabalho de Kevin é ajudar os fantasmas a resolver assuntos que ficaram pendentes para que possam finalmente descansar. No cenário nada convencional, Kevin ainda conta com a ajuda de seu amigo traficante de drogas Roofie. Com 13 episódios na primeira temporada, a série chega já renovada para o segundo ano.<br/> Sony, 5/1, 21h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em>A Vingança de Tony</em>: </strong>Série francesa que segue a relação entre Tony Roucas, um chefão da máfia, e Kenz, um ladrão de casas norte-africano. As diferenças entre eles teriam garantido que os dois jamais teriam se encontrado se não fosse um detalhe, a dupla ocupa a mesma cela pequena na cadeia e compartilha o desejo de fugir. E assim, enquanto o crime organizado estabelecido cria uma missão bem planejada e apoiada numa rede de contatos, os novos criminosos partem para a ação rápida e sem preparo. Outra diferença é que Tony quer sair para se vingar dos policiais e traidores que o mandaram para a cadeia.<br/> +Globosat, 5/1, 22h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/walking-dead/">The Walking Dead</a></em>: </strong>Estreia da quarta temporada com dois episódios por noite. A história recomeça com o grupo de Rick maior e estabelecido. Mas quem vive sob ataque constante não pode se dar ao luxo de pensar que a luta acabou.<br/> Band, 5/1, 22h35</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/under-dome/">Under the Dome - Prisão Invisível</a></em>:</strong> Estreia no canal da segunda temporada da série baseada no livro de Stephen King sobre uma cidade que é subitamente coberta por uma redoma. Como esperado, a civilização é a primeira coisa que desaparece quando um grupo é ameaçado, e o isolamento forçado pela redoma já deu provas de que nem é preciso muito para que a sociedade degenere. E na segunda temporada surge uma nova ameaça quando a redoma começa a emitir ondas magnéticas que podem ser fatais.<br/> Globo, 6/1 (segunda à sexta), 0h40</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Iris - Organização Secreta Coreana</em>:</strong> Produção sul-coreana sobre dois amigos, Kim Hyun-jun e Jin Sa-woo, que durante o treinamento no Batalhão de Missões Especiais do Exército são recrutados por uma agência secreta do governo. Sem saber, os dois são recrutados pela mesma agente, Choi Seung-hee, o que só descobrem após passar por um teste e serem admitidos na nova organização, onde vão combater ameaças estrangeiras, o que pode incluir o assassinato de qualquer um que ameace a segurança da Coreia do Sul. Para complicar, os dois novos agentes se apaixonam por sua recrutadora. Com 20 episódios na primeira temporada, a série ganhou ainda um derivado, <em>Athena, Goddess of War</em>, e uma segunda temporada.<br/> +Globosat, 6/1, 3h30 (segunda à sexta)</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Mistresses</em>:</strong> Mais uma versão americana para uma série europeia, desta vez uma produção originalmente britânica. O enredo acompanha quatro amigas e seu esforço para manter seus relacionamentos. O elenco tem Alyssa Milano, Rochelle Aytes, Kim Yunjin e Jes Macallan e a série chega já renovada para a segunda e terceira temporadas.<br/> Sony, 6/1, 21h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Betrayal</em>:</strong> Versão da série holandesa <em>Ovespel</em>, <em>Betrayal</em> segue a história da fotógrafa Sara Hadley e o complexo envolvimento de sua vida pessoal com a investigação de um assassinato. Casada com o promotor público Drew, Sara mantém um caso com o advogado Jack, que é casado com Elaine, filha do chefe de Jack, Thacher Karsten. Mas a situação, que pode implodir a carreira de todos os envolvidos, fica ainda pior quando o filho de Thacher é acusado de assassinato, Drew assume como promotor do caso e Jack como advogado de defesa. Infelizmente para quem curtiu o enredo, a série foi cancelada após 13 episódios.<br/> Sony, 6/1, 21h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Salem</em>: </strong>Estreia no canal da série ambientada na cidade que ficou famosa pela caça às bruxas no século 17, quando um grupo de adolescentes começou a descrever contatos com forças do mal. A história começa com Mary, uma garota grávida e sozinha na puritana Salem, que acredita que John Alden, o amor de sua vida, morreu na guerra. Mas ao contrário do que ela imaginava, Alden não só está vivo como volta no momento em que a perseguição às bruxas está no auge. Inspirada nos julgamentos reais, a série já foi renovada para a segunda temporada.<br/> Band, 6/1, 23h45</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Top Boy</em>:</strong> Série britânica ambientada nos subúrbios de Londres, onde o tráfico de drogas afeta a vida de todos. Nos quatro episódios da primeira temporada, o enredo segue a vida de Ra'Nell, que após ter sua mãe internada por problemas mentais é obrigado a envolver-se com o tráfico. A história também acompanha o avanço de Dushane e Sully rumo ao controle do tráfico local. A história segue por mais quatro episódios na segunda temporada, mas apesar dos elogios e comparações com <em>The Wire</em>, a série não foi renovada para um terceiro ano.<br/> Film&amp;Arts, 7/1, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Ventos do Sul</em>:</strong> Série argentina ambientada nas décadas de 30 e 40 na Patagônia. Composta por oito episódios, cada um com uma história diferente, a série retrata a sociedade local, mistura dos povos indígenas com imigrantes europeus e do Oriente Médio, num choque de culturas e costumes. No primeiro episódio, a série parte da história de Camilo, um peão que foi abandonado pelo pai, James McKay, e agora se junta a uma caravana em Comodoro Rivadavia, com imagens do passado e presente compondo o enredo.<br/> +Globosat, 7/1, 22h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em>The Fear</em>:</strong> Minissérie ambientada na Inglaterra que explora a perda de controle dos negócios quando o patriarca da família é diagnosticado com Mal de Alzheimer. O lado inesperado é que Richie Beckett é um ex-chefão do crime organizado que se transformou em um empresário. Mas apesar da legalidade de sua situação atual e do drama da doença, Richie é ainda um homem desprezível que fez sua fortuna graças à pobreza alheia e é chamado de volta aos "negócios" pelos filhos, atacados pela máfia albanesa.<br/> Film&amp;Arts, 8/1, 22h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Teen Wolf</em>:</strong> Estreia da quarta temporada, que começa com Scott e seus amigos tendo de conviver com a perda após o final do terceiro ano. Surgem também novas tarefas agora que Scott é o alfa de sua alcateia, incluindo lidar com uma visita inesperada.<br/> Sony, 9/1, 21h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em>A Lenda de Sleepy Hollow</em>:</strong> Estreia na TV aberta da série que foi exibida no canal Fox. Baseada do conto <em>A Lenda do Cavaleiro Sem </em><em>Cabeça</em>, de Washington Irving, a série transforma o professor Ichabod Crane do original em um soldado durante a guerra de independência dos Estados Unidos. Agindo sob o comando de George Washington, Crane acaba decapitando um soldado inimigo, mas a vitória custa sua vida. Salvo por um feitiço, ele acaba ressuscitando na cidade de Sleepy Hollow em 2013, mas seu retorno traz de volta também o soldado decapitado. A trama com toques de terror e sobrenatural faz de Crane e da xerife local os únicos capazes de evitar o fim do mundo. <br/> Band, 9/1, 22h30 (dois episódios na sequência)</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Desconectados</em>:</strong> Série nacional produzida no Rio Grande do Sul sobre um grupo de estudantes de artes plásticas. Originalmente criados para a Internet, os episódios seguem os personagens na busca por identidade e rumo na vida pessoal e na carreira artística.<br/> Sony, 9/1, 23h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Downton Abbey</em>:</strong> Estreia da quinta temporada do drama britânico que começou no dia em que o Titanic afundou, levando junto o herdeiro de Downton Abbey. Passados doze anos, Lady Mary volta à vida social e a família segue adaptando-se aos novos tempos.<br/> GNT, 10/1, 22h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em>The Fosters</em>:</strong> Stef, uma policial, e Lena, uma professora, formam uma família com o filho biológico de Stef e crianças e adolescentes adotados. Ambientada em San Diego, a série explora o novo formato de família e os problemas diários do convívio, que inclui ainda o ex-marido de Stef e pai do filho dela.<br/> Sony, 11/1, 12h</p>
+      
+
+
+
+      
+    
+      <p><strong><em><a href="https://omelete.com.br/once-upon-time/">Once Upon a Time</a></em>:</strong> Estreia da quarta temporada que marca a entrada de Anna e Elsa, as princesas de <em>Frozen</em>. Seguindo a trama da série, a história das irmãs é contada em dois tempos, com uma linha de enredo mostrando a morte dos pais das duas, e outra em Storybroke, onde Emma e Regina estão em pé de guerra.<br/> Sony, 11/1, 21h30</p>
+      
+
+
+
+      
+    
+      <p><strong><em>Girls</em>:</strong> Estreia da quarta temporada do grupo comandado por Lena Dunham e seus problemas com relacionamentos e a vida em geral. Mas esse ano Hannah também decide investir mais na carreira, participando de uma oficina para escritores.<br/> HBO, 11/1, 0h</p>
+      
+
+
+
+      
+    
+      <h2><a name="entrevistas"></a><strong><span style="color: #cc0000;">Entrevistas</span></strong></h2>
+      
+
+
+
+      
+    
+      <p><strong><em>Direto do Actors Studio</em>:</strong> Hugh Jackman volta ao programa dez anos após sua primeira entrevista com James Lipton.<br/> Film&amp;Arts, 9/1, 20h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>The Ellen DeGeneres Show</em>: </strong>O destaque da semana fica com Bill Murray.</p>
+      
+
+
+
+      
+    
+      <p style="padding-left: 30px;">5/1 - Portia de Rossi e David Walton.<br/> 6/1 - Bill Murray, Shailene Woodley e a banda Lady Antebellum.<br/> 7/1 - Katy Catanzaro, David Spade e Meghan Trainor.<br/> 8/1 - Wanda Sykes, Alison Sweeney e o cantor country Jason Aldean.    <br/> 9/1 - Kim Kardashian West, Rita Ora e Iggy Azalea.</p>
+      
+
+
+
+      
+    
+      <p style="padding-left: 30px;">GNT, segunda à sexta, 14h</p>
+      
+
+
+
+      
+    
+      <p><strong><em>The Tonight Show com Jimmy Fallon</em>:</strong> Michael Shannon promete enfrentar bem as brincadeiras de Fallon, mas a semana ainda tem Chris Rock e Channing Tatum.</p>
+      
+
+
+
+      
+    
+      <p style="padding-left: 30px;">5/1 - Michael Shannon, Shailene Woodley e o cantor country Eric Church.<br/> 6/1 - Channing Tatum, Eddie Redmayne, e o rapper Logic.<br/> 7/1 - Mark Wahlberg e o comediante Kevin Nealon.<br/> 8/1 - Chris Rock e Carrie Underwood.<br/> 9/1 - Michael Cera e Julianne Moore.</p>
+      
+
+
+
+      
+    
+      <p style="padding-left: 30px;">GNT, segunda à sexta, 0h</p>
+      
+
+
+
+      
+    
+      <p>Confira também o <a href="https://omelete.com.br/calendario-de-estreias-na-tv/">Calendário de Estreias da TV</a>, completo com datas de estreia das séries no Brasil, EUA, Inglaterra e mais.</p>
+      
+        
+          
+          
+            
+            
+  <div class="col all-about">
+    <a href="/programacao-da-tv" class="all-about__link">
+      
+      
+        
+        <div class="picture">
+          <img src="//cdn.ome.lt/wNVqDrwHNVM9eIuS2dnmH92qnxs=/325x183/smart/filer_public/f8/15/f81506e0-1df7-4dd2-b63d-745e952d8c6a/series.jpg" alt="" />
+        </div>
+        
+      
+      <div class="title">
+          <h3><small>Tudo sobre</small>Programação da TV</h3>
+      </div>
+      <div class="text">
+      </div>
+    </a>
+  </div>
+
+          
+        
+      
+
+
+
+      
+    
+  
+
+  
+</div>
+
+              
+  <div class="comments d-flex flex-column">
+    <a href="" id="showComments" class="btn">Ver comentários</a>
+    <div class="comments__wrapper" style="display: none">
+      <div id="disqus_thread" data-om-disqus=""></div>
+    </div>
+  </div>
+
+              <div class="">
+  <div class="OUTBRAIN"
+    data-src="https://www.omelete.com.br/programacao-da-tv/garota-exemplar/programacao-da-tv-5-11-de-janeiro"
+    data-widget-id="AR_1"
+    data-ob-template="Omelete">
+  </div>
+  <script type="text/javascript"> OBR.extern.researchWidget(); </script>
+</div>
+            </div>
+
+            
+            <div class="offset-lg-2 col-lg-8 col-xl-7 d-none d-lg-block scroll-wrapper">
+              <aside>
+                
+                
+  
+
+  
+    
+    <div class="banner banner--aside banner--scroll ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-meio" ></div>
+      </div>
+    </div>
+    
+  
+
+                
+              </aside>
+            </div>
+            
+          </div>
+          
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="d-none d-sm-block">
+    
+    
+  
+
+  
+    
+    <div class="banner banner--bottom  banner--parallax">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-inferior" ></div>
+      </div>
+    </div>
+    
+  
+
+    
+  </div>
+  
+
+  
+  <div class="d-small d-sm-none">
+    
+    
+  
+
+  
+    
+    <div class="banner banner--small  ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-arroba-m1" style="width: 300px; height: 250px;"></div>
+      </div>
+    </div>
+    
+  
+
+    
+  </div>
+  
+</section>
+
+  </div>
+  <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+</main>
+<script>
+  
+  var disqus_shortname = 'omeletebr';
+  var disqus_config = function () {
+    this.page.identifier = 'conteudo:conteudo#93196';
+    this.page.title = 'Programação da TV - 5 a 11 de janeiro';
+  };
+  
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+
+<section class="m-search">
+  <div class="container">
+    <div class="row">
+      <div class="m-search__wrapper">
+        <form method="get" action="/busca">
+          <div class="input-group">
+            <button class="icon-search" type="submit"></button>
+            <input placeholder="Faça a sua busca" name="q"/>            
+            <button type="button" class="close icon-close search--close"></button>
+          </div>          
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.ome.lt/static/omelete/js/scripts.min.js?v=1"></script>
+<footer>
+  
+  <script>
+    (function(i) {
+    var ts = document.createElement('script');
+    ts.type = 'text/javascript';
+    ts.async = true;
+    ts.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tags.t.tailtarget.com/t3m.js?i=' + i;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ts, s);
+    })('TT-9804-3/CT-153');
+  </script>
+  
+
+  <section class="m-search">
+  <div class="container">
+    <div class="row">
+      <div class="m-search__wrapper">
+        <form method="get" action="/busca">
+          <div class="input-group">
+            <button class="icon-search" type="submit"></button>
+            <input placeholder="Faça a sua busca" name="q"/>            
+            <button type="button" class="close icon-close search--close"></button>
+          </div>          
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+    
+  
+
+  
+    
+    <div class="banner banner--mobile-footer  ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-rodape" style="width: 320px; height: 50px;"></div>
+      </div>
+    </div>
+    
+  
+
+  
+  <div class="footer__group">
+    <div class="container">
+      <div class="row group">
+
+        <div class="group__about col-xl-7 col-md-10 offset-lg-1">
+          
+        </div>
+
+        <div class="group__logos col-xl-15 col-lg-23 offset-lg-1">
+          <div class="item item--text">
+            <p>Empresas<br/> da Omelete Company:</p>
+          </div>
+          <div class="item item--omelete">
+            <a href="https://www.omelete.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/omelete.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Omelete">
+            </a>
+          </div>
+
+          <div class="item item--ccxp">
+            <a href="https://www.ccxp.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/ccxp.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Comic Con">
+            </a>
+          </div>
+
+          <div class="item item--gamexp">
+            <a href="https://www.gamexp.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/gamexp.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Game XP">
+            </a>
+          </div>          
+
+          <div class="item item--theenemy">
+            <a href="https://www.theenemy.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/theenemy.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="The Enemy">
+            </a>
+          </div>
+
+          <!--<div class="item item--mundogeek">
+            <a href="https://www.lojamundogeek.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/mundogeek.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Mundo Geek">
+            </a>
+          </div>
+
+          <div class="item item--omeletebox">
+            <a href="https://www.omeletebox.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/omeletebox.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Omelete Box">
+            </a>
+          </div>-->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <nav class="footer__nav d-none d-md-block">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-5 col-lg-5 offset-sm-1 footer__nav__list">
+         <h3>Filmes</h3>
+         <ul>
+           <li><a href="/oscar">OSCAR</a></li>
+           <li><a href="/bilheteria-usa/">BILHETERIAS USA</a></li>
+           <li><a href="/bilheteria-brasil/">BILHETERIAS BRASIL</a></li>
+           <li><a href="/estreias-da-semana/">ESTREIAS DA SEMANA</a></li>
+           <li><a href="/criticas?section=filmes">CRÍTICAS</a></li>
+           <li><a href="/noticias?section=filmes">NOTÍCIAS</a></li>
+         </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-xl-5 footer__nav__list">
+          <h3>SÉRIES e TV</h3>
+          <ul>
+            <li><a href="/emmy">EMMY</a></li>
+            <li><a href="/calendario-de-estreias-na-tv/">CALENDÁRIO DE ESTREIAS</a></li>
+            <li><a href="/series-tv/temporada-2018-2019-as-series-de-tv-canceladas-renovadas-e-todas-as-novidades/">CALENDÁRIO 2018</a></li>
+            <li><a href="/criticas?section=series-tv">CRÍTICAS</a></li>
+            <li><a href="/noticias?section=series-tv">NOTÍCIAS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-xl-5 footer__nav__list">
+          <h3>HQs e LIVROS</h3>
+          <ul>
+            <li><a href="/comic-con">SAN DIEGO COMIC CON</a></li>
+            <li><a href="/criticas?section=quadrinhos">CRÍTICAS</a></li>
+            <li><a href="/noticias?section=quadrinhos">NOTÍCIAS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-4 footer__nav__list">
+          <h3>Música</h3>
+          <ul>
+            <li><a href="/criticas?section=musica">CRÍTICAS</a></li>
+            <li><a href="/noticias?section=musica">NOTÍCIAS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xl-1 col-lg-2 col-md-2 offset-xl-2">
+          <div class="search search--open">
+            <i class="icon icon-search"></i>
+            <div class="search__input"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+</footer>
+
+
+
+  
+
+
+<script type="text/javascript">
+  // Adding json and gpt info to the jS
+  var slots = {"desktop": {"arroba-m2": {"name": "arroba-m2", "tag": "/18178082/omelete/arroba_m2", "div_id": "div-gpt-ad-arroba-m2", "sizes": [300, 250]}, "arroba-1": {"name": "arroba-1", "tag": "/18178082/omelete/arroba_1", "div_id": "div-gpt-ad-arroba-1", "sizes": [300, 250]}, "contagem": {"name": "contagem", "tag": "/18178082/omelete/contagem", "div_id": "div-gpt-ad-contagem", "sizes": [300, 150]}, "superior": {"name": "superior", "tag": "/18178082/omelete/superior", "div_id": "div-gpt-ad-superior", "sizes": [[728, 90], [970, 250]]}, "arroba-m1": {"name": "arroba-m1", "tag": "/18178082/omelete/arroba_m1", "div_id": "div-gpt-ad-arroba-m1", "sizes": [300, 250]}, "inferior": {"name": "inferior", "tag": "/18178082/omelete/inferior", "div_id": "div-gpt-ad-inferior", "sizes": [[970, 250], [728, 90], [1260, 700]]}, "superheader": {"name": "superheader", "tag": "/18178082/omelete/superheader", "div_id": "div-gpt-ad-superheader", "sizes": [320, 100]}, "arroba-2": {"name": "arroba-2", "tag": "/18178082/omelete/arroba_2", "div_id": "div-gpt-ad-arroba-2", "sizes": [300, 250]}, "background": {"name": "background", "tag": "/18178082/omelete/background", "div_id": "div-gpt-ad-background", "sizes": [1800, 1000]}, "meio": {"name": "meio", "tag": "/18178082/omelete/meio", "div_id": "div-gpt-ad-meio", "sizes": [[300, 600], [300, 250]]}, "booster": {"name": "booster", "tag": "/18178082/omelete/booster", "div_id": "div-gpt-ad-booster", "sizes": [1695, 920]}, "rodape": {"name": "rodape", "tag": "/18178082/omelete/rodape", "div_id": "div-gpt-ad-rodape", "sizes": [320, 50]}}, "mobile": {"arroba-m2": {"name": "arroba-m2", "tag": "/18178082/omelete/arroba_m2", "div_id": "div-gpt-ad-arroba-m2", "sizes": [300, 250]}, "arroba-1": {"name": "arroba-1", "tag": "/18178082/omelete/arroba_1", "div_id": "div-gpt-ad-arroba-1", "sizes": [300, 250]}, "contagem": {"name": "contagem", "tag": "/18178082/omelete/contagem", "div_id": "div-gpt-ad-contagem", "sizes": [300, 150]}, "superior": {"name": "superior", "tag": "/18178082/omelete/superior", "div_id": "div-gpt-ad-superior", "sizes": [[728, 90], [970, 250]]}, "arroba-m1": {"name": "arroba-m1", "tag": "/18178082/omelete/arroba_m1", "div_id": "div-gpt-ad-arroba-m1", "sizes": [300, 250]}, "inferior": {"name": "inferior", "tag": "/18178082/omelete/inferior", "div_id": "div-gpt-ad-inferior", "sizes": [[970, 250], [728, 90], [1260, 700]]}, "superheader": {"name": "superheader", "tag": "/18178082/omelete/superheader", "div_id": "div-gpt-ad-superheader", "sizes": [320, 100]}, "arroba-2": {"name": "arroba-2", "tag": "/18178082/omelete/arroba_2", "div_id": "div-gpt-ad-arroba-2", "sizes": [300, 250]}, "background": {"name": "background", "tag": "/18178082/omelete/background", "div_id": "div-gpt-ad-background", "sizes": [1800, 1000]}, "meio": {"name": "meio", "tag": "/18178082/omelete/meio", "div_id": "div-gpt-ad-meio", "sizes": [[300, 600], [300, 250]]}, "booster": {"name": "booster", "tag": "/18178082/omelete/booster", "div_id": "div-gpt-ad-booster", "sizes": [1695, 920]}, "rodape": {"name": "rodape", "tag": "/18178082/omelete/rodape", "div_id": "div-gpt-ad-rodape", "sizes": [320, 50]}}};
+  var gpt_keys = {"page_type": "content", "tags": ["Under The Dome", "Os Mercen\u00e1rios 3", "Inside Llewyn Davis", "Robocop", "Once Upon A Time", "Globo De Ouro", "Inside Llewyn Davis:", "Desconectados", "A Lenda De Sleepy Hollow", "PCA 2015", "Salem", "Deadbeat", "Inside Llewyn Davis: Balada De Um Homem Comum", "The Fosters", "Betrayal", "Filhos Da Anarquia", "Garota Exemplar", "People'S Choice Awards 2015", "Balada De Um Homem Comum", "James Bond", "007", "Sleepy Hollow", "Downton Abbey", "O Mordomo Da Casa Branca", "Pris\u00e3o Invis\u00edvel", "Under The Dome - Pris\u00e3o Invis\u00edvel", "Programa\u00e7\u00e3o Da Tv", "People'S Choice Awards", "As Bem-Armadas", "Sons Of Anarchy", "The Walking Dead", "Alem\u00e3o", "Globo De Ouro 2015", "Mistresses", "Portlandia", "Teen Wolf", "Skyfall", "H\u00e9rcules"], "themes": ["programacao-da-tv"], "section": "series-tv", "content_type": "news", "environment": "production"};
+  var sponsors = {"logo_chamada": "/18178082/omelete/logo_chamada", "logo_especial_2": "/18178082/omelete/logo_especial_2", "logo_internas": "/18178082/omelete/logo_internas", "logo_especial_3": "/18178082/omelete/logo_especial_3", "logo_especial_1": "/18178082/omelete/logo_especial_1"};
+
+  function createCookie(name,value,days) {
+    var expires = '';
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = '; expires=' + date.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+
+  function readCookie(name) {
+      var nameEQ = name + '=';
+      var ca = document.cookie.split(';');
+      for(var i=0;i < ca.length;i++) {
+          var c = ca[i];
+          while (c.charAt(0) === ' ') {
+            c = c.substring(1,c.length);
+          }
+          if (c.indexOf(nameEQ) === 0) {
+            return c.substring(nameEQ.length,c.length);
+          }
+      }
+      return null;
+  }
+</script>
+
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var isMobile = false;
+  if (window.innerWidth <= 768) {
+    isMobile = true;
+  }
+
+  var gptAdSlots = {};
+  var googletag = googletag || {};
+
+  var desk = ['arroba-1', 'arroba-2', 'meio', 'inferior', 'superior',
+              'background', 'booster', 'contagem'];
+  var mob = ['arroba-m1', 'arroba-m2', 'rodape', 'superheader',
+             'contagem'];
+
+  var allSlots = Object.keys(slots.desktop).map(function(key) { return slots.desktop[key]; });
+
+  var desktopSlots = allSlots.filter(function(slot) {return desk.includes(slot.name);});
+
+  var mobileSlots = allSlots.filter(function(slot) {return mob.includes(slot.name);});
+
+  window.addEventListener("load", function () {
+    googletag.cmd = googletag.cmd || [];
+    googletag.cmd.push(function() {
+      if (!isMobile) {
+        gptAdSlots.desktop = [];
+
+        desktopSlots.forEach(function(slot){
+          gptAdSlots[slot.div_id] = googletag.defineSlot(slot.tag, slot.sizes, slot.div_id).addService(googletag.pubads());
+          gptAdSlots.desktop.push(gptAdSlots[slot.div_id]);
+        });
+
+//        for (slot_name in desktopSlots) {
+//            var slot = slots.desktop[slot_name];
+//            gptAdSlots[slot.div_id] = googletag.defineSlot(slot.tag, slot.sizes, slot.div_id).addService(googletag.pubads());
+//            // adding key_value
+//            gptAdSlots.desktop.push(gptAdSlots[slot.div_id]);
+//        }
+      } else {
+        gptAdSlots.mobile = [];
+
+        mobileSlots.forEach(function(slot){
+          gptAdSlots[slot.div_id] = googletag.defineSlot(slot.tag, slot.sizes, slot.div_id).addService(googletag.pubads());
+          gptAdSlots.mobile.push(gptAdSlots[slot.div_id]);
+        });
+//
+//        for (slot_name in slots.mobile) {
+//          var slot = slots.mobile[slot_name];
+//          gptAdSlots[slot.div_id] = googletag.defineSlot(slot.tag, slot.sizes, slot.div_id).addService(googletag.pubads());
+//          gptAdSlots.mobile.push(gptAdSlots[slot.div_id]);
+//        }
+      }
+
+      // var sponsoredBannerWhite = document.querySelectorAll('.sponsored-banner-white');
+      // var sponsoredBannerBlue = document.querySelectorAll('.sponsored-banner-blue');
+      var sponsorSlots = document.querySelectorAll('.sponsor-slots');
+      sponsorSlots.forEach(function(el, idx) {
+        var sponsorTag = el.dataset.sponsor;
+        var sizes = el.dataset.sizes.split(',');
+        var tagID = sponsorTag + '-' + idx;
+        var slotName = sponsors[sponsorTag];
+        if (slotName) {
+          el.setAttribute('id', tagID);
+          googletag.defineSlot(slotName, [parseInt(sizes[0]), parseInt(sizes[1])], tagID).addService(googletag.pubads());
+        } else {
+        }
+      });
+
+      // sponsoredBannerWhite.forEach(function(el, idx) {
+      //   var tagID = 'sponsored-banner-white-' + idx;
+      //   el.attr('id', tagID);
+      //   googletag.defineSlot('/283405803/Logo_Oferecimento', [153, 14], tagID).addService(googletag.pubads());
+      // });
+
+      // sponsoredBannerBlue.forEach(function(el, idx) {
+      //   var tagID = 'sponsored-banner-blue-' + idx;
+      //   el.attr('id', tagID);
+      //   googletag.defineSlot('/283405803/Logo_Oferecimento_2', [153, 14], tagID).addService(googletag.pubads());
+      // });
+
+      // sponsoredBannerWhiteBig.forEach(function(el, idx) {
+      //   var tagID = 'sponsored-banner-white-big-' + idx;
+      //   el.attr('id', tagID);
+      //   googletag.defineSlot('/283405803/Logo_Oferecimento_3', [160, 35], tagID).addService(googletag.pubads());
+      // });
+
+      googletag.pubads().addEventListener('slotRenderEnded', function (event) {
+
+        var elementId = event.slot.getSlotElementId();
+
+        if (event.isEmpty) {
+            if (elementId == "div-gpt-ad-superior") {
+              $('.banner.banner--mast-head').remove();
+              $('.background--enemy').removeClass('background--enemy--mast-head');
+              $('.background--grey').removeClass('background--grey--mast-head');
+            } else if (elementId.startsWith("div-gpt-ad-background")) {
+              $('html').removeClass('has-background-banner');
+              $('.banner--background').remove();
+            } else if (elementId == "div-gpt-ad-booster") {
+              // removed fadeOut because of jquery.slim
+              $('.banner--trailer-booster').remove();
+            } else {
+              
+            }
+        } else {
+            if (elementId == "div-gpt-ad-superior") {
+              $('.banner.banner--mast-head').addClass('banner--mast-head--visible');
+              $('.background--enemy').addClass('background--enemy--mast-head');
+              $('.background--grey').addClass('background--grey--mast-head');
+            } else if (elementId == "div-gpt-ad-background") {
+              $('.banner.banner--mast-head').remove();
+            } else if (elementId.startsWith('div-gpt-ad-background')) {
+              $(elementId).closest('.banner--background').addClass('banner--background--visible');
+            } else if (elementId == "div-gpt-ad-booster") {
+              setTimeout(function() {
+                // removed fadeOut because of jquery.slim
+                $('.banner--trailer-booster').remove();
+              }, 35000);
+            }
+
+            // set 'inferior' ad size correctly
+            if (elementId.startsWith('div-gpt-ad-inferior') && event.size.length == 2) {
+              var inferiorAd = $('#' + elementId);
+              inferiorAd.width(event.size[0]).height(event.size[1]);
+              inferiorAd.parent().width(event.size[0]);
+
+              if( event.size[0] !== 1260 && event.size[1] !== 700 ){
+                inferiorAd.closest('.banner--parallax').addClass('parallax--inactive')
+              }
+            }
+
+            // set 'mast-head' ad size correctly
+            if (elementId.startsWith('div-gpt-ad-superior') && event.size.length == 2) {
+              var superiorAd = $('#' + elementId);
+              superiorAd.width(event.size[0]).height(event.size[1]);
+              superiorAd.parent().width(event.size[0]);
+            }
+        }
+
+      });
+
+      googletag.pubads().disableInitialLoad();
+      googletag.pubads().enableSingleRequest();
+
+      // tail
+      var _ttprofiles = window._ttprofiles || [];
+
+      googletag.pubads().setTargeting("age", _ttprofiles.getAge);
+      googletag.pubads().setTargeting("equipment", _ttprofiles.getEquipment);
+      googletag.pubads().setTargeting("customaudiences", _ttprofiles.getCustomAudience);
+      googletag.pubads().setTargeting("gender", _ttprofiles.getGender);
+      googletag.pubads().setTargeting("microsegments", _ttprofiles.getMicrosegments);
+      googletag.pubads().setTargeting("profiles", _ttprofiles.getProfiles);
+      googletag.pubads().setTargeting("socialclass", _ttprofiles.getSocialClass);
+      googletag.pubads().setTargeting("subjects", _ttprofiles.getSubjects);
+      googletag.pubads().setTargeting("team", _ttprofiles.getTeam);
+
+      // key value
+      for (var key in gpt_keys) {
+        var key_value = gpt_keys[key];
+        googletag.pubads().setTargeting(key, key_value);
+      }
+
+      googletag.enableServices();
+
+      if (!isMobile) {
+
+        desktopSlots.forEach( function(slot){
+          googletag.display(slot.div_id);
+        });
+//          for (slot_name in slots.desktop) {
+//            var slot = slots.desktop[slot_name];
+//            googletag.display(slot.div_id);
+//          }
+          googletag.pubads().refresh(gptAdSlots.desktop);
+      } else {
+
+        mobileSlots.forEach( function(slot){
+          googletag.display(slot.div_id);
+        });
+//          for (slot_name in slots.mobile) {
+//            var slot = slots.mobile[slot_name];
+//            googletag.display(slot.div_id);
+//          }
+          googletag.pubads().refresh(gptAdSlots.mobile);
+      }
+
+      // sponsoredBannerWhite.forEach(function(el, idx) {
+      //   googletag.display(el.attr('id'));
+      // });
+
+      // sponsoredBannerBlue.forEach(function(el, idx) {
+      //   googletag.display(el.attr('id'));
+      // });
+
+      // sponsoredBannerWhiteBig.forEach(function(el, idx) {
+      //   googletag.display(el.attr('id'));
+      // });
+    });
+  }, false);
+
+  function refreshGalleryAd(id) {
+    googletag.cmd.push(function() {
+        googletag.pubads().refresh([gptAdSlots[id]]);
+    });
+  };
+
+  function refreshAds(ids) {
+    if (!ids || !Array.isArray(ids)) {
+      return;
+    }
+    googletag.cmd.push(function() {
+      ids.forEach(function (id) {
+        googletag.display(id);
+        googletag.pubads().refresh([gptAdSlots[id]]);
+      });
+    });
+  }
+</script>
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-1826697-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+<meta name="google-site-verification" content="hCFQMJWhgJvgAHP8WyJTpZfMfHVNMSa9GsTj39662_k" />
+
+
+<meta name="google-site-verification" content="iTPXZ1POnZq80tracAvjJuIfkwym9JjdRDOk-glyL1I" />
+
+
+<meta name="p:domain_verify" content="e666affb1012fb19c957d470e41d349e" />
+
+
+<link href="https://plus.google.com/115416604494251056860" rel="publisher" />
+
+
+<script id="tailtarget" type="text/javascript">
+  // <![CDATA[
+  var _ttprofiles = _ttprofiles || [];
+  _ttprofiles.profiles = [];
+  _ttprofiles.push(['_setAccount', 'TT-9804-3']); // _setAccount
+  _ttprofiles.push(['_enableServices']);
+  document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? "https:" : "http:") + "//d.tailtarget.com/profiles.js'></scr" + "ipt>");
+  // ]]>
+</script>
+
+
+
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','//connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1022132447830898');
+  fbq('track', "PageView");
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1022132447830898&ev=PageView&noscript=1"/></noscript>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1062127218"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-1062127218'); </script>
+
+
+<!-- jQUery mobile -->
+<script src="https://cdn.ome.lt/static/omelete/js/vendor/jquery.mobile.custom.min.js"></script>
+<!-- End of jQUery mobile -->
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  window.addEventListener("load", function () {
+    (function () {
+      var u = "//analytics.ome.lt/";
+      _paq.push(['setTrackerUrl', u + 'piwik.php']);
+      _paq.push(['setSiteId', '4']);
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
+    })();
+  }, false);
+</script>
+<noscript>
+  <p>
+    <img src="//analytics.ome.lt/piwik.php?idsite=4&rec=1" style="border:0;" alt="" />
+  </p>
+</noscript>
+<!-- End Matomo Code -->
+
+</body>
+</html>

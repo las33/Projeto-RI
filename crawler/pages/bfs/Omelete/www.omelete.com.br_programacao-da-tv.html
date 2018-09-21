@@ -1,0 +1,1749 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.ome.lt/static/omelete/css/style.min.css?v=1"/>
+
+  <title>Omelete | Programação da TV</title>
+  <link rel="preload" href="https://cdn.ome.lt/static/omelete/img/omelete_logo.svg" as="image">
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"licenseKey":"48f7507bbb","beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","queueTime":0,"transactionName":"NlYGMEoAD0UEARZYDA8cIhFWAhVfCgxNRQsAXQsXFhIIQgBMD0QPFVpKElEEFkVLAANCBltQCwpMBA9COgQHRQAJ","applicationID":"135988681","agent":"","applicationTime":4076}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="icon" type="image/png" sizes="96x96" href="https://cdn.ome.lt/static/omelete/img/favicon.png">
+
+<!-- Outbrain -->
+<script type="text/javascript" src="https://widgets.outbrain.com/outbrain.js"></script>
+<!-- End of Outbrain -->
+
+  <meta name="description" content="">
+
+  
+
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Omelete">
+  
+  <meta property="fb:pages" content="166251050655700" />
+  
+  
+<meta property="og:title" content="Programação da TV" />
+<meta property="og:url" content="http://www.omelete.com.br/programacao-da-tv" />
+
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+
+  <script>
+    var allGalleries = {};
+    var contentAlreadyParsed = {};
+  </script>
+  
+
+<!-- TailTarget Tag Manager TT-9804-3/CT-153 -->
+<script>
+  (function(i) {
+  var ts = document.createElement('script');
+  ts.type = 'text/javascript';
+  ts.async = true;
+  ts.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tags.t.tailtarget.com/t3m.js?i=' + i;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ts, s);
+  })('TT-9804-3/CT-153');
+</script>
+<!-- End TailTarget Tag Manager -->
+
+<!-- Global site tag (gtag.js) - AdWords: 1062127218 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1062127218"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){
+    dataLayer.push(arguments);
+  } gtag('js', new Date());
+  gtag('config', 'AW-1062127218');
+</script>
+
+<!-- Inicio da tag TT de segmencatao -->
+<script id="tailtarget" type="text/javascript">
+// <![CDATA[
+var _ttprofiles = _ttprofiles || [];
+_ttprofiles.profiles = [];
+_ttprofiles.push(['_setAccount', 'TT-9804-3']); // _setAccount
+_ttprofiles.push(['_enableServices']);
+document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? "https:" : "http:") + "//d.tailtarget.com/profiles.js'></scr" + "ipt>");
+// ]]>
+</script>
+
+<!-- Final da tag TT de segmentacao -->
+
+<script type='text/javascript'>
+  var _tt_omelete = _tt_omelete || [];
+  _tt_omelete.push(['_channel', 'programacao-da-tv']);
+</script>
+
+  
+  <link rel="canonical" href="https://www.omelete.com.br/programacao-da-tv" />
+
+</head>
+
+<body>
+
+
+<header class="header">
+
+<div class="container container--venom">
+    <div class="row header__wrapper">
+      <div class="col-4 d-md-none">
+        <div class="header__wrapper__menu">
+          <button class="btn-menu">
+            <span class="btn-menu__line"></span>
+            <span class="btn-menu__line"></span>
+            <span class="btn-menu__line"></span>
+          </button>
+          </button>
+        </div>
+      </div>
+      <div class="col-16 col-md-20 col-lg-18 col-xl-20">
+        <div class="header__wrapper__logo">
+          <div class="logo" style="visibility: hidden;">
+            <a href="/">
+              
+                <img class="logo__img" src="https://cdn.ome.lt/static/omelete/img/omelete_logo.svg" alt="Omelete">
+              
+            </a>
+          </div>          
+
+          <div class="links links--category links--mobile">
+            
+            
+            <ul class="links__list links__list--underline">
+              <li class="links__list__item d-block d-md-none"><a href="/">HOME</a></li>
+              <li class="links__list__item"><a href="/filmes">FILMES</a></li>
+              <li class="links__list__item"><a href="/series-tv">SÉRIES e TV</a></li>
+              <li class="links__list__item"><a href="/quadrinhos">HQs e LIVROS</a></li>
+              <li class="links__list__item"><a href="/musica">MÚSICA</a></li>
+              <li class="links__list__item"><a href="/videos">VÍDEOS</a></li>
+              <li class="links__list__item links__list__item--special"><a href="https://store.omelete.com.br/?utm_source=site_omelete&utm_medium=link&utm_campaign=link_site_omelete" target="_blank">OMELETE STORE</a></li>
+            </ul>
+
+            <div class="links--mobile__social">
+                <div class="links links--social">
+  <ul class="links__list links__list--icon">
+    <li class="links__list__item"><a class="icon-facebook" href="https://www.facebook.com/SiteOmelete/" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-instagram" href="https://www.instagram.com/omelete/" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-twitter" href="https://twitter.com/omelete" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-youtube-play" href="https://www.youtube.com/user/omeleteve" target="_blank"></a></li>
+  </ul>
+</div>
+            </div>
+
+            <div class="links__overlay"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 col-md-4 col-lg-6 col-xl-4">
+        <div class="header__wrapper__search">
+          <div class="search search--open">
+            <i class="icon icon-search"></i>
+            <div class="search__input">
+            </div>
+          </div>
+
+          <div class="separator d-none d-md-block"></div>
+
+          <div class="social  d-none d-md-block">
+              <div class="links links--social">
+  <ul class="links__list links__list--icon">
+    <li class="links__list__item"><a class="icon-facebook" href="https://www.facebook.com/SiteOmelete/" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-instagram" href="https://www.instagram.com/omelete/" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-twitter" href="https://twitter.com/omelete" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-youtube-play" href="https://www.youtube.com/user/omeleteve" target="_blank"></a></li>
+  </ul>
+</div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="logo-venom">
+      <iframe src="https://cdn.ome.lt/static/omelete/specials/venom/logo-venom.html">
+      </iframe>
+      <div class="logo-venom__clickable"></div>
+    </div>
+</div>
+ 
+</header>
+
+
+
+
+  
+
+  
+    
+    <div class="banner banner--mast-head  ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-superior" ></div>
+      </div>
+    </div>
+    
+  
+
+
+
+<main class="page page--theme">
+  <div class="main">
+<section class="section section--theme section--main theme theme--no-image">
+  <section class="theme__head">
+    <div class="container">
+      <div class="row align-items-center top">
+        <div class="d-none d-md-block col-md-3 col-lg-2">
+          <div class="top__social">
+            <div class="links links--social">
+    <ul class="links__list links__list--icon links__list--column links__list--circle">
+      
+      <li class="links__list__item"><a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//omelete.com.br/programacao-da-tv"></a></li>
+      <li class="links__list__item"><a class="icon icon-twitter" target="_blank" href="https://twitter.com/intent/tweet?text= https%3A//omelete.com.br/programacao-da-tv"></a></li>
+      <li class="links__list__item"><a class="icon icon-email" target="_blank" href="mailto:?subject=&body=https%3A//omelete.com.br/programacao-da-tv"></a></li>
+      <li class="links__list__item"><a class="icon icon-whatsapp" target="_blank" href="https://api.whatsapp.com/send?text= https%3A//omelete.com.br/programacao-da-tv"></a></li>
+    </ul>
+  </div>
+          </div>
+        </div>
+
+        <div class="col-md-21 col-lg-22">
+            <div class="top__title">
+              <h1><span>Tudo sobre</span>Programação da TV</h1>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col border-yellow">
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="theme__body">
+    <div class="container">
+      
+      <div class="row">
+        <div class="col-24 col-lg-16 col-xl-17">
+          <div class="col-22 offset-1">
+              <div class="content article--content">
+                  <div class="d-sm-block d-md-none content__social">
+                    <div class="links links--social">
+    <ul class="links__list links__list--icon links__list--column links__list--circle">
+      
+      <li class="links__list__item"><a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//omelete.com.br/programacao-da-tv"></a></li>
+      <li class="links__list__item"><a class="icon icon-twitter" target="_blank" href="https://twitter.com/intent/tweet?text= https%3A//omelete.com.br/programacao-da-tv"></a></li>
+      <li class="links__list__item"><a class="icon icon-email" target="_blank" href="mailto:?subject=&body=https%3A//omelete.com.br/programacao-da-tv"></a></li>
+      <li class="links__list__item"><a class="icon icon-whatsapp" target="_blank" href="https://api.whatsapp.com/send?text= https%3A//omelete.com.br/programacao-da-tv"></a></li>
+    </ul>
+  </div>
+                  </div>
+                
+                  <p><img alt="programacao" border="0" height="253" src="https://cdn.ome.lt/media/uploads/conteudo/fotos/Programacao-da-semana-20mar.jpg" title="programacao" width="760"/></p>
+                
+                  <p>Por <strong>Ederli Fortunato</strong></p>
+                
+                  <p>Conheça os destaques da programação da TV entre<strong> 23 e 29 de março:</strong></p>
+                
+                  <div class="progtvnav">
+<ul>
+<li><a href="#especiais">Especiais</a></li>
+<li><a href="#filmes">Filmes</a></li>
+<li><a href="#infanto-juvenil">Infanto-Juvenil</a></li>
+<li><a href="#series">Séries</a></li>
+<li><a href="#entrevistas">Entrevistas</a></li>
+</ul>
+</div>
+                
+                  <h2><a name="especiais"></a><strong>Especiais</strong></h2>
+                
+                  <p><strong><em>Art:21:</em></strong> Documentário sobre artistas e influências da atualidade. No programa, <strong>Kerry James Marshall</strong> mescla influências renascentistas e tradições africanas para criar uma visão crítica dos Estados Unidos e <strong>Andrea Zittel</strong> mostra seu estúdio em Nova York. <br/> Film &amp; Arts, 24/3, 20h45</p>
+                
+                  <p><strong><em>Led Zeppelin: The Song Remains the Same:</em></strong> Show filmado no Madison Square Garden em 1973. Além das cenas de palco, o longa inclui fantasias de cada um dos membros da banda, e parte de suas férias antes do show.<br/> TCM, 24/3, 22h</p>
+                
+                  <p><strong><em>Nos Passos de Marie Curie:</em></strong> Documentário que traça a vida da cientista desde seu nascimento na Polônia até sua mudança para a França. Marie foi a primeira a se tornar Doutora em Física e a única mulher a ganhar dois prêmios Nobel. O especial combina fotos, filmagens e entrevistas com historiadores e cientistas, além de reconstituições com atores<strong><em>. </em></strong><br/> Eurochannel, 26/3, 21h</p>
+                
+                  <p><strong><em>Brinquedos de Luxo:</em></strong> Série nacional que pretende mostrar o melhor e o mais caro disponível a quem quer esbanjar recursos. Carros, relógios, instrumentos musicais, tudo o que existe para o comprador endinheirado. <br/> +Globosat, 26/3, 21h</p>
+                
+                  <p><strong><em>A Maldição de Oak Island:</em></strong> Estreia da nova temporada da série que acompanha os irmãos <strong>Ricky</strong> e <strong>Marty Lagina</strong> na luta para descobrir o mistério que há séculos afeta a ilha canadense. Os rumores da ilha envolvem túneis misteriosos, moedas espanholas, e a lenda de que o mistério só será resolvido após a morte de um certo número de pessoas. <br/> The History Channel, 27/3, 22h</p>
+                
+                  <p><strong><em>Lollapalooza Brasil 2015: </em></strong>Transmissão dividida entre dois canais. No Multishow ficam as apresentações do Palco 1 e Palco Chevrolet Onix. No BIS entram os shows do Palco Axe. <br/> Multishow e BIS, 28/3, 13h40 e 29/3, 14h</p>
+                
+                  <p><strong><em>Luta Contra os Hackers:</em></strong> O especial mostra as modernas como técnicas de criptografia tentam manter seguros os dados de clientes de bancos e outras empresas. O documentário também examina o papel da matemática e da física na construção de um novo tipo de computador como forma de evitar invasões. Colaborador da revista Wired, Mat Honan descreve como foi ele mesmo vítima de um golpe que começou com um telefonema a um site de compras onde foi possível roubar sua identidade. <br/> The History Channel, 28/3, 20h</p>
+                
+                  <h2><a name="filmes"></a><strong>Filmes</strong></h2>
+                
+                  <p><strong><em><a href="/filmes/poltergeist-o-fenomeno-1/">Poltergeist – O Fenômeno</a>:</em></strong> Um casal muda-se para uma nova casa sem saber que o lugar é assombrado por espíritos até que a filha pequena é sequestrada para dentro da TV. <br/> TCM, 23/3, 1h40</p>
+                
+                  <p><a href="/filmes/duplicidade/"><strong><em>Duplicidade</em></strong>:</a> Cinco anos depois de um encontro em Dubai, uma ex agente da CIA e um ex agente do MI6, ambos agora trabalhando em segurança corporativa. Empregados de empresas rivais, os dois têm de aprender a trabalhar juntos para realizarem seu próprio golpe, já que uma das companhias está para lançar um produto revolucionário. <br/> Universal, 23/3, 17h40</p>
+                
+                  <p><a href="/filmes/sin-city/"><strong><em>Sin City: A Cidade do Pecado:</em></strong></a> Adaptação dos quadrinhos de <strong>Frank Miller</strong> ambientada em uma cidade tomada pela corrupção e violência. Nesse cenário sem saída, um policial tenta fazer algo certo enquanto um assassino tenta ganhar algum dinheiro. <br/> Universal, 23/3, 19h55</p>
+                
+                  <p><strong><em>Christine, O Carro Assassino:</em></strong> Em 1957, um carro vermelho causa dois acidentes ainda na linha de montagem. Vinte e um anos depois, Arnie encontra o carro em um ferro velho e resolve restaurá-lo, mas a partir do momento em que Christine chega à oficina, a personalidade de Arnie passa a mudar, colocando em risco todos que o ameaçam. <br/> MGM, 23/3, 20h55</p>
+                
+                  <p><strong><em>Especial – Semana Criminal:</em></strong> Uma seleção dedicada ao pessoal que curte tramas sobre crimes, incluindo a biografia do terrorista Carlos, o Chacal.<br/> 23/3 - <a href="/filmes/insonia-2002/"><em>Insônia</em></a><br/> 24/3 - <a href="/filmes/instinto-secreto"><em>Instinto Secreto</em></a><br/> 25/3 - <em>Carlos</em><br/> 26/3 - <a href="/alpha-dog/"><em>Alpha Dog</em></a><br/> 27/3 - <em>Cidade do Silêncio</em><br/> Paramount Channel, 22h</p>
+                
+                  <p><strong><em><a href="/filmes/alem-da-escuridao-star-trek/">Além da Escuridão – Star Trek</a>:</em></strong> J.J. Abrams segue com a nova versão de Jornada nas Estrelas, com <strong>Chris Pine</strong> como um Capitão Kirk um pouco mais experiente que no filme anterior, mas não o suficiente para evitar que ele desobedeça as regras da Frota Estelar. Punido com a perda do posto de Capitão, Kirk ainda assim acaba no centro da ação quando um encontro de oficiais é atacado por um agente renegado, iniciado uma caçada humana. <br/> Telecine Premium, 23/3, 23h45</p>
+                
+                  <p><strong><em><a href="/filmes/a-mulher-de-preto/">A Mulher de Preto</a>:</em></strong> Daniel Radcliffe segue com a carreira pós-Harry Potter nesse suspense sobrenatural. Arthur Kipps é um corretor de imóveis enviado a um lugar distante para regularizar a situação de uma mansão abandonada. Chegando lá, ele passa a ter visões do lugar, incluindo uma mulher vestida de preto que parece procurar alguma coisa. <br/> Cinemax, 25/3, 18h55</p>
+                
+                  <p><strong><em>Angélique:</em></strong> Longa de 2013 baseado na série de livros escrita pelo casal <strong>Serge </strong>e<strong> Anne Golon</strong> lançada aqui como <em>Angélica – A Marquesa dos </em>Anjos, e que também teve outra adaptação em cinco filmes nos anos 60. Ambientada no século 17, é uma história romântica de uma adolescente nobre, Angélique, que casa por obrigação, como era normal na época, mas se apaixona por seu marido, o poderoso Joffrey de Peyrac. Só que o poder de Peyrac é considerado uma ameaça para muitos e ele é preso sob a acusação de bruxaria, levando Angélique a enfrentar a corte de Luís XIV. <br/> Telecine Touch, 26/3, 2h55</p>
+                
+                  <p><strong><em>O Mensageiro Bate Três Vezes: </em></strong>Fantasia que explora os desejos de cada um e os constantes postergsmentos que projetos e planos sofrem diante das exigências do dia a dia até que um dia algo tenha que ser feito. No caso de Marju, isso acontece quando um homem misterioso surge em sua vida. <strong><em><br/> </em></strong>Eurochannel, 27/3, 21h</p>
+                
+                  <p><a href="/filmes/mesmo-se-nada-der-certo/"><strong><em>Mesmo se Nada Der Certo:</em></strong></a> Gretta e Dave são namorados e parceiros na música até que ele consegue um contrato com uma gravadora. Abandonada, Gretta segue tocando em lugares pequenos até ser descoberta por Dan, um produtor musical demitido e afastado da família. <br/> Telecine Premium, 27/3, 22h</p>
+                
+                  <p><strong><em><a href="/filmes/diario-de-um-jornalista-bebado/">Diário de um Jornalista Bêbado</a>:</em></strong> <strong>Johnny Depp</strong> é Paul Kemp, um jornalista em um trabalho como freelancer em Porto Rico nos anos 60. O trabalho não é grande coisa, mas seu editor promete temas melhores. Enquanto isso, Paul faz amizade com Sala, outro repórter beberrão, os dois se envolvem em problemas. <br/> Telecine Touch, 28/3, 2h05</p>
+                
+                  <p><strong><em>Maratona Star Wars:</em></strong> Todos os filmes da saga exibidos na ordem de lançamento:<br/> 12h - <a href="/filmes/star-wars-episodio-iv-uma-nova-esperanca/"><em>Star Wars: Episódio IV - Uma Nova Esperança </em></a><br/> 14h25 - <a href="https://omelete.com.br/filmes/star-wars-episodio-v-o-imperio-contra-ataca/"><em>Star Wars: Episódio V - O Império Contra-ataca</em></a><br/> 16h55 - <a href="/filmes/star-wars-episodio-vi-o-retorno-de-jedi/"><em>Star Wars: Episódio VI - O Retorno de Jedi </em></a><br/> 19h25 - <a href="/filmes/star-wars-episodio-i-a-ameaca-fantasma/"><em>Star Wars: Episódio I - A Ameaça Fantasma </em></a><br/> 22h - <a href="/filmes/star-wars-episodio-ii-ataque-dos-clones/"><em>Star Wars: Episódio II - Ataque dos Clones </em></a><br/> 0h40 - <a href="/filmes/star-wars-episodio-iii-a-vinganca-dos-sith/"><em>Star Wars: Episódio III - Vingança dos Sith </em></a><br/> Megapix, 28/3</p>
+                
+                  <p><strong><em>Policial em Apuros:</em></strong> Ben tem de provar para o irmão de sua namorada que é digno do amor da garota. O problema é que ele é segurança em um colégio, enquanto o futuro cunhado é um policial linha dura. Para encerrar a discussão, Ben propõe que os dois saiam em patrulha juntos. <br/> Telecine Premium, 28/3, 22h</p>
+                
+                  <p><strong><em><a href="/filmes/uma-aventura-lego/">Uma Aventura LEGO</a>:</em></strong> Os tijolinhos ganham vida com a animação estrelada por Emmet, um bonequinho comum que é confundido com o Master Builder, o grande criador do mundo LEGO. E tudo porque ele encontrou uma peça importante, capaz de desarmar uma máquina criada pelo Sr. Negócios.<br/> HBO, 28/3, 22h05</p>
+                
+                  <p><strong><em>Sessão Adrenalina Em Dose Dupla:</em></strong> Dois filmes com <strong>Channing Tatum</strong>, o primeiro como um policial que precisa se livrar de uma perseguição e o segundo como um rapaz que se envolve com lutas de rua. <strong><em><br/> </em></strong>20h10 - <em>Anti-Heróis </em><br/> 22h - <a href="/filmes/vale-tudo-2009/"><em>Veia de Lutador</em></a><br/> Telecine Action, 29/3</p>
+                
+                  <p><strong><em>Mary Poppins: </em></strong>George Banks busca uma babá para seus filhos e encontra a mágica Mary Poppins no musical que inclui várias cenas de atores contracenando com animação. Para ver o esforço de Walt Disney tentando adaptar o livro de <strong>P.L.Travers</strong> para o cinema, vale assistir <em>Walt nos Bastidores de Mary Poppins</em> (Telecine Pipoca, 24/3, 17h30). <br/> Telecine Cult, 29/3, 22h</p>
+                
+                  <p><strong><em>Pronto Para Recomeçar</em></strong>: <strong>Will Ferrell</strong> interpreta um homem que perde o emprego e a família por conta do alcoolismo. Expulso de casa por sua esposa, ele resolve ficar no jardim de casa e é informado por seu amigo policial que a lei permite que ele fique no local por cinco dias caso realize alguma venda. <br/> Paramount channel, 29/3, 22h</p>
+                
+                  <h2><a name="series"></a><strong>Infanto-Juvenil</strong></h2>
+                
+                  <p><strong><em>Yu-Gi-Oh:</em></strong> Yugi consegue resolver o quebra-cabeça dado por seu avô e seu corpo passar a ser habitado por um espírito. Juntos eles precisam impedir o retorno do demônio Zorc. <br/> Play TV, 23/3, 16h30</p>
+                
+                  <p><strong><em>Doutora Brinquedos Escola de Medicina: </em></strong>Programação especial com episódios inéditos e curtas sobre a importância da medicina. <br/> Disney Júnior, 24 e 27/3, 11h30</p>
+                
+                  <p><strong><em>Maratona Crossover:</em></strong> Seleção de episódios de <em>Jessie, Boa Sorte, Charlie!, No Ritmo, Liv e Maddie, Não Fui Eu</em> e <em>Austin e Ally</em> em que houve participação de atores convidados de outras séries e filmes. <br/>Disney Channel, 28/3, 13h às 20h</p>
+                
+                  <p><strong><em>Max &amp; Sherd:</em></strong> Um garoto vai para o Colorado para treinar para as Olimpíadas de Inverno. Ele acaba dividindo quarto com um fanático por ciência. Apesar das diferenças em estilos de vida e gostos, os dois se tornam amigos. <br/>Nickelodeon, 23/3, 20h</p>
+                
+                  <h2><a name="series"></a><strong>Séries</strong></h2>
+                
+                  <p><a href="/series-tv/mozart-in-the-jungle-2014-/"><strong><em>Mozart in the Jungle:</em></strong></a> Série inspirada pelo livro <em>Mozart in the Jungle: Sex, Drugs and Classical Music</em>, escrito pela oboista <strong>Blair Tindall</strong>. Ambientada no universo da música clássica, a série acompanha a também oboista Hailey, que sonha com uma grande carreira, faz amizade com uma musicista veterana e tem de lidar com o maestro Rodrigo, personagem interpretado por <strong>Gael García Bernal.</strong><br/> Clarovídeo</p>
+                
+                  <p><a href="/series-tv/outlander-2014-/"><strong><em>Outlander:</em></strong></a> Adaptação da série de livros de <strong>Diana Gabaldon</strong> que mistura romance histórico e viagem no tempo. Claire é uma mulher casada que após a Segunda Guerra Mundial vai para a Escócia com o marido para se reaproximar após os anos de separação devido ao conflito. Um dia, ela toca em um antigo círculo de pedras e é transportada para o século XVII, onde conhece Jamie, nobre escocês perseguido pelos ingleses e pelo qual Claire acaba se apaixonando. <br/> ClaroVídeo</p>
+                
+                  <p><a href="/series-tv/grimm/"><strong><em>Grimm:</em></strong></a> Na história inspirada pelo livro Anna Karenina, de <strong>Leo Tolstói</strong>, três garotos que se dizem caça-fantasmas seguem para uma casa abandonada para gravar vídeos para a Internet. No lugar, um casal morreu eletrocutado, dando origem à lenda de que o fantasma do homem morto vaga pela casa à noite. Enquanto isso, Juliette pede ajuda a Renard.<br/> Universal, 23/3, 22h</p>
+                
+                  <p><a href="/series-tv/mom-2013-/"><em><strong><em>Mom: </em></strong></em></a>Episódio com participação especial. Em <em>"</em>Raw Cookie Dough and a Misshapen Head!”, <strong>David Krumholtz</strong>, de <em>Numbers</em>, aparece como o namorado de Violet. <br/> Warner, 24/3, 20h</p>
+                
+                  <p><a href="r/series-tv/orphan-black/"><strong><em>Orphan Black: </em></strong></a>Nos dois últimos episódios da segunda temporada, Sarah continua tentando preservar sua filha, enquanto fica claro que Kira está no centro de tudo. Enquanto isso, o estado de Cosima piora. E no episódio final, Sarah e o Clube das Clones divergem mais uma vez.<br/> A&amp;E, 24/3, 21h e 22h</p>
+                
+                  <p><strong><em><a href="/series-tv/law-order-special-victims-unit/">Law &amp; Order: SVU</a>:</em></strong> Participação especial de <strong>Robert Vaughn</strong>, de <em>O Homem da Uncle</em>, e de <strong>Marcia Cross</strong>, de <em>Desperate Housewives</em>, na história de uma mulher denunciada pelas filhas de seu atual marido. O pai das moças costumava ser um homem brilhante, agora, ele tem falhas de memória e lapsos de lucidez. As filhas afirmam ser efeito dos remédios fornecidos pela madrasta. <br/> Universal, 24/3, 22h</p>
+                
+                  <p><strong><em><a href="/series-tv/necessary-roughness-2011-2013/">Necessary Roughness</a>:</em></strong> Final da terceira e última temporada da série que explorou a entrada de uma mulher no ambiente masculino do futebol americano. Afastado do time pelo qual trabalhou tanto, TK busca vingança pela demissão, enquanto Dani e Nico descobrem os detalhes dos esquemas de Connor. <br/> Lifetime, 24/3, 22h30</p>
+                
+                  <p><a href="/series-tv/chicago-pd/"><strong><em>Chicago P.D.: </em></strong></a>Voight desconfia que Jay e Erin estão tendo um relacionamento enquanto a equipe é chamada para ajudar a divisão de Narcóticos, que tem um policial infiltrado desaparecido. Para encontrar o colega sem estragar a investigação, Antonio é escolhido para contatar um traficante, mas ele precisa ganhar a confiança do criminoso. <br/> Universal, 24/3,23h</p>
+                
+                  <p><strong><em>Justified:</em></strong> Estreia da sexta e última temporada com Raylan de volta do México, onde encontrou um policial que viu Dewey testemunhar o assassinato de Johnny Crowder. Sempre em busca de uma forma de prender Boyd, Raylan passa a seguir Dewey. <br/> Space, 25/3, 21h45</p>
+                
+                  <p><strong><em><a href="/series-tv/the-simpsons/">Os Simpsons </a>: </em></strong><em>" Meu Querido Ralph</em>" porque nem só de personagens principais vive um desenho animado, ainda mais um que está no ar há tanto tempo. Hoje a noite é do garoto que brinca com amigos invisíveis. <br/> Fox, 25/3, 20h</p>
+                
+                  <p><a href="/series-tv/the-flash/"><strong><em>The Flash: </em></strong></a><em>Volta dos inéditos -</em> Após duas semanas de reprises, <em>Flash</em> volta com “Out of Time”, quando Mark, o irmão de Joe mostra ter os mesmos poderes de controle sobre o clima de seu irmão morto. <br/> Warner, 26/3, 17h23</p>
+                
+                  <p><a href="/series-tv/el-tiempo-entre-costuras-2013-2014/"><strong><em>O Tempo Entre Costuras: </em></strong></a>No oitavo episódio da série espanhola que acompanha a vida de Sira, uma costureira que sai de Madri poucos meses antes do início da Guerra Civil Espanhola e vai viver no Marrocos, Marcus consegue se infiltrar na casa do cônsul alemão. Agora cabe a Sira manter a senhora alemã que vive no local ocupada até que ele encontre os documentos que procura. <br/> Film&amp;Arts, 26/3, 22h</p>
+                
+                  <p><strong><em>Suite Noire: </em></strong>Série francesa formada por oito filmes, cada um sobre o encontro entre um novelista e um cineasta que recebe carta branca para adaptar um livro. O ponto de união é uma visão irônica da sociedade contemporânea. No primeiro episódio, Manu é recrutado por policiais corruptos para se infiltrar em uma rádio e seguir as pistas de uma gangue. <br/>Eurochannel, 29/3, 21h</p>
+                
+                  <h2><a name="entrevistas"></a><strong>Entrevistas</strong></h2>
+                
+                  <p><strong><em>Direto do Actors Studio: </em></strong>Elenco de <em>How I Met Your Mother</em>: Josh Radnor, Neil Patrick Harris, Alyson Hannigan, Jason Segel e Cobie Smulders falam da comédia que ganhou nove Emmys e comentam suas cenas favoritas.<a name="_GoBack1"></a> E! Entertainment, 27/3, 20h</p>
+                
+                  <p><strong><em>The Ellen DeGeneres Show: </em></strong>Michelle Obama e Madonna são os destaques da semana.<br/> 23/3 – Michelle Obama, Bellamy Young e Courtney Barnett.<br/> 24/3 - Madonna, Nick Zano, Elisha Cuthbert e Kelly Brook.<br/> 25/3 – Madonna, Justin Bieber e Jane Krakowski.<br/> 26/3 – Madonna e Ellie Kemper.<br/> 27/3 – Madonna, Jim Parsons, Bridgit Mendler e a dançarina mirim Heaven King.<br/> GNT, segunda à sexta, 14h<br/> <br/> <strong><em>The Tonight Show com Jimmy Fallon: </em></strong>Jim Parsons e Will Ferrell na disputa para descobrir quem é o melhor alvo para as piadas de Fallon. <br/> 23/3 - <strong>Jim Parsons, Miles Teller</strong>, <strong>Wiz Khalifa</strong> e <strong>Charlie Puth.</strong><br/> 24/3 - <strong>Jennifer Garner, Eugene Levy</strong> e a banda <strong>Modest Mouse.</strong><br/> 25/3 - <strong>Will Ferrell</strong>, <strong>Chelsea Peretti </strong>e<strong> Boots</strong><br/> 26/3 - <strong>Ben Stiller</strong>, o consultor de moda <strong>Tim Gunn</strong> e a banda <strong>Rixton. </strong><br/> 27/3 - <strong>Jeremy Piven</strong>, <strong>Ariana Grande</strong> e o jornalista <strong>Joshua Topolsky.</strong><br/> GNT, segunda à sexta, 0h</p>
+                
+              </div>
+
+              <div class="theme__body__more">
+                <button class="btn">Leia mais</button>
+              </div>
+          </div>
+        </div>
+
+        <div class="d-none d-lg-flex col-lg-8 col-xl-7 col-ads">
+          
+          <div class="d-none d-lg-block scroll-wrapper banner--theme">
+            
+  
+
+  
+    
+    <div class="banner banner--small banner--scroll ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-arroba-1" style="width: 300px; height: 250px;"></div>
+      </div>
+    </div>
+    
+  
+
+          </div>
+          
+        </div>
+      </div>
+      
+
+      
+
+    </div>
+  </section>
+
+  
+  <section class="theme__list">
+    <div class="theme__list__wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <duv class="result">
+              
+              <div class="result__found">Últimas notícias de</div>
+              <div class="result__theme">Programação da TV</div>
+            </duv>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container js-news-list">
+  <div class="row">
+    <div class="col-24 col-lg-15 col-xl-17">
+        <h2 class="section__title d-none d-md-block d-lg-none">últimas notícias</h2>
+      <script>
+        var lastNewsTimestamp = '1416165262';
+      </script>
+      <main class="c-newslist">
+  
+    
+        
+            
+  
+  <article class="col featured featured--">
+    <div class="featured__head">
+      
+      <a href="/programacao-da-tv/the-simpsons/programacao-da-tv-9-a-15-de-marco">
+        
+          
+        
+
+        
+          
+        
+
+        <div class="mark">
+          <div class="mark__label">
+            
+              
+<div class="tag tag--series-tv">
+  <p>Séries e TV</p>
+  <div class="tag__label">
+    
+    
+  </div>
+  <div class="tag__time"></div>
+</div>
+
+            
+            
+            <div class="mark__time">
+              06.03.2015 14H48
+            </div>
+            
+          </div>
+
+          
+          <div class="mark__title">
+              <h2>Programação da TV - 9 a 15 de março</h2>
+          </div>
+          
+        </div>
+      </a>
+    </div>
+
+    
+    <div class="featured__subtitle subtitle">
+      <h3>A Culpa é das Estrelas, a estréia da 26ª temporada de Simpson e a nova série de zumbis Z Nation</h3>
+    </div>
+    
+
+    <div class="featured__links links">
+      
+
+      
+    </div>
+  </article>
+
+        
+            
+  
+  <article class="col featured featured--">
+    <div class="featured__head">
+      
+      <a href="/programacao-da-tv/programacao-da-tv-19-25-de-janeiro">
+        
+          
+        
+
+        
+          
+            <div class="picture  picture--top ">
+              <img alt="None" title="None" src="//cdn.ome.lt/7TPGhjM1Lf2QAjuoxNvRg3jiBHk=/480x360/smart/extras/conteudos/conteudo_93586.jpg"/>
+            </div>
+          
+        
+
+        <div class="mark">
+          <div class="mark__label">
+            
+              
+<div class="tag tag--series-tv">
+  <p>Séries e TV</p>
+  <div class="tag__label">
+    
+    
+  </div>
+  <div class="tag__time"></div>
+</div>
+
+            
+            
+            <div class="mark__time">
+              16.01.2015 15H17
+            </div>
+            
+          </div>
+
+          
+          <div class="mark__title">
+              <h2>Programação da TV - 19 a 25 de janeiro</h2>
+          </div>
+          
+        </div>
+      </a>
+    </div>
+
+    
+    <div class="featured__subtitle subtitle">
+      <h3>Clube de Compras Dallas, Capitão América: O Primeiro Vingador e a Vida Secreta de Walter Mitty serão exibidos nas telinhas</h3>
+    </div>
+    
+
+    <div class="featured__links links">
+      
+
+      
+    </div>
+  </article>
+
+        
+            
+  
+  <article class="col featured featured--">
+    <div class="featured__head">
+      
+      <a href="/programacao-da-tv/programacao-da-tv-12-18-de-janeiro">
+        
+          
+        
+
+        
+          
+            <div class="picture  picture--top ">
+              <img alt="None" title="None" src="//cdn.ome.lt/XdjFUVLoXRuPb6tJn0H3dkCtJCQ=/480x360/smart/extras/conteudos/conteudo_93428.jpg"/>
+            </div>
+          
+        
+
+        <div class="mark">
+          <div class="mark__label">
+            
+              
+<div class="tag tag--series-tv">
+  <p>Séries e TV</p>
+  <div class="tag__label">
+    
+    
+  </div>
+  <div class="tag__time"></div>
+</div>
+
+            
+            
+            <div class="mark__time">
+              12.01.2015 11H27
+            </div>
+            
+          </div>
+
+          
+          <div class="mark__title">
+              <h2>Programação da TV - 12 a 18 de janeiro</h2>
+          </div>
+          
+        </div>
+      </a>
+    </div>
+
+    
+    <div class="featured__subtitle subtitle">
+      <h3>Agent Carter, Togetherness, Looking, A Hora Mais Escura, The Fall e mais</h3>
+    </div>
+    
+
+    <div class="featured__links links">
+      
+
+      
+    </div>
+  </article>
+
+        
+            
+  
+  <article class="col featured featured--">
+    <div class="featured__head">
+      
+      <a href="/programacao-da-tv/garota-exemplar/programacao-da-tv-5-11-de-janeiro">
+        
+          
+        
+
+        
+          
+            <div class="picture  picture--top ">
+              <img alt="None" title="None" src="//cdn.ome.lt/vjn2eg_nSiYxYot2Cm-PjqMWOMU=/480x360/smart/extras/conteudos/conteudo_93196.jpg"/>
+            </div>
+          
+        
+
+        <div class="mark">
+          <div class="mark__label">
+            
+              
+<div class="tag tag--series-tv">
+  <p>Séries e TV</p>
+  <div class="tag__label">
+    
+    
+  </div>
+  <div class="tag__time"></div>
+</div>
+
+            
+            
+            <div class="mark__time">
+              02.01.2015 15H02
+            </div>
+            
+          </div>
+
+          
+          <div class="mark__title">
+              <h2>Programação da TV - 5 a 11 de janeiro</h2>
+          </div>
+          
+        </div>
+      </a>
+    </div>
+
+    
+    <div class="featured__subtitle subtitle">
+      <h3>007 - Operação Skyfall, RoboCop, Alemão, Girls, Once Upon a Time, Downton Abbey, Globo de Ouro e People&#39;s Choice Awards</h3>
+    </div>
+    
+
+    <div class="featured__links links">
+      
+
+      
+    </div>
+  </article>
+
+        
+            
+  
+  <article class="col featured featured--">
+    <div class="featured__head">
+      
+      <a href="/programacao-da-tv/programacao-da-tv-22-28-de-dezembro">
+        
+          
+        
+
+        
+          
+            <div class="picture  picture--top ">
+              <img alt="None" title="None" src="//cdn.ome.lt/82jdNuOkIvNU5ME9fbS3BLlThDs=/480x360/smart/extras/conteudos/conteudo_93032_qBgz2uv.jpg"/>
+            </div>
+          
+        
+
+        <div class="mark">
+          <div class="mark__label">
+            
+              
+<div class="tag tag--series-tv">
+  <p>Séries e TV</p>
+  <div class="tag__label">
+    
+    
+  </div>
+  <div class="tag__time"></div>
+</div>
+
+            
+            
+            <div class="mark__time">
+              19.12.2014 14H32
+            </div>
+            
+          </div>
+
+          
+          <div class="mark__title">
+              <h2>Programação da TV - 22 a 28 de dezembro</h2>
+          </div>
+          
+        </div>
+      </a>
+    </div>
+
+    
+    <div class="featured__subtitle subtitle">
+      <h3>Maratona de Star Wars, James Bond, Simpsons e muitos outros especiais na semana do Natal</h3>
+    </div>
+    
+
+    <div class="featured__links links">
+      
+
+      
+    </div>
+  </article>
+
+        
+            
+  
+  <article class="col featured featured--">
+    <div class="featured__head">
+      
+      <a href="/programacao-da-tv/programacao-da-tv-15-21-de-dezembro">
+        
+          
+        
+
+        
+          
+            <div class="picture  picture--top ">
+              <img alt="None" title="None" src="//cdn.ome.lt/UU4mm1mE-qroA0nAvMKW3R2BhQg=/480x360/smart/extras/conteudos/conteudo_92875_NmsS5ar.jpg"/>
+            </div>
+          
+        
+
+        <div class="mark">
+          <div class="mark__label">
+            
+              
+<div class="tag tag--series-tv">
+  <p>Séries e TV</p>
+  <div class="tag__label">
+    
+    
+  </div>
+  <div class="tag__time"></div>
+</div>
+
+            
+            
+            <div class="mark__time">
+              12.12.2014 14H38
+            </div>
+            
+          </div>
+
+          
+          <div class="mark__title">
+              <h2>Programação da TV - 15 a 21 de dezembro</h2>
+          </div>
+          
+        </div>
+      </a>
+    </div>
+
+    
+    <div class="featured__subtitle subtitle">
+      <h3>Operação Sombra – Jack Ryan, Sob a Pele, Capitão Phillips, Bling Ring e mais chegam às telinhas nesta semana</h3>
+    </div>
+    
+
+    <div class="featured__links links">
+      
+
+      
+    </div>
+  </article>
+
+        
+            
+  
+  <article class="col featured featured--">
+    <div class="featured__head">
+      
+      <a href="/programacao-da-tv/programacao-da-tv-8-a-15-de-dezembro">
+        
+          
+        
+
+        
+          
+            <div class="picture  picture--top ">
+              <img alt="None" title="None" src="//cdn.ome.lt/2Uk_KoZgiD15jEyQe1dSroaB_HY=/480x360/smart/extras/conteudos/conteudo_92756_tqgfVom.jpg"/>
+            </div>
+          
+        
+
+        <div class="mark">
+          <div class="mark__label">
+            
+              
+<div class="tag tag--series-tv">
+  <p>Séries e TV</p>
+  <div class="tag__label">
+    
+    
+  </div>
+  <div class="tag__time"></div>
+</div>
+
+            
+            
+            <div class="mark__time">
+              07.12.2014 14H18
+            </div>
+            
+          </div>
+
+          
+          <div class="mark__title">
+              <h2>Programação da TV - 8 a 15 de dezembro</h2>
+          </div>
+          
+        </div>
+      </a>
+    </div>
+
+    
+    <div class="featured__subtitle subtitle">
+      <h3>Elysium, Gravidade, 12 Anos de Escravidão, Intocáveis e outros</h3>
+    </div>
+    
+
+    <div class="featured__links links">
+      
+
+      
+    </div>
+  </article>
+
+        
+            
+  
+  <article class="col featured featured--">
+    <div class="featured__head">
+      
+      <a href="/programacao-da-tv/operacao-big-hero/programacao-da-tv-1-7-de-dezembro">
+        
+          
+        
+
+        
+          
+            <div class="picture  picture--top ">
+              <img alt="None" title="None" src="//cdn.ome.lt/8Cz02Ikpn9lMjZuFkJHDKnEIh_g=/480x360/smart/extras/conteudos/conteudo_92558_VxZD5LT.jpg"/>
+            </div>
+          
+        
+
+        <div class="mark">
+          <div class="mark__label">
+            
+              
+<div class="tag tag--series-tv">
+  <p>Séries e TV</p>
+  <div class="tag__label">
+    
+    
+  </div>
+  <div class="tag__time"></div>
+</div>
+
+            
+            
+            <div class="mark__time">
+              28.11.2014 17H02
+            </div>
+            
+          </div>
+
+          
+          <div class="mark__title">
+              <h2>Programação da TV - 1 a 7 de dezembro</h2>
+          </div>
+          
+        </div>
+      </a>
+    </div>
+
+    
+    <div class="featured__subtitle subtitle">
+      <h3>Guerra Mundial Z, Walt Nos Bastidores de Mary Poppins, The Walking Dead, Olive Kitteridge e mais</h3>
+    </div>
+    
+
+    <div class="featured__links links">
+      
+
+      
+    </div>
+  </article>
+
+        
+            
+  
+  <article class="col featured featured--">
+    <div class="featured__head">
+      
+      <a href="/programacao-da-tv/programacao-da-tv-24-30-de-novembro">
+        
+          
+        
+
+        
+          
+            <div class="picture  picture--top ">
+              <img alt="None" title="None" src="//cdn.ome.lt/b9ORRb-XDbLAFxR-aq6988qv83w=/480x360/smart/extras/conteudos/conteudo_92370_4YdXL52.jpg"/>
+            </div>
+          
+        
+
+        <div class="mark">
+          <div class="mark__label">
+            
+              
+<div class="tag tag--series-tv">
+  <p>Séries e TV</p>
+  <div class="tag__label">
+    
+    
+  </div>
+  <div class="tag__time"></div>
+</div>
+
+            
+            
+            <div class="mark__time">
+              21.11.2014 14H08
+            </div>
+            
+          </div>
+
+          
+          <div class="mark__title">
+              <h2>Programação da TV - 24 a 30 de novembro</h2>
+          </div>
+          
+        </div>
+      </a>
+    </div>
+
+    
+    <div class="featured__subtitle subtitle">
+      <h3>Pompeia, Questão de Tempo, O Herdeiro do Diabo e mais</h3>
+    </div>
+    
+
+    <div class="featured__links links">
+      
+
+      
+    </div>
+  </article>
+
+        
+            
+  
+  <article class="col featured featured--">
+    <div class="featured__head">
+      
+      <a href="/programacao-da-tv/programacao-da-tv-17-23-de-novembro">
+        
+          
+        
+
+        
+          
+            <div class="picture  picture--top ">
+              <img alt="None" title="None" src="//cdn.ome.lt/rDbOYo3K5nmDhVDuKhubhY4sTAU=/480x360/smart/extras/conteudos/conteudo_92239_By3Iixk.jpg"/>
+            </div>
+          
+        
+
+        <div class="mark">
+          <div class="mark__label">
+            
+              
+<div class="tag tag--series-tv">
+  <p>Séries e TV</p>
+  <div class="tag__label">
+    
+    
+  </div>
+  <div class="tag__time"></div>
+</div>
+
+            
+            
+            <div class="mark__time">
+              16.11.2014 17H14
+            </div>
+            
+          </div>
+
+          
+          <div class="mark__title">
+              <h2>Programação da TV - 17 a 23 de novembro</h2>
+          </div>
+          
+        </div>
+      </a>
+    </div>
+
+    
+    <div class="featured__subtitle subtitle">
+      <h3>A última temporada de The Newsroom, Supernatural e Lilyhammer na Netflix, Trapaça, Blue Jasmine e mais</h3>
+    </div>
+    
+
+    <div class="featured__links links">
+      
+
+      
+    </div>
+  </article>
+
+        
+    
+  
+</main>
+      <div class="loading_wrapper" style="display: none">
+      <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+      </div>
+      <div class="load_more">
+        <button id="loadMore" class="btn hidden">Ver mais</button>
+      </div>
+    </div>
+    <div class="col-24 col-lg-9 col-xl-7 scroll-wrapper">
+      <div class="d-none d-md-block">
+        
+
+
+
+
+<div class="l-sidebar">
+  <section class="d-none d-lg-flex justify-content-center">
+    
+  
+
+  
+    
+    <div class="banner banner--small  ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-arroba-2" style="width: 300px; height: 250px;"></div>
+      </div>
+    </div>
+    
+  
+
+  </section>
+
+  <div class="l-sidebar__wrapper">
+    
+<aside class="c-ranking c-ranking--commented">
+  <div class="c-ranking__header">
+    <h3 class="c-ranking__title">
+      Mais
+      
+        comentadas
+
+      
+    </h3>
+    <div class="c-ranking__icon"></div>
+  </div>
+  <div class="c-ranking__body">
+    <ul class="l-list">
+      
+      <li class="l-list__item">
+        <a href="/filmes/acionistas-votam-e-aprovam-compra-da-fox-pela-disney">
+          <div class="c-ranking__position">
+            1
+            
+          </div>
+          <div class="c-ranking__text">Acionistas votam e aprovam compra da Fox pela Disney</div>
+        </a>
+      </li>
+      
+      <li class="l-list__item">
+        <a href="/marvel-cinema/guardioes-da-galaxia/guardioes-da-galaxia-elenco-se-pronuncia-a-favor-da-volta-de-james-gunn">
+          <div class="c-ranking__position">
+            2
+            
+          </div>
+          <div class="c-ranking__text">Guardiões da Galáxia | Elenco se pronuncia a favor da volta de James Gunn</div>
+        </a>
+      </li>
+      
+      <li class="l-list__item">
+        <a href="/marvel-comics/venom-ganha-novo-trailer-com-cenas-ineditas-confira">
+          <div class="c-ranking__position">
+            3
+            
+          </div>
+          <div class="c-ranking__text">Venom ganha novo trailer com cenas inéditas; confira</div>
+        </a>
+      </li>
+      
+      <li class="l-list__item">
+        <a href="/quadrinhos/will-eisner-lanca-nova-graphic-novel">
+          <div class="c-ranking__position">
+            4
+            
+          </div>
+          <div class="c-ranking__text">Will Eisner lança nova Graphic Novel</div>
+        </a>
+      </li>
+      
+      <li class="l-list__item">
+        <a href="/filmes/o-exterminador-do-futuro-sarah-connor-esta-de-volta-em-1a-foto-oficial">
+          <div class="c-ranking__position">
+            5
+            
+          </div>
+          <div class="c-ranking__text">O Exterminador do Futuro | Sarah Connor está de volta em 1ª foto oficial</div>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</aside>
+
+  </div>
+  <div class="l-sidebar__wrapper">
+    
+<aside class="c-ranking c-ranking--read">
+  <div class="c-ranking__header">
+    <h3 class="c-ranking__title">
+      Mais
+      
+        Lidas
+      
+    </h3>
+    <div class="c-ranking__icon"></div>
+  </div>
+  <div class="c-ranking__body">
+    <ul class="l-list">
+      
+      <li class="l-list__item">
+        <a href="/hyperdrive/confirmado-quem-escapou-de-thanos-em-vingadores">
+          <div class="c-ranking__position">
+            1
+            
+          </div>
+          <div class="c-ranking__text">CONFIRMADO: QUEM ESCAPOU DE THANOS EM VINGADORES</div>
+        </a>
+      </li>
+      
+      <li class="l-list__item">
+        <a href="/filmes/criticas/missao-impossivel-efeito-fallout-critica">
+          <div class="c-ranking__position">
+            2
+            
+          </div>
+          <div class="c-ranking__text">Missão: Impossível – Efeito Fallout | Crítica</div>
+        </a>
+      </li>
+      
+      <li class="l-list__item">
+        <a href="/marvel-comics/venom-ganha-novo-trailer-com-cenas-ineditas-confira">
+          <div class="c-ranking__position">
+            3
+            
+          </div>
+          <div class="c-ranking__text">Venom ganha novo trailer com cenas inéditas; confira</div>
+        </a>
+      </li>
+      
+      <li class="l-list__item">
+        <a href="/punho-de-ferro/punho-de-ferro-tem-novo-visual-revelado-no-primeiro-trailer-do-2o-ano">
+          <div class="c-ranking__position">
+            4
+            
+          </div>
+          <div class="c-ranking__text">Punho de Ferro | Teaser do 2º ano dá pistas sobre novo visual do herói</div>
+        </a>
+      </li>
+      
+      <li class="l-list__item">
+        <a href="/marvel-cinema/guardioes-da-galaxia/guardioes-da-galaxia-elenco-se-pronuncia-a-favor-da-volta-de-james-gunn">
+          <div class="c-ranking__position">
+            5
+            
+          </div>
+          <div class="c-ranking__text">Guardiões da Galáxia | Elenco se pronuncia a favor da volta de James Gunn</div>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</aside>
+
+  </div>
+
+  <div class="d-none d-lg-flex justify-content-center halfpage-parent">
+    
+  
+
+  
+    
+    <div class="banner banner--aside banner--scroll ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-meio" ></div>
+      </div>
+    </div>
+    
+  
+
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>
+  
+</section>
+  </div>
+</main>
+<script>
+  var lastNewsTimestamp = '1416165262';
+</script>
+
+<section class="m-search">
+  <div class="container">
+    <div class="row">
+      <div class="m-search__wrapper">
+        <form method="get" action="/busca">
+          <div class="input-group">
+            <button class="icon-search" type="submit"></button>
+            <input placeholder="Faça a sua busca" name="q"/>            
+            <button type="button" class="close icon-close search--close"></button>
+          </div>          
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.ome.lt/static/omelete/js/scripts.min.js?v=1"></script>
+<footer>
+  
+  <script>
+    (function(i) {
+    var ts = document.createElement('script');
+    ts.type = 'text/javascript';
+    ts.async = true;
+    ts.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tags.t.tailtarget.com/t3m.js?i=' + i;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ts, s);
+    })('TT-9804-3/CT-153');
+  </script>
+  
+
+  <section class="m-search">
+  <div class="container">
+    <div class="row">
+      <div class="m-search__wrapper">
+        <form method="get" action="/busca">
+          <div class="input-group">
+            <button class="icon-search" type="submit"></button>
+            <input placeholder="Faça a sua busca" name="q"/>            
+            <button type="button" class="close icon-close search--close"></button>
+          </div>          
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  <div class="footer__group">
+    <div class="container">
+      <div class="row group">
+
+        <div class="group__about col-xl-7 col-md-10 offset-lg-1">
+          
+        </div>
+
+        <div class="group__logos col-xl-15 col-lg-23 offset-lg-1">
+          <div class="item item--text">
+            <p>Empresas<br/> da Omelete Company:</p>
+          </div>
+          <div class="item item--omelete">
+            <a href="https://www.omelete.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/omelete.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Omelete">
+            </a>
+          </div>
+
+          <div class="item item--ccxp">
+            <a href="https://www.ccxp.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/ccxp.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Comic Con">
+            </a>
+          </div>
+
+          <div class="item item--gamexp">
+            <a href="https://www.gamexp.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/gamexp.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Game XP">
+            </a>
+          </div>          
+
+          <div class="item item--theenemy">
+            <a href="https://www.theenemy.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/theenemy.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="The Enemy">
+            </a>
+          </div>
+
+          <!--<div class="item item--mundogeek">
+            <a href="https://www.lojamundogeek.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/mundogeek.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Mundo Geek">
+            </a>
+          </div>
+
+          <div class="item item--omeletebox">
+            <a href="https://www.omeletebox.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/omeletebox.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Omelete Box">
+            </a>
+          </div>-->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <nav class="footer__nav d-none d-md-block">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-5 col-lg-5 offset-sm-1 footer__nav__list">
+         <h3>Filmes</h3>
+         <ul>
+           <li><a href="/oscar">OSCAR</a></li>
+           <li><a href="/bilheteria-usa/">BILHETERIAS USA</a></li>
+           <li><a href="/bilheteria-brasil/">BILHETERIAS BRASIL</a></li>
+           <li><a href="/estreias-da-semana/">ESTREIAS DA SEMANA</a></li>
+           <li><a href="/criticas?section=filmes">CRÍTICAS</a></li>
+           <li><a href="/noticias?section=filmes">NOTÍCIAS</a></li>
+         </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-xl-5 footer__nav__list">
+          <h3>SÉRIES e TV</h3>
+          <ul>
+            <li><a href="/emmy">EMMY</a></li>
+            <li><a href="/calendario-de-estreias-na-tv/">CALENDÁRIO DE ESTREIAS</a></li>
+            <li><a href="/series-tv/temporada-2018-2019-as-series-de-tv-canceladas-renovadas-e-todas-as-novidades/">CALENDÁRIO 2018</a></li>
+            <li><a href="/criticas?section=series-tv">CRÍTICAS</a></li>
+            <li><a href="/noticias?section=series-tv">NOTÍCIAS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-xl-5 footer__nav__list">
+          <h3>HQs e LIVROS</h3>
+          <ul>
+            <li><a href="/comic-con">SAN DIEGO COMIC CON</a></li>
+            <li><a href="/criticas?section=quadrinhos">CRÍTICAS</a></li>
+            <li><a href="/noticias?section=quadrinhos">NOTÍCIAS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-4 footer__nav__list">
+          <h3>Música</h3>
+          <ul>
+            <li><a href="/criticas?section=musica">CRÍTICAS</a></li>
+            <li><a href="/noticias?section=musica">NOTÍCIAS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xl-1 col-lg-2 col-md-2 offset-xl-2">
+          <div class="search search--open">
+            <i class="icon icon-search"></i>
+            <div class="search__input"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+</footer>
+
+
+
+  
+
+
+<script type="text/javascript">
+  // Adding json and gpt info to the jS
+  var slots = {"desktop": {"booster": {"div_id": "div-gpt-ad-booster", "name": "booster", "sizes": [1695, 920], "tag": "/18178082/omelete/booster"}, "contagem": {"div_id": "div-gpt-ad-contagem", "name": "contagem", "sizes": [300, 150], "tag": "/18178082/omelete/contagem"}, "arroba-1": {"div_id": "div-gpt-ad-arroba-1", "name": "arroba-1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_1"}, "background": {"div_id": "div-gpt-ad-background", "name": "background", "sizes": [1800, 1000], "tag": "/18178082/omelete/background"}, "arroba-2": {"div_id": "div-gpt-ad-arroba-2", "name": "arroba-2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_2"}, "meio": {"div_id": "div-gpt-ad-meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "tag": "/18178082/omelete/meio"}, "rodape": {"div_id": "div-gpt-ad-rodape", "name": "rodape", "sizes": [320, 50], "tag": "/18178082/omelete/rodape"}, "superheader": {"div_id": "div-gpt-ad-superheader", "name": "superheader", "sizes": [320, 100], "tag": "/18178082/omelete/superheader"}, "superior": {"div_id": "div-gpt-ad-superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "tag": "/18178082/omelete/superior"}, "arroba-m1": {"div_id": "div-gpt-ad-arroba-m1", "name": "arroba-m1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m1"}, "arroba-m2": {"div_id": "div-gpt-ad-arroba-m2", "name": "arroba-m2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m2"}, "inferior": {"div_id": "div-gpt-ad-inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "tag": "/18178082/omelete/inferior"}}, "mobile": {"booster": {"div_id": "div-gpt-ad-booster", "name": "booster", "sizes": [1695, 920], "tag": "/18178082/omelete/booster"}, "contagem": {"div_id": "div-gpt-ad-contagem", "name": "contagem", "sizes": [300, 150], "tag": "/18178082/omelete/contagem"}, "arroba-1": {"div_id": "div-gpt-ad-arroba-1", "name": "arroba-1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_1"}, "background": {"div_id": "div-gpt-ad-background", "name": "background", "sizes": [1800, 1000], "tag": "/18178082/omelete/background"}, "arroba-2": {"div_id": "div-gpt-ad-arroba-2", "name": "arroba-2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_2"}, "meio": {"div_id": "div-gpt-ad-meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "tag": "/18178082/omelete/meio"}, "rodape": {"div_id": "div-gpt-ad-rodape", "name": "rodape", "sizes": [320, 50], "tag": "/18178082/omelete/rodape"}, "superheader": {"div_id": "div-gpt-ad-superheader", "name": "superheader", "sizes": [320, 100], "tag": "/18178082/omelete/superheader"}, "superior": {"div_id": "div-gpt-ad-superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "tag": "/18178082/omelete/superior"}, "arroba-m1": {"div_id": "div-gpt-ad-arroba-m1", "name": "arroba-m1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m1"}, "arroba-m2": {"div_id": "div-gpt-ad-arroba-m2", "name": "arroba-m2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m2"}, "inferior": {"div_id": "div-gpt-ad-inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "tag": "/18178082/omelete/inferior"}}};
+  var gpt_keys = {"content_type": "main", "section": "filmes", "page_type": "theme", "environment": "production", "tags": ["Programa\u00e7\u00e3o da TV", "Destaques da TV", "Clone Wars", "Star Wars: The Clone Wars", "Game Of Thrones", "The Matrix Reloaded", "The Matrix"]};
+  var sponsors = {"logo_especial_3": "/18178082/omelete/logo_especial_3", "logo_especial_2": "/18178082/omelete/logo_especial_2", "logo_chamada": "/18178082/omelete/logo_chamada", "logo_especial_1": "/18178082/omelete/logo_especial_1", "logo_internas": "/18178082/omelete/logo_internas"};
+
+  function createCookie(name,value,days) {
+    var expires = '';
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = '; expires=' + date.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+
+  function readCookie(name) {
+      var nameEQ = name + '=';
+      var ca = document.cookie.split(';');
+      for(var i=0;i < ca.length;i++) {
+          var c = ca[i];
+          while (c.charAt(0) === ' ') {
+            c = c.substring(1,c.length);
+          }
+          if (c.indexOf(nameEQ) === 0) {
+            return c.substring(nameEQ.length,c.length);
+          }
+      }
+      return null;
+  }
+</script>
+
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var isMobile = false;
+  if (window.innerWidth <= 768) {
+    isMobile = true;
+  }
+
+  var gptAdSlots = {};
+  var googletag = googletag || {};
+
+  var desk = ['arroba-1', 'arroba-2', 'meio', 'inferior', 'superior',
+              'background', 'booster', 'contagem'];
+  var mob = ['arroba-m1', 'arroba-m2', 'rodape', 'superheader',
+             'contagem'];
+
+  var allSlots = Object.keys(slots.desktop).map(function(key) { return slots.desktop[key]; });
+
+  var desktopSlots = allSlots.filter(function(slot) {return desk.includes(slot.name);});
+
+  var mobileSlots = allSlots.filter(function(slot) {return mob.includes(slot.name);});
+
+  window.addEventListener("load", function () {
+    googletag.cmd = googletag.cmd || [];
+    googletag.cmd.push(function() {
+      if (!isMobile) {
+        gptAdSlots.desktop = [];
+
+        desktopSlots.forEach(function(slot){
+          gptAdSlots[slot.div_id] = googletag.defineSlot(slot.tag, slot.sizes, slot.div_id).addService(googletag.pubads());
+          gptAdSlots.desktop.push(gptAdSlots[slot.div_id]);
+        });
+
+//        for (slot_name in desktopSlots) {
+//            var slot = slots.desktop[slot_name];
+//            gptAdSlots[slot.div_id] = googletag.defineSlot(slot.tag, slot.sizes, slot.div_id).addService(googletag.pubads());
+//            // adding key_value
+//            gptAdSlots.desktop.push(gptAdSlots[slot.div_id]);
+//        }
+      } else {
+        gptAdSlots.mobile = [];
+
+        mobileSlots.forEach(function(slot){
+          gptAdSlots[slot.div_id] = googletag.defineSlot(slot.tag, slot.sizes, slot.div_id).addService(googletag.pubads());
+          gptAdSlots.mobile.push(gptAdSlots[slot.div_id]);
+        });
+//
+//        for (slot_name in slots.mobile) {
+//          var slot = slots.mobile[slot_name];
+//          gptAdSlots[slot.div_id] = googletag.defineSlot(slot.tag, slot.sizes, slot.div_id).addService(googletag.pubads());
+//          gptAdSlots.mobile.push(gptAdSlots[slot.div_id]);
+//        }
+      }
+
+      // var sponsoredBannerWhite = document.querySelectorAll('.sponsored-banner-white');
+      // var sponsoredBannerBlue = document.querySelectorAll('.sponsored-banner-blue');
+      var sponsorSlots = document.querySelectorAll('.sponsor-slots');
+      sponsorSlots.forEach(function(el, idx) {
+        var sponsorTag = el.dataset.sponsor;
+        var sizes = el.dataset.sizes.split(',');
+        var tagID = sponsorTag + '-' + idx;
+        var slotName = sponsors[sponsorTag];
+        if (slotName) {
+          el.setAttribute('id', tagID);
+          googletag.defineSlot(slotName, [parseInt(sizes[0]), parseInt(sizes[1])], tagID).addService(googletag.pubads());
+        } else {
+        }
+      });
+
+      // sponsoredBannerWhite.forEach(function(el, idx) {
+      //   var tagID = 'sponsored-banner-white-' + idx;
+      //   el.attr('id', tagID);
+      //   googletag.defineSlot('/283405803/Logo_Oferecimento', [153, 14], tagID).addService(googletag.pubads());
+      // });
+
+      // sponsoredBannerBlue.forEach(function(el, idx) {
+      //   var tagID = 'sponsored-banner-blue-' + idx;
+      //   el.attr('id', tagID);
+      //   googletag.defineSlot('/283405803/Logo_Oferecimento_2', [153, 14], tagID).addService(googletag.pubads());
+      // });
+
+      // sponsoredBannerWhiteBig.forEach(function(el, idx) {
+      //   var tagID = 'sponsored-banner-white-big-' + idx;
+      //   el.attr('id', tagID);
+      //   googletag.defineSlot('/283405803/Logo_Oferecimento_3', [160, 35], tagID).addService(googletag.pubads());
+      // });
+
+      googletag.pubads().addEventListener('slotRenderEnded', function (event) {
+
+        var elementId = event.slot.getSlotElementId();
+
+        if (event.isEmpty) {
+            if (elementId == "div-gpt-ad-superior") {
+              $('.banner.banner--mast-head').remove();
+              $('.background--enemy').removeClass('background--enemy--mast-head');
+              $('.background--grey').removeClass('background--grey--mast-head');
+            } else if (elementId.startsWith("div-gpt-ad-background")) {
+              $('html').removeClass('has-background-banner');
+              $('.banner--background').remove();
+            } else if (elementId == "div-gpt-ad-booster") {
+              // removed fadeOut because of jquery.slim
+              $('.banner--trailer-booster').remove();
+            } else {
+              
+            }
+        } else {
+            if (elementId == "div-gpt-ad-superior") {
+              $('.banner.banner--mast-head').addClass('banner--mast-head--visible');
+              $('.background--enemy').addClass('background--enemy--mast-head');
+              $('.background--grey').addClass('background--grey--mast-head');
+            } else if (elementId == "div-gpt-ad-background") {
+              $('.banner.banner--mast-head').remove();
+            } else if (elementId.startsWith('div-gpt-ad-background')) {
+              $(elementId).closest('.banner--background').addClass('banner--background--visible');
+            } else if (elementId == "div-gpt-ad-booster") {
+              setTimeout(function() {
+                // removed fadeOut because of jquery.slim
+                $('.banner--trailer-booster').remove();
+              }, 35000);
+            }
+
+            // set 'inferior' ad size correctly
+            if (elementId.startsWith('div-gpt-ad-inferior') && event.size.length == 2) {
+              var inferiorAd = $('#' + elementId);
+              inferiorAd.width(event.size[0]).height(event.size[1]);
+              inferiorAd.parent().width(event.size[0]);
+
+              if( event.size[0] !== 1260 && event.size[1] !== 700 ){
+                inferiorAd.closest('.banner--parallax').addClass('parallax--inactive')
+              }
+            }
+
+            // set 'mast-head' ad size correctly
+            if (elementId.startsWith('div-gpt-ad-superior') && event.size.length == 2) {
+              var superiorAd = $('#' + elementId);
+              superiorAd.width(event.size[0]).height(event.size[1]);
+              superiorAd.parent().width(event.size[0]);
+            }
+        }
+
+      });
+
+      googletag.pubads().disableInitialLoad();
+      googletag.pubads().enableSingleRequest();
+
+      // tail
+      var _ttprofiles = window._ttprofiles || [];
+
+      googletag.pubads().setTargeting("age", _ttprofiles.getAge);
+      googletag.pubads().setTargeting("equipment", _ttprofiles.getEquipment);
+      googletag.pubads().setTargeting("customaudiences", _ttprofiles.getCustomAudience);
+      googletag.pubads().setTargeting("gender", _ttprofiles.getGender);
+      googletag.pubads().setTargeting("microsegments", _ttprofiles.getMicrosegments);
+      googletag.pubads().setTargeting("profiles", _ttprofiles.getProfiles);
+      googletag.pubads().setTargeting("socialclass", _ttprofiles.getSocialClass);
+      googletag.pubads().setTargeting("subjects", _ttprofiles.getSubjects);
+      googletag.pubads().setTargeting("team", _ttprofiles.getTeam);
+
+      // key value
+      for (var key in gpt_keys) {
+        var key_value = gpt_keys[key];
+        googletag.pubads().setTargeting(key, key_value);
+      }
+
+      googletag.enableServices();
+
+      if (!isMobile) {
+
+        desktopSlots.forEach( function(slot){
+          googletag.display(slot.div_id);
+        });
+//          for (slot_name in slots.desktop) {
+//            var slot = slots.desktop[slot_name];
+//            googletag.display(slot.div_id);
+//          }
+          googletag.pubads().refresh(gptAdSlots.desktop);
+      } else {
+
+        mobileSlots.forEach( function(slot){
+          googletag.display(slot.div_id);
+        });
+//          for (slot_name in slots.mobile) {
+//            var slot = slots.mobile[slot_name];
+//            googletag.display(slot.div_id);
+//          }
+          googletag.pubads().refresh(gptAdSlots.mobile);
+      }
+
+      // sponsoredBannerWhite.forEach(function(el, idx) {
+      //   googletag.display(el.attr('id'));
+      // });
+
+      // sponsoredBannerBlue.forEach(function(el, idx) {
+      //   googletag.display(el.attr('id'));
+      // });
+
+      // sponsoredBannerWhiteBig.forEach(function(el, idx) {
+      //   googletag.display(el.attr('id'));
+      // });
+    });
+  }, false);
+
+  function refreshGalleryAd(id) {
+    googletag.cmd.push(function() {
+        googletag.pubads().refresh([gptAdSlots[id]]);
+    });
+  };
+
+  function refreshAds(ids) {
+    if (!ids || !Array.isArray(ids)) {
+      return;
+    }
+    googletag.cmd.push(function() {
+      ids.forEach(function (id) {
+        googletag.display(id);
+        googletag.pubads().refresh([gptAdSlots[id]]);
+      });
+    });
+  }
+</script>
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-1826697-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+<meta name="google-site-verification" content="hCFQMJWhgJvgAHP8WyJTpZfMfHVNMSa9GsTj39662_k" />
+
+
+<meta name="google-site-verification" content="iTPXZ1POnZq80tracAvjJuIfkwym9JjdRDOk-glyL1I" />
+
+
+<meta name="p:domain_verify" content="e666affb1012fb19c957d470e41d349e" />
+
+
+<link href="https://plus.google.com/115416604494251056860" rel="publisher" />
+
+
+<script id="tailtarget" type="text/javascript">
+  // <![CDATA[
+  var _ttprofiles = _ttprofiles || [];
+  _ttprofiles.profiles = [];
+  _ttprofiles.push(['_setAccount', 'TT-9804-3']); // _setAccount
+  _ttprofiles.push(['_enableServices']);
+  document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? "https:" : "http:") + "//d.tailtarget.com/profiles.js'></scr" + "ipt>");
+  // ]]>
+</script>
+
+
+
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','//connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1022132447830898');
+  fbq('track', "PageView");
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1022132447830898&ev=PageView&noscript=1"/></noscript>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1062127218"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-1062127218'); </script>
+
+
+<!-- jQUery mobile -->
+<script src="https://cdn.ome.lt/static/omelete/js/vendor/jquery.mobile.custom.min.js"></script>
+<!-- End of jQUery mobile -->
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  window.addEventListener("load", function () {
+    (function () {
+      var u = "//analytics.ome.lt/";
+      _paq.push(['setTrackerUrl', u + 'piwik.php']);
+      _paq.push(['setSiteId', '4']);
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
+    })();
+  }, false);
+</script>
+<noscript>
+  <p>
+    <img src="//analytics.ome.lt/piwik.php?idsite=4&rec=1" style="border:0;" alt="" />
+  </p>
+</noscript>
+<!-- End Matomo Code -->
+
+</body>
+</html>
