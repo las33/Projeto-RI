@@ -5,35 +5,35 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQEDUVdSCxAIVVVUBggHVw=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(20),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{h?h-=1:o(c||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:s.now();i("err",[t,n])}var i=t("handle"),a=t(21),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",h=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(13),t(12),"addEventListener"in window&&t(6),s.xhrWrappable&&t(14),d=!0)}c.on("fn-start",function(t,e,n){d&&(h+=1)}),c.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),c.on("fn-end",function(){d&&!this.thrown&&h>0&&(h-=1)}),c.on("internal-error",function(t){i("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){M++,S=y.hash,this[u]=b.now()}function o(){M--,y.hash!==S&&i(0,!0);var t=b.now();this[l]=~~this[l]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=b.now()})}var c="-start",s="-end",f="-body",u="fn"+c,d="fn"+s,p="cb"+c,h="cb"+s,l="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,b=t("loader");if(w[v]&&b.xhrWrappable){var g=t(10),x=t(11),E=t(8),P=t(6),O=t(13),R=t(7),T=t(14),L=t(9),j=t("ee"),N=j.get("tracer");t(15),b.features.spa=!0;var S,M=0;j.on(u,r),j.on(p,r),j.on(d,o),j.on(h,o),j.buffer([u,d,"xhr-done","xhr-resolved"]),P.buffer([u]),O.buffer(["setTimeout"+s,"clearTimeout"+c,u]),T.buffer([u,"new-xhr","send-xhr"+c]),R.buffer([m+c,m+"-done",m+f+c,m+f+s]),E.buffer(["newURL"]),g.buffer([u]),x.buffer(["propagate",p,h,"executor-err","resolve"+c]),N.buffer([u,"no-"+u]),L.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,"send-xhr"+c),a(j,"xhr-resolved"),a(j,"xhr-done"),a(R,m+c),a(R,m+"-done"),a(L,"new-jsonp"),a(L,"jsonp-end"),a(L,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,M>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),c=t(12),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",h="-start",l="-end",m="fn"+h,v="fn"+l,w="bstTimer",y="pushState",b=t("loader");b.features.stn=!0,t(8);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=b.now())}),o.on(v,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,b.now()])}),a.on(m,function(t,e,n){this.bstStart=b.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),this.bstType])}),c.on(m,function(){this.bstStart=b.now()}),c.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),"requestAnimationFrame"])}),o.on(y+h,function(t){this.time=b.now(),this.startPath=location.pathname+location.hash}),o.on(y+l,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(23)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(20);e.exports=o;var a=window,c="fetch-",s=c+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,h="prototype";u&&d&&p&&(i(f,function(t,e){r(u[h],e,s),r(d[h],e,s)}),r(a,"fetch",c),o.on(c+"end",function(t,e){var n=this;e?e.clone().arrayBuffer().then(function(t){n.rxSize=t.byteLength,o.emit(c+"done",[null,e],n)}):o.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(23)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){s.emit("jsonp-error",[],p),s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=c(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),s.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function c(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var s=t("ee").get("jsonp"),f=t(23)(s);if(e.exports=s,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,h=["appendChild","insertBefore","replaceChild"];f.inPlace(HTMLElement.prototype,h,"dom-"),f.inPlace(HTMLHeadElement.prototype,h,"dom-"),f.inPlace(HTMLBodyElement.prototype,h,"dom-"),s.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t(23)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=c(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(23),a=t("ee").get("promise"),c=i(a),s=t(20),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;s(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),c=f.resolve(i);return c}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),s(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=c(t[0],"resolve-",this),t[1]=c(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),c.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=c(t[0],"cb-",this),t[1]=c(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t(23)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(23)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",c)}function i(t){b.push(t),l&&(x?x.then(a):v?v(a):(E=-E,P.data=E))}function a(){for(var t=0;t<b.length;t++)r([],b[t]);b.length&&(b=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(23)(u),p=NREUM.o,h=p.XHR,l=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],b=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(h,g),g.prototype=h.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),l){var x=m&&m.resolve();if(!v&&!m){var E=1,P=document.createTextNode(E);new l(a).observe(P,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=a.now()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return l(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(16),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,p=t("id"),h=t(19),l=t(18),m=window.XMLHttpRequest;a.features.xhr=!0,t(14),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=l(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<d;c++)e.addEventListener(u[c],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)})}},{}],16:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],17:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(20),c=t(21),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var l=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(h+"tracer",[f.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){l[e]=o(h+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],21:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],22:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],23:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(21),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),c=l(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([b,n,r,a]),a}}function h(t,e){w[t]=l(t).concat(e)}function l(t){return w[t]||[]}function m(t){return d[t]=d[t]||o(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var w={},y={},b={on:h,emit:n,get:m,listeners:l,context:e,buffer:v,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var c="nr@context",s=t("gos"),f=t(20),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!x++){var t=g.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)}),s("mark",["onload",a()+g.offset],null,"api");var n=p.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===p.readyState&&i()}function i(){s("mark",["domContent",a()+g.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-g.offset}var c=(new Date).getTime(),s=t("handle"),f=t(20),u=t("ee"),d=window,p=d.document,h="addEventListener",l="attachEvent",m=d.XMLHttpRequest,v=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1071.min.js"},b=m&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:c,now:a,origin:w,features:{},xhrWrappable:b};t(17),p[h]?(p[h]("DOMContentLoaded",i,!1),d[h]("load",r,!1)):(p[l]("onreadystatechange",o),d[l]("onload",r)),s("mark",["firstbyte",c],null,"api");var x=0,E=t(22)},{}]},{},["loader",2,15,5,3,4]);</script>
 <meta name="format-detection" content="address=no,email=no,telephone:no">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<title> 16 filmes para assistir em 2016 | Cultura | EL PA&Iacute;S Brasil</title>
+<title> Os 10 melhores livros de 2015 | Cultura | EL PA&Iacute;S Brasil</title>
 <meta name="lang" 			content="pt-br" />
-<meta name="author" 		content="Gregorio Belinchón" />
-<meta name="description" 	content="Esse ano que começa está recheado de estreias. Aqui, os títulos que foram destaque nos festivais de 2015 e outros que prometem chamar a atenção" />
-<meta name="keywords" 		content="16, filme, assistir, 2016, ano, começar, estar, rechear, estreia, título, ser, destaque, festival, 2015, prometer, chamar, atenção" />
-<meta name="date" scheme="W3CDTF" content="2016-01-05T12:40:26+01:00" />
-<meta name="DC.date.issued" scheme="W3CDTF" content="2016-01-05" />
-<meta name="DC.date" 		scheme="W3CDTF" 	content="2016-01-05" />
+<meta name="author" 		content="BABELIA" />
+<meta name="description" 	content="Diários, ensaio, poesia e prosa conquistam os primeiros lugares na votação dos críticos e colaboradores de  Babelia , do EL PAÍS. Veja a seleção" />
+<meta name="keywords" 		content="10, melhor, livro, 2015, diários, ensaio, poesia, prosa, conquistar, primeiros, lugar, votação, crítico, colaborador, babelia, ano, ser, los, diarios, emilio renzi, piglia" />
+<meta name="date" scheme="W3CDTF" content="2015-12-21T21:39:36+01:00" />
+<meta name="DC.date.issued" scheme="W3CDTF" content="2015-12-21" />
+<meta name="DC.date" 		scheme="W3CDTF" 	content="2015-12-21" />
 <meta name="organization" content="Ediciones EL PAÍS S.L."/>
-<meta property="article:modified_time" content="2016-01-05T12:40:26+01:00" />
+<meta property="article:modified_time" content="2015-12-21T21:39:36+01:00" />
 <meta property="article:publisher" content="https://www.facebook.com/elpaisbrasil" />
-<meta property="article:published_time" content="2016-01-05" />
+<meta property="article:published_time" content="2015-12-21" />
 <meta property="article:section" content="cultura" />
-<meta property="article:tag" content="Crítica filmes" />
-<meta property="article:tag" content="Prêmios Oscar" />
-<meta property="article:tag" content="Estreias filmes" />
-<meta property="article:tag" content="Cinema dos Estados Unidos" />
-<meta property="article:tag" content="Prêmios cinema" />
-<meta property="article:tag" content="Crítica" />
-<meta property="article:tag" content="Cultura" />
-<meta property="article:tag" content="Atores" />
-<meta property="article:tag" content="Cinema" />
-<meta property="article:tag" content="Adam Driver" />
-<meta name="news_keywords" content="Crítica filmes,Prêmios Oscar,Estreias filmes,Cinema dos Estados Unidos,Prêmios cinema,Crítica,Cultura,Atores,Cinema,Adam Driver"/>
-<meta property="og:title" content="16 filmes para assistir em 2016"/>
-<meta property="og:description" content="Esse ano que começa está recheado de estreias. Aqui, os títulos que foram destaque nos festivais de 2015 e outros que prometem chamar a atenção"/>
-<meta property="og:image" content="https://ep00.epimg.net/brasil/imagenes/2016/01/05/cultura/1451990655_303962_1451991736_noticia_normal.jpg"/>
-<meta property="og:updated_time" content="2016-01-05T12:40:26+01:00" />
-<meta property="og:url" 	content="https://brasil.elpais.com/brasil/2016/01/05/cultura/1451990655_303962.html" />
+<meta property="article:tag" content="Sara Mesa" />
+<meta property="article:tag" content="Ricardo Piglia" />
+<meta property="article:tag" content="Marta Sanz" />
+<meta property="article:tag" content="Jaime Gil de Biedma" />
+<meta property="article:tag" content="2015" />
+<meta property="article:tag" content="Libros del año" />
+<meta property="article:tag" content="Nobel de Literatura" />
+<meta property="article:tag" content="Literatura europeia" />
+<meta property="article:tag" content="El País" />
+<meta property="article:tag" content="Crítica literária" />
+<meta name="news_keywords" content="Sara Mesa,Ricardo Piglia,Marta Sanz,Jaime Gil de Biedma,2015,Libros del año,Nobel de Literatura,Literatura europeia,El País,Crítica literária"/>
+<meta property="og:title" content="Os 10 melhores livros de 2015"/>
+<meta property="og:description" content="Diários, ensaio, poesia e prosa conquistam os primeiros lugares na votação dos críticos e colaboradores de  Babelia , do EL PAÍS. Veja a seleção"/>
+<meta property="og:image" content="https://ep00.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450366929_noticia_normal.jpg"/>
+<meta property="og:updated_time" content="2015-12-21T21:39:36+01:00" />
+<meta property="og:url" 	content="https://brasil.elpais.com/brasil/2015/12/17/cultura/1450366041_247687.html" />
 <meta property="og:type" 		content="article"/>
 <meta property="og:site_name"    	content="EL PAÍS"/>
 <meta property="fb:pages"       content="589843594408928" />
@@ -41,8 +41,10 @@
 <meta property="twitter:card" 	content="summary_large_image" />
 <meta property="twitter:site" 	content="@elpais_brasil" />
 <link rel="alternate" href="https://brasil.elpais.com/seccion/rss/cultura/" type="application/rss+xml" title="RSS sobre Cultura"/>
-<link rel="amphtml" href="https://brasil.elpais.com/brasil/2016/01/05/cultura/1451990655_303962.amp.html" />
-<link rel="canonical" href="https://brasil.elpais.com/brasil/2016/01/05/cultura/1451990655_303962.html" />
+<link rel="alternate" href="https://brasil.elpais.com/brasil/2015/12/17/cultura/1450366041_247687.html" hreflang="pt-br" />
+<link rel="alternate" href="https://elpais.com/cultura/2015/12/17/babelia/1450366041_247687.html" hreflang="es" />
+<link rel="amphtml" href="https://brasil.elpais.com/brasil/2015/12/17/cultura/1450366041_247687.amp.html" />
+<link rel="canonical" href="https://brasil.elpais.com/brasil/2015/12/17/cultura/1450366041_247687.html" />
 <link rel="icon" 		href="https://ep01.epimg.net/favicon.png" type="image/png" />
 <link rel="publisher" 	href="https://plus.google.com/+elpais"/>
 <link href="//ep01.epimg.net/estilos/v2.x/v2.1/normalizado.css"  rel="stylesheet" />
@@ -53,7 +55,9 @@
 <link href="//ep01.epimg.net/estilos/v2.x/v2.1/cintillos.css"  rel="stylesheet" />
 <link href="//ep01.epimg.net/estilos/v2.x/v2.1/comercial.css"  rel="stylesheet" />
 <link href="//ep01.epimg.net/brasil/estilos/v2.x/v2.1/brasil.css" rel="stylesheet" />
+<link href="//ep01.epimg.net/estilos/v2.x/v2.0/sumarios/sumario_encuesta.css" rel="stylesheet" />
 <script type="text/javascript" src="//ep01.epimg.net/js/v4.x/v4.1/noticia.min.js"></script>
+<script type="text/javascript" src="//ep01.epimg.net/encuestas/js/v1.x/v1.0/encuestas.js"></script>
 <script type="text/javascript">
 //<![CDATA[
 	var videoPublicityDown = false;
@@ -70,11 +74,11 @@
 	var marcado_logtrust = true;
 	var prebidVideoPEP = true;
 
-	var listado_norm_tags = 'adam_douglas_driver_wright_a,critica_cine_a,premios_oscar_a,estrenos_cine_a,cine_americano_a,premios_cine_a,critica_a,cultura_a,actores_a,cine_a';
-	var DFP_tags = ["adam_douglas_driver_wright_a","critica_cine_a","premios_oscar_a","estrenos_cine_a","cine_americano_a","premios_cine_a","critica_a","cultura_a","actores_a","cine_a"];
-	var listado_id_tags = '171123,24929,66256,30619,23080,66244,24927,25067,9437,23079';
-	var listado_id_autores = '3';
-	var listado_norm_autores = 'gregorio_belinchon_a';
+	var listado_norm_tags = 'critica_literaria_a,premios_nobel_a,premios_cultura_a,escritores_a,editoriales_a,critica_a,premios_a,sector_editorial_a,literatura_a,libros_a,sara_mesa_villalba_a,gente_a,prensa_a,cultura_a,eventos_a,sociedad_a,svetlana_aleksandrovna_aleksievich_a,ricardo_piglia_a,marta_sanz_a,jaime_gil_de_biedma_a,2015_a,libros_del_ano_a,nobel_literatura_a,literatura_europea_a,el_pais_a';
+	var DFP_tags = ["critica_literaria_a","premios_nobel_a","premios_cultura_a","escritores_a","editoriales_a","critica_a","premios_a","sector_editorial_a","literatura_a","libros_a","sara_mesa_villalba_a","gente_a","prensa_a","cultura_a","eventos_a","sociedad_a","svetlana_aleksandrovna_aleksievich_a","ricardo_piglia_a","marta_sanz_a","jaime_gil_de_biedma_a","2015_a","libros_del_ano_a","nobel_literatura_a","literatura_europea_a","el_pais_a"];
+	var listado_id_tags = '24930,66254,66246,30286,27721,24927,66241,72418,52289,52094,151129,35061,66264,25067,31030,73526,154579,68976,56771,41180,146882,136656,83191,52297,28370';
+	var listado_id_autores = '80945';
+	var listado_norm_autores = 'el_pais_a';
 
 	var referrer = document.referrer;
 	if (referrer.indexOf("//t.co/") >-1 || (referrer.indexOf("twitter.com") > 0 && referrer.indexOf("twitter.com") < 30) )
@@ -252,7 +256,7 @@ if (pbs_dimensiones.ancho >= 980) {
 </ul>
 </div>
 <div class="usuario" id="usuario">
-<a class="boton_usuario" id="boton_usuario" href="https://plus.elpais.com/conectar?prod=REG&o=CABEP&backURL=https%3A%2F%2Fbrasil.elpais.com%2Fbrasil%2F2016%2F01%2F05%2Fcultura%2F1451990655_303962.html">Login</a>
+<a class="boton_usuario" id="boton_usuario" href="https://plus.elpais.com/conectar?prod=REG&o=CABEP&backURL=https%3A%2F%2Fbrasil.elpais.com%2Fbrasil%2F2015%2F12%2F17%2Fcultura%2F1450366041_247687.html">Login</a>
 <div id="usuario__interior"  class="oculto">
 <button class="boton_cerrar" id="cerrar_usuario">Cerrar</button>
 <div class="usuario-estado"></div>
@@ -365,16 +369,16 @@ href="/seccion/cultura" itemprop="url">
 </header>
 </div>
 <div class="articulo__envoltorio">
-<article class="articulo" itemscope itemprop="mainEntity" itemtype="https://schema.org/NewsArticle" itemref="organizacion">
+<article class="articulo articulo--nointro" itemscope itemprop="mainEntity" itemtype="https://schema.org/NewsArticle" itemref="organizacion">
 <div class="articulo__interior" id="articulo_interior">
 <header class="articulo-encabezado " id="articulo-encabezado" >
 <div class="articulo-antetitulo ">
-<a class="enlace" href="//brasil.elpais.com/tag/cine/a/">Cinema</a>
+<a class="enlace" href="//brasil.elpais.com/tag/libros_del_ano/a/">ESPECIAL</a>
 </div>
 <div class="articulo-titulares" id="articulo-titulares">
-<h1 class="articulo-titulo " id="articulo-titulo" itemprop="headline">16 filmes para assistir em 2016</h1>
-<meta itemprop="url" content="//brasil.elpais.com/brasil/2016/01/05/cultura/1451990655_303962.html"/>
-<div class="articulo-subtitulos"><h2  itemprop="alternativeHeadline"  class="articulo-subtitulo">Esse ano que começa está recheado de estreias. Os títulos que foram destaque nos festivais de 2015 e outros que prometem chamar a atenção</h2>
+<h1 class="articulo-titulo " id="articulo-titulo" itemprop="headline">Os 10 melhores livros de 2015</h1>
+<meta itemprop="url" content="//brasil.elpais.com/brasil/2015/12/17/cultura/1450366041_247687.html"/>
+<div class="articulo-subtitulos"><h2  itemprop="alternativeHeadline"  class="articulo-subtitulo">Diários, ensaio, poesia e prosa conquistam os primeiros lugares na votação dos críticos e colaboradores de Babelia. Livro do ano é ‘Los diarios de Emilio Renzi’, de Piglia</h2>
 </div>                   </div> 
 <aside class="compartir" id="compartir_superior">
 <div class="compartir__interior">
@@ -392,10 +396,10 @@ href="/seccion/cultura" itemprop="url">
 </div>
 <div class="compartir-varios">
 <div class="favoritos" id="favoritos">
-<a href="https://plus.elpais.com/conectar?backURL=http%3A%2F%2Fbrasil.elpais.com%2Fbrasil%2F2016%2F01%2F05%2Fcultura%2F1451990655_303962.html" id="boton_favoritos" class="boton_favoritos" title="Você precisa ter uma conta no EL PAÍS e estar conectado para poder salvar em favoritos">Login</a>
+<a href="https://plus.elpais.com/conectar?backURL=http%3A%2F%2Fbrasil.elpais.com%2Fbrasil%2F2015%2F12%2F17%2Fcultura%2F1450366041_247687.html" id="boton_favoritos" class="boton_favoritos" title="Você precisa ter uma conta no EL PAÍS e estar conectado para poder salvar em favoritos">Login</a>
 </div>
 <div class="correo" id="correo">
-<a href="https://plus.elpais.com/conectar?backURL=http%3A%2F%2Fbrasil.elpais.com%2Fbrasil%2F2016%2F01%2F05%2Fcultura%2F1451990655_303962.html" id="superior_enviar" class="boton_correo" title="Você precisa ter uma conta no EL PAÍS e estar conectado para poder enviar a notícia por e-mail">Login</a>
+<a href="https://plus.elpais.com/conectar?backURL=http%3A%2F%2Fbrasil.elpais.com%2Fbrasil%2F2015%2F12%2F17%2Fcultura%2F1450366041_247687.html" id="superior_enviar" class="boton_correo" title="Você precisa ter uma conta no EL PAÍS e estar conectado para poder enviar a notícia por e-mail">Login</a>
 </div>
 <button class="boton_imprimir" id="boton_imprimir"><span class="nombre">Imprimir</span></button>
 </div>
@@ -411,147 +415,72 @@ href="/seccion/cultura" itemprop="url">
 </aside>
 </header>
 <div class="articulo-apertura ">
-<figure class="foto centro foto_w980" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-<img src="//ep01.epimg.net/brasil/imagenes/2016/01/05/cultura/1451990655_303962_1451991736_noticia_normal.jpg" width="980" height="653"  srcset="//ep01.epimg.net/brasil/imagenes/2016/01/05/cultura/1451990655_303962_1451991736_noticia_normal_recorte1.jpg 1960w, //ep01.epimg.net/brasil/imagenes/2016/01/05/cultura/1451990655_303962_1451991736_noticia_normal_recorte2.jpg 720w, //ep01.epimg.net/brasil/imagenes/2016/01/05/cultura/1451990655_303962_1451991736_noticia_normal.jpg 980w"   alt="'Spotlight' narra investigação jornalística do 'The Boston Globe' sobre pedofilia na igreja Católica." />
-<meta itemprop="width"    content="980">
-<meta itemprop="height"   content="653">
-<meta itemprop="url"      content="https://ep01.epimg.net/brasil/imagenes/2016/01/05/cultura/1451990655_303962_1451991736_noticia_normal.jpg">
-<meta itemprop="representativeOfPage" content="true">
-<figcaption class="foto-pie"  itemprop="caption"> <span class="foto-texto">'Spotlight' narra investigação jornalística do 'The Boston Globe' sobre pedofilia na igreja Católica.</span> <span class="foto-firma"><span itemprop="author" class="foto-autor">Divulgação</span> </span></figcaption>
-</figure>
-<div class="firma firma--vertical">
+<div class="firma ">
 <div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
 <figure class="foto" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-<meta itemprop="url" content="https://ep00.epimg.net/miperfil/avatares/6/5A/gregoriobelinchon.jpg"/>
-<a class="enlace" href="//brasil.elpais.com/autor/gregorio_belinchon/a/">
+<meta itemprop="url" content="https://ep00.epimg.net/miperfil/avatares/8/45/el_pais.jpg"/>
+<a class="enlace" href="//brasil.elpais.com/autor/el_pais/a/">
 <meta itemprop="width" content="80">
 <meta itemprop="height" content="80">
-<img src="//ep00.epimg.net/miperfil/avatares/6/5A/gregoriobelinchon.jpg" width="80" height="80" alt="Gregorio Belinchón"/>
+<img src="//ep00.epimg.net/miperfil/avatares/8/45/el_pais.jpg" width="80" height="80" alt="BABELIA"/>
 </a>
 </figure>
 <div class="autor-texto">
 <span class="autor-nombre" itemprop="name">
-<a itemprop="url" href="//brasil.elpais.com/autor/gregorio_belinchon/a/" title="Ver todas as notícias de Gregorio Belinchón">Gregorio Belinchón</a>
+<a itemprop="url" href="//brasil.elpais.com/autor/el_pais/a/" title="Ver todas as notícias de BABELIA">BABELIA</a>
 </span>
 <div class="autor-perfiles">
 <ul class="autor-perfiles-listado">
-<li><a class="boton_twitter" itemprop="sameAs" href="http://twitter.com/gbelinchon" rel="nofollow" target="_blank">Twitter</a></li>                                
+<li><a class="boton_twitter" itemprop="sameAs" href="http://twitter.com/el_pais" rel="nofollow" target="_blank">Twitter</a></li><li><a class="boton_googleplus" itemprop="sameAs" href="https://plus.google.com/u/0/103019117518606328359/posts" rel="nofollow" target="_blank">Google Plus</a></li>                                
 </ul>
 </div>
-<span class="autor-descripcion" itemprop="jobTitle"> </span>
 </div>
 </div>
 </div>
 <div class="articulo-datos">
-<span class="articulo-localizaciones">
-<span class="articulo-localizacion" itemprop="contentLocation">
-Madri
-</span>
-</span>
-<time datetime="2016-01-05T12:40:26+01:00" class="articulo-actualizado">
-<meta content="2016-01-05T21:06:46+01:00" itemprop="datePublished">
-<meta content="2016-01-05T12:40:26+01:00" itemprop="dateModified">
-<a href="//brasil.elpais.com/tag/fecha/20160105 " title="Ver todas as notícias desta data">
-5 JAN 2016 - 12:40					<abbr title="Central European Time">CET</abbr>				</a>
+<time datetime="2015-12-21T21:39:36+01:00" class="articulo-actualizado">
+<meta content="2015-12-20T20:25:30+01:00" itemprop="datePublished">
+<meta content="2015-12-21T21:39:36+01:00" itemprop="dateModified">
+<a href="//brasil.elpais.com/tag/fecha/20151221 " title="Ver todas as notícias desta data">
+21 DEZ 2015 - 21:39					<abbr title="Central European Time">CET</abbr>				</a>
 </time>
 </div>
-<div class="articulo-introduccion" id="articulo-introduccion">
-<p>Esse ano que começa está recheado de estreias no <a href="//brasil.elpais.com/tag/cine/a/">cinema</a>. Na verdade, como sempre. De modo que é preciso expurgar e colocar todas as nossas esperanças em 16 títulos, alguns dos quais já pudemos assistir em suas estreias em festivais de 2015, como os de <a href="//brasil.elpais.com/tag/festival_cannes/a/" target="_self">Cannes</a> e de Berlim. Aqui está a lista, realizada sem nenhuma ordem, seja alfabética, de estreia e de relevância. É aleatória.</p>
-</div>
 </div> 
-<div class="envoltorio_publi" id="roba_principal">
-<div id='elpais_gpt-MPU1' class='publi_luto_horizontal'>
-<script type='text/javascript'>
-			PBS.display('MPU1');
-		</script>
-</div>
-</div>
 <div class="articulo__contenedor" id="articulo_contenedor">
+<figure class="foto centro foto_w560" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<a href="/brasil/2015/12/17/cultura/1450366041_247687.html"
+class="enlace" onclick="javascript:ampliaFoto(this, '/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450366929_noticia_grande.jpg', '980', '764', '');return false;">
+<img src="//ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450366929_noticia_normal.jpg" width="560" height="412"    alt="Melhores livros de 2015" />
+<meta itemprop="width"    content="560">
+<meta itemprop="height"   content="412">
+<meta itemprop="url"      content="https://ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450366929_noticia_normal.jpg">
+<meta itemprop="representativeOfPage" content="true">
+<span class="boton_ampliar">Ampliar foto</span>
+</a>
+<figcaption class="foto-pie"  itemprop="caption"> <span class="foto-texto">Da esquerda para a direita os escritores: Ricardo Piglia, Marta Sanz, Jaime Gil de Biedma, Svetlana Alexiévich, Michel Houellebecq e Inger Christensen; na frente, Ian McEwan, Élisabeth Roudinesco, Sara Mesa e Chantal Maillard.</span> <span class="foto-firma"><span itemprop="author" class="foto-autor">ILUSTRAÇÕES DE FERNANDO VICENTE</span> </span></figcaption>
+</figure>
 <div class="articulo-cuerpo" id="cuerpo_noticia" itemprop="articleBody">
-<p><strong><em>Carol</em> (Todd Haynes).</strong> O último trabalho de Haynes <a href="//brasil.elpais.com/brasil/2015/05/17/cultura/1431883740_619733.html">estreou em Cannes e chamou a atençã</a>o por seu virtuosismo e sua precisão ao adaptar o primeiro romance de Patricia Highsmith, que narra a história de amor entre duas mulheres nos anos cinquenta: Rooney Mara levou ex aequo o prêmio de melhor atriz, mas não com quem realmente o merecia, sua colega de elenco Cate Blanchett. Tão apaixonada como fria. Estreia no Brasil em 14 de janeiro.</p>
-<section class="sumario_html centro" id="sumario_2|html">
-<a name="sumario_2"></a>
-<div class="sumario__interior">
-<div class="sumario-texto">
-<p><iframe width="460" height="259" src="https://www.youtube.com/embed/EH3zcuRQXNo" frameborder="0" allowfullscreen=""></iframe></p>
-</div> 
-</div> 
-</section>
-<p><strong><em>Silence</em> (Martin Scorsese).</strong> Um dos projetos mais desejados por Scorsese por fim sairá do papel. Ocorreram inúmeras mudanças de elenco durante os anos em que esse filme – baseado no romance de Shûsaku Endô – esteve em produção. Finalmente Andrew Garfield e Adam Driver encarnam dois jesuítas portugueses que no século XVII buscam seu mentor (Liam Neeson) no Japão em plena perseguição contra sua ordem. É um dos possíveis filmes que podem estar prontos para Cannes.</p>
-<p><strong><em>Ave, César!</em> (Joel e Ethan Coen).</strong> A tragicomédia, ou como quisermos chamar o gênero no qual os irmãos Coen se movem como peixes na água, irá inaugurar o festival de cinema Berlinale. Uma intriga detetivesca – o sequestro de uma grande estrela de cinema na metade da filmagem de um filme épico – que acontece nos estúdios de Hollywood em sua época dourada, nos anos cinquenta. Com um elenco sensacional: Scarlett Johansson, George Clooney, Channing Tatum, Ralph Fiennes, Josh Brolin, Tilda Swinton, Jonah Hill, Dolph Lundgren, Frances McDormand... Estreia no Brasil em 25 de fevereiro.</p>
-<section class="sumario_html centro" id="sumario_3|html">
-<a name="sumario_3"></a>
-<div class="sumario__interior">
-<div class="sumario-texto">
-<p><iframe width="460" height="259" src="https://www.youtube.com/embed/sbm4N441K58" frameborder="0" allowfullscreen=""></iframe></p>
-</div> 
-</div> 
-</section>
-<p><strong><em>Batman vs. Superman: A Origem da Justiça</em> (Zack Snyder).</strong> Nessa altura dos acontecimentos quase tudo já foi dito sobre esse filme... e sem que ninguém o tenha visto. Batman luta contra o Super-Homem, e no meio disso todo o planeta sofre, com Lex Luthor aproveitando a situação e a Mulher-Maravilha tentando colocar ordem. Só nos resta cruzar os dedos para que Snyder não tenha aprontado mais uma das suas. Saberemos em 24 de março.</p>
-<section class="sumario_foto centro" id="sumario_10|foto">
+<p><a href="//cultura.elpais.com/cultura/babelia.html" target="_blank"><em>Babelia</em></a> (a revista de cultura do EL PAÍS) perguntou a quase 50 críticos e colaboradores quais são os melhores <a href="//brasil.elpais.com/tag/libros/a/">livros</a> de 2015. Cada membro desse júri, integrado por 24 homens e 22 mulheres da <a href="//brasil.elpais.com/tag/espana/a/">Espanha</a> e da <a href="//brasil.elpais.com/tag/latinoamerica/a/">América Latina</a>, escolheu cinco obras, dando-lhes nota de 1 a 5. A lista forma um panorama variado de autores, de diferentes origens e gêneros. Destaque para o reconhecimento às memórias e diários, assim como ao ensaio; um papel menor que em outros anos perdeu para a prosa, e espaço para a poesia. A lista contempla autores de vários países, entretanto, nem todos os títulos já foram traduzidos para o português e chegaram ao <a href="//brasil.elpais.com/tag/brasil/a/">Brasil</a>. A seguir, os livros com maior pontuação.</p>
+<section class="sumario_foto derecha" id="sumario_10|foto">
 <a name="sumario_10"></a>
 <div class="sumario__interior">
-<figure class="foto foto_w980" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-<img src="//ep01.epimg.net/brasil/imagenes/2016/01/05/cultura/1451990655_303962_1451992695_sumario_normal.jpg" width="980" height="537" alt="16 filmes para assistir em 2016" srcset="//ep01.epimg.net/brasil/imagenes/2016/01/05/cultura/1451990655_303962_1451992695_sumario_normal_recorte1.jpg 1960w, //ep01.epimg.net/brasil/imagenes/2016/01/05/cultura/1451990655_303962_1451992695_sumario_normal_recorte2.jpg 720w, //ep01.epimg.net/brasil/imagenes/2016/01/05/cultura/1451990655_303962_1451992695_sumario_normal.jpg 980w" />
-<meta itemprop="width"  content="980">
-<meta itemprop="height" content="537">
-<meta itemprop="url"    content="https://ep01.epimg.net/brasil/imagenes/2016/01/05/cultura/1451990655_303962_1451992695_sumario_normal.jpg">
+<figure class="foto foto_w300" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<a href="javascript:void(0);" class="enlace"
+onclick="javascript:ampliaFoto(this, '/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450368171_sumario_grande.jpg', '980', '1372', 'Ricardo Piglia visto por Fernando Vicente.');"
+>
+<img src="//ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450368171_sumario_normal.jpg" width="300" height="564" alt="Os 10 melhores livros de 2015" />
+<meta itemprop="width"  content="300">
+<meta itemprop="height" content="564">
+<meta itemprop="url"    content="https://ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450368171_sumario_normal.jpg">
+<span class="boton_ampliar">ampliar foto</span>
+</a>
 </figure>
 <div class="sumario-texto">
 </div>
 </div>
 </section>
-<p><strong><em>Rogue One: a Star Wars Story</em> (Gareth Edwards).</strong> Um dos <em>spin offs</em> nascidos do universo <em>Star Wars</em> conta a história dos rebeldes que roubaram os planos da <em>Estrela da Morte</em>. Curioso elenco com Diego Luna, Felicity Jones, Forest Whitaker, Ben Mendelshon e Mads Mikkelsen. Edwards <em>(Monstros)</em> pelo menos é um diretor que oferece certa garantia. Só nos resta esperar até 16 de dezembro.</p>
-<p><strong><em>Sully</em> (Clint Eastwood).</strong> Eastwood, que gosta de biografias, resolveu filmar a vida de Chesley Sully Sullenberger, o piloto que conseguiu pousar um avião de passageiros no rio Hudson ao lado de Nova York. Para dar vida a esse herói surgido do nada, o ator que melhor os encarna: Tom Hanks. A data de estreia programada para os EUA é 9 de setembro, e pelas fotos Hanks está espetacularmente caracterizado.</p>
-<p><strong><em>Anomalisa</em> (Charlie Kaufman e Duke Johnson).</strong> Uma joia da animação que teve o azar de estrear no mesmo ano que <a href="//brasil.elpais.com/brasil/2015/05/18/cultura/1431966197_167296.html"><em>Divertida Mente</em></a>. Kaufman transfere todas suas inquietudes – como sua constante reflexão sobre a identidade – ao <em>stop motion</em>. O que faz com que nos apaixonemos? Por que sentimos que o outro é diferente dos outros mortais? E isso através de um personagem odioso e em um hotel insignificante. Simplesmente brilhante. Chega aos cinemas brasileiros em 28 de janeiro.</p>
-<section class="sumario_html centro" id="sumario_9|html">
-<a name="sumario_9"></a>
-<div class="sumario__interior">
-<div class="sumario-texto">
-<p><iframe width="460" height="259" src="https://www.youtube.com/embed/DT6QJaS2a-U" frameborder="0" allowfullscreen=""></iframe></p>
-</div> 
-</div> 
-</section>
-<p><strong><em>O Regresso</em> (Alejandro González Iñárritu).</strong> Tudo bem que o <em>Negro</em> – o apelido pelo qual Iñárritu é conhecido – filma em condições extremas, sem importar-se muito com as pessoas e pensando somente em seu filme, mas alguém realmente acreditou na história de que Leonardo DiCaprio foi estuprado por um urso nas filmagens? Enfim, DiCaprio busca o <a href="//brasil.elpais.com/tag/premios_oscar/a/">Oscar</a> dando vida a um homem que sobrevive em 1820 nas inóspitas montanhas norte-americanas. Natureza selvagem para um sério candidato aos prêmios de Hollywood.</p>
-<section class="sumario_html centro" id="sumario_12|html">
+<section class="sumario_apoyos izquierda" id="sumario_12|apoyos">
 <a name="sumario_12"></a>
-<div class="sumario__interior">
-<div class="sumario-texto">
-<p><iframe width="460" height="259" src="https://www.youtube.com/embed/LoebZZ8K5N0" frameborder="0" allowfullscreen=""></iframe></p>
-</div> 
-</div> 
-</section>
-<p><strong><em>O Filho de Saul</em> (László Nemes).</strong> Chega em 4 de fevereiro no Brasil um dos filmes que mais barulho fez em Cannes (recebeu o que seria considerado como o segundo prêmio na disputa). Com a câmera colada à nuca do protagonista, o espectador assiste à rebelião dos sonderkommando, os judeus que trabalhavam para os nazistas nos campos de concentração, em 7 de outubro de 1944 em Auschwitz. O húngaro Nemes estreia, e como, com esse drama, grande favorito ao Oscar de melhor filme de língua não inglesa.</p>
-<section class="sumario_html centro" id="sumario_7|html">
-<a name="sumario_7"></a>
-<div class="sumario__interior">
-<div class="sumario-texto">
-<p><iframe width="460" height="259" src="https://www.youtube.com/embed/3wMzPztPavs" frameborder="0" allowfullscreen=""></iframe></p>
-</div> 
-</div> 
-</section>
-<p><strong><em>Spotlight – Segredos Revelados</em> (Tom McCarthy).</strong> Outro filme favorito ao Oscar. Narra a investigação de jornalistas do <em>The Boston Globe</em> sobre os abusos sexuais cometidos por padres católicos na congregação de Boston. Elenco de categoria para um drama sério, como os feitos por Hollywood nos anos setenta. McCarthy, excelente ator e diretor, faz aqui sua obra prima. Estreia no Brasil em 7 de janeiro.</p>
-<section class="sumario_html centro" id="sumario_1|html">
-<a name="sumario_1"></a>
-<div class="sumario__interior">
-<div class="sumario-texto">
-<p><iframe width="460" height="259" src="https://www.youtube.com/embed/zgicIR5Skwc" frameborder="0" allowfullscreen=""></iframe></p>
-</div> 
-</div> 
-</section>
-<p><strong><em>Procurando Dory</em> (Andrew Stanton e Angus Maclane).</strong> Primeiro Nemo se perdeu, e agora é a vez de Dory, a peixinha desmemoriada, se lançar à aventura para buscar sua família. Essa segunda parte é um enorme desafio para a Pixar... justamente do que essa empresa gosta. Estreia no Brasil em 16 de junho.</p>
-<section class="sumario_html centro" id="sumario_8|html">
-<a name="sumario_8"></a>
-<div class="sumario__interior">
-<div class="sumario-texto">
-<p><iframe width="460" height="259" src="https://www.youtube.com/embed/FTuDqFIcTJE" frameborder="0" allowfullscreen=""></iframe></p>
-</div> 
-</div> 
-</section>
-<p><strong><em>Personal Shopper</em> (Olivier Assayas).</strong> Olivier Assayas chegará em Cannes com seu último trabalho? Continuará com sorte e terá rodado outro grande filme? Repete a parceria com a atriz Kristen Stewart (premiada com&nbsp;<em>Acima das Nuvens</em>) e agora o cineasta francês entra no mundo da moda em Paris.</p>
-<p><strong><em>Zama</em> (Lucrecia Martel).</strong> Publicado há quase 60 anos, em 1956, o romance <em>Zama,</em> do escritor e jornalista Antonio Di Benedetto, é protagonizado por um dos tantos aventureiros espanhóis com título que chegaram à América, mas não para ficar, e acontece no final do século XVIII. Diego de Zamalloa é um funcionário que aguarda sem esperança um barco que o leve da colônia. Como não chega ele se lança em uma perseguição a um bandido em terras indígenas. Daniel Giménez Cacho dá vida a <em>Zama,</em> em uma produção da El Deseo que pode chegar a Cannes. Pelo menos é a grande esperança argentina.</p>
-<section class="sumario_apoyos izquierda" id="sumario_11|apoyos">
-<a name="sumario_11"></a>
 <div class="sumario__interior">
 <header class="sumario-encabezado"><h3 class="sumario-titulo"><span class="sin_enlace">MAIS INFORMAÇÕES</span></h3></header>
 <div class="sumario-texto">
@@ -559,22 +488,29 @@ Madri
 <ul class="apoyos-listado">
 <li class="apoyo_ apoyo_sinfoto">
 <span class="apoyo-titulo">
-<a href="//brasil.elpais.com/brasil/2015/12/24/cultura/1450994062_794472.html">
-Confira quais foram os melhores filmes latino-americanos de 2015
+<a href="//brasil.elpais.com/brasil/2015/10/10/cultura/1444492293_831692.html">
+Svetlana Alexievich: “Quando o povo falou, todos ficamos com medo”
 </a>
 </span>
 </li>
 <li class="apoyo_ apoyo_sinfoto">
 <span class="apoyo-titulo">
-<a href="//brasil.elpais.com/brasil/2015/12/18/cultura/1450424634_018492.html">
-Colombiano ‘O Abraço da Serpente’ segue seu caminho rumo ao Oscar
+<a href="//brasil.elpais.com/brasil/2015/11/20/cultura/1448023510_439162.html">
+Ian McEwan: “A utopia é uma das noções mais destrutivas”
 </a>
 </span>
 </li>
 <li class="apoyo_ apoyo_sinfoto">
 <span class="apoyo-titulo">
-<a href="//brasil.elpais.com/brasil/2015/12/10/cultura/1449767770_285686.html">
-‘Star Wars 7’: o início de uma nova era
+<a href="//brasil.elpais.com/brasil/2015/09/02/cultura/1441210297_491115.html">
+Élisabeth Roudinesco: “Freud nos tornou heróis das nossas vidas”
+</a>
+</span>
+</li>
+<li class="apoyo_ apoyo_sinfoto">
+<span class="apoyo-titulo">
+<a href="//brasil.elpais.com/brasil/2015/01/05/internacional/1420478864_488997.html">
+Livro de Houellebecq sobre França e islã instala polêmica
 </a>
 </span>
 </li>
@@ -583,17 +519,188 @@ Colombiano ‘O Abraço da Serpente’ segue seu caminho rumo ao Oscar
 </div>
 </div> 
 </section>
-<p><strong><em>Midnight Special</em> (Jeff Nichols).</strong> Em março chega aos cinemas norte-americanos um filme muito esperado, de um cineasta fundamental nesse século XXI: Jeff Nichols (<em>Separados pelo Sangue,</em> <em>O Abrigo, Amor Bandido</em>). Michael Shannon aparece mais uma vez em seu filme, e retorna outra vez às relações entre pai e filho: um pai e um filho fogem quando o progenitor descobre que seu descendente tem poderes. Junto a Shannon estão o onipresente Adam Driver, Kirsten Dunst, Sam Shepard e Joel Edgerton. O trailer é de arrepiar.</p>
-<p><strong><em>As Mil e Uma Noites</em> (Miguel Gomes).</strong> O diretor português apresentou no último festival de Cannes essa trilogia que adapta o mítico livro árabe, história de histórias, à crise portuguesa. Tão excessiva como curiosa. Como explicou a esse jornal durante o festival francês, “a primeira é mais barroca, com uma mudança contínua de narrador. A segunda é mais austera... mesmo que não gostemos muito dessa palavra na Espanha e em Portugal, não? É mais obscura e trágica, mas mantenho o humor. O protagonista não é uma pessoa, mas um coletivo, os portugueses, e essa comunidade está desesperada. No final, o filme acaba em um tempo mais... descontrolado”.</p>
-<section class="sumario_html centro" id="sumario_4|html">
+<p><strong><strong>1</strong> <em>Los diarios de Emilio Renzi. Años de formación</em></strong> <em>[Os diários de Emilio Renzi. Anos de formação, ainda sem tradução em português].</em> Autor: Ricardo Piglia (Argentina). Editora Anagrama</p>
+<p>Os anos de formação de um artista adolescente são narrados nestes diários, nos quais Emilio Renzi conta em detalhes sua educação formal e sentimental, transitando por uma Argentina idílica, artística e política. Numa das cenas iniciais é narrada uma passagem em que Renzi conversa com <a href="//brasil.elpais.com/tag/jorge_luis_borges/a/">Jorge Luis Borges</a> e, graças a um comentário, Borges o descobre como escritor. Renzi (mais que um <em>alter ego</em> do argentino Piglia, um reflexo) vai se transformando naquilo que Borges descobriu nele. Entre o assombro e a descoberta, Emilio Renzi é o melhor Piglia, o lúcido, o da palavra precisa e do fato de importantes consequências. <strong>Iván Thays</strong></p>
+<section class="sumario_foto izquierda" id="sumario_1|foto">
+<a name="sumario_1"></a>
+<div class="sumario__interior">
+<figure class="foto foto_w300" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<a href="javascript:void(0);" class="enlace"
+onclick="javascript:ampliaFoto(this, '/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450367069_sumario_grande.jpg', '980', '1373', 'Marta Sanz vista por Fernando Vicente.');"
+>
+<img src="//ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450367069_sumario_normal.jpg" width="300" height="551" alt="Os 10 melhores livros de 2015" />
+<meta itemprop="width"  content="300">
+<meta itemprop="height" content="551">
+<meta itemprop="url"    content="https://ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450367069_sumario_normal.jpg">
+<span class="boton_ampliar">ampliar foto</span>
+</a>
+</figure>
+<div class="sumario-texto">
+</div>
+</div>
+</section>
+<p><strong>2</strong> <em><strong>Farándula</strong> [O mundo do espetáculo, em tradução livre].</em> Autora: Marta Sanz (Espanha). Editora Anagrama</p>
+<p>É o mundo do espetáculo, mas é também o outro lado da moeda, longe dos olhares de fora, o percorrido pelo romance de Marta Sanz. Espetáculo inquietante de uma sociedade de consumo que lambe várias feridas, a precariedade do emprego, a vulnerabilidade física, a solidão do mundo globalizado na lógica do mercado e do sucesso individual. A autora nos mostra as fendas pelas quais vaza o gás tóxico do desenraizamento que domina o mundo do espetáculo, como se a superfície lisa da imagem fosse também a risada sardônica de outra realidade que se ergue contra a falsidade do bem-estar, contra a “sociedade do espetáculo”, envernizada pela publicidade. Uma ética do romance realista que constrói a partir dessas vidas tão brilhantes quanto vãs. Patricia de Souza</p>
+<section class="sumario_foto derecha" id="sumario_2|foto">
+<a name="sumario_2"></a>
+<div class="sumario__interior">
+<figure class="foto foto_w300" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<a href="javascript:void(0);" class="enlace"
+onclick="javascript:ampliaFoto(this, '/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450367162_sumario_grande.jpg', '980', '1372', 'Jaime Gil de Biedma visto por Fernando Vicente.');"
+>
+<img src="//ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450367162_sumario_normal.jpg" width="300" height="438" alt="Os 10 melhores livros de 2015" />
+<meta itemprop="width"  content="300">
+<meta itemprop="height" content="438">
+<meta itemprop="url"    content="https://ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450367162_sumario_normal.jpg">
+<span class="boton_ampliar">ampliar foto</span>
+</a>
+</figure>
+<div class="sumario-texto">
+</div>
+</div>
+</section>
+<p>3 <strong><em>Diários (1956-1985)</em></strong>. Autor: Jaime Gil de Biedma (Espanha). Edição de Andreu Jaume. Editora Lumen</p>
+<p>Coincidindo com a reedição das <em>Memórias</em> de Carlos Barral, um de seus grandes “companheiros de viagem”, são publicados os diários completos do poeta da chamada Escola de Barcelona que mais pegadas deixou. Até agora só pudéramos ler <em>Retrato del artista en 1956</em>. Agora chegam <em>Diario de moralidades. 1956-1965</em>,<em>Diario de 1978</em> e <em>Diario de 1985</em>. Juntos, constituem acima de tudo a biografia moral, além de intelectual, do poeta que no fundo queria ser poema, do despertar da vocação literária ante a ameaça da morte, encarnada na doença do século XX, a Aids. <strong>M. Ángeles Cabré</strong></p>
+<section class="sumario_foto derecha" id="sumario_3|foto">
+<a name="sumario_3"></a>
+<div class="sumario__interior">
+<figure class="foto foto_w300" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<a href="javascript:void(0);" class="enlace"
+onclick="javascript:ampliaFoto(this, '/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450367302_sumario_grande.jpg', '980', '1372', 'Svetlana Alexiévich vista por Fernando Vicente.');"
+>
+<img src="//ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450367302_sumario_normal.jpg" width="300" height="490" alt="Os 10 melhores livros de 2015" />
+<meta itemprop="width"  content="300">
+<meta itemprop="height" content="490">
+<meta itemprop="url"    content="https://ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450367302_sumario_normal.jpg">
+<span class="boton_ampliar">ampliar foto</span>
+</a>
+</figure>
+<div class="sumario-texto">
+</div>
+</div>
+</section>
+<p>4 <em><strong>A guerra não tem rosto de mulher</strong> [em tradução livre]</em>. Autora: <a href="//brasil.elpais.com/tag/svetlana_aleksandrovna_aleksievich/a/">Svetlana Alexiévich</a> (antiga Bielorrússia). Tradução para o espanhol de Yulia Doblovolskaia e Zahara García González. Editora Debate</p>
+<p>O uso da boa literatura para fazer jornalismo não é algo novo, mas é novidade concederem um Nobel por isso. Aconteceu com <a href="//brasil.elpais.com/tag/gabriel_garcia_marquez/a/">García Márquez</a>, que se antes de tudo se achava um jornalista. Recentemente, Gabo, da América Latina, e Kapuscinski, da velha Europa, convergiram. Uma <a href="//brasil.elpais.com/brasil/2015/10/10/cultura/1444492293_831692.html">síntese de ambos é a bielorrussa Alexiévich</a>. Dela se traduziu para o português <em>O fim do homem soviético</em>, história da destruição da URSS na vida de carrascos e vítimas. Para o espanhol, foi traduzido também um relato sobre Tchernobil e a história de milhões de mulheres que combateram no Exército Vermelho na Segunda Guerra Mundial. O denominador comum é o fracasso da transformação do homem antigo no <em>Homo economicus</em>. Com apenas um gravador e uma caneta, <a href="//brasil.elpais.com/brasil/2015/10/10/cultura/1444492293_831692.html">Alexiévich escreve romances harmônicos</a>, de não ficção, sobre seres traumatizados por situações excepcionais, aos quais dá voz para que contem a parte não heroica de suas vidas.&nbsp; <strong>Joaquín Estefanía</strong></p>
+<section class="sumario_foto derecha" id="sumario_4|foto">
 <a name="sumario_4"></a>
 <div class="sumario__interior">
+<figure class="foto foto_w300" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<a href="javascript:void(0);" class="enlace"
+onclick="javascript:ampliaFoto(this, '/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450367408_sumario_grande.jpg', '980', '1372', 'Michel Houellebecq visto por Fernando Vicente.');"
+>
+<img src="//ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450367408_sumario_normal.jpg" width="300" height="535" alt="Os 10 melhores livros de 2015" />
+<meta itemprop="width"  content="300">
+<meta itemprop="height" content="535">
+<meta itemprop="url"    content="https://ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450367408_sumario_normal.jpg">
+<span class="boton_ampliar">ampliar foto</span>
+</a>
+</figure>
 <div class="sumario-texto">
-<p><iframe width="460" height="259" src="https://www.youtube.com/embed/iVYnmpseczI" frameborder="0" allowfullscreen=""></iframe></p>
-</div> 
-</div> 
+</div>
+</div>
 </section>
-<p><strong><em>Live By Night</em> (Ben Affleck).</strong> Em 2016 ou Affleck ascende aos altares da glória ou decididamente acaba lançado aos leões. <em>Os Filhos da Noite</em> é um soberbo romance de Dennis Lehane ambientado nos anos 20 e 30 do século XX e que reflete sobre se é possível ser uma boa pessoa e um criminoso ao mesmo tempo, centrando-se no contrabando de rum na Flórida. Affleck o dirigiu e protagonizou junto com Scott Eastwood, Sienna Miller, Brendan Gleeson e Ellen Fanning. Pode ser que não estreie esse ano, mas vamos dar um voto de confiança ao rapaz.</p>
+<p>5 <a href="//brasil.elpais.com/brasil/2015/01/05/internacional/1420478864_488997.html" target="_blank"><strong><em>Submissão</em></strong></a>. Autor: <a href="//brasil.elpais.com/tag/michel_houellebecq/a/">Michel Houellebecq</a> (França). Tradução de Rosa Freire d’Aguiar. Editora Alfaguara Brasil</p>
+<p>Distopia por perto. Um professor da Sorbonne enfrenta a mudança. Entre a ação e a reflexão, narra a rendição que leva à conversão da França ao islã. Como é? França, 2022. A Frente Nacional vai vencer as eleições presidenciais. Para evitar que isso aconteça, a esquerda se une a um partido islâmico. Ganham, niilismo transformado em mandato. A civilização é o domínio do selvagem, enquanto o desprezo pelo outro, pela mulher, é a submissão. Não há julgamento, e sim o perfeito jogo da tensão narrativa para iluminar a tempestade. Como assim? “… uma espécie de dúvida generalizada, a sensação de que não havia nada com que se alarmar”. <strong>Esther Bendahan</strong></p>
+<section class="sumario_foto derecha" id="sumario_5|foto">
+<a name="sumario_5"></a>
+<div class="sumario__interior">
+<figure class="foto foto_w300" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<a href="javascript:void(0);" class="enlace"
+onclick="javascript:ampliaFoto(this, '/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450367896_sumario_grande.jpg', '980', '1372', 'Inger Christensen vista por Fernando Vicente.');"
+>
+<img src="//ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450367896_sumario_normal.jpg" width="300" height="571" alt="Os 10 melhores livros de 2015" />
+<meta itemprop="width"  content="300">
+<meta itemprop="height" content="571">
+<meta itemprop="url"    content="https://ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450367896_sumario_normal.jpg">
+<span class="boton_ampliar">ampliar foto</span>
+</a>
+</figure>
+<div class="sumario-texto">
+</div>
+</div>
+</section>
+<p>6 <strong><em>Eso</em></strong> <em>[Isso]</em>. Autora: Inger Christensen (Dinamarca). Tradução para o espanhol de Francisco J. Uriz. Editora Sexto Piso</p>
+<p>(Segundo seus editores) uma cosmogonia, mas também um exercício de crítica política, uma reflexão aguda e dolorosa sobre o emprego, uma celebração de tudo que existe. Num ano de livros notáveis de Esperanza López Parada, Carlos Pardo e Rafael Espejo (para mencionar apenas espanhóis), <em>Eso</em>, de Inger Christensen, destaca-se por permitir a seu leitor atingir o lugar “onde idioma e mundo se tocam frutificam de- / formam ou seja lá que for que fazem mutuamente”, que é o lugar do qual se origina toda a poesia relevante; também (e particularmente) a que resiste a tentativas como esta de explicá-la. <strong>Patricio Pron</strong></p>
+<section class="sumario_foto derecha" id="sumario_6|foto">
+<a name="sumario_6"></a>
+<div class="sumario__interior">
+<figure class="foto foto_w300" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<a href="javascript:void(0);" class="enlace"
+onclick="javascript:ampliaFoto(this, '/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450367951_sumario_grande.jpg', '980', '1372', 'Ian McEwan visto por Fernando Vicente.');"
+>
+<img src="//ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450367951_sumario_normal.jpg" width="300" height="621" alt="Os 10 melhores livros de 2015" />
+<meta itemprop="width"  content="300">
+<meta itemprop="height" content="621">
+<meta itemprop="url"    content="https://ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450367951_sumario_normal.jpg">
+<span class="boton_ampliar">ampliar foto</span>
+</a>
+</figure>
+<div class="sumario-texto">
+</div>
+</div>
+</section>
+<p>7 <strong><em>A balada de Adam Henry</em></strong>. <a href="//brasil.elpais.com/brasil/2015/11/20/cultura/1448023510_439162.html">Autor: Ian McEwan (Reino Unido)</a>. Tradução de Jório Dauster. Editora Companhia das Letras (Brasil)</p>
+<p>O que acontece quando o código moral de um indivíduo se opõe ao de sua sociedade? Como podemos defender uma pessoa de suas próprias ações perniciosas? Como saber quando um adolescente é responsável por seus atos? Qual é a função de nossas leis e como diferenciá-la de nossas normas éticas individuais? Em seu mais recente livro, Ian McEwan destila essas grandes questões num romance exemplar para nosso preocupante século. <em>A balada de Adam Henry</em> é ao mesmo tempo a crônica de um conflito familiar e uma lúcida exploração do papel da Justiça em nossa sociedade. Mais uma vez McEwan confirma sua posição de melhor e mais ambicioso romancista de sua geração. <strong>Alberto Manguel</strong></p>
+<section class="sumario_foto derecha" id="sumario_7|foto">
+<a name="sumario_7"></a>
+<div class="sumario__interior">
+<figure class="foto foto_w300" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<a href="javascript:void(0);" class="enlace"
+onclick="javascript:ampliaFoto(this, '/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450368017_sumario_grande.jpg', '980', '1372', 'Élisabeth Roudinesco vista por Fernando Vicente.');"
+>
+<img src="//ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450368017_sumario_normal.jpg" width="300" height="620" alt="Os 10 melhores livros de 2015" />
+<meta itemprop="width"  content="300">
+<meta itemprop="height" content="620">
+<meta itemprop="url"    content="https://ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450368017_sumario_normal.jpg">
+<span class="boton_ampliar">ampliar foto</span>
+</a>
+</figure>
+<div class="sumario-texto">
+</div>
+</div>
+</section>
+<p>8 <em><strong><a href="//brasil.elpais.com/brasil/2015/09/02/cultura/1441210297_491115.html"><em>Sigmund Freud en Son Temps et Dans le Nôtre</em></a></strong> [Freud. Em seu tempo e no nosso]</em>. Autora: Élisabeth Roudinesco (França). Tradução para o espanhol de Horacio Pons. Editora Debate</p>
+<p>Sigmund Freud, o pai da interpretação do comportamento humano, e para quem a psicanálise era o único compromisso político possível, foi vítima do mau uso de seu próprio remédio. Seu biógrafo oficial e um de seus discípulos mais brilhantes e fiéis, Ernest Jones, o interpretou excessivamente ensimesmado e apegado às drogas. Outros, como Peter Gay, não tiveram acesso aos arquivos freudianos conservados na Biblioteca de Washington, abertos em 2015, ano em que Élisa­beth Roudinesco começa sua pesquisa para escrever o retrato social, intelectual e científico de um homem cuja complexidade lembra os clássicos, cujas leituras lhe ensinaram a humanidade indispensável para descer aos infernos da consciência. <strong>Ángela Molina</strong></p>
+<section class="sumario_foto derecha" id="sumario_8|foto">
+<a name="sumario_8"></a>
+<div class="sumario__interior">
+<figure class="foto foto_w300" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<a href="javascript:void(0);" class="enlace"
+onclick="javascript:ampliaFoto(this, '/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450368065_sumario_grande.jpg', '980', '1372', 'Sara Mesa vista por Fernando Vicente.');"
+>
+<img src="//ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450368065_sumario_normal.jpg" width="300" height="559" alt="Os 10 melhores livros de 2015" />
+<meta itemprop="width"  content="300">
+<meta itemprop="height" content="559">
+<meta itemprop="url"    content="https://ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450368065_sumario_normal.jpg">
+<span class="boton_ampliar">ampliar foto</span>
+</a>
+</figure>
+<div class="sumario-texto">
+</div>
+</div>
+</section>
+<p>9 <strong><em>Cicatriz</em></strong>. Autora: Sara Mesa (Espanha). Editora: Anagrama</p>
+<p><em>Cicatriz</em> é um romance diferente. É escrito no presente, um presente seco que lhe dá um esmalte de frieza. É a história perversa de uma obsessão dupla, a de um homem que entra na vida de uma mulher via Internet e a de uma mulher que se deixa atrair pela curiosidade. É a irrupção à distância do azar numa vida insatisfeita, na qual a irrealidade consentida destrói ainda mais que a realidade. É uma espécie de negativo da vida a dois e do fetichismo consumista. A narração se apoia especialmente em detalhes impiedosos. Uma verdadeira revelação. <strong>José María Guelbenzu</strong></p>
+<section class="sumario_foto derecha" id="sumario_9|foto">
+<a name="sumario_9"></a>
+<div class="sumario__interior">
+<figure class="foto foto_w300" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<a href="javascript:void(0);" class="enlace"
+onclick="javascript:ampliaFoto(this, '/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450368122_sumario_grande.jpg', '980', '1372', 'Chantal Maillard vista por Fernando Vicente.');"
+>
+<img src="//ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450368122_sumario_normal.jpg" width="300" height="500" alt="Os 10 melhores livros de 2015" />
+<meta itemprop="width"  content="300">
+<meta itemprop="height" content="500">
+<meta itemprop="url"    content="https://ep01.epimg.net/cultura/imagenes/2015/12/17/babelia/1450366041_247687_1450368122_sumario_normal.jpg">
+<span class="boton_ampliar">ampliar foto</span>
+</a>
+</figure>
+<div class="sumario-texto">
+</div>
+</div>
+</section>
+<p>10 <strong><em>La mujer de pie</em></strong> <em>[A mulher em pé, em tradução livre]</em>. Autora: Chantal Maillard (Bélgica). Editora Galaxia Gutenberg</p>
+<p>Tudo começa com uma imagem que pode parecer familiar a todos: a do ser querido, deitado na quietude de uma cama enferma, e no minuto exato que antecede a escuridão. Chantal Maillard rememora a cena da morte de sua mãe nas primeiras páginas de <em>La mujer de pie</em> —esse livro que é ora ensaio, ora poema, ora diário— não para se lamentar nem para se afligir, e sim para se perguntar o que é a dor da perda e quantas feridas faltariam para derrubar este nosso corpo, o qual ela, apesar de tudo, aprendeu a manter em pé. <strong>Luna Miguel</strong></p>
 </div> 
 <section class="articulo-tags" id="articulo-tags">
 <header class="articulo-tags-encabezado ">
@@ -603,16 +710,31 @@ Arquivado em:
 </header>
 <div class="articulo-tags__interior" id="articulo-tags__interior">
 <ul class="listado" id="listado">
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/critica_cine/a/" title="Ver m&aacute;s noticias de [Crítica filmes]">Crítica filmes</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/premios_oscar/a/" title="Ver m&aacute;s noticias de [Prêmios Oscar]">Prêmios Oscar</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/estrenos_cine/a/" title="Ver m&aacute;s noticias de [Estreias filmes]">Estreias filmes</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/cine_americano/a/" title="Ver m&aacute;s noticias de [Cinema dos Estados Unidos]">Cinema dos Estados Unidos</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/premios_cine/a/" title="Ver m&aacute;s noticias de [Prêmios cinema]">Prêmios cinema</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/sara_mesa_villalba/a/" title="Ver m&aacute;s noticias de [Sara Mesa]">Sara Mesa</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/ricardo_piglia/a/" title="Ver m&aacute;s noticias de [Ricardo Piglia]">Ricardo Piglia</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/marta_sanz/a/" title="Ver m&aacute;s noticias de [Marta Sanz]">Marta Sanz</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/jaime_gil_de_biedma/a/" title="Ver m&aacute;s noticias de [Jaime Gil de Biedma]">Jaime Gil de Biedma</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/2015/a/" title="Ver m&aacute;s noticias de [2015]">2015</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/libros_del_ano/a/" title="Ver m&aacute;s noticias de [Libros del año]">Libros del año</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/nobel_literatura/a/" title="Ver m&aacute;s noticias de [Nobel de Literatura]">Nobel de Literatura</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/literatura_europea/a/" title="Ver m&aacute;s noticias de [Literatura europeia]">Literatura europeia</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/el_pais/a/" title="Ver m&aacute;s noticias de [El País]">El País</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/critica_literaria/a/" title="Ver m&aacute;s noticias de [Crítica literária]">Crítica literária</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/premios_nobel/a/" title="Ver m&aacute;s noticias de [Prêmios Nobel]">Prêmios Nobel</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/premios_cultura/a/" title="Ver m&aacute;s noticias de [Prêmios cultura]">Prêmios cultura</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/escritores/a/" title="Ver m&aacute;s noticias de [Escritores]">Escritores</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/editoriales/a/" title="Ver m&aacute;s noticias de [Editoriais]">Editoriais</a></li>
 <li itemprop="keywords"><a href="//brasil.elpais.com/tag/critica/a/" title="Ver m&aacute;s noticias de [Crítica]">Crítica</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/premios/a/" title="Ver m&aacute;s noticias de [Prêmios]">Prêmios</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/sector_editorial/a/" title="Ver m&aacute;s noticias de [Setor editorial]">Setor editorial</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/literatura/a/" title="Ver m&aacute;s noticias de [Literatura]">Literatura</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/libros/a/" title="Ver m&aacute;s noticias de [Livros]">Livros</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/gente/a/" title="Ver m&aacute;s noticias de [Gente]">Gente</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/prensa/a/" title="Ver m&aacute;s noticias de [Imprensa]">Imprensa</a></li>
 <li itemprop="keywords"><a href="//brasil.elpais.com/tag/cultura/a/" title="Ver m&aacute;s noticias de [Cultura]">Cultura</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/actores/a/" title="Ver m&aacute;s noticias de [Atores]">Atores</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/cine/a/" title="Ver m&aacute;s noticias de [Cinema]">Cinema</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/adam_douglas_driver_wright/a/" title="Ver m&aacute;s noticias de [Adam Driver]">Adam Driver</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/eventos/a/" title="Ver m&aacute;s noticias de [Eventos]">Eventos</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/sociedad/a/" title="Ver m&aacute;s noticias de [Sociedade]">Sociedade</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/svetlana_aleksandrovna_aleksievich/a/" title="Ver m&aacute;s noticias de [Svetlana Aleksiévich]">Svetlana Aleksiévich</a></li>
 </ul>
 </div>
 </section>
@@ -632,25 +754,8 @@ if (typeof EPETshowHideTags == 'function') {
 <div class="apoyos">
 <ul class="apoyos-listado">
 <li class="apoyo_">
-<figure class="foto foto_w360" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-<a class="enlace" href="//brasil.elpais.com/brasil/2015/12/28/estilo/1451321953_852722.html?rel=mas">
-<img itemprop="url" width="360" height="257" alt="Cate Blanchett deixa Hollywood para passar mais tempo com filhos" title="Cate Blanchett deixa Hollywood para passar mais tempo com filhos" src="//ep01.epimg.net/brasil/imagenes/2016/01/05/cultura/1451990655_303962_1451992945_noticiarelacionadaprincipal_normal.jpg"  />
-<meta itemprop="width" content="360">
-<meta itemprop="height" content="257">
-</a>                 </figure>
 <span class="apoyo-titulo">
-<a href="//brasil.elpais.com/brasil/2015/12/28/estilo/1451321953_852722.html?rel=mas"   >                                         Cate Blanchett deixa Hollywood para passar mais tempo com filhos
-</a>                 </span>
-</li>
-<li class="apoyo_">
-<figure class="foto foto_w360" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-<a class="enlace" href="//brasil.elpais.com/brasil/2015/12/28/cultura/1451328107_951489.html?rel=mas">
-<img itemprop="url" width="360" height="257" alt="Entre personagens ambíguos, Wagner Moura é direto" title="Entre personagens ambíguos, Wagner Moura é direto" src="//ep01.epimg.net/brasil/imagenes/2016/01/05/cultura/1451990655_303962_1451992977_noticiarelacionadaprincipal_normal.jpg"  />
-<meta itemprop="width" content="360">
-<meta itemprop="height" content="257">
-</a>                 </figure>
-<span class="apoyo-titulo">
-<a href="//brasil.elpais.com/brasil/2015/12/28/cultura/1451328107_951489.html?rel=mas"   >                                         Entre personagens ambíguos, Wagner Moura é direto
+<a href="//brasil.elpais.com/tag/libros/a/?rel=mas"   >                                         Outras notícias sobre literatura
 </a>                 </span>
 </li>
 </ul>
@@ -658,6 +763,13 @@ if (typeof EPETshowHideTags == 'function') {
 </div>
 </section>
 </div> 
+<div class="envoltorio_publi" id="roba_principal">
+<div id='elpais_gpt-MPU1' class='publi_luto_horizontal'>
+<script type='text/javascript'>
+			PBS.display('MPU1');
+		</script>
+</div>
+</div>
 <aside class="articulo-extras">
 <div class="widget widget_newsletter">
 <div class="widget__interior">
@@ -783,55 +895,55 @@ function lmv_cambia_subpestana(idpestana)
 </div>
 <div class="contenido" id="lmv_todo" style="display:none" >
 <ol>
-<li class="estirar"><span class="numero">1</span><a href="//elpais.com/deportes/2018/09/23/actualidad/1537718190_733995.html" title="Ver Noticia">Lorenzo: “Márquez me ha destrozado el pie y me ha arruinado la carrera”</a></li>
-<li class="estirar"><span class="numero">2</span><a href="//elpais.com/cultura/2018/09/24/actualidad/1537769625_914876.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>La cueva de Altamira: la Capilla Sixtina del arte paleolítico</a></li>
-<li class="estirar"><span class="numero">3</span><a href="//elpais.com/elpais/2018/09/19/album/1537372135_110248.html" title="Ver Noticia"><span title="Fotogalería" class="foto">Fotogalería</span>Once españoles que arrasaron en el extranjero y seguramente no te has enterado</a></li>
-<li class="estirar"><span class="numero">4</span><a href="//elpais.com/elpais/2018/09/24/gente/1537781408_429436.html" title="Ver Noticia">Melanie Griffith y Antonio Banderas, juntos de nuevo por su hija</a></li>
-<li class="estirar"><span class="numero">5</span><a href="//elpais.com/elpais/2018/09/24/ciencia/1537776944_563077.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Cientos de médicos y científicos piden a Sanidad que actúe contra las pseudoterapias porque “matan”</a></li>
-<li class="estirar"><span class="numero">6</span><a href="//elpais.com/ccaa/2018/09/23/catalunya/1537727332_994921.html" title="Ver Noticia">Junqueras toma la iniciativa para frenar a Puigdemont</a></li>
-<li class="estirar"><span class="numero">7</span><a href="//elpais.com/deportes/2018/09/20/actualidad/1537456893_702506.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El Everest de Javier Gómez Noya</a></li>
-<li class="estirar"><span class="numero">8</span><a href="//elpais.com/elpais/2018/09/19/ciencia/1537357576_695356.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Homeopatía, el error fatal de Rosa</a></li>
-<li class="estirar"><span class="numero">9</span><a href="//elpais.com/politica/2018/09/24/actualidad/1537775454_653860.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>PP y Ciudadanos bloquean la vía de Sánchez para aprobar los Presupuestos</a></li>
-<li class="estirar"><span class="numero">10</span><a href="//elpais.com/elpais/2018/09/24/ciencia/1537791885_216932.html" title="Ver Noticia">Japón logra posar dos naves en un asteroide por primera vez</a></li>
+<li class="estirar"><span class="numero">1</span><a href="http://smoda.elpais.com/moda/nacho-vidal-mi-hija-no-esta-en-un-cuerpo-equivocado-es-una-nina-con-pene/" title="Ver Noticia">Nacho Vidal: “Mi hija no está en un cuerpo equivocado, es una niña con pene”</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//elpais.com/cultura/2018/09/26/television/1537984668_369407.html" title="Ver Noticia">Un error de ‘Pasapalabra’ en el rosco le cuesta la eliminación a un concursante</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//elpais.com/elpais/2018/09/26/ciencia/1537960453_593059.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Abusar de las pantallas lastra la inteligencia de los niños</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//elpais.com/elcomidista/2018/09/26/articulo/1537973518_982629.html" title="Ver Noticia">El restaurante que trata mal y cocina peor</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//elpais.com/cultura/2018/09/27/actualidad/1538025841_320298.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Sexo, alcohol y fiesta en la España de Franco y Ava Gardner</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//elpais.com/elpais/2018/09/24/ciencia/1537789289_801960.html" title="Ver Noticia">La odisea de Katrin, una ‘báscula’ gigante para la partícula más pequeña</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//elpais.com/sociedad/2018/09/27/actualidad/1538048561_887845.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El parricida de Castellón, a su exmujer: “Me voy a cargar lo que más quieres”</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//elpais.com/politica/2018/09/27/actualidad/1538033747_400451.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Duque justifica la compra de un chalé a través de una sociedad: “No hubo un ahorro real de impuestos”</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//elpais.com/politica/2018/09/26/actualidad/1537984724_391033.html" title="Ver Noticia">Una joven, víctima de los disparos de la Marina Real de Marruecos cuando huía a España</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//elpais.com/sociedad/2018/09/27/actualidad/1538032001_854087.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Detenido el principal sospechoso del asesinato de una mujer en Málaga</a></li>
 </ol>
 </div>			<div class="contenido" id="lmv_america" style="display:none" >
 <ol>
-<li class="estirar"><span class="numero">1</span><a href="//elpais.com/cultura/2018/09/24/actualidad/1537769625_914876.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>La cueva de Altamira: la Capilla Sixtina del arte paleolítico</a></li>
+<li class="estirar"><span class="numero">1</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537997982_557864.html" title="Ver Noticia">Carlos Bolsonaro será denunciado por apologia à tortura na Câmara do Rio</a></li>
 <li class="estirar"><span class="numero">2</span><a href="//brasil.elpais.com/brasil/2018/01/12/politica/1515787762_592872.html" title="Ver Noticia">A semana em que as primeiras pedras atingiram a vidraça de Jair Bolsonaro</a></li>
-<li class="estirar"><span class="numero">3</span><a href="//brasil.elpais.com/brasil/2018/09/24/deportes/1537805470_948665.html" title="Ver Noticia">Marta é eleita a melhor jogadora do mundo da FIFA pela sexta vez</a></li>
-<li class="estirar"><span class="numero">4</span><a href="//brasil.elpais.com/brasil/2018/09/20/politica/1537395647_670658.html" title="Ver Noticia">Profusão de pesquisas eleitorais acirra a disputa à Presidência da República</a></li>
-<li class="estirar"><span class="numero">5</span><a href="//elpais.com/elpais/2018/09/19/ciencia/1537357576_695356.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Homeopatía, el error fatal de Rosa</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//brasil.elpais.com/brasil/2018/09/24/politica/1537815456_213002.html" title="Ver Noticia">José Dirceu: “O problema do Bolsonaro é do PSDB e DEM. Sem Lula, temos Ciro e Haddad”</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537987540_575485.html" title="Ver Noticia">Calejados, candidatos à presidência fazem quinto debate equilibrado</a></li>
+<li class="estirar"><span class="numero">5</span><a href="http://smoda.elpais.com/moda/nacho-vidal-mi-hija-no-esta-en-un-cuerpo-equivocado-es-una-nina-con-pene/" title="Ver Noticia">Nacho Vidal: “Mi hija no está en un cuerpo equivocado, es una niña con pene”</a></li>
 <li class="estirar"><span class="numero">6</span><a href="//elpais.com/internacional/2018/07/23/mundo_global/1532345833_454942.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Cadáveres atrapados durante décadas en glaciares suizos salen a la superficie por el calentamiento global</a></li>
-<li class="estirar"><span class="numero">7</span><a href="//brasil.elpais.com/brasil/2018/09/19/politica/1537384517_967736.html" title="Ver Noticia">“Haddad está no segundo turno, Bolsonaro ainda não”, diz estatístico de campanhas</a></li>
-<li class="estirar"><span class="numero">8</span><a href="//elpais.com/elpais/2018/09/22/opinion/1537632792_151759.html" title="Ver Noticia">Todo comenzó con la pornografía</a></li>
-<li class="estirar"><span class="numero">9</span><a href="//elpais.com/cultura/2018/03/06/babelia/1520352987_936609.html" title="Ver Noticia">Noam Chomsky: “La gente ya no cree en los hechos”</a></li>
-<li class="estirar"><span class="numero">10</span><a href="//elpais.com/elpais/2018/09/24/album/1537795646_665773.html" title="Ver Noticia"><span title="Fotogalería" class="foto">Fotogalería</span>Vidas paralelas: opuestos y semejantes a cada lado de la DMZ de Corea</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//elpais.com/sociedad/2018/09/27/actualidad/1538048561_887845.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El parricida de Castellón, a su exmujer: “Me voy a cargar lo que más quieres”</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//elpais.com/internacional/2018/09/27/mexico/1537999590_041505.html" title="Ver Noticia">El exgobernador mexicano Javier Duarte es condenado a nueve años de prisión tras declararse culpable</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//elpais.com/internacional/2018/09/27/estados_unidos/1538010036_433237.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Trump, sobre su discurso en la ONU: “No se reían de mí, se reían conmigo”</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//elpais.com/internacional/2018/09/26/estados_unidos/1537975769_704871.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Cuarta acusación de abuso sexual contra el candidato de Trump al Supremo</a></li>
 </ol>
 </div>			<div class="contenido" id="lmv_brasil" >
 <ol>
-<li class="estirar"><span class="numero">1</span><a href="//brasil.elpais.com/brasil/2018/01/12/politica/1515787762_592872.html" title="Ver Notícia">A semana em que as primeiras pedras atingiram a vidraça de Jair Bolsonaro</a></li>
-<li class="estirar"><span class="numero">2</span><a href="//brasil.elpais.com/brasil/2018/09/24/deportes/1537805470_948665.html" title="Ver Notícia">Marta é eleita a melhor jogadora do mundo da FIFA pela sexta vez</a></li>
-<li class="estirar"><span class="numero">3</span><a href="//brasil.elpais.com/brasil/2018/09/20/politica/1537395647_670658.html" title="Ver Notícia">Profusão de pesquisas eleitorais acirra a disputa à Presidência da República</a></li>
-<li class="estirar"><span class="numero">4</span><a href="//brasil.elpais.com/brasil/2018/09/19/politica/1537384517_967736.html" title="Ver Notícia">“Haddad está no segundo turno, Bolsonaro ainda não”, diz estatístico de campanhas</a></li>
-<li class="estirar"><span class="numero">5</span><a href="//brasil.elpais.com/brasil/2018/09/18/ciencia/1537286875_064256.html" title="Ver Notícia">Só há um grupo da população que pode se beneficiar de uma taça de vinho por dia</a></li>
-<li class="estirar"><span class="numero">6</span><a href="//brasil.elpais.com/brasil/2018/09/20/opinion/1537466622_097329.html" title="Ver Notícia">Enquanto pastores evangélicos apoiam Bolsonaro, cúpula católica lava as mãos</a></li>
-<li class="estirar"><span class="numero">7</span><a href="//brasil.elpais.com/brasil/2018/09/24/politica/1537825348_060599.html" title="Ver Notícia">Ibope: Bolsonaro estanca em 28% e Haddad cresce e vai a 22%</a></li>
-<li class="estirar"><span class="numero">8</span><a href="//brasil.elpais.com/brasil/2018/09/24/opinion/1537805079_256045.html" title="Ver Notícia">Mulheres contra a opressão</a></li>
-<li class="estirar"><span class="numero">9</span><a href="//brasil.elpais.com/brasil/2018/03/06/cultura/1520352987_936609.html" title="Ver Notícia">Noam Chomsky: “As pessoas já não acreditam nos fatos”</a></li>
-<li class="estirar"><span class="numero">10</span><a href="//brasil.elpais.com/brasil/2018/09/21/album/1537528878_723998.html" title="Ver Notícia"><span title="Galeria de fotos" class="foto">Galeria de fotos</span>Sete coisas que nos fazem acordar no meio da noite… e como solucioná-las</a></li>
+<li class="estirar"><span class="numero">1</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537997982_557864.html" title="Ver Notícia">Carlos Bolsonaro será denunciado por apologia à tortura na Câmara do Rio</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//brasil.elpais.com/brasil/2018/01/12/politica/1515787762_592872.html" title="Ver Notícia">A semana em que as primeiras pedras atingiram a vidraça de Jair Bolsonaro</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//brasil.elpais.com/brasil/2018/09/24/politica/1537815456_213002.html" title="Ver Notícia">José Dirceu: “O problema do Bolsonaro é do PSDB e DEM. Sem Lula, temos Ciro e Haddad”</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537987540_575485.html" title="Ver Notícia">Calejados, candidatos à presidência fazem quinto debate equilibrado</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//brasil.elpais.com/brasil/2017/10/25/politica/1508939191_181548.html" title="Ver Notícia">Como era o Brasil quando armas eram vendidas em shoppings</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537978764_156884.html" title="Ver Notícia">Bebê morto com tiro na cabeça é um cruel símbolo da situação dos povos indígenas no Brasil</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//brasil.elpais.com/brasil/2018/09/24/opinion/1537805079_256045.html" title="Ver Notícia">Mulheres contra a opressão</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//brasil.elpais.com/brasil/2018/08/29/politica/1535564207_054097.html" title="Ver Notícia">Bolsonaro mentiu ao falar de livro de educação sexual no ‘JN’</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//brasil.elpais.com/brasil/2018/09/20/opinion/1537447119_621795.html" title="Ver Notícia">Mudança no imposto de renda que planeja economista de Bolsonaro pode agravar a desigualdade e a crise</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537913905_985857.html" title="Ver Notícia">Ex-mulher de Bolsonaro disse ao Itamaraty que ele a ameaçou de morte</a></li>
 </ol>
 </div>			<div class="contenido" id="lmv_catalunya" style="display:none" >
 <ol>
-<li class="estirar"><span class="numero">1</span><a href="//cat.elpais.com/cat/2018/09/22/opinion/1537646554_820006.html" title="Veure Notícia">La república buida</a></li>
-<li class="estirar"><span class="numero">2</span><a href="//cat.elpais.com/cat/2018/09/24/opinion/1537794979_468509.html" title="Veure Notícia">Política virtual a Catalunya</a></li>
-<li class="estirar"><span class="numero">3</span><a href="//cat.elpais.com/cat/2018/09/24/actualidad/1537801076_013113.html" title="Veure Notícia">Els castellers exhibeixen pancartes a favor de la llibertat dels presos a la Mercè</a></li>
-<li class="estirar"><span class="numero">4</span><a href="//cat.elpais.com/cat/2018/09/23/catalunya/1537727332_994921.html" title="Veure Notícia">Junqueras pren la iniciativa per frenar a Puigdemont</a></li>
-<li class="estirar"><span class="numero">5</span><a href="//cat.elpais.com/cat/2018/09/21/catalunya/1537540696_211942.html" title="Veure Notícia"><span title="Vídeo" class="video">Vídeo</span>“En una societat sense educació sexual, era obligatori que el porno canviés”</a></li>
-<li class="estirar"><span class="numero">6</span><a href="//cat.elpais.com/cat/2018/09/24/catalunya/1537783961_936117.html" title="Veure Notícia">La megafonia de la Generalitat a Girona crida els funcionaris a concentrar-se pels presos</a></li>
-<li class="estirar"><span class="numero">7</span><a href="//cat.elpais.com/cat/2018/09/24/internacional/1537812645_829469.html" title="Veure Notícia">‘L’incident de Perpinyà’, o com la crisi catalana creua la frontera pirinenca</a></li>
-<li class="estirar"><span class="numero">8</span><a href="//cat.elpais.com/cat/2018/09/22/catalunya/1537644166_359502.html" title="Veure Notícia">‘Petó i adeu’, la iniciativa per acabar amb els col·lapses de trànsit en els accessos de les escoles</a></li>
-<li class="estirar"><span class="numero">9</span><a href="//cat.elpais.com/cat/2018/09/21/internacional/1537547285_223065.html" title="Veure Notícia">El pols a França pel barri dels gitanos catalans a Perpinyà</a></li>
-<li class="estirar"><span class="numero">10</span><a href="//cat.elpais.com/cat/2018/03/08/catalunya/1520508342_956106.html" title="Veure Notícia">El Consell del Poder Judicial denega a Santiago Vidal el reingrés com a magistrat</a></li>
+<li class="estirar"><span class="numero">1</span><a href="//cat.elpais.com/cat/2018/09/27/cultura/1538036752_451427.html" title="Veure Notícia">Stephen King, un català de por</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//cat.elpais.com/cat/2018/09/27/opinion/1538067434_446213.html" title="Veure Notícia">Fora furs!</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//cat.elpais.com/cat/2018/09/26/cultura/1537966086_120196.html" title="Veure Notícia">“Sherlock Holmes és una oportunitat per crear nous espectadors de teatre”</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//cat.elpais.com/cat/2018/09/26/catalunya/1537977632_698457.html" title="Veure Notícia">Colau agraeix a la Guàrdia Urbana la seva feina “en un any que no ha estat fàcil”</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//cat.elpais.com/cat/2018/09/27/catalunya/1538053520_451005.html" title="Veure Notícia">Mor als 74 anys Carles Canut, una icona del teatre català</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//cat.elpais.com/cat/2018/09/27/catalunya/1538045334_900510.html" title="Veure Notícia">Quim Torra, esbroncat durant una visita a Sant Andreu de la Barca</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//cat.elpais.com/cat/2018/09/25/catalunya/1537901121_892098.html" title="Veure Notícia">U d’Octubre, no Primer d’Octubre</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//cat.elpais.com/cat/2018/09/26/espana/1537986129_745997.html" title="Veure Notícia">El partit liberal europeu proposa expulsar el PDeCAT</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//cat.elpais.com/cat/2018/09/26/catalunya/1537959004_543030.html" title="Veure Notícia">La candidatura de Valls es dirà “Barcelona, capital europea”</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//cat.elpais.com/cat/2018/09/26/catalunya/1537985221_555083.html" title="Veure Notícia"><span title="Vídeo" class="video">Vídeo</span>Puigdemont, sobre la seva fugida: “No crec en els màrtirs”</a></li>
 </ol>
 </div>
 <div class="envoltorio_publi estirar">
@@ -859,9 +971,9 @@ function lmv_cambia_subpestana(idpestana)
 </div>
 </div>
 <div id="outbrain" class="outbrain">
-<div class="OUTBRAIN" data-src="http://brasil.elpais.com/brasil/2016/01/05/cultura/1451990655_303962.html" data-widget-id="AR_6" data-ob-template="elpais" ></div>
-<div class="OUTBRAIN" data-src="http://brasil.elpais.com/brasil/2016/01/05/cultura/1451990655_303962.html" data-widget-id="AR_5" data-ob-template="elpais" ></div>
-<div class="OUTBRAIN" data-src="http://brasil.elpais.com/brasil/2016/01/05/cultura/1451990655_303962.html" data-widget-id="AR_4" data-ob-template="elpais" ></div>
+<div class="OUTBRAIN" data-src="http://brasil.elpais.com/brasil/2015/12/17/cultura/1450366041_247687.html" data-widget-id="AR_6" data-ob-template="elpais" ></div>
+<div class="OUTBRAIN" data-src="http://brasil.elpais.com/brasil/2015/12/17/cultura/1450366041_247687.html" data-widget-id="AR_5" data-ob-template="elpais" ></div>
+<div class="OUTBRAIN" data-src="http://brasil.elpais.com/brasil/2015/12/17/cultura/1450366041_247687.html" data-widget-id="AR_4" data-ob-template="elpais" ></div>
 <script type="text/javascript" async src="//widgets.outbrain.com/outbrain.js"></script>
 </div>
 <style>@media(max-width: 728px){.principal--fijo ~ .envoltorio_publi,.principal--fijo .otros .envoltorio_publi:last-child{position: fixed;z-index: 2000;background: #fff;bottom: 0;width: 100%!important;left: 0;}.principal--fijo ~ .envoltorio_publi #elpais_gpt-MLDB3 ~ button,.principal--fijo #elpais_gpt-MLDB3 ~ button{position: absolute;visibility: visible;width: 28px;height: 28px;top: -28px;z-index: 2010;right: 0;background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTMnIGhlaWdodD0nMTMnIHZpZXdCb3g9JzM0MSA4IDEzIDEzJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnPjxwYXRoIGZpbGw9JyM0RjRGNEYnIGQ9J00zNTQgOS4zMUwzNTIuNjkgOGwtNS4xOSA1LjE5TDM0Mi4zMSA4IDM0MSA5LjMxbDUuMTkgNS4xOS01LjE5IDUuMTkgMS4zMSAxLjMxIDUuMTktNS4xOSA1LjE5IDUuMTkgMS4zMS0xLjMxLTUuMTktNS4xOXonIGZpbGwtcnVsZT0nZXZlbm9kZCcvPjwvc3ZnPg==);background-size: 13px 13px;background-position: 9px;background-color: #fff;background-repeat: no-repeat;box-shadow: 0 -1px 1px 0 rgba(0,0,0,0.2);border: none;border-radius: 12px 0 0 0;}.principal--fijo ~ .envoltorio_publi #elpais_gpt-MLDB3[style*=none] ~ button,.principal--fijo #elpais_gpt-MLDB3[style*=none] ~ button {visibility: hidden;}.principal--fijo ~ .envoltorio_publi #elpais_gpt-MLDB3 > div,.principal--fijo #elpais_gpt-MLDB3 > div{margin-bottom: 0;}.principal--fijo ~ .envoltorio_publi #elpais_gpt-MLDB3,.principal--fijo #elpais_gpt-MLDB3{padding-top: 4px;width: 100%;text-align: center;box-shadow: 0 0 5px 0 rgba(0,0,0,0.2)!important;}.principal--fijo ~ .envoltorio_publi #elpais_gpt-MLDB3[style] ~ button,.principal--fijo #elpais_gpt-MLDB3[style] ~ button {display:block !important}}</style>
@@ -895,7 +1007,7 @@ function lmv_cambia_subpestana(idpestana)
 <li><a href="/rss/brasil/portada_completo.xml">RSS</a></li>
 </ul>
 </div>
-<!-- date 2018-09-25 01:25:36 AM-->
+<!-- date 2018-09-28 12:37:43 AM-->
 <script type="text/javascript">
 (function(){if(PBS.slm&&PBS.slm.cf&&PBS.slm.cf.biT_){var biT_=function(BIT){var ps=document.querySelectorAll(BIT.sel),el,cls=BIT.cls||"",pos=BIT.pos,min=BIT.min||0,ads=PBS.slm.cf.ads,axm=PBS.axm,sh=0,tel,tds;if(ps&&ps.length&&ps.length>0)for(el in pos){tds=ps[pos[el][0]-1];if(tds||min>sh){tel=axm.h.el("div",{"id":PBS.slm.cf.divid+"-"+el.toUpperCase(),"Cn":cls});tds&&tds.parentNode.insertBefore(tel,tds.nextSibling)||ps[ps.length-1].parentNode.appendChild(tel)}sh++}},c;for(c=0;c<PBS.slm.cf.biT_.length;c++)biT_(PBS.slm.cf.biT_[c])}var publiPbsLoad=document.querySelectorAll("div[class*='publiLoad']");if("object"==typeof publiPbsLoad[0]){var _M=PBS.axm.C.isMovil(),_P=_M?.5:.3,size=[],i=PBS.axm.C.screen().ancho,o=PBS.axm.C.screen().alto;PBS.slm.log.onview={};window.addEventListener("scroll",function(e){for(l=0;l<publiPbsLoad.length;l++){var d=document.getElementById(publiPbsLoad[l].id),s=d.getBoundingClientRect().top,n=d.id.split(gtpdivid+"-")[1];if((o*_P)+o>s&&typeof PBS.slm.log.onview[n]=="undefined"){PBS.slm.log.onview[n]=!0;if(-1!=n.indexOf("MPU")){size=[[300,250]]}else if(-1!=n.indexOf("LDB")){if(i>=980){size=[[728,90],[980,90]]}else if(i>=728){size=[[728,90]]}else{n="M"+n;size=[[320,50]]}}else if(-1!=n.indexOf("NSTD")){size=!1}else if(-1!=n.indexOf("NATAD")){size=[[300,250],"fluid"]};PBS.axm.h.slr([{d:d.id,p:n.toLowerCase(),s:size}]);size=[]}}})}})();
 </script>
@@ -1206,5 +1318,5 @@ if(typeof window['ampliaFoto'] == 'function'){
 </script></div>
 </footer>
 </div>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"de584669e4","applicationID":"81461901","transactionName":"MwFaYEIDWEZQVEENCQpLbUZZTVRHUERcCElOSxIbGk1VQF1DQBYHS0oSXEQPWg==","queueTime":0,"applicationTime":136,"atts":"H0ZZFgoZS0g=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"de584669e4","applicationID":"81461901","transactionName":"MwFaYEIDWEZQVEENCQpLbUZZTVRHUERcCElOSxIbGk1VQF1DQBYHS0oSXEQPWg==","queueTime":0,"applicationTime":109,"atts":"H0ZZFgoZS0g=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>

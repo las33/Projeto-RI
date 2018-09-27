@@ -5,13 +5,13 @@
 <head>
   
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.ome.lt/static/omelete/css/style.min.css?v=66f55"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.ome.lt/static/omelete/css/style.min.css?v=fa59a"/>
 
-  <title>Teen Spirit</title>
+  <title>Buscando...</title>
   <link rel="preload" href="https://cdn.ome.lt/static/omelete/img/omelete_logo.svg" as="image">
 
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationTime":11,"applicationID":"135988681","agent":"","transactionName":"NlYGMEoAD0UEARZYDA8cIhFWAhVfCgxNRQsAXQsXFhIIQgBMD0QPFVpKElEEFkVLAANCBltQCwpMBA9COgQHRQAJ","queueTime":0,"errorBeacon":"bam.nr-data.net","beacon":"bam.nr-data.net","licenseKey":"48f7507bbb"}</script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationTime":13,"applicationID":"135988681","agent":"","beacon":"bam.nr-data.net","licenseKey":"48f7507bbb","queueTime":0,"transactionName":"NlYGMEoAD0UEARZYDA8cIhFWAhVfCgxNRQsAXQsXFhIIQgBMD0QPFVpKElEEFkVLAANCBltQCwpMBA9COgQHRQAJ","errorBeacon":"bam.nr-data.net"}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <link rel="icon" type="image/png" sizes="96x96" href="https://cdn.ome.lt/static/omelete/img/favicon.png">
@@ -32,23 +32,23 @@
   
 <meta name="twitter:site" content="@omelete" />
 <meta name="twitter:creator" content="@omelete" />
-<meta name="twitter:url" content="https://www.omelete.com.br/filmes/criticas/teen-spirit" />
+<meta name="twitter:url" content="https://www.omelete.com.br/filmes/criticas/buscando" />
 <meta name="twitter:domain" content="https://www.omelete.com.br/" />
-<meta name="twitter:title" content="Teen Spirit" />
-<meta name="twitter:description" content="Teen Spirit | Crítica" />
+<meta name="twitter:title" content="Buscando..." />
+<meta name="twitter:description" content="Suspense faz com eficiência uma mistura de "screenlife" com narrativa tradicional" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://cdn.ome.lt/D8VfQCxLCv855tn9hA3Pm52CyV4=/1200x630/smart/extras/conteudos/MV5BYWYxNmMxYzYtMjg4Ni00YTQ2LTk3MGMtZmVjZDcyNDE4N2UzXkEyXkFqcGdeQXVyNTQ1MTYzNzY._V1_.jpg" />
-<meta property="og:title" content="Teen Spirit" />
-<meta property="og:description" content="Teen Spirit | Crítica" />
-<meta property="og:url" content="https://www.omelete.com.br/filmes/criticas/teen-spirit" />
-<meta property="og:image" content="https://cdn.ome.lt/D8VfQCxLCv855tn9hA3Pm52CyV4=/1200x630/smart/extras/conteudos/MV5BYWYxNmMxYzYtMjg4Ni00YTQ2LTk3MGMtZmVjZDcyNDE4N2UzXkEyXkFqcGdeQXVyNTQ1MTYzNzY._V1_.jpg" />
+<meta name="twitter:image" content="https://cdn.ome.lt/wREa-cDrv_c1SPhV9PTryTH9ICA=/1200x630/smart/extras/conteudos/buscando.jpg" />
+<meta property="og:title" content="Buscando..." />
+<meta property="og:description" content="Suspense faz com eficiência uma mistura de "screenlife" com narrativa tradicional" />
+<meta property="og:url" content="https://www.omelete.com.br/filmes/criticas/buscando" />
+<meta property="og:image" content="https://cdn.ome.lt/wREa-cDrv_c1SPhV9PTryTH9ICA=/1200x630/smart/extras/conteudos/buscando.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:type" content="article" />
-<meta property="article:author" content="Natália Bridi" />
+<meta property="article:author" content="Marcelo Hessel" />
 <meta property="article:section" content="Filmes">
-<meta property="article:published_time" content="2018-09-13 13:09:16+00:00" />
-<meta property="article:modified_time" content="2018-09-13 13:11:32.082000+00:00" />
+<meta property="article:published_time" content="2018-09-18 20:44:57+00:00" />
+<meta property="article:modified_time" content="2018-09-18 20:58:19.924000+00:00" />
 
 
   <script>
@@ -94,9 +94,9 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 <!-- Final da tag TT de segmentacao -->
 
   
-  <link rel="canonical" href="https://www.omelete.com.br/filmes/criticas/teen-spirit" />
+  <link rel="canonical" href="https://www.omelete.com.br/filmes/criticas/buscando" />
   
-  <link rel="amphtml" href="https://www.omelete.com.br/amp/filmes/criticas/teen-spirit">
+  <link rel="amphtml" href="https://www.omelete.com.br/amp/filmes/criticas/buscando">
   
   <meta property="fb:article_style" content="default">
   
@@ -105,31 +105,31 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
     {
       "@context" : "http://schema.org",
       "@type" : "Review",
-      "name" : "Teen Spirit",
+      "name" : "Buscando...",
       "author" : {
         "@type" : "Person",
-        "name" : "Natália Bridi"
+        "name" : "Marcelo Hessel"
       },
-      "datePublished" : "2018-09-13 13:09:16+00:00",
-      "dateModified" : "2018-09-13 13:11:32.082000+00:00",
+      "datePublished" : "2018-09-18 20:44:57+00:00",
+      "dateModified" : "2018-09-18 20:58:19.924000+00:00",
       "image" : [
     
         {
           "@type" : "ImageObject",
-          "url" : "https://cdn.ome.lt/aBhyJe3kEEzdv7ml3YohsHabNy8=/837x0/smart/uploads/conteudo/fotos/Teen-Spirit.png",
+          "url" : "https://cdn.ome.lt/Id08B5TrU5OTjMgiRFmu_3qOhpI=/837x0/smart/uploads/conteudo/fotos/buscando.jpg",
           "caption" : ""
         }
       ] ,
       "video" : [] ,
-      "headline" : "Teen Spirit",
+      "headline" : "Buscando...",
       "reviewRating" : {
         "@type" : "Rating",
-        "ratingValue" : 5
+        "ratingValue" : 4
       },
       "itemReviewed" : {
         "@type" : "Thing",
-        "image" : "https://cdn.ome.lt/D8VfQCxLCv855tn9hA3Pm52CyV4=/1200x630/smart/extras/conteudos/MV5BYWYxNmMxYzYtMjg4Ni00YTQ2LTk3MGMtZmVjZDcyNDE4N2UzXkEyXkFqcGdeQXVyNTQ1MTYzNzY._V1_.jpg",
-        "name": ""
+        "image" : "https://cdn.ome.lt/wREa-cDrv_c1SPhV9PTryTH9ICA=/1200x630/smart/extras/conteudos/buscando.jpg",
+        "name": "Buscando"
       },
       "publisher" : {
     "@type": "Organization",
@@ -268,7 +268,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
 
 
-<section class="section section--content section--main" data-dsq-domain="omelete.com.br" data-ref-id="161117" data-content-url="/filmes/criticas/teen-spirit" data-content-type="review">
+<section class="section section--content section--main" data-dsq-domain="omelete.com.br" data-ref-id="161443" data-content-url="/filmes/criticas/buscando" data-content-type="review">
   
   
   <script type="text/javascript">
@@ -292,7 +292,39 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
   
 
   
+    
+  
 
+  
+    
+    <div class="banner banner--mobile-header  ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-superheader" style="width: 320px; height: 100px;"></div>
+      </div>
+    </div>
+    
+  
+
+  
+
+  
+    
+    
+      
+  
+
+  
+    
+    <div class="banner banner--background  ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-background" style="width: 1800px; height: 1000px;"></div>
+      </div>
+    </div>
+    
+  
+
+    
+    
   
 
   <div class="container section__wrapper">
@@ -305,7 +337,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
             <div class="offset-0 offset-sm-2 col-24 col-sm-20">
               <div class="article__cover__wrapper article__cover__wrapper--image">
                 
-                <img class="article__cover__image" data-lazy-src="//cdn.ome.lt/n_pnnJr5U1juQwGlUz6jNjeJQC8=/987x0/smart/uploads/conteudo/fotos/Teen-Spirit.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Elle Fanning em Teen Spirit" title="Elle Fanning em Teen Spirit">
+                <img class="article__cover__image" data-lazy-src="//cdn.ome.lt/8onu6uKAHXLNQXWBw9mJbixkT6c=/987x0/smart/uploads/conteudo/fotos/buscando.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Buscando..." title="Sony Pictures/Reprodução">
                 
                 <div class="loading">
   <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
@@ -314,7 +346,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
               
               <p class="article__cover__credits">
                 <span class="article__cover__credits__title">Créditos da imagem:</span>
-                <span class="article__cover__credits__credits">Teen Spirit/Divulgação</span>
+                <span class="article__cover__credits__credits">Sony Pictures/Reprodução</span>
               </p>
               
             </div>
@@ -344,33 +376,38 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
   </div>
   <div class="article__header__title">
-    <h1 class="title">Teen Spirit</h1>
+    <h1 class="title">Buscando...</h1>
   </div>
   <div class="article__header__subtitle">
-    <h2 class="subtitle">Elle Fanning brilha (e canta) em história repaginada de busca pelo sucesso</h2>
+    <h2 class="subtitle">Suspense faz com eficiência uma mistura de &#34;screenlife&#34; com narrativa tradicional</h2>
   </div>
   <div class="article__header__social">
     <div class="links links--social">
     <ul class="links__list links__list--icon links__list--column links__list--circle">
       
-      <li class="links__list__item"><a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//omelete.com.br/filmes/criticas/teen-spirit"></a></li>
-      <li class="links__list__item"><a class="icon icon-twitter" target="_blank" href="https://twitter.com/intent/tweet?text=Teen%20Spirit https%3A//omelete.com.br/filmes/criticas/teen-spirit"></a></li>
-      <li class="links__list__item"><a class="icon icon-email" target="_blank" href="mailto:?subject=Teen%20Spirit&body=https%3A//omelete.com.br/filmes/criticas/teen-spirit"></a></li>
-      <li class="links__list__item"><a class="icon icon-whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=Teen%20Spirit https%3A//omelete.com.br/filmes/criticas/teen-spirit"></a></li>
+      <li class="links__list__item"><a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//omelete.com.br/filmes/criticas/buscando"></a></li>
+      <li class="links__list__item"><a class="icon icon-twitter" target="_blank" href="https://twitter.com/intent/tweet?text=Buscando... https%3A//omelete.com.br/filmes/criticas/buscando"></a></li>
+      <li class="links__list__item"><a class="icon icon-email" target="_blank" href="mailto:?subject=Buscando...&body=https%3A//omelete.com.br/filmes/criticas/buscando"></a></li>
+      <li class="links__list__item"><a class="icon icon-whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=Buscando... https%3A//omelete.com.br/filmes/criticas/buscando"></a></li>
     </ul>
   </div>
   </div>
   <div class="article__header__info">
     <div class="info">
-      <div class="info__by">Natália Bridi</div>
+      <div class="info__by">Marcelo Hessel</div>
 
       
       
       
 
-      <div class="info__date">13.09.2018</div>
-      <div class="info__time">10h09</div>
+      <div class="info__date">18.09.2018</div>
+      <div class="info__time">17h44</div>
 
+      
+      <div class="d-none d-md-block">Atualizada em </div>
+      <div class="d-none d-md-block">18.09.2018</div>
+      <div class="d-none d-md-block">17h58</div>
+      <div class="d-block d-md-none">Atualizada em 18.09.2018 às 17h58</div>
         
     </div>
 
@@ -399,40 +436,96 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 <div class="article__body article--content">
   
     
-      <p>A história não é nova: menina do interior sonha cantar e entra em concurso de talentos que pode mudar a sua vida. Essa, porém, é uma das qualidades de <strong><em>Teen Spirit</em></strong>, fazer com que uma trama repetida inúmeras vezes soe nova durante 92 minutos.</p>
+      <p>O parentesco entre o terror <em>Amizade Desfeita</em>, de 2015, e o novo suspense <strong><em>Buscando... </em></strong>(2018) não é por acaso. A ação de ambos os filmes transcorre em telas de computador porque é essa a proposta da produtora <strong>Bazelevs</strong>, de <strong>Timur Bekmambetov</strong>, para o que o diretor russo chama de gênero "screenlife": histórias contadas sempre do ponto de vista de computadores e smartphones usando de interfaces de webcam, redes sociais e programas de troca de mensagem instantânea.</p>
       
 
 
 
       
     
-      <p>Estreia de <strong>Max Minghella</strong> (<em>A Rede Social</em>) na direção, o filme segue Violet (<strong>Elle Fanning</strong>), que aos 17 anos divide seus dias entre muitas tarefas - escola, trabalho, a fazenda da família e as apresentações em um pub local. Em uma de suas performances passionais para uma plateia apática, ela conhece Vlad (<strong>Zlatko Buric</strong>), um cantor de ópera aposentado que é tão simpático quanto alcoólatra. Quando o concurso Teen Spirit passa pela Ilha de Wight, Violet precisa de um tutor e Vlad de um motivo para viver, formando uma dupla improvável.</p>
+      <p>Se <em>Amizade Desfeita</em>, porém, era um filme bem radical na sua proposta - a tela do MacBook de Blaire era a tela do cinema, e toda a diegese se acondicionava nas janelas do desktop dela - <em>Buscando... </em>se permite já algumas liberdades. As interfaces de ferramentas de pesquisa, de organização de desktop e de apps de localização são usados no filme ao lado de câmeras secundárias (cuja instalação e uso são explicados para apresentar novos cenários, como acontecia nos terrores de found footage). A ideia é aproximar esse registro virtual de uma história de mistério policial mais tradicional. Se <em>Amizade Desfeita</em> foi o filme desbravador de uma linguagem, <em>Buscando... </em>dá um ou dois passos atrás para tentar estabelecer um elo entre essa nova linguagem com a gramática estabelecida do cinema narrativo americano.</p>
       
 
 
 
       
     
-      <p>Para captar as diferentes camadas da vida da sua protagonista, Minghella e o diretor de fotografia <strong>Autumn Durald-Arkpaw</strong> misturam luz natural e neon, paisagens bucólicas e urbanas, delicadeza e decadência. A montagem de <strong>Cam McLauchlin</strong> une tudo em um estética de videoclipe, mas sem restringir o espaço para que os personagens se desenvolvam.</p>
+      <p>Na teoria isso pode parecer uma involução, mas no filme do roteirista e diretor <strong>Aneesh Chaganty</strong> a busca por esse elo acontece de forma satisfatória. Em entrevistas, Chaganty diz que estava reativo a contar um filme com telas porque isso lhe parecia só um floreio de linguagem, e seu temor não deixa de se impor em <em>Buscando...</em>: nem toda situação no filme se justifica ou se potencializa no ponto de vista das telas, mas uma vez aceito pelo espectador (o esperto prólogo que conta a história da família por meio do passo-a-passo do Windows XP é muito eficiente nesse sentido) esse enunciado se estabelece sem grandes tropeços.</p>
       
 
 
 
       
     
-      <p>Minghella, que também assina o script, cria relações complexas em diálogos simples, garantindo que <em>Teen Spirit</em> seja mais do que uma experiência musical/estética. Há todo um mundo em torno de Violet, habitado por pessoas complicadas e carismáticas. Essa não é só a jornada de uma pessoa, mas da sua mãe (<strong>Agnieszka Grochowska</strong>), de Vlad e outros. O espírito adolescente do título não é uma restrição de idade, mas uma força para recomeçar.</p>
+      <p>Acompanhamos o drama de David Kim (<strong>John Cho</strong>), viúvo que se desespera ao descobrir que sua filha adolescente desapareceu. Ao mesmo tempo em que a investigação acontece, David mergulha na vida virtual da filha atrás de pistas. Com isso, Chaganty poderia realizar um filme que, bem à moda hollywoodiana, trata a Internet (e as coisas da juventude em geral) de forma alarmista, mas <em>Buscando...</em> não vilaniza o virtual. O filme confia que as pessoas não são vítimas da rede e sim sabem moldá-la a seu favor - e a partir disso Chaganty consegue mesmo utilizar a web e suas ferramentas como um canal de suspense investigativo de forma eficiente.</p>
       
 
 
 
       
     
-      <p>Cantando, dançando e falando polonês, Fanning é a estrela que precisa ser para que a trama tenha credibilidade. É possível torcer pelo sucesso de Violet sem exigir muito da capacidade para suspensão de descrença do público. Essa é uma história que já foi contada, mas feita com dedicação e entusiasmo contagiantes. É possível se emocionar, bater o pezinho durante as cenas musicais e sair sem medo com um sorriso no rolar dos créditos.</p>
+      <p>Os "perigos" do online inclusive rendem momentos de ironia, como a menção ao show de Justin Bieber ou as mudanças de discurso dos oportunistas diante de fases diferentes da tragédia. Com a exposição do caso na mídia, a reação de manada se presta a um excelente terceiro ato no filme, em que tudo espiraliza no descontrole. Esse é um exemplo de como <em>Buscando...</em>consegue do começo ao fim criar os elos entre a linguagem do tal "screenlife" com as viradas já esperadas de um thriller. O resultado é um suspense em que os truques da interface online se prestam mais à exposição do que a uma imersão narrativa em si (de novo, <em>Amizade Desfeita </em>é mais forte nesse sentido), mas graças a sacadas pontuais e uma reviravolta final realmente engenhosa, Chaganty faz um whodunit que entrega o que promete.</p>
       
         
       
 
 
+
+      
+        
+<article class="col overview">
+  <a >
+    <div class="overview__head">
+      <div class="picture d-block d-sm-block d-md-none">
+        
+          <picture class="">
+            
+                <img src="//cdn.ome.lt/IxHggDcknjAimMV_FURa9KUIK4Q=/200x0/smart/extras/capas/Buscando.jpg" alt="" />
+            
+          </picture>
+        
+      </div>
+      <div class="head__description">
+        <div class="title">Buscando...</div>
+        <div class="subtitle">Searching</div>
+      </div>
+    </div><!-- head -->
+
+    <div class="overview__content">
+      <div class="list">
+        <div class="list__picture col-5">
+          
+          <picture>
+            
+                <img src="//cdn.ome.lt/IxHggDcknjAimMV_FURa9KUIK4Q=/200x0/smart/extras/capas/Buscando.jpg" alt="" />
+            
+          </picture>
+        
+        </div>
+        <div class="list__itens col-xs-24 col-xl-19">
+          <div class="list__itens__col col-xl-11">
+            <p class="item">Ano: <strong>2018</strong></p>
+            
+            <p class="item">Classificação: <strong>-1 anos</strong></p>
+            
+            
+            
+          </div>
+
+          <div class="list__itens__col list__itens__col--right col-xl-13">
+            <p class="item">Direção: <strong>Aneesh Chaganty</strong></p>
+            <p class="item">Roteiro: <strong>Sev Ohanian, Aneesh Chaganty</strong></p>
+            <p class="item">Elenco: <strong>Sara Sohn, John Cho</strong></p>
+          </div>
+        </div>
+      </div>
+    </div><!-- content -->
+
+    <div class="overview__footer">
+      
+    </div>
+  </a>
+</article>
 
       
     
@@ -451,14 +544,14 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
         <span class="list__egg icon-egg "></span>
         <span class="list__egg icon-egg "></span>
         <span class="list__egg icon-egg "></span>
-        <span class="list__egg icon-egg "></span>
+        <span class="list__egg icon-egg disabled"></span>
     </div>
       <div class="value">
         
         
         
+        Ótimo
         
-        Excelente!
       </div>
   </div>
 </div>
@@ -476,7 +569,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
               <div class="">
   <div class="OUTBRAIN"
-    data-src="https://www.omelete.com.br/filmes/criticas/teen-spirit"
+    data-src="https://www.omelete.com.br/filmes/criticas/buscando"
     data-widget-id="AR_1"
     data-ob-template="Omelete">
   </div>
@@ -564,9 +657,9 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
   var disqus_shortname = 'omeletebr';
   var disqus_config = function () {
     
-    this.page.url = 'omelete.com.br//teen-spirit?related_slug=';
-    this.page.identifier = 'conteudo:conteudo#161117';
-    this.page.title = 'Teen Spirit';
+    this.page.url = 'omelete.com.br//buscando?related_slug=buscando';
+    this.page.identifier = 'conteudo:conteudo#161443';
+    this.page.title = 'Buscando...';
   };
   
   (function() { // DON'T EDIT BELOW THIS LINE
@@ -593,7 +686,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
   </div>
 </section>
 
-<script src="https://cdn.ome.lt/static/omelete/js/scripts.min.js?v=66f55"></script>
+<script src="https://cdn.ome.lt/static/omelete/js/scripts.min.js?v=fa59a"></script>
 <footer>
   
   <script>
@@ -623,20 +716,6 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
     </div>
   </div>
 </section>
-
-  
-    
-  
-
-  
-    
-    <div class="banner banner--mobile-footer  ">
-      <div class="banner__wrapper">
-        <div id="div-gpt-ad-rodape" style="width: 320px; height: 50px;"></div>
-      </div>
-    </div>
-    
-  
 
   
   <div class="footer__group">
@@ -756,9 +835,9 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
 <script type="text/javascript">
   // Adding json and gpt info to the jS
-  var slots = {"mobile": {"booster": {"sizes": [1695, 920], "div_id": "div-gpt-ad-booster", "name": "booster", "tag": "/18178082/omelete/booster"}, "arroba-m1": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m1", "name": "arroba-m1", "tag": "/18178082/omelete/arroba_m1"}, "inferior": {"sizes": [[970, 250], [728, 90], [1260, 700]], "div_id": "div-gpt-ad-inferior", "name": "inferior", "tag": "/18178082/omelete/inferior"}, "arroba-1": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-1", "name": "arroba-1", "tag": "/18178082/omelete/arroba_1"}, "background": {"sizes": [1800, 1000], "div_id": "div-gpt-ad-background", "name": "background", "tag": "/18178082/omelete/background"}, "rodape": {"sizes": [320, 50], "div_id": "div-gpt-ad-rodape", "name": "rodape", "tag": "/18178082/omelete/rodape"}, "contagem": {"sizes": [300, 150], "div_id": "div-gpt-ad-contagem", "name": "contagem", "tag": "/18178082/omelete/contagem"}, "meio": {"sizes": [[300, 600], [300, 250]], "div_id": "div-gpt-ad-meio", "name": "meio", "tag": "/18178082/omelete/meio"}, "arroba-2": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-2", "name": "arroba-2", "tag": "/18178082/omelete/arroba_2"}, "superheader": {"sizes": [320, 100], "div_id": "div-gpt-ad-superheader", "name": "superheader", "tag": "/18178082/omelete/superheader"}, "arroba-m2": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m2", "name": "arroba-m2", "tag": "/18178082/omelete/arroba_m2"}, "superior": {"sizes": [[728, 90], [970, 250]], "div_id": "div-gpt-ad-superior", "name": "superior", "tag": "/18178082/omelete/superior"}}, "desktop": {"booster": {"sizes": [1695, 920], "div_id": "div-gpt-ad-booster", "name": "booster", "tag": "/18178082/omelete/booster"}, "arroba-m1": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m1", "name": "arroba-m1", "tag": "/18178082/omelete/arroba_m1"}, "inferior": {"sizes": [[970, 250], [728, 90], [1260, 700]], "div_id": "div-gpt-ad-inferior", "name": "inferior", "tag": "/18178082/omelete/inferior"}, "arroba-1": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-1", "name": "arroba-1", "tag": "/18178082/omelete/arroba_1"}, "background": {"sizes": [1800, 1000], "div_id": "div-gpt-ad-background", "name": "background", "tag": "/18178082/omelete/background"}, "rodape": {"sizes": [320, 50], "div_id": "div-gpt-ad-rodape", "name": "rodape", "tag": "/18178082/omelete/rodape"}, "contagem": {"sizes": [300, 150], "div_id": "div-gpt-ad-contagem", "name": "contagem", "tag": "/18178082/omelete/contagem"}, "meio": {"sizes": [[300, 600], [300, 250]], "div_id": "div-gpt-ad-meio", "name": "meio", "tag": "/18178082/omelete/meio"}, "arroba-2": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-2", "name": "arroba-2", "tag": "/18178082/omelete/arroba_2"}, "superheader": {"sizes": [320, 100], "div_id": "div-gpt-ad-superheader", "name": "superheader", "tag": "/18178082/omelete/superheader"}, "arroba-m2": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m2", "name": "arroba-m2", "tag": "/18178082/omelete/arroba_m2"}, "superior": {"sizes": [[728, 90], [970, 250]], "div_id": "div-gpt-ad-superior", "name": "superior", "tag": "/18178082/omelete/superior"}}};
-  var gpt_keys = {"page_type": "content", "section": "filmes", "environment": "production", "tags": ["Toronto International Film Festival", "TIFF", "TIFF 2018", "TIFF 18", "Festival de Cinema de Toronto", "Max Minghella", "Elle Fanning", "Zlatko Buric", "Autumn Durald-Arkpaw", "Cam McLauchlin", "Teen Spirit", "Agnieszka Grochowska"], "content_type": "review"};
-  var sponsors = {"logo_chamada": "/18178082/omelete/logo_chamada", "logo_internas": "/18178082/omelete/logo_internas", "logo_especial_1": "/18178082/omelete/logo_especial_1", "logo_especial_3": "/18178082/omelete/logo_especial_3", "logo_especial_2": "/18178082/omelete/logo_especial_2"};
+  var slots = {"mobile": {"superheader": {"div_id": "div-gpt-ad-superheader", "sizes": [320, 100], "tag": "/18178082/omelete/superheader", "name": "superheader"}, "booster": {"div_id": "div-gpt-ad-booster", "sizes": [1695, 920], "tag": "/18178082/omelete/booster", "name": "booster"}, "background": {"div_id": "div-gpt-ad-background", "sizes": [1800, 1000], "tag": "/18178082/omelete/background", "name": "background"}, "arroba-m1": {"div_id": "div-gpt-ad-arroba-m1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m1", "name": "arroba-m1"}, "superior": {"div_id": "div-gpt-ad-superior", "sizes": [[728, 90], [970, 250]], "tag": "/18178082/omelete/superior", "name": "superior"}, "contagem": {"div_id": "div-gpt-ad-contagem", "sizes": [300, 150], "tag": "/18178082/omelete/contagem", "name": "contagem"}, "inferior": {"div_id": "div-gpt-ad-inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "tag": "/18178082/omelete/inferior", "name": "inferior"}, "arroba-1": {"div_id": "div-gpt-ad-arroba-1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_1", "name": "arroba-1"}, "arroba-2": {"div_id": "div-gpt-ad-arroba-2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_2", "name": "arroba-2"}, "meio": {"div_id": "div-gpt-ad-meio", "sizes": [[300, 600], [300, 250]], "tag": "/18178082/omelete/meio", "name": "meio"}, "arroba-m2": {"div_id": "div-gpt-ad-arroba-m2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m2", "name": "arroba-m2"}, "rodape": {"div_id": "div-gpt-ad-rodape", "sizes": [320, 50], "tag": "/18178082/omelete/rodape", "name": "rodape"}}, "desktop": {"superheader": {"div_id": "div-gpt-ad-superheader", "sizes": [320, 100], "tag": "/18178082/omelete/superheader", "name": "superheader"}, "booster": {"div_id": "div-gpt-ad-booster", "sizes": [1695, 920], "tag": "/18178082/omelete/booster", "name": "booster"}, "background": {"div_id": "div-gpt-ad-background", "sizes": [1800, 1000], "tag": "/18178082/omelete/background", "name": "background"}, "arroba-m1": {"div_id": "div-gpt-ad-arroba-m1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m1", "name": "arroba-m1"}, "superior": {"div_id": "div-gpt-ad-superior", "sizes": [[728, 90], [970, 250]], "tag": "/18178082/omelete/superior", "name": "superior"}, "contagem": {"div_id": "div-gpt-ad-contagem", "sizes": [300, 150], "tag": "/18178082/omelete/contagem", "name": "contagem"}, "inferior": {"div_id": "div-gpt-ad-inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "tag": "/18178082/omelete/inferior", "name": "inferior"}, "arroba-1": {"div_id": "div-gpt-ad-arroba-1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_1", "name": "arroba-1"}, "arroba-2": {"div_id": "div-gpt-ad-arroba-2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_2", "name": "arroba-2"}, "meio": {"div_id": "div-gpt-ad-meio", "sizes": [[300, 600], [300, 250]], "tag": "/18178082/omelete/meio", "name": "meio"}, "arroba-m2": {"div_id": "div-gpt-ad-arroba-m2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m2", "name": "arroba-m2"}, "rodape": {"div_id": "div-gpt-ad-rodape", "sizes": [320, 50], "tag": "/18178082/omelete/rodape", "name": "rodape"}}};
+  var gpt_keys = {"section": "filmes", "environment": "production", "page_type": "content", "tags": ["Aneesh Chaganty", "buscando...", "john cho", "buscando", "searching"], "genre": ["drama", "suspense"], "content_type": "review"};
+  var sponsors = {"logo_especial_1": "/18178082/omelete/logo_especial_1", "logo_chamada": "/18178082/omelete/logo_chamada", "logo_especial_3": "/18178082/omelete/logo_especial_3", "logo_internas": "/18178082/omelete/logo_internas", "logo_especial_2": "/18178082/omelete/logo_especial_2"};
 
   function createCookie(name,value,days) {
     var expires = '';
