@@ -5,13 +5,13 @@
 <head>
   
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.ome.lt/static/omelete/css/style.min.css?v=66f55"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.ome.lt/static/omelete/css/style.min.css?v=e1fad"/>
 
-  <title>Destroyer</title>
+  <title>Tokyo Ghoul</title>
   <link rel="preload" href="https://cdn.ome.lt/static/omelete/img/omelete_logo.svg" as="image">
 
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationTime":13,"applicationID":"135988681","agent":"","transactionName":"NlYGMEoAD0UEARZYDA8cIhFWAhVfCgxNRQsAXQsXFhIIQgBMD0QPFVpKElEEFkVLAANCBltQCwpMBA9COgQHRQAJ","queueTime":0,"errorBeacon":"bam.nr-data.net","beacon":"bam.nr-data.net","licenseKey":"48f7507bbb"}</script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"licenseKey":"48f7507bbb","agent":"","transactionName":"NlYGMEoAD0UEARZYDA8cIhFWAhVfCgxNRQsAXQsXFhIIQgBMD0QPFVpKElEEFkVLAANCBltQCwpMBA9COgQHRQAJ","errorBeacon":"bam.nr-data.net","applicationTime":11,"applicationID":"135988681","queueTime":0,"beacon":"bam.nr-data.net"}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <link rel="icon" type="image/png" sizes="96x96" href="https://cdn.ome.lt/static/omelete/img/favicon.png">
@@ -32,23 +32,23 @@
   
 <meta name="twitter:site" content="@omelete" />
 <meta name="twitter:creator" content="@omelete" />
-<meta name="twitter:url" content="https://www.omelete.com.br/filmes/criticas/destroyer" />
+<meta name="twitter:url" content="https://www.omelete.com.br/filmes/criticas/tokyo-ghoul" />
 <meta name="twitter:domain" content="https://www.omelete.com.br/" />
-<meta name="twitter:title" content="Destroyer" />
-<meta name="twitter:description" content="Filme de Karyn Kusama usa visual de Nicole Kidman para criar filme policial e metafísico, mas não é nem um, nem outro" />
+<meta name="twitter:title" content="Tokyo Ghoul" />
+<meta name="twitter:description" content="Tokyo Ghoul | Crítica" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://cdn.ome.lt/ifIyWPGIDskELqtDQBBfjwUZ1qI=/1200x630/smart/extras/conteudos/destroyer_Ri0DnI5.jpg" />
-<meta property="og:title" content="Destroyer" />
-<meta property="og:description" content="Filme de Karyn Kusama usa visual de Nicole Kidman para criar filme policial e metafísico, mas não é nem um, nem outro" />
-<meta property="og:url" content="https://www.omelete.com.br/filmes/criticas/destroyer" />
-<meta property="og:image" content="https://cdn.ome.lt/ifIyWPGIDskELqtDQBBfjwUZ1qI=/1200x630/smart/extras/conteudos/destroyer_Ri0DnI5.jpg" />
+<meta name="twitter:image" content="https://cdn.ome.lt/XE5cQevgASLN2KG6Nyyx8BOAq0s=/1200x630/smart/extras/conteudos/tg.png" />
+<meta property="og:title" content="Tokyo Ghoul" />
+<meta property="og:description" content="Tokyo Ghoul | Crítica" />
+<meta property="og:url" content="https://www.omelete.com.br/filmes/criticas/tokyo-ghoul" />
+<meta property="og:image" content="https://cdn.ome.lt/XE5cQevgASLN2KG6Nyyx8BOAq0s=/1200x630/smart/extras/conteudos/tg.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:type" content="article" />
-<meta property="article:author" content="Natália Bridi" />
+<meta property="article:author" content="Gabriel Avila" />
 <meta property="article:section" content="Filmes">
-<meta property="article:published_time" content="2018-09-10 11:35:49+00:00" />
-<meta property="article:modified_time" content="2018-09-10 11:36:12.292000+00:00" />
+<meta property="article:published_time" content="2018-09-14 01:42:25+00:00" />
+<meta property="article:modified_time" content="2018-09-14 01:44:43.546000+00:00" />
 
 
   <script>
@@ -94,9 +94,9 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 <!-- Final da tag TT de segmentacao -->
 
   
-  <link rel="canonical" href="https://www.omelete.com.br/filmes/criticas/destroyer" />
+  <link rel="canonical" href="https://www.omelete.com.br/filmes/criticas/tokyo-ghoul" />
   
-  <link rel="amphtml" href="https://www.omelete.com.br/amp/filmes/criticas/destroyer">
+  <link rel="amphtml" href="https://www.omelete.com.br/amp/filmes/criticas/tokyo-ghoul">
   
   <meta property="fb:article_style" content="default">
   
@@ -105,31 +105,31 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
     {
       "@context" : "http://schema.org",
       "@type" : "Review",
-      "name" : "Destroyer",
+      "name" : "Tokyo Ghoul",
       "author" : {
         "@type" : "Person",
-        "name" : "Natália Bridi"
+        "name" : "Gabriel Avila"
       },
-      "datePublished" : "2018-09-10 11:35:49+00:00",
-      "dateModified" : "2018-09-10 11:36:12.292000+00:00",
+      "datePublished" : "2018-09-14 01:42:25+00:00",
+      "dateModified" : "2018-09-14 01:44:43.546000+00:00",
       "image" : [
     
         {
           "@type" : "ImageObject",
-          "url" : "https://cdn.ome.lt/-s-oOl32EpM-zt1a6JSQf5eeRKE=/837x0/smart/uploads/conteudo/fotos/destroyer.jpg",
+          "url" : "https://cdn.ome.lt/0JzEJAtcJs8LtCWtbYAumdc8ekc=/837x0/smart/uploads/conteudo/fotos/tg.png",
           "caption" : ""
         }
       ] ,
       "video" : [] ,
-      "headline" : "Destroyer",
+      "headline" : "Tokyo Ghoul",
       "reviewRating" : {
         "@type" : "Rating",
-        "ratingValue" : 2
+        "ratingValue" : 3
       },
       "itemReviewed" : {
         "@type" : "Thing",
-        "image" : "https://cdn.ome.lt/ifIyWPGIDskELqtDQBBfjwUZ1qI=/1200x630/smart/extras/conteudos/destroyer_Ri0DnI5.jpg",
-        "name": "Destroyer"
+        "image" : "https://cdn.ome.lt/XE5cQevgASLN2KG6Nyyx8BOAq0s=/1200x630/smart/extras/conteudos/tg.png",
+        "name": ""
       },
       "publisher" : {
     "@type": "Organization",
@@ -268,7 +268,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
 
 
-<section class="section section--content section--main" data-dsq-domain="omelete.com.br" data-ref-id="160888" data-content-url="/filmes/criticas/destroyer" data-content-type="review">
+<section class="section section--content section--main" data-dsq-domain="omelete.com.br" data-ref-id="161203" data-content-url="/filmes/criticas/tokyo-ghoul" data-content-type="review">
   
   
   <script type="text/javascript">
@@ -305,7 +305,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
             <div class="offset-0 offset-sm-2 col-24 col-sm-20">
               <div class="article__cover__wrapper article__cover__wrapper--image">
                 
-                <img class="article__cover__image" data-lazy-src="//cdn.ome.lt/NNxb4nJtK-g3UIRpwj2UbiAjs00=/987x0/smart/uploads/conteudo/fotos/destroyer.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Destroyer" title="Annapurna Pictures/Divulgação">
+                <img class="article__cover__image" data-lazy-src="//cdn.ome.lt/krOgBZkitIwAGAbH5TVTvnM4-tQ=/987x0/smart/uploads/conteudo/fotos/tg.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Tokyo Ghoul" title="Tokyo Ghoul/Sato Company/Divulgação">
                 
                 <div class="loading">
   <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
@@ -314,7 +314,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
               
               <p class="article__cover__credits">
                 <span class="article__cover__credits__title">Créditos da imagem:</span>
-                <span class="article__cover__credits__credits">Annapurna Pictures/Divulgação</span>
+                <span class="article__cover__credits__credits">Tokyo Ghoul/Sato Company/Divulgação</span>
               </p>
               
             </div>
@@ -344,32 +344,32 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
   </div>
   <div class="article__header__title">
-    <h1 class="title">Destroyer</h1>
+    <h1 class="title">Tokyo Ghoul</h1>
   </div>
   <div class="article__header__subtitle">
-    <h2 class="subtitle">Filme de Karyn Kusama usa visual de Nicole Kidman para criar filme policial e metafísico, mas não é nem um, nem outro</h2>
+    <h2 class="subtitle">Adaptação do mangá de 2011 cria experiência satisfatória com influências de terror, mas sempre respeitando a obra original</h2>
   </div>
   <div class="article__header__social">
     <div class="links links--social">
     <ul class="links__list links__list--icon links__list--column links__list--circle">
       
-      <li class="links__list__item"><a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//omelete.com.br/filmes/criticas/destroyer"></a></li>
-      <li class="links__list__item"><a class="icon icon-twitter" target="_blank" href="https://twitter.com/intent/tweet?text=Destroyer https%3A//omelete.com.br/filmes/criticas/destroyer"></a></li>
-      <li class="links__list__item"><a class="icon icon-email" target="_blank" href="mailto:?subject=Destroyer&body=https%3A//omelete.com.br/filmes/criticas/destroyer"></a></li>
-      <li class="links__list__item"><a class="icon icon-whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=Destroyer https%3A//omelete.com.br/filmes/criticas/destroyer"></a></li>
+      <li class="links__list__item"><a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//omelete.com.br/filmes/criticas/tokyo-ghoul"></a></li>
+      <li class="links__list__item"><a class="icon icon-twitter" target="_blank" href="https://twitter.com/intent/tweet?text=Tokyo%20Ghoul https%3A//omelete.com.br/filmes/criticas/tokyo-ghoul"></a></li>
+      <li class="links__list__item"><a class="icon icon-email" target="_blank" href="mailto:?subject=Tokyo%20Ghoul&body=https%3A//omelete.com.br/filmes/criticas/tokyo-ghoul"></a></li>
+      <li class="links__list__item"><a class="icon icon-whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=Tokyo%20Ghoul https%3A//omelete.com.br/filmes/criticas/tokyo-ghoul"></a></li>
     </ul>
   </div>
   </div>
   <div class="article__header__info">
     <div class="info">
-      <div class="info__by">Natália Bridi</div>
+      <div class="info__by">Gabriel Avila</div>
 
       
       
       
 
-      <div class="info__date">10.09.2018</div>
-      <div class="info__time">08h35</div>
+      <div class="info__date">13.09.2018</div>
+      <div class="info__time">22h42</div>
 
         
     </div>
@@ -397,98 +397,15 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
 
 <div class="article__body article--content">
+
   
     
-      <p><em>"Como você envelheceu!"</em>, escuta Erin Bell ao visitar um velho conhecido durante uma investigação. Em 123 minutos esse parece ser o principal objetivo de <em><strong>Destroyer</strong></em>, mostrar o quanto <strong>Nicole Kidman</strong> se transformou para o papel.</p>
-      
-
-
-
-      
-    
-      <p>A caracterização pretende exibir as marcas das dores e erros da policial, que há quase 20 anos carrega o trauma da época que passou infiltrada em uma gangue. Na prática, porém, torna a personagem caricata, como se Kidman estivesse usando uma fantasia de Charles Bronson para propriamente estrelar um filme policial. Essa sensação piora com as cenas de flashback, quando a atriz de 51 anos convence mais como uma mulher de 20 e poucos do que como uma senhora destruída pela vida.</p>
-      
-
-
-
-      
-    
-      <p>O trajeto entre passado e presente também não funciona com outros personagens. <strong>Toby Kebbel</strong>, por exemplo, deveria ser o monstro do passado que voltou para aterrorizar Bell. O visual do vilão, porém, o torna ridículo, não aterrorizante. A opção por dar à percepção da policial um quê alucinógeno também não contribui para a narrativa. Se a intenção era criar uma relação com os efeitos das drogas usadas pela gangue, a mensagem foi enviada, mas não chega completa ao destinatário. Há muito artifício, pouco significado.</p>
-      
-
-
-
-      
-    
-      <p>O erros de <em>Destroyer</em> se destacam ainda mais pela qualidade da atuação de <strong>Tatiana Maslany</strong>. Sua personagem é a única que transita bem entre a juventude e decadência, mostrando com uma abordagem mais simples poderia servir ao longa. A diretora<strong> Karyn Kusama</strong> ensaia criar um filme policial e metafísico, mas não é nem um, nem outro. Apesar da pele envelhecida, do cabelo desgrenhado, da voz rouca, das visões do passado, da relação problemática com a filha e do andar cambaleante, a investigação de Bell é desinteressante, assim como os seus traumas.</p>
-      
-
-
-
-      
-    
-      <p><span id="docs-internal-guid-94ae3804-7fff-a8de-83d1-f902900e0d69"><br/><br/><br/></span></p>
+      <p>Setembro de 2011 ficou marcado pela estreia de <strong>Tokyo Ghoul</strong>, um mangá de horror sobrenatural inspirado em monstros clássicos com uma trama repleta de suspense e carisma. Com mais de 34 milhões de cópias vendidas pelo mundo, a obra já ganhou seu próprio anime, <em>spin-offs </em>e até uma peça de teatro. Em 2017 virou um <em>live-action</em>, que chega agora aos cinemas brasileiros pela <strong>Sato Company</strong>. Ao contrário de grande parte dos longas baseados em mangás, <strong><em>Tokyo Ghoul </em></strong>é fiel ao original e, apesar de algumas derrapadas, cria uma experiência satisfatória.<br/> <br/> A trama acompanha Ken Kaneki, um colegial que tem sua vida virada ao avesso após ser atacado por uma Ghoul, criatura humanóide que necessita consumir carne humana para viver. O rapaz recebe um transplante dos órgãos de sua agressora, transformando-o em meio Ghoul. Kaneki deve agora aprender a viver essa nova realidade enquanto foge do CCG, órgão responsável pela caça e extermínio desses monstros.<br/> <br/> Assim como acontece nos videogames, os mangás têm um vasto histórico de adaptações que desapontam, especialmente por deturpar elementos-chave. <em>Tokyo Ghoul </em>não cai nessa armadilha. O longa respeita o próprio universo ao transportar a trama para as telonas sem perder sua essência. Mesmo as pequenas alterações que a transição de mídias exige beneficia a construção do filme. Apostando na identificação com o protagonista, o horror de sua condição inumana é cativante e desperta curiosidades que são saciadas enquanto novas adversidades surgem.<br/> <br/> Com um orçamento modesto, o filme não faz feio em relação ao visual. Embora os efeitos especiais não sejam primorosos, a direção cria saídas para contornar o problema com efeitos práticos e foco maior nas coreografias das lutas. Apesar da classificação etária de 12 anos, até mesmo a violência gráfica tem seu espaço: de forma inteligente, a direção escolhe sugerir ao invés de mostrar, deixando que a imaginação complete as lacunas de forma mais efetiva do que sua computação gráfica seria capaz. <br/> <br/> Embora condense vários arcos de história em um único filme, o ritmo é inconstante e faz com que os 120 minutos se arrastem, com cenas que se alongam além do necessário. Enquanto informações essenciais como o triste passado de Kaneki são passadas de forma rápida e clara, dramas desinteressantes se estendem - sendo que esses soam forçados pelo excesso de teatralidade do elenco, o que tira o peso de uma fábula sombria que propõe debates sobre bem e mal e se sustentaria sem esse tipo de recurso.<br/> <br/> Para construir a história de <em>Tokyo Ghoul</em>, o autor <strong>Sui Ishida</strong> pegou diversas características emprestadas do cinema de horror. Anos depois, a reverência às próprias raízes ganha vida nas telonas, fechando o ciclo com sucesso.</p>
       
         
       
 
 
-
-      
-        
-<article class="col overview">
-  <a >
-    <div class="overview__head">
-      <div class="picture d-block d-sm-block d-md-none">
-        
-          <picture class="">
-            
-                <img src="//cdn.ome.lt/_gAovVMBmqtYIjxDalMnc3YLMRU=/200x0/smart/" alt="" />
-            
-          </picture>
-        
-      </div>
-      <div class="head__description">
-        <div class="title">Destroyer</div>
-        <div class="subtitle">Destroyer</div>
-      </div>
-    </div><!-- head -->
-
-    <div class="overview__content">
-      <div class="list">
-        <div class="list__picture col-5">
-          
-          <picture>
-            
-                <img src="//cdn.ome.lt/_gAovVMBmqtYIjxDalMnc3YLMRU=/200x0/smart/" alt="" />
-            
-          </picture>
-        
-        </div>
-        <div class="list__itens col-xs-24 col-xl-19">
-          <div class="list__itens__col col-xl-11">
-            <p class="item">Ano: <strong>2018</strong></p>
-            
-            <p class="item">Classificação: <strong>-1 anos</strong></p>
-            
-            
-            
-          </div>
-
-          <div class="list__itens__col list__itens__col--right col-xl-13">
-            <p class="item">Direção: <strong>Karyn Kusama</strong></p>
-            <p class="item">Roteiro: <strong>Matt Manfredi, Phil Hay</strong></p>
-            <p class="item">Elenco: <strong>Toby Kebbell, Tatiana Maslany, Nicole Kidman</strong></p>
-          </div>
-        </div>
-      </div>
-    </div><!-- content -->
-
-    <div class="overview__footer">
-      
-    </div>
-  </a>
-</article>
 
       
     
@@ -505,14 +422,14 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
     <div class="list">
         <span class="list__egg icon-egg "></span>
         <span class="list__egg icon-egg "></span>
-        <span class="list__egg icon-egg disabled"></span>
+        <span class="list__egg icon-egg "></span>
         <span class="list__egg icon-egg disabled"></span>
         <span class="list__egg icon-egg disabled"></span>
     </div>
       <div class="value">
         
-        Regular
         
+        Bom
         
         
       </div>
@@ -532,7 +449,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
               <div class="">
   <div class="OUTBRAIN"
-    data-src="https://www.omelete.com.br/filmes/criticas/destroyer"
+    data-src="https://www.omelete.com.br/filmes/criticas/tokyo-ghoul"
     data-widget-id="AR_1"
     data-ob-template="Omelete">
   </div>
@@ -620,9 +537,9 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
   var disqus_shortname = 'omeletebr';
   var disqus_config = function () {
     
-    this.page.url = 'omelete.com.br//destroyer?related_slug=destroyer';
-    this.page.identifier = 'conteudo:conteudo#160888';
-    this.page.title = 'Destroyer';
+    this.page.url = 'omelete.com.br//tokyo-ghoul?related_slug=';
+    this.page.identifier = 'conteudo:conteudo#161203';
+    this.page.title = 'Tokyo Ghoul';
   };
   
   (function() { // DON'T EDIT BELOW THIS LINE
@@ -649,7 +566,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
   </div>
 </section>
 
-<script src="https://cdn.ome.lt/static/omelete/js/scripts.min.js?v=66f55"></script>
+<script src="https://cdn.ome.lt/static/omelete/js/scripts.min.js?v=e1fad"></script>
 <footer>
   
   <script>
@@ -812,9 +729,9 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
 <script type="text/javascript">
   // Adding json and gpt info to the jS
-  var slots = {"mobile": {"booster": {"sizes": [1695, 920], "div_id": "div-gpt-ad-booster", "name": "booster", "tag": "/18178082/omelete/booster"}, "arroba-m1": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m1", "name": "arroba-m1", "tag": "/18178082/omelete/arroba_m1"}, "inferior": {"sizes": [[970, 250], [728, 90], [1260, 700]], "div_id": "div-gpt-ad-inferior", "name": "inferior", "tag": "/18178082/omelete/inferior"}, "arroba-1": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-1", "name": "arroba-1", "tag": "/18178082/omelete/arroba_1"}, "background": {"sizes": [1800, 1000], "div_id": "div-gpt-ad-background", "name": "background", "tag": "/18178082/omelete/background"}, "rodape": {"sizes": [320, 50], "div_id": "div-gpt-ad-rodape", "name": "rodape", "tag": "/18178082/omelete/rodape"}, "contagem": {"sizes": [300, 150], "div_id": "div-gpt-ad-contagem", "name": "contagem", "tag": "/18178082/omelete/contagem"}, "meio": {"sizes": [[300, 600], [300, 250]], "div_id": "div-gpt-ad-meio", "name": "meio", "tag": "/18178082/omelete/meio"}, "arroba-2": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-2", "name": "arroba-2", "tag": "/18178082/omelete/arroba_2"}, "superheader": {"sizes": [320, 100], "div_id": "div-gpt-ad-superheader", "name": "superheader", "tag": "/18178082/omelete/superheader"}, "arroba-m2": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m2", "name": "arroba-m2", "tag": "/18178082/omelete/arroba_m2"}, "superior": {"sizes": [[728, 90], [970, 250]], "div_id": "div-gpt-ad-superior", "name": "superior", "tag": "/18178082/omelete/superior"}}, "desktop": {"booster": {"sizes": [1695, 920], "div_id": "div-gpt-ad-booster", "name": "booster", "tag": "/18178082/omelete/booster"}, "arroba-m1": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m1", "name": "arroba-m1", "tag": "/18178082/omelete/arroba_m1"}, "inferior": {"sizes": [[970, 250], [728, 90], [1260, 700]], "div_id": "div-gpt-ad-inferior", "name": "inferior", "tag": "/18178082/omelete/inferior"}, "arroba-1": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-1", "name": "arroba-1", "tag": "/18178082/omelete/arroba_1"}, "background": {"sizes": [1800, 1000], "div_id": "div-gpt-ad-background", "name": "background", "tag": "/18178082/omelete/background"}, "rodape": {"sizes": [320, 50], "div_id": "div-gpt-ad-rodape", "name": "rodape", "tag": "/18178082/omelete/rodape"}, "contagem": {"sizes": [300, 150], "div_id": "div-gpt-ad-contagem", "name": "contagem", "tag": "/18178082/omelete/contagem"}, "meio": {"sizes": [[300, 600], [300, 250]], "div_id": "div-gpt-ad-meio", "name": "meio", "tag": "/18178082/omelete/meio"}, "arroba-2": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-2", "name": "arroba-2", "tag": "/18178082/omelete/arroba_2"}, "superheader": {"sizes": [320, 100], "div_id": "div-gpt-ad-superheader", "name": "superheader", "tag": "/18178082/omelete/superheader"}, "arroba-m2": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m2", "name": "arroba-m2", "tag": "/18178082/omelete/arroba_m2"}, "superior": {"sizes": [[728, 90], [970, 250]], "div_id": "div-gpt-ad-superior", "name": "superior", "tag": "/18178082/omelete/superior"}}};
-  var gpt_keys = {"genre": ["acao", "drama", "crime"], "page_type": "content", "section": "filmes", "environment": "production", "tags": ["nicole kidman", "destroyer"], "content_type": "review"};
-  var sponsors = {"logo_chamada": "/18178082/omelete/logo_chamada", "logo_internas": "/18178082/omelete/logo_internas", "logo_especial_1": "/18178082/omelete/logo_especial_1", "logo_especial_3": "/18178082/omelete/logo_especial_3", "logo_especial_2": "/18178082/omelete/logo_especial_2"};
+  var slots = {"mobile": {"meio": {"div_id": "div-gpt-ad-meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "tag": "/18178082/omelete/meio"}, "arroba-2": {"div_id": "div-gpt-ad-arroba-2", "name": "arroba-2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_2"}, "superheader": {"div_id": "div-gpt-ad-superheader", "name": "superheader", "sizes": [320, 100], "tag": "/18178082/omelete/superheader"}, "arroba-1": {"div_id": "div-gpt-ad-arroba-1", "name": "arroba-1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_1"}, "contagem": {"div_id": "div-gpt-ad-contagem", "name": "contagem", "sizes": [300, 150], "tag": "/18178082/omelete/contagem"}, "inferior": {"div_id": "div-gpt-ad-inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "tag": "/18178082/omelete/inferior"}, "booster": {"div_id": "div-gpt-ad-booster", "name": "booster", "sizes": [1695, 920], "tag": "/18178082/omelete/booster"}, "background": {"div_id": "div-gpt-ad-background", "name": "background", "sizes": [1800, 1000], "tag": "/18178082/omelete/background"}, "arroba-m1": {"div_id": "div-gpt-ad-arroba-m1", "name": "arroba-m1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m1"}, "arroba-m2": {"div_id": "div-gpt-ad-arroba-m2", "name": "arroba-m2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m2"}, "rodape": {"div_id": "div-gpt-ad-rodape", "name": "rodape", "sizes": [320, 50], "tag": "/18178082/omelete/rodape"}, "superior": {"div_id": "div-gpt-ad-superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "tag": "/18178082/omelete/superior"}}, "desktop": {"meio": {"div_id": "div-gpt-ad-meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "tag": "/18178082/omelete/meio"}, "arroba-2": {"div_id": "div-gpt-ad-arroba-2", "name": "arroba-2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_2"}, "superheader": {"div_id": "div-gpt-ad-superheader", "name": "superheader", "sizes": [320, 100], "tag": "/18178082/omelete/superheader"}, "arroba-1": {"div_id": "div-gpt-ad-arroba-1", "name": "arroba-1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_1"}, "contagem": {"div_id": "div-gpt-ad-contagem", "name": "contagem", "sizes": [300, 150], "tag": "/18178082/omelete/contagem"}, "inferior": {"div_id": "div-gpt-ad-inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "tag": "/18178082/omelete/inferior"}, "booster": {"div_id": "div-gpt-ad-booster", "name": "booster", "sizes": [1695, 920], "tag": "/18178082/omelete/booster"}, "background": {"div_id": "div-gpt-ad-background", "name": "background", "sizes": [1800, 1000], "tag": "/18178082/omelete/background"}, "arroba-m1": {"div_id": "div-gpt-ad-arroba-m1", "name": "arroba-m1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m1"}, "arroba-m2": {"div_id": "div-gpt-ad-arroba-m2", "name": "arroba-m2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m2"}, "rodape": {"div_id": "div-gpt-ad-rodape", "name": "rodape", "sizes": [320, 50], "tag": "/18178082/omelete/rodape"}, "superior": {"div_id": "div-gpt-ad-superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "tag": "/18178082/omelete/superior"}}};
+  var gpt_keys = {"page_type": "content", "content_type": "review", "section": "filmes", "tags": ["Sato Company", "Sui Ishida", "Kentar\u00f4 Hagiwara", "Tokyo Ghoul"], "environment": "production"};
+  var sponsors = {"logo_especial_1": "/18178082/omelete/logo_especial_1", "logo_especial_2": "/18178082/omelete/logo_especial_2", "logo_chamada": "/18178082/omelete/logo_chamada", "logo_especial_3": "/18178082/omelete/logo_especial_3", "logo_internas": "/18178082/omelete/logo_internas"};
 
   function createCookie(name,value,days) {
     var expires = '';
@@ -910,24 +827,6 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
         }
       });
 
-      // sponsoredBannerWhite.forEach(function(el, idx) {
-      //   var tagID = 'sponsored-banner-white-' + idx;
-      //   el.attr('id', tagID);
-      //   googletag.defineSlot('/283405803/Logo_Oferecimento', [153, 14], tagID).addService(googletag.pubads());
-      // });
-
-      // sponsoredBannerBlue.forEach(function(el, idx) {
-      //   var tagID = 'sponsored-banner-blue-' + idx;
-      //   el.attr('id', tagID);
-      //   googletag.defineSlot('/283405803/Logo_Oferecimento_2', [153, 14], tagID).addService(googletag.pubads());
-      // });
-
-      // sponsoredBannerWhiteBig.forEach(function(el, idx) {
-      //   var tagID = 'sponsored-banner-white-big-' + idx;
-      //   el.attr('id', tagID);
-      //   googletag.defineSlot('/283405803/Logo_Oferecimento_3', [160, 35], tagID).addService(googletag.pubads());
-      // });
-
       googletag.pubads().addEventListener('slotRenderEnded', function (event) {
 
         var elementId = event.slot.getSlotElementId();
@@ -938,8 +837,8 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
               $('.background--enemy').removeClass('background--enemy--mast-head');
               $('.background--grey').removeClass('background--grey--mast-head');
             } else if (elementId.startsWith("div-gpt-ad-background")) {
-              $('html').removeClass('has-background-banner');
-              $('.banner--background').remove();
+              //$('html').removeClass('has-background-banner');
+              $('#' + elementId).parents('.banner--background').remove();
             } else if (elementId == "div-gpt-ad-booster") {
               // removed fadeOut because of jquery.slim
               $('.banner--trailer-booster').remove();

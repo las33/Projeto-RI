@@ -5,13 +5,13 @@
 <head>
   
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.ome.lt/static/omelete/css/style.min.css?v=cd5ab"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.ome.lt/static/omelete/css/style.min.css?v=e1fad"/>
 
-  <title>The Wind</title>
+  <title>Crimes em Happytime </title>
   <link rel="preload" href="https://cdn.ome.lt/static/omelete/img/omelete_logo.svg" as="image">
 
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationTime":12,"queueTime":0,"licenseKey":"48f7507bbb","agent":"","applicationID":"135988681","beacon":"bam.nr-data.net","transactionName":"NlYGMEoAD0UEARZYDA8cIhFWAhVfCgxNRQsAXQsXFhIIQgBMD0QPFVpKElEEFkVLAANCBltQCwpMBA9COgQHRQAJ","errorBeacon":"bam.nr-data.net"}</script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationTime":14,"errorBeacon":"bam.nr-data.net","beacon":"bam.nr-data.net","licenseKey":"48f7507bbb","transactionName":"NlYGMEoAD0UEARZYDA8cIhFWAhVfCgxNRQsAXQsXFhIIQgBMD0QPFVpKElEEFkVLAANCBltQCwpMBA9COgQHRQAJ","queueTime":0,"applicationID":"135988681","agent":""}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <link rel="icon" type="image/png" sizes="96x96" href="https://cdn.ome.lt/static/omelete/img/favicon.png">
@@ -32,23 +32,23 @@
   
 <meta name="twitter:site" content="@omelete" />
 <meta name="twitter:creator" content="@omelete" />
-<meta name="twitter:url" content="https://www.omelete.com.br/filmes/criticas/the-wind" />
+<meta name="twitter:url" content="https://www.omelete.com.br/filmes/criticas/crimes-em-happytime" />
 <meta name="twitter:domain" content="https://www.omelete.com.br/" />
-<meta name="twitter:title" content="The Wind" />
-<meta name="twitter:description" content="The Wind | Crítica" />
+<meta name="twitter:title" content="Crimes em Happytime" />
+<meta name="twitter:description" content="Muppets para adultos faz jogo interessante com o que se espera do noir" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://cdn.ome.lt/peJGnHrNpRch82iCoysMjFFHZxM=/1200x630/smart/extras/conteudos/The-Wind.png" />
-<meta property="og:title" content="The Wind" />
-<meta property="og:description" content="The Wind | Crítica" />
-<meta property="og:url" content="https://www.omelete.com.br/filmes/criticas/the-wind" />
-<meta property="og:image" content="https://cdn.ome.lt/peJGnHrNpRch82iCoysMjFFHZxM=/1200x630/smart/extras/conteudos/The-Wind.png" />
+<meta name="twitter:image" content="https://cdn.ome.lt/s29BDwJxE8aCmQDwuvm7NUakCUg=/1200x630/smart/extras/conteudos/happytime.jpg" />
+<meta property="og:title" content="Crimes em Happytime" />
+<meta property="og:description" content="Muppets para adultos faz jogo interessante com o que se espera do noir" />
+<meta property="og:url" content="https://www.omelete.com.br/filmes/criticas/crimes-em-happytime" />
+<meta property="og:image" content="https://cdn.ome.lt/s29BDwJxE8aCmQDwuvm7NUakCUg=/1200x630/smart/extras/conteudos/happytime.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:type" content="article" />
-<meta property="article:author" content="Natália Bridi" />
+<meta property="article:author" content="Marcelo Hessel" />
 <meta property="article:section" content="Filmes">
-<meta property="article:published_time" content="2018-09-15 20:24:39+00:00" />
-<meta property="article:modified_time" content="2018-09-15 21:59:18.580000+00:00" />
+<meta property="article:published_time" content="2018-09-26 15:20:51+00:00" />
+<meta property="article:modified_time" content="2018-09-26 15:22:58.311000+00:00" />
 
 
   <script>
@@ -94,9 +94,9 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 <!-- Final da tag TT de segmentacao -->
 
   
-  <link rel="canonical" href="https://www.omelete.com.br/filmes/criticas/the-wind" />
+  <link rel="canonical" href="https://www.omelete.com.br/filmes/criticas/crimes-em-happytime" />
   
-  <link rel="amphtml" href="https://www.omelete.com.br/amp/filmes/criticas/the-wind">
+  <link rel="amphtml" href="https://www.omelete.com.br/amp/filmes/criticas/crimes-em-happytime">
   
   <meta property="fb:article_style" content="default">
   
@@ -105,31 +105,31 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
     {
       "@context" : "http://schema.org",
       "@type" : "Review",
-      "name" : "The Wind",
+      "name" : "Crimes em Happytime ",
       "author" : {
         "@type" : "Person",
-        "name" : "Natália Bridi"
+        "name" : "Marcelo Hessel"
       },
-      "datePublished" : "2018-09-15 20:24:39+00:00",
-      "dateModified" : "2018-09-15 21:59:18.580000+00:00",
+      "datePublished" : "2018-09-26 15:20:51+00:00",
+      "dateModified" : "2018-09-26 15:22:58.311000+00:00",
       "image" : [
     
         {
           "@type" : "ImageObject",
-          "url" : "https://cdn.ome.lt/p5XD6wiSjBNWaZGvkLzS9ryfObE=/837x0/smart/uploads/conteudo/fotos/The-Wind.png",
+          "url" : "https://cdn.ome.lt/uafv69xO96YJnUnUYx6wajoNhCg=/837x0/smart/uploads/conteudo/fotos/happytime.jpg",
           "caption" : ""
         }
       ] ,
       "video" : [] ,
-      "headline" : "The Wind",
+      "headline" : "Crimes em Happytime ",
       "reviewRating" : {
         "@type" : "Rating",
-        "ratingValue" : 1
+        "ratingValue" : 4
       },
       "itemReviewed" : {
         "@type" : "Thing",
-        "image" : "https://cdn.ome.lt/peJGnHrNpRch82iCoysMjFFHZxM=/1200x630/smart/extras/conteudos/The-Wind.png",
-        "name": ""
+        "image" : "https://cdn.ome.lt/s29BDwJxE8aCmQDwuvm7NUakCUg=/1200x630/smart/extras/conteudos/happytime.jpg",
+        "name": "Crimes Em Happytime"
       },
       "publisher" : {
     "@type": "Organization",
@@ -268,7 +268,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
 
 
-<section class="section section--content section--main" data-dsq-domain="omelete.com.br" data-ref-id="161297" data-content-url="/filmes/criticas/the-wind" data-content-type="review">
+<section class="section section--content section--main" data-dsq-domain="omelete.com.br" data-ref-id="161973" data-content-url="/filmes/criticas/crimes-em-happytime" data-content-type="review">
   
   
   <script type="text/javascript">
@@ -305,7 +305,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
             <div class="offset-0 offset-sm-2 col-24 col-sm-20">
               <div class="article__cover__wrapper article__cover__wrapper--image">
                 
-                <img class="article__cover__image" data-lazy-src="//cdn.ome.lt/VhN5CNZvB_epn5hxE2wh4RJ_3RE=/987x0/smart/uploads/conteudo/fotos/The-Wind.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Caitlin Gerard em The Wind" title="Caitlin Gerard em The Wind">
+                <img class="article__cover__image" data-lazy-src="//cdn.ome.lt/Oka0b2_9QWsU1VzVo5PA_rAOLkk=/987x0/smart/uploads/conteudo/fotos/happytime.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Crimes em Happytime " title="The Jim Henson Company/Reprodução">
                 
                 <div class="loading">
   <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
@@ -314,7 +314,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
               
               <p class="article__cover__credits">
                 <span class="article__cover__credits__title">Créditos da imagem:</span>
-                <span class="article__cover__credits__credits">The Wind/Divulgação</span>
+                <span class="article__cover__credits__credits">The Jim Henson Company/Reprodução</span>
               </p>
               
             </div>
@@ -344,38 +344,33 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
   </div>
   <div class="article__header__title">
-    <h1 class="title">The Wind</h1>
+    <h1 class="title">Crimes em Happytime </h1>
   </div>
   <div class="article__header__subtitle">
-    <h2 class="subtitle">Terror no velho oeste quer muito e entrega pouco</h2>
+    <h2 class="subtitle">Muppets para adultos faz jogo interessante com o que se espera do noir</h2>
   </div>
   <div class="article__header__social">
     <div class="links links--social">
     <ul class="links__list links__list--icon links__list--column links__list--circle">
       
-      <li class="links__list__item"><a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//omelete.com.br/filmes/criticas/the-wind"></a></li>
-      <li class="links__list__item"><a class="icon icon-twitter" target="_blank" href="https://twitter.com/intent/tweet?text=The%20Wind https%3A//omelete.com.br/filmes/criticas/the-wind"></a></li>
-      <li class="links__list__item"><a class="icon icon-email" target="_blank" href="mailto:?subject=The%20Wind&body=https%3A//omelete.com.br/filmes/criticas/the-wind"></a></li>
-      <li class="links__list__item"><a class="icon icon-whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=The%20Wind https%3A//omelete.com.br/filmes/criticas/the-wind"></a></li>
+      <li class="links__list__item"><a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//omelete.com.br/filmes/criticas/crimes-em-happytime"></a></li>
+      <li class="links__list__item"><a class="icon icon-twitter" target="_blank" href="https://twitter.com/intent/tweet?text=Crimes%20em%20Happytime%20 https%3A//omelete.com.br/filmes/criticas/crimes-em-happytime"></a></li>
+      <li class="links__list__item"><a class="icon icon-email" target="_blank" href="mailto:?subject=Crimes%20em%20Happytime%20&body=https%3A//omelete.com.br/filmes/criticas/crimes-em-happytime"></a></li>
+      <li class="links__list__item"><a class="icon icon-whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=Crimes%20em%20Happytime%20 https%3A//omelete.com.br/filmes/criticas/crimes-em-happytime"></a></li>
     </ul>
   </div>
   </div>
   <div class="article__header__info">
     <div class="info">
-      <div class="info__by">Natália Bridi</div>
+      <div class="info__by">Marcelo Hessel</div>
 
       
       
       
 
-      <div class="info__date">15.09.2018</div>
-      <div class="info__time">17h24</div>
+      <div class="info__date">26.09.2018</div>
+      <div class="info__time">12h20</div>
 
-      
-      <div class="d-none d-md-block">Atualizada em </div>
-      <div class="d-none d-md-block">15.09.2018</div>
-      <div class="d-none d-md-block">18h59</div>
-      <div class="d-block d-md-none">Atualizada em 15.09.2018 às 18h59</div>
         
     </div>
 
@@ -402,42 +397,113 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
 
 <div class="article__body article--content">
+
   
     
-      <p>Com títulos como <strong><em>A Bruxa</em></strong> e <strong><em>Hereditário</em></strong>, o terror vive uma fase de prestígio criativo no cinema. À primeira vista, <strong><em>The Wind</em></strong> promete seguir pela mesma rota. Cada aspecto do filme de <strong>Emma Tammi</strong> é um esforço nesse sentido - a narrativa não-linear, a fotografia e figurino cuidadosos, a trilha sonora encaixada precisamente com a montagem. Uma pena que essa proposta de terror psicológico sobre solidão e paranoia no Velho Oeste se deixe levar por uma coleção de clichês do gênero.</p>
+      <p>Em desenvolvimento há dez anos dentro da Jim Henson Company, <em><strong>Crimes em Happytime </strong></em>(<em>The Happytime Murders</em>) é o primeiro produto da Henson Alternative, subdivisão da casa dos Muppets dedicada a conteúdo para maiores. O viés fica logo evidente quando o filme começa: o primeiro boneco em cena aparece fumando, o segundo já manda um palavrão. O longa de <strong>Brian Henson </strong>é o equivalente Muppet daquelas animações adultas da Netflix obcecadas com piadas com genitais só porque a classificação etária do streaming permite.</p>
       
 
 
 
       
     
-      <p>O longa parte de um mistério - o que aconteceu com Emma Harper (<strong>Julia Goldani Telles</strong>), a vizinha grávida de Elizabeth (<strong>Caitlin Gerard</strong>) e Isaac Macklin (<strong>Ashley Zukerman</strong>)? A partir da sua morte, o roteiro mistura passado e presente em busca da resposta, explorando os terrores que surgem em uma região isolada na fronteira dos EUA. Conforme as peças se alinham, fica claro o vazio de toda a pretensão de <em>The Wind</em>.</p>
+      <p>Na trama, bonecos e humanos convivem em conflito, numa Los Angeles em que os bonecos estofados saíram de moda e são tratados como párias sociais. Phil Phillips, o único boneco que um dia se arriscou a virar policial, hoje trabalha como detetive particular. Quando os bonecos que estrelaram a série de TV <em>The Happytime Gang </em>começam a ser mortos, um a um, Phil precisa se aliar à sua antiga parceira humana, a policial Connie Edwards (<strong>Melissa McCarthy</strong>), para solucionar o caso.</p>
       
 
 
 
       
     
-      <p>A paranoia de Elizabeth é mal arquitetada. Nenhuma das suas ações pede que o espectador a acompanhe, que fica em dúvida sobre o que é real e o que é loucura. Dessa forma, não existe tensão, muito menos sustos, mesmo que o filme recorra ocasionalmente ao uso do <em>jump scare</em>. Tudo é óbvio, com personagens que escancaram seu propósito dentro da trama em cada diálogo. Para completar, as atuações, com exceção de Gerard, dão um quê teatral incoerente com a ambientação.</p>
+      <p>Henson encontra na figura de Phil um potencial de incorreção política e graça que não se esgota rápido, porque mesmo na terceira ou quarta baforada de cigarro - entre vários "fucks", trocadilhos sexuais e outras tantas piadas repetidas até o limite do esgarçamento - Phil nunca deixa de ser uma pelúcia azul fofa em movimento. <em>Crimes em Happytime</em> opera até o fim acreditando que essa combinação (bonecos meigos fazendo grosserias) pode sustentar o filme, e com uma variação mínima de situações até que a coisa toda se sustenta bem. De qualquer forma, ver bonecos explodindo em câmera lenta com tiros de escopeta por uma hora e meia tem seu apelo inegável.</p>
       
 
 
 
       
     
-      <p>Quando requer recursos fantásticos, sendo efeitos visuais ou práticos, <em>The Wind</em> perde o aprumo visual prometido inicialmente. Com maquiagens sofríveis e outras gafes, a produção revela sua falta de engenhosidade, escancarando o baixo orçamento. Se a falha na construção da narrativa não fosse suficiente, a incapacidade de revelar (ou sugerir) ameaças leva o filme de razoável para risível.</p>
+      <p>O que<em> Crimes em Happytime</em> tem de mais interessante não está na superfície do conteúdo "adulto", porém. São as escolhas de ambientação que tornam esse filme diferente, porque estamos aqui diante de um noir paródico que lida com a cidade de um jeito mais frontal e menos fantasioso que outros filmes de "noir juvenil", como <em>Roger Rabbit</em>, ou mesmo filmes que exaltam o pedestrianismo da Los Angeles sem glamour, como <em>La La Land</em>. Em <em>Crimes em Happytime</em>, locações do Centro de L.A., ruas vazias, galpões e estacionamentos descuidados, e mesmo as penthouses com jacuzzi surgem na tela com luz natural e encenação desafetada, sem filtros.</p>
       
 
 
 
       
     
-      <p><em>The Wind</em> é uma boa ideia na teoria, mas a promessa não se concretiza. Na missão de fazer "terror arte", termina sem o básico e a única sensação que causa é aflição: a espera ansiosa pelo fim.</p>
+      <p>É uma escolha instigante porque, se o noir originalmente herdava o gosto do expressionismo pelo jogo de luz e sombras, pela profundidade de campo, então <em>Crimes em Happytime</em> não deixa de ser uma espécie de anti-noir, esteticamente falando. Não há no filme uma preocupação específica ou latente com filtros de luz e contrastes de cor (a não ser nos momentos em que a femme fatale seduz o detetive, quando a estilização é usada com a função de sublinhar os encantos da personagem). E como os planos-médios são mais frequentes (para pegar os bonecos da cintura pra cima e omitir os marionetistas) do que os planos abertos (que exigem uma preocupação maior com a arquitetura dos espaços), <em>Crimes em Happytime </em>tem mais uma cara de produto de televisão mesmo, desestetizado.</p>
+      
+
+
+
+      
+    
+      <p>Em certos momentos, essa falta de uma pretensão de autor (como aquela que quase sempre acompanha os filmes que optam conscientemente por uma filiação ao neonoir) traz um frescor inesperado. A cena da praia é um exemplo: há um corpo encontrado no pier no meio de um fim de semana cheio de banhistas. Em um filme policial "normal" os ruídos do entorno seriam sublimados para fins dramáticos. Aqui, porém, não há uma preocupação em isolar o fato (cadáver encontrado) do dia a dia de quem frequenta a praia, então o registro do filme acaba sendo muito mais próximo de um cinema verdade, nessa relação com os espaços da cidade, do que necessariamente de uma formulação de cinema de gênero. Fica a impressão de que a produção chegou com uma equipe de meia-dúzia de pessoas para filmar suas cenas sem mudar a dinâmica do local, e poucas vezes Hollywood se permite filmar seus farofeiros (os hippies e marombeiros desprovidos do glamour que se espera de L.A.) com tamanha candura.</p>
+      
+
+
+
+      
+    
+      <p>Essas escolhas acabam fazendo de <em>Crimes em Happytime</em> um noir mais puro do que o próprio Henson talvez imagine, porque seu filme dá espaço a tipos sociais desprestigiados com mais generosidade do que o cinema americano de exportação de fantasias costuma se permitir. Que isso aconteça dentro de um produto associado automaticamente com o artifício do mundo de sonhos - os bonecos, os matinais da TV, o consumo infantil inocente - é uma disrupção que chama a atenção. <em>Crimes em Happytime</em> é o Muppets cassavetiano que não sabíamos que queríamos.</p>
       
         
       
 
 
+
+      
+        
+<article class="col overview">
+  <a >
+    <div class="overview__head">
+      <div class="picture d-block d-sm-block d-md-none">
+        
+          <picture class="">
+            
+                <img src="//cdn.ome.lt/Epu6PrrD8-z0O-JOf-3WLJa-J8E=/200x0/smart/extras/capas/happytime_murders.jpg" alt="" />
+            
+          </picture>
+        
+      </div>
+      <div class="head__description">
+        <div class="title">Crimes em Happytime</div>
+        <div class="subtitle">The Happytime Murders</div>
+      </div>
+    </div><!-- head -->
+
+    <div class="overview__content">
+      <div class="list">
+        <div class="list__picture col-5">
+          
+          <picture>
+            
+                <img src="//cdn.ome.lt/Epu6PrrD8-z0O-JOf-3WLJa-J8E=/200x0/smart/extras/capas/happytime_murders.jpg" alt="" />
+            
+          </picture>
+        
+        </div>
+        <div class="list__itens col-xs-24 col-xl-19">
+          <div class="list__itens__col col-xl-11">
+            <p class="item">Ano: <strong>2018</strong></p>
+            
+            <p class="item">Classificação: <strong>16 anos</strong></p>
+            
+            
+            
+          </div>
+
+          <div class="list__itens__col list__itens__col--right col-xl-13">
+            <p class="item">Direção: <strong>Brian Henson</strong></p>
+            
+            <p class="item">Elenco: <strong>Joel McHale, Elizabeth Banks, Melissa McCarthy</strong></p>
+          </div>
+        </div>
+      </div>
+    </div><!-- content -->
+
+    <div class="overview__footer">
+      
+    </div>
+  </a>
+</article>
 
       
     
@@ -453,16 +519,16 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
   <div class="eggs__content">
     <div class="list">
         <span class="list__egg icon-egg "></span>
-        <span class="list__egg icon-egg disabled"></span>
-        <span class="list__egg icon-egg disabled"></span>
-        <span class="list__egg icon-egg disabled"></span>
+        <span class="list__egg icon-egg "></span>
+        <span class="list__egg icon-egg "></span>
+        <span class="list__egg icon-egg "></span>
         <span class="list__egg icon-egg disabled"></span>
     </div>
       <div class="value">
-        Ruim
         
         
         
+        Ótimo
         
       </div>
   </div>
@@ -481,7 +547,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
               <div class="">
   <div class="OUTBRAIN"
-    data-src="https://www.omelete.com.br/filmes/criticas/the-wind"
+    data-src="https://www.omelete.com.br/filmes/criticas/crimes-em-happytime"
     data-widget-id="AR_1"
     data-ob-template="Omelete">
   </div>
@@ -569,9 +635,9 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
   var disqus_shortname = 'omeletebr';
   var disqus_config = function () {
     
-    this.page.url = 'omelete.com.br//the-wind?related_slug=';
-    this.page.identifier = 'conteudo:conteudo#161297';
-    this.page.title = 'The Wind';
+    this.page.url = 'omelete.com.br//crimes-em-happytime?related_slug=crimes-em-happytime';
+    this.page.identifier = 'conteudo:conteudo#161973';
+    this.page.title = 'Crimes em Happytime ';
   };
   
   (function() { // DON'T EDIT BELOW THIS LINE
@@ -598,7 +664,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
   </div>
 </section>
 
-<script src="https://cdn.ome.lt/static/omelete/js/scripts.min.js?v=cd5ab"></script>
+<script src="https://cdn.ome.lt/static/omelete/js/scripts.min.js?v=e1fad"></script>
 <footer>
   
   <script>
@@ -761,9 +827,9 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
 <script type="text/javascript">
   // Adding json and gpt info to the jS
-  var slots = {"desktop": {"arroba-m2": {"div_id": "div-gpt-ad-arroba-m2", "name": "arroba-m2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m2"}, "superior": {"div_id": "div-gpt-ad-superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "tag": "/18178082/omelete/superior"}, "arroba-1": {"div_id": "div-gpt-ad-arroba-1", "name": "arroba-1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_1"}, "arroba-m1": {"div_id": "div-gpt-ad-arroba-m1", "name": "arroba-m1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m1"}, "inferior": {"div_id": "div-gpt-ad-inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "tag": "/18178082/omelete/inferior"}, "superheader": {"div_id": "div-gpt-ad-superheader", "name": "superheader", "sizes": [320, 100], "tag": "/18178082/omelete/superheader"}, "meio": {"div_id": "div-gpt-ad-meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "tag": "/18178082/omelete/meio"}, "booster": {"div_id": "div-gpt-ad-booster", "name": "booster", "sizes": [1695, 920], "tag": "/18178082/omelete/booster"}, "background": {"div_id": "div-gpt-ad-background", "name": "background", "sizes": [1800, 1000], "tag": "/18178082/omelete/background"}, "arroba-2": {"div_id": "div-gpt-ad-arroba-2", "name": "arroba-2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_2"}, "contagem": {"div_id": "div-gpt-ad-contagem", "name": "contagem", "sizes": [300, 150], "tag": "/18178082/omelete/contagem"}, "rodape": {"div_id": "div-gpt-ad-rodape", "name": "rodape", "sizes": [320, 50], "tag": "/18178082/omelete/rodape"}}, "mobile": {"arroba-m2": {"div_id": "div-gpt-ad-arroba-m2", "name": "arroba-m2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m2"}, "superior": {"div_id": "div-gpt-ad-superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "tag": "/18178082/omelete/superior"}, "arroba-1": {"div_id": "div-gpt-ad-arroba-1", "name": "arroba-1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_1"}, "arroba-m1": {"div_id": "div-gpt-ad-arroba-m1", "name": "arroba-m1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m1"}, "inferior": {"div_id": "div-gpt-ad-inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "tag": "/18178082/omelete/inferior"}, "superheader": {"div_id": "div-gpt-ad-superheader", "name": "superheader", "sizes": [320, 100], "tag": "/18178082/omelete/superheader"}, "meio": {"div_id": "div-gpt-ad-meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "tag": "/18178082/omelete/meio"}, "booster": {"div_id": "div-gpt-ad-booster", "name": "booster", "sizes": [1695, 920], "tag": "/18178082/omelete/booster"}, "background": {"div_id": "div-gpt-ad-background", "name": "background", "sizes": [1800, 1000], "tag": "/18178082/omelete/background"}, "arroba-2": {"div_id": "div-gpt-ad-arroba-2", "name": "arroba-2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_2"}, "contagem": {"div_id": "div-gpt-ad-contagem", "name": "contagem", "sizes": [300, 150], "tag": "/18178082/omelete/contagem"}, "rodape": {"div_id": "div-gpt-ad-rodape", "name": "rodape", "sizes": [320, 50], "tag": "/18178082/omelete/rodape"}}};
-  var gpt_keys = {"environment": "production", "tags": ["Toronto International Film Festival", "TIFF 2018", "TIFF 18", "Festival de Cinema de Toronto", "The Wind", "Caitlin Gerard", "Emma Tammi", "Ashley Zukerman", "Julia Goldani Telles", "TIFF"], "section": "filmes", "content_type": "review", "page_type": "content"};
-  var sponsors = {"logo_especial_2": "/18178082/omelete/logo_especial_2", "logo_especial_3": "/18178082/omelete/logo_especial_3", "logo_especial_1": "/18178082/omelete/logo_especial_1", "logo_chamada": "/18178082/omelete/logo_chamada", "logo_internas": "/18178082/omelete/logo_internas"};
+  var slots = {"mobile": {"arroba-m1": {"tag": "/18178082/omelete/arroba_m1", "name": "arroba-m1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m1"}, "superior": {"tag": "/18178082/omelete/superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "div_id": "div-gpt-ad-superior"}, "rodape": {"tag": "/18178082/omelete/rodape", "name": "rodape", "sizes": [320, 50], "div_id": "div-gpt-ad-rodape"}, "booster": {"tag": "/18178082/omelete/booster", "name": "booster", "sizes": [1695, 920], "div_id": "div-gpt-ad-booster"}, "background": {"tag": "/18178082/omelete/background", "name": "background", "sizes": [1800, 1000], "div_id": "div-gpt-ad-background"}, "arroba-m2": {"tag": "/18178082/omelete/arroba_m2", "name": "arroba-m2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m2"}, "inferior": {"tag": "/18178082/omelete/inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "div_id": "div-gpt-ad-inferior"}, "contagem": {"tag": "/18178082/omelete/contagem", "name": "contagem", "sizes": [300, 150], "div_id": "div-gpt-ad-contagem"}, "arroba-2": {"tag": "/18178082/omelete/arroba_2", "name": "arroba-2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-2"}, "superheader": {"tag": "/18178082/omelete/superheader", "name": "superheader", "sizes": [320, 100], "div_id": "div-gpt-ad-superheader"}, "meio": {"tag": "/18178082/omelete/meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "div_id": "div-gpt-ad-meio"}, "arroba-1": {"tag": "/18178082/omelete/arroba_1", "name": "arroba-1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-1"}}, "desktop": {"arroba-m1": {"tag": "/18178082/omelete/arroba_m1", "name": "arroba-m1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m1"}, "superior": {"tag": "/18178082/omelete/superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "div_id": "div-gpt-ad-superior"}, "rodape": {"tag": "/18178082/omelete/rodape", "name": "rodape", "sizes": [320, 50], "div_id": "div-gpt-ad-rodape"}, "booster": {"tag": "/18178082/omelete/booster", "name": "booster", "sizes": [1695, 920], "div_id": "div-gpt-ad-booster"}, "background": {"tag": "/18178082/omelete/background", "name": "background", "sizes": [1800, 1000], "div_id": "div-gpt-ad-background"}, "arroba-m2": {"tag": "/18178082/omelete/arroba_m2", "name": "arroba-m2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m2"}, "inferior": {"tag": "/18178082/omelete/inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "div_id": "div-gpt-ad-inferior"}, "contagem": {"tag": "/18178082/omelete/contagem", "name": "contagem", "sizes": [300, 150], "div_id": "div-gpt-ad-contagem"}, "arroba-2": {"tag": "/18178082/omelete/arroba_2", "name": "arroba-2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-2"}, "superheader": {"tag": "/18178082/omelete/superheader", "name": "superheader", "sizes": [320, 100], "div_id": "div-gpt-ad-superheader"}, "meio": {"tag": "/18178082/omelete/meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "div_id": "div-gpt-ad-meio"}, "arroba-1": {"tag": "/18178082/omelete/arroba_1", "name": "arroba-1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-1"}}};
+  var gpt_keys = {"content_type": "review", "section": "filmes", "genre": ["acao", "comedia"], "tags": ["brian henson", "crimes em happytime", "melissa mccarthy", "the happytime murders"], "page_type": "content", "environment": "production"};
+  var sponsors = {"logo_chamada": "/18178082/omelete/logo_chamada", "logo_especial_3": "/18178082/omelete/logo_especial_3", "logo_especial_1": "/18178082/omelete/logo_especial_1", "logo_especial_2": "/18178082/omelete/logo_especial_2", "logo_internas": "/18178082/omelete/logo_internas"};
 
   function createCookie(name,value,days) {
     var expires = '';
@@ -859,24 +925,6 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
         }
       });
 
-      // sponsoredBannerWhite.forEach(function(el, idx) {
-      //   var tagID = 'sponsored-banner-white-' + idx;
-      //   el.attr('id', tagID);
-      //   googletag.defineSlot('/283405803/Logo_Oferecimento', [153, 14], tagID).addService(googletag.pubads());
-      // });
-
-      // sponsoredBannerBlue.forEach(function(el, idx) {
-      //   var tagID = 'sponsored-banner-blue-' + idx;
-      //   el.attr('id', tagID);
-      //   googletag.defineSlot('/283405803/Logo_Oferecimento_2', [153, 14], tagID).addService(googletag.pubads());
-      // });
-
-      // sponsoredBannerWhiteBig.forEach(function(el, idx) {
-      //   var tagID = 'sponsored-banner-white-big-' + idx;
-      //   el.attr('id', tagID);
-      //   googletag.defineSlot('/283405803/Logo_Oferecimento_3', [160, 35], tagID).addService(googletag.pubads());
-      // });
-
       googletag.pubads().addEventListener('slotRenderEnded', function (event) {
 
         var elementId = event.slot.getSlotElementId();
@@ -887,8 +935,8 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
               $('.background--enemy').removeClass('background--enemy--mast-head');
               $('.background--grey').removeClass('background--grey--mast-head');
             } else if (elementId.startsWith("div-gpt-ad-background")) {
-              $('html').removeClass('has-background-banner');
-              $('.banner--background').remove();
+              //$('html').removeClass('has-background-banner');
+              $('#' + elementId).parents('.banner--background').remove();
             } else if (elementId == "div-gpt-ad-booster") {
               // removed fadeOut because of jquery.slim
               $('.banner--trailer-booster').remove();

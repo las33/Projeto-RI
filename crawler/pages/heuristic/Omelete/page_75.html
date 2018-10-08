@@ -1,0 +1,1062 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.ome.lt/static/omelete/css/style.min.css?v=e1fad"/>
+
+  <title>Bright | Crítica</title>
+  <link rel="preload" href="https://cdn.ome.lt/static/omelete/img/omelete_logo.svg" as="image">
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationTime":12,"errorBeacon":"bam.nr-data.net","beacon":"bam.nr-data.net","licenseKey":"48f7507bbb","transactionName":"NlYGMEoAD0UEARZYDA8cIhFWAhVfCgxNRQsAXQsXFhIIQgBMD0QPFVpKElEEFkVLAANCBltQCwpMBA9COgQHRQAJ","queueTime":0,"applicationID":"135988681","agent":""}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="icon" type="image/png" sizes="96x96" href="https://cdn.ome.lt/static/omelete/img/favicon.png">
+
+<!-- Outbrain -->
+<script type="text/javascript" src="https://widgets.outbrain.com/outbrain.js"></script>
+<!-- End of Outbrain -->
+
+  <meta name="description" content="">
+
+  
+
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Omelete">
+  
+  <meta property="fb:pages" content="166251050655700" />
+  
+  
+<meta name="twitter:site" content="@omelete" />
+<meta name="twitter:creator" content="@omelete" />
+<meta name="twitter:url" content="https://www.omelete.com.br/filmes/criticas/bright-critica" />
+<meta name="twitter:domain" content="https://www.omelete.com.br/" />
+<meta name="twitter:title" content="Bright | Crítica" />
+<meta name="twitter:description" content="bright é o novo filme de fantasia da netflix que desperdiça oportunidades" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://cdn.ome.lt/lpYtKXN8F_6QX7BUU_GYNzkbkPQ=/1200x630/smart/extras/conteudos/3e192edf2027c536e25bb5d3b6ac93ced77cd5c9.jpg" />
+<meta property="og:title" content="Bright | Crítica" />
+<meta property="og:description" content="bright é o novo filme de fantasia da netflix que desperdiça oportunidades" />
+<meta property="og:url" content="https://www.omelete.com.br/filmes/criticas/bright-critica" />
+<meta property="og:image" content="https://cdn.ome.lt/lpYtKXN8F_6QX7BUU_GYNzkbkPQ=/1200x630/smart/extras/conteudos/3e192edf2027c536e25bb5d3b6ac93ced77cd5c9.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:type" content="article" />
+<meta property="article:author" content="Thiago Romariz" />
+<meta property="article:section" content="Filmes">
+<meta property="article:published_time" content="2017-12-27 12:38:49+00:00" />
+<meta property="article:modified_time" content="2017-12-28 15:08:42.949000+00:00" />
+
+
+  <script>
+    var allGalleries = {};
+    var contentAlreadyParsed = {};
+  </script>
+  
+
+<!-- TailTarget Tag Manager TT-9804-3/CT-153 -->
+<script>
+  (function(i) {
+  var ts = document.createElement('script');
+  ts.type = 'text/javascript';
+  ts.async = true;
+  ts.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tags.t.tailtarget.com/t3m.js?i=' + i;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ts, s);
+  })('TT-9804-3/CT-153');
+</script>
+<!-- End TailTarget Tag Manager -->
+
+<!-- Global site tag (gtag.js) - AdWords: 1062127218 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1062127218"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){
+    dataLayer.push(arguments);
+  } gtag('js', new Date());
+  gtag('config', 'AW-1062127218');
+</script>
+
+<!-- Inicio da tag TT de segmencatao -->
+<script id="tailtarget" type="text/javascript">
+// <![CDATA[
+var _ttprofiles = _ttprofiles || [];
+_ttprofiles.profiles = [];
+_ttprofiles.push(['_setAccount', 'TT-9804-3']); // _setAccount
+_ttprofiles.push(['_enableServices']);
+document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? "https:" : "http:") + "//d.tailtarget.com/profiles.js'></scr" + "ipt>");
+// ]]>
+</script>
+
+<!-- Final da tag TT de segmentacao -->
+
+  
+  <link rel="canonical" href="https://www.omelete.com.br/filmes/criticas/bright-critica" />
+  
+  <link rel="amphtml" href="https://www.omelete.com.br/amp/filmes/criticas/bright-critica">
+  
+  <meta property="fb:article_style" content="default">
+  
+  <script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Review",
+      "name" : "Bright | Crítica",
+      "author" : {
+        "@type" : "Person",
+        "name" : "Thiago Romariz"
+      },
+      "datePublished" : "2017-12-27 12:38:49+00:00",
+      "dateModified" : "2017-12-28 15:08:42.949000+00:00",
+      "image" : [
+    ] ,
+      "video" : [] ,
+      "headline" : "Bright | Crítica",
+      "reviewRating" : {
+        "@type" : "Rating",
+        "ratingValue" : 2
+      },
+      "itemReviewed" : {
+        "@type" : "Thing",
+        "image" : "https://cdn.ome.lt/lpYtKXN8F_6QX7BUU_GYNzkbkPQ=/1200x630/smart/extras/conteudos/3e192edf2027c536e25bb5d3b6ac93ced77cd5c9.jpg",
+        "name": "Bright | Crítica"
+      },
+      "publisher" : {
+    "@type": "Organization",
+    "name": "Omelete",
+    "url": "https://www.omelete.com.br",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://cdn.ome.lt/static/omelete/img/omelete_logo.svg"
+    },
+    "sameAs": [
+      "https://www.youtube.com/user/omeleteve",
+      "https://www.facebook.com/SiteOmelete/",
+      "https://twitter.com/omelete",
+      "https://www.instagram.com/omelete/"
+    ]
+  }
+
+    }
+  
+  </script>
+
+
+
+</head>
+
+<body>
+
+
+<header class="header">
+
+<div class="container container--venom">
+    <div class="row header__wrapper">
+      <div class="col-4 d-md-none">
+        <div class="header__wrapper__menu">
+          <button class="btn-menu">
+            <span class="btn-menu__line"></span>
+            <span class="btn-menu__line"></span>
+            <span class="btn-menu__line"></span>
+          </button>
+          </button>
+        </div>
+      </div>
+      <div class="col-16 col-md-20 col-lg-18 col-xl-20">
+        <div class="header__wrapper__logo">
+          <div class="logo" style="visibility: hidden;">
+            <a href="/">
+              
+                <img class="logo__img" src="https://cdn.ome.lt/static/omelete/img/omelete_logo.svg" alt="Omelete">
+              
+            </a>
+          </div>          
+
+          <div class="links links--category links--mobile">
+            
+            
+            <ul class="links__list links__list--underline">
+              <li class="links__list__item d-block d-md-none"><a href="/">HOME</a></li>
+              <li class="links__list__item"><a href="/filmes">FILMES</a></li>
+              <li class="links__list__item"><a href="/series-tv">SÉRIES e TV</a></li>
+              <li class="links__list__item"><a href="/quadrinhos">HQs e LIVROS</a></li>
+              <li class="links__list__item"><a href="/musica">MÚSICA</a></li>
+              <li class="links__list__item"><a href="/videos">VÍDEOS</a></li>
+              <li class="links__list__item links__list__item--special"><a href="https://store.omelete.com.br/?utm_source=site_omelete&utm_medium=link&utm_campaign=link_site_omelete" target="_blank">OMELETE STORE</a></li>
+            </ul>
+
+            <div class="links--mobile__social">
+                <div class="links links--social">
+  <ul class="links__list links__list--icon">
+    <li class="links__list__item"><a class="icon-facebook" href="https://www.facebook.com/SiteOmelete/" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-instagram" href="https://www.instagram.com/omelete/" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-twitter" href="https://twitter.com/omelete" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-youtube-play" href="https://www.youtube.com/user/omeleteve" target="_blank"></a></li>
+  </ul>
+</div>
+            </div>
+
+            <div class="links__overlay"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 col-md-4 col-lg-6 col-xl-4">
+        <div class="header__wrapper__search">
+          <div class="search search--open">
+            <i class="icon icon-search"></i>
+            <div class="search__input">
+            </div>
+          </div>
+
+          <div class="separator d-none d-md-block"></div>
+
+          <div class="social  d-none d-md-block">
+              <div class="links links--social">
+  <ul class="links__list links__list--icon">
+    <li class="links__list__item"><a class="icon-facebook" href="https://www.facebook.com/SiteOmelete/" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-instagram" href="https://www.instagram.com/omelete/" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-twitter" href="https://twitter.com/omelete" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-youtube-play" href="https://www.youtube.com/user/omeleteve" target="_blank"></a></li>
+  </ul>
+</div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="logo-venom">
+      <iframe src="https://cdn.ome.lt/static/omelete/specials/venom/logo-venom.html">
+      </iframe>
+      <div class="logo-venom__clickable"></div>
+    </div>
+</div>
+ 
+</header>
+
+<main class="page page--content">
+  <div class="main">
+    
+    
+  
+
+  
+    
+    <div class="banner banner--mast-head  ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-superior" ></div>
+      </div>
+    </div>
+    
+  
+
+    
+
+    
+
+
+
+
+<section class="section section--content section--main" data-dsq-domain="omelete.com.br" data-ref-id="142366" data-content-url="/filmes/criticas/bright-critica" data-content-type="review">
+  
+  
+  <script type="text/javascript">
+    window._seedtagq = window._seedtagq || [];
+    window._seedtagq.push(['_setId', '0546-2759-01']);
+    (function () {
+      var st = document.createElement('script');
+      st.type = 'text/javascript';
+      st.async = true;
+      st.src = ('https:' == document.location.protocol
+        ? 'https'
+        : 'http') + '://config.seedtag.com/loader.js?v=' + Math.random();
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(st, s);
+    })();
+  </script>
+  
+  
+
+  
+  
+
+  
+
+  
+
+  <div class="container section__wrapper">
+    <div class="row">
+      <div class="col-24">
+        <article class="article">
+          
+          
+          
+
+          
+          <div class="row article__header">
+            <div class="offset-0 offset-sm-2 col-24 col-sm-20 no-relative">
+              
+
+
+
+
+
+  <div class="article__header__tag">
+    
+<div class="tag tag--filmes">
+  <p>Filmes</p>
+  <div class="tag__label">
+     <span>Crítica</span> 
+    
+  </div>
+  <div class="tag__time"></div>
+</div>
+
+  </div>
+  <div class="article__header__title">
+    <h1 class="title">Bright | Crítica</h1>
+  </div>
+  <div class="article__header__subtitle">
+    <h2 class="subtitle">Apesar de Will Smith, fantasia policial da Netflix desperdiça oportunidades</h2>
+  </div>
+  <div class="article__header__social">
+    <div class="links links--social">
+    <ul class="links__list links__list--icon links__list--column links__list--circle">
+      
+      <li class="links__list__item"><a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//omelete.com.br/filmes/criticas/bright-critica"></a></li>
+      <li class="links__list__item"><a class="icon icon-twitter" target="_blank" href="https://twitter.com/intent/tweet?text=Bright%20%7C%20Cr%C3%ADtica https%3A//omelete.com.br/filmes/criticas/bright-critica"></a></li>
+      <li class="links__list__item"><a class="icon icon-email" target="_blank" href="mailto:?subject=Bright%20%7C%20Cr%C3%ADtica&body=https%3A//omelete.com.br/filmes/criticas/bright-critica"></a></li>
+      <li class="links__list__item"><a class="icon icon-whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=Bright%20%7C%20Cr%C3%ADtica https%3A//omelete.com.br/filmes/criticas/bright-critica"></a></li>
+    </ul>
+  </div>
+  </div>
+  <div class="article__header__info">
+    <div class="info">
+      <div class="info__by">Thiago Romariz</div>
+
+      
+      
+      
+
+      <div class="info__date">27.12.2017</div>
+      <div class="info__time">10h38</div>
+
+      
+      <div class="d-none d-md-block">Atualizada em </div>
+      <div class="d-none d-md-block">28.12.2017</div>
+      <div class="d-none d-md-block">13h08</div>
+      <div class="d-block d-md-none">Atualizada em 28.12.2017 às 13h08</div>
+        
+    </div>
+
+    
+  </div>
+
+            </div>
+          </div>
+          
+
+          
+          <div class="row ">
+            <div class="offset-0 col-24 offset-md-2 col-md-20 col-lg-12 col-xl-13">
+              
+
+
+
+
+
+
+
+
+
+
+
+<div class="article__body article--content">
+
+  
+    
+      <p dir="ltr"><a href="/filmes/bright/"><em><strong>Bright</strong></em></a> é a mais ousada tentativa da <strong>Netflix</strong> no mundo dos longa-metragem. O filme de <strong>David Ayer</strong> conta com <strong>Will Smith</strong>, um dos maiores astros de Hollywood, ao mesmo tempo que coloca Los Angeles no meio de um mundo fantástico habitado por orcs, fadas, dragões e elfos. Eles dividem os mesmos preconceitos e problemas sociais do "mundo real"; elfos privilegiados, orcs marginalizados. A proposta é interessante, tem ótima representação visual, mas peca na hora de apresentar os conceitos que fariam aquele mundo se sustentar.</p>
+      
+
+
+
+      
+    
+      <p dir="ltr">A dupla protagonista, Smith e <strong>Joel Edgerton</strong>, carrega o filme nas costas, assim como os dilemas que aquela realidade propõe. Jakoby é o primeiro orc a entrar para a polícia de L.A. e centraliza todo o preconceito e corrupção que corporações gigantes possuem. No meio disso, há uma profecia sobre uma varinha mágica que trará à Terra o Senhor das Trevas, um ser superpoderoso que teoricamente destruiria o mundo e faria a magia reinar novamente. E é nesse segmento que o texto de Max Landis escorrega.</p>
+      
+
+
+
+      
+    
+      <p dir="ltr">Enquanto propõe discutir a briga entre clãs e sutilmente fala sobre os quesitos fantásticos dos EUA, o roteiro funciona. Smith e Edgerton têm química e o tipo de humor faz com que exista não só uma ligação interessante entre os personagens, como aprofunda a história de ambos. Ward se apega aos conceitos corretos de um policial, mas não é o herói incorruptível; o físico de Jakoby sugere ignorância, mas sua índole é o que guia o parceiro ao longo do filme. Tudo que cerca a discussão sobre essa dupla estranha dentro dos grupos é envolvente - o problema surge quando os Brights e a varinha entram em questão.</p>
+      
+
+
+
+      
+    
+      <p dir="ltr">O segmento mágico de Bright é focado nas pessoas que dão título ao filme, seres capazes de dominar uma varinha mágica. Com esse objeto, tudo é possível. Desde destruir prédios até ressuscitar pessoas. O roteiro tenta emplacar uma "guerra" nos bastidores daquela Los Angeles fantástica, mas acaba só incluindo uma briga entre dois pequenos grupos formados por personagens sem carisma ou presença. O elfos não passam de seres esquisitos, de orelhas pontudas e canastrões. Os conceitos são jogados e claramente há potencial, mas nenhum deles é desenvolvido.</p>
+      
+
+
+
+      
+    
+      <p dir="ltr">Por ser dirigido por David Ayer, era de se esperar que Bright tivesse cenas de ação intensas. Não é o que acontece. Tirando uma cena em câmera lenta, todas as sequências são filmadas sob uma fotografia escura e empoeirada que pouco aproveita a intensidade das lutas e tiroteios. O próprio Ayer apresentou, em filmes como Corações de Ferro e Marcados Para Morrer, cenas onde o mesmo tipo de cenário oferecia algo mais impactante. Aqui, as coreografias e a movimentação da câmera são simplórias e pouco ajudam na imersão do espectador.</p>
+      
+
+
+
+      
+    
+      <p dir="ltr">O carisma da dupla principal e a proposta de fantasia policial salvam o filme, apesar dos erros ao longo do caminho. O foco em inúmeras frentes faz com que o pouco que há de interessante no roteiro seja realmente aproveitado. Todos os principais envolvidos em Bright têm trabalhos melhores dentro do gênero thriller policial - vide <em>Marcados Para Morrer, Bad Boys </em>ou<em> Reino Animal</em>. E no fim, mesmo com a química entre os protagonistas, a fantasia - o que há de mais interessante em Bright - é eclipsada por uma história que explora mais os pontos fracos do que as virtudes de um mundo mágico com potencial.</p>
+      
+        
+      
+
+
+
+      
+    
+  
+
+  
+    
+<div class="eggs">
+  <div class="eggs__title">
+      Nota do Crítico
+  </div>
+
+  <div class="eggs__content">
+    <div class="list">
+        <span class="list__egg icon-egg "></span>
+        <span class="list__egg icon-egg "></span>
+        <span class="list__egg icon-egg disabled"></span>
+        <span class="list__egg icon-egg disabled"></span>
+        <span class="list__egg icon-egg disabled"></span>
+    </div>
+      <div class="value">
+        
+        Regular
+        
+        
+        
+      </div>
+  </div>
+</div>
+
+  
+</div>
+
+              
+  <div class="comments d-flex flex-column">
+    <a href="" id="showComments" class="btn">Ver comentários</a>
+    <div class="comments__wrapper" style="display: none">
+      <div id="disqus_thread" data-om-disqus=""></div>
+    </div>
+  </div>
+
+              <div class="">
+  <div class="OUTBRAIN"
+    data-src="https://www.omelete.com.br/filmes/criticas/bright-critica"
+    data-widget-id="AR_1"
+    data-ob-template="Omelete">
+  </div>
+  <script type="text/javascript"> OBR.extern.researchWidget(); </script>
+</div>
+            </div>
+
+            
+            <div class="offset-lg-2 col-lg-8 col-xl-7 d-none d-lg-block scroll-wrapper">
+              <aside>
+                
+                
+  
+
+  
+    
+    <div class="banner banner--aside banner--scroll ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-meio" ></div>
+      </div>
+    </div>
+    
+  
+
+                
+              </aside>
+            </div>
+            
+          </div>
+          
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="d-none d-sm-block">
+    
+    
+  
+
+  
+    
+    <div class="banner banner--bottom  banner--parallax">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-inferior" ></div>
+      </div>
+    </div>
+    
+  
+
+    
+  </div>
+  
+
+  
+  <div class="d-small d-sm-none">
+    
+    
+  
+
+  
+    
+    <div class="banner banner--small  ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-arroba-m1" style="width: 300px; height: 250px;"></div>
+      </div>
+    </div>
+    
+  
+
+    
+  </div>
+  
+</section>
+
+  </div>
+  <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+</main>
+<script>
+  
+  var disqus_shortname = 'omeletebr';
+  var disqus_config = function () {
+    
+    this.page.url = 'omelete.com.br//bright-critica?related_slug=%7B%27slug%27%3A+%27filmes%27%2C+%27name%27%3A+%27Filmes%27%7D';
+    this.page.identifier = 'conteudo:conteudo#142366';
+    this.page.title = 'Bright | Crítica';
+  };
+  
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+
+<section class="m-search">
+  <div class="container">
+    <div class="row">
+      <div class="m-search__wrapper">
+        <form method="get" action="/busca">
+          <div class="input-group">
+            <button class="icon-search" type="submit"></button>
+            <input placeholder="Faça a sua busca" name="q"/>            
+            <button type="button" class="close icon-close search--close"></button>
+          </div>          
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.ome.lt/static/omelete/js/scripts.min.js?v=e1fad"></script>
+<footer>
+  
+  <script>
+    (function(i) {
+    var ts = document.createElement('script');
+    ts.type = 'text/javascript';
+    ts.async = true;
+    ts.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tags.t.tailtarget.com/t3m.js?i=' + i;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ts, s);
+    })('TT-9804-3/CT-153');
+  </script>
+  
+
+  <section class="m-search">
+  <div class="container">
+    <div class="row">
+      <div class="m-search__wrapper">
+        <form method="get" action="/busca">
+          <div class="input-group">
+            <button class="icon-search" type="submit"></button>
+            <input placeholder="Faça a sua busca" name="q"/>            
+            <button type="button" class="close icon-close search--close"></button>
+          </div>          
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+    
+  
+
+  
+    
+    <div class="banner banner--mobile-footer  ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-rodape" style="width: 320px; height: 50px;"></div>
+      </div>
+    </div>
+    
+  
+
+  
+  <div class="footer__group">
+    <div class="container">
+      <div class="row group">
+
+        <div class="group__about col-xl-7 col-md-10 offset-lg-1">
+          
+        </div>
+
+        <div class="group__logos col-xl-15 col-lg-23 offset-lg-1">
+          <div class="item item--text">
+            <p>Empresas<br/> da Omelete Company:</p>
+          </div>
+          <div class="item item--omelete">
+            <a href="https://www.omelete.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/omelete.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Omelete">
+            </a>
+          </div>
+
+          <div class="item item--ccxp">
+            <a href="https://www.ccxp.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/ccxp.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Comic Con">
+            </a>
+          </div>
+
+          <div class="item item--gamexp">
+            <a href="https://www.gamexp.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/gamexp.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Game XP">
+            </a>
+          </div>          
+
+          <div class="item item--theenemy">
+            <a href="https://www.theenemy.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/theenemy.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="The Enemy">
+            </a>
+          </div>
+
+          <!--<div class="item item--mundogeek">
+            <a href="https://www.lojamundogeek.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/mundogeek.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Mundo Geek">
+            </a>
+          </div>
+
+          <div class="item item--omeletebox">
+            <a href="https://www.omeletebox.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/omeletebox.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Omelete Box">
+            </a>
+          </div>-->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <nav class="footer__nav d-none d-md-block">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-5 col-lg-5 offset-sm-1 footer__nav__list">
+         <h3>Filmes</h3>
+         <ul>
+           <li><a href="/oscar">OSCAR</a></li>
+           <li><a href="/bilheteria-usa/">BILHETERIAS USA</a></li>
+           <li><a href="/bilheteria-brasil/">BILHETERIAS BRASIL</a></li>
+           <li><a href="/estreias-da-semana/">ESTREIAS DA SEMANA</a></li>
+           <li><a href="/criticas?section=filmes">CRÍTICAS</a></li>
+           <li><a href="/noticias?section=filmes">NOTÍCIAS</a></li>
+         </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-xl-5 footer__nav__list">
+          <h3>SÉRIES e TV</h3>
+          <ul>
+            <li><a href="/emmy">EMMY</a></li>
+            <li><a href="/calendario-de-estreias-na-tv/">CALENDÁRIO DE ESTREIAS</a></li>
+            <li><a href="/series-tv/temporada-2018-2019-as-series-de-tv-canceladas-renovadas-e-todas-as-novidades/">CALENDÁRIO 2018</a></li>
+            <li><a href="/criticas?section=series-tv">CRÍTICAS</a></li>
+            <li><a href="/noticias?section=series-tv">NOTÍCIAS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-xl-5 footer__nav__list">
+          <h3>HQs e LIVROS</h3>
+          <ul>
+            <li><a href="/comic-con">SAN DIEGO COMIC CON</a></li>
+            <li><a href="/criticas?section=quadrinhos">CRÍTICAS</a></li>
+            <li><a href="/noticias?section=quadrinhos">NOTÍCIAS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-4 footer__nav__list">
+          <h3>Música</h3>
+          <ul>
+            <li><a href="/criticas?section=musica">CRÍTICAS</a></li>
+            <li><a href="/noticias?section=musica">NOTÍCIAS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xl-1 col-lg-2 col-md-2 offset-xl-2">
+          <div class="search search--open">
+            <i class="icon icon-search"></i>
+            <div class="search__input"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+</footer>
+
+
+
+  
+
+
+<script type="text/javascript">
+  // Adding json and gpt info to the jS
+  var slots = {"mobile": {"arroba-m1": {"tag": "/18178082/omelete/arroba_m1", "name": "arroba-m1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m1"}, "superior": {"tag": "/18178082/omelete/superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "div_id": "div-gpt-ad-superior"}, "rodape": {"tag": "/18178082/omelete/rodape", "name": "rodape", "sizes": [320, 50], "div_id": "div-gpt-ad-rodape"}, "booster": {"tag": "/18178082/omelete/booster", "name": "booster", "sizes": [1695, 920], "div_id": "div-gpt-ad-booster"}, "background": {"tag": "/18178082/omelete/background", "name": "background", "sizes": [1800, 1000], "div_id": "div-gpt-ad-background"}, "arroba-m2": {"tag": "/18178082/omelete/arroba_m2", "name": "arroba-m2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m2"}, "inferior": {"tag": "/18178082/omelete/inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "div_id": "div-gpt-ad-inferior"}, "contagem": {"tag": "/18178082/omelete/contagem", "name": "contagem", "sizes": [300, 150], "div_id": "div-gpt-ad-contagem"}, "arroba-2": {"tag": "/18178082/omelete/arroba_2", "name": "arroba-2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-2"}, "superheader": {"tag": "/18178082/omelete/superheader", "name": "superheader", "sizes": [320, 100], "div_id": "div-gpt-ad-superheader"}, "meio": {"tag": "/18178082/omelete/meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "div_id": "div-gpt-ad-meio"}, "arroba-1": {"tag": "/18178082/omelete/arroba_1", "name": "arroba-1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-1"}}, "desktop": {"arroba-m1": {"tag": "/18178082/omelete/arroba_m1", "name": "arroba-m1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m1"}, "superior": {"tag": "/18178082/omelete/superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "div_id": "div-gpt-ad-superior"}, "rodape": {"tag": "/18178082/omelete/rodape", "name": "rodape", "sizes": [320, 50], "div_id": "div-gpt-ad-rodape"}, "booster": {"tag": "/18178082/omelete/booster", "name": "booster", "sizes": [1695, 920], "div_id": "div-gpt-ad-booster"}, "background": {"tag": "/18178082/omelete/background", "name": "background", "sizes": [1800, 1000], "div_id": "div-gpt-ad-background"}, "arroba-m2": {"tag": "/18178082/omelete/arroba_m2", "name": "arroba-m2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m2"}, "inferior": {"tag": "/18178082/omelete/inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "div_id": "div-gpt-ad-inferior"}, "contagem": {"tag": "/18178082/omelete/contagem", "name": "contagem", "sizes": [300, 150], "div_id": "div-gpt-ad-contagem"}, "arroba-2": {"tag": "/18178082/omelete/arroba_2", "name": "arroba-2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-2"}, "superheader": {"tag": "/18178082/omelete/superheader", "name": "superheader", "sizes": [320, 100], "div_id": "div-gpt-ad-superheader"}, "meio": {"tag": "/18178082/omelete/meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "div_id": "div-gpt-ad-meio"}, "arroba-1": {"tag": "/18178082/omelete/arroba_1", "name": "arroba-1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-1"}}};
+  var gpt_keys = {"content_type": "review", "section": "filmes", "tags": ["bright", "david ayer", "will smith", "joel edgerton"], "page_type": "content", "environment": "production"};
+  var sponsors = {"logo_chamada": "/18178082/omelete/logo_chamada", "logo_especial_3": "/18178082/omelete/logo_especial_3", "logo_especial_1": "/18178082/omelete/logo_especial_1", "logo_especial_2": "/18178082/omelete/logo_especial_2", "logo_internas": "/18178082/omelete/logo_internas"};
+
+  function createCookie(name,value,days) {
+    var expires = '';
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = '; expires=' + date.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+
+  function readCookie(name) {
+      var nameEQ = name + '=';
+      var ca = document.cookie.split(';');
+      for(var i=0;i < ca.length;i++) {
+          var c = ca[i];
+          while (c.charAt(0) === ' ') {
+            c = c.substring(1,c.length);
+          }
+          if (c.indexOf(nameEQ) === 0) {
+            return c.substring(nameEQ.length,c.length);
+          }
+      }
+      return null;
+  }
+</script>
+
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var isMobile = false;
+  if (window.innerWidth <= 768) {
+    isMobile = true;
+  }
+
+  var gptAdSlots = {};
+  var googletag = googletag || {};
+
+  var desk = ['arroba-1', 'arroba-2', 'meio', 'inferior', 'superior',
+              'background', 'booster', 'contagem'];
+  var mob = ['arroba-m1', 'arroba-m2', 'rodape', 'superheader',
+             'contagem'];
+
+  var allSlots = Object.keys(slots.desktop).map(function(key) { return slots.desktop[key]; });
+
+  var desktopSlots = allSlots.filter(function(slot) {return desk.includes(slot.name);});
+
+  var mobileSlots = allSlots.filter(function(slot) {return mob.includes(slot.name);});
+
+  window.addEventListener("load", function () {
+    googletag.cmd = googletag.cmd || [];
+    googletag.cmd.push(function() {
+      if (!isMobile) {
+        gptAdSlots.desktop = [];
+
+        desktopSlots.forEach(function(slot){
+          gptAdSlots[slot.div_id] = googletag.defineSlot(slot.tag, slot.sizes, slot.div_id).addService(googletag.pubads());
+          gptAdSlots.desktop.push(gptAdSlots[slot.div_id]);
+        });
+
+//        for (slot_name in desktopSlots) {
+//            var slot = slots.desktop[slot_name];
+//            gptAdSlots[slot.div_id] = googletag.defineSlot(slot.tag, slot.sizes, slot.div_id).addService(googletag.pubads());
+//            // adding key_value
+//            gptAdSlots.desktop.push(gptAdSlots[slot.div_id]);
+//        }
+      } else {
+        gptAdSlots.mobile = [];
+
+        mobileSlots.forEach(function(slot){
+          gptAdSlots[slot.div_id] = googletag.defineSlot(slot.tag, slot.sizes, slot.div_id).addService(googletag.pubads());
+          gptAdSlots.mobile.push(gptAdSlots[slot.div_id]);
+        });
+//
+//        for (slot_name in slots.mobile) {
+//          var slot = slots.mobile[slot_name];
+//          gptAdSlots[slot.div_id] = googletag.defineSlot(slot.tag, slot.sizes, slot.div_id).addService(googletag.pubads());
+//          gptAdSlots.mobile.push(gptAdSlots[slot.div_id]);
+//        }
+      }
+
+      // var sponsoredBannerWhite = document.querySelectorAll('.sponsored-banner-white');
+      // var sponsoredBannerBlue = document.querySelectorAll('.sponsored-banner-blue');
+      var sponsorSlots = document.querySelectorAll('.sponsor-slots');
+      sponsorSlots.forEach(function(el, idx) {
+        var sponsorTag = el.dataset.sponsor;
+        var sizes = el.dataset.sizes.split(',');
+        var tagID = sponsorTag + '-' + idx;
+        var slotName = sponsors[sponsorTag];
+        if (slotName) {
+          el.setAttribute('id', tagID);
+          googletag.defineSlot(slotName, [parseInt(sizes[0]), parseInt(sizes[1])], tagID).addService(googletag.pubads());
+        } else {
+        }
+      });
+
+      googletag.pubads().addEventListener('slotRenderEnded', function (event) {
+
+        var elementId = event.slot.getSlotElementId();
+
+        if (event.isEmpty) {
+            if (elementId == "div-gpt-ad-superior") {
+              $('.banner.banner--mast-head').remove();
+              $('.background--enemy').removeClass('background--enemy--mast-head');
+              $('.background--grey').removeClass('background--grey--mast-head');
+            } else if (elementId.startsWith("div-gpt-ad-background")) {
+              //$('html').removeClass('has-background-banner');
+              $('#' + elementId).parents('.banner--background').remove();
+            } else if (elementId == "div-gpt-ad-booster") {
+              // removed fadeOut because of jquery.slim
+              $('.banner--trailer-booster').remove();
+            } else {
+              
+            }
+        } else {
+            if (elementId == "div-gpt-ad-superior") {
+              $('.banner.banner--mast-head').addClass('banner--mast-head--visible');
+              $('.background--enemy').addClass('background--enemy--mast-head');
+              $('.background--grey').addClass('background--grey--mast-head');
+            } else if (elementId == "div-gpt-ad-background") {
+              $('.banner.banner--mast-head').remove();
+            } else if (elementId.startsWith('div-gpt-ad-background')) {
+              $(elementId).closest('.banner--background').addClass('banner--background--visible');
+            } else if (elementId == "div-gpt-ad-booster") {
+              setTimeout(function() {
+                // removed fadeOut because of jquery.slim
+                $('.banner--trailer-booster').remove();
+              }, 35000);
+            }
+
+            // set 'inferior' ad size correctly
+            if (elementId.startsWith('div-gpt-ad-inferior') && event.size.length == 2) {
+              var inferiorAd = $('#' + elementId);
+              inferiorAd.width(event.size[0]).height(event.size[1]);
+              inferiorAd.parent().width(event.size[0]);
+
+              if( event.size[0] !== 1260 && event.size[1] !== 700 ){
+                inferiorAd.closest('.banner--parallax').addClass('parallax--inactive')
+              }
+            }
+
+            // set 'mast-head' ad size correctly
+            if (elementId.startsWith('div-gpt-ad-superior') && event.size.length == 2) {
+              var superiorAd = $('#' + elementId);
+              superiorAd.width(event.size[0]).height(event.size[1]);
+              superiorAd.parent().width(event.size[0]);
+            }
+        }
+
+      });
+
+      googletag.pubads().disableInitialLoad();
+      googletag.pubads().enableSingleRequest();
+
+      // tail
+      var _ttprofiles = window._ttprofiles || [];
+
+      googletag.pubads().setTargeting("age", _ttprofiles.getAge);
+      googletag.pubads().setTargeting("equipment", _ttprofiles.getEquipment);
+      googletag.pubads().setTargeting("customaudiences", _ttprofiles.getCustomAudience);
+      googletag.pubads().setTargeting("gender", _ttprofiles.getGender);
+      googletag.pubads().setTargeting("microsegments", _ttprofiles.getMicrosegments);
+      googletag.pubads().setTargeting("profiles", _ttprofiles.getProfiles);
+      googletag.pubads().setTargeting("socialclass", _ttprofiles.getSocialClass);
+      googletag.pubads().setTargeting("subjects", _ttprofiles.getSubjects);
+      googletag.pubads().setTargeting("team", _ttprofiles.getTeam);
+
+      // key value
+      for (var key in gpt_keys) {
+        var key_value = gpt_keys[key];
+        googletag.pubads().setTargeting(key, key_value);
+      }
+
+      googletag.enableServices();
+
+      if (!isMobile) {
+
+        desktopSlots.forEach( function(slot){
+          googletag.display(slot.div_id);
+        });
+//          for (slot_name in slots.desktop) {
+//            var slot = slots.desktop[slot_name];
+//            googletag.display(slot.div_id);
+//          }
+          googletag.pubads().refresh(gptAdSlots.desktop);
+      } else {
+
+        mobileSlots.forEach( function(slot){
+          googletag.display(slot.div_id);
+        });
+//          for (slot_name in slots.mobile) {
+//            var slot = slots.mobile[slot_name];
+//            googletag.display(slot.div_id);
+//          }
+          googletag.pubads().refresh(gptAdSlots.mobile);
+      }
+
+      // sponsoredBannerWhite.forEach(function(el, idx) {
+      //   googletag.display(el.attr('id'));
+      // });
+
+      // sponsoredBannerBlue.forEach(function(el, idx) {
+      //   googletag.display(el.attr('id'));
+      // });
+
+      // sponsoredBannerWhiteBig.forEach(function(el, idx) {
+      //   googletag.display(el.attr('id'));
+      // });
+    });
+  }, false);
+
+  function refreshGalleryAd(id) {
+    googletag.cmd.push(function() {
+        googletag.pubads().refresh([gptAdSlots[id]]);
+    });
+  };
+
+  function refreshAds(ids) {
+    if (!ids || !Array.isArray(ids)) {
+      return;
+    }
+    googletag.cmd.push(function() {
+      ids.forEach(function (id) {
+        googletag.display(id);
+        googletag.pubads().refresh([gptAdSlots[id]]);
+      });
+    });
+  }
+</script>
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-1826697-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+<meta name="google-site-verification" content="hCFQMJWhgJvgAHP8WyJTpZfMfHVNMSa9GsTj39662_k" />
+
+
+<meta name="google-site-verification" content="iTPXZ1POnZq80tracAvjJuIfkwym9JjdRDOk-glyL1I" />
+
+
+<meta name="p:domain_verify" content="e666affb1012fb19c957d470e41d349e" />
+
+
+<link href="https://plus.google.com/115416604494251056860" rel="publisher" />
+
+
+<script id="tailtarget" type="text/javascript">
+  // <![CDATA[
+  var _ttprofiles = _ttprofiles || [];
+  _ttprofiles.profiles = [];
+  _ttprofiles.push(['_setAccount', 'TT-9804-3']); // _setAccount
+  _ttprofiles.push(['_enableServices']);
+  document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? "https:" : "http:") + "//d.tailtarget.com/profiles.js'></scr" + "ipt>");
+  // ]]>
+</script>
+
+
+
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','//connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1022132447830898');
+  fbq('track', "PageView");
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1022132447830898&ev=PageView&noscript=1"/></noscript>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1062127218"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-1062127218'); </script>
+
+
+<!-- jQUery mobile -->
+<script src="https://cdn.ome.lt/static/omelete/js/vendor/jquery.mobile.custom.min.js"></script>
+<!-- End of jQUery mobile -->
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  window.addEventListener("load", function () {
+    (function () {
+      var u = "//analytics.ome.lt/";
+      _paq.push(['setTrackerUrl', u + 'piwik.php']);
+      _paq.push(['setSiteId', '4']);
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
+    })();
+  }, false);
+</script>
+<noscript>
+  <p>
+    <img src="//analytics.ome.lt/piwik.php?idsite=4&rec=1" style="border:0;" alt="" />
+  </p>
+</noscript>
+<!-- End Matomo Code -->
+
+</body>
+</html>

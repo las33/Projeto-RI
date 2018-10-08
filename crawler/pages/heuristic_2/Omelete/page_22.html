@@ -5,13 +5,13 @@
 <head>
   
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.ome.lt/static/omelete/css/style.min.css?v=66f55"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.ome.lt/static/omelete/css/style.min.css?v=e1fad"/>
 
-  <title>Omelete | O maior portal de notícias e entretenimento</title>
+  <title>The Front Runner</title>
   <link rel="preload" href="https://cdn.ome.lt/static/omelete/img/omelete_logo.svg" as="image">
 
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationTime":20,"applicationID":"135988681","agent":"","transactionName":"NlYGMEoAD0UEARZYDA8cIhFWAhVfCgxNRQsAXQsXFhIIQgBMD0QPFVpKElEEFkVLAANCBltQCwpMBA9COgQHRQAJ","queueTime":0,"errorBeacon":"bam.nr-data.net","beacon":"bam.nr-data.net","licenseKey":"48f7507bbb"}</script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationTime":13,"errorBeacon":"bam.nr-data.net","beacon":"bam.nr-data.net","licenseKey":"48f7507bbb","transactionName":"NlYGMEoAD0UEARZYDA8cIhFWAhVfCgxNRQsAXQsXFhIIQgBMD0QPFVpKElEEFkVLAANCBltQCwpMBA9COgQHRQAJ","queueTime":0,"applicationID":"135988681","agent":""}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <link rel="icon" type="image/png" sizes="96x96" href="https://cdn.ome.lt/static/omelete/img/favicon.png">
@@ -30,12 +30,25 @@
   <meta property="fb:pages" content="166251050655700" />
   
   
-
-<meta property="og:image" content="https://cdn.ome.lt/static/omelete/img/omelete_share.png" />
+<meta name="twitter:site" content="@omelete" />
+<meta name="twitter:creator" content="@omelete" />
+<meta name="twitter:url" content="https://www.omelete.com.br/filmes/criticas/the-front-runner" />
+<meta name="twitter:domain" content="https://www.omelete.com.br/" />
+<meta name="twitter:title" content="The Front Runner" />
+<meta name="twitter:description" content="The Front Runner | Crítica" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://cdn.ome.lt/M1q5oqni9yC0GNAhhjMeThEeTAI=/1200x630/smart/extras/conteudos/Front-Runner.png" />
+<meta property="og:title" content="The Front Runner" />
+<meta property="og:description" content="The Front Runner | Crítica" />
+<meta property="og:url" content="https://www.omelete.com.br/filmes/criticas/the-front-runner" />
+<meta property="og:image" content="https://cdn.ome.lt/M1q5oqni9yC0GNAhhjMeThEeTAI=/1200x630/smart/extras/conteudos/Front-Runner.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://www.omelete.com.br/criticas" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="article:author" content="Natália Bridi" />
+<meta property="article:section" content="Filmes">
+<meta property="article:published_time" content="2018-09-15 02:07:50+00:00" />
+<meta property="article:modified_time" content="2018-09-15 02:08:44.336000+00:00" />
 
 
   <script>
@@ -80,13 +93,65 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
 <!-- Final da tag TT de segmentacao -->
 
-<script type='text/javascript'>
-  var _tt_omelete = _tt_omelete || [];
-  _tt_omelete.push(['_channel', 'criticas']);
-</script>
-
   
-  <link rel="canonical" href="https://www.omelete.com.br/criticas" />
+  <link rel="canonical" href="https://www.omelete.com.br/filmes/criticas/the-front-runner" />
+  
+  <link rel="amphtml" href="https://www.omelete.com.br/amp/filmes/criticas/the-front-runner">
+  
+  <meta property="fb:article_style" content="default">
+  
+  <script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Review",
+      "name" : "The Front Runner",
+      "author" : {
+        "@type" : "Person",
+        "name" : "Natália Bridi"
+      },
+      "datePublished" : "2018-09-15 02:07:50+00:00",
+      "dateModified" : "2018-09-15 02:08:44.336000+00:00",
+      "image" : [
+    
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/RR36Mkq3d7b2rogUchYC8N0ji9c=/837x0/smart/uploads/conteudo/fotos/Front-Runner.png",
+          "caption" : ""
+        }
+      ] ,
+      "video" : [] ,
+      "headline" : "The Front Runner",
+      "reviewRating" : {
+        "@type" : "Rating",
+        "ratingValue" : 4
+      },
+      "itemReviewed" : {
+        "@type" : "Thing",
+        "image" : "https://cdn.ome.lt/M1q5oqni9yC0GNAhhjMeThEeTAI=/1200x630/smart/extras/conteudos/Front-Runner.png",
+        "name": ""
+      },
+      "publisher" : {
+    "@type": "Organization",
+    "name": "Omelete",
+    "url": "https://www.omelete.com.br",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://cdn.ome.lt/static/omelete/img/omelete_logo.svg"
+    },
+    "sameAs": [
+      "https://www.youtube.com/user/omeleteve",
+      "https://www.facebook.com/SiteOmelete/",
+      "https://twitter.com/omelete",
+      "https://www.instagram.com/omelete/"
+    ]
+  }
+
+    }
+  
+  </script>
+
+
 
 </head>
 
@@ -180,9 +245,8 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
  
 </header>
 
-<main>
+<main class="page page--content">
   <div class="main">
-
     
     
   
@@ -199,843 +263,247 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
     
 
-    <section id="news" class="section section--listing section--main">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-24">
-            <div class="section__title">
-              <div class="container">
-                <div class="col-24 d-flex justify-content-between">
-                  <div class="list__title">
-                    <h1>Críticas</h1>
-                  </div>
+    
 
-                  <div class="list__filter">
-                    <form class="list-page__filter" action="/criticas">
-                      <select class="list-page-filter__select" name="section">
-                        <option value selected disabled>Filtrar por:</option>
-                        <option value="filmes">Filmes</option>
-                        <option value="series-tv">Séries e TV</option>
-                        <option value="quadrinhos">HQs e Livros</option>
-                        <option value="musica">Música</option>
-                      </select>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container js-news-list">
-  <div class="row">
-    <div class="col-24 col-lg-15 col-xl-17">
-        <h2 class="section__title d-none d-md-block d-lg-none">últimas notícias</h2>
-      <script>
-        var lastNewsTimestamp = '1537030490';
-      </script>
-      <main class="c-newslist">
+
+
+
+<section class="section section--content section--main" data-dsq-domain="omelete.com.br" data-ref-id="161281" data-content-url="/filmes/criticas/the-front-runner" data-content-type="review">
   
-    
-        
   
-  <article class="col featured featured--">
-    <div class="featured__head">
-      
-      <a href="/filmes/criticas/driven">
-        
-          
-        
-
-        
-          
-            <div class="picture  picture--top ">
-              <img alt="" title="" src="//cdn.ome.lt/bQUxVTvryh6fX6ERTKNSNNYO6L4=/480x360/smart/extras/conteudos/Driven-thumb.jpg"/>
-            </div>
-          
-        
-
-        <div class="mark">
-          <div class="mark__label">
-            
-              
-<div class="tag tag--filmes">
-  <p>Filmes</p>
-  <div class="tag__label">
-    
-    
-  </div>
-  <div class="tag__time"></div>
-</div>
-
-            
-            
-            <div class="mark__time">
-              21.09.2018 11H13
-            </div>
-            
-          </div>
-
-          
-          <div class="mark__title">
-              <h2>Driven</h2>
-          </div>
-          
-        </div>
-      </a>
-    </div>
-
-    
-    <div class="featured__subtitle subtitle">
-      <h3>Filme sobre ascensão e queda do Delorean conta história bizarra de sonho que virou piada</h3>
-    </div>
-    
-
-    <div class="featured__links links">
-      
-
-      
-    </div>
-  </article>
-
-    
-        
+  <script type="text/javascript">
+    window._seedtagq = window._seedtagq || [];
+    window._seedtagq.push(['_setId', '0546-2759-01']);
+    (function () {
+      var st = document.createElement('script');
+      st.type = 'text/javascript';
+      st.async = true;
+      st.src = ('https:' == document.location.protocol
+        ? 'https'
+        : 'http') + '://config.seedtag.com/loader.js?v=' + Math.random();
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(st, s);
+    })();
+  </script>
   
-  <article class="col featured featured--">
-    <div class="featured__head">
-      
-      <a href="/filmes/criticas/vita-virginia">
-        
-          
-        
-
-        
-          
-            <div class="picture  picture--top ">
-              <img alt="Vita e Viriginia/Divulgação" title="Vita e Viriginia/Divulgação" src="//cdn.ome.lt/2Sxfb012A96jZw20g0xlEJTtiqM=/480x360/smart/extras/conteudos/vita-virginia-thumb.jpg"/>
-            </div>
-          
-        
-
-        <div class="mark">
-          <div class="mark__label">
-            
-              
-<div class="tag tag--filmes">
-  <p>Filmes</p>
-  <div class="tag__label">
-    
-    
-  </div>
-  <div class="tag__time"></div>
-</div>
-
-            
-            
-            <div class="mark__time">
-              20.09.2018 15H58
-            </div>
-            
-          </div>
-
-          
-          <div class="mark__title">
-              <h2>Vita &amp; Virginia</h2>
-          </div>
-          
-        </div>
-      </a>
-    </div>
-
-    
-    <div class="featured__subtitle subtitle">
-      <h3>Longa sobre relacionamento entre Virginia Woolf e Vita Sackville-West é tentativa desastrosa de explorar a intimidade da escritora</h3>
-    </div>
-    
-
-    <div class="featured__links links">
-      
-
-      
-    </div>
-  </article>
-
-    
-        
   
-  <article class="col featured featured--">
-    <div class="featured__head">
-      
-      <a href="/filmes/criticas/a-primeira-noite-de-crime">
-        
-          
-        
 
-        
-          
-            <div class="picture  picture--top ">
-              <img alt="Universal Pictures/Divulgação" title="Universal Pictures/Divulgação" src="//cdn.ome.lt/jUORlRznXNpbTbHKdpEnIfB1m9M=/480x360/smart/extras/conteudos/the_first_purge_critica_2.jpg"/>
-            </div>
-          
-        
-
-        <div class="mark">
-          <div class="mark__label">
-            
-              
-<div class="tag tag--filmes">
-  <p>Filmes</p>
-  <div class="tag__label">
-    
-    
-  </div>
-  <div class="tag__time"></div>
-</div>
-
-            
-            
-            <div class="mark__time">
-              20.09.2018 13H20
-            </div>
-            
-          </div>
-
-          
-          <div class="mark__title">
-              <h2>A Primeira Noite de Crime</h2>
-          </div>
-          
-        </div>
-      </a>
-    </div>
-
-    
-    <div class="featured__subtitle subtitle">
-      <h3>Prelúdio da franquia é seu capítulo mais pertinente, mas segue aprofundando em clichês e caricaturas</h3>
-    </div>
-    
-
-    <div class="featured__links links">
-      
-
-      
-    </div>
-  </article>
-
-    
-        
   
-  <article class="col featured featured--">
-    <div class="featured__head">
-      
-      <a href="/filmes/criticas/o-misterio-do-relogio-na-parede">
-        
-          
-        
-
-        
-          
-            <div class="picture  picture--top ">
-              <img alt="" title="" src="//cdn.ome.lt/AhIscY0e6JXOXXeopgWZs7r9jfc=/480x360/smart/extras/conteudos/relogio2.jpg"/>
-            </div>
-          
-        
-
-        <div class="mark">
-          <div class="mark__label">
-            
-              
-<div class="tag tag--filmes">
-  <p>Filmes</p>
-  <div class="tag__label">
-    
-    
-  </div>
-  <div class="tag__time"></div>
-</div>
-
-            
-            
-            <div class="mark__time">
-              19.09.2018 17H54
-            </div>
-            
-          </div>
-
-          
-          <div class="mark__title">
-              <h2>O Mistério do Relógio na Parede</h2>
-          </div>
-          
-        </div>
-      </a>
-    </div>
-
-    
-    <div class="featured__subtitle subtitle">
-      <h3>Trocas de Jack Black e Cate Blanchett se destacam em adaptação engessada</h3>
-    </div>
-    
-
-    <div class="featured__links links">
-      
-
-      
-    </div>
-  </article>
-
-    
-        
   
-  <article class="col featured featured--">
-    <div class="featured__head">
-      
-      <a href="/filmes/criticas/american-woman">
-        
-          
-        
 
-        
-          
-            <div class="picture  picture--top ">
-              <img alt="Foto de American Woman/Sony Pictures/Divulgação" title="Foto de American Woman/Sony Pictures/Divulgação" src="//cdn.ome.lt/u0tPRdGP_OgCTtjsM97l9w6O98o=/480x360/smart/extras/conteudos/american-woman-filme.jpg"/>
-            </div>
-          
-        
-
-        <div class="mark">
-          <div class="mark__label">
-            
-              
-<div class="tag tag--filmes">
-  <p>Filmes</p>
-  <div class="tag__label">
-    
-    
-  </div>
-  <div class="tag__time"></div>
-</div>
-
-            
-            
-            <div class="mark__time">
-              19.09.2018 10H52
-            </div>
-            
-          </div>
-
-          
-          <div class="mark__title">
-              <h2>American Woman</h2>
-          </div>
-          
-        </div>
-      </a>
-    </div>
-
-    
-    <div class="featured__subtitle subtitle">
-      <h3>Filme de Jake Scott celebra a força da mulher comum</h3>
-    </div>
-    
-
-    <div class="featured__links links">
-      
-
-      
-    </div>
-  </article>
-
-    
-        
   
-  <article class="col featured featured--">
-    <div class="featured__head">
-      
-      <a href="/filmes/criticas/buscando">
-        
-          
-        
 
-        
-          
-            <div class="picture  picture--top ">
-              <img alt="" title="" src="//cdn.ome.lt/wZB_tX4KNg-SLdMOjufVedUHG3Q=/480x360/smart/extras/conteudos/buscando.jpg"/>
-            </div>
-          
-        
-
-        <div class="mark">
-          <div class="mark__label">
-            
-              
-<div class="tag tag--filmes">
-  <p>Filmes</p>
-  <div class="tag__label">
-    
-    
-  </div>
-  <div class="tag__time"></div>
-</div>
-
-            
-            
-            <div class="mark__time">
-              18.09.2018 17H44
-            </div>
-            
-          </div>
-
-          
-          <div class="mark__title">
-              <h2>Buscando...</h2>
-          </div>
-          
-        </div>
-      </a>
-    </div>
-
-    
-    <div class="featured__subtitle subtitle">
-      <h3>Suspense faz com eficiência uma mistura de &#34;screenlife&#34; com narrativa tradicional</h3>
-    </div>
-    
-
-    <div class="featured__links links">
-      
-
-      
-    </div>
-  </article>
-
-    
-        
   
-  <article class="col featured featured--">
-    <div class="featured__head">
-      
-      <a href="/filmes/criticas/mid90s">
-        
+
+  <div class="container section__wrapper">
+    <div class="row">
+      <div class="col-24">
+        <article class="article">
           
-        
-
-        
           
-            <div class="picture  picture--top ">
-              <img alt="" title="" src="//cdn.ome.lt/Ry1Hr-cpv5s5z9UREUVA2JZmxVU=/480x360/smart/extras/conteudos/mid90s-thumb.jpg"/>
-            </div>
-          
-        
-
-        <div class="mark">
-          <div class="mark__label">
-            
-              
-<div class="tag tag--filmes">
-  <p>Filmes</p>
-  <div class="tag__label">
-    
-    
-  </div>
-  <div class="tag__time"></div>
-</div>
-
-            
-            
-            <div class="mark__time">
-              17.09.2018 18H32
-            </div>
-            
-          </div>
-
-          
-          <div class="mark__title">
-              <h2>Mid90s</h2>
-          </div>
-          
-        </div>
-      </a>
-    </div>
-
-    
-    <div class="featured__subtitle subtitle">
-      <h3>Esteia de Jonah Hill como diretor é hilária e emocionante</h3>
-    </div>
-    
-
-    <div class="featured__links links">
-      
-
-      
-    </div>
-  </article>
-
-    
-        
-  
-  <article class="col featured featured--">
-    <div class="featured__head">
-      
-      <a href="/filmes/criticas/if-beale-street-could-talk">
-        
-          
-        
-
-        
-          
-            <div class="picture  picture--top ">
-              <img alt="Foto de  If Beale Street Could Talk/Plan B Entertainment/Divulgação" title="Foto de  If Beale Street Could Talk/Plan B Entertainment/Divulgação" src="//cdn.ome.lt/g9LfXQv-R561LGHENDKabgEGAmI=/480x360/smart/extras/conteudos/If-Beale-Street-Could-Talk.jpg"/>
-            </div>
-          
-        
-
-        <div class="mark">
-          <div class="mark__label">
-            
-              
-<div class="tag tag--filmes">
-  <p>Filmes</p>
-  <div class="tag__label">
-    
-    
-  </div>
-  <div class="tag__time"></div>
-</div>
-
-            
-            
-            <div class="mark__time">
-              17.09.2018 12H38
-            </div>
-            
-          </div>
-
-          
-          <div class="mark__title">
-              <h2>If Beale Street Could Talk</h2>
-          </div>
-          
-        </div>
-      </a>
-    </div>
-
-    
-    <div class="featured__subtitle subtitle">
-      <h3>Barry Jenkins faz adaptação poética do romance de James Baldwin</h3>
-    </div>
-    
-
-    <div class="featured__links links">
-      
-
-      
-    </div>
-  </article>
-
-    
-        
-  
-  <article class="col featured featured--">
-    <div class="featured__head">
-      
-      <a href="/filmes/criticas/the-wind">
-        
-          
-        
-
-        
-          
-            <div class="picture  picture--top ">
-              <img alt="The Wind/Divulgação" title="The Wind/Divulgação" src="//cdn.ome.lt/lQhFPFSAw1XEBJ2TNNC2zlymmZI=/480x360/smart/extras/conteudos/The-Wind.png"/>
-            </div>
-          
-        
-
-        <div class="mark">
-          <div class="mark__label">
-            
-              
-<div class="tag tag--filmes">
-  <p>Filmes</p>
-  <div class="tag__label">
-    
-    
-  </div>
-  <div class="tag__time"></div>
-</div>
-
-            
-            
-            <div class="mark__time">
-              15.09.2018 17H24
-            </div>
-            
-          </div>
-
-          
-          <div class="mark__title">
-              <h2>The Wind</h2>
-          </div>
-          
-        </div>
-      </a>
-    </div>
-
-    
-    <div class="featured__subtitle subtitle">
-      <h3>Terror no velho oeste quer muito e entrega pouco</h3>
-    </div>
-    
-
-    <div class="featured__links links">
-      
-
-      
-    </div>
-  </article>
-
-    
-        
-  
-  <article class="col featured featured--">
-    <div class="featured__head">
-      
-      <a href="/filmes/criticas/the-hummingbird-project">
-        
-          
-        
-
-        
-          
-            <div class="picture  picture--top ">
-              <img alt="The Hummingbird Project/Sébastien Raymond/Earhlings Productions/Belga Productions2017/Divulgação" title="The Hummingbird Project/Sébastien Raymond/Earhlings Productions/Belga Productions2017/Divulgação" src="//cdn.ome.lt/bYbOcQmnzVzsWMRF_7vIMTIvhFo=/480x360/smart/extras/conteudos/Hummingbird-Project.png"/>
-            </div>
-          
-        
-
-        <div class="mark">
-          <div class="mark__label">
-            
-              
-<div class="tag tag--filmes">
-  <p>Filmes</p>
-  <div class="tag__label">
-    
-    
-  </div>
-  <div class="tag__time"></div>
-</div>
-
-            
-            
-            <div class="mark__time">
-              15.09.2018 13H54
-            </div>
-            
-          </div>
-
-          
-          <div class="mark__title">
-              <h2>The Hummingbird Project</h2>
-          </div>
-          
-        </div>
-      </a>
-    </div>
-
-    
-    <div class="featured__subtitle subtitle">
-      <h3>Tragicomédia com Jesse Eisenberg e Alexander Skarsgård mede o peso do sonho americano</h3>
-    </div>
-    
-
-    <div class="featured__links links">
-      
-
-      
-    </div>
-  </article>
-
-    
-  
-</main>
-      <div class="loading_wrapper" style="display: none">
-      <div class="loading">
+          <div class="row article__cover">
+            <div class="offset-0 offset-sm-2 col-24 col-sm-20">
+              <div class="article__cover__wrapper article__cover__wrapper--image">
+                
+                <img class="article__cover__image" data-lazy-src="//cdn.ome.lt/GJL_OLfe-ZcdvmTD5EInmr9-nW0=/987x0/smart/uploads/conteudo/fotos/Front-Runner.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="The Front Runner" title="The Front Runner/Divulgação">
+                
+                <div class="loading">
   <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
 </div>
-      </div>
-      <div class="load_more">
-        <button id="loadMore" class="btn hidden">Ver mais</button>
-      </div>
-    </div>
-    <div class="col-24 col-lg-9 col-xl-7 scroll-wrapper">
-      <div class="d-none d-md-block">
+              </div>
+              
+              <p class="article__cover__credits">
+                <span class="article__cover__credits__title">Créditos da imagem:</span>
+                <span class="article__cover__credits__credits">The Front Runner/Divulgação</span>
+              </p>
+              
+            </div>
+          </div>
+          
+          
+
+          
+          <div class="row article__header">
+            <div class="offset-0 offset-sm-2 col-24 col-sm-20 no-relative">
+              
+
+
+
+
+
+  <div class="article__header__tag">
+    
+<div class="tag tag--filmes">
+  <p>Filmes</p>
+  <div class="tag__label">
+     <span>Crítica</span> 
+    
+  </div>
+  <div class="tag__time"></div>
+</div>
+
+  </div>
+  <div class="article__header__title">
+    <h1 class="title">The Front Runner</h1>
+  </div>
+  <div class="article__header__subtitle">
+    <h2 class="subtitle">Jason Reitman faz ensaio sobre política e a natureza humana na cinebiografia do ex-candidato à presidência dos EUA Gary Hart</h2>
+  </div>
+  <div class="article__header__social">
+    <div class="links links--social">
+    <ul class="links__list links__list--icon links__list--column links__list--circle">
+      
+      <li class="links__list__item"><a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//omelete.com.br/filmes/criticas/the-front-runner"></a></li>
+      <li class="links__list__item"><a class="icon icon-twitter" target="_blank" href="https://twitter.com/intent/tweet?text=The%20Front%20Runner https%3A//omelete.com.br/filmes/criticas/the-front-runner"></a></li>
+      <li class="links__list__item"><a class="icon icon-email" target="_blank" href="mailto:?subject=The%20Front%20Runner&body=https%3A//omelete.com.br/filmes/criticas/the-front-runner"></a></li>
+      <li class="links__list__item"><a class="icon icon-whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=The%20Front%20Runner https%3A//omelete.com.br/filmes/criticas/the-front-runner"></a></li>
+    </ul>
+  </div>
+  </div>
+  <div class="article__header__info">
+    <div class="info">
+      <div class="info__by">Natália Bridi</div>
+
+      
+      
+      
+
+      <div class="info__date">14.09.2018</div>
+      <div class="info__time">23h07</div>
+
         
-
-
-
-
-<div class="l-sidebar">
-  <section class="d-none d-lg-flex justify-content-center">
-    
-  
-
-  
-    
-    <div class="banner banner--small  ">
-      <div class="banner__wrapper">
-        <div id="div-gpt-ad-arroba-2" style="width: 300px; height: 250px;"></div>
-      </div>
     </div>
+
+    
+  </div>
+
+            </div>
+          </div>
+          
+
+          
+          <div class="row ">
+            <div class="offset-0 col-24 offset-md-2 col-md-20 col-lg-12 col-xl-13">
+              
+
+
+
+
+
+
+
+
+
+
+
+<div class="article__body article--content">
+
+  
+    
+      <p>Um dos maiores erros do homem enquanto espécie é negar a própria natureza. Para manter a ordem, cria-se um código de conduta, negam-se os desejos. É a lei seca que não impede que álcool seja consumido, a proibição às drogas que não limita a alta demanda, o casamento que não impede o adultério. Reconhecer a tentação não significa aceitá-la (ou cometê-la), mas ajuda a entender que não existe ninguém acima de qualquer suspeita.</p>
+      
+
+
+
+      
+    
+      <p><strong>Gary Hart</strong>, senador democrata que era o candidato favorito para as eleições de 1988 nos EUA, foi vítima e réu da natureza humana. Em três semanas, ele viu o sonho de se tornar presidente morrer depois que um dos seus muitos casos extraconjugais foi descoberto pela imprensa. Em <strong><em>The Front Runner</em></strong>, <strong>Jason Reitman</strong> testemunha essa história, deixando para o público o papel de avaliar os acontecimentos.</p>
+      
+
+
+
+      
+    
+      <p>Hart (<strong>Hugh Jackman</strong>) é o protagonista, mas nunca está no centro da narrativa. Suas ações são acompanhadas sempre pelo ponto de vista dos outros personagens. Nesse sentido, a direção de fotografia de <strong>Eric Steelberg</strong> descentraliza a ação, que preenche todos os planos no enquadramento: pessoas conversam, ligações são feitas e ao fundo algo importante acontece. A cena de abertura já estabelece o tom: um plano sequência leva a câmera de um lugar para o outro sem revelar o foco de atenção - de uma van de transmissão televisiva passa por repórteres, uma multidão, dois funcionários de campanha política, volta para a multidão, mais câmeras de TV, até chegar na janela do prédio em frente, onde um homem observa toda essa confusão. Quando ele entra no quarto, Gary Hart é apresentado.</p>
+      
+
+
+
+      
+    
+      <p>Nessa abundância de perspectivas, a imprensa tem papel fundamental. O escândalo, afinal, foi iniciado por um grupo de repórteres em busca de um furo. Contudo, Reitman, que assina o roteiro com <strong>Matt Bai</strong> e <strong>Jay Carson</strong>, não busca um culpado, apenas promove espaço para análise.</p>
+      
+
+
+
+      
+    
+      <p>A fama de mulherengo perseguia Hart, que evitava tocar no assunto sob a justificativa de que isso não tinha qualquer relação com seus deveres políticos. Em parte ele tinha razão. Um bom governante não precisa ser um bom marido, assim como a qualidade da obra de um artista não leva em conta a sua reputação. Entretanto, a sua recusa em falar do assunto despertou a curiosidade da imprensa. Como aponta uma jornalista do Washington Post no filme, um homem na posição de Hart pode facilmente se valer do poder, seja para satisfazer desejos carnais ou financeiros. Nesse contexto, a sua vida pessoal passa a ser da conta de todos.</p>
+      
+
+
+
+      
+    
+      <p>A grande questão são as interpretações dos fatos e a facilidade que o ser humano tem para condenar enquanto esquece as próprias falhas. <em>The Front Runner </em>confronta essa lógica dando voz a Donna Rice (<strong>Sara Paxton</strong>), pivô do escândalo do presidenciável. Por anos ela foi tratada pela imprensa como mera destruidora de lares. Para desconstruir essa imagem, Reitman a mantém nas sombras até a revelação pública do caso. A sua interlocutora passa a ser Irene Kelly (<strong>Molly Ephraim</strong>), funcionária de campanha de Hart, dando espaço para que duas mulheres conversem em um mundo masculino.</p>
+      
+
+
+
+      
+    
+      <p>Com um elenco vasto e competente, e destaque para as atuações de Jackman e <strong>Vera Farmiga</strong> (que interpreta a esposa de Hart), <em>The Front Runner </em>é um estudo de personagem e da sociedade em que ele vive. Em diálogos bem construídos, longe da falácia política, o filme é uma discussão imparcial, variada e aberta a questionamentos. Um ensaio contra a hipocrisia geral que mantém o mundo "civilizado", ontem, hoje e sempre.</p>
+      
+        
+      
+
+
+
+      
     
   
 
-  </section>
-
-  <div class="l-sidebar__wrapper">
+  
     
-<aside class="c-ranking c-ranking--commented">
-  <div class="c-ranking__header">
-    <h3 class="c-ranking__title">
-      Mais
-      
-        comentadas
-
-      
-    </h3>
-    <div class="c-ranking__icon"></div>
-  </div>
-  <div class="c-ranking__body">
-    <ul class="l-list">
-      
-      <li class="l-list__item">
-        <a href="/filmes/acionistas-votam-e-aprovam-compra-da-fox-pela-disney">
-          <div class="c-ranking__position">
-            1
-            
-          </div>
-          <div class="c-ranking__text">Acionistas votam e aprovam compra da Fox pela Disney</div>
-        </a>
-      </li>
-      
-      <li class="l-list__item">
-        <a href="/marvel-cinema/guardioes-da-galaxia/guardioes-da-galaxia-elenco-se-pronuncia-a-favor-da-volta-de-james-gunn">
-          <div class="c-ranking__position">
-            2
-            
-          </div>
-          <div class="c-ranking__text">Guardiões da Galáxia | Elenco se pronuncia a favor da volta de James Gunn</div>
-        </a>
-      </li>
-      
-      <li class="l-list__item">
-        <a href="/marvel-comics/venom-ganha-novo-trailer-com-cenas-ineditas-confira">
-          <div class="c-ranking__position">
-            3
-            
-          </div>
-          <div class="c-ranking__text">Venom ganha novo trailer com cenas inéditas; confira</div>
-        </a>
-      </li>
-      
-      <li class="l-list__item">
-        <a href="/quadrinhos/will-eisner-lanca-nova-graphic-novel">
-          <div class="c-ranking__position">
-            4
-            
-          </div>
-          <div class="c-ranking__text">Will Eisner lança nova Graphic Novel</div>
-        </a>
-      </li>
-      
-      <li class="l-list__item">
-        <a href="/filmes/o-exterminador-do-futuro-sarah-connor-esta-de-volta-em-1a-foto-oficial">
-          <div class="c-ranking__position">
-            5
-            
-          </div>
-          <div class="c-ranking__text">O Exterminador do Futuro | Sarah Connor está de volta em 1ª foto oficial</div>
-        </a>
-      </li>
-      
-    </ul>
-  </div>
-</aside>
-
-  </div>
-  <div class="l-sidebar__wrapper">
-    
-<aside class="c-ranking c-ranking--read">
-  <div class="c-ranking__header">
-    <h3 class="c-ranking__title">
-      Mais
-      
-        Lidas
-      
-    </h3>
-    <div class="c-ranking__icon"></div>
-  </div>
-  <div class="c-ranking__body">
-    <ul class="l-list">
-      
-      <li class="l-list__item">
-        <a href="/hyperdrive/confirmado-quem-escapou-de-thanos-em-vingadores">
-          <div class="c-ranking__position">
-            1
-            
-          </div>
-          <div class="c-ranking__text">CONFIRMADO: QUEM ESCAPOU DE THANOS EM VINGADORES</div>
-        </a>
-      </li>
-      
-      <li class="l-list__item">
-        <a href="/filmes/criticas/missao-impossivel-efeito-fallout-critica">
-          <div class="c-ranking__position">
-            2
-            
-          </div>
-          <div class="c-ranking__text">Missão: Impossível – Efeito Fallout | Crítica</div>
-        </a>
-      </li>
-      
-      <li class="l-list__item">
-        <a href="/marvel-comics/venom-ganha-novo-trailer-com-cenas-ineditas-confira">
-          <div class="c-ranking__position">
-            3
-            
-          </div>
-          <div class="c-ranking__text">Venom ganha novo trailer com cenas inéditas; confira</div>
-        </a>
-      </li>
-      
-      <li class="l-list__item">
-        <a href="/punho-de-ferro/punho-de-ferro-tem-novo-visual-revelado-no-primeiro-trailer-do-2o-ano">
-          <div class="c-ranking__position">
-            4
-            
-          </div>
-          <div class="c-ranking__text">Punho de Ferro | Teaser do 2º ano dá pistas sobre novo visual do herói</div>
-        </a>
-      </li>
-      
-      <li class="l-list__item">
-        <a href="/marvel-cinema/guardioes-da-galaxia/guardioes-da-galaxia-elenco-se-pronuncia-a-favor-da-volta-de-james-gunn">
-          <div class="c-ranking__position">
-            5
-            
-          </div>
-          <div class="c-ranking__text">Guardiões da Galáxia | Elenco se pronuncia a favor da volta de James Gunn</div>
-        </a>
-      </li>
-      
-    </ul>
-  </div>
-</aside>
-
+<div class="eggs">
+  <div class="eggs__title">
+      Nota do Crítico
   </div>
 
-  <div class="d-none d-lg-flex justify-content-center halfpage-parent">
-    
+  <div class="eggs__content">
+    <div class="list">
+        <span class="list__egg icon-egg "></span>
+        <span class="list__egg icon-egg "></span>
+        <span class="list__egg icon-egg "></span>
+        <span class="list__egg icon-egg "></span>
+        <span class="list__egg icon-egg disabled"></span>
+    </div>
+      <div class="value">
+        
+        
+        
+        Ótimo
+        
+      </div>
+  </div>
+</div>
+
+  
+</div>
+
+              
+  <div class="comments d-flex flex-column">
+    <a href="" id="showComments" class="btn">Ver comentários</a>
+    <div class="comments__wrapper" style="display: none">
+      <div id="disqus_thread" data-om-disqus=""></div>
+    </div>
+  </div>
+
+              <div class="">
+  <div class="OUTBRAIN"
+    data-src="https://www.omelete.com.br/filmes/criticas/the-front-runner"
+    data-widget-id="AR_1"
+    data-ob-template="Omelete">
+  </div>
+  <script type="text/javascript"> OBR.extern.researchWidget(); </script>
+</div>
+            </div>
+
+            
+            <div class="offset-lg-2 col-lg-8 col-xl-7 d-none d-lg-block scroll-wrapper">
+              <aside>
+                
+                
   
 
   
@@ -1048,15 +516,81 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
     
   
 
-  </div>
-</div>
+                
+              </aside>
+            </div>
+            
+          </div>
+          
+        </article>
+
       </div>
     </div>
   </div>
-</div>
-    </section>
+
+  
+  <div class="d-none d-sm-block">
+    
+    
+  
+
+  
+    
+    <div class="banner banner--bottom  banner--parallax">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-inferior" ></div>
+      </div>
+    </div>
+    
+  
+
+    
   </div>
+  
+
+  
+  <div class="d-small d-sm-none">
+    
+    
+  
+
+  
+    
+    <div class="banner banner--small  ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-arroba-m1" style="width: 300px; height: 250px;"></div>
+      </div>
+    </div>
+    
+  
+
+    
+  </div>
+  
+</section>
+
+  </div>
+  <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
 </main>
+<script>
+  
+  var disqus_shortname = 'omeletebr';
+  var disqus_config = function () {
+    
+    this.page.url = 'omelete.com.br//the-front-runner?related_slug=';
+    this.page.identifier = 'conteudo:conteudo#161281';
+    this.page.title = 'The Front Runner';
+  };
+  
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
 
 <section class="m-search">
   <div class="container">
@@ -1074,7 +608,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
   </div>
 </section>
 
-<script src="https://cdn.ome.lt/static/omelete/js/scripts.min.js?v=66f55"></script>
+<script src="https://cdn.ome.lt/static/omelete/js/scripts.min.js?v=e1fad"></script>
 <footer>
   
   <script>
@@ -1237,9 +771,9 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
 <script type="text/javascript">
   // Adding json and gpt info to the jS
-  var slots = {"mobile": {"booster": {"sizes": [1695, 920], "div_id": "div-gpt-ad-booster", "name": "booster", "tag": "/18178082/omelete/booster"}, "arroba-m1": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m1", "name": "arroba-m1", "tag": "/18178082/omelete/arroba_m1"}, "inferior": {"sizes": [[970, 250], [728, 90], [1260, 700]], "div_id": "div-gpt-ad-inferior", "name": "inferior", "tag": "/18178082/omelete/inferior"}, "arroba-1": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-1", "name": "arroba-1", "tag": "/18178082/omelete/arroba_1"}, "background": {"sizes": [1800, 1000], "div_id": "div-gpt-ad-background", "name": "background", "tag": "/18178082/omelete/background"}, "rodape": {"sizes": [320, 50], "div_id": "div-gpt-ad-rodape", "name": "rodape", "tag": "/18178082/omelete/rodape"}, "contagem": {"sizes": [300, 150], "div_id": "div-gpt-ad-contagem", "name": "contagem", "tag": "/18178082/omelete/contagem"}, "meio": {"sizes": [[300, 600], [300, 250]], "div_id": "div-gpt-ad-meio", "name": "meio", "tag": "/18178082/omelete/meio"}, "arroba-2": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-2", "name": "arroba-2", "tag": "/18178082/omelete/arroba_2"}, "superheader": {"sizes": [320, 100], "div_id": "div-gpt-ad-superheader", "name": "superheader", "tag": "/18178082/omelete/superheader"}, "arroba-m2": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m2", "name": "arroba-m2", "tag": "/18178082/omelete/arroba_m2"}, "superior": {"sizes": [[728, 90], [970, 250]], "div_id": "div-gpt-ad-superior", "name": "superior", "tag": "/18178082/omelete/superior"}}, "desktop": {"booster": {"sizes": [1695, 920], "div_id": "div-gpt-ad-booster", "name": "booster", "tag": "/18178082/omelete/booster"}, "arroba-m1": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m1", "name": "arroba-m1", "tag": "/18178082/omelete/arroba_m1"}, "inferior": {"sizes": [[970, 250], [728, 90], [1260, 700]], "div_id": "div-gpt-ad-inferior", "name": "inferior", "tag": "/18178082/omelete/inferior"}, "arroba-1": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-1", "name": "arroba-1", "tag": "/18178082/omelete/arroba_1"}, "background": {"sizes": [1800, 1000], "div_id": "div-gpt-ad-background", "name": "background", "tag": "/18178082/omelete/background"}, "rodape": {"sizes": [320, 50], "div_id": "div-gpt-ad-rodape", "name": "rodape", "tag": "/18178082/omelete/rodape"}, "contagem": {"sizes": [300, 150], "div_id": "div-gpt-ad-contagem", "name": "contagem", "tag": "/18178082/omelete/contagem"}, "meio": {"sizes": [[300, 600], [300, 250]], "div_id": "div-gpt-ad-meio", "name": "meio", "tag": "/18178082/omelete/meio"}, "arroba-2": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-2", "name": "arroba-2", "tag": "/18178082/omelete/arroba_2"}, "superheader": {"sizes": [320, 100], "div_id": "div-gpt-ad-superheader", "name": "superheader", "tag": "/18178082/omelete/superheader"}, "arroba-m2": {"sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m2", "name": "arroba-m2", "tag": "/18178082/omelete/arroba_m2"}, "superior": {"sizes": [[728, 90], [970, 250]], "div_id": "div-gpt-ad-superior", "name": "superior", "tag": "/18178082/omelete/superior"}}};
-  var gpt_keys = {"page_type": "content_type", "section": "criticas", "environment": "production", "content_type": "review"};
-  var sponsors = {"logo_chamada": "/18178082/omelete/logo_chamada", "logo_internas": "/18178082/omelete/logo_internas", "logo_especial_1": "/18178082/omelete/logo_especial_1", "logo_especial_3": "/18178082/omelete/logo_especial_3", "logo_especial_2": "/18178082/omelete/logo_especial_2"};
+  var slots = {"mobile": {"arroba-m1": {"tag": "/18178082/omelete/arroba_m1", "name": "arroba-m1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m1"}, "superior": {"tag": "/18178082/omelete/superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "div_id": "div-gpt-ad-superior"}, "rodape": {"tag": "/18178082/omelete/rodape", "name": "rodape", "sizes": [320, 50], "div_id": "div-gpt-ad-rodape"}, "booster": {"tag": "/18178082/omelete/booster", "name": "booster", "sizes": [1695, 920], "div_id": "div-gpt-ad-booster"}, "background": {"tag": "/18178082/omelete/background", "name": "background", "sizes": [1800, 1000], "div_id": "div-gpt-ad-background"}, "arroba-m2": {"tag": "/18178082/omelete/arroba_m2", "name": "arroba-m2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m2"}, "inferior": {"tag": "/18178082/omelete/inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "div_id": "div-gpt-ad-inferior"}, "contagem": {"tag": "/18178082/omelete/contagem", "name": "contagem", "sizes": [300, 150], "div_id": "div-gpt-ad-contagem"}, "arroba-2": {"tag": "/18178082/omelete/arroba_2", "name": "arroba-2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-2"}, "superheader": {"tag": "/18178082/omelete/superheader", "name": "superheader", "sizes": [320, 100], "div_id": "div-gpt-ad-superheader"}, "meio": {"tag": "/18178082/omelete/meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "div_id": "div-gpt-ad-meio"}, "arroba-1": {"tag": "/18178082/omelete/arroba_1", "name": "arroba-1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-1"}}, "desktop": {"arroba-m1": {"tag": "/18178082/omelete/arroba_m1", "name": "arroba-m1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m1"}, "superior": {"tag": "/18178082/omelete/superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "div_id": "div-gpt-ad-superior"}, "rodape": {"tag": "/18178082/omelete/rodape", "name": "rodape", "sizes": [320, 50], "div_id": "div-gpt-ad-rodape"}, "booster": {"tag": "/18178082/omelete/booster", "name": "booster", "sizes": [1695, 920], "div_id": "div-gpt-ad-booster"}, "background": {"tag": "/18178082/omelete/background", "name": "background", "sizes": [1800, 1000], "div_id": "div-gpt-ad-background"}, "arroba-m2": {"tag": "/18178082/omelete/arroba_m2", "name": "arroba-m2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m2"}, "inferior": {"tag": "/18178082/omelete/inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "div_id": "div-gpt-ad-inferior"}, "contagem": {"tag": "/18178082/omelete/contagem", "name": "contagem", "sizes": [300, 150], "div_id": "div-gpt-ad-contagem"}, "arroba-2": {"tag": "/18178082/omelete/arroba_2", "name": "arroba-2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-2"}, "superheader": {"tag": "/18178082/omelete/superheader", "name": "superheader", "sizes": [320, 100], "div_id": "div-gpt-ad-superheader"}, "meio": {"tag": "/18178082/omelete/meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "div_id": "div-gpt-ad-meio"}, "arroba-1": {"tag": "/18178082/omelete/arroba_1", "name": "arroba-1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-1"}}};
+  var gpt_keys = {"content_type": "review", "section": "filmes", "tags": ["Gary Hart", "Toronto International Film Festival", "J.K. Simmons", "The Front Runner", "Vera Farmiga", "TIFF 2018", "Festival de Cinema de Toronto", "Hugh Jackman", "TIFF", "Sara Paxton"], "page_type": "content", "environment": "production"};
+  var sponsors = {"logo_chamada": "/18178082/omelete/logo_chamada", "logo_especial_3": "/18178082/omelete/logo_especial_3", "logo_especial_1": "/18178082/omelete/logo_especial_1", "logo_especial_2": "/18178082/omelete/logo_especial_2", "logo_internas": "/18178082/omelete/logo_internas"};
 
   function createCookie(name,value,days) {
     var expires = '';
@@ -1335,24 +869,6 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
         }
       });
 
-      // sponsoredBannerWhite.forEach(function(el, idx) {
-      //   var tagID = 'sponsored-banner-white-' + idx;
-      //   el.attr('id', tagID);
-      //   googletag.defineSlot('/283405803/Logo_Oferecimento', [153, 14], tagID).addService(googletag.pubads());
-      // });
-
-      // sponsoredBannerBlue.forEach(function(el, idx) {
-      //   var tagID = 'sponsored-banner-blue-' + idx;
-      //   el.attr('id', tagID);
-      //   googletag.defineSlot('/283405803/Logo_Oferecimento_2', [153, 14], tagID).addService(googletag.pubads());
-      // });
-
-      // sponsoredBannerWhiteBig.forEach(function(el, idx) {
-      //   var tagID = 'sponsored-banner-white-big-' + idx;
-      //   el.attr('id', tagID);
-      //   googletag.defineSlot('/283405803/Logo_Oferecimento_3', [160, 35], tagID).addService(googletag.pubads());
-      // });
-
       googletag.pubads().addEventListener('slotRenderEnded', function (event) {
 
         var elementId = event.slot.getSlotElementId();
@@ -1363,8 +879,8 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
               $('.background--enemy').removeClass('background--enemy--mast-head');
               $('.background--grey').removeClass('background--grey--mast-head');
             } else if (elementId.startsWith("div-gpt-ad-background")) {
-              $('html').removeClass('has-background-banner');
-              $('.banner--background').remove();
+              //$('html').removeClass('has-background-banner');
+              $('#' + elementId).parents('.banner--background').remove();
             } else if (elementId == "div-gpt-ad-booster") {
               // removed fadeOut because of jquery.slim
               $('.banner--trailer-booster').remove();

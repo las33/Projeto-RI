@@ -5,13 +5,13 @@
 <head>
   
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.ome.lt/static/omelete/css/style.min.css?v=cd5ab"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.ome.lt/static/omelete/css/style.min.css?v=e1fad"/>
 
-  <title>Driven</title>
+  <title>If Beale Street Could Talk</title>
   <link rel="preload" href="https://cdn.ome.lt/static/omelete/img/omelete_logo.svg" as="image">
 
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationTime":12,"queueTime":0,"licenseKey":"48f7507bbb","agent":"","applicationID":"135988681","beacon":"bam.nr-data.net","transactionName":"NlYGMEoAD0UEARZYDA8cIhFWAhVfCgxNRQsAXQsXFhIIQgBMD0QPFVpKElEEFkVLAANCBltQCwpMBA9COgQHRQAJ","errorBeacon":"bam.nr-data.net"}</script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationTime":13,"errorBeacon":"bam.nr-data.net","beacon":"bam.nr-data.net","licenseKey":"48f7507bbb","transactionName":"NlYGMEoAD0UEARZYDA8cIhFWAhVfCgxNRQsAXQsXFhIIQgBMD0QPFVpKElEEFkVLAANCBltQCwpMBA9COgQHRQAJ","queueTime":0,"applicationID":"135988681","agent":""}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <link rel="icon" type="image/png" sizes="96x96" href="https://cdn.ome.lt/static/omelete/img/favicon.png">
@@ -32,23 +32,23 @@
   
 <meta name="twitter:site" content="@omelete" />
 <meta name="twitter:creator" content="@omelete" />
-<meta name="twitter:url" content="https://www.omelete.com.br/filmes/criticas/driven" />
+<meta name="twitter:url" content="https://www.omelete.com.br/filmes/criticas/if-beale-street-could-talk" />
 <meta name="twitter:domain" content="https://www.omelete.com.br/" />
-<meta name="twitter:title" content="Driven" />
-<meta name="twitter:description" content="Leia a crítica de Driven, filme sobre a história do Delorean" />
+<meta name="twitter:title" content="If Beale Street Could Talk" />
+<meta name="twitter:description" content="[Crítica] If Beale Street Could Talk narra de forma bela e triste um romance interrompido pela realidade" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://cdn.ome.lt/3dDmdWw9Wpygu8cFWXYVDWoYRPg=/1200x630/smart/extras/conteudos/Driven-thumb.jpg" />
-<meta property="og:title" content="Driven" />
-<meta property="og:description" content="Leia a crítica de Driven, filme sobre a história do Delorean" />
-<meta property="og:url" content="https://www.omelete.com.br/filmes/criticas/driven" />
-<meta property="og:image" content="https://cdn.ome.lt/3dDmdWw9Wpygu8cFWXYVDWoYRPg=/1200x630/smart/extras/conteudos/Driven-thumb.jpg" />
+<meta name="twitter:image" content="https://cdn.ome.lt/Xdsqko56EPQLqhLsz3JSug-TeCo=/1200x630/smart/extras/conteudos/If-Beale-Street-Could-Talk.jpg" />
+<meta property="og:title" content="If Beale Street Could Talk" />
+<meta property="og:description" content="[Crítica] If Beale Street Could Talk narra de forma bela e triste um romance interrompido pela realidade" />
+<meta property="og:url" content="https://www.omelete.com.br/filmes/criticas/if-beale-street-could-talk" />
+<meta property="og:image" content="https://cdn.ome.lt/Xdsqko56EPQLqhLsz3JSug-TeCo=/1200x630/smart/extras/conteudos/If-Beale-Street-Could-Talk.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:type" content="article" />
 <meta property="article:author" content="Natália Bridi" />
 <meta property="article:section" content="Filmes">
-<meta property="article:published_time" content="2018-09-21 14:13:19+00:00" />
-<meta property="article:modified_time" content="2018-09-21 14:25:23.313000+00:00" />
+<meta property="article:published_time" content="2018-09-17 15:38:10+00:00" />
+<meta property="article:modified_time" content="2018-09-17 15:39:34.868000+00:00" />
 
 
   <script>
@@ -94,9 +94,9 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 <!-- Final da tag TT de segmentacao -->
 
   
-  <link rel="canonical" href="https://www.omelete.com.br/filmes/criticas/driven" />
+  <link rel="canonical" href="https://www.omelete.com.br/filmes/criticas/if-beale-street-could-talk" />
   
-  <link rel="amphtml" href="https://www.omelete.com.br/amp/filmes/criticas/driven">
+  <link rel="amphtml" href="https://www.omelete.com.br/amp/filmes/criticas/if-beale-street-could-talk">
   
   <meta property="fb:article_style" content="default">
   
@@ -105,30 +105,30 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
     {
       "@context" : "http://schema.org",
       "@type" : "Review",
-      "name" : "Driven",
+      "name" : "If Beale Street Could Talk",
       "author" : {
         "@type" : "Person",
         "name" : "Natália Bridi"
       },
-      "datePublished" : "2018-09-21 14:13:19+00:00",
-      "dateModified" : "2018-09-21 14:25:23.313000+00:00",
+      "datePublished" : "2018-09-17 15:38:10+00:00",
+      "dateModified" : "2018-09-17 15:39:34.868000+00:00",
       "image" : [
     
         {
           "@type" : "ImageObject",
-          "url" : "https://cdn.ome.lt/-xRSKaLb5GvYwpy-yeS8lqPhX2A=/837x0/smart/uploads/conteudo/fotos/Driven-head.jpg",
+          "url" : "https://cdn.ome.lt/CE2IsDlGGDNTl1YciHlnAYndqd8=/837x0/smart/uploads/conteudo/fotos/If-Beale-Street-Could-Talk-destaque.jpg",
           "caption" : ""
         }
       ] ,
       "video" : [] ,
-      "headline" : "Driven",
+      "headline" : "If Beale Street Could Talk",
       "reviewRating" : {
         "@type" : "Rating",
-        "ratingValue" : 3
+        "ratingValue" : 5
       },
       "itemReviewed" : {
         "@type" : "Thing",
-        "image" : "https://cdn.ome.lt/3dDmdWw9Wpygu8cFWXYVDWoYRPg=/1200x630/smart/extras/conteudos/Driven-thumb.jpg",
+        "image" : "https://cdn.ome.lt/Xdsqko56EPQLqhLsz3JSug-TeCo=/1200x630/smart/extras/conteudos/If-Beale-Street-Could-Talk.jpg",
         "name": ""
       },
       "publisher" : {
@@ -268,7 +268,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
 
 
-<section class="section section--content section--main" data-dsq-domain="omelete.com.br" data-ref-id="161657" data-content-url="/filmes/criticas/driven" data-content-type="review">
+<section class="section section--content section--main" data-dsq-domain="omelete.com.br" data-ref-id="161334" data-content-url="/filmes/criticas/if-beale-street-could-talk" data-content-type="review">
   
   
   <script type="text/javascript">
@@ -305,7 +305,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
             <div class="offset-0 offset-sm-2 col-24 col-sm-20">
               <div class="article__cover__wrapper article__cover__wrapper--image">
                 
-                <img class="article__cover__image" data-lazy-src="//cdn.ome.lt/X0B6T0jWHc6fcovxkqCjKQz89Kc=/987x0/smart/uploads/conteudo/fotos/Driven-head.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Imagem de Driven" title="Imagem de Driven">
+                <img class="article__cover__image" data-lazy-src="//cdn.ome.lt/Y0-HbQ1aBlGaXEaCsPFyYckQgh0=/987x0/smart/uploads/conteudo/fotos/If-Beale-Street-Could-Talk-destaque.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Foto de  If Beale Street Could Talk" title="Foto de  If Beale Street Could Talk">
                 
                 <div class="loading">
   <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
@@ -314,7 +314,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
               
               <p class="article__cover__credits">
                 <span class="article__cover__credits__title">Créditos da imagem:</span>
-                <span class="article__cover__credits__credits">Divulgação</span>
+                <span class="article__cover__credits__credits">If Beale Street Could Talk/Plan B Entertainment/Divulgação</span>
               </p>
               
             </div>
@@ -344,19 +344,19 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
   </div>
   <div class="article__header__title">
-    <h1 class="title">Driven</h1>
+    <h1 class="title">If Beale Street Could Talk</h1>
   </div>
   <div class="article__header__subtitle">
-    <h2 class="subtitle">Filme sobre ascensão e queda do Delorean conta história bizarra de sonho que virou piada</h2>
+    <h2 class="subtitle">Barry Jenkins faz adaptação poética do romance de James Baldwin</h2>
   </div>
   <div class="article__header__social">
     <div class="links links--social">
     <ul class="links__list links__list--icon links__list--column links__list--circle">
       
-      <li class="links__list__item"><a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//omelete.com.br/filmes/criticas/driven"></a></li>
-      <li class="links__list__item"><a class="icon icon-twitter" target="_blank" href="https://twitter.com/intent/tweet?text=Driven https%3A//omelete.com.br/filmes/criticas/driven"></a></li>
-      <li class="links__list__item"><a class="icon icon-email" target="_blank" href="mailto:?subject=Driven&body=https%3A//omelete.com.br/filmes/criticas/driven"></a></li>
-      <li class="links__list__item"><a class="icon icon-whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=Driven https%3A//omelete.com.br/filmes/criticas/driven"></a></li>
+      <li class="links__list__item"><a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//omelete.com.br/filmes/criticas/if-beale-street-could-talk"></a></li>
+      <li class="links__list__item"><a class="icon icon-twitter" target="_blank" href="https://twitter.com/intent/tweet?text=If%20Beale%20Street%20Could%20Talk https%3A//omelete.com.br/filmes/criticas/if-beale-street-could-talk"></a></li>
+      <li class="links__list__item"><a class="icon icon-email" target="_blank" href="mailto:?subject=If%20Beale%20Street%20Could%20Talk&body=https%3A//omelete.com.br/filmes/criticas/if-beale-street-could-talk"></a></li>
+      <li class="links__list__item"><a class="icon icon-whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=If%20Beale%20Street%20Could%20Talk https%3A//omelete.com.br/filmes/criticas/if-beale-street-could-talk"></a></li>
     </ul>
   </div>
   </div>
@@ -368,14 +368,9 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
       
       
 
-      <div class="info__date">21.09.2018</div>
-      <div class="info__time">11h13</div>
+      <div class="info__date">17.09.2018</div>
+      <div class="info__time">12h38</div>
 
-      
-      <div class="d-none d-md-block">Atualizada em </div>
-      <div class="d-none d-md-block">21.09.2018</div>
-      <div class="d-none d-md-block">11h25</div>
-      <div class="d-block d-md-none">Atualizada em 21.09.2018 às 11h25</div>
         
     </div>
 
@@ -402,37 +397,38 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
 
 <div class="article__body article--content">
+
   
     
-      <p dir="ltr"><span>Mesmo para quem usa como critério para diferenciar um carro do outro apenas a cor ou o número da placa, sem fazer qualquer distinção entre modelos e marcas, um Delorean não deve passar despercebido. Imortalizado como máquina do tempo na franquia <em>De Volta Para o Futuro</em>, o veículo se tornou ícone da cultura pop, identificado mesmo por quem não faz questão de entender sobre automóveis. Reconhecimento era o desejo do seu criador, John Delorean, mas não exatamente dessa maneira.</span></p>
+      <p dir="ltr"><span>A tensão racial está presente em quase todas as linhas da história americana. Uma segregação emocional se mantém em muitas partes do país, com notícias sobre violência policial transformadas em rotina. A adaptação de <strong>Barry Jenkins</strong> para <strong><em>If Beale Street Could Talk</em></strong> é a constatação lírica desse fato. Publicado em 1974, o romance de <strong>James Baldwin</strong> continua atual.</span></p>
       
 
 
 
       
     
-      <p dir="ltr"><span><em><strong>Driven</strong></em> narra a história de ascensão e queda do carro nascido dos sonhos de um gênio da engenharia e enterrado pela sua própria ganância. Depois de anos trabalhando para outras montadoras, John Delorean (<strong>Lee Pace</strong>) queria seu nome imortalizado em um veículo que revolucionaria a indústria. Apostou tudo para criar a própria marca, incluindo a sua reputação. Desesperado para salvar a empresa, Delorean buscou a ajuda do seu vizinho com contatos no narcotráfico para importar US$ 25 milhões em cocaína.</span></p>
+      <p dir="ltr"><span>Tish (<strong>Kiki Layne</strong>) está grávida. Fonny (<strong>Stephan James</strong>) está na prisão, acusado de um crime que não cometeu. A descrição sugere um amor impossível, mas essa é história de um romance interrompido pela realidade. Jenkins apresenta esse inimigo constante na passagem da primeira para a segunda cena. Tish e Fonny andam e fazem juras de amor pelas margens de um rio. A câmera é lenta, as cores vivas. Corta. Tish e Fonny conversam na prisão, ela de um lado do vidro, interfone em mãos, ele de outro. As cores são frias, a conversa prática, mas ainda carinhosa. <em>“Vamos ter um bebê”</em>, ela conta.</span></p>
       
 
 
 
       
     
-      <p dir="ltr"><span>Jim Hoffman (<strong>Jason Sudeikis</strong>), o vizinho em questão, é o dono no ponto de vista no longa dirigido por <strong>Nick Hamm</strong>. A narrativa segue a sua ótica dos fatos, desde a prisão em flagrante que o transformou em informante do FBI. É uma escolha que investe no lado pitoresco dessa história para ganhar ares de comédia. Sudeikis garante o humor do personagem, mas vai além da piada. Seu personagem é um cretino adorável, caráter duvidoso que o ator vende por completo. Das interações entre Jim e o sério agente Benedict Tisa (<strong>Corey Stoll</strong>), o filme tem alguns dos seus melhores momentos. O contraste entre os dois ressalta suas personalidades e o timing entre as atuações é perfeito. <strong>Judy Greer</strong>, a esposa de Jim, é outro acerto no elenco, que além de contribuir para estabelecer a persona colorida do piloto/traficante/informante/pai de família, tem chance de eventualmente roubar a cena.</span></p>
+      <p dir="ltr"><span>Os eventos são conduzidos pela narração de Tish, intercalando presente e passado para estabelecer a origem desse amor e também da sua tragédia. Pelo caminho do casal passam diversos personagens, interlocutores para a elaboração de uma visão completa, longe de extremos e absolutos. Jenkins quer entender o que aconteceu, não apontar culpados. Seja o simpático proprietário do prédio que o casal visitou para alugar um apartamento ou o amigo de longa data que acaba de sair da prisão e se emociona com um prato de comida caseira, é pela troca de experiências, em pequenas atitudes, que <em>If Beale Street Could Talk</em> ergue seu panorama sobre a sociedade americana.</span></p>
       
 
 
 
       
     
-      <p dir="ltr"><span>Ainda que o tom seja cômico, o roteiro de <strong>Colin Bateman</strong> ri dos fatos, não dos envolvidos, o que garante certo grau de empatia, por mais moralmente condenáveis que sejam algumas atitudes. Nesse sentindo, a atuação de Pace como Delorean destoa do conjunto. Na balança entre excêntrico e caricatural, o ator pende para o segundo, dando um ar pouco genuíno ao personagem - fato agravado pela comparação entre a sua imagem e o verdadeiro Delorean nos créditos finais. A trilha sonora, mais playlist do que complemento de cena, também prejudica a autenticidade da representação dos eventos, culminando em um clima geral de reconstituição para a TV. </span></p>
+      <p dir="ltr"><span>Idealizado como um mural, o filme usa fotos históricas para contextualizar o romance de Tish e Fonny. As imagens em preto e branco contrastam com as cores saturadas da direção de fotografia de <strong>James Laxton</strong>, que por sua vez ressalta a paleta do figurino de <strong>Caroline Eselin</strong>. Tons de amarelo, azul, vermelho e verde tornam a imagem vívida. A composição visual potencializa o impacto de tudo que é dito, mas a câmera não esquece de olhar atentamente para os personagens. Jenkins observa emoções para obter o máximo de cada atuação, por menor que seja o papel.</span></p>
       
 
 
 
       
     
-      <p dir="ltr"><span>A montagem ágil de <strong>Brett M. Reed</strong>, contudo, dá ritmo e tensão ao longa, mantendo espaço para a entrega de fatos históricos e o tempo da comédia. Com 1h48, o filme passa rapidamente, correspondendo a velocidade com que o Delorean DMC-12 entrou e saiu de produção. Carismático da primeira à última cena, <em>Driven</em> é a prova que o apelo cinematográfico do “carro com asas” vai além das aventuras de Doc Brown e Marty McFly. Essa é a história bizarra de um sonho que virou piada. </span></p>
+      <p dir="ltr"><span><em>If Beale Street Could Talk</em> torna bela uma história triste. É uma escolha estética e também narrativa. A trama do romance de Baldwin continua atual, assim como resiliência dos seus personagens. Jenkins opta por celebrar essa qualidade. A crueza da realidade não supera a beleza de amar, ser amado e seguir em frente.</span></p>
       
         
       
@@ -455,15 +451,15 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
         <span class="list__egg icon-egg "></span>
         <span class="list__egg icon-egg "></span>
         <span class="list__egg icon-egg "></span>
-        <span class="list__egg icon-egg disabled"></span>
-        <span class="list__egg icon-egg disabled"></span>
+        <span class="list__egg icon-egg "></span>
+        <span class="list__egg icon-egg "></span>
     </div>
       <div class="value">
         
         
-        Bom
         
         
+        Excelente!
       </div>
   </div>
 </div>
@@ -481,7 +477,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
               <div class="">
   <div class="OUTBRAIN"
-    data-src="https://www.omelete.com.br/filmes/criticas/driven"
+    data-src="https://www.omelete.com.br/filmes/criticas/if-beale-street-could-talk"
     data-widget-id="AR_1"
     data-ob-template="Omelete">
   </div>
@@ -569,9 +565,9 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
   var disqus_shortname = 'omeletebr';
   var disqus_config = function () {
     
-    this.page.url = 'omelete.com.br//driven?related_slug=';
-    this.page.identifier = 'conteudo:conteudo#161657';
-    this.page.title = 'Driven';
+    this.page.url = 'omelete.com.br//if-beale-street-could-talk?related_slug=';
+    this.page.identifier = 'conteudo:conteudo#161334';
+    this.page.title = 'If Beale Street Could Talk';
   };
   
   (function() { // DON'T EDIT BELOW THIS LINE
@@ -598,7 +594,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
   </div>
 </section>
 
-<script src="https://cdn.ome.lt/static/omelete/js/scripts.min.js?v=cd5ab"></script>
+<script src="https://cdn.ome.lt/static/omelete/js/scripts.min.js?v=e1fad"></script>
 <footer>
   
   <script>
@@ -761,9 +757,9 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
 <script type="text/javascript">
   // Adding json and gpt info to the jS
-  var slots = {"desktop": {"arroba-m2": {"div_id": "div-gpt-ad-arroba-m2", "name": "arroba-m2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m2"}, "superior": {"div_id": "div-gpt-ad-superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "tag": "/18178082/omelete/superior"}, "arroba-1": {"div_id": "div-gpt-ad-arroba-1", "name": "arroba-1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_1"}, "arroba-m1": {"div_id": "div-gpt-ad-arroba-m1", "name": "arroba-m1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m1"}, "inferior": {"div_id": "div-gpt-ad-inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "tag": "/18178082/omelete/inferior"}, "superheader": {"div_id": "div-gpt-ad-superheader", "name": "superheader", "sizes": [320, 100], "tag": "/18178082/omelete/superheader"}, "meio": {"div_id": "div-gpt-ad-meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "tag": "/18178082/omelete/meio"}, "booster": {"div_id": "div-gpt-ad-booster", "name": "booster", "sizes": [1695, 920], "tag": "/18178082/omelete/booster"}, "background": {"div_id": "div-gpt-ad-background", "name": "background", "sizes": [1800, 1000], "tag": "/18178082/omelete/background"}, "arroba-2": {"div_id": "div-gpt-ad-arroba-2", "name": "arroba-2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_2"}, "contagem": {"div_id": "div-gpt-ad-contagem", "name": "contagem", "sizes": [300, 150], "tag": "/18178082/omelete/contagem"}, "rodape": {"div_id": "div-gpt-ad-rodape", "name": "rodape", "sizes": [320, 50], "tag": "/18178082/omelete/rodape"}}, "mobile": {"arroba-m2": {"div_id": "div-gpt-ad-arroba-m2", "name": "arroba-m2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m2"}, "superior": {"div_id": "div-gpt-ad-superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "tag": "/18178082/omelete/superior"}, "arroba-1": {"div_id": "div-gpt-ad-arroba-1", "name": "arroba-1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_1"}, "arroba-m1": {"div_id": "div-gpt-ad-arroba-m1", "name": "arroba-m1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m1"}, "inferior": {"div_id": "div-gpt-ad-inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "tag": "/18178082/omelete/inferior"}, "superheader": {"div_id": "div-gpt-ad-superheader", "name": "superheader", "sizes": [320, 100], "tag": "/18178082/omelete/superheader"}, "meio": {"div_id": "div-gpt-ad-meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "tag": "/18178082/omelete/meio"}, "booster": {"div_id": "div-gpt-ad-booster", "name": "booster", "sizes": [1695, 920], "tag": "/18178082/omelete/booster"}, "background": {"div_id": "div-gpt-ad-background", "name": "background", "sizes": [1800, 1000], "tag": "/18178082/omelete/background"}, "arroba-2": {"div_id": "div-gpt-ad-arroba-2", "name": "arroba-2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_2"}, "contagem": {"div_id": "div-gpt-ad-contagem", "name": "contagem", "sizes": [300, 150], "tag": "/18178082/omelete/contagem"}, "rodape": {"div_id": "div-gpt-ad-rodape", "name": "rodape", "sizes": [320, 50], "tag": "/18178082/omelete/rodape"}}};
-  var gpt_keys = {"environment": "production", "tags": ["Corey Stoll", "driven", "Jason Sudeikis", "Delorean", "nick hamm", "Lee Pace"], "section": "filmes", "content_type": "review", "page_type": "content"};
-  var sponsors = {"logo_especial_2": "/18178082/omelete/logo_especial_2", "logo_especial_3": "/18178082/omelete/logo_especial_3", "logo_especial_1": "/18178082/omelete/logo_especial_1", "logo_chamada": "/18178082/omelete/logo_chamada", "logo_internas": "/18178082/omelete/logo_internas"};
+  var slots = {"mobile": {"arroba-m1": {"tag": "/18178082/omelete/arroba_m1", "name": "arroba-m1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m1"}, "superior": {"tag": "/18178082/omelete/superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "div_id": "div-gpt-ad-superior"}, "rodape": {"tag": "/18178082/omelete/rodape", "name": "rodape", "sizes": [320, 50], "div_id": "div-gpt-ad-rodape"}, "booster": {"tag": "/18178082/omelete/booster", "name": "booster", "sizes": [1695, 920], "div_id": "div-gpt-ad-booster"}, "background": {"tag": "/18178082/omelete/background", "name": "background", "sizes": [1800, 1000], "div_id": "div-gpt-ad-background"}, "arroba-m2": {"tag": "/18178082/omelete/arroba_m2", "name": "arroba-m2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m2"}, "inferior": {"tag": "/18178082/omelete/inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "div_id": "div-gpt-ad-inferior"}, "contagem": {"tag": "/18178082/omelete/contagem", "name": "contagem", "sizes": [300, 150], "div_id": "div-gpt-ad-contagem"}, "arroba-2": {"tag": "/18178082/omelete/arroba_2", "name": "arroba-2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-2"}, "superheader": {"tag": "/18178082/omelete/superheader", "name": "superheader", "sizes": [320, 100], "div_id": "div-gpt-ad-superheader"}, "meio": {"tag": "/18178082/omelete/meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "div_id": "div-gpt-ad-meio"}, "arroba-1": {"tag": "/18178082/omelete/arroba_1", "name": "arroba-1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-1"}}, "desktop": {"arroba-m1": {"tag": "/18178082/omelete/arroba_m1", "name": "arroba-m1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m1"}, "superior": {"tag": "/18178082/omelete/superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "div_id": "div-gpt-ad-superior"}, "rodape": {"tag": "/18178082/omelete/rodape", "name": "rodape", "sizes": [320, 50], "div_id": "div-gpt-ad-rodape"}, "booster": {"tag": "/18178082/omelete/booster", "name": "booster", "sizes": [1695, 920], "div_id": "div-gpt-ad-booster"}, "background": {"tag": "/18178082/omelete/background", "name": "background", "sizes": [1800, 1000], "div_id": "div-gpt-ad-background"}, "arroba-m2": {"tag": "/18178082/omelete/arroba_m2", "name": "arroba-m2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m2"}, "inferior": {"tag": "/18178082/omelete/inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "div_id": "div-gpt-ad-inferior"}, "contagem": {"tag": "/18178082/omelete/contagem", "name": "contagem", "sizes": [300, 150], "div_id": "div-gpt-ad-contagem"}, "arroba-2": {"tag": "/18178082/omelete/arroba_2", "name": "arroba-2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-2"}, "superheader": {"tag": "/18178082/omelete/superheader", "name": "superheader", "sizes": [320, 100], "div_id": "div-gpt-ad-superheader"}, "meio": {"tag": "/18178082/omelete/meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "div_id": "div-gpt-ad-meio"}, "arroba-1": {"tag": "/18178082/omelete/arroba_1", "name": "arroba-1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-1"}}};
+  var gpt_keys = {"content_type": "review", "section": "filmes", "tags": ["If Beale Street Could Talk", "Barry Jenkins", "James Baldwin", "KiKi Layne", "festival de toronto", "Stephan James"], "page_type": "content", "environment": "production"};
+  var sponsors = {"logo_chamada": "/18178082/omelete/logo_chamada", "logo_especial_3": "/18178082/omelete/logo_especial_3", "logo_especial_1": "/18178082/omelete/logo_especial_1", "logo_especial_2": "/18178082/omelete/logo_especial_2", "logo_internas": "/18178082/omelete/logo_internas"};
 
   function createCookie(name,value,days) {
     var expires = '';
@@ -859,24 +855,6 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
         }
       });
 
-      // sponsoredBannerWhite.forEach(function(el, idx) {
-      //   var tagID = 'sponsored-banner-white-' + idx;
-      //   el.attr('id', tagID);
-      //   googletag.defineSlot('/283405803/Logo_Oferecimento', [153, 14], tagID).addService(googletag.pubads());
-      // });
-
-      // sponsoredBannerBlue.forEach(function(el, idx) {
-      //   var tagID = 'sponsored-banner-blue-' + idx;
-      //   el.attr('id', tagID);
-      //   googletag.defineSlot('/283405803/Logo_Oferecimento_2', [153, 14], tagID).addService(googletag.pubads());
-      // });
-
-      // sponsoredBannerWhiteBig.forEach(function(el, idx) {
-      //   var tagID = 'sponsored-banner-white-big-' + idx;
-      //   el.attr('id', tagID);
-      //   googletag.defineSlot('/283405803/Logo_Oferecimento_3', [160, 35], tagID).addService(googletag.pubads());
-      // });
-
       googletag.pubads().addEventListener('slotRenderEnded', function (event) {
 
         var elementId = event.slot.getSlotElementId();
@@ -887,8 +865,8 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
               $('.background--enemy').removeClass('background--enemy--mast-head');
               $('.background--grey').removeClass('background--grey--mast-head');
             } else if (elementId.startsWith("div-gpt-ad-background")) {
-              $('html').removeClass('has-background-banner');
-              $('.banner--background').remove();
+              //$('html').removeClass('has-background-banner');
+              $('#' + elementId).parents('.banner--background').remove();
             } else if (elementId == "div-gpt-ad-booster") {
               // removed fadeOut because of jquery.slim
               $('.banner--trailer-booster').remove();

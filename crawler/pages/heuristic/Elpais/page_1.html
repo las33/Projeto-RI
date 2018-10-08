@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQEDUVdSCxAIVVVUBggHVw=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(20),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{h?h-=1:o(c||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:s.now();i("err",[t,n])}var i=t("handle"),a=t(21),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",h=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(13),t(12),"addEventListener"in window&&t(6),s.xhrWrappable&&t(14),d=!0)}c.on("fn-start",function(t,e,n){d&&(h+=1)}),c.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),c.on("fn-end",function(){d&&!this.thrown&&h>0&&(h-=1)}),c.on("internal-error",function(t){i("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){M++,S=y.hash,this[u]=b.now()}function o(){M--,y.hash!==S&&i(0,!0);var t=b.now();this[l]=~~this[l]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=b.now()})}var c="-start",s="-end",f="-body",u="fn"+c,d="fn"+s,p="cb"+c,h="cb"+s,l="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,b=t("loader");if(w[v]&&b.xhrWrappable){var g=t(10),x=t(11),E=t(8),P=t(6),O=t(13),R=t(7),T=t(14),L=t(9),j=t("ee"),N=j.get("tracer");t(15),b.features.spa=!0;var S,M=0;j.on(u,r),j.on(p,r),j.on(d,o),j.on(h,o),j.buffer([u,d,"xhr-done","xhr-resolved"]),P.buffer([u]),O.buffer(["setTimeout"+s,"clearTimeout"+c,u]),T.buffer([u,"new-xhr","send-xhr"+c]),R.buffer([m+c,m+"-done",m+f+c,m+f+s]),E.buffer(["newURL"]),g.buffer([u]),x.buffer(["propagate",p,h,"executor-err","resolve"+c]),N.buffer([u,"no-"+u]),L.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,"send-xhr"+c),a(j,"xhr-resolved"),a(j,"xhr-done"),a(R,m+c),a(R,m+"-done"),a(L,"new-jsonp"),a(L,"jsonp-end"),a(L,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,M>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),c=t(12),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",h="-start",l="-end",m="fn"+h,v="fn"+l,w="bstTimer",y="pushState",b=t("loader");b.features.stn=!0,t(8);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=b.now())}),o.on(v,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,b.now()])}),a.on(m,function(t,e,n){this.bstStart=b.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),this.bstType])}),c.on(m,function(){this.bstStart=b.now()}),c.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),"requestAnimationFrame"])}),o.on(y+h,function(t){this.time=b.now(),this.startPath=location.pathname+location.hash}),o.on(y+l,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(23)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(20);e.exports=o;var a=window,c="fetch-",s=c+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,h="prototype";u&&d&&p&&(i(f,function(t,e){r(u[h],e,s),r(d[h],e,s)}),r(a,"fetch",c),o.on(c+"end",function(t,e){var n=this;e?e.clone().arrayBuffer().then(function(t){n.rxSize=t.byteLength,o.emit(c+"done",[null,e],n)}):o.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(23)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){s.emit("jsonp-error",[],p),s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=c(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),s.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function c(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var s=t("ee").get("jsonp"),f=t(23)(s);if(e.exports=s,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,h=["appendChild","insertBefore","replaceChild"];f.inPlace(HTMLElement.prototype,h,"dom-"),f.inPlace(HTMLHeadElement.prototype,h,"dom-"),f.inPlace(HTMLBodyElement.prototype,h,"dom-"),s.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t(23)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=c(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(23),a=t("ee").get("promise"),c=i(a),s=t(20),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;s(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),c=f.resolve(i);return c}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),s(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=c(t[0],"resolve-",this),t[1]=c(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),c.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=c(t[0],"cb-",this),t[1]=c(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t(23)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(23)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",c)}function i(t){b.push(t),l&&(x?x.then(a):v?v(a):(E=-E,P.data=E))}function a(){for(var t=0;t<b.length;t++)r([],b[t]);b.length&&(b=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(23)(u),p=NREUM.o,h=p.XHR,l=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],b=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(h,g),g.prototype=h.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),l){var x=m&&m.resolve();if(!v&&!m){var E=1,P=document.createTextNode(E);new l(a).observe(P,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=a.now()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return l(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(16),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,p=t("id"),h=t(19),l=t(18),m=window.XMLHttpRequest;a.features.xhr=!0,t(14),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=l(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<d;c++)e.addEventListener(u[c],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)})}},{}],16:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],17:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(20),c=t(21),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var l=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(h+"tracer",[f.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){l[e]=o(h+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],21:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],22:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],23:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(21),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),c=l(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([b,n,r,a]),a}}function h(t,e){w[t]=l(t).concat(e)}function l(t){return w[t]||[]}function m(t){return d[t]=d[t]||o(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var w={},y={},b={on:h,emit:n,get:m,listeners:l,context:e,buffer:v,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var c="nr@context",s=t("gos"),f=t(20),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!x++){var t=g.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)}),s("mark",["onload",a()+g.offset],null,"api");var n=p.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===p.readyState&&i()}function i(){s("mark",["domContent",a()+g.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-g.offset}var c=(new Date).getTime(),s=t("handle"),f=t(20),u=t("ee"),d=window,p=d.document,h="addEventListener",l="attachEvent",m=d.XMLHttpRequest,v=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1071.min.js"},b=m&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:c,now:a,origin:w,features:{},xhrWrappable:b};t(17),p[h]?(p[h]("DOMContentLoaded",i,!1),d[h]("load",r,!1)):(p[l]("onreadystatechange",o),d[l]("onload",r)),s("mark",["firstbyte",c],null,"api");var x=0,E=t(22)},{}]},{},["loader",2,15,5,3,4]);</script>
 <meta name="format-detection" content="address=no,email=no,telephone=no">
-<title>Notícias sobre Crítica arte | EL PAÍS Brasil</title>
+<title>Notícias sobre Crítica filmes | EL PAÍS Brasil</title>
 <meta name="lang" content="pt-br" />
 <meta name="author" content="Ediciones EL PAÍS" />
 <meta name="publisher" content="Ediciones EL PAÍS" />
@@ -17,8 +17,9 @@
 <meta property="article:publisher" content="https://www.facebook.com/elpaisbrasil" />
 <meta property="article:section" content="Atualidade" />
 <link rel="publisher" href="https://plus.google.com/+elpais/posts"/>
-<link rel="alternate" type="application/rss+xml" title="RSS sobre Crítica arte" href="https://brasil.elpais.com/tag/rss/critica_arte/a" />
-<link rel="canonical" href="https://brasil.elpais.com/tag/critica_arte" />
+<link rel="next" href="https://brasil.elpais.com/tag/critica_cine/a/1" />
+<link rel="alternate" type="application/rss+xml" title="RSS sobre Crítica filmes" href="https://brasil.elpais.com/tag/rss/critica_cine/a" />
+<link rel="canonical" href="https://brasil.elpais.com/tag/critica_cine" />
 <link rel="icon" href="//ep01.epimg.net/favicon.ico" type="image/png" />
 <link rel="stylesheet" href="//ep01.epimg.net/estilos/v2.x/v2.1/normalizado.css" />
 <link rel="stylesheet" href="//ep01.epimg.net/estilos/v2.x/v2.1/comunes.css" />
@@ -230,7 +231,7 @@
 </ul>
 </div>
 <div class="usuario" id="usuario">
-<a class="boton_usuario" id="boton_usuario" href="https://plus.elpais.com/conectar?prod=REG&o=CABEP&backURL=https%3A%2F%2Fbrasil.elpais.com%2Ftag%2Fcritica_arte%2Fa%2F">Login</a>
+<a class="boton_usuario" id="boton_usuario" href="https://plus.elpais.com/conectar?prod=REG&o=CABEP&backURL=https%3A%2F%2Fbrasil.elpais.com%2Ftag%2Fcritica_cine%2Fa%2F">Login</a>
 <div id="usuario__interior"  class="oculto">
 <button class="boton_cerrar" id="cerrar_usuario">Cerrar</button>
 <div class="usuario-estado"></div>
@@ -269,9 +270,9 @@
 <li class=""><a href="/s/setCat.html"><abbr title="Edição Catalunha">CAT</abbr></a></li>
 <li class=""><a href="//elpais.com/elpais/inenglish.html"><abbr title="Edição In English">ENG</abbr></a></li>
 </ul>
-</nav> 
+</nav> </div> 
 </div> 
-</div> <div id="tamanoletra" class="tamanoletra"> <span class="tamanoletra-nombre">Tamanho de letra</span>
+<div id="tamanoletra" class="tamanoletra"> <span class="tamanoletra-nombre">Tamanho de letra</span>
 <button id="tamanoletra--disminuir" title="Diminuir o tamanho da letra">a<sup>-</sup></button>
 <button id="tamanoletra--aumentar"  title="Aumentar o tamanho da letra">A<sup>+</sup></button>
 </div>
@@ -328,10 +329,10 @@
 <div class="seccion">
 <div class="seccion-migas">
 <h1 class="miga miga_seccion">
-<span class="sin_enlace">Crítica arte</span>
+<span class="sin_enlace">Crítica filmes</span>
 </h1>
 </div> 
-</div> 
+<div class="contenedor_barra_etiquetas estirar"><div class="encabezado">TÓPICOS RELACIONADOS<span class="pico"></span></div><div class="contenido"><ul class="nav"><li><a href="//brasil.elpais.com/tag/critica/a/">Crítica </a></li><li><a href="//brasil.elpais.com/tag/peliculas/a/">Filmes </a></li><li><a href="//brasil.elpais.com/tag/estrenos_cine/a/">Estreias filmes </a></li><li><a href="//brasil.elpais.com/tag/directores_cine/a/">Diretores cinema </a></li><li><a href="//brasil.elpais.com/tag/cine/a/">Cinema </a></li></ul><div class="degradado"></div></div><div class="mastemas" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/tag/listado/" itemprop="url"><span itemprop="title">Mais notícias</span> <span class="pequeno">»</span></a></div></div>       </div> 
 </div> 
 </div> 
 </div> 
@@ -349,31 +350,492 @@
 <div class="bloque__interior">
 <div class="articulos articulos_apertura">
 <div class="articulos__interior">
-<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1453120223_711042">
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1535631256_010367">
 <div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/critica_cine" class="enlace">Crítica | Nico, 1988</a>
+</div>
 <figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
-<a class="enlace" href="//brasil.elpais.com/brasil/2016/01/18/cultura/1453120223_711042.html">
-<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2016/01/18/babelia/1453120223_711042_1453120994_miniatura_normal.jpg" alt="A precariedade como arte" height="257" width="360">
+<a class="enlace" href="//brasil.elpais.com/brasil/2018/08/30/cultura/1535631256_010367.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/brasil/imagenes/2018/08/30/cultura/1535631256_010367_1535631638_miniatura_normal.jpg" alt="Nico: todas as festas futuras" height="257" width="360">
 <meta itemprop="width"  content="360">
 <meta itemprop="height" content="257">
+<span class="boton_video">Vídeo</span>
 </a>
 </figure>
-<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2016/01/18/cultura/1453120223_711042.html">A precariedade como arte </a></h2>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2018/08/30/cultura/1535631256_010367.html">Nico: todas as festas futuras </a></h2>
 <div class="articulo-metadatos">
 <div class="firma">
 <div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
 <div class="autor-texto">
-<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/alan_pauls/a/">Alan Pauls</a></span>
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/javier_ocana/a/">Javier Ocaña</a></span>
 </div>
 </div>
 </div>
-<time datetime="2016-01-20T20:19:25" class="articulo-actualizado">
-<meta content="2016-01-20T20:19:25" itemprop="datePublished" />
-<meta content="2016-01-20T20:19:25" itemprop="dateModified" />
-<a href="/tag/fecha/20160120/" title="Ver todas las noticias de esta fecha"> 20/01/2016 - 20:19 <abbr>BRST</abbr></a>
+<time datetime="2018-08-30T10:55:59" class="articulo-actualizado">
+<meta content="2018-08-30T10:55:59" itemprop="datePublished" />
+<meta content="2018-08-30T10:55:59" itemprop="dateModified" />
+<a href="/tag/fecha/20180830/" title="Ver todas las noticias de esta fecha"> 30/08/2018 - 10:55 <abbr>BRT</abbr></a>
 </time>
 </div> 
-<p class="articulo-entradilla" itemprop="description">A artista argentina Ana Gallardo apresenta “Um lugar para viver quando formos velhos” no Museu de Arte Moderna de Buenos Aires</p>
+<p class="articulo-entradilla" itemprop="description">Uma estranha, atraente e doentia biografia cinematográfica da modelo e cantora, distante do ‘biopic’ convencional, estreia no Brasil nesta quinta-feira</p>
+</div>
+</article> 
+</div>
+</div>
+<aside class="envoltorio_publi" id="roba_principal">
+<div id='elpais_gpt-MPU1' class='publi_luto_horizontal'>
+<script type='text/javascript'>
+			PBS.display('MPU1');
+		</script>
+</div>
+</aside>
+<div class="articulos articulos_cuerpo">
+<div class="articulos__interior">
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1532607790_149183">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/critica_cine/a" class="enlace">CRÍTICA</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2018/07/26/cultura/1532607790_149183.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2018/07/26/actualidad/1532607790_149183_1532608615_miniatura_normal.jpg" alt="'Missão Impossível': a espionagem é puro teatro" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2018/07/26/cultura/1532607790_149183.html">'Missão Impossível': a espionagem é puro teatro </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/jordi_costa/a/">Jordi Costa</a></span>
+</div>
+</div>
+</div>
+<time datetime="2018-07-27T16:56:10" class="articulo-actualizado">
+<meta content="2018-07-27T16:56:10" itemprop="datePublished" />
+<meta content="2018-07-27T16:56:10" itemprop="dateModified" />
+<a href="/tag/fecha/20180727/" title="Ver todas las noticias de esta fecha"> 27/07/2018 - 16:56 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">‘Missão Impossível – Efeito Fallout’ é, provavelmente, o filme que mais se preocupou em homenagear o legado de Geller</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1531933860_898728">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/critica_cine/a" class="enlace">Crítica | Mamma Mia!</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2018/07/18/cultura/1531933860_898728.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2018/07/18/actualidad/1531933860_898728_1531942381_miniatura_normal.jpg" alt="Obrigado pela música (ou não)" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2018/07/18/cultura/1531933860_898728.html">Obrigado pela música (ou não) </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/javier_ocana/a/">Javier Ocaña</a></span>
+</div>
+</div>
+</div>
+<time datetime="2018-07-20T14:52:40" class="articulo-actualizado">
+<meta content="2018-07-20T14:52:40" itemprop="datePublished" />
+<meta content="2018-07-20T14:52:40" itemprop="dateModified" />
+<a href="/tag/fecha/20180720/" title="Ver todas las noticias de esta fecha"> 20/07/2018 - 14:52 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Poucas gotas aos admiradores do musical clássico, a expressão de sentimentos através das músicas e a dança, sem desculpas de roteiro</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1531330802_597034">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/critica_cine" class="enlace">CRÍTICA | HOTEL TRANSILVÂNIA 3: FÉRIAS MONSTRUOSAS</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2018/07/11/cultura/1531330802_597034.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2018/07/11/actualidad/1531330802_597034_1531349201_miniatura_normal.jpg" alt="Halloween no mar" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2018/07/11/cultura/1531330802_597034.html">Halloween no mar </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/jordi_costa/a/">Jordi Costa</a></span>
+</div>
+</div>
+</div>
+<time datetime="2018-07-12T18:36:25" class="articulo-actualizado">
+<meta content="2018-07-12T18:36:25" itemprop="datePublished" />
+<meta content="2018-07-12T18:36:25" itemprop="dateModified" />
+<a href="/tag/fecha/20180712/" title="Ver todas las noticias de esta fecha"> 12/07/2018 - 18:36 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Um filme autoconsciente de seu intrascendencia, mas constantemente chamativa em seus movimentos, texturas e desenhos de personagens</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1530745575_814712">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/cine" class="enlace">Crítica | Homem-Formiga e a vespa</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2018/07/05/cultura/1530745575_814712.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2018/07/05/actualidad/1530745575_814712_1530747544_miniatura_normal.jpg" alt="O prazer efêmero da modéstia" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2018/07/05/cultura/1530745575_814712.html">O prazer efêmero da modéstia </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/javier_ocana/a/">Javier Ocaña</a></span>
+</div>
+</div>
+</div>
+<time datetime="2018-07-06T11:58:35" class="articulo-actualizado">
+<meta content="2018-07-06T11:58:35" itemprop="datePublished" />
+<meta content="2018-07-06T11:58:35" itemprop="dateModified" />
+<a href="/tag/fecha/20180706/" title="Ver todas las noticias de esta fecha"> 06/07/2018 - 11:58 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Sua espalhafatosa modulação de teor cômico se rompe em uma das tramas da segunda metade da narrativa, quando outra história altera o tom geral do filme</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1529605494_561911">
+<div class="articulo__interior">
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2018/06/21/cultura/1529605494_561911.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2018/06/21/actualidad/1529605494_561911_1529605894_miniatura_normal.jpg" alt="Charlize Theron: essa mulher, essa atriz" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+<span class="boton_video">Vídeo</span>
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2018/06/21/cultura/1529605494_561911.html">Charlize Theron: essa mulher, essa atriz </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/carlos_boyero/a/">Carlos Boyero</a></span>
+</div>
+</div>
+</div>
+<time datetime="2018-06-22T20:03:33" class="articulo-actualizado">
+<meta content="2018-06-22T20:03:33" itemprop="datePublished" />
+<meta content="2018-06-22T20:03:33" itemprop="dateModified" />
+<a href="/tag/fecha/20180622/" title="Ver todas las noticias de esta fecha"> 22/06/2018 - 20:03 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Como a Romy Schneider adulta, como Michelle Pfeiffer, reconheceria esta atriz mesmo que aparecesse fantasiada de King Kong</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-actualidad-1529595197_612822">
+<div class="articulo__interior">
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2018/06/21/actualidad/1529595197_612822.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/brasil/imagenes/2018/06/21/actualidad/1529595197_612822_1529595286_miniatura_normal.jpg" alt="Falou a crítica: este é o filme mais aterrorizante de 2018 (e o ano nem terminou)" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2018/06/21/actualidad/1529595197_612822.html">Falou a crítica: este é o filme mais aterrorizante de 2018 (e o ano nem terminou) </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/guillermo_alonso_barcia/a/">Guillermo Alonso</a></span>
+</div>
+</div>
+</div>
+<time datetime="2018-06-21T14:20:55" class="articulo-actualizado">
+<meta content="2018-06-21T14:20:55" itemprop="datePublished" />
+<meta content="2018-06-21T14:20:55" itemprop="dateModified" />
+<a href="/tag/fecha/20180621/" title="Ver todas las noticias de esta fecha"> 21/06/2018 - 14:20 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Chama-se 'Hereditário', é do estreante Ari Aster e faz parte desse subgênero que nunca deixará de nos causar medo por mais que vejamos de novo; uma casa em que as coisas se mexem sozinhas</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1528392084_811266">
+<div class="articulo__interior">
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2018/06/07/cultura/1528392084_811266.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2018/06/07/actualidad/1528392084_811266_1528392224_miniatura_normal.jpg" alt="‘Jurassic World: Reino Ameaçado’: Os dinossauros estão em perigo (como sempre)" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+<span class="boton_video">Vídeo</span>
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2018/06/07/cultura/1528392084_811266.html">‘Jurassic World: Reino Ameaçado’: Os dinossauros estão em perigo (como sempre) </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/carlos_boyero/a/">Carlos Boyero</a></span>
+</div>
+</div>
+</div>
+<time datetime="2018-06-14T12:59:50" class="articulo-actualizado">
+<meta content="2018-06-14T12:59:50" itemprop="datePublished" />
+<meta content="2018-06-14T12:59:50" itemprop="dateModified" />
+<a href="/tag/fecha/20180614/" title="Ver todas las noticias de esta fecha"> 14/06/2018 - 12:59 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Como qualquer cinéfilo sensato, sou apaixonado pelos filmes de aventura desde bebê (ou antes)</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1522879254_552854">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/critica_cine/a" class="enlace">Crítica</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2018/04/05/cultura/1522879254_552854.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2018/04/05/actualidad/1522879254_552854_1522930222_miniatura_normal.jpg" alt="‘Submersão’: a química e a metafísica" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2018/04/05/cultura/1522879254_552854.html">‘Submersão’: a química e a metafísica </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/javier_ocana/a/">Javier Ocaña</a></span>
+</div>
+</div>
+</div>
+<time datetime="2018-04-05T18:05:38" class="articulo-actualizado">
+<meta content="2018-04-05T18:05:38" itemprop="datePublished" />
+<meta content="2018-04-05T18:05:38" itemprop="dateModified" />
+<a href="/tag/fecha/20180405/" title="Ver todas las noticias de esta fecha"> 05/04/2018 - 18:05 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">O filme navega, como um de seus personagens, em águas tão turbulentas que sai escaldado de suas excessivas ambições</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1522261207_208641">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/critica_cine/a/" class="enlace">Crítica | Cinema</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2018/03/28/cultura/1522261207_208641.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2018/03/28/actualidad/1522261207_208641_1522313967_miniatura_normal.jpg" alt="‘Jogador Nº 1’: Que imenso tédio o novo filme do Spielberg" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2018/03/28/cultura/1522261207_208641.html">‘Jogador Nº 1’: Que imenso tédio o novo filme do Spielberg </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/carlos_boyero/a/">Carlos Boyero</a></span>
+</div>
+</div>
+</div>
+<time datetime="2018-03-29T21:46:00" class="articulo-actualizado">
+<meta content="2018-03-29T21:46:00" itemprop="datePublished" />
+<meta content="2018-03-29T21:46:00" itemprop="dateModified" />
+<a href="/tag/fecha/20180329/" title="Ver todas las noticias de esta fecha"> 29/03/2018 - 21:46 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Em novo longa, uma viagem acelerada, interminável e vazia, repleta de referências a mitológicas criaturas do cinema e dos gibis, há momentos que me tiram da letargia</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1521125140_547731">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/autor/carlos_boyero/a/" class="enlace">Crítica</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2018/03/15/cultura/1521125140_547731.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2018/03/15/actualidad/1521125140_547731_1521127976_miniatura_normal.jpg" alt="‘Maria Madalena’: dá para pegar no sono várias vezes no caminho do Messias até Jerusalém" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+<span class="boton_video">Vídeo</span>
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2018/03/15/cultura/1521125140_547731.html">‘Maria Madalena’: dá para pegar no sono várias vezes no caminho do Messias até Jerusalém </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/carlos_boyero/a/">Carlos Boyero</a></span>
+</div>
+</div>
+</div>
+<time datetime="2018-03-16T11:36:38" class="articulo-actualizado">
+<meta content="2018-03-16T11:36:38" itemprop="datePublished" />
+<meta content="2018-03-16T11:36:38" itemprop="dateModified" />
+<a href="/tag/fecha/20180316/" title="Ver todas las noticias de esta fecha"> 16/03/2018 - 11:36 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">A ideia é curiosa, mas o desenvolvimento é insuportável</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1520528791_540502">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/critica_cine/a/" class="enlace">CRÍTICA | CINEMA</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2018/03/08/cultura/1520528791_540502.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2018/03/08/actualidad/1520528791_540502_1520529138_miniatura_normal.jpg" alt="Mais Escobar, e apenas correto" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+<span class="boton_video">Vídeo</span>
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2018/03/08/cultura/1520528791_540502.html">Mais Escobar, e apenas correto </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/carlos_boyero/a/">Carlos Boyero</a></span>
+</div>
+</div>
+</div>
+<time datetime="2018-03-08T19:41:20" class="articulo-actualizado">
+<meta content="2018-03-08T19:41:20" itemprop="datePublished" />
+<meta content="2018-03-08T19:41:20" itemprop="dateModified" />
+<a href="/tag/fecha/20180308/" title="Ver todas las noticias de esta fecha"> 08/03/2018 - 19:41 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Meu problema não é já o abusivo ‘déjà vu’ com o personagem e o argumento, e sim que o filme frustra minhas expectativas</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1518634594_187056">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/critica_cine/a/" class="enlace">Crítica | Cinema</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2018/02/14/cultura/1518634594_187056.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2018/02/14/actualidad/1518634594_187056_1518635145_miniatura_normal.jpg" alt="Pantera Negra: Wakanda tem o poder" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2018/02/14/cultura/1518634594_187056.html">Pantera Negra: Wakanda tem o poder </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/jordi_costa/a/">Jordi Costa</a></span>
+</div>
+</div>
+</div>
+<time datetime="2018-02-16T18:34:07" class="articulo-actualizado">
+<meta content="2018-02-16T18:34:07" itemprop="datePublished" />
+<meta content="2018-02-16T18:34:07" itemprop="dateModified" />
+<a href="/tag/fecha/20180216/" title="Ver todas las noticias de esta fecha"> 16/02/2018 - 18:34 <abbr>BRST</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">O filme faz um apreciável esforço em ser responsável tanto com as implicações raciais de seu personagem como com as mudanças coletivas de sensibilidade</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1517493437_327287">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/critica_cine/a/" class="enlace">Crítica | Cinema</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2018/02/01/cultura/1517493437_327287.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2018/02/01/actualidad/1517493437_327287_1517493618_miniatura_normal.jpg" alt="Crítica | ‘Trama Fantasma’: o sadomasoquismo que está na moda" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2018/02/01/cultura/1517493437_327287.html">Crítica | ‘Trama Fantasma’: o sadomasoquismo que está na moda </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/carlos_boyero/a/">Carlos Boyero</a></span>
+</div>
+</div>
+</div>
+<time datetime="2018-02-01T20:59:05" class="articulo-actualizado">
+<meta content="2018-02-01T20:59:05" itemprop="datePublished" />
+<meta content="2018-02-01T20:59:05" itemprop="dateModified" />
+<a href="/tag/fecha/20180201/" title="Ver todas las noticias de esta fecha"> 01/02/2018 - 20:59 <abbr>BRST</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Tudo aspira a ter uma aura de mistério e múltiplas interpretações. No meu caso, não é contagioso</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1516302501_300041">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/critica_cine/a/" class="enlace">Crítica | Cinema</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2018/01/18/cultura/1516302501_300041.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2018/01/18/actualidad/1516302501_300041_1516302672_miniatura_normal.jpg" alt="‘The Post – A Guerra Secreta’: Era uma vez o jornalismo" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2018/01/18/cultura/1516302501_300041.html">‘The Post – A Guerra Secreta’: Era uma vez o jornalismo </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/carlos_boyero/a/">Carlos Boyero</a></span>
+</div>
+</div>
+</div>
+<time datetime="2018-01-25T16:05:12" class="articulo-actualizado">
+<meta content="2018-01-25T16:05:12" itemprop="datePublished" />
+<meta content="2018-01-25T16:05:12" itemprop="dateModified" />
+<a href="/tag/fecha/20180125/" title="Ver todas las noticias de esta fecha"> 25/01/2018 - 16:05 <abbr>BRST</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">São admiráveis a precisão, o dinamismo, a clareza e o tom que Spielberg utiliza em filme sobre a investigação que revelou o caso Watergate</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1516642301_166857">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/premios_razzies/a" class="enlace">Prêmios Framboesa de Ouro</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2018/01/22/cultura/1516642301_166857.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2018/01/22/actualidad/1516642301_166857_1516644077_miniatura_normal.jpg" alt="Indicados ao Framboesa de Ouro 2018: Quais são os piores filmes do ano?" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+<span class="boton_video">Vídeo</span>
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2018/01/22/cultura/1516642301_166857.html">Indicados ao Framboesa de Ouro 2018: Quais são os piores filmes do ano? </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/el_pais/a/">El País</a></span>
+</div>
+</div>
+</div>
+<time datetime="2018-01-22T19:44:53" class="articulo-actualizado">
+<meta content="2018-01-22T19:44:53" itemprop="datePublished" />
+<meta content="2018-01-22T19:44:53" itemprop="dateModified" />
+<a href="/tag/fecha/20180122/" title="Ver todas las noticias de esta fecha"> 22/01/2018 - 19:44 <abbr>BRST</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">‘Transformers’, ‘A Múmia’ e “Cinquenta Tons Mais Escuros’ são os favoritos à premiação</p>
 </div>
 </article> 
 </div>
@@ -394,10 +856,10 @@
 <div class="fb-page" data-href="https://www.facebook.com/elpaisbrasil" data-tabs="timeline" data-width="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-hide-cta="true" data-stream="false" data-header="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/elpaisbrasil"><a rel="nofollow" href="https://www.facebook.com/elpaisbrasil"></a></blockquote></div></div>
 </div>
 </div>
-<aside class="envoltorio_publi" id="roba_principal">
-<div id='elpais_gpt-MPU1' class='publi_luto_horizontal'>
+<aside class="envoltorio_publi estirar" id="roba2">
+<div id='elpais_gpt-MPU2' class='publi_luto_horizontal publiLoad'>
 <script type='text/javascript'>
-			PBS.display('MPU1');
+			PBS.display('MPU2');
 		</script>
 </div>
 </aside>
@@ -484,63 +946,848 @@ function lmv_cambia_subpestana(idpestana)
 </div>
 <div class="contenido" id="lmv_todo" style="display:none" >
 <ol>
-<li class="estirar"><span class="numero">1</span><a href="//elpais.com/elpais/2018/09/19/ciencia/1537357576_695356.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Homeopatía, el error fatal de Rosa</a></li>
-<li class="estirar"><span class="numero">2</span><a href="//elpais.com/politica/2018/09/22/actualidad/1537631955_178972.html" title="Ver Noticia">La asesina iba en silla de ruedas</a></li>
-<li class="estirar"><span class="numero">3</span><a href="//elpais.com/politica/2018/09/20/actualidad/1537456422_725137.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Abel Caballero, el increíble espectáculo de ser alcalde</a></li>
-<li class="estirar"><span class="numero">4</span><a href="//elpais.com/internacional/2018/09/22/actualidad/1537605289_934685.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Irán acusa a los aliados de EE UU en el Golfo del ataque en un desfile militar</a></li>
-<li class="estirar"><span class="numero">5</span><a href="//elpais.com/economia/2018/09/20/actualidad/1537457945_544484.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El rodio, el metal precioso más caro del mundo</a></li>
-<li class="estirar"><span class="numero">6</span><a href="//elpais.com/tecnologia/2018/09/14/actualidad/1536928757_124382.html" title="Ver Noticia">Cómo enviar fotos a través de WhatsApp sin que pierdan calidad</a></li>
-<li class="estirar"><span class="numero">7</span><a href="//elpais.com/elpais/2018/09/19/buenavida/1537366403_026618.html" title="Ver Noticia">El olor a anciano empieza a gestarse en nuestro cuerpo a partir de los 30 años</a></li>
-<li class="estirar"><span class="numero">8</span><a href="//elpais.com/politica/2018/09/22/actualidad/1537620966_270241.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Pablo Iglesias: “Nunca más va a haber en España un Gobierno en solitario”</a></li>
-<li class="estirar"><span class="numero">9</span><a href="//elpais.com/politica/2018/09/22/actualidad/1537636739_040652.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>La vuelta de Aznar al PP divide al partido</a></li>
-<li class="estirar"><span class="numero">10</span><a href="//elpais.com/sociedad/2018/09/22/actualidad/1537636094_278287.html" title="Ver Noticia">El ‘salvaje este’ de los vientres de alquiler</a></li>
+<li class="estirar"><span class="numero">1</span><a href="http://smoda.elpais.com/moda/nacho-vidal-mi-hija-no-esta-en-un-cuerpo-equivocado-es-una-nina-con-pene/" title="Ver Noticia">Nacho Vidal: “Mi hija no está en un cuerpo equivocado, es una niña con pene”</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//elpais.com/cultura/2018/09/27/actualidad/1538064397_942258.html" title="Ver Noticia">El lazo amarillo de Planeta</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//elpais.com/elpais/2018/09/27/ciencia/1538033539_490188.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El láser desvela toda la grandeza de la civilización maya</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//elpais.com/elcomidista/2018/09/17/articulo/1537186871_198435.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>¿Cuál es el mejor chocolate del supermercado?</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//elpais.com/politica/2018/09/27/actualidad/1538067956_533180.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Las cuentas de la sociedad de Duque no reflejan los alquileres que dice haber pagado</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//elpais.com/cultura/2018/09/27/actualidad/1538071874_342244.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Autopsia de la gran corrupción española</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//elpais.com/internacional/2018/09/27/actualidad/1538063131_651549.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>La inesperada oportunidad de volver a votar el Brexit</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//elpais.com/ccaa/2018/09/28/catalunya/1538121866_012556.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Ataque a machetazos en el Raval barcelonés</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//elpais.com/deportes/2018/09/28/actualidad/1538094581_781020.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Laia Palau: “Meto canastitas, pero ¿qué aporto al mundo?”</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//elpais.com/politica/2018/09/27/actualidad/1538050837_044069.html" title="Ver Noticia">El PP culpa a la República de las muertes causadas por la aviación nazi en Castellón</a></li>
 </ol>
 </div>			<div class="contenido" id="lmv_america" style="display:none" >
 <ol>
-<li class="estirar"><span class="numero">1</span><a href="//brasil.elpais.com/brasil/2018/01/12/politica/1515787762_592872.html" title="Ver Noticia">A semana em que as primeiras pedras atingiram a vidraça de Jair Bolsonaro</a></li>
-<li class="estirar"><span class="numero">2</span><a href="//elpais.com/elpais/2018/09/19/ciencia/1537357576_695356.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Homeopatía, el error fatal de Rosa</a></li>
-<li class="estirar"><span class="numero">3</span><a href="//elpais.com/elpais/2018/09/19/buenavida/1537366403_026618.html" title="Ver Noticia">El olor a anciano empieza a gestarse en nuestro cuerpo a partir de los 30 años</a></li>
-<li class="estirar"><span class="numero">4</span><a href="//brasil.elpais.com/brasil/2018/09/20/politica/1537395647_670658.html" title="Ver Noticia">Profusão de pesquisas eleitorais acirra a disputa à Presidência da República</a></li>
-<li class="estirar"><span class="numero">5</span><a href="//brasil.elpais.com/brasil/2018/09/19/politica/1537384517_967736.html" title="Ver Noticia">“Haddad está no segundo turno, Bolsonaro ainda não”, diz estatístico de campanhas</a></li>
-<li class="estirar"><span class="numero">6</span><a href="//elpais.com/internacional/2018/07/23/mundo_global/1532345833_454942.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Cadáveres atrapados durante décadas en glaciares suizos salen a la superficie por el calentamiento global</a></li>
-<li class="estirar"><span class="numero">7</span><a href="//elpais.com/internacional/2018/09/22/actualidad/1537605289_934685.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Irán acusa a los aliados de EE UU en el Golfo del ataque en un desfile militar</a></li>
-<li class="estirar"><span class="numero">8</span><a href="//elpais.com/cultura/2018/09/22/actualidad/1537603216_111260.html" title="Ver Noticia">Imágenes sadomasoquistas de Mapplethorpe provocan la dimisión del director de un museo en Oporto</a></li>
-<li class="estirar"><span class="numero">9</span><a href="//brasil.elpais.com/brasil/2018/09/20/opinion/1537466622_097329.html" title="Ver Noticia">Enquanto pastores evangélicos apoiam Bolsonaro, cúpula católica lava as mãos</a></li>
-<li class="estirar"><span class="numero">10</span><a href="//elpais.com/cultura/2018/09/21/babelia/1537524334_075402.html" title="Ver Noticia">Editorial Tusquets: así se hizo</a></li>
+<li class="estirar"><span class="numero">1</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537978764_156884.html" title="Ver Noticia">Bebê morto com tiro na cabeça é um cruel símbolo da situação dos povos indígenas no Brasil</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//brasil.elpais.com/brasil/2018/09/24/politica/1537815456_213002.html" title="Ver Noticia">José Dirceu: “O problema do Bolsonaro é do PSDB e DEM. Sem Lula, temos Ciro e Haddad”</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537997311_859341.html" title="Ver Noticia">A máquina de ‘fake news’ nos grupos a favor de Bolsonaro no WhatsApp</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537997982_557864.html" title="Ver Noticia">Carlos Bolsonaro será denunciado por apologia à tortura na Câmara do Rio</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//elpais.com/elpais/2018/09/27/ciencia/1538033539_490188.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El láser desvela toda la grandeza de la civilización maya</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//brasil.elpais.com/brasil/2018/01/12/politica/1515787762_592872.html" title="Ver Noticia">A semana em que as primeiras pedras atingiram a vidraça de Jair Bolsonaro</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//elpais.com/internacional/2018/09/28/actualidad/1538132306_239210.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Varios muertos tras un terremoto de magnitud 7,5 y un tsunami en Indonesia</a></li>
+<li class="estirar"><span class="numero">8</span><a href="http://smoda.elpais.com/moda/nacho-vidal-mi-hija-no-esta-en-un-cuerpo-equivocado-es-una-nina-con-pene/" title="Ver Noticia">Nacho Vidal: “Mi hija no está en un cuerpo equivocado, es una niña con pene”</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//elpais.com/internacional/2018/07/23/mundo_global/1532345833_454942.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Cadáveres atrapados durante décadas en glaciares suizos salen a la superficie por el calentamiento global</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//elpais.com/internacional/2018/09/27/estados_unidos/1538075016_496419.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Trump respalda a su candidato al Supremo: “Ha sido honesto”</a></li>
 </ol>
 </div>			<div class="contenido" id="lmv_brasil" >
 <ol>
-<li class="estirar"><span class="numero">1</span><a href="//brasil.elpais.com/brasil/2018/01/12/politica/1515787762_592872.html" title="Ver Notícia">A semana em que as primeiras pedras atingiram a vidraça de Jair Bolsonaro</a></li>
-<li class="estirar"><span class="numero">2</span><a href="//brasil.elpais.com/brasil/2018/09/20/politica/1537395647_670658.html" title="Ver Notícia">Profusão de pesquisas eleitorais acirra a disputa à Presidência da República</a></li>
-<li class="estirar"><span class="numero">3</span><a href="//brasil.elpais.com/brasil/2018/09/19/politica/1537384517_967736.html" title="Ver Notícia">“Haddad está no segundo turno, Bolsonaro ainda não”, diz estatístico de campanhas</a></li>
-<li class="estirar"><span class="numero">4</span><a href="//brasil.elpais.com/brasil/2018/09/20/opinion/1537466622_097329.html" title="Ver Notícia">Enquanto pastores evangélicos apoiam Bolsonaro, cúpula católica lava as mãos</a></li>
-<li class="estirar"><span class="numero">5</span><a href="//brasil.elpais.com/brasil/2018/09/18/cultura/1537262764_361205.html" title="Ver Notícia">A desconcertante imagem do Coringa de Joaquin Phoenix causa uma enxurrada de comentários</a></li>
-<li class="estirar"><span class="numero">6</span><a href="//brasil.elpais.com/brasil/2018/09/22/estilo/1537652058_103212.html" title="Ver Notícia">O ‘ponto para o marido’ não é só um mito do parto</a></li>
-<li class="estirar"><span class="numero">7</span><a href="//brasil.elpais.com/brasil/2018/09/20/opinion/1537447119_621795.html" title="Ver Notícia">Mudança no imposto de renda que planeja economista de Bolsonaro pode agravar a desigualdade e a crise</a></li>
-<li class="estirar"><span class="numero">8</span><a href="//brasil.elpais.com/brasil/2018/09/14/album/1536911362_020841.html" title="Ver Notícia"><span title="Galeria de fotos" class="foto">Galeria de fotos</span>Homens famosos tiram a roupa no Instagram para questionar as regras das redes sociais</a></li>
-<li class="estirar"><span class="numero">9</span><a href="//brasil.elpais.com/brasil/2018/09/20/politica/1537467412_871279.html" title="Ver Notícia">Como reconhecer uma notícia falsa para não compartilhar mentiras</a></li>
-<li class="estirar"><span class="numero">10</span><a href="//brasil.elpais.com/brasil/2018/03/06/cultura/1520352987_936609.html" title="Ver Notícia">Noam Chomsky: “As pessoas já não acreditam nos fatos”</a></li>
+<li class="estirar"><span class="numero">1</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537978764_156884.html" title="Ver Notícia">Bebê morto com tiro na cabeça é um cruel símbolo da situação dos povos indígenas no Brasil</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//brasil.elpais.com/brasil/2018/09/24/politica/1537815456_213002.html" title="Ver Notícia">José Dirceu: “O problema do Bolsonaro é do PSDB e DEM. Sem Lula, temos Ciro e Haddad”</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537997311_859341.html" title="Ver Notícia">A máquina de ‘fake news’ nos grupos a favor de Bolsonaro no WhatsApp</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537997982_557864.html" title="Ver Notícia">Carlos Bolsonaro será denunciado por apologia à tortura na Câmara do Rio</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//brasil.elpais.com/brasil/2018/01/12/politica/1515787762_592872.html" title="Ver Notícia">A semana em que as primeiras pedras atingiram a vidraça de Jair Bolsonaro</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//brasil.elpais.com/brasil/2018/09/25/politica/1537898005_592548.html" title="Ver Notícia">Por que agressor de Bolsonaro pode dar entrevistas preso e Lula não?</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//brasil.elpais.com/brasil/2018/08/29/politica/1535564207_054097.html" title="Ver Notícia">Bolsonaro mentiu ao falar de livro de educação sexual no ‘JN’</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//brasil.elpais.com/brasil/2018/09/24/opinion/1537805079_256045.html" title="Ver Notícia">Mulheres contra a opressão</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//brasil.elpais.com/brasil/2018/09/27/cultura/1538079214_047547.html" title="Ver Notícia">“Minha filha não está no corpo errado, é uma menina com pênis”</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//brasil.elpais.com/brasil/2018/09/27/internacional/1538074751_228908.html" title="Ver Notícia">Argentina no fundo do poço, outra vez</a></li>
 </ol>
 </div>			<div class="contenido" id="lmv_catalunya" style="display:none" >
 <ol>
-<li class="estirar"><span class="numero">1</span><a href="//cat.elpais.com/cat/2018/09/21/catalunya/1537540696_211942.html" title="Veure Notícia"><span title="Vídeo" class="video">Vídeo</span>“En una societat sense educació sexual, era obligatori que el porno canviés”</a></li>
-<li class="estirar"><span class="numero">2</span><a href="//cat.elpais.com/cat/2018/09/22/opinion/1537635648_376071.html" title="Veure Notícia">Ou frit i prebes vermells</a></li>
-<li class="estirar"><span class="numero">3</span><a href="//cat.elpais.com/cat/2018/09/22/opinion/1537646554_820006.html" title="Veure Notícia">La república buida</a></li>
-<li class="estirar"><span class="numero">4</span><a href="//cat.elpais.com/cat/2018/09/21/catalunya/1537552955_088913.html" title="Veure Notícia">Els mossos investigats per passivitat l’1-O acusen als seus comandaments de deixar-los “venuts”</a></li>
-<li class="estirar"><span class="numero">5</span><a href="//cat.elpais.com/cat/2018/05/08/cultura/1525807030_298975.html" title="Veure Notícia">Escenes de sexe al Capitol</a></li>
-<li class="estirar"><span class="numero">6</span><a href="//cat.elpais.com/cat/2018/03/08/catalunya/1520508342_956106.html" title="Veure Notícia">El Consell del Poder Judicial denega a Santiago Vidal el reingrés com a magistrat</a></li>
-<li class="estirar"><span class="numero">7</span><a href="//cat.elpais.com/cat/2018/09/21/catalunya/1537557470_387553.html" title="Veure Notícia">L’Estat ofereix al Govern un edifici per acollir els menors ‘sense papers’</a></li>
-<li class="estirar"><span class="numero">8</span><a href="//cat.elpais.com/cat/2018/09/21/opinion/1537545819_531813.html" title="Veure Notícia">El cas Valls</a></li>
-<li class="estirar"><span class="numero">9</span><a href="//cat.elpais.com/cat/2018/09/20/catalunya/1537469849_367292.html" title="Veure Notícia">“Les rates? Abaixa la tapa del WC”</a></li>
-<li class="estirar"><span class="numero">10</span><a href="//cat.elpais.com/cat/2018/09/22/catalunya/1537641978_706407.html" title="Veure Notícia">La batalla per Barcelona condiciona l’escenari polític català</a></li>
+<li class="estirar"><span class="numero">1</span><a href="//cat.elpais.com/cat/2018/09/27/opinion/1538067434_446213.html" title="Veure Notícia">Fora furs!</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//cat.elpais.com/cat/2018/09/28/catalunya/1538134410_937882.html" title="Veure Notícia">Descoberts 2.000 quilos de menjar caducat en un banc d’aliments de la Bisbal del Penedès</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//cat.elpais.com/cat/2018/09/28/catalunya/1538127389_018924.html" title="Veure Notícia">Els Mossos busquen el cadàver d’un home en una nau d’Argentona</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//cat.elpais.com/cat/2018/09/27/cultura/1538036752_451427.html" title="Veure Notícia">Stephen King, un català de por</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//cat.elpais.com/cat/2018/09/28/catalunya/1538127911_822805.html" title="Veure Notícia">Les mares catalanes, les més tardanes d’Europa</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//cat.elpais.com/cat/2018/09/27/cultura/1538064397_942258.html" title="Veure Notícia">El llaç groc de Planeta</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//cat.elpais.com/cat/2018/09/26/videos/1537978967_758680.html" title="Veure Notícia"><span title="Vídeo" class="video">Vídeo</span>“Vam ser utilitzats de manera errònia l’1-O”</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//cat.elpais.com/cat/2018/09/27/catalunya/1538053520_451005.html" title="Veure Notícia">Mor als 74 anys Carles Canut, una icona del teatre català</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//cat.elpais.com/cat/2018/09/22/catalunya/1537644166_359502.html" title="Veure Notícia">‘Petó i adeu’, la iniciativa per eliminar els col·lapses de trànsit als accessos de les escoles</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//cat.elpais.com/cat/2018/09/27/deportes/1538068635_717694.html" title="Veure Notícia">El Barça modernitza l’escut</a></li>
 </ol>
 </div>
 <div class="envoltorio_publi estirar">
 </div>
 </div>
 </aside>
+<div class="articulos articulos_cierre">
+<div class="articulos__interior">
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1516227848_567076">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/cine/a" class="enlace">Cinema</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2018/01/17/cultura/1516227848_567076.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/brasil/imagenes/2018/01/17/cultura/1516227848_567076_1516227957_miniatura_normal.jpg" alt="O filme sobre a homossexualidade para o qual o Oscar ainda não está preparado" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2018/01/17/cultura/1516227848_567076.html">O filme sobre a homossexualidade para o qual o Oscar ainda não está preparado </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/beatriz_martinez_gomez/a/">Beatriz Martínez</a></span>
+</div>
+</div>
+</div>
+<time datetime="2018-01-17T21:18:49" class="articulo-actualizado">
+<meta content="2018-01-17T21:18:49" itemprop="datePublished" />
+<meta content="2018-01-17T21:18:49" itemprop="dateModified" />
+<a href="/tag/fecha/20180117/" title="Ver todas las noticias de esta fecha"> 17/01/2018 - 21:18 <abbr>BRST</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">‘Me Chame Pelo Seu Nome', de Luca Guadagnino, que narra a história de amor entre um menino de 17 e outro de 28, já motivou ataques em nome da dupla moral de Hollywood</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1515696745_376042">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/critica_cine/a/" class="enlace">Crítica | Cinema</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2018/01/11/cultura/1515696745_376042.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2018/01/11/actualidad/1515696745_376042_1515698008_miniatura_normal.jpg" alt="‘Três Anúncios para um Crime’: Menos do que parece" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+<span class="boton_video">Vídeo</span>
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2018/01/11/cultura/1515696745_376042.html">‘Três Anúncios para um Crime’: Menos do que parece </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/carlos_boyero/a/">Carlos Boyero</a></span>
+</div>
+</div>
+</div>
+<time datetime="2018-01-11T20:19:53" class="articulo-actualizado">
+<meta content="2018-01-11T20:19:53" itemprop="datePublished" />
+<meta content="2018-01-11T20:19:53" itemprop="dateModified" />
+<a href="/tag/fecha/20180111/" title="Ver todas las noticias de esta fecha"> 11/01/2018 - 20:19 <abbr>BRST</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Os diretores de que mais gosto não fazem alarde, não precisam se exibir nas histórias que contam</p>
+</div>
+</article> 
+<aside class="envoltorio_publi estirar" id="roba3">
+<div id='elpais_gpt-MPU3' class='publi_luto_horizontal publiLoad'>
+<script type='text/javascript'>
+            PBS.display('MPU3');
+        </script>
+</div>
+</aside>
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1513869052_333851">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/cine/a" class="enlace">Crítica | Cinema</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/12/21/cultura/1513869052_333851.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2017/12/21/actualidad/1513869052_333851_1513875911_miniatura_normal.jpg" alt="Woody Allen, você parece puro teatro" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/12/21/cultura/1513869052_333851.html">Woody Allen, você parece puro teatro </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/carlos_boyero/a/">Carlos Boyero</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-12-28T12:38:15" class="articulo-actualizado">
+<meta content="2017-12-28T12:38:15" itemprop="datePublished" />
+<meta content="2017-12-28T12:38:15" itemprop="dateModified" />
+<a href="/tag/fecha/20171228/" title="Ver todas las noticias de esta fecha"> 28/12/2017 - 12:38 <abbr>BRST</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Assisto a ‘Roda Gigante’ sem que me ocorra nada de ruim, mas é filme do qual me esqueço cinco minutos depois que termina</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1513809536_459473">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/critica_cine/a" class="enlace">Crítica | Cinema</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/12/20/cultura/1513809536_459473.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2017/12/20/actualidad/1513809536_459473_1513813832_miniatura_normal.jpg" alt="Nostalgia não era suficiente" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/12/20/cultura/1513809536_459473.html">Nostalgia não era suficiente </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/jordi_costa/a/">Jordi Costa</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-12-21T21:08:09" class="articulo-actualizado">
+<meta content="2017-12-21T21:08:09" itemprop="datePublished" />
+<meta content="2017-12-21T21:08:09" itemprop="dateModified" />
+<a href="/tag/fecha/20171221/" title="Ver todas las noticias de esta fecha"> 21/12/2017 - 21:08 <abbr>BRST</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Sintetiza o espírito de renovação capaz de manter boas relações com a lembrança em detalhe significativo: agora passamos do jogo de tabuleiro para o videogame</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1513085969_936689">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/star_wars/a/" class="enlace">Crítica</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/12/12/cultura/1513085969_936689.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2017/12/12/actualidad/1513085969_936689_1513087096_miniatura_normal.jpg" alt="‘Os Últimos Jedi’: Mais do mesmo, que chatice…" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+<span class="boton_video">Vídeo</span>
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/12/12/cultura/1513085969_936689.html">‘Os Últimos Jedi’: Mais do mesmo, que chatice… </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/carlos_boyero/a/">Carlos Boyero</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-12-12T18:08:00" class="articulo-actualizado">
+<meta content="2017-12-12T18:08:00" itemprop="datePublished" />
+<meta content="2017-12-12T18:08:00" itemprop="dateModified" />
+<a href="/tag/fecha/20171212/" title="Ver todas las noticias de esta fecha"> 12/12/2017 - 18:08 <abbr>BRST</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Essa franquia se tornou tão previsível e inconsistente que me deixa entediado. Não tem inspiração nem alma. É servil, com uma fórmula pronta para ter sucesso no mercado</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1512477938_309500">
+<div class="articulo__interior">
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/12/05/cultura/1512477938_309500.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/brasil/imagenes/2017/12/05/cultura/1512477938_309500_1512756118_miniatura_normal.jpg" alt="Os 15 melhores filmes da história, segundo os usuários do FilmAffinity e IMDb" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/12/05/cultura/1512477938_309500.html">Os 15 melhores filmes da história, segundo os usuários do FilmAffinity e IMDb </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/roger_sabates_ortega/a/">Roger Sabatés</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-12-08T17:20:13" class="articulo-actualizado">
+<meta content="2017-12-08T17:20:13" itemprop="datePublished" />
+<meta content="2017-12-08T17:20:13" itemprop="dateModified" />
+<a href="/tag/fecha/20171208/" title="Ver todas las noticias de esta fecha"> 08/12/2017 - 17:20 <abbr>BRST</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Esse é ranking de filmes elaborado a partir das avaliações dos internautas nos dois portais</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1512037844_771500">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/critica_cine/a" class="enlace">Crítica | Cinema</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/11/30/cultura/1512037844_771500.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2017/11/30/actualidad/1512037844_771500_1512049007_miniatura_normal.jpg" alt="Crítica | 'Extraordinário': O menino da cara esquisita" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/11/30/cultura/1512037844_771500.html">Crítica | 'Extraordinário': O menino da cara esquisita </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/javier_ocana/a/">Javier Ocaña</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-12-06T20:30:33" class="articulo-actualizado">
+<meta content="2017-12-06T20:30:33" itemprop="datePublished" />
+<meta content="2017-12-06T20:30:33" itemprop="dateModified" />
+<a href="/tag/fecha/20171206/" title="Ver todas las noticias de esta fecha"> 06/12/2017 - 20:30 <abbr>BRST</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Ajudado por atuações formidáveis, diretor de 'Extraordinário' conduz filme que estreia nesta quinta com a mão firme de quem não teme o drama ou a comédia</p>
+</div>
+</article> 
+<aside class="envoltorio_publi estirar" id="roba4">
+<div id='elpais_gpt-MPU4' class='publi_luto_horizontal publiLoad'>
+<script type='text/javascript'>
+			PBS.display('MPU4');
+		</script>
+</div>
+</aside>
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1511462929_013516">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/cine/a/" class="enlace">Crítica | 'Assassinato no Expresso do Oriente'</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/11/23/cultura/1511462929_013516.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2017/11/23/actualidad/1511462929_013516_1511463040_miniatura_normal.jpg" alt="Agatha Christie continua dando jogo" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/11/23/cultura/1511462929_013516.html">Agatha Christie continua dando jogo </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/carlos_boyero/a/">Carlos Boyero</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-11-30T15:20:47" class="articulo-actualizado">
+<meta content="2017-11-30T15:20:47" itemprop="datePublished" />
+<meta content="2017-11-30T15:20:47" itemprop="dateModified" />
+<a href="/tag/fecha/20171130/" title="Ver todas las noticias de esta fecha"> 30/11/2017 - 15:20 <abbr>BRST</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">É um trabalho digno o de Kenneth Branagh, rodeado por uma lista de estrelas</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-internacional-1510251475_822351">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/autor/carlos_boyero/a/" class="enlace">Crítica | Cinema</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/11/09/internacional/1510251475_822351.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2017/11/09/actualidad/1510251475_822351_1510251660_miniatura_normal.jpg" alt="‘A Livraria’: sobre livros e solidões" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/11/09/internacional/1510251475_822351.html">‘A Livraria’: sobre livros e solidões </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/carlos_boyero/a/">Carlos Boyero</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-11-09T20:40:36" class="articulo-actualizado">
+<meta content="2017-11-09T20:40:36" itemprop="datePublished" />
+<meta content="2017-11-09T20:40:36" itemprop="dateModified" />
+<a href="/tag/fecha/20171109/" title="Ver todas las noticias de esta fecha"> 09/11/2017 - 20:40 <abbr>BRST</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Filme da cineasta catalã Isabel Coixet estreou nesta quinta-feira nos cinemas brasileiros.
+Longa fala dessas sensações com linguagem, nuances, tom e capacidade de sugerir que me comovem</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-economia-1510098308_801274">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/walt_disney_productions/a/" class="enlace">Walt Disney Productions</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/11/08/economia/1510098308_801274.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2017/11/08/actualidad/1510098308_801274_1510098593_miniatura_normal.jpg" alt="Após queda de braço com Disney, diretoria do ‘Los Angeles Times’ é demitida" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/11/08/economia/1510098308_801274.html">Após queda de braço com Disney, diretoria do ‘Los Angeles Times’ é demitida </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/pablo_ximenez_de_sandoval/a/">P. X. Sandoval</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-11-08T16:16:45" class="articulo-actualizado">
+<meta content="2017-11-08T16:16:45" itemprop="datePublished" />
+<meta content="2017-11-08T16:16:45" itemprop="dateModified" />
+<a href="/tag/fecha/20171108/" title="Ver todas las noticias de esta fecha"> 08/11/2017 - 16:16 <abbr>BRST</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Em represália a publicação de uma reportagem, o estúdio chegou a deixar o jornal fora de suas pré-estreias, mas voltou atrás em meio a uma onda de solidariedade da imprensa</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1505924703_888370">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/critica_cine/a" class="enlace">Crítica | Kingsman: O círculo de ouro</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/09/20/cultura/1505924703_888370.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/brasil/imagenes/2017/09/20/cultura/1505924703_888370_1506696600_miniatura_normal.jpg" alt="Crítica | Kingsman: O círculo de ouro" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/09/20/cultura/1505924703_888370.html">Crítica | Kingsman: O círculo de ouro </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/jordi_costa/a/">Jordi Costa</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-09-29T12:13:01" class="articulo-actualizado">
+<meta content="2017-09-29T12:13:01" itemprop="datePublished" />
+<meta content="2017-09-29T12:13:01" itemprop="dateModified" />
+<a href="/tag/fecha/20170929/" title="Ver todas las noticias de esta fecha"> 29/09/2017 - 12:13 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Matthew Vaughn e sua corroteirista Jane Goldman conseguem superar muitas das fragilidades do primeiro filme</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1504801916_749444">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//elpais.com/tag/critica_cine/a" class="enlace">Critica de ‘It: A Coisa’</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/09/07/cultura/1504801916_749444.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2017/09/07/actualidad/1504801916_749444_1504802099_miniatura_normal.jpg" alt="‘It: A Coisa’, muito susto, nada de medo" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+<span class="boton_video">Vídeo</span>
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/09/07/cultura/1504801916_749444.html">‘It: A Coisa’, muito susto, nada de medo </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/carlos_boyero/a/">Carlos Boyero</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-09-08T18:52:12" class="articulo-actualizado">
+<meta content="2017-09-08T18:52:12" itemprop="datePublished" />
+<meta content="2017-09-08T18:52:12" itemprop="dateModified" />
+<a href="/tag/fecha/20170908/" title="Ver todas las noticias de esta fecha"> 08/09/2017 - 18:52 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Uma visão superficial e forçada do angustiado universo infantil</p>
+</div>
+</article> 
+<aside class="envoltorio_publi estirar publiLoad">
+<div id='elpais_gpt-MPU5' class='publi_luto_horizontal publiLoad'>
+<script type='text/javascript'>
+			PBS.display('MPU5');
+		</script>
+</div>
+</aside>
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1501777632_342704">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/cine/a" class="enlace">Cinema</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/08/03/cultura/1501777632_342704.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/brasil/imagenes/2017/08/03/cultura/1501777632_342704_1504222875_miniatura_normal.jpg" alt="‘Atômica’ retrata a Berlim de 1989, uma cidade em chamas" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+<span class="boton_video">Vídeo</span>
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/08/03/cultura/1501777632_342704.html">‘Atômica’ retrata a Berlim de 1989, uma cidade em chamas </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/javier_ocana/a/">Javier Ocaña</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-08-03T18:59:00" class="articulo-actualizado">
+<meta content="2017-08-03T18:59:00" itemprop="datePublished" />
+<meta content="2017-08-03T18:59:00" itemprop="dateModified" />
+<a href="/tag/fecha/20170803/" title="Ver todas las noticias de esta fecha"> 03/08/2017 - 18:59 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">O filme, que estreia neste dia 31 no Brasil, oferece múltiplas leituras, mas no final seu conjunto é bem vazio</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1500571079_405248">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/autor/carlos_boyero/a" class="enlace">Crítica: Dunkirk</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/07/20/cultura/1500571079_405248.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2017/07/20/actualidad/1500571079_405248_1500571573_miniatura_normal.jpg" alt="Horror por terra, mar e ar" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+<span class="boton_video">Vídeo</span>
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/07/20/cultura/1500571079_405248.html">Horror por terra, mar e ar </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/carlos_boyero/a/">Carlos Boyero</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-07-28T14:09:34" class="articulo-actualizado">
+<meta content="2017-07-28T14:09:34" itemprop="datePublished" />
+<meta content="2017-07-28T14:09:34" itemprop="dateModified" />
+<a href="/tag/fecha/20170728/" title="Ver todas las noticias de esta fecha"> 28/07/2017 - 14:09 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">No filme de Christopher Nolan há poucos diálogos; não são necessários porque a linguagem visual é muito poderosa</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1499857316_684900">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/critica_cine/a" class="enlace">CRÍTICA</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/07/12/cultura/1499857316_684900.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2017/07/12/actualidad/1499857316_684900_1499857432_miniatura_normal.jpg" alt="‘Planeta dos Macacos’: mensagem política em meio à narrativa de guerra" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+<span class="boton_video">Vídeo</span>
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/07/12/cultura/1499857316_684900.html">‘Planeta dos Macacos’: mensagem política em meio à narrativa de guerra </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/javier_ocana/a/">Javier Ocaña</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-07-12T08:14:07" class="articulo-actualizado">
+<meta content="2017-07-12T08:14:07" itemprop="datePublished" />
+<meta content="2017-07-12T08:14:07" itemprop="dateModified" />
+<a href="/tag/fecha/20170712/" title="Ver todas las noticias de esta fecha"> 12/07/2017 - 08:14 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Um dos grandes subtextos do filme, atrás da atitude selvagem dos humanos, é a construção de um muro</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1494522212_546019">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/autor/carlos_boyero/a" class="enlace">O filme da semana | Alien: Covenant</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/05/11/cultura/1494522212_546019.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2017/05/11/actualidad/1494522212_546019_1494529064_miniatura_normal.jpg" alt="Crítica: ‘Alien: Covenant’ | Se dê ao respeito, senhor Ridley Scott" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/05/11/cultura/1494522212_546019.html">Crítica: ‘Alien: Covenant’ | Se dê ao respeito, senhor Ridley Scott </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/carlos_boyero/a/">Carlos Boyero</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-05-12T12:29:21" class="articulo-actualizado">
+<meta content="2017-05-12T12:29:21" itemprop="datePublished" />
+<meta content="2017-05-12T12:29:21" itemprop="dateModified" />
+<a href="/tag/fecha/20170512/" title="Ver todas las noticias de esta fecha"> 12/05/2017 - 12:29 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Ao contrário do 'Alien' original, aqui há muita conversa e pouca ação, escreve nosso crítico Carlos Boyero</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1493847837_290418">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/critica_cine/a" class="enlace">Crítica | O círculo</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/05/03/cultura/1493847837_290418.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/brasil/imagenes/2017/05/03/cultura/1493847837_290418_1498144047_miniatura_normal.jpg" alt="Decepcionante, ‘O círculo’ prefere suavizar pesadelo das redes sociais" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/05/03/cultura/1493847837_290418.html">Decepcionante, ‘O círculo’ prefere suavizar pesadelo das redes sociais </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/jordi_costa/a/">Jordi Costa</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-05-04T19:02:28" class="articulo-actualizado">
+<meta content="2017-05-04T19:02:28" itemprop="datePublished" />
+<meta content="2017-05-04T19:02:28" itemprop="dateModified" />
+<a href="/tag/fecha/20170504/" title="Ver todas las noticias de esta fecha"> 04/05/2017 - 19:02 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">É frustante que o próprio escritor Dave Eggers tenha sido um dos responsáveis por extirpar todo o potencial provocador de seu trabalho na adaptação para o cinema</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1489618763_155557">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<span class="sin_enlace">Crítica | ‘A Bela e a Fera’</span>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/03/15/cultura/1489618763_155557.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2017/03/15/actualidad/1489618763_155557_1489619089_miniatura_normal.jpg" alt="‘A Bela e a Fera’: Bijuteria da magia" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/03/15/cultura/1489618763_155557.html">‘A Bela e a Fera’: Bijuteria da magia </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/jordi_costa/a/">Jordi Costa</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-03-17T14:30:58" class="articulo-actualizado">
+<meta content="2017-03-17T14:30:58" itemprop="datePublished" />
+<meta content="2017-03-17T14:30:58" itemprop="dateModified" />
+<a href="/tag/fecha/20170317/" title="Ver todas las noticias de esta fecha"> 17/03/2017 - 14:30 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Este é um musical que trai o ritmo da partitura na montagem e a continuidade da melodia em sua encenação</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1487808637_967260">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/critica_cine/a" class="enlace">Crítica | Fences</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/02/23/cultura/1487808637_967260.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2017/02/23/actualidad/1487808637_967260_1487808826_miniatura_normal.jpg" alt="‘Um Limite Entre Nós’: a vida nas zonas de exclusão do sonho americano" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+<span class="boton_video">Vídeo</span>
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/02/23/cultura/1487808637_967260.html">‘Um Limite Entre Nós’: a vida nas zonas de exclusão do sonho americano </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/jordi_costa/a/">Jordi Costa</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-03-04T16:23:10" class="articulo-actualizado">
+<meta content="2017-03-04T16:23:10" itemprop="datePublished" />
+<meta content="2017-03-04T16:23:10" itemprop="dateModified" />
+<a href="/tag/fecha/20170304/" title="Ver todas las noticias de esta fecha"> 04/03/2017 - 16:23 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Denzel Washington tomou a legítima decisão de não esconder as origens teatrais do texto, que rendeu um Oscar a Viola Davis</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1487874266_534669">
+<div class="articulo__interior">
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/02/23/cultura/1487874266_534669.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2017/02/23/actualidad/1487874266_534669_1487874398_miniatura_normal.jpg" alt="‘T2 Trainspotting’: Retorno digno, mas desnecessário" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+<span class="boton_video">Vídeo</span>
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/02/23/cultura/1487874266_534669.html">‘T2 Trainspotting’: Retorno digno, mas desnecessário </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/carlos_boyero/a/">Carlos Boyero</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-02-23T19:30:45" class="articulo-actualizado">
+<meta content="2017-02-23T19:30:45" itemprop="datePublished" />
+<meta content="2017-02-23T19:30:45" itemprop="dateModified" />
+<a href="/tag/fecha/20170223/" title="Ver todas las noticias de esta fecha"> 23/02/2017 - 19:30 <abbr>BRT</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Não é um filme desprezível, mas a antiga graça desapareceu</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1486058152_189785">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<span class="sin_enlace">CINEMA</span>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/02/02/cultura/1486058152_189785.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/brasil/imagenes/2017/02/02/cultura/1486058152_189785_1486143344_miniatura_normal.jpg" alt="O classicismo contra a autocomplacência no Oscar" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/02/02/cultura/1486058152_189785.html">O classicismo contra a autocomplacência no Oscar </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/carlos_boyero/a/">Carlos Boyero</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-02-02T20:53:54" class="articulo-actualizado">
+<meta content="2017-02-02T20:53:54" itemprop="datePublished" />
+<meta content="2017-02-02T20:53:54" itemprop="dateModified" />
+<a href="/tag/fecha/20170202/" title="Ver todas las noticias de esta fecha"> 02/02/2017 - 20:53 <abbr>BRST</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">'A qualquer custo' combina western e thiller de maneira admirável, enquanto 'Manchester à beira-mar' parece um exercício irritante</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1485386051_862520">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/cine/a" class="enlace">Crítica | ‘A Bailarina’</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/01/26/cultura/1485386051_862520.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2017/01/26/actualidad/1485386051_862520_1485389478_miniatura_normal.jpg" alt="‘A Bailarina’: O movimento e o algoritmo" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+<span class="boton_video">Vídeo</span>
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/01/26/cultura/1485386051_862520.html">‘A Bailarina’: O movimento e o algoritmo </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/jordi_costa/a/">Jordi Costa</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-01-27T11:20:37" class="articulo-actualizado">
+<meta content="2017-01-27T11:20:37" itemprop="datePublished" />
+<meta content="2017-01-27T11:20:37" itemprop="dateModified" />
+<a href="/tag/fecha/20170127/" title="Ver todas las noticias de esta fecha"> 27/01/2017 - 11:20 <abbr>BRST</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">As profundas debilidades do filme ficam evidentes quando os personagens dançam, em movimentos que pouco lembram a graciosa leveza da dança</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1485387621_517512">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/premios_oscar/a/" class="enlace">Crítica | 'Lion'</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2017/01/26/cultura/1485387621_517512.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2017/01/26/actualidad/1485387621_517512_1485390817_miniatura_normal.jpg" alt="‘Lion’: Entre inspirar e reivindicar" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+<span class="boton_video">Vídeo</span>
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2017/01/26/cultura/1485387621_517512.html">‘Lion’: Entre inspirar e reivindicar </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/javier_ocana/a/">Javier Ocaña</a></span>
+</div>
+</div>
+</div>
+<time datetime="2017-01-27T10:14:49" class="articulo-actualizado">
+<meta content="2017-01-27T10:14:49" itemprop="datePublished" />
+<meta content="2017-01-27T10:14:49" itemprop="dateModified" />
+<a href="/tag/fecha/20170127/" title="Ver todas las noticias de esta fecha"> 27/01/2017 - 10:14 <abbr>BRST</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Em sua metade inicial, o estreante Garth Davis, conhecido diretor de publicidade, mostra que sabe contar uma odisseia não só com palavras</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1481648224_910366">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<span class="sin_enlace">ROGUE ONE: UMA HISTÓRIA STAR WARS</span>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2016/12/13/cultura/1481648224_910366.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2016/12/13/actualidad/1481648224_910366_1481699363_miniatura_normal.jpg" alt="‘Rogue One’, outra chateação galáctica. Até quando?" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2016/12/13/cultura/1481648224_910366.html">‘Rogue One’, outra chateação galáctica. Até quando? </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/carlos_boyero/a/">Carlos Boyero</a></span>
+</div>
+</div>
+</div>
+<time datetime="2016-12-16T12:47:49" class="articulo-actualizado">
+<meta content="2016-12-16T12:47:49" itemprop="datePublished" />
+<meta content="2016-12-16T12:47:49" itemprop="dateModified" />
+<a href="/tag/fecha/20161216/" title="Ver todas las noticias de esta fecha"> 16/12/2016 - 12:47 <abbr>BRST</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">Eu me confundo mentalmente com o tempo, a ação e os personagens de cada novo filme da série</p>
+</div>
+</article> 
+<article class="articulo" itemscope="" itemtype="https://schema.org/NewsArticle" itemref="organizacion" id="brasil-cultura-1481125653_825363">
+<div class="articulo__interior">
+<div class="articulo-antetitulo">
+<a href="//brasil.elpais.com/tag/premios_oscar/a" class="enlace">Oscar 2017</a>
+</div>
+<figure class="foto foto_w360" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2016/12/07/cultura/1481125653_825363.html">
+<img itemprop="url" class="foto-imagen" src="//ep01.epimg.net/cultura/imagenes/2016/12/07/actualidad/1481125653_825363_1481126210_miniatura_normal.jpg" alt="Oscar 2017: ‘Até o último homem’, a paixão de Cristo (parte II)" height="257" width="360">
+<meta itemprop="width"  content="360">
+<meta itemprop="height" content="257">
+</a>
+</figure>
+<h2 itemprop="headline" class="articulo-titulo"><a href="//brasil.elpais.com/brasil/2016/12/07/cultura/1481125653_825363.html">Oscar 2017: ‘Até o último homem’, a paixão de Cristo (parte II) </a></h2>
+<div class="articulo-metadatos">
+<div class="firma">
+<div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<div class="autor-texto">
+<span class="autor-nombre" itemprop="name"><a itemprop="url" href="/autor/javier_ocana/a/">Javier Ocaña</a></span>
+</div>
+</div>
+</div>
+<time datetime="2016-12-07T13:47:33" class="articulo-actualizado">
+<meta content="2016-12-07T13:47:33" itemprop="datePublished" />
+<meta content="2016-12-07T13:47:33" itemprop="dateModified" />
+<a href="/tag/fecha/20161207/" title="Ver todas las noticias de esta fecha"> 07/12/2016 - 13:47 <abbr>BRST</abbr></a>
+</time>
+</div> 
+<p class="articulo-entradilla" itemprop="description">O relato em tom bíblico e salvador de uma ‘via crucis’ em 'Até o último homem', que, além disso, inclui um epílogo que convence de vez até os mais incrédulos</p>
+</div>
+</article> 
+</div>
+</div>
 </div>
 </section>
+<nav class="paginacion">
+<ul class="paginacion-base">
+<li class="paginacion-siguiente"><a href="https://brasil.elpais.com/tag/critica_cine/a/1">Siguiente ›</a></li>
+</ul>
+</nav>
 </main>
 <aside class="envoltorio_publi estirar">
 <div id='elpais_gpt-LDB2' class='publi_luto_vertical publiLoad'>
@@ -563,7 +1810,7 @@ function lmv_cambia_subpestana(idpestana)
 <li><a href="/rss/brasil/portada_completo.xml">RSS</a></li>
 </ul>
 </div>
-<!-- date 2018-09-23 07:21:18 PM-->
+<!-- date 2018-09-28 07:26:54 PM-->
 <script type="text/javascript">
 (function(){if(PBS.slm&&PBS.slm.cf&&PBS.slm.cf.biT_){var biT_=function(BIT){var ps=document.querySelectorAll(BIT.sel),el,cls=BIT.cls||"",pos=BIT.pos,min=BIT.min||0,ads=PBS.slm.cf.ads,axm=PBS.axm,sh=0,tel,tds;if(ps&&ps.length&&ps.length>0)for(el in pos){tds=ps[pos[el][0]-1];if(tds||min>sh){tel=axm.h.el("div",{"id":PBS.slm.cf.divid+"-"+el.toUpperCase(),"Cn":cls});tds&&tds.parentNode.insertBefore(tel,tds.nextSibling)||ps[ps.length-1].parentNode.appendChild(tel)}sh++}},c;for(c=0;c<PBS.slm.cf.biT_.length;c++)biT_(PBS.slm.cf.biT_[c])}var publiPbsLoad=document.querySelectorAll("div[class*='publiLoad']");if("object"==typeof publiPbsLoad[0]){var _M=PBS.axm.C.isMovil(),_P=_M?.5:.3,size=[],i=PBS.axm.C.screen().ancho,o=PBS.axm.C.screen().alto;PBS.slm.log.onview={};window.addEventListener("scroll",function(e){for(l=0;l<publiPbsLoad.length;l++){var d=document.getElementById(publiPbsLoad[l].id),s=d.getBoundingClientRect().top,n=d.id.split(gtpdivid+"-")[1];if((o*_P)+o>s&&typeof PBS.slm.log.onview[n]=="undefined"){PBS.slm.log.onview[n]=!0;if(-1!=n.indexOf("MPU")){size=[[300,250]]}else if(-1!=n.indexOf("LDB")){if(i>=980){size=[[728,90],[980,90]]}else if(i>=728){size=[[728,90]]}else{n="M"+n;size=[[320,50]]}}else if(-1!=n.indexOf("NSTD")){size=!1}else if(-1!=n.indexOf("NATAD")){size=[[300,250],"fluid"]};PBS.axm.h.slr([{d:d.id,p:n.toLowerCase(),s:size}]);size=[]}}})}})();
 </script>
@@ -879,5 +2126,5 @@ if(typeof window['ampliaFoto'] == 'function'){
 </script></div>
 </footer>
 </div>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"de584669e4","applicationID":"81461901","transactionName":"MwFaYEIDWEZQVEENCQpLbUZZTUJUVhhFCxQQBVxdXA5XakVWUjs0SgxMWVw=","queueTime":0,"applicationTime":42,"atts":"H0ZZFgoZS0g=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"de584669e4","applicationID":"81461901","transactionName":"MwFaYEIDWEZQVEENCQpLbUZZTUJUVhhFCxQQBVxdXA5XakVWUjs0SgxMWVw=","queueTime":0,"applicationTime":125,"atts":"H0ZZFgoZS0g=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>

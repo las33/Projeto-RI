@@ -1,0 +1,1692 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.ome.lt/static/omelete/css/style.min.css?v=e1fad"/>
+
+  <title>Caçadores de Emoção - Além do Limite | Crítica</title>
+  <link rel="preload" href="https://cdn.ome.lt/static/omelete/img/omelete_logo.svg" as="image">
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationTime":27,"errorBeacon":"bam.nr-data.net","beacon":"bam.nr-data.net","licenseKey":"48f7507bbb","transactionName":"NlYGMEoAD0UEARZYDA8cIhFWAhVfCgxNRQsAXQsXFhIIQgBMD0QPFVpKElEEFkVLAANCBltQCwpMBA9COgQHRQAJ","queueTime":0,"applicationID":"135988681","agent":""}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="icon" type="image/png" sizes="96x96" href="https://cdn.ome.lt/static/omelete/img/favicon.png">
+
+<!-- Outbrain -->
+<script type="text/javascript" src="https://widgets.outbrain.com/outbrain.js"></script>
+<!-- End of Outbrain -->
+
+  <meta name="description" content="">
+
+  
+
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Omelete">
+  
+  <meta property="fb:pages" content="166251050655700" />
+  
+  
+<meta name="twitter:site" content="@omelete" />
+<meta name="twitter:creator" content="@omelete" />
+<meta name="twitter:url" content="https://www.omelete.com.br/filmes/criticas/cacadores-de-emocao-alem-do-limite-critica" />
+<meta name="twitter:domain" content="https://www.omelete.com.br/" />
+<meta name="twitter:title" content="Caçadores de Emoção - Além do Limite | Crítica" />
+<meta name="twitter:description" content="Uma aventura tão esquecível quanto bem filmada" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://cdn.ome.lt/2eJG5VnE2lJVbrAL_QwioaR2274=/1200x630/smart/extras/conteudos/pointbreak_4C9sxjl.png" />
+<meta property="og:title" content="Caçadores de Emoção - Além do Limite | Crítica" />
+<meta property="og:description" content="Uma aventura tão esquecível quanto bem filmada" />
+<meta property="og:url" content="https://www.omelete.com.br/filmes/criticas/cacadores-de-emocao-alem-do-limite-critica" />
+<meta property="og:image" content="https://cdn.ome.lt/2eJG5VnE2lJVbrAL_QwioaR2274=/1200x630/smart/extras/conteudos/pointbreak_4C9sxjl.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:type" content="article" />
+<meta property="article:author" content="Thiago Romariz" />
+<meta property="article:section" content="Filmes">
+<meta property="article:published_time" content="2016-01-29 15:20:49+00:00" />
+<meta property="article:modified_time" content="2016-01-29 15:26:41.549000+00:00" />
+
+
+  <script>
+    var allGalleries = {};
+    var contentAlreadyParsed = {};
+  </script>
+  
+
+<!-- TailTarget Tag Manager TT-9804-3/CT-153 -->
+<script>
+  (function(i) {
+  var ts = document.createElement('script');
+  ts.type = 'text/javascript';
+  ts.async = true;
+  ts.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tags.t.tailtarget.com/t3m.js?i=' + i;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ts, s);
+  })('TT-9804-3/CT-153');
+</script>
+<!-- End TailTarget Tag Manager -->
+
+<!-- Global site tag (gtag.js) - AdWords: 1062127218 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1062127218"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){
+    dataLayer.push(arguments);
+  } gtag('js', new Date());
+  gtag('config', 'AW-1062127218');
+</script>
+
+<!-- Inicio da tag TT de segmencatao -->
+<script id="tailtarget" type="text/javascript">
+// <![CDATA[
+var _ttprofiles = _ttprofiles || [];
+_ttprofiles.profiles = [];
+_ttprofiles.push(['_setAccount', 'TT-9804-3']); // _setAccount
+_ttprofiles.push(['_enableServices']);
+document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? "https:" : "http:") + "//d.tailtarget.com/profiles.js'></scr" + "ipt>");
+// ]]>
+</script>
+
+<!-- Final da tag TT de segmentacao -->
+
+  
+  <link rel="canonical" href="https://www.omelete.com.br/filmes/criticas/cacadores-de-emocao-alem-do-limite-critica" />
+  
+  <link rel="amphtml" href="https://www.omelete.com.br/amp/filmes/criticas/cacadores-de-emocao-alem-do-limite-critica">
+  
+  <meta property="fb:article_style" content="default">
+  
+  <script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Review",
+      "name" : "Caçadores de Emoção - Além do Limite | Crítica",
+      "author" : {
+        "@type" : "Person",
+        "name" : "Thiago Romariz"
+      },
+      "datePublished" : "2016-01-29 15:20:49+00:00",
+      "dateModified" : "2016-01-29 15:26:41.549000+00:00",
+      "image" : [
+    
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/Xby6Nv55OKtJR9-KeZKfKoyXLBU=/1070x750/smart/filer_public/26/0c/260c5a4a-f7ff-47a4-ae7a-0902593ffb8a/cacadoresemocao1.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/wc-JFt4pX54Dp-k7zpuQ49qHvI8=/1070x750/smart/filer_public/b2/31/b23137f8-4a6a-42f3-a796-bf46c3ee023f/cacadoresemocao3.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/BtEo9UYEZ8xI7yxIhL5r__k0MCM=/1070x750/smart/filer_public/2d/ec/2dec913e-2caf-45d8-8af3-f6f058400d16/cacadoresemocao2.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/vbQnd4Oq41osl4i054TdWtDjqbA=/1070x750/smart/filer_public/a8/3a/a83a5e94-f11b-4a68-8064-2d10113eeefe/cacadoresemocao5.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/uBzZi3p647GQMMxOa_FMPrfICrg=/1070x750/smart/filer_public/af/74/af74911c-ce6c-482e-8bc5-58e6dd09676f/cacadoresemocao4.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/sBFy84ihSAmWd4tSc3BvfJKAMHo=/1070x750/smart/filer_public/36/78/3678f579-a749-4c5d-b7af-efdc321241be/point-break-1.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/7vG3Z-iccOMaqLyFbAoON-AYFBs=/1070x750/smart/filer_public/be/b2/beb28f0e-08e8-4d56-a1ae-51c8af078c3a/point-break-2.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/e8bOVkhRVeGla-rvRaeHoNtDypg=/1070x750/smart/filer_public/f5/04/f504c2b5-d96f-4dce-a0bd-284b17646d22/download_1.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/ZU0RJnC-TZ-zZCpDTXx90KELbu4=/1070x750/smart/filer_public/3d/f9/3df91481-33e3-4d92-871f-594689ced0ac/cacadores-emocao-01.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/sZbU2e7ofFT7gwNqh_7b7C9iGnM=/1070x750/smart/filer_public/b1/b4/b1b47b17-c724-4822-99e6-aecf0ac693bb/cacadores-emocao-02.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/R6OJhflc9TguEK9yRcMSPL9oj8Q=/1070x750/smart/filer_public/c9/d6/c9d6764f-659e-446f-881c-ff033d2ea2fa/cacadores-emocao-03.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/G8o7AZf9LIlo9BcnKsDg_9gsSoM=/1070x750/smart/filer_public/06/c9/06c92532-2ba0-4063-9ae9-7004c6e8175d/cacadores-emocao-04.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/CGhjAZLCHSFT5kvKBlGzfZn92OY=/1070x750/smart/filer_public/db/dd/dbdd4b40-0a01-4263-bb63-884796eff36a/cacadores-emocao-05.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/0Gy3bWYkNqlXDEM86u2KTw6Np3A=/1070x750/smart/filer_public/a5/45/a5451e25-87b1-489a-8fb6-7a8d0564027b/cacadores-emocao-06.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/YIX0LV_EeIRjUBF2WJ6ISepAlwI=/1070x750/smart/filer_public/1d/0f/1d0f5332-b9b0-4c01-8535-e98d97d994a7/cacadores-emocao-08.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/7Ww4aRCi-ESBYRXTDHjpoTmHpGg=/1070x750/smart/filer_public/76/36/76363229-8bd5-4144-85c7-7d94810915ae/cacadores-emocao-07.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/aQyQQyfEJMZvOUR0YvBrwR9USTI=/1070x750/smart/filer_public/6f/d1/6fd11a09-f29f-484c-8e9c-e81087120cd5/cacadores-emocao-09.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/EPuNtTxMxe9Bug_XG54YHxhvl0c=/1070x750/smart/filer_public/c5/7d/c57d47ab-2032-43d8-acf6-7eecbc3d3448/cacadores-emocao-10.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/X8zW7kiOcFewA0VGRThiFPSul_4=/1070x750/smart/filer_public/1c/c0/1cc03d12-b410-43b7-935e-bc8db6a3ba73/cacadores-emocao-11.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/F-XFlZ6HSffkc0j1ILEDwJXST2g=/1070x750/smart/filer_public/a6/08/a608e0af-4560-4675-bd3b-3c387aba52a1/cacadores-emocao-12.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/p_x0c-yoIS8Cvmb566rNViwm7l4=/1070x750/smart/filer_public/35/5a/355a9454-9fd6-4226-ae74-0340ee4cad2c/cacadores-emocao-13.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/GPMZ6EzLX3OVSRBhOXek7ol53fc=/1070x750/smart/filer_public/e3/7c/e37ce1aa-44cf-44eb-907d-3f5aec9c86c9/cacadores-emocao-14.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/AO4SU-Dtgp3VmYWXViZO0Dle2jQ=/1070x750/smart/filer_public/51/19/5119281d-f5ec-4ead-8c76-f1c0f299035c/cacadores-emocao-15.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/XOTSS4KWRZfiwjtGdYXi9QQoySE=/1070x750/smart/filer_public/1a/fc/1afcf253-82ea-46b1-8ed6-00e21e9e3cf6/cacadores-emocao-16.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/YaojgsM0CVAAcM6C6EX3bO42uvs=/1070x750/smart/filer_public/78/f8/78f87f0f-7e68-4e67-b395-3706d5ae5b71/cacadores-emocao-17.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/zVyvEBy6AuUFo1FHOVJsEXVLVNI=/1070x750/smart/filer_public/64/1f/641fca24-3cb2-4239-aa2c-f92a828ef1d4/cacadores-emocao-19.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/ff0MXu86Sf5l55f8d-hizRKxTSc=/1070x750/smart/filer_public/b9/9f/b99fa80a-a431-432f-b00c-2007e1d41d76/cacadores-emocao-18.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/EoP2CYiIRbWq6MK_B2HL08P-UQA=/1070x750/smart/filer_public/13/46/1346f7d2-53e4-4fcd-a5eb-6d9daadc452f/cacadores-emocao-20.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/ydzJyqR9dq8GguY_nD1Knzj1CSQ=/1070x750/smart/filer_public/13/9b/139b8125-3536-40f5-96ad-b836dff80020/cacadores-emocao-22.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/_p6ELLq0ifwY1h4M99VOCQSx9i8=/1070x750/smart/filer_public/20/5a/205ae5a1-8b68-4c07-85e3-e66317a7f0b9/cacadores-emocao-24.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/m2q5roAIGVv7gMb1jbykl0dEpqk=/1070x750/smart/filer_public/e3/e1/e3e14b7d-283f-48d9-84cf-923e005af6ba/cacadores-emocao-23.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/PE9bNqqXFXYRcS7T5cE_Yon-4s0=/1070x750/smart/filer_public/69/d9/69d93079-2251-4d22-9b3d-b157c3017036/cacadores-emocao-25.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/Mp9wIMdfVpeOk5e4gJRrXjNzOu0=/1070x750/smart/filer_public/e6/86/e686436e-2271-4248-83f9-d9992ccdda16/cacadores-emocao-27.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/PePTpnsaojwY50vfvYszmdPaBNw=/1070x750/smart/filer_public/92/96/9296aa73-8c57-4216-8fa6-ac873d86360e/cacadores-emocao-28.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/Ze4s6xXJ_uZ9QfxGG_hQBs-26WM=/1070x750/smart/filer_public/0b/15/0b15dad7-e88c-4663-bbdf-a25a5a56ff44/cacadores-emocao-31.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/MbY0v8lNPB5p3_xTeKjlXVqSdlI=/1070x750/smart/filer_public/af/2a/af2a477d-a0d1-48a5-8ca4-ddecb0fa0f86/cacadores-emocao-29.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/urO2CzJGQteSgJSFsq9mr8ltesk=/1070x750/smart/filer_public/43/61/43610e85-82c6-4b6e-9fcd-1115d4cf28b3/cacadores-emocao-30.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/XsOLa_0-q1nEbRVdcewsWbQzFMo=/1070x750/smart/filer_public/8e/3d/8e3d4c20-de97-42b7-a482-90a295f48d5f/qzkni8b8ezzhwgfqpavpo04abf.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/Q3WWMlVdbUd0jbpLi4LeU7Ci71A=/1070x750/smart/filer_public/5b/94/5b9450cf-495a-402a-a729-e3888dfe08f6/8jjhyfreiwilgj59c60x8corfpo.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/INu_CIgIkKTPdM5OdTGYm5o-ip0=/1070x750/smart/filer_public/be/b7/beb7a169-f587-440a-9030-534b162e2427/8wppvwglwvzjq6ntmhtsjqmt84v.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/n66cnciAygatlQdmPNT9pnZm68o=/1070x750/smart/filer_public/7f/59/7f5974fc-1b42-46bb-95c7-2d8d83b2f564/8thyhf7wwdea3k71qa9ajxqpygy.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/hcvvYpdyPryvcC3dIvSV-gqhNnU=/1070x750/smart/filer_public/2a/aa/2aaae763-49c4-4520-9ef4-ab93f1935c9b/hcqqswbkqtilammlsri6qgv7zve.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/U9Ir1sjeXw8FawzwUphuqR7jYLU=/1070x750/smart/filer_public/11/15/11152705-5d38-498c-bbbb-641fc5892cbb/1wckio91ut5aevafwh4c8lloazs.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/KlL79mfCLebEJkVMMtYilck43bI=/1070x750/smart/filer_public/86/d5/86d52fa1-5e0e-407a-acf0-2b0fe922217b/illw0vyezzbrbu0hvlot21l24fu.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/6RlA9BeTrAhh_nrn073WGYRNQrY=/1070x750/smart/filer_public/22/b8/22b8809c-a09d-461e-a5a8-8c964ecedeb0/wxp4ubren7anmeitait5ds7lr6i.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/xSGDdN3TS4RKWRmod97Rsv03GqQ=/1070x750/smart/filer_public/5a/e2/5ae240e4-329c-4d2b-8a84-147b82378f55/i58obouqegulcja3nvm9fea2enq.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/Q1U7zb91T6GngDNCUaTAVtbx-KE=/1070x750/smart/filer_public/c6/1a/c61a7b85-f0f2-469b-ae0e-040dac98d577/9t2yhfkyv77v1rhd3zdiirvcf6w.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/lvKeCgo9BVlsGDrIcew-tvBTzYA=/1070x750/smart/filer_public/87/f0/87f04360-f456-4166-987f-a17662fbc40f/oppzyd8xkhqwkuvmg5kklgsiter.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/2HwDlTeWUK2cL3oDmnFUNJcCnkA=/1070x750/smart/filer_public/c4/45/c44553d8-3c75-4cfc-839f-7d591abcd973/abgnia29qt0kknaves3p8l0ydzp.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/NNo8SeYXxpzd7o8KWbdDQJx5kGo=/1070x750/smart/filer_public/76/83/7683d56d-efa4-47af-ad84-4dc440aade60/zftjnaqmgwtrws4rktascrhdezi.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/qYCXX3eo01MA2Y__0nFCmL1RZlA=/1070x750/smart/filer_public/71/8a/718a781d-9e71-46ab-a27a-ab5caae22278/aojlmnr65z7ztccdgnpwuxdeyco.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/oBd8dVTCEtQVjqdarfovScVvhQE=/1070x750/smart/filer_public/47/aa/47aa32cc-f406-4623-ba58-6b2c935517f6/y6x2rrmljqlznzhzeaocxwe907c.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/TrNoRXw_XSKct6hxRUogwf9kUeM=/1070x750/smart/filer_public/5f/36/5f36d0ae-a601-417f-bd75-49e0465627e1/ir3tapjbyeclp2ukmqaohyyi1b1.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/mBhJ1ot4Y8BqyHcsClrISUqAdA0=/1070x750/smart/filer_public/0a/e1/0ae1e80b-65ab-47b3-a2f9-38dc509027e0/xdmqz9ohjwnfw99brcf7hgixqou.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/tVDyagg5-45dBD19Klc560Yc3_8=/1070x750/smart/filer_public/2f/29/2f298a60-b37d-4898-8949-840017417d43/hpzeu90g58j8mfuesnxzoxl6fij.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/v_N6plSBAcU5NSwHJZA9t_fwnp4=/1070x750/smart/filer_public/f5/97/f597a70e-2748-4ea6-b3cd-1e394d84b994/q93gnpi5khhgpfhkvno1nwugnqg.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/O9Kx_HNsNFfZgs-Ahstp5cu4FiI=/1070x750/smart/filer_public/54/61/5461615a-cc84-4e87-b94d-ec4f45e7bf01/nmjuofmmxwe8axv9cyjdrdu7gkf.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/fMH3WtgHY_zyPPhSine4qoRZrQQ=/1070x750/smart/filer_public/b0/b1/b0b16d68-5a73-49ac-a070-119e3f8de24e/13ekzaaylbmlrob90jwc3dji1tk.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/uHtI3WX0C831-96NnN8XTYlivN4=/1070x750/smart/filer_public/2e/b0/2eb0bb7a-fd07-40dc-b999-9ddee774dbb2/wcce4fpvuftixa5eq53ws9bsqgs.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/aCTgNSTN0VV3UkQ11TKSJ2GR5Ys=/1070x750/smart/filer_public/be/0f/be0fc4d8-eaf0-41e9-be15-365732b86b71/bq3ygbuemryze73ocsx3t3tzy5o.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/NG1WJAI8iEtQaNGhaY2lYpBacvE=/1070x750/smart/filer_public/20/49/20493471-03e7-48a0-ba07-c1b2c95d13e6/ullevetkbmijdabkon2ybpkoom0.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/nQC1xuEyQ-g9AC4PlTR48Eg3nP8=/1070x750/smart/filer_public/99/df/99df505d-8bbc-4885-b2ed-037e0110b07c/yyk0hmutrvupvq7ovjvbhtdqthj.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/4mlPTFI1f_uIW6376Zw8vVqxjSo=/1070x750/smart/filer_public/03/1a/031a9850-0c2c-43a9-9b23-c14949f171bd/zjpqg5ytdqcmkjiac5yslwjc8kw.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/kohYq_PXvDJ-m7zYKnkSyJa_XDU=/1070x750/smart/filer_public/d2/4a/d24ab2b0-e86e-4655-a4ad-1bd01db71bff/krc4fs7nslwuglqoif1qm6zz1jr.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/M_Hj0puaK11GU9hlQvnjaJ46_8U=/1070x750/smart/filer_public/ef/72/ef727d01-8cd0-4b4c-a0ce-7af8f7b04771/jdsv1oayrpo4anv6e2unp0gkbpp.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/nzIXCD1e5ZcfYzwubAyLOqcaoLE=/1070x750/smart/filer_public/56/0d/560da77a-27ee-4134-b988-9783585336bb/zamupjpstw0vd1ta9uc7qzpq4as.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/8E2oD0HYQ7eB2cKcqslNer8zk10=/1070x750/smart/filer_public/80/7e/807e33f3-6885-4857-8ebf-aec494117dbc/tjv1wioc5o5siaqekkegstlcsx.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/9zf9rpPlPz3_d2wgTwXkYfS5cdM=/1070x750/smart/filer_public/aa/d1/aad1f7df-cc3d-4c06-b281-e9cb58891a01/npxqwvmvgbsf1dbsbbibk8yjr3z.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/VwncQxydIoK5sBcEkpz6sA-WY6E=/1070x750/smart/filer_public/fa/45/fa45c363-1f15-4420-bc5b-ceb02bb28687/ncvplnunova6ug4jimuyaewmn9w.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/IpEDtubqXGvR4bP18SvFF_4ay54=/1070x750/smart/filer_public/18/4b/184bfa93-fc1b-47c6-8605-7f785d9d2bd2/vafuy8olnsulqdd09dsxwf1ry1k.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/NugbKjLwf8UcBNjGxieHcbW9_aI=/1070x750/smart/filer_public/17/fb/17fbce7a-66ca-47fd-bc60-c87cd5b02a5f/s52yxxphgoddx7ijfbclvvkp8q6.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/IyL7doNmu5iM196pMXoGkImqpic=/1070x750/smart/filer_public/ff/43/ff43007b-b95c-45c4-ba75-88f88c25ecfe/lp8eahnkt2tm0jd35b2eriwukm3.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/b2jvGHhMxMGG325JLQey0EtRlpE=/1070x750/smart/filer_public/96/e9/96e9d4e0-8357-4273-aaf4-3a7d945f5597/b6lttyq6o4k10cemnblfbpiah6t.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/pfxBMhVH2hRS20PEJKG-C2XY4nQ=/1070x750/smart/filer_public/5b/2b/5b2bf9c6-09b8-4090-a751-e224eeb8e717/lwiwwvq6bd741hu3oylqz12ll3m.jpg",
+          "caption" : ""
+        }
+        
+        {
+          "@type" : "ImageObject",
+          "url" : "https://cdn.ome.lt/4bIMtWNOBeAlq1dRrUE_hArxh78=/1070x750/smart/filer_public/2b/39/2b39f4a9-873f-4b1c-bb40-b70e15309ae8/rf5im3pkwnkeoudfdmu9mxwxdbd.jpg",
+          "caption" : ""
+        }
+        ] ,
+      "video" : [] ,
+      "headline" : "Caçadores de Emoção - Além do Limite | Crítica",
+      "reviewRating" : {
+        "@type" : "Rating",
+        "ratingValue" : 2
+      },
+      "itemReviewed" : {
+        "@type" : "Thing",
+        "image" : "https://cdn.ome.lt/2eJG5VnE2lJVbrAL_QwioaR2274=/1200x630/smart/extras/conteudos/pointbreak_4C9sxjl.png",
+        "name": "Point Break"
+      },
+      "publisher" : {
+    "@type": "Organization",
+    "name": "Omelete",
+    "url": "https://www.omelete.com.br",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://cdn.ome.lt/static/omelete/img/omelete_logo.svg"
+    },
+    "sameAs": [
+      "https://www.youtube.com/user/omeleteve",
+      "https://www.facebook.com/SiteOmelete/",
+      "https://twitter.com/omelete",
+      "https://www.instagram.com/omelete/"
+    ]
+  }
+
+    }
+  
+  </script>
+
+
+
+</head>
+
+<body>
+
+
+<header class="header">
+
+<div class="container container--venom">
+    <div class="row header__wrapper">
+      <div class="col-4 d-md-none">
+        <div class="header__wrapper__menu">
+          <button class="btn-menu">
+            <span class="btn-menu__line"></span>
+            <span class="btn-menu__line"></span>
+            <span class="btn-menu__line"></span>
+          </button>
+          </button>
+        </div>
+      </div>
+      <div class="col-16 col-md-20 col-lg-18 col-xl-20">
+        <div class="header__wrapper__logo">
+          <div class="logo" style="visibility: hidden;">
+            <a href="/">
+              
+                <img class="logo__img" src="https://cdn.ome.lt/static/omelete/img/omelete_logo.svg" alt="Omelete">
+              
+            </a>
+          </div>          
+
+          <div class="links links--category links--mobile">
+            
+            
+            <ul class="links__list links__list--underline">
+              <li class="links__list__item d-block d-md-none"><a href="/">HOME</a></li>
+              <li class="links__list__item"><a href="/filmes">FILMES</a></li>
+              <li class="links__list__item"><a href="/series-tv">SÉRIES e TV</a></li>
+              <li class="links__list__item"><a href="/quadrinhos">HQs e LIVROS</a></li>
+              <li class="links__list__item"><a href="/musica">MÚSICA</a></li>
+              <li class="links__list__item"><a href="/videos">VÍDEOS</a></li>
+              <li class="links__list__item links__list__item--special"><a href="https://store.omelete.com.br/?utm_source=site_omelete&utm_medium=link&utm_campaign=link_site_omelete" target="_blank">OMELETE STORE</a></li>
+            </ul>
+
+            <div class="links--mobile__social">
+                <div class="links links--social">
+  <ul class="links__list links__list--icon">
+    <li class="links__list__item"><a class="icon-facebook" href="https://www.facebook.com/SiteOmelete/" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-instagram" href="https://www.instagram.com/omelete/" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-twitter" href="https://twitter.com/omelete" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-youtube-play" href="https://www.youtube.com/user/omeleteve" target="_blank"></a></li>
+  </ul>
+</div>
+            </div>
+
+            <div class="links__overlay"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 col-md-4 col-lg-6 col-xl-4">
+        <div class="header__wrapper__search">
+          <div class="search search--open">
+            <i class="icon icon-search"></i>
+            <div class="search__input">
+            </div>
+          </div>
+
+          <div class="separator d-none d-md-block"></div>
+
+          <div class="social  d-none d-md-block">
+              <div class="links links--social">
+  <ul class="links__list links__list--icon">
+    <li class="links__list__item"><a class="icon-facebook" href="https://www.facebook.com/SiteOmelete/" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-instagram" href="https://www.instagram.com/omelete/" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-twitter" href="https://twitter.com/omelete" target="_blank"></a></li>
+    <li class="links__list__item"><a class="icon-youtube-play" href="https://www.youtube.com/user/omeleteve" target="_blank"></a></li>
+  </ul>
+</div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="logo-venom">
+      <iframe src="https://cdn.ome.lt/static/omelete/specials/venom/logo-venom.html">
+      </iframe>
+      <div class="logo-venom__clickable"></div>
+    </div>
+</div>
+ 
+</header>
+
+<main class="page page--content">
+  <div class="main">
+    
+    
+  
+
+  
+    
+    <div class="banner banner--mast-head  ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-superior" ></div>
+      </div>
+    </div>
+    
+  
+
+    
+
+    
+
+
+
+
+<section class="section section--content section--main" data-dsq-domain="omelete.com.br" data-ref-id="104978" data-content-url="/filmes/criticas/cacadores-de-emocao-alem-do-limite-critica" data-content-type="review">
+  
+  
+  <script type="text/javascript">
+    window._seedtagq = window._seedtagq || [];
+    window._seedtagq.push(['_setId', '0546-2759-01']);
+    (function () {
+      var st = document.createElement('script');
+      st.type = 'text/javascript';
+      st.async = true;
+      st.src = ('https:' == document.location.protocol
+        ? 'https'
+        : 'http') + '://config.seedtag.com/loader.js?v=' + Math.random();
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(st, s);
+    })();
+  </script>
+  
+  
+
+  
+  
+
+  
+
+  
+
+  <div class="container section__wrapper">
+    <div class="row">
+      <div class="col-24">
+        <article class="article">
+          
+          
+          
+
+          
+          <div class="row article__header">
+            <div class="offset-0 offset-sm-2 col-24 col-sm-20 no-relative">
+              
+
+
+
+
+
+  <div class="article__header__tag">
+    
+<div class="tag tag--filmes">
+  <p>Filmes</p>
+  <div class="tag__label">
+     <span>Crítica</span> 
+    
+  </div>
+  <div class="tag__time"></div>
+</div>
+
+  </div>
+  <div class="article__header__title">
+    <h1 class="title">Caçadores de Emoção - Além do Limite | Crítica</h1>
+  </div>
+  <div class="article__header__subtitle">
+    <h2 class="subtitle">Uma aventura tão esquecível quanto bem filmada</h2>
+  </div>
+  <div class="article__header__social">
+    <div class="links links--social">
+    <ul class="links__list links__list--icon links__list--column links__list--circle">
+      
+      <li class="links__list__item"><a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//omelete.com.br/filmes/criticas/cacadores-de-emocao-alem-do-limite-critica"></a></li>
+      <li class="links__list__item"><a class="icon icon-twitter" target="_blank" href="https://twitter.com/intent/tweet?text=Ca%C3%A7adores%20de%20Emo%C3%A7%C3%A3o%20-%20Al%C3%A9m%20do%20Limite%20%7C%20Cr%C3%ADtica https%3A//omelete.com.br/filmes/criticas/cacadores-de-emocao-alem-do-limite-critica"></a></li>
+      <li class="links__list__item"><a class="icon icon-email" target="_blank" href="mailto:?subject=Ca%C3%A7adores%20de%20Emo%C3%A7%C3%A3o%20-%20Al%C3%A9m%20do%20Limite%20%7C%20Cr%C3%ADtica&body=https%3A//omelete.com.br/filmes/criticas/cacadores-de-emocao-alem-do-limite-critica"></a></li>
+      <li class="links__list__item"><a class="icon icon-whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=Ca%C3%A7adores%20de%20Emo%C3%A7%C3%A3o%20-%20Al%C3%A9m%20do%20Limite%20%7C%20Cr%C3%ADtica https%3A//omelete.com.br/filmes/criticas/cacadores-de-emocao-alem-do-limite-critica"></a></li>
+    </ul>
+  </div>
+  </div>
+  <div class="article__header__info">
+    <div class="info">
+      <div class="info__by">Thiago Romariz</div>
+
+      
+      
+      
+
+      <div class="info__date">29.01.2016</div>
+      <div class="info__time">13h20</div>
+
+        
+    </div>
+
+    
+  </div>
+
+            </div>
+          </div>
+          
+
+          
+          <div class="row ">
+            <div class="offset-0 col-24 offset-md-2 col-md-20 col-lg-12 col-xl-13">
+              
+
+
+
+
+
+
+
+
+
+
+
+<div class="article__body article--content">
+
+  
+    
+      <p dir="ltr">Não dá pra considerar <a href="/filmes/point-break/"><strong><em>Caçadores de Emoção - Além do Limite</em></strong></a> um remake do filme dirigido por <strong>Kathryn Bigelow</strong> em 1991. Se não repetisse os nomes do protagonistas, o longa de <strong>Ericson Core</strong> pode considerar a aventura original uma inspiração e nada mais que isso. São duas horas de uma história simples com fatores prontos para o sucesso, mas recheadas de pretensões que sublimam uma das únicas coisas que o filme tem de bom: o visual. A fotografia requintada e os locais escolhidos são fatores positivos em uma aventura tão esquecível quanto bem filmada.</p>
+      
+
+
+
+      
+    
+      <p>A dupla que marcou época na década de 1990 volta na pele de <strong>Édgar Ramirez</strong> (Bodhi) e<strong> Luke Bracey</strong> (Johnny Utah). O primeiro é um quase um ativista ambiental que tira dinheiro dos ricos para devolver aos pobres (e à natureza); o segundo é um ex-atleta radical que acaba de entrar no FBI e vai investigar as peripécias de Bodhi e Cia. Apesar da sinopse parecida, o funcionamento deste ‘reboot’ é semelhante ao de <em>O Vingador do Futuro</em> com Colin Farrell. Usa de atributos consagrados para recriar uma história com contexto e motivações diferentes - uma combinação falha.</p>
+      
+
+
+
+      
+    
+      
+
+
+    <script type="text/javascript">
+      allGalleries['point-break'] = [
+      { index: 1, path: '//cdn.ome.lt/fZgrtvmADXStz6FnnPtVmduDGLM=/fit-in/1070x750/smart/filer_public/26/0c/260c5a4a-f7ff-47a4-ae7a-0902593ffb8a/cacadoresemocao1.jpg', thumbnail_path: '//cdn.ome.lt/VqMJ0V32585rbF7iUmjBXA5dbcY=/158x110/smart/filer_public/26/0c/260c5a4a-f7ff-47a4-ae7a-0902593ffb8a/cacadoresemocao1.jpg', caption: '', alt: '', credits: '' },
+      { index: 2, path: '//cdn.ome.lt/uFW85T56MGfd0GApYyVAryFWVCE=/fit-in/1070x750/smart/filer_public/b2/31/b23137f8-4a6a-42f3-a796-bf46c3ee023f/cacadoresemocao3.jpg', thumbnail_path: '//cdn.ome.lt/P1jLvYU8aK3i3S_-92fJoEXE7es=/158x110/smart/filer_public/b2/31/b23137f8-4a6a-42f3-a796-bf46c3ee023f/cacadoresemocao3.jpg', caption: '', alt: '', credits: '' },
+      { index: 3, path: '//cdn.ome.lt/tpU-A9Fhi5QJ_dsrrtAAlAx1pW4=/fit-in/1070x750/smart/filer_public/2d/ec/2dec913e-2caf-45d8-8af3-f6f058400d16/cacadoresemocao2.jpg', thumbnail_path: '//cdn.ome.lt/2bm4Lx_AzjuTROGh8y2tKD8AKKg=/158x110/smart/filer_public/2d/ec/2dec913e-2caf-45d8-8af3-f6f058400d16/cacadoresemocao2.jpg', caption: '', alt: '', credits: '' },
+      { index: 4, path: '//cdn.ome.lt/qLlwShz8tlpTfmOCN7LoFY09K_A=/fit-in/1070x750/smart/filer_public/a8/3a/a83a5e94-f11b-4a68-8064-2d10113eeefe/cacadoresemocao5.jpg', thumbnail_path: '//cdn.ome.lt/25-qPRLQMlnID6dUkYVAOWrpVL0=/158x110/smart/filer_public/a8/3a/a83a5e94-f11b-4a68-8064-2d10113eeefe/cacadoresemocao5.jpg', caption: '', alt: '', credits: '' },
+      { index: 5, path: '//cdn.ome.lt/6CbZ00UtXNyypAtRDwf11OpZ-a8=/fit-in/1070x750/smart/filer_public/af/74/af74911c-ce6c-482e-8bc5-58e6dd09676f/cacadoresemocao4.jpg', thumbnail_path: '//cdn.ome.lt/Oy4t8a1CyO06FC-HlOInEWA3FLY=/158x110/smart/filer_public/af/74/af74911c-ce6c-482e-8bc5-58e6dd09676f/cacadoresemocao4.jpg', caption: '', alt: '', credits: '' },
+      { index: 6, path: '//cdn.ome.lt/To5R-1DaiGmwZNEtnUrjmYVMDBM=/fit-in/1070x750/smart/filer_public/36/78/3678f579-a749-4c5d-b7af-efdc321241be/point-break-1.jpg', thumbnail_path: '//cdn.ome.lt/b5Ygr-voPJNYMTZX5HFZ7lm72aE=/158x110/smart/filer_public/36/78/3678f579-a749-4c5d-b7af-efdc321241be/point-break-1.jpg', caption: '', alt: '', credits: '' },
+      { index: 7, path: '//cdn.ome.lt/2E8IUv_qt-L4HJ8iwpL0fKu0yAg=/fit-in/1070x750/smart/filer_public/be/b2/beb28f0e-08e8-4d56-a1ae-51c8af078c3a/point-break-2.jpg', thumbnail_path: '//cdn.ome.lt/qfKRJ1aZjo4W20bMT1rXMYYGmbA=/158x110/smart/filer_public/be/b2/beb28f0e-08e8-4d56-a1ae-51c8af078c3a/point-break-2.jpg', caption: '', alt: '', credits: '' },
+      { index: 8, path: '//cdn.ome.lt/SCoO0dxxmiEsSFb6vZDuOEKfIRg=/fit-in/1070x750/smart/filer_public/f5/04/f504c2b5-d96f-4dce-a0bd-284b17646d22/download_1.jpg', thumbnail_path: '//cdn.ome.lt/IGzKhMIYH9MUo2FPJvAVcM-gQQE=/158x110/smart/filer_public/f5/04/f504c2b5-d96f-4dce-a0bd-284b17646d22/download_1.jpg', caption: '', alt: '', credits: '' },
+      { index: 9, path: '//cdn.ome.lt/Fc4U4sTzEhBDx0bUTnu8MU7zDsQ=/fit-in/1070x750/smart/filer_public/3d/f9/3df91481-33e3-4d92-871f-594689ced0ac/cacadores-emocao-01.jpg', thumbnail_path: '//cdn.ome.lt/jCLUmJipDUb7qIQ1uQy9n2CfzP0=/158x110/smart/filer_public/3d/f9/3df91481-33e3-4d92-871f-594689ced0ac/cacadores-emocao-01.jpg', caption: '', alt: '', credits: '' },
+      { index: 10, path: '//cdn.ome.lt/QCf9acD3j0FeiITYxP5kc1L1hhw=/fit-in/1070x750/smart/filer_public/b1/b4/b1b47b17-c724-4822-99e6-aecf0ac693bb/cacadores-emocao-02.jpg', thumbnail_path: '//cdn.ome.lt/env8q9JXQxSySxUUFM3E1m62ZSI=/158x110/smart/filer_public/b1/b4/b1b47b17-c724-4822-99e6-aecf0ac693bb/cacadores-emocao-02.jpg', caption: '', alt: '', credits: '' },
+      { index: 11, path: '//cdn.ome.lt/4xlxOgvCYQNRo17tmTO385g-9Iw=/fit-in/1070x750/smart/filer_public/c9/d6/c9d6764f-659e-446f-881c-ff033d2ea2fa/cacadores-emocao-03.jpg', thumbnail_path: '//cdn.ome.lt/d3-M3XfnMYEA0DCPwofmlJz0pBE=/158x110/smart/filer_public/c9/d6/c9d6764f-659e-446f-881c-ff033d2ea2fa/cacadores-emocao-03.jpg', caption: '', alt: '', credits: '' },
+      { index: 12, path: '//cdn.ome.lt/VSFg1d15h9IUVvWSO5kSgMcpLqI=/fit-in/1070x750/smart/filer_public/06/c9/06c92532-2ba0-4063-9ae9-7004c6e8175d/cacadores-emocao-04.jpg', thumbnail_path: '//cdn.ome.lt/T8ydQjU5PSJz0Fa69EsSaLL_Mto=/158x110/smart/filer_public/06/c9/06c92532-2ba0-4063-9ae9-7004c6e8175d/cacadores-emocao-04.jpg', caption: '', alt: '', credits: '' },
+      { index: 13, path: '//cdn.ome.lt/2JZKvp_zp2-X407lz8PHN05nni8=/fit-in/1070x750/smart/filer_public/db/dd/dbdd4b40-0a01-4263-bb63-884796eff36a/cacadores-emocao-05.jpg', thumbnail_path: '//cdn.ome.lt/55q1WFdIc8Nwecemf8W1vKYlGTk=/158x110/smart/filer_public/db/dd/dbdd4b40-0a01-4263-bb63-884796eff36a/cacadores-emocao-05.jpg', caption: '', alt: '', credits: '' },
+      { index: 14, path: '//cdn.ome.lt/VbpF9b7RZPxF8GhljToo_smm0aA=/fit-in/1070x750/smart/filer_public/a5/45/a5451e25-87b1-489a-8fb6-7a8d0564027b/cacadores-emocao-06.jpg', thumbnail_path: '//cdn.ome.lt/2jhvpwtBRSO04s4WAVBmD7I2Skk=/158x110/smart/filer_public/a5/45/a5451e25-87b1-489a-8fb6-7a8d0564027b/cacadores-emocao-06.jpg', caption: '', alt: '', credits: '' },
+      { index: 15, path: '//cdn.ome.lt/IRFv2bOu0lrkmkz7xjJr0GV5htc=/fit-in/1070x750/smart/filer_public/1d/0f/1d0f5332-b9b0-4c01-8535-e98d97d994a7/cacadores-emocao-08.jpg', thumbnail_path: '//cdn.ome.lt/cPYzORs3H7KmWux0Zoiq0FWj-P8=/158x110/smart/filer_public/1d/0f/1d0f5332-b9b0-4c01-8535-e98d97d994a7/cacadores-emocao-08.jpg', caption: '', alt: '', credits: '' },
+      { index: 16, path: '//cdn.ome.lt/3opvPgJ8RtZs7LCIBBnXcQqQ1aU=/fit-in/1070x750/smart/filer_public/76/36/76363229-8bd5-4144-85c7-7d94810915ae/cacadores-emocao-07.jpg', thumbnail_path: '//cdn.ome.lt/w71AoeERdBv9xOE9WXtZQkRybyI=/158x110/smart/filer_public/76/36/76363229-8bd5-4144-85c7-7d94810915ae/cacadores-emocao-07.jpg', caption: '', alt: '', credits: '' },
+      { index: 17, path: '//cdn.ome.lt/R4WwiB2hoe5jufmgSGxiLOoB0Gk=/fit-in/1070x750/smart/filer_public/6f/d1/6fd11a09-f29f-484c-8e9c-e81087120cd5/cacadores-emocao-09.jpg', thumbnail_path: '//cdn.ome.lt/r0tbbBuhlQaUw3-vN9u5mb8okMA=/158x110/smart/filer_public/6f/d1/6fd11a09-f29f-484c-8e9c-e81087120cd5/cacadores-emocao-09.jpg', caption: '', alt: '', credits: '' },
+      { index: 18, path: '//cdn.ome.lt/ff6YqBjbkl04f-hXMNkJFjFlofk=/fit-in/1070x750/smart/filer_public/c5/7d/c57d47ab-2032-43d8-acf6-7eecbc3d3448/cacadores-emocao-10.jpg', thumbnail_path: '//cdn.ome.lt/iTPR4lk7XWlCQ_fKJ5-Z-uRXJ9k=/158x110/smart/filer_public/c5/7d/c57d47ab-2032-43d8-acf6-7eecbc3d3448/cacadores-emocao-10.jpg', caption: '', alt: '', credits: '' },
+      { index: 19, path: '//cdn.ome.lt/TEadNhn1dywGMgnbSHV2zlAHBc4=/fit-in/1070x750/smart/filer_public/1c/c0/1cc03d12-b410-43b7-935e-bc8db6a3ba73/cacadores-emocao-11.jpg', thumbnail_path: '//cdn.ome.lt/HobyWyUISqRrqguZa9FvrakFDCo=/158x110/smart/filer_public/1c/c0/1cc03d12-b410-43b7-935e-bc8db6a3ba73/cacadores-emocao-11.jpg', caption: '', alt: '', credits: '' },
+      { index: 20, path: '//cdn.ome.lt/yE5MObcsn1FM--tGGCZI4z3Ro9o=/fit-in/1070x750/smart/filer_public/a6/08/a608e0af-4560-4675-bd3b-3c387aba52a1/cacadores-emocao-12.jpg', thumbnail_path: '//cdn.ome.lt/XpNOZi7i7YvEZMP24ZMBQ6kCiZA=/158x110/smart/filer_public/a6/08/a608e0af-4560-4675-bd3b-3c387aba52a1/cacadores-emocao-12.jpg', caption: '', alt: '', credits: '' },
+      { index: 21, path: '//cdn.ome.lt/gwlmy5rMIuOZDO0skG7D-TQ-B14=/fit-in/1070x750/smart/filer_public/35/5a/355a9454-9fd6-4226-ae74-0340ee4cad2c/cacadores-emocao-13.jpg', thumbnail_path: '//cdn.ome.lt/BmNWhOJzuWG3guBWKUtsB-qjbxc=/158x110/smart/filer_public/35/5a/355a9454-9fd6-4226-ae74-0340ee4cad2c/cacadores-emocao-13.jpg', caption: '', alt: '', credits: '' },
+      { index: 22, path: '//cdn.ome.lt/Pnu_CW9eoCPa42ZZKeqhIK70_Xc=/fit-in/1070x750/smart/filer_public/e3/7c/e37ce1aa-44cf-44eb-907d-3f5aec9c86c9/cacadores-emocao-14.jpg', thumbnail_path: '//cdn.ome.lt/Qx0qMsOUsVsYfDEOb4giq84ODB8=/158x110/smart/filer_public/e3/7c/e37ce1aa-44cf-44eb-907d-3f5aec9c86c9/cacadores-emocao-14.jpg', caption: '', alt: '', credits: '' },
+      { index: 23, path: '//cdn.ome.lt/9elGtHhzNvlYNsR2u2NK8P7eysM=/fit-in/1070x750/smart/filer_public/51/19/5119281d-f5ec-4ead-8c76-f1c0f299035c/cacadores-emocao-15.jpg', thumbnail_path: '//cdn.ome.lt/xKLLwGOMXy8K-FmcUwe_gDjKgQk=/158x110/smart/filer_public/51/19/5119281d-f5ec-4ead-8c76-f1c0f299035c/cacadores-emocao-15.jpg', caption: '', alt: '', credits: '' },
+      { index: 24, path: '//cdn.ome.lt/uS17BfbenBNPP00Ipo4wiLW1FSU=/fit-in/1070x750/smart/filer_public/1a/fc/1afcf253-82ea-46b1-8ed6-00e21e9e3cf6/cacadores-emocao-16.jpg', thumbnail_path: '//cdn.ome.lt/e0Oenoa07U2m1Q-69JsG3qvjkZk=/158x110/smart/filer_public/1a/fc/1afcf253-82ea-46b1-8ed6-00e21e9e3cf6/cacadores-emocao-16.jpg', caption: '', alt: '', credits: '' },
+      { index: 25, path: '//cdn.ome.lt/zk9ms9ptmxH0x2g1_y5T1BSsTF0=/fit-in/1070x750/smart/filer_public/78/f8/78f87f0f-7e68-4e67-b395-3706d5ae5b71/cacadores-emocao-17.jpg', thumbnail_path: '//cdn.ome.lt/R36keyuPuGVzakT41p8ayGeYW9I=/158x110/smart/filer_public/78/f8/78f87f0f-7e68-4e67-b395-3706d5ae5b71/cacadores-emocao-17.jpg', caption: '', alt: '', credits: '' },
+      { index: 26, path: '//cdn.ome.lt/DkEnVecgqiS6Z1vj8aUqs7nIfKM=/fit-in/1070x750/smart/filer_public/64/1f/641fca24-3cb2-4239-aa2c-f92a828ef1d4/cacadores-emocao-19.jpg', thumbnail_path: '//cdn.ome.lt/1O_vVH__AaVL2A5xQGCm7gsjwIw=/158x110/smart/filer_public/64/1f/641fca24-3cb2-4239-aa2c-f92a828ef1d4/cacadores-emocao-19.jpg', caption: '', alt: '', credits: '' },
+      { index: 27, path: '//cdn.ome.lt/ijoanN90fLkkvUGPmIwUllfHr_g=/fit-in/1070x750/smart/filer_public/b9/9f/b99fa80a-a431-432f-b00c-2007e1d41d76/cacadores-emocao-18.jpg', thumbnail_path: '//cdn.ome.lt/yvSU5syV--rOlcs4cGSR1xymtbU=/158x110/smart/filer_public/b9/9f/b99fa80a-a431-432f-b00c-2007e1d41d76/cacadores-emocao-18.jpg', caption: '', alt: '', credits: '' },
+      { index: 28, path: '//cdn.ome.lt/XG6yfsdyiaYuKhKh2EGfRfpo_ao=/fit-in/1070x750/smart/filer_public/13/46/1346f7d2-53e4-4fcd-a5eb-6d9daadc452f/cacadores-emocao-20.jpg', thumbnail_path: '//cdn.ome.lt/myJWAwfmb4CqplktMsce8gyjB90=/158x110/smart/filer_public/13/46/1346f7d2-53e4-4fcd-a5eb-6d9daadc452f/cacadores-emocao-20.jpg', caption: '', alt: '', credits: '' },
+      { index: 29, path: '//cdn.ome.lt/W9RBV-Gsk2QhmtK8EfrPakInQpI=/fit-in/1070x750/smart/filer_public/13/9b/139b8125-3536-40f5-96ad-b836dff80020/cacadores-emocao-22.jpg', thumbnail_path: '//cdn.ome.lt/lzGm9RWoC683KWgJtmiCPWJNss4=/158x110/smart/filer_public/13/9b/139b8125-3536-40f5-96ad-b836dff80020/cacadores-emocao-22.jpg', caption: '', alt: '', credits: '' },
+      { index: 30, path: '//cdn.ome.lt/WTgKjiXYa3oBTCXvnKkBGNcjdfE=/fit-in/1070x750/smart/filer_public/20/5a/205ae5a1-8b68-4c07-85e3-e66317a7f0b9/cacadores-emocao-24.jpg', thumbnail_path: '//cdn.ome.lt/CaF_lRBcicM_KY-GSTxFZiZQRSA=/158x110/smart/filer_public/20/5a/205ae5a1-8b68-4c07-85e3-e66317a7f0b9/cacadores-emocao-24.jpg', caption: '', alt: '', credits: '' },
+      { index: 31, path: '//cdn.ome.lt/qneK15HLqD7f12pnSxDBt7KYeiI=/fit-in/1070x750/smart/filer_public/e3/e1/e3e14b7d-283f-48d9-84cf-923e005af6ba/cacadores-emocao-23.jpg', thumbnail_path: '//cdn.ome.lt/-S5aCgBJljy48u--IUBeGBM0szk=/158x110/smart/filer_public/e3/e1/e3e14b7d-283f-48d9-84cf-923e005af6ba/cacadores-emocao-23.jpg', caption: '', alt: '', credits: '' },
+      { index: 32, path: '//cdn.ome.lt/gfGTKtZ9TCoC6JBqZjx2KRIdcC4=/fit-in/1070x750/smart/filer_public/69/d9/69d93079-2251-4d22-9b3d-b157c3017036/cacadores-emocao-25.jpg', thumbnail_path: '//cdn.ome.lt/z7oL4plgQeBj32EHqp3iGmWlx30=/158x110/smart/filer_public/69/d9/69d93079-2251-4d22-9b3d-b157c3017036/cacadores-emocao-25.jpg', caption: '', alt: '', credits: '' },
+      { index: 33, path: '//cdn.ome.lt/-MH4D6viQ3dufG7IXXOo1BV5sKw=/fit-in/1070x750/smart/filer_public/e6/86/e686436e-2271-4248-83f9-d9992ccdda16/cacadores-emocao-27.jpg', thumbnail_path: '//cdn.ome.lt/x1V11MqVQRgkVOLAUh0sUp5GcJk=/158x110/smart/filer_public/e6/86/e686436e-2271-4248-83f9-d9992ccdda16/cacadores-emocao-27.jpg', caption: '', alt: '', credits: '' },
+      { index: 34, path: '//cdn.ome.lt/oa9l0d2w7HHPottvTdCWe1Wzfb4=/fit-in/1070x750/smart/filer_public/92/96/9296aa73-8c57-4216-8fa6-ac873d86360e/cacadores-emocao-28.jpg', thumbnail_path: '//cdn.ome.lt/YHdBrSCMZ5UA49P43-P4HgM_5ig=/158x110/smart/filer_public/92/96/9296aa73-8c57-4216-8fa6-ac873d86360e/cacadores-emocao-28.jpg', caption: '', alt: '', credits: '' },
+      { index: 35, path: '//cdn.ome.lt/lWIn0awnNAWsllSUBz6MHNvR5Ig=/fit-in/1070x750/smart/filer_public/0b/15/0b15dad7-e88c-4663-bbdf-a25a5a56ff44/cacadores-emocao-31.jpg', thumbnail_path: '//cdn.ome.lt/nTuDqJv_kTGin-_WsvdLj_s3-m4=/158x110/smart/filer_public/0b/15/0b15dad7-e88c-4663-bbdf-a25a5a56ff44/cacadores-emocao-31.jpg', caption: '', alt: '', credits: '' },
+      { index: 36, path: '//cdn.ome.lt/eDNDZkUhBWqsIL9L10YME6QsSKE=/fit-in/1070x750/smart/filer_public/af/2a/af2a477d-a0d1-48a5-8ca4-ddecb0fa0f86/cacadores-emocao-29.jpg', thumbnail_path: '//cdn.ome.lt/rIGytW_SLQIlCEMFfnC25SHnPH4=/158x110/smart/filer_public/af/2a/af2a477d-a0d1-48a5-8ca4-ddecb0fa0f86/cacadores-emocao-29.jpg', caption: '', alt: '', credits: '' },
+      { index: 37, path: '//cdn.ome.lt/JeiU98nLfXoiBW3aeN5Z9sPi4_c=/fit-in/1070x750/smart/filer_public/43/61/43610e85-82c6-4b6e-9fcd-1115d4cf28b3/cacadores-emocao-30.jpg', thumbnail_path: '//cdn.ome.lt/jIdaS6C26y40-t4gBs8jhqFFGek=/158x110/smart/filer_public/43/61/43610e85-82c6-4b6e-9fcd-1115d4cf28b3/cacadores-emocao-30.jpg', caption: '', alt: '', credits: '' },
+      { index: 38, path: '//cdn.ome.lt/KxJ5HC-ZfxuE6aOTainPgO9TCXw=/fit-in/1070x750/smart/filer_public/8e/3d/8e3d4c20-de97-42b7-a482-90a295f48d5f/qzkni8b8ezzhwgfqpavpo04abf.jpg', thumbnail_path: '//cdn.ome.lt/KOkijG4QGXEd9-EkztuwhL0N3O8=/158x110/smart/filer_public/8e/3d/8e3d4c20-de97-42b7-a482-90a295f48d5f/qzkni8b8ezzhwgfqpavpo04abf.jpg', caption: '', alt: '', credits: '' },
+      { index: 39, path: '//cdn.ome.lt/cn1B19epC21oMjIu_yJ2mcHvv8g=/fit-in/1070x750/smart/filer_public/5b/94/5b9450cf-495a-402a-a729-e3888dfe08f6/8jjhyfreiwilgj59c60x8corfpo.jpg', thumbnail_path: '//cdn.ome.lt/kFNcOgxXAc97Pb1V8EumEC_jvcg=/158x110/smart/filer_public/5b/94/5b9450cf-495a-402a-a729-e3888dfe08f6/8jjhyfreiwilgj59c60x8corfpo.jpg', caption: '', alt: '', credits: '' },
+      { index: 40, path: '//cdn.ome.lt/sCbLgmgccIvi18EyN8E-gxWR40A=/fit-in/1070x750/smart/filer_public/be/b7/beb7a169-f587-440a-9030-534b162e2427/8wppvwglwvzjq6ntmhtsjqmt84v.jpg', thumbnail_path: '//cdn.ome.lt/HPu1RNT7s53B1TXejL-w_KWHRhM=/158x110/smart/filer_public/be/b7/beb7a169-f587-440a-9030-534b162e2427/8wppvwglwvzjq6ntmhtsjqmt84v.jpg', caption: '', alt: '', credits: '' },
+      { index: 41, path: '//cdn.ome.lt/Wj71UsOzT4FIc0S-zMWimcEET8A=/fit-in/1070x750/smart/filer_public/7f/59/7f5974fc-1b42-46bb-95c7-2d8d83b2f564/8thyhf7wwdea3k71qa9ajxqpygy.jpg', thumbnail_path: '//cdn.ome.lt/QxODdfw4t-Y9t5YP2qI8CErUVuI=/158x110/smart/filer_public/7f/59/7f5974fc-1b42-46bb-95c7-2d8d83b2f564/8thyhf7wwdea3k71qa9ajxqpygy.jpg', caption: '', alt: '', credits: '' },
+      { index: 42, path: '//cdn.ome.lt/pHdQX9UFKJNSNpJe5_xDxx0Yvw4=/fit-in/1070x750/smart/filer_public/2a/aa/2aaae763-49c4-4520-9ef4-ab93f1935c9b/hcqqswbkqtilammlsri6qgv7zve.jpg', thumbnail_path: '//cdn.ome.lt/vRUzy-9hn0f1RQtTna62fPblc-s=/158x110/smart/filer_public/2a/aa/2aaae763-49c4-4520-9ef4-ab93f1935c9b/hcqqswbkqtilammlsri6qgv7zve.jpg', caption: '', alt: '', credits: '' },
+      { index: 43, path: '//cdn.ome.lt/-f46rYVcTWifSABeGx95Ojg8xEo=/fit-in/1070x750/smart/filer_public/11/15/11152705-5d38-498c-bbbb-641fc5892cbb/1wckio91ut5aevafwh4c8lloazs.jpg', thumbnail_path: '//cdn.ome.lt/7Tu8x35GAtsfTbYok__7FkumNx8=/158x110/smart/filer_public/11/15/11152705-5d38-498c-bbbb-641fc5892cbb/1wckio91ut5aevafwh4c8lloazs.jpg', caption: '', alt: '', credits: '' },
+      { index: 44, path: '//cdn.ome.lt/8ZaDM_VvKSiwe7BdcF7hMZJWZGc=/fit-in/1070x750/smart/filer_public/86/d5/86d52fa1-5e0e-407a-acf0-2b0fe922217b/illw0vyezzbrbu0hvlot21l24fu.jpg', thumbnail_path: '//cdn.ome.lt/i5w12G_rNTfEPFyC4lv3n2hdjqY=/158x110/smart/filer_public/86/d5/86d52fa1-5e0e-407a-acf0-2b0fe922217b/illw0vyezzbrbu0hvlot21l24fu.jpg', caption: '', alt: '', credits: '' },
+      { index: 45, path: '//cdn.ome.lt/156QeCMLQgI2FcwAFeYSF4wTRxI=/fit-in/1070x750/smart/filer_public/22/b8/22b8809c-a09d-461e-a5a8-8c964ecedeb0/wxp4ubren7anmeitait5ds7lr6i.jpg', thumbnail_path: '//cdn.ome.lt/nNSrKQndM56ZqQHMrJkTT8pzyVg=/158x110/smart/filer_public/22/b8/22b8809c-a09d-461e-a5a8-8c964ecedeb0/wxp4ubren7anmeitait5ds7lr6i.jpg', caption: '', alt: '', credits: '' },
+      { index: 46, path: '//cdn.ome.lt/vN1MeBybbf51VMlfy01QJWp_kfM=/fit-in/1070x750/smart/filer_public/5a/e2/5ae240e4-329c-4d2b-8a84-147b82378f55/i58obouqegulcja3nvm9fea2enq.jpg', thumbnail_path: '//cdn.ome.lt/6UXXitzb8D8c1g_sAPjVBDboZTM=/158x110/smart/filer_public/5a/e2/5ae240e4-329c-4d2b-8a84-147b82378f55/i58obouqegulcja3nvm9fea2enq.jpg', caption: '', alt: '', credits: '' },
+      { index: 47, path: '//cdn.ome.lt/4u35b4nepij89wuXxocwK4m1uUc=/fit-in/1070x750/smart/filer_public/c6/1a/c61a7b85-f0f2-469b-ae0e-040dac98d577/9t2yhfkyv77v1rhd3zdiirvcf6w.jpg', thumbnail_path: '//cdn.ome.lt/7p_xDqyKLPvz4gWlIMLGxBF3Bhg=/158x110/smart/filer_public/c6/1a/c61a7b85-f0f2-469b-ae0e-040dac98d577/9t2yhfkyv77v1rhd3zdiirvcf6w.jpg', caption: '', alt: '', credits: '' },
+      { index: 48, path: '//cdn.ome.lt/XmyuAwwu-g3F1WYJ5kq70tym1_0=/fit-in/1070x750/smart/filer_public/87/f0/87f04360-f456-4166-987f-a17662fbc40f/oppzyd8xkhqwkuvmg5kklgsiter.jpg', thumbnail_path: '//cdn.ome.lt/40-i1toCkShtsRTDhPNrCCP7nEU=/158x110/smart/filer_public/87/f0/87f04360-f456-4166-987f-a17662fbc40f/oppzyd8xkhqwkuvmg5kklgsiter.jpg', caption: '', alt: '', credits: '' },
+      { index: 49, path: '//cdn.ome.lt/8Pdhtcgo4DtVP2oPkNZEkCQSWA0=/fit-in/1070x750/smart/filer_public/c4/45/c44553d8-3c75-4cfc-839f-7d591abcd973/abgnia29qt0kknaves3p8l0ydzp.jpg', thumbnail_path: '//cdn.ome.lt/0kQ289NYO3pRDPsi3ixW8u22zf8=/158x110/smart/filer_public/c4/45/c44553d8-3c75-4cfc-839f-7d591abcd973/abgnia29qt0kknaves3p8l0ydzp.jpg', caption: '', alt: '', credits: '' },
+      { index: 50, path: '//cdn.ome.lt/4BQxn6to4pZy-79P8L_9OkiLxEg=/fit-in/1070x750/smart/filer_public/76/83/7683d56d-efa4-47af-ad84-4dc440aade60/zftjnaqmgwtrws4rktascrhdezi.jpg', thumbnail_path: '//cdn.ome.lt/HAQUbqnivB3N1Q-anAbnlD58IS8=/158x110/smart/filer_public/76/83/7683d56d-efa4-47af-ad84-4dc440aade60/zftjnaqmgwtrws4rktascrhdezi.jpg', caption: '', alt: '', credits: '' },
+      { index: 51, path: '//cdn.ome.lt/PFdLY-UeFPB__MrgTeTlJkShOrU=/fit-in/1070x750/smart/filer_public/71/8a/718a781d-9e71-46ab-a27a-ab5caae22278/aojlmnr65z7ztccdgnpwuxdeyco.jpg', thumbnail_path: '//cdn.ome.lt/MNd1yOTgvPee0MMzdLZusfeHFho=/158x110/smart/filer_public/71/8a/718a781d-9e71-46ab-a27a-ab5caae22278/aojlmnr65z7ztccdgnpwuxdeyco.jpg', caption: '', alt: '', credits: '' },
+      { index: 52, path: '//cdn.ome.lt/877qJNkj9S0baOmOAhBylUYt5I4=/fit-in/1070x750/smart/filer_public/47/aa/47aa32cc-f406-4623-ba58-6b2c935517f6/y6x2rrmljqlznzhzeaocxwe907c.jpg', thumbnail_path: '//cdn.ome.lt/9lGbtJnCptCG8hbn0ekI6dKW4vE=/158x110/smart/filer_public/47/aa/47aa32cc-f406-4623-ba58-6b2c935517f6/y6x2rrmljqlznzhzeaocxwe907c.jpg', caption: '', alt: '', credits: '' },
+      { index: 53, path: '//cdn.ome.lt/dDuA4p9s7tXXELiFYN44aDs1niA=/fit-in/1070x750/smart/filer_public/5f/36/5f36d0ae-a601-417f-bd75-49e0465627e1/ir3tapjbyeclp2ukmqaohyyi1b1.jpg', thumbnail_path: '//cdn.ome.lt/DGQVs1pDgzSPRpRPjAhwCfYy9dQ=/158x110/smart/filer_public/5f/36/5f36d0ae-a601-417f-bd75-49e0465627e1/ir3tapjbyeclp2ukmqaohyyi1b1.jpg', caption: '', alt: '', credits: '' },
+      { index: 54, path: '//cdn.ome.lt/ZPGOj7P741h5gT6iev2PfbS5AzE=/fit-in/1070x750/smart/filer_public/0a/e1/0ae1e80b-65ab-47b3-a2f9-38dc509027e0/xdmqz9ohjwnfw99brcf7hgixqou.jpg', thumbnail_path: '//cdn.ome.lt/rABpQIrdOMcKvtWt0iDNB3daPRk=/158x110/smart/filer_public/0a/e1/0ae1e80b-65ab-47b3-a2f9-38dc509027e0/xdmqz9ohjwnfw99brcf7hgixqou.jpg', caption: '', alt: '', credits: '' },
+      { index: 55, path: '//cdn.ome.lt/LQx8r4iYydyy9HB1RrneFUzAy6o=/fit-in/1070x750/smart/filer_public/2f/29/2f298a60-b37d-4898-8949-840017417d43/hpzeu90g58j8mfuesnxzoxl6fij.jpg', thumbnail_path: '//cdn.ome.lt/bxh7XbddMD8Pognq11w3iHYLjd8=/158x110/smart/filer_public/2f/29/2f298a60-b37d-4898-8949-840017417d43/hpzeu90g58j8mfuesnxzoxl6fij.jpg', caption: '', alt: '', credits: '' },
+      { index: 56, path: '//cdn.ome.lt/Npcpz1ooL1rMTCjdodbESjmCv7I=/fit-in/1070x750/smart/filer_public/f5/97/f597a70e-2748-4ea6-b3cd-1e394d84b994/q93gnpi5khhgpfhkvno1nwugnqg.jpg', thumbnail_path: '//cdn.ome.lt/TtoKpU9j6yqKh5OJoj5TesYEtIo=/158x110/smart/filer_public/f5/97/f597a70e-2748-4ea6-b3cd-1e394d84b994/q93gnpi5khhgpfhkvno1nwugnqg.jpg', caption: '', alt: '', credits: '' },
+      { index: 57, path: '//cdn.ome.lt/dTZW1sX1zAlpdwKzdCP9STKTWmw=/fit-in/1070x750/smart/filer_public/54/61/5461615a-cc84-4e87-b94d-ec4f45e7bf01/nmjuofmmxwe8axv9cyjdrdu7gkf.jpg', thumbnail_path: '//cdn.ome.lt/jvMm_ST5blfnuAQGx1L9Utb0AUw=/158x110/smart/filer_public/54/61/5461615a-cc84-4e87-b94d-ec4f45e7bf01/nmjuofmmxwe8axv9cyjdrdu7gkf.jpg', caption: '', alt: '', credits: '' },
+      { index: 58, path: '//cdn.ome.lt/k1WBCGBVic3IMyDJZZ_4nKqKeFA=/fit-in/1070x750/smart/filer_public/b0/b1/b0b16d68-5a73-49ac-a070-119e3f8de24e/13ekzaaylbmlrob90jwc3dji1tk.jpg', thumbnail_path: '//cdn.ome.lt/yVnAtOBLOa3TddBJcz8ENrmJRtI=/158x110/smart/filer_public/b0/b1/b0b16d68-5a73-49ac-a070-119e3f8de24e/13ekzaaylbmlrob90jwc3dji1tk.jpg', caption: '', alt: '', credits: '' },
+      { index: 59, path: '//cdn.ome.lt/3M7H9pf9EFgFOQIsJIfMnWZQW08=/fit-in/1070x750/smart/filer_public/2e/b0/2eb0bb7a-fd07-40dc-b999-9ddee774dbb2/wcce4fpvuftixa5eq53ws9bsqgs.jpg', thumbnail_path: '//cdn.ome.lt/RwaGWt-taoZovnGTrcVONCXem4g=/158x110/smart/filer_public/2e/b0/2eb0bb7a-fd07-40dc-b999-9ddee774dbb2/wcce4fpvuftixa5eq53ws9bsqgs.jpg', caption: '', alt: '', credits: '' },
+      { index: 60, path: '//cdn.ome.lt/svHg1DuQt_vsqkrq1BeosMyuWZk=/fit-in/1070x750/smart/filer_public/be/0f/be0fc4d8-eaf0-41e9-be15-365732b86b71/bq3ygbuemryze73ocsx3t3tzy5o.jpg', thumbnail_path: '//cdn.ome.lt/UD9GEhI5JycgLEslH1zBv3ZdYUU=/158x110/smart/filer_public/be/0f/be0fc4d8-eaf0-41e9-be15-365732b86b71/bq3ygbuemryze73ocsx3t3tzy5o.jpg', caption: '', alt: '', credits: '' },
+      { index: 61, path: '//cdn.ome.lt/rjwXWtdy3CAkSd9fFckm9G619tg=/fit-in/1070x750/smart/filer_public/20/49/20493471-03e7-48a0-ba07-c1b2c95d13e6/ullevetkbmijdabkon2ybpkoom0.jpg', thumbnail_path: '//cdn.ome.lt/RLiwI4B8XTwG-zia7Xkq4qk2bCM=/158x110/smart/filer_public/20/49/20493471-03e7-48a0-ba07-c1b2c95d13e6/ullevetkbmijdabkon2ybpkoom0.jpg', caption: '', alt: '', credits: '' },
+      { index: 62, path: '//cdn.ome.lt/tLqhRoCaOILcXanCa87BbY5WWVk=/fit-in/1070x750/smart/filer_public/99/df/99df505d-8bbc-4885-b2ed-037e0110b07c/yyk0hmutrvupvq7ovjvbhtdqthj.jpg', thumbnail_path: '//cdn.ome.lt/zRYDYpyVFF4rjoggiLCh71HLur4=/158x110/smart/filer_public/99/df/99df505d-8bbc-4885-b2ed-037e0110b07c/yyk0hmutrvupvq7ovjvbhtdqthj.jpg', caption: '', alt: '', credits: '' },
+      { index: 63, path: '//cdn.ome.lt/Jv4WZkuGA794B2fBoEQ2Q2d8Sso=/fit-in/1070x750/smart/filer_public/03/1a/031a9850-0c2c-43a9-9b23-c14949f171bd/zjpqg5ytdqcmkjiac5yslwjc8kw.jpg', thumbnail_path: '//cdn.ome.lt/9PFYQq4ymYGqI3QRhHlV0EkXCY4=/158x110/smart/filer_public/03/1a/031a9850-0c2c-43a9-9b23-c14949f171bd/zjpqg5ytdqcmkjiac5yslwjc8kw.jpg', caption: '', alt: '', credits: '' },
+      { index: 64, path: '//cdn.ome.lt/sxOuqu4yKXrN_liepxAypf4saQo=/fit-in/1070x750/smart/filer_public/d2/4a/d24ab2b0-e86e-4655-a4ad-1bd01db71bff/krc4fs7nslwuglqoif1qm6zz1jr.jpg', thumbnail_path: '//cdn.ome.lt/u5Ebu70UqHhpqtw15c17gPzmnVg=/158x110/smart/filer_public/d2/4a/d24ab2b0-e86e-4655-a4ad-1bd01db71bff/krc4fs7nslwuglqoif1qm6zz1jr.jpg', caption: '', alt: '', credits: '' },
+      { index: 65, path: '//cdn.ome.lt/H9W5OIhW7dHvdf-fzhZydm3KAX8=/fit-in/1070x750/smart/filer_public/ef/72/ef727d01-8cd0-4b4c-a0ce-7af8f7b04771/jdsv1oayrpo4anv6e2unp0gkbpp.jpg', thumbnail_path: '//cdn.ome.lt/pX8f3_OzgwYcJFK4Cljpyd9ApMI=/158x110/smart/filer_public/ef/72/ef727d01-8cd0-4b4c-a0ce-7af8f7b04771/jdsv1oayrpo4anv6e2unp0gkbpp.jpg', caption: '', alt: '', credits: '' },
+      { index: 66, path: '//cdn.ome.lt/qH8abyQ0Ex-ZKpvH-i5--GiNJ2M=/fit-in/1070x750/smart/filer_public/56/0d/560da77a-27ee-4134-b988-9783585336bb/zamupjpstw0vd1ta9uc7qzpq4as.jpg', thumbnail_path: '//cdn.ome.lt/7nawm5kabMA-9t2jMzOGEJMf2rk=/158x110/smart/filer_public/56/0d/560da77a-27ee-4134-b988-9783585336bb/zamupjpstw0vd1ta9uc7qzpq4as.jpg', caption: '', alt: '', credits: '' },
+      { index: 67, path: '//cdn.ome.lt/oYODbBH4_NCikijkRbH-_0thL9Y=/fit-in/1070x750/smart/filer_public/80/7e/807e33f3-6885-4857-8ebf-aec494117dbc/tjv1wioc5o5siaqekkegstlcsx.jpg', thumbnail_path: '//cdn.ome.lt/Lg9UKnmspylsC-5BibL7gQ3MfFM=/158x110/smart/filer_public/80/7e/807e33f3-6885-4857-8ebf-aec494117dbc/tjv1wioc5o5siaqekkegstlcsx.jpg', caption: '', alt: '', credits: '' },
+      { index: 68, path: '//cdn.ome.lt/3thK1t-xsOkNa_N9hPAo9KZLpnE=/fit-in/1070x750/smart/filer_public/aa/d1/aad1f7df-cc3d-4c06-b281-e9cb58891a01/npxqwvmvgbsf1dbsbbibk8yjr3z.jpg', thumbnail_path: '//cdn.ome.lt/VYIx6L-XljyN2Ce8qasYHsKCZ1M=/158x110/smart/filer_public/aa/d1/aad1f7df-cc3d-4c06-b281-e9cb58891a01/npxqwvmvgbsf1dbsbbibk8yjr3z.jpg', caption: '', alt: '', credits: '' },
+      { index: 69, path: '//cdn.ome.lt/dbJuWEzQdAlwphduK2LE8va1nH8=/fit-in/1070x750/smart/filer_public/fa/45/fa45c363-1f15-4420-bc5b-ceb02bb28687/ncvplnunova6ug4jimuyaewmn9w.jpg', thumbnail_path: '//cdn.ome.lt/RPngJooW84P6qdUdjpUMrjcVFPU=/158x110/smart/filer_public/fa/45/fa45c363-1f15-4420-bc5b-ceb02bb28687/ncvplnunova6ug4jimuyaewmn9w.jpg', caption: '', alt: '', credits: '' },
+      { index: 70, path: '//cdn.ome.lt/xxGTFIoyCmNqJDMxmsUyMiF-cbc=/fit-in/1070x750/smart/filer_public/18/4b/184bfa93-fc1b-47c6-8605-7f785d9d2bd2/vafuy8olnsulqdd09dsxwf1ry1k.jpg', thumbnail_path: '//cdn.ome.lt/fBnrbkNGehufINmXc5cHbs2uqgw=/158x110/smart/filer_public/18/4b/184bfa93-fc1b-47c6-8605-7f785d9d2bd2/vafuy8olnsulqdd09dsxwf1ry1k.jpg', caption: '', alt: '', credits: '' },
+      { index: 71, path: '//cdn.ome.lt/MlGF5NhJvDVW6myRr2i9ZMuHem8=/fit-in/1070x750/smart/filer_public/17/fb/17fbce7a-66ca-47fd-bc60-c87cd5b02a5f/s52yxxphgoddx7ijfbclvvkp8q6.jpg', thumbnail_path: '//cdn.ome.lt/atH5E23SdYk7Knt2oonFL6xPs7k=/158x110/smart/filer_public/17/fb/17fbce7a-66ca-47fd-bc60-c87cd5b02a5f/s52yxxphgoddx7ijfbclvvkp8q6.jpg', caption: '', alt: '', credits: '' },
+      { index: 72, path: '//cdn.ome.lt/UZIi4pu4wCyl6ikU7wG30RRGVcI=/fit-in/1070x750/smart/filer_public/ff/43/ff43007b-b95c-45c4-ba75-88f88c25ecfe/lp8eahnkt2tm0jd35b2eriwukm3.jpg', thumbnail_path: '//cdn.ome.lt/NAlSsyE9TuM7C8GoFi6C9mH_r3w=/158x110/smart/filer_public/ff/43/ff43007b-b95c-45c4-ba75-88f88c25ecfe/lp8eahnkt2tm0jd35b2eriwukm3.jpg', caption: '', alt: '', credits: '' },
+      { index: 73, path: '//cdn.ome.lt/6swdH7ATUtw_fqX3zu2GT2QVNoI=/fit-in/1070x750/smart/filer_public/96/e9/96e9d4e0-8357-4273-aaf4-3a7d945f5597/b6lttyq6o4k10cemnblfbpiah6t.jpg', thumbnail_path: '//cdn.ome.lt/rmtOtnVmrkobKVyaPfRKkMdnNU4=/158x110/smart/filer_public/96/e9/96e9d4e0-8357-4273-aaf4-3a7d945f5597/b6lttyq6o4k10cemnblfbpiah6t.jpg', caption: '', alt: '', credits: '' },
+      { index: 74, path: '//cdn.ome.lt/zmeObkZZbGex9sQ1Rtjj2XeM-DU=/fit-in/1070x750/smart/filer_public/5b/2b/5b2bf9c6-09b8-4090-a751-e224eeb8e717/lwiwwvq6bd741hu3oylqz12ll3m.jpg', thumbnail_path: '//cdn.ome.lt/OInja6EyeO2htUDukUD9AqGgvuk=/158x110/smart/filer_public/5b/2b/5b2bf9c6-09b8-4090-a751-e224eeb8e717/lwiwwvq6bd741hu3oylqz12ll3m.jpg', caption: '', alt: '', credits: '' },
+      { index: 75, path: '//cdn.ome.lt/Gz_r0GCtxFhZID1FtwvoMSnuxbQ=/fit-in/1070x750/smart/filer_public/2b/39/2b39f4a9-873f-4b1c-bb40-b70e15309ae8/rf5im3pkwnkeoudfdmu9mxwxdbd.jpg', thumbnail_path: '//cdn.ome.lt/jqXMb2KN2rQxb_S5vU78mW0y-3o=/158x110/smart/filer_public/2b/39/2b39f4a9-873f-4b1c-bb40-b70e15309ae8/rf5im3pkwnkeoudfdmu9mxwxdbd.jpg', caption: '', alt: '', credits: '' },
+      ];
+    </script>
+    <div class="gallery" data-slug="point-break">
+      <div class="gallery__background"></div>
+      <div class="gallery__wrapper">
+        <div class="gallery__slider swiper-container">
+          <div class="swiper-wrapper"></div>
+          <div class="controller controller--fullscreen icon-expand"></div>
+          <div class="controller controller--left icon-arrow-left"></div>
+          <div class="controller controller--right icon-arrow-rigth"></div>
+          <div class="gallery__total"><span class="gallery__total__current">1</span> de 75</div>
+          <div class="swiper-pagination"></div>
+          <div class="gallery__credits"></div>
+        </div>
+        <div class="gallery__thumbnails swiper-container">
+          <div class="swiper-wrapper">
+          </div>
+          <div class="controller controller--left icon-arrow-left"></div>
+          <div class="controller controller--right icon-arrow-rigth"></div>
+        </div>
+      </div>
+      <div class="gallery__info">
+        <div class="gallery__logo">
+          <div class="logo">
+            <img class="logo__img" src="https://cdn.ome.lt/static/omelete/img/omelete_logo.svg" alt="Omelete">
+          </div>
+        </div>
+        <div class="gallery__info__title">
+          Caçadores de Emoção - Além do Limite | Crítica
+        </div>
+        <div class="gallery__total gallery__info__total"><span class="gallery__total__current">1</span> de 75</div>
+        <div class="gallery__caption"></div>
+
+        <div class="gallery__banner">
+          
+  
+
+  
+    
+    <div class="banner banner--small  ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-arroba-1" style="width: 300px; height: 250px;"></div>
+      </div>
+    </div>
+    
+  
+
+        </div>
+      </div>
+
+    </div>
+
+      
+
+
+
+      
+    
+      <p>O roteiro de Caçadores de Emoção assume que colocar uma responsabilidade ecológica na gangue de Bodhi é o que fará o espectador se conectar com os personagens. Iniciativa lógica, caso existesse algum carisma ou talento nos atores que compõem o grupo. Os diálogos não ajudam, mas ninguém sai a salvo das conversas constrangedoras entre ladrões. Nem mesmo Édgar Ramirez, que apesar de ser o melhor Bodhi que o texto permite, não salva o filme de uma série de cenas desnecessárias enquanto está lecionando Utah sobre a ‘força da natureza’.</p>
+      
+
+
+
+      
+    
+      <p>Além do Limite impressiona quando cai de cabeça nos esportes radicais. Não existe drama ou algum cuidado na narrativa das cenas, mas todas elas são filmadas dando preferência às manobras e paisagens. Venezuela, México, Havaí, Itália, Áustria e outros países servem de cenário para sequências dignas de um bom clipe do canal Off. O 3D, aqui bem convertido, causa vertigem e ajuda na hora da ação. Em uma cena de escalada, por exemplo, a sensação de estar no alto da montanha é latente. Um uso raro e eficiente da tecnologia.</p>
+      
+
+
+
+      
+    
+      <p>Caçadores de Emoção não possui o carisma ou estilo de seu antecessor, mas carrega alguns minutos de deslumbre visual. Isso não é o suficiente para mascarar um roteiro que sequer dá espaço para talentos comprovados como de Ramirez ou <strong>Ray Winstone</strong>. Ele faz o contrário e expõe algumas promessas, como Luke Bracey. A única tarefa cumprida com louvor pelo filme de Ericson Core é reproduzir belezas naturais na tela de cinema, mas que isoladas não fazem a experiência ser válida.</p>
+      
+        
+      
+
+
+
+      
+        
+<article class="col overview">
+  <a >
+    <div class="overview__head">
+      <div class="picture d-block d-sm-block d-md-none">
+        
+          <picture class="">
+            
+                <img src="//cdn.ome.lt/jcJKLEqtjXddMSz7dow8i-rcYFs=/200x0/smart/extras/capas/Cacadores-de-Emocao.jpg" alt="" />
+            
+          </picture>
+        
+      </div>
+      <div class="head__description">
+        <div class="title">Caçadores de Emoção - Além do Limite</div>
+        <div class="subtitle">Point Break</div>
+      </div>
+    </div><!-- head -->
+
+    <div class="overview__content">
+      <div class="list">
+        <div class="list__picture col-5">
+          
+          <picture>
+            
+                <img src="//cdn.ome.lt/jcJKLEqtjXddMSz7dow8i-rcYFs=/200x0/smart/extras/capas/Cacadores-de-Emocao.jpg" alt="" />
+            
+          </picture>
+        
+        </div>
+        <div class="list__itens col-xs-24 col-xl-19">
+          <div class="list__itens__col col-xl-11">
+            <p class="item">Ano: <strong>2015</strong></p>
+            
+            <p class="item">Classificação: <strong>14 anos</strong></p>
+            
+            <p class="item">Duração: <strong>114 min</strong></p>
+            
+          </div>
+
+          <div class="list__itens__col list__itens__col--right col-xl-13">
+            <p class="item">Direção: <strong>Ericson Core, Kathryn Bigelow</strong></p>
+            <p class="item">Roteiro: <strong>Kurt Wimmer</strong></p>
+            <p class="item">Elenco: <strong>Teresa Palmer, Luke Bracey, Ray Winstone, Édgar Ramírez, Delroy Lindo, Patrick Swayze, Keanu Reeves, Gary Busey, Lori Petty, John C. McGinley, James LeGros, Anthony Kiedis, Christopher Pettiet, Lee Tergesen, John Philbin, Bojesse Christopher, Daniel Beer, Vincent Klyn, Dave Olson</strong></p>
+          </div>
+        </div>
+      </div>
+    </div><!-- content -->
+
+    <div class="overview__footer">
+      
+    </div>
+  </a>
+</article>
+
+      
+    
+  
+
+  
+    
+<div class="eggs">
+  <div class="eggs__title">
+      Nota do Crítico
+  </div>
+
+  <div class="eggs__content">
+    <div class="list">
+        <span class="list__egg icon-egg "></span>
+        <span class="list__egg icon-egg "></span>
+        <span class="list__egg icon-egg disabled"></span>
+        <span class="list__egg icon-egg disabled"></span>
+        <span class="list__egg icon-egg disabled"></span>
+    </div>
+      <div class="value">
+        
+        Regular
+        
+        
+        
+      </div>
+  </div>
+</div>
+
+  
+</div>
+
+              
+  <div class="comments d-flex flex-column">
+    <a href="" id="showComments" class="btn">Ver comentários</a>
+    <div class="comments__wrapper" style="display: none">
+      <div id="disqus_thread" data-om-disqus=""></div>
+    </div>
+  </div>
+
+              <div class="">
+  <div class="OUTBRAIN"
+    data-src="https://www.omelete.com.br/filmes/criticas/cacadores-de-emocao-alem-do-limite-critica"
+    data-widget-id="AR_1"
+    data-ob-template="Omelete">
+  </div>
+  <script type="text/javascript"> OBR.extern.researchWidget(); </script>
+</div>
+            </div>
+
+            
+            <div class="offset-lg-2 col-lg-8 col-xl-7 d-none d-lg-block scroll-wrapper">
+              <aside>
+                
+                
+  
+
+  
+    
+    <div class="banner banner--aside banner--scroll ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-meio" ></div>
+      </div>
+    </div>
+    
+  
+
+                
+              </aside>
+            </div>
+            
+          </div>
+          
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="d-none d-sm-block">
+    
+    
+  
+
+  
+    
+    <div class="banner banner--bottom  banner--parallax">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-inferior" ></div>
+      </div>
+    </div>
+    
+  
+
+    
+  </div>
+  
+
+  
+  <div class="d-small d-sm-none">
+    
+    
+  
+
+  
+    
+    <div class="banner banner--small  ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-arroba-m1" style="width: 300px; height: 250px;"></div>
+      </div>
+    </div>
+    
+  
+
+    
+  </div>
+  
+</section>
+
+  </div>
+  <div class="loading">
+  <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
+</div>
+</main>
+<script>
+  
+  var disqus_shortname = 'omeletebr';
+  var disqus_config = function () {
+    this.page.identifier = 'conteudo:conteudo#104978';
+    this.page.title = 'Caçadores de Emoção - Além do Limite | Crítica';
+  };
+  
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+
+<section class="m-search">
+  <div class="container">
+    <div class="row">
+      <div class="m-search__wrapper">
+        <form method="get" action="/busca">
+          <div class="input-group">
+            <button class="icon-search" type="submit"></button>
+            <input placeholder="Faça a sua busca" name="q"/>            
+            <button type="button" class="close icon-close search--close"></button>
+          </div>          
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.ome.lt/static/omelete/js/scripts.min.js?v=e1fad"></script>
+<footer>
+  
+  <script>
+    (function(i) {
+    var ts = document.createElement('script');
+    ts.type = 'text/javascript';
+    ts.async = true;
+    ts.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tags.t.tailtarget.com/t3m.js?i=' + i;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ts, s);
+    })('TT-9804-3/CT-153');
+  </script>
+  
+
+  <section class="m-search">
+  <div class="container">
+    <div class="row">
+      <div class="m-search__wrapper">
+        <form method="get" action="/busca">
+          <div class="input-group">
+            <button class="icon-search" type="submit"></button>
+            <input placeholder="Faça a sua busca" name="q"/>            
+            <button type="button" class="close icon-close search--close"></button>
+          </div>          
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+    
+  
+
+  
+    
+    <div class="banner banner--mobile-footer  ">
+      <div class="banner__wrapper">
+        <div id="div-gpt-ad-rodape" style="width: 320px; height: 50px;"></div>
+      </div>
+    </div>
+    
+  
+
+  
+  <div class="footer__group">
+    <div class="container">
+      <div class="row group">
+
+        <div class="group__about col-xl-7 col-md-10 offset-lg-1">
+          
+        </div>
+
+        <div class="group__logos col-xl-15 col-lg-23 offset-lg-1">
+          <div class="item item--text">
+            <p>Empresas<br/> da Omelete Company:</p>
+          </div>
+          <div class="item item--omelete">
+            <a href="https://www.omelete.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/omelete.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Omelete">
+            </a>
+          </div>
+
+          <div class="item item--ccxp">
+            <a href="https://www.ccxp.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/ccxp.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Comic Con">
+            </a>
+          </div>
+
+          <div class="item item--gamexp">
+            <a href="https://www.gamexp.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/gamexp.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Game XP">
+            </a>
+          </div>          
+
+          <div class="item item--theenemy">
+            <a href="https://www.theenemy.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/theenemy.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="The Enemy">
+            </a>
+          </div>
+
+          <!--<div class="item item--mundogeek">
+            <a href="https://www.lojamundogeek.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/mundogeek.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Mundo Geek">
+            </a>
+          </div>
+
+          <div class="item item--omeletebox">
+            <a href="https://www.omeletebox.com.br/" target="_blank">
+              <img data-lazy-src="https://cdn.ome.lt/static/omelete/img/omeletebox.svg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Omelete Box">
+            </a>
+          </div>-->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <nav class="footer__nav d-none d-md-block">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-5 col-lg-5 offset-sm-1 footer__nav__list">
+         <h3>Filmes</h3>
+         <ul>
+           <li><a href="/oscar">OSCAR</a></li>
+           <li><a href="/bilheteria-usa/">BILHETERIAS USA</a></li>
+           <li><a href="/bilheteria-brasil/">BILHETERIAS BRASIL</a></li>
+           <li><a href="/estreias-da-semana/">ESTREIAS DA SEMANA</a></li>
+           <li><a href="/criticas?section=filmes">CRÍTICAS</a></li>
+           <li><a href="/noticias?section=filmes">NOTÍCIAS</a></li>
+         </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-xl-5 footer__nav__list">
+          <h3>SÉRIES e TV</h3>
+          <ul>
+            <li><a href="/emmy">EMMY</a></li>
+            <li><a href="/calendario-de-estreias-na-tv/">CALENDÁRIO DE ESTREIAS</a></li>
+            <li><a href="/series-tv/temporada-2018-2019-as-series-de-tv-canceladas-renovadas-e-todas-as-novidades/">CALENDÁRIO 2018</a></li>
+            <li><a href="/criticas?section=series-tv">CRÍTICAS</a></li>
+            <li><a href="/noticias?section=series-tv">NOTÍCIAS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-xl-5 footer__nav__list">
+          <h3>HQs e LIVROS</h3>
+          <ul>
+            <li><a href="/comic-con">SAN DIEGO COMIC CON</a></li>
+            <li><a href="/criticas?section=quadrinhos">CRÍTICAS</a></li>
+            <li><a href="/noticias?section=quadrinhos">NOTÍCIAS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-4 footer__nav__list">
+          <h3>Música</h3>
+          <ul>
+            <li><a href="/criticas?section=musica">CRÍTICAS</a></li>
+            <li><a href="/noticias?section=musica">NOTÍCIAS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xl-1 col-lg-2 col-md-2 offset-xl-2">
+          <div class="search search--open">
+            <i class="icon icon-search"></i>
+            <div class="search__input"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+</footer>
+
+
+
+  
+
+
+<script type="text/javascript">
+  // Adding json and gpt info to the jS
+  var slots = {"mobile": {"arroba-m1": {"tag": "/18178082/omelete/arroba_m1", "name": "arroba-m1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m1"}, "superior": {"tag": "/18178082/omelete/superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "div_id": "div-gpt-ad-superior"}, "rodape": {"tag": "/18178082/omelete/rodape", "name": "rodape", "sizes": [320, 50], "div_id": "div-gpt-ad-rodape"}, "booster": {"tag": "/18178082/omelete/booster", "name": "booster", "sizes": [1695, 920], "div_id": "div-gpt-ad-booster"}, "background": {"tag": "/18178082/omelete/background", "name": "background", "sizes": [1800, 1000], "div_id": "div-gpt-ad-background"}, "arroba-m2": {"tag": "/18178082/omelete/arroba_m2", "name": "arroba-m2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m2"}, "inferior": {"tag": "/18178082/omelete/inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "div_id": "div-gpt-ad-inferior"}, "contagem": {"tag": "/18178082/omelete/contagem", "name": "contagem", "sizes": [300, 150], "div_id": "div-gpt-ad-contagem"}, "arroba-2": {"tag": "/18178082/omelete/arroba_2", "name": "arroba-2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-2"}, "superheader": {"tag": "/18178082/omelete/superheader", "name": "superheader", "sizes": [320, 100], "div_id": "div-gpt-ad-superheader"}, "meio": {"tag": "/18178082/omelete/meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "div_id": "div-gpt-ad-meio"}, "arroba-1": {"tag": "/18178082/omelete/arroba_1", "name": "arroba-1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-1"}}, "desktop": {"arroba-m1": {"tag": "/18178082/omelete/arroba_m1", "name": "arroba-m1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m1"}, "superior": {"tag": "/18178082/omelete/superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "div_id": "div-gpt-ad-superior"}, "rodape": {"tag": "/18178082/omelete/rodape", "name": "rodape", "sizes": [320, 50], "div_id": "div-gpt-ad-rodape"}, "booster": {"tag": "/18178082/omelete/booster", "name": "booster", "sizes": [1695, 920], "div_id": "div-gpt-ad-booster"}, "background": {"tag": "/18178082/omelete/background", "name": "background", "sizes": [1800, 1000], "div_id": "div-gpt-ad-background"}, "arroba-m2": {"tag": "/18178082/omelete/arroba_m2", "name": "arroba-m2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m2"}, "inferior": {"tag": "/18178082/omelete/inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "div_id": "div-gpt-ad-inferior"}, "contagem": {"tag": "/18178082/omelete/contagem", "name": "contagem", "sizes": [300, 150], "div_id": "div-gpt-ad-contagem"}, "arroba-2": {"tag": "/18178082/omelete/arroba_2", "name": "arroba-2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-2"}, "superheader": {"tag": "/18178082/omelete/superheader", "name": "superheader", "sizes": [320, 100], "div_id": "div-gpt-ad-superheader"}, "meio": {"tag": "/18178082/omelete/meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "div_id": "div-gpt-ad-meio"}, "arroba-1": {"tag": "/18178082/omelete/arroba_1", "name": "arroba-1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-1"}}};
+  var gpt_keys = {"content_type": "review", "section": "filmes", "genre": ["A\u00e7\u00e3o"], "tags": ["Luke Bracey", "Ericson Core", "Edgar Ramirez", "Ca\u00e7adores de Emo\u00e7\u00e3o - Al\u00e9m do Limite"], "page_type": "content", "environment": "production"};
+  var sponsors = {"logo_chamada": "/18178082/omelete/logo_chamada", "logo_especial_3": "/18178082/omelete/logo_especial_3", "logo_especial_1": "/18178082/omelete/logo_especial_1", "logo_especial_2": "/18178082/omelete/logo_especial_2", "logo_internas": "/18178082/omelete/logo_internas"};
+
+  function createCookie(name,value,days) {
+    var expires = '';
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = '; expires=' + date.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+
+  function readCookie(name) {
+      var nameEQ = name + '=';
+      var ca = document.cookie.split(';');
+      for(var i=0;i < ca.length;i++) {
+          var c = ca[i];
+          while (c.charAt(0) === ' ') {
+            c = c.substring(1,c.length);
+          }
+          if (c.indexOf(nameEQ) === 0) {
+            return c.substring(nameEQ.length,c.length);
+          }
+      }
+      return null;
+  }
+</script>
+
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var isMobile = false;
+  if (window.innerWidth <= 768) {
+    isMobile = true;
+  }
+
+  var gptAdSlots = {};
+  var googletag = googletag || {};
+
+  var desk = ['arroba-1', 'arroba-2', 'meio', 'inferior', 'superior',
+              'background', 'booster', 'contagem'];
+  var mob = ['arroba-m1', 'arroba-m2', 'rodape', 'superheader',
+             'contagem'];
+
+  var allSlots = Object.keys(slots.desktop).map(function(key) { return slots.desktop[key]; });
+
+  var desktopSlots = allSlots.filter(function(slot) {return desk.includes(slot.name);});
+
+  var mobileSlots = allSlots.filter(function(slot) {return mob.includes(slot.name);});
+
+  window.addEventListener("load", function () {
+    googletag.cmd = googletag.cmd || [];
+    googletag.cmd.push(function() {
+      if (!isMobile) {
+        gptAdSlots.desktop = [];
+
+        desktopSlots.forEach(function(slot){
+          gptAdSlots[slot.div_id] = googletag.defineSlot(slot.tag, slot.sizes, slot.div_id).addService(googletag.pubads());
+          gptAdSlots.desktop.push(gptAdSlots[slot.div_id]);
+        });
+
+//        for (slot_name in desktopSlots) {
+//            var slot = slots.desktop[slot_name];
+//            gptAdSlots[slot.div_id] = googletag.defineSlot(slot.tag, slot.sizes, slot.div_id).addService(googletag.pubads());
+//            // adding key_value
+//            gptAdSlots.desktop.push(gptAdSlots[slot.div_id]);
+//        }
+      } else {
+        gptAdSlots.mobile = [];
+
+        mobileSlots.forEach(function(slot){
+          gptAdSlots[slot.div_id] = googletag.defineSlot(slot.tag, slot.sizes, slot.div_id).addService(googletag.pubads());
+          gptAdSlots.mobile.push(gptAdSlots[slot.div_id]);
+        });
+//
+//        for (slot_name in slots.mobile) {
+//          var slot = slots.mobile[slot_name];
+//          gptAdSlots[slot.div_id] = googletag.defineSlot(slot.tag, slot.sizes, slot.div_id).addService(googletag.pubads());
+//          gptAdSlots.mobile.push(gptAdSlots[slot.div_id]);
+//        }
+      }
+
+      // var sponsoredBannerWhite = document.querySelectorAll('.sponsored-banner-white');
+      // var sponsoredBannerBlue = document.querySelectorAll('.sponsored-banner-blue');
+      var sponsorSlots = document.querySelectorAll('.sponsor-slots');
+      sponsorSlots.forEach(function(el, idx) {
+        var sponsorTag = el.dataset.sponsor;
+        var sizes = el.dataset.sizes.split(',');
+        var tagID = sponsorTag + '-' + idx;
+        var slotName = sponsors[sponsorTag];
+        if (slotName) {
+          el.setAttribute('id', tagID);
+          googletag.defineSlot(slotName, [parseInt(sizes[0]), parseInt(sizes[1])], tagID).addService(googletag.pubads());
+        } else {
+        }
+      });
+
+      googletag.pubads().addEventListener('slotRenderEnded', function (event) {
+
+        var elementId = event.slot.getSlotElementId();
+
+        if (event.isEmpty) {
+            if (elementId == "div-gpt-ad-superior") {
+              $('.banner.banner--mast-head').remove();
+              $('.background--enemy').removeClass('background--enemy--mast-head');
+              $('.background--grey').removeClass('background--grey--mast-head');
+            } else if (elementId.startsWith("div-gpt-ad-background")) {
+              //$('html').removeClass('has-background-banner');
+              $('#' + elementId).parents('.banner--background').remove();
+            } else if (elementId == "div-gpt-ad-booster") {
+              // removed fadeOut because of jquery.slim
+              $('.banner--trailer-booster').remove();
+            } else {
+              
+            }
+        } else {
+            if (elementId == "div-gpt-ad-superior") {
+              $('.banner.banner--mast-head').addClass('banner--mast-head--visible');
+              $('.background--enemy').addClass('background--enemy--mast-head');
+              $('.background--grey').addClass('background--grey--mast-head');
+            } else if (elementId == "div-gpt-ad-background") {
+              $('.banner.banner--mast-head').remove();
+            } else if (elementId.startsWith('div-gpt-ad-background')) {
+              $(elementId).closest('.banner--background').addClass('banner--background--visible');
+            } else if (elementId == "div-gpt-ad-booster") {
+              setTimeout(function() {
+                // removed fadeOut because of jquery.slim
+                $('.banner--trailer-booster').remove();
+              }, 35000);
+            }
+
+            // set 'inferior' ad size correctly
+            if (elementId.startsWith('div-gpt-ad-inferior') && event.size.length == 2) {
+              var inferiorAd = $('#' + elementId);
+              inferiorAd.width(event.size[0]).height(event.size[1]);
+              inferiorAd.parent().width(event.size[0]);
+
+              if( event.size[0] !== 1260 && event.size[1] !== 700 ){
+                inferiorAd.closest('.banner--parallax').addClass('parallax--inactive')
+              }
+            }
+
+            // set 'mast-head' ad size correctly
+            if (elementId.startsWith('div-gpt-ad-superior') && event.size.length == 2) {
+              var superiorAd = $('#' + elementId);
+              superiorAd.width(event.size[0]).height(event.size[1]);
+              superiorAd.parent().width(event.size[0]);
+            }
+        }
+
+      });
+
+      googletag.pubads().disableInitialLoad();
+      googletag.pubads().enableSingleRequest();
+
+      // tail
+      var _ttprofiles = window._ttprofiles || [];
+
+      googletag.pubads().setTargeting("age", _ttprofiles.getAge);
+      googletag.pubads().setTargeting("equipment", _ttprofiles.getEquipment);
+      googletag.pubads().setTargeting("customaudiences", _ttprofiles.getCustomAudience);
+      googletag.pubads().setTargeting("gender", _ttprofiles.getGender);
+      googletag.pubads().setTargeting("microsegments", _ttprofiles.getMicrosegments);
+      googletag.pubads().setTargeting("profiles", _ttprofiles.getProfiles);
+      googletag.pubads().setTargeting("socialclass", _ttprofiles.getSocialClass);
+      googletag.pubads().setTargeting("subjects", _ttprofiles.getSubjects);
+      googletag.pubads().setTargeting("team", _ttprofiles.getTeam);
+
+      // key value
+      for (var key in gpt_keys) {
+        var key_value = gpt_keys[key];
+        googletag.pubads().setTargeting(key, key_value);
+      }
+
+      googletag.enableServices();
+
+      if (!isMobile) {
+
+        desktopSlots.forEach( function(slot){
+          googletag.display(slot.div_id);
+        });
+//          for (slot_name in slots.desktop) {
+//            var slot = slots.desktop[slot_name];
+//            googletag.display(slot.div_id);
+//          }
+          googletag.pubads().refresh(gptAdSlots.desktop);
+      } else {
+
+        mobileSlots.forEach( function(slot){
+          googletag.display(slot.div_id);
+        });
+//          for (slot_name in slots.mobile) {
+//            var slot = slots.mobile[slot_name];
+//            googletag.display(slot.div_id);
+//          }
+          googletag.pubads().refresh(gptAdSlots.mobile);
+      }
+
+      // sponsoredBannerWhite.forEach(function(el, idx) {
+      //   googletag.display(el.attr('id'));
+      // });
+
+      // sponsoredBannerBlue.forEach(function(el, idx) {
+      //   googletag.display(el.attr('id'));
+      // });
+
+      // sponsoredBannerWhiteBig.forEach(function(el, idx) {
+      //   googletag.display(el.attr('id'));
+      // });
+    });
+  }, false);
+
+  function refreshGalleryAd(id) {
+    googletag.cmd.push(function() {
+        googletag.pubads().refresh([gptAdSlots[id]]);
+    });
+  };
+
+  function refreshAds(ids) {
+    if (!ids || !Array.isArray(ids)) {
+      return;
+    }
+    googletag.cmd.push(function() {
+      ids.forEach(function (id) {
+        googletag.display(id);
+        googletag.pubads().refresh([gptAdSlots[id]]);
+      });
+    });
+  }
+</script>
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-1826697-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+<meta name="google-site-verification" content="hCFQMJWhgJvgAHP8WyJTpZfMfHVNMSa9GsTj39662_k" />
+
+
+<meta name="google-site-verification" content="iTPXZ1POnZq80tracAvjJuIfkwym9JjdRDOk-glyL1I" />
+
+
+<meta name="p:domain_verify" content="e666affb1012fb19c957d470e41d349e" />
+
+
+<link href="https://plus.google.com/115416604494251056860" rel="publisher" />
+
+
+<script id="tailtarget" type="text/javascript">
+  // <![CDATA[
+  var _ttprofiles = _ttprofiles || [];
+  _ttprofiles.profiles = [];
+  _ttprofiles.push(['_setAccount', 'TT-9804-3']); // _setAccount
+  _ttprofiles.push(['_enableServices']);
+  document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? "https:" : "http:") + "//d.tailtarget.com/profiles.js'></scr" + "ipt>");
+  // ]]>
+</script>
+
+
+
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','//connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1022132447830898');
+  fbq('track', "PageView");
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1022132447830898&ev=PageView&noscript=1"/></noscript>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1062127218"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-1062127218'); </script>
+
+
+<!-- jQUery mobile -->
+<script src="https://cdn.ome.lt/static/omelete/js/vendor/jquery.mobile.custom.min.js"></script>
+<!-- End of jQUery mobile -->
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  window.addEventListener("load", function () {
+    (function () {
+      var u = "//analytics.ome.lt/";
+      _paq.push(['setTrackerUrl', u + 'piwik.php']);
+      _paq.push(['setSiteId', '4']);
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
+    })();
+  }, false);
+</script>
+<noscript>
+  <p>
+    <img src="//analytics.ome.lt/piwik.php?idsite=4&rec=1" style="border:0;" alt="" />
+  </p>
+</noscript>
+<!-- End Matomo Code -->
+
+</body>
+</html>

@@ -5,13 +5,13 @@
 <head>
   
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.ome.lt/static/omelete/css/style.min.css?v=66f55"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.ome.lt/static/omelete/css/style.min.css?v=e1fad"/>
 
-  <title>22 July</title>
+  <title>Um Pequeno Favor</title>
   <link rel="preload" href="https://cdn.ome.lt/static/omelete/img/omelete_logo.svg" as="image">
 
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","agent":"","licenseKey":"48f7507bbb","applicationTime":12,"beacon":"bam.nr-data.net","transactionName":"NlYGMEoAD0UEARZYDA8cIhFWAhVfCgxNRQsAXQsXFhIIQgBMD0QPFVpKElEEFkVLAANCBltQCwpMBA9COgQHRQAJ","queueTime":0,"applicationID":"135988681"}</script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationTime":12,"errorBeacon":"bam.nr-data.net","beacon":"bam.nr-data.net","licenseKey":"48f7507bbb","transactionName":"NlYGMEoAD0UEARZYDA8cIhFWAhVfCgxNRQsAXQsXFhIIQgBMD0QPFVpKElEEFkVLAANCBltQCwpMBA9COgQHRQAJ","queueTime":0,"applicationID":"135988681","agent":""}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <link rel="icon" type="image/png" sizes="96x96" href="https://cdn.ome.lt/static/omelete/img/favicon.png">
@@ -32,23 +32,23 @@
   
 <meta name="twitter:site" content="@omelete" />
 <meta name="twitter:creator" content="@omelete" />
-<meta name="twitter:url" content="https://www.omelete.com.br/filmes/criticas/22-july" />
+<meta name="twitter:url" content="https://www.omelete.com.br/filmes/criticas/um-pequeno-favor" />
 <meta name="twitter:domain" content="https://www.omelete.com.br/" />
-<meta name="twitter:title" content="22 July" />
-<meta name="twitter:description" content="Filme da Netflix traz tragédia norueguesa em embalagem hollywoodiana" />
+<meta name="twitter:title" content="Um Pequeno Favor" />
+<meta name="twitter:description" content="Sem poupar no novelão, Paul Feig entrega comédia investigativa sensual e divertida" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://cdn.ome.lt/cvGqJnbmpTg6pli-cPJBQiKN1_M=/1200x630/smart/extras/conteudos/22_july.jpg" />
-<meta property="og:title" content="22 July" />
-<meta property="og:description" content="Filme da Netflix traz tragédia norueguesa em embalagem hollywoodiana" />
-<meta property="og:url" content="https://www.omelete.com.br/filmes/criticas/22-july" />
-<meta property="og:image" content="https://cdn.ome.lt/cvGqJnbmpTg6pli-cPJBQiKN1_M=/1200x630/smart/extras/conteudos/22_july.jpg" />
+<meta name="twitter:image" content="https://cdn.ome.lt/A1ijx0Z-GVG8My7JleqxjXlpano=/1200x630/smart/extras/conteudos/a_simple_favor_-_lionsgate.jpg" />
+<meta property="og:title" content="Um Pequeno Favor" />
+<meta property="og:description" content="Sem poupar no novelão, Paul Feig entrega comédia investigativa sensual e divertida" />
+<meta property="og:url" content="https://www.omelete.com.br/filmes/criticas/um-pequeno-favor" />
+<meta property="og:image" content="https://cdn.ome.lt/A1ijx0Z-GVG8My7JleqxjXlpano=/1200x630/smart/extras/conteudos/a_simple_favor_-_lionsgate.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:type" content="article" />
-<meta property="article:author" content="Natália Bridi" />
+<meta property="article:author" content="Julia Sabbaga" />
 <meta property="article:section" content="Filmes">
-<meta property="article:published_time" content="2018-09-14 13:13:00+00:00" />
-<meta property="article:modified_time" content="2018-09-14 13:13:06.176000+00:00" />
+<meta property="article:published_time" content="2018-09-25 19:28:25+00:00" />
+<meta property="article:modified_time" content="2018-09-25 19:29:47.931000+00:00" />
 
 
   <script>
@@ -94,9 +94,9 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 <!-- Final da tag TT de segmentacao -->
 
   
-  <link rel="canonical" href="https://www.omelete.com.br/filmes/criticas/22-july" />
+  <link rel="canonical" href="https://www.omelete.com.br/filmes/criticas/um-pequeno-favor" />
   
-  <link rel="amphtml" href="https://www.omelete.com.br/amp/filmes/criticas/22-july">
+  <link rel="amphtml" href="https://www.omelete.com.br/amp/filmes/criticas/um-pequeno-favor">
   
   <meta property="fb:article_style" content="default">
   
@@ -105,31 +105,31 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
     {
       "@context" : "http://schema.org",
       "@type" : "Review",
-      "name" : "22 July",
+      "name" : "Um Pequeno Favor",
       "author" : {
         "@type" : "Person",
-        "name" : "Natália Bridi"
+        "name" : "Julia Sabbaga"
       },
-      "datePublished" : "2018-09-14 13:13:00+00:00",
-      "dateModified" : "2018-09-14 13:13:06.176000+00:00",
+      "datePublished" : "2018-09-25 19:28:25+00:00",
+      "dateModified" : "2018-09-25 19:29:47.931000+00:00",
       "image" : [
     
         {
           "@type" : "ImageObject",
-          "url" : "https://cdn.ome.lt/uI3YF4-lX1q6xImd08oJiwwiUyk=/837x0/smart/uploads/conteudo/fotos/22_july__2.jpg",
+          "url" : "https://cdn.ome.lt/1LGQNJvkJHyuEuWh3kWAcguE7FA=/837x0/smart/uploads/conteudo/fotos/a_simple_favor.jpg",
           "caption" : ""
         }
       ] ,
       "video" : [] ,
-      "headline" : "22 July",
+      "headline" : "Um Pequeno Favor",
       "reviewRating" : {
         "@type" : "Rating",
-        "ratingValue" : 3
+        "ratingValue" : 4
       },
       "itemReviewed" : {
         "@type" : "Thing",
-        "image" : "https://cdn.ome.lt/cvGqJnbmpTg6pli-cPJBQiKN1_M=/1200x630/smart/extras/conteudos/22_july.jpg",
-        "name": "22 July"
+        "image" : "https://cdn.ome.lt/A1ijx0Z-GVG8My7JleqxjXlpano=/1200x630/smart/extras/conteudos/a_simple_favor_-_lionsgate.jpg",
+        "name": "Um Pequeno Favor"
       },
       "publisher" : {
     "@type": "Organization",
@@ -268,7 +268,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
 
 
-<section class="section section--content section--main" data-dsq-domain="omelete.com.br" data-ref-id="161216" data-content-url="/filmes/criticas/22-july" data-content-type="review">
+<section class="section section--content section--main" data-dsq-domain="omelete.com.br" data-ref-id="161920" data-content-url="/filmes/criticas/um-pequeno-favor" data-content-type="review">
   
   
   <script type="text/javascript">
@@ -305,7 +305,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
             <div class="offset-0 offset-sm-2 col-24 col-sm-20">
               <div class="article__cover__wrapper article__cover__wrapper--image">
                 
-                <img class="article__cover__image" data-lazy-src="//cdn.ome.lt/wjhQ2BZfWdyw2Fb1SrZV6b6ufII=/987x0/smart/uploads/conteudo/fotos/22_july__2.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="22 July" title="Netflix/Divulgação">
+                <img class="article__cover__image" data-lazy-src="//cdn.ome.lt/adIu_dVzNZP7YlS3egyj-MfvaU4=/987x0/smart/uploads/conteudo/fotos/a_simple_favor.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Um Pequeno Favor" title="Lionsgate/Divulgação">
                 
                 <div class="loading">
   <img src="https://cdn.ome.lt/static/omelete/img/loading.svg" alt="">
@@ -314,7 +314,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
               
               <p class="article__cover__credits">
                 <span class="article__cover__credits__title">Créditos da imagem:</span>
-                <span class="article__cover__credits__credits">Netflix/Divulgação</span>
+                <span class="article__cover__credits__credits">Lionsgate/Divulgação</span>
               </p>
               
             </div>
@@ -344,32 +344,32 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
   </div>
   <div class="article__header__title">
-    <h1 class="title">22 July</h1>
+    <h1 class="title">Um Pequeno Favor</h1>
   </div>
   <div class="article__header__subtitle">
-    <h2 class="subtitle">Filme da Netflix traz tragédia norueguesa em embalagem hollywoodiana</h2>
+    <h2 class="subtitle">Sem poupar no novelão, Paul Feig entrega comédia investigativa sensual e divertida</h2>
   </div>
   <div class="article__header__social">
     <div class="links links--social">
     <ul class="links__list links__list--icon links__list--column links__list--circle">
       
-      <li class="links__list__item"><a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//omelete.com.br/filmes/criticas/22-july"></a></li>
-      <li class="links__list__item"><a class="icon icon-twitter" target="_blank" href="https://twitter.com/intent/tweet?text=22%20July https%3A//omelete.com.br/filmes/criticas/22-july"></a></li>
-      <li class="links__list__item"><a class="icon icon-email" target="_blank" href="mailto:?subject=22%20July&body=https%3A//omelete.com.br/filmes/criticas/22-july"></a></li>
-      <li class="links__list__item"><a class="icon icon-whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=22%20July https%3A//omelete.com.br/filmes/criticas/22-july"></a></li>
+      <li class="links__list__item"><a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//omelete.com.br/filmes/criticas/um-pequeno-favor"></a></li>
+      <li class="links__list__item"><a class="icon icon-twitter" target="_blank" href="https://twitter.com/intent/tweet?text=Um%20Pequeno%20Favor https%3A//omelete.com.br/filmes/criticas/um-pequeno-favor"></a></li>
+      <li class="links__list__item"><a class="icon icon-email" target="_blank" href="mailto:?subject=Um%20Pequeno%20Favor&body=https%3A//omelete.com.br/filmes/criticas/um-pequeno-favor"></a></li>
+      <li class="links__list__item"><a class="icon icon-whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=Um%20Pequeno%20Favor https%3A//omelete.com.br/filmes/criticas/um-pequeno-favor"></a></li>
     </ul>
   </div>
   </div>
   <div class="article__header__info">
     <div class="info">
-      <div class="info__by">Natália Bridi</div>
+      <div class="info__by">Julia Sabbaga</div>
 
       
       
       
 
-      <div class="info__date">14.09.2018</div>
-      <div class="info__time">10h13</div>
+      <div class="info__date">25.09.2018</div>
+      <div class="info__time">16h28</div>
 
         
     </div>
@@ -397,44 +397,38 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
 
 <div class="article__body article--content">
+
   
     
-      <p dir="ltr"><span><strong>Paul Greengrass</strong> é conhecido pela qualidade palpável dos seus filmes. Seja na franquia  <em>Bourne </em> ou na reconstituição de momentos históricos - como  <em>Domingo Sangrento</em> (1972) e <em>Voo United 93</em> -, o seu cinema é imersivo, capaz de colocar o espectador dentro da ação e também do drama. Daí a decisão de fazer <em><strong>22 July</strong> </em>em inglês tão questionável.</span></p>
+      <p dir="ltr"><span>Existem alguns elementos que são marcantes nos filmes mais recentes de <strong>Paul Feig</strong> (<em>A Espiã Que Sabia De Menos</em>, <em>Missão Madrinha de Casamento</em>): um elenco de atrizes impecável, uma trama focada nas potencialidades escondidas da personalidade feminina e, claro, o bom humor. <em><strong>Um Pequeno Favor</strong></em>, seu novo longa, pode ser sua comédia mais excêntrica até hoje. Porém, por mais distante que seja da sua marca tradicional, entrega todos os mesmos elementos muito bem, e só ganha ao apostar em um clima investigativo e sensual.</span></p>
       
 
 
 
       
     
-      <p dir="ltr"><span>Greengrass escolheu uma equipe norueguesa e recriou com precisão angustiante o ataque de um militante de extrema direita que deixou 77 mortos e mais de 200 feridos na Noruega. A autenticidade visual, porém, não sustenta cada diálogo emocional pronunciado em outro idioma. Por ser uma produção da <strong>Netflix</strong>, o argumento de que é uma necessidade para a distribuição não existe. É uma pasteurização que se torna irônica principalmente dentro do seu contexto, já que a diversidade de povos e idiomas na atual Noruega é o que despertou a loucura da extrema direita. </span></p>
+      <p dir="ltr">Baseado no livro de <strong>Darcey Bell</strong> e com roteiro de <strong>Jessica Sharzer</strong> (<em>American Horror Story</em>), <em>Um Pequeno Favor</em> conta a história de uma amizade inesperada entre a mãe vlogger Stephanie Smothers (<strong>Anna Kendrick</strong>) e a bem-sucedida e misteriosa Emily Nelson (<strong>Blake Lively</strong>). Quando a segunda desaparece, Stephanie parte em uma jornada investigativa à procura de sua recente amiga, descobrindo, também, seus lados mais sombrios. Até sua conclusão, <em>Um Pequeno Favor</em> tem tantas revelações e reviravoltas que acaba parecendo um novelão, mas o talento de Kendrick e a direção estilosa de Feig tiram proveito do rótulo do melhor modo possível.</p>
       
 
 
 
       
     
-      <p>Passada essa questão, Greengrass faz, como esperado, um filme tecnicamente competente. A reconstituição do ataque toma só o primeiro ato, sendo a maior parte dedicada a explorar as consequências de um evento traumático, para o réu e para vítima. De um lado o monstro (<strong>Anders Danielsen Lie</strong>), do outro o sobrevivente (<strong>Jonas Strand Gravli</strong>).</p>
+      <p>Blake Lively parece ter encontrado seu papel perfeito e brilha como a femme fatale, mas quem rouba a cena em <em>Um Pequeno Favor</em> é, definitivamente, Anna Kendrick. Já indicada ao Oscar por <em>Amor Sem Escalas</em>, Kendrick se supera ao retratar perfeitamente uma mulher que vive contida por limites auto-impostos, expressando esta personalidade até nos mínimos detalhes físicos. Sua interpretação de uma mulher com um potencial enrustido, que esconde cuidadosamente um lado sombrio, e gradualmente percebe suas capacidades, é deliciosa de assistir. As protagonistas ainda se complementam perfeitamente com uma boa química, tornando a amizade improvável entre Stephanie e Emily simplesmente natural.</p>
       
 
 
 
       
     
-      <p>Por essa dinâmica, o roteiro baseado no livro de <strong>Åsne Seierstad</strong> quer entender o que aconteceu, mas também como é possível seguir em frente. A primeira questão encontra pequenas pistas, mas nunca uma resposta. O caminho mais simples é ver Anders Behring Breivik como insano, o mais assustador é saber que ele tinha plena consciência do que estava fazendo e quem estava machucando. Do outro lado, o jovem Viljar, antes aberto e cheio de planos para o futuro, se vê em um limbo, incapaz de ver além do ataque. A sua motivação passa a ser encontrar seu algoz novamente, dessa vez em um tribunal.</p>
+      <p>Enquanto as interpretações – e as personagens – chamam atenção, <em>Um Pequeno Favor</em> tropeça, talvez, em algumas decisões de roteiro. Assim que Emily some, os indícios de que o caso é suspeito demais para ser verdade constroem alguns dos melhores momentos do filme. A dúvida que permanece durante a trama – <em>será que Emily está morta ou não?</em> – rende ótimas cenas, que remetem desde <em>Dormindo com o Inimigo</em> à <em>A Malvada</em> – mas o suspense, infelizmente, se resolve cedo demais. Eventualmente, Feig falha ao resolver reviravoltas sem atingir clímax. Nesse sentido, a sequência de <em>twists</em> pode aparentar um problema. Contudo, uma vez que a trama é encarada como um novelão, onde cada revelação é simplesmente mais uma constatação na absurda trama, <em>Um Pequeno Favor</em> acaba descendo, basicamente, como uma boa e garantida diversão.</p>
       
 
 
 
       
     
-      <p>A civilidade norueguesa para julgar o homem responsável por um ato tão bárbaro é notável. Greengrass capta esse pragmatismo sem acusá-lo de frieza. Sua construção dessa história é em torno da esperança e o elenco corresponde parcialmente a essa visão. A escolha do idioma, porém, volta a se tornar incômoda. Cada momento de conexão emocional soa artificial. O idioma é intrínseco à história de uma nação, é parte de como um povo compreende fatos e expressa emoções. Subestimar isso e ainda buscar realismo visual é uma incoerência.</p>
-      
-
-
-
-      
-    
-      <p><em>22 July</em> é no geral um bom filme, mas essa não era uma história para Greengrass contar. Na embalagem em que está inserida, essa busca por respostas termina em um lugar-comum: o bom continua bom, o mau continua mau.</p>
+      <p>É bom ver Paul Feig inovando a própria assinatura. Já tendo comprovado seu talento em criar comédias com protagonistas femininas, Feig explora um novo gênero e desenvolve a comédia pseudo-noir com maestria, sem economizar em músicas pop francesas, figurinos marcantes e cores vibrantes para criar uma atmosfera que brinca com o doce e o ácido. E mesmo na sua reinvenção, Feig continua acertando exatamente o que sempre acertou: interpretações marcantes e um ótimo humor. </p>
       
         
       
@@ -450,14 +444,14 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
         
           <picture class="">
             
-                <img src="//cdn.ome.lt/rAr73qr3pN2bTmutA2Scr1a215Q=/200x0/smart/extras/capas/22_july.jpg" alt="" />
+                <img src="//cdn.ome.lt/GtWQRdH6EfP0ZLnXYF17_9w1tdI=/200x0/smart/extras/capas/Favor-DES.png" alt="" />
             
           </picture>
         
       </div>
       <div class="head__description">
-        <div class="title">22 July</div>
-        <div class="subtitle">22 July</div>
+        <div class="title">Um Pequeno Favor</div>
+        <div class="subtitle">A Simple Favor</div>
       </div>
     </div><!-- head -->
 
@@ -467,7 +461,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
           
           <picture>
             
-                <img src="//cdn.ome.lt/rAr73qr3pN2bTmutA2Scr1a215Q=/200x0/smart/extras/capas/22_july.jpg" alt="" />
+                <img src="//cdn.ome.lt/GtWQRdH6EfP0ZLnXYF17_9w1tdI=/200x0/smart/extras/capas/Favor-DES.png" alt="" />
             
           </picture>
         
@@ -476,16 +470,16 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
           <div class="list__itens__col col-xl-11">
             <p class="item">Ano: <strong>2018</strong></p>
             
-            <p class="item">Classificação: <strong>-1 anos</strong></p>
+            
             
             
             
           </div>
 
           <div class="list__itens__col list__itens__col--right col-xl-13">
+            <p class="item">Direção: <strong>Paul Feig</strong></p>
             
-            
-            <p class="item">Elenco: <strong>Anders Danielsen Lie, Paul Greengrass</strong></p>
+            <p class="item">Elenco: <strong>Blake Lively, Anna Kendrick</strong></p>
           </div>
         </div>
       </div>
@@ -513,14 +507,14 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
         <span class="list__egg icon-egg "></span>
         <span class="list__egg icon-egg "></span>
         <span class="list__egg icon-egg "></span>
-        <span class="list__egg icon-egg disabled"></span>
+        <span class="list__egg icon-egg "></span>
         <span class="list__egg icon-egg disabled"></span>
     </div>
       <div class="value">
         
         
-        Bom
         
+        Ótimo
         
       </div>
   </div>
@@ -539,7 +533,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
               <div class="">
   <div class="OUTBRAIN"
-    data-src="https://www.omelete.com.br/filmes/criticas/22-july"
+    data-src="https://www.omelete.com.br/filmes/criticas/um-pequeno-favor"
     data-widget-id="AR_1"
     data-ob-template="Omelete">
   </div>
@@ -627,9 +621,9 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
   var disqus_shortname = 'omeletebr';
   var disqus_config = function () {
     
-    this.page.url = 'omelete.com.br//22-july?related_slug=22-july';
-    this.page.identifier = 'conteudo:conteudo#161216';
-    this.page.title = '22 July';
+    this.page.url = 'omelete.com.br//um-pequeno-favor?related_slug=um-pequeno-favor';
+    this.page.identifier = 'conteudo:conteudo#161920';
+    this.page.title = 'Um Pequeno Favor';
   };
   
   (function() { // DON'T EDIT BELOW THIS LINE
@@ -656,7 +650,7 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
   </div>
 </section>
 
-<script src="https://cdn.ome.lt/static/omelete/js/scripts.min.js?v=66f55"></script>
+<script src="https://cdn.ome.lt/static/omelete/js/scripts.min.js?v=e1fad"></script>
 <footer>
   
   <script>
@@ -819,9 +813,9 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
 
 <script type="text/javascript">
   // Adding json and gpt info to the jS
-  var slots = {"mobile": {"contagem": {"div_id": "div-gpt-ad-contagem", "name": "contagem", "sizes": [300, 150], "tag": "/18178082/omelete/contagem"}, "arroba-2": {"div_id": "div-gpt-ad-arroba-2", "name": "arroba-2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_2"}, "arroba-m2": {"div_id": "div-gpt-ad-arroba-m2", "name": "arroba-m2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m2"}, "booster": {"div_id": "div-gpt-ad-booster", "name": "booster", "sizes": [1695, 920], "tag": "/18178082/omelete/booster"}, "arroba-m1": {"div_id": "div-gpt-ad-arroba-m1", "name": "arroba-m1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m1"}, "superheader": {"div_id": "div-gpt-ad-superheader", "name": "superheader", "sizes": [320, 100], "tag": "/18178082/omelete/superheader"}, "inferior": {"div_id": "div-gpt-ad-inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "tag": "/18178082/omelete/inferior"}, "background": {"div_id": "div-gpt-ad-background", "name": "background", "sizes": [1800, 1000], "tag": "/18178082/omelete/background"}, "rodape": {"div_id": "div-gpt-ad-rodape", "name": "rodape", "sizes": [320, 50], "tag": "/18178082/omelete/rodape"}, "superior": {"div_id": "div-gpt-ad-superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "tag": "/18178082/omelete/superior"}, "meio": {"div_id": "div-gpt-ad-meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "tag": "/18178082/omelete/meio"}, "arroba-1": {"div_id": "div-gpt-ad-arroba-1", "name": "arroba-1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_1"}}, "desktop": {"contagem": {"div_id": "div-gpt-ad-contagem", "name": "contagem", "sizes": [300, 150], "tag": "/18178082/omelete/contagem"}, "arroba-2": {"div_id": "div-gpt-ad-arroba-2", "name": "arroba-2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_2"}, "arroba-m2": {"div_id": "div-gpt-ad-arroba-m2", "name": "arroba-m2", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m2"}, "booster": {"div_id": "div-gpt-ad-booster", "name": "booster", "sizes": [1695, 920], "tag": "/18178082/omelete/booster"}, "arroba-m1": {"div_id": "div-gpt-ad-arroba-m1", "name": "arroba-m1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_m1"}, "superheader": {"div_id": "div-gpt-ad-superheader", "name": "superheader", "sizes": [320, 100], "tag": "/18178082/omelete/superheader"}, "inferior": {"div_id": "div-gpt-ad-inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "tag": "/18178082/omelete/inferior"}, "background": {"div_id": "div-gpt-ad-background", "name": "background", "sizes": [1800, 1000], "tag": "/18178082/omelete/background"}, "rodape": {"div_id": "div-gpt-ad-rodape", "name": "rodape", "sizes": [320, 50], "tag": "/18178082/omelete/rodape"}, "superior": {"div_id": "div-gpt-ad-superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "tag": "/18178082/omelete/superior"}, "meio": {"div_id": "div-gpt-ad-meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "tag": "/18178082/omelete/meio"}, "arroba-1": {"div_id": "div-gpt-ad-arroba-1", "name": "arroba-1", "sizes": [300, 250], "tag": "/18178082/omelete/arroba_1"}}};
-  var gpt_keys = {"page_type": "content", "genre": ["drama", "biografia", "crime"], "environment": "production", "tags": ["22 july", "paul greengrass"], "content_type": "review", "section": "filmes"};
-  var sponsors = {"logo_especial_1": "/18178082/omelete/logo_especial_1", "logo_especial_2": "/18178082/omelete/logo_especial_2", "logo_internas": "/18178082/omelete/logo_internas", "logo_chamada": "/18178082/omelete/logo_chamada", "logo_especial_3": "/18178082/omelete/logo_especial_3"};
+  var slots = {"mobile": {"arroba-m1": {"tag": "/18178082/omelete/arroba_m1", "name": "arroba-m1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m1"}, "superior": {"tag": "/18178082/omelete/superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "div_id": "div-gpt-ad-superior"}, "rodape": {"tag": "/18178082/omelete/rodape", "name": "rodape", "sizes": [320, 50], "div_id": "div-gpt-ad-rodape"}, "booster": {"tag": "/18178082/omelete/booster", "name": "booster", "sizes": [1695, 920], "div_id": "div-gpt-ad-booster"}, "background": {"tag": "/18178082/omelete/background", "name": "background", "sizes": [1800, 1000], "div_id": "div-gpt-ad-background"}, "arroba-m2": {"tag": "/18178082/omelete/arroba_m2", "name": "arroba-m2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m2"}, "inferior": {"tag": "/18178082/omelete/inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "div_id": "div-gpt-ad-inferior"}, "contagem": {"tag": "/18178082/omelete/contagem", "name": "contagem", "sizes": [300, 150], "div_id": "div-gpt-ad-contagem"}, "arroba-2": {"tag": "/18178082/omelete/arroba_2", "name": "arroba-2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-2"}, "superheader": {"tag": "/18178082/omelete/superheader", "name": "superheader", "sizes": [320, 100], "div_id": "div-gpt-ad-superheader"}, "meio": {"tag": "/18178082/omelete/meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "div_id": "div-gpt-ad-meio"}, "arroba-1": {"tag": "/18178082/omelete/arroba_1", "name": "arroba-1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-1"}}, "desktop": {"arroba-m1": {"tag": "/18178082/omelete/arroba_m1", "name": "arroba-m1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m1"}, "superior": {"tag": "/18178082/omelete/superior", "name": "superior", "sizes": [[728, 90], [970, 250]], "div_id": "div-gpt-ad-superior"}, "rodape": {"tag": "/18178082/omelete/rodape", "name": "rodape", "sizes": [320, 50], "div_id": "div-gpt-ad-rodape"}, "booster": {"tag": "/18178082/omelete/booster", "name": "booster", "sizes": [1695, 920], "div_id": "div-gpt-ad-booster"}, "background": {"tag": "/18178082/omelete/background", "name": "background", "sizes": [1800, 1000], "div_id": "div-gpt-ad-background"}, "arroba-m2": {"tag": "/18178082/omelete/arroba_m2", "name": "arroba-m2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-m2"}, "inferior": {"tag": "/18178082/omelete/inferior", "name": "inferior", "sizes": [[970, 250], [728, 90], [1260, 700]], "div_id": "div-gpt-ad-inferior"}, "contagem": {"tag": "/18178082/omelete/contagem", "name": "contagem", "sizes": [300, 150], "div_id": "div-gpt-ad-contagem"}, "arroba-2": {"tag": "/18178082/omelete/arroba_2", "name": "arroba-2", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-2"}, "superheader": {"tag": "/18178082/omelete/superheader", "name": "superheader", "sizes": [320, 100], "div_id": "div-gpt-ad-superheader"}, "meio": {"tag": "/18178082/omelete/meio", "name": "meio", "sizes": [[300, 600], [300, 250]], "div_id": "div-gpt-ad-meio"}, "arroba-1": {"tag": "/18178082/omelete/arroba_1", "name": "arroba-1", "sizes": [300, 250], "div_id": "div-gpt-ad-arroba-1"}}};
+  var gpt_keys = {"content_type": "review", "section": "filmes", "genre": ["drama", "crime"], "tags": ["anna kendrick", "um pequeno favor", "paul feig", "a simple favor", "cr\u00edtica", "blake lively"], "page_type": "content", "environment": "production"};
+  var sponsors = {"logo_chamada": "/18178082/omelete/logo_chamada", "logo_especial_3": "/18178082/omelete/logo_especial_3", "logo_especial_1": "/18178082/omelete/logo_especial_1", "logo_especial_2": "/18178082/omelete/logo_especial_2", "logo_internas": "/18178082/omelete/logo_internas"};
 
   function createCookie(name,value,days) {
     var expires = '';
@@ -917,24 +911,6 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
         }
       });
 
-      // sponsoredBannerWhite.forEach(function(el, idx) {
-      //   var tagID = 'sponsored-banner-white-' + idx;
-      //   el.attr('id', tagID);
-      //   googletag.defineSlot('/283405803/Logo_Oferecimento', [153, 14], tagID).addService(googletag.pubads());
-      // });
-
-      // sponsoredBannerBlue.forEach(function(el, idx) {
-      //   var tagID = 'sponsored-banner-blue-' + idx;
-      //   el.attr('id', tagID);
-      //   googletag.defineSlot('/283405803/Logo_Oferecimento_2', [153, 14], tagID).addService(googletag.pubads());
-      // });
-
-      // sponsoredBannerWhiteBig.forEach(function(el, idx) {
-      //   var tagID = 'sponsored-banner-white-big-' + idx;
-      //   el.attr('id', tagID);
-      //   googletag.defineSlot('/283405803/Logo_Oferecimento_3', [160, 35], tagID).addService(googletag.pubads());
-      // });
-
       googletag.pubads().addEventListener('slotRenderEnded', function (event) {
 
         var elementId = event.slot.getSlotElementId();
@@ -945,8 +921,8 @@ document.write("<scr" + "ipt src='" + ("https:" == document.location.protocol ? 
               $('.background--enemy').removeClass('background--enemy--mast-head');
               $('.background--grey').removeClass('background--grey--mast-head');
             } else if (elementId.startsWith("div-gpt-ad-background")) {
-              $('html').removeClass('has-background-banner');
-              $('.banner--background').remove();
+              //$('html').removeClass('has-background-banner');
+              $('#' + elementId).parents('.banner--background').remove();
             } else if (elementId == "div-gpt-ad-booster") {
               // removed fadeOut because of jquery.slim
               $('.banner--trailer-booster').remove();
