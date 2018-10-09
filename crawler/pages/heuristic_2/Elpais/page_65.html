@@ -5,47 +5,46 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQEDUVdSCxAIVVVUBggHVw=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(20),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{h?h-=1:o(c||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:s.now();i("err",[t,n])}var i=t("handle"),a=t(21),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",h=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(13),t(12),"addEventListener"in window&&t(6),s.xhrWrappable&&t(14),d=!0)}c.on("fn-start",function(t,e,n){d&&(h+=1)}),c.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),c.on("fn-end",function(){d&&!this.thrown&&h>0&&(h-=1)}),c.on("internal-error",function(t){i("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){M++,S=y.hash,this[u]=b.now()}function o(){M--,y.hash!==S&&i(0,!0);var t=b.now();this[l]=~~this[l]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=b.now()})}var c="-start",s="-end",f="-body",u="fn"+c,d="fn"+s,p="cb"+c,h="cb"+s,l="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,b=t("loader");if(w[v]&&b.xhrWrappable){var g=t(10),x=t(11),E=t(8),P=t(6),O=t(13),R=t(7),T=t(14),L=t(9),j=t("ee"),N=j.get("tracer");t(15),b.features.spa=!0;var S,M=0;j.on(u,r),j.on(p,r),j.on(d,o),j.on(h,o),j.buffer([u,d,"xhr-done","xhr-resolved"]),P.buffer([u]),O.buffer(["setTimeout"+s,"clearTimeout"+c,u]),T.buffer([u,"new-xhr","send-xhr"+c]),R.buffer([m+c,m+"-done",m+f+c,m+f+s]),E.buffer(["newURL"]),g.buffer([u]),x.buffer(["propagate",p,h,"executor-err","resolve"+c]),N.buffer([u,"no-"+u]),L.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,"send-xhr"+c),a(j,"xhr-resolved"),a(j,"xhr-done"),a(R,m+c),a(R,m+"-done"),a(L,"new-jsonp"),a(L,"jsonp-end"),a(L,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,M>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),c=t(12),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",h="-start",l="-end",m="fn"+h,v="fn"+l,w="bstTimer",y="pushState",b=t("loader");b.features.stn=!0,t(8);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=b.now())}),o.on(v,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,b.now()])}),a.on(m,function(t,e,n){this.bstStart=b.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),this.bstType])}),c.on(m,function(){this.bstStart=b.now()}),c.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),"requestAnimationFrame"])}),o.on(y+h,function(t){this.time=b.now(),this.startPath=location.pathname+location.hash}),o.on(y+l,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(23)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(20);e.exports=o;var a=window,c="fetch-",s=c+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,h="prototype";u&&d&&p&&(i(f,function(t,e){r(u[h],e,s),r(d[h],e,s)}),r(a,"fetch",c),o.on(c+"end",function(t,e){var n=this;e?e.clone().arrayBuffer().then(function(t){n.rxSize=t.byteLength,o.emit(c+"done",[null,e],n)}):o.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(23)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){s.emit("jsonp-error",[],p),s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=c(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),s.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function c(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var s=t("ee").get("jsonp"),f=t(23)(s);if(e.exports=s,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,h=["appendChild","insertBefore","replaceChild"];f.inPlace(HTMLElement.prototype,h,"dom-"),f.inPlace(HTMLHeadElement.prototype,h,"dom-"),f.inPlace(HTMLBodyElement.prototype,h,"dom-"),s.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t(23)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=c(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(23),a=t("ee").get("promise"),c=i(a),s=t(20),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;s(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),c=f.resolve(i);return c}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),s(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=c(t[0],"resolve-",this),t[1]=c(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),c.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=c(t[0],"cb-",this),t[1]=c(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t(23)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(23)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",c)}function i(t){b.push(t),l&&(x?x.then(a):v?v(a):(E=-E,P.data=E))}function a(){for(var t=0;t<b.length;t++)r([],b[t]);b.length&&(b=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(23)(u),p=NREUM.o,h=p.XHR,l=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],b=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(h,g),g.prototype=h.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),l){var x=m&&m.resolve();if(!v&&!m){var E=1,P=document.createTextNode(E);new l(a).observe(P,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=a.now()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return l(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(16),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,p=t("id"),h=t(19),l=t(18),m=window.XMLHttpRequest;a.features.xhr=!0,t(14),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=l(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<d;c++)e.addEventListener(u[c],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)})}},{}],16:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],17:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(20),c=t(21),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var l=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(h+"tracer",[f.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){l[e]=o(h+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],21:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],22:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],23:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(21),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),c=l(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([b,n,r,a]),a}}function h(t,e){w[t]=l(t).concat(e)}function l(t){return w[t]||[]}function m(t){return d[t]=d[t]||o(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var w={},y={},b={on:h,emit:n,get:m,listeners:l,context:e,buffer:v,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var c="nr@context",s=t("gos"),f=t(20),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!x++){var t=g.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)}),s("mark",["onload",a()+g.offset],null,"api");var n=p.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===p.readyState&&i()}function i(){s("mark",["domContent",a()+g.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-g.offset}var c=(new Date).getTime(),s=t("handle"),f=t(20),u=t("ee"),d=window,p=d.document,h="addEventListener",l="attachEvent",m=d.XMLHttpRequest,v=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1071.min.js"},b=m&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:c,now:a,origin:w,features:{},xhrWrappable:b};t(17),p[h]?(p[h]("DOMContentLoaded",i,!1),d[h]("load",r,!1)):(p[l]("onreadystatechange",o),d[l]("onload",r)),s("mark",["firstbyte",c],null,"api");var x=0,E=t(22)},{}]},{},["loader",2,15,5,3,4]);</script>
 <meta name="format-detection" content="address=no,email=no,telephone:no">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<title> &#039;Meu Rei&#039; : Acabe comigo, me mate | Cultura | EL PA&Iacute;S Brasil</title>
+<title>Os livros de 2014:  Romances devem ser tão ambíguos quanto a vida, afirma Javier Marías | Cultura | EL PA&Iacute;S Brasil</title>
 <meta name="lang" 			content="pt-br" />
-<meta name="author" 		content="Jordi Costa" />
-<meta name="description" 	content="Desfecho de filme francês em cartaz no Brasil deixa uma porta aberta para se diretora sabe que fez um filme de terror ou se acredita mesmo nesse tipo de sedução" />
-<meta name="keywords" 		content="rei acabe, matar, desfecho, deixar, porta, aberta, aberto, discutir, maïwenn, saber, fazer, filme, terror, acreditar, tipo, sedução" />
-<meta name="date" scheme="W3CDTF" content="2016-06-10T14:21:18+02:00" />
-<meta name="DC.date.issued" scheme="W3CDTF" content="2016-06-10" />
-<meta name="DC.date" 		scheme="W3CDTF" 	content="2016-06-10" />
+<meta name="author" 		content="Javier Rodríguez Marcos" />
+<meta name="description" 	content="Críticos do EL PAÍS destacam a última obra do escritor  Así empieza lo malo , escolhida como melhor livro de 2014 pela Babelia" />
+<meta name="keywords" 		content="romances, dever, ser, ambíguo, vida, afirmar, javier marías, escritor, ganhar, livro, ano, babelia, así, empieza, malo, crítico, el paÍs, destacar, obra, trama, embuste, segredo, transição, espanhola, espanhol" />
+<meta name="date" scheme="W3CDTF" content="2014-12-20T00:01:22+01:00" />
+<meta name="DC.date.issued" scheme="W3CDTF" content="2014-12-20" />
+<meta name="DC.date" 		scheme="W3CDTF" 	content="2014-12-20" />
 <meta name="organization" content="Ediciones EL PAÍS S.L."/>
-<meta property="article:modified_time" content="2016-06-10T14:21:18+02:00" />
+<meta property="article:modified_time" content="2014-12-20T00:01:22+01:00" />
 <meta property="article:publisher" content="https://www.facebook.com/elpaisbrasil" />
-<meta property="article:published_time" content="2016-06-10" />
+<meta property="article:published_time" content="2014-12-20" />
 <meta property="article:section" content="cultura" />
-<meta property="article:tag" content="Crítica filmes" />
-<meta property="article:tag" content="Luc Besson" />
-<meta property="article:tag" content="Vincent Cassell" />
-<meta property="article:tag" content="Filmes" />
-<meta property="article:tag" content="Crítica" />
-<meta property="article:tag" content="Cultura" />
-<meta property="article:tag" content="Festival Cannes 2016" />
-<meta property="article:tag" content="Festival Cannes" />
-<meta property="article:tag" content="Festivais cinema" />
-<meta property="article:tag" content="Festivais" />
-<meta name="news_keywords" content="Crítica filmes,Luc Besson,Vincent Cassell,Filmes,Crítica,Cultura,Festival Cannes 2016,Festival Cannes,Festivais cinema,Festivais"/>
-<meta property="og:title" content="Crítica | &#039;Meu Rei&#039; : Acabe comigo, me mate"/>
-<meta property="og:description" content="Desfecho de filme francês em cartaz no Brasil deixa uma porta aberta para se diretora sabe que fez um filme de terror ou se acredita mesmo nesse tipo de sedução"/>
-<meta property="og:image" content="https://ep00.epimg.net/cultura/imagenes/2016/04/14/actualidad/1460644032_111554_1460644188_noticia_normal.jpg"/>
-<meta property="og:updated_time" content="2016-06-10T14:21:18+02:00" />
-<meta property="og:url" 	content="https://brasil.elpais.com/brasil/2016/04/14/cultura/1460644032_111554.html" />
+<meta property="article:tag" content="Javier Marías" />
+<meta property="article:tag" content="Juan Benet" />
+<meta property="article:tag" content="Camilo José Cela" />
+<meta property="article:tag" content="Juan Marsé" />
+<meta property="article:tag" content="Benito Pérez Galdós" />
+<meta property="article:tag" content="Mark Strand" />
+<meta property="article:tag" content="Leopoldo Alas &quot;Clarín&quot;" />
+<meta property="article:tag" content="Pío Baroja" />
+<meta property="article:tag" content="Boom latinoamericano" />
+<meta property="article:tag" content="Libros del año" />
+<meta name="news_keywords" content="Javier Marías,Juan Benet,Camilo José Cela,Juan Marsé,Benito Pérez Galdós,Mark Strand,Leopoldo Alas &quot;Clarín&quot;,Pío Baroja,Boom latinoamericano,Libros del año"/>
+<meta property="og:title" content="Romances devem ser tão ambíguos quanto a vida, afirma Javier Marías"/>
+<meta property="og:description" content="Críticos do EL PAÍS destacam a última obra do escritor  Así empieza lo malo , escolhida como melhor livro de 2014 pela Babelia"/>
+<meta property="og:image" content="https://ep00.epimg.net/cultura/videos/2014/12/18/babelia/1418914031_580202_06283700_fotograma_9.jpg"/>
+<meta property="og:updated_time" content="2014-12-20T00:01:22+01:00" />
+<meta property="og:url" 	content="https://brasil.elpais.com/brasil/2014/12/18/cultura/1418914031_580202.html" />
 <meta property="og:type" 		content="article"/>
 <meta property="og:site_name"    	content="EL PAÍS"/>
 <meta property="fb:pages"       content="589843594408928" />
 <meta property="fb:app_id" 		content="94039431626"/>
 <meta property="twitter:card" 	content="summary_large_image" />
 <meta property="twitter:site" 	content="@elpais_brasil" />
-<meta property="twitter:title" content="Crítica | &#039;Meu Rei&#039; : Acabe comigo, me mate; por Jordi Costa"/>
 <link rel="alternate" href="https://brasil.elpais.com/seccion/rss/cultura/" type="application/rss+xml" title="RSS sobre Cultura"/>
-<link rel="alternate" href="https://brasil.elpais.com/brasil/2016/04/14/cultura/1460644032_111554.html" hreflang="pt-br" />
-<link rel="alternate" href="https://elpais.com/cultura/2016/04/14/actualidad/1460644032_111554.html" hreflang="es" />
-<link rel="amphtml" href="https://brasil.elpais.com/brasil/2016/04/14/cultura/1460644032_111554.amp.html" />
-<link rel="canonical" href="https://brasil.elpais.com/brasil/2016/04/14/cultura/1460644032_111554.html" />
+<link rel="alternate" href="https://brasil.elpais.com/brasil/2014/12/18/cultura/1418914031_580202.html" hreflang="pt-br" />
+<link rel="alternate" href="https://elpais.com/cultura/2014/12/18/babelia/1418914031_580202.html" hreflang="es" />
+<link rel="amphtml" href="https://brasil.elpais.com/brasil/2014/12/18/cultura/1418914031_580202.amp.html" />
+<link rel="canonical" href="https://brasil.elpais.com/brasil/2014/12/18/cultura/1418914031_580202.html" />
 <link rel="icon" 		href="https://ep01.epimg.net/favicon.png" type="image/png" />
 <link rel="publisher" 	href="https://plus.google.com/+elpais"/>
 <link href="//ep01.epimg.net/estilos/v2.x/v2.1/normalizado.css"  rel="stylesheet" />
@@ -56,7 +55,9 @@
 <link href="//ep01.epimg.net/estilos/v2.x/v2.1/cintillos.css"  rel="stylesheet" />
 <link href="//ep01.epimg.net/estilos/v2.x/v2.1/comercial.css"  rel="stylesheet" />
 <link href="//ep01.epimg.net/brasil/estilos/v2.x/v2.1/brasil.css" rel="stylesheet" />
+<link href="//ep01.epimg.net/estilos/v2.x/v2.0/sumarios/sumario_encuesta.css" rel="stylesheet" />
 <script type="text/javascript" src="//ep01.epimg.net/js/v4.x/v4.1/noticia.min.js"></script>
+<script type="text/javascript" src="//ep01.epimg.net/encuestas/js/v1.x/v1.0/encuestas.js"></script>
 <script type="text/javascript">
 //<![CDATA[
 	var videoPublicityDown = false;
@@ -73,11 +74,11 @@
 	var marcado_logtrust = true;
 	var prebidVideoPEP = true;
 
-	var listado_norm_tags = 'festivales_a,cine_a,eventos_a,sociedad_a,critica_cine_a,luc_besson_a,vincent_cassell_a,peliculas_a,critica_a,cultura_a,festival_cannes_2016_a,festival_cannes_a,festivales_cine_a';
-	var DFP_tags = ["festivales_a","cine_a","eventos_a","sociedad_a","critica_cine_a","luc_besson_a","vincent_cassell_a","peliculas_a","critica_a","cultura_a","festival_cannes_2016_a","festival_cannes_a","festivales_cine_a"];
-	var listado_id_tags = '32399,23079,31030,73526,24929,52910,79124,64553,24927,25067,168090,82488,32400';
-	var listado_id_autores = '102965';
-	var listado_norm_autores = 'jordi_costa_a';
+	var listado_norm_tags = 'libros_del_ano_a,literatura_espanola_a,transicion_espanola_a,literatura_hispanoamericana_a,transicion_democratica_a,conflictos_politicos_a,politica_a,libros_del_ano_2014_a,critica_literaria_a,critica_a,javier_marias_a,libros_a,generacion_98_a,movimientos_literarios_a,literatura_a,movimientos_culturales_a,cultura_a,juan_benet_a,camilo_jose_cela_a,juan_marse_a,benito_perez_galdos_a,mark_strand_a,leopoldo_alas_clarin_a,pio_baroja_a,boom_latinoamericano_a';
+	var DFP_tags = ["libros_del_ano_a","literatura_espanola_a","transicion_espanola_a","literatura_hispanoamericana_a","transicion_democratica_a","conflictos_politicos_a","politica_a","libros_del_ano_2014_a","critica_literaria_a","critica_a","javier_marias_a","libros_a","generacion_98_a","movimientos_literarios_a","literatura_a","movimientos_culturales_a","cultura_a","juan_benet_a","camilo_jose_cela_a","juan_marse_a","benito_perez_galdos_a","mark_strand_a","leopoldo_alas_clarin_a","pio_baroja_a","boom_latinoamericano_a"];
+	var listado_id_tags = '136656,52296,76579,52299,76578,24045,65941,156463,24930,24927,42064,52094,34993,60239,52289,60237,25067,48166,19907,48975,17825,56632,51873,65697,126249';
+	var listado_id_autores = '37';
+	var listado_norm_autores = 'javier_rodriguez_marcos_a';
 
 	var referrer = document.referrer;
 	if (referrer.indexOf("//t.co/") >-1 || (referrer.indexOf("twitter.com") > 0 && referrer.indexOf("twitter.com") < 30) )
@@ -103,8 +104,8 @@
 //]]>
 </script>
 <script language="Javascript" type="text/javascript" src="//ep01.epimg.net/js/comun/cx/recomendador.min.js"></script></head>
-<body id="salida_articulo" class="salida_articulo salida_articulo_opinion"><div id="pxlhddncntrl" style="display:none"><script type="text/javascript" src="//ep00.epimg.net/js/prisa/user.js?i=1"></script><script type="text/javascript" src="//ep00.epimg.net/js/v4.x/v4.0/user.js"></script><script type="text/javascript" src="https://ep00.epimg.net/js/comun/avisopcgdpr.js?u=2018"></script><script type="text/javascript" src="https://gdpr.prisa.com/cmp.bundle.js?u=2018"></script><script type="text/javascript" src="//ep00.epimg.net/js/gdt/577c3689ea990d22d8d98c00c4aa568bec64a426/satelliteLib-28ad3885d20336165372ce7de5caf99dd332388c.js?20171005"></script><script type="text/javascript" src="//ep00.epimg.net/js/comun/comun.js"></script></div>
-<script type="text/javascript" src="//ep00.epimg.net/js/pbs/pbs.slots.js?20180917"></script>
+<body id="salida_articulo" class="salida_articulo"><div id="pxlhddncntrl" style="display:none"><script type="text/javascript" src="//ep00.epimg.net/js/prisa/user.js?i=1"></script><script type="text/javascript" src="//ep00.epimg.net/js/v4.x/v4.0/user.js"></script><script type="text/javascript" src="https://ep00.epimg.net/js/comun/avisopcgdpr.js?u=2018"></script><script type="text/javascript" src="https://gdpr.prisa.com/cmp.bundle.js?u=2018"></script><script type="text/javascript" src="//ep00.epimg.net/js/gdt/577c3689ea990d22d8d98c00c4aa568bec64a426/satelliteLib-28ad3885d20336165372ce7de5caf99dd332388c.js?20171005"></script><script type="text/javascript" src="//ep00.epimg.net/js/comun/comun.js"></script></div>
+<script type="text/javascript" src="//ep00.epimg.net/js/pbs/pbs.slots.js?20181002"></script>
 <div id="AdsCode" style="display:none">
 <script type="text/javascript">
 		var gtpadunit= '';
@@ -255,7 +256,7 @@ if (pbs_dimensiones.ancho >= 980) {
 </ul>
 </div>
 <div class="usuario" id="usuario">
-<a class="boton_usuario" id="boton_usuario" href="https://plus.elpais.com/conectar?prod=REG&o=CABEP&backURL=https%3A%2F%2Fbrasil.elpais.com%2Fbrasil%2F2016%2F04%2F14%2Fcultura%2F1460644032_111554.html">Login</a>
+<a class="boton_usuario" id="boton_usuario" href="https://plus.elpais.com/conectar?prod=REG&o=CABEP&backURL=https%3A%2F%2Fbrasil.elpais.com%2Fbrasil%2F2014%2F12%2F18%2Fcultura%2F1418914031_580202.html">Login</a>
 <div id="usuario__interior"  class="oculto">
 <button class="boton_cerrar" id="cerrar_usuario">Cerrar</button>
 <div class="usuario-estado"></div>
@@ -368,16 +369,13 @@ href="/seccion/cultura" itemprop="url">
 </header>
 </div>
 <div class="articulo__envoltorio">
-<article class="articulo articulo--nointro articulo_opinion" itemscope itemprop="mainEntity" itemtype="https://schema.org/NewsArticle" itemref="organizacion">
+<article class="articulo articulo--nointro" itemscope itemprop="mainEntity" itemtype="https://schema.org/NewsArticle" itemref="organizacion">
 <div class="articulo__interior" id="articulo_interior">
 <header class="articulo-encabezado " id="articulo-encabezado" >
-<div class="articulo-antetitulo ">
-<a class="enlace" href="//brasil.elpais.com/tag/cine/a/">CRÍTICA | MEU REI</a>
-</div>
 <div class="articulo-titulares" id="articulo-titulares">
-<h1 class="articulo-titulo " id="articulo-titulo" itemprop="headline">'Meu Rei' : Acabe comigo, me mate</h1>
-<meta itemprop="url" content="//brasil.elpais.com/brasil/2016/04/14/cultura/1460644032_111554.html"/>
-<div class="articulo-subtitulos"><h2  itemprop="alternativeHeadline"  class="articulo-subtitulo">O desfecho deixa uma porta aberta para se discutir se Maïwenn sabe que fez um filme de terror ou se acredita mesmo nesse tipo de sedução</h2>
+<h1 class="articulo-titulo " id="articulo-titulo" itemprop="headline">Romances devem ser tão ambíguos quanto a vida, afirma Javier Marías</h1>
+<meta itemprop="url" content="//brasil.elpais.com/brasil/2014/12/18/cultura/1418914031_580202.html"/>
+<div class="articulo-subtitulos"><h2  itemprop="alternativeHeadline"  class="articulo-subtitulo">Escritor ganhou o livro do ano da Babelia com 'Así empieza lo malo'. Os críticos do EL PAÍS destacam a obra, uma trama de embustes e segredos durante a Transição espanhola</h2>
 </div>                   </div> 
 <aside class="compartir" id="compartir_superior">
 <div class="compartir__interior">
@@ -395,10 +393,10 @@ href="/seccion/cultura" itemprop="url">
 </div>
 <div class="compartir-varios">
 <div class="favoritos" id="favoritos">
-<a href="https://plus.elpais.com/conectar?backURL=http%3A%2F%2Fbrasil.elpais.com%2Fbrasil%2F2016%2F04%2F14%2Fcultura%2F1460644032_111554.html" id="boton_favoritos" class="boton_favoritos" title="Você precisa ter uma conta no EL PAÍS e estar conectado para poder salvar em favoritos">Login</a>
+<a href="https://plus.elpais.com/conectar?backURL=http%3A%2F%2Fbrasil.elpais.com%2Fbrasil%2F2014%2F12%2F18%2Fcultura%2F1418914031_580202.html" id="boton_favoritos" class="boton_favoritos" title="Você precisa ter uma conta no EL PAÍS e estar conectado para poder salvar em favoritos">Login</a>
 </div>
 <div class="correo" id="correo">
-<a href="https://plus.elpais.com/conectar?backURL=http%3A%2F%2Fbrasil.elpais.com%2Fbrasil%2F2016%2F04%2F14%2Fcultura%2F1460644032_111554.html" id="superior_enviar" class="boton_correo" title="Você precisa ter uma conta no EL PAÍS e estar conectado para poder enviar a notícia por e-mail">Login</a>
+<a href="https://plus.elpais.com/conectar?backURL=http%3A%2F%2Fbrasil.elpais.com%2Fbrasil%2F2014%2F12%2F18%2Fcultura%2F1418914031_580202.html" id="superior_enviar" class="boton_correo" title="Você precisa ter uma conta no EL PAÍS e estar conectado para poder enviar a notícia por e-mail">Login</a>
 </div>
 <button class="boton_imprimir" id="boton_imprimir"><span class="nombre">Imprimir</span></button>
 </div>
@@ -417,42 +415,81 @@ href="/seccion/cultura" itemprop="url">
 <div class="firma ">
 <div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
 <figure class="foto" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-<meta itemprop="url" content="https://ep01.epimg.net/iconos/v2.x/v2.0/avatar.png"/>
-<a class="enlace" href="/autor/jordi_costa/a/">
+<meta itemprop="url" content="https://ep00.epimg.net/miperfil/avatares/5/FB/rodriguezmarcos.jpg"/>
+<a class="enlace" href="//brasil.elpais.com/autor/javier_rodriguez_marcos/a/">
 <meta itemprop="width" content="80">
 <meta itemprop="height" content="80">
-<img src="//ep01.epimg.net/iconos/v2.x/v2.0/avatar.png" width="80" height="80"/>
+<img src="//ep00.epimg.net/miperfil/avatares/5/FB/rodriguezmarcos.jpg" width="80" height="80" alt="Javier Rodríguez Marcos"/>
 </a>
 </figure>
 <div class="autor-texto">
 <span class="autor-nombre" itemprop="name">
-<a itemprop="url" href="//brasil.elpais.com/autor/jordi_costa/a/" title="Ver todas as notícias de Jordi Costa">Jordi Costa</a>
+<a itemprop="url" href="//brasil.elpais.com/autor/javier_rodriguez_marcos/a/" title="Ver todas as notícias de Javier Rodríguez Marcos">Javier Rodríguez Marcos</a>
 </span>
 </div>
 </div>
 </div>
 <div class="articulo-datos">
-<time datetime="2016-06-10T14:21:18+02:00" class="articulo-actualizado">
-<meta content="2016-04-14T16:27:12+02:00" itemprop="datePublished">
-<meta content="2016-06-10T14:21:18+02:00" itemprop="dateModified">
-<a href="//brasil.elpais.com/tag/fecha/20160610 " title="Ver todas as notícias desta data">
-10 JUN 2016 - 14:21					<abbr title="Central European Summer Time">CEST</abbr>				</a>
+<time datetime="2014-12-20T00:01:22+01:00" class="articulo-actualizado">
+<meta content="2014-12-21T23:02:44+01:00" itemprop="datePublished">
+<meta content="2014-12-20T00:01:22+01:00" itemprop="dateModified">
+<a href="//brasil.elpais.com/tag/fecha/20141220 " title="Ver todas as notícias desta data">
+20 DEZ 2014 - 00:01					<abbr title="Central European Time">CET</abbr>				</a>
 </time>
 </div>
 </div> 
 <div class="articulo__contenedor" id="articulo_contenedor">
-<figure class="foto centro foto_w980" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-<img src="//ep01.epimg.net/cultura/imagenes/2016/04/14/actualidad/1460644032_111554_1460644188_noticia_normal.jpg" width="980" height="552"  srcset="//ep01.epimg.net/cultura/imagenes/2016/04/14/actualidad/1460644032_111554_1460644188_noticia_normal_recorte1.jpg 1960w, //ep01.epimg.net/cultura/imagenes/2016/04/14/actualidad/1460644032_111554_1460644188_noticia_normal_recorte2.jpg 720w, //ep01.epimg.net/cultura/imagenes/2016/04/14/actualidad/1460644032_111554_1460644188_noticia_normal.jpg 980w"   alt="Emmanuelle Bercot e Vincent Cassel, no filme." />
-<meta itemprop="width"    content="980">
-<meta itemprop="height"   content="552">
-<meta itemprop="url"      content="https://ep01.epimg.net/cultura/imagenes/2016/04/14/actualidad/1460644032_111554_1460644188_noticia_normal.jpg">
-<meta itemprop="representativeOfPage" content="true">
-<figcaption class="foto-pie"  itemprop="caption"> <span class="foto-texto">Emmanuelle Bercot e Vincent Cassel, no filme.</span></figcaption>
+<div id="videonoticia" class="centro">
+<figure class="foto  centro" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<script type="text/javascript">
+//<![CDATA[
+    // Hash con los datos para el reproductor de video
+    var datosVideo_394 = {};
+
+    var anchoReproductor_394 = 560;
+    var altoReproductor_394  = 315;
+
+
+    var urlFotogramaFijo_394    = url_cache + '/cultura/videos/2014/12/18/babelia/1418914031_580202_06283700_fotograma_9.jpg';
+    var urlPrimerFotograma_394  = url_cache + '/cultura/videos/2014/12/18/babelia/1418914031_580202_06283700_fotograma_0.jpg';
+    var urlVideo_394 = url_cache + '/cultura/videos/2014/12/18/babelia/1418914031_580202_1418915984.mp4';
+
+    // La URL es una variable JS global
+    datosVideo_394.playerEPET            = url_reproductor_epet;
+    datosVideo_394.playerEPETParams      = {"mediaWidth":anchoReproductor_394, "mediaHeight":altoReproductor_394, "URLMediaFile":urlVideo_394, "URLMediaStill":urlFotogramaFijo_394, "URLFirstFrame":urlPrimerFotograma_394, "compactMode": 'false'};
+    datosVideo_394.playerEPETOpcionesSWF = {"allowfullscreen":"true"};
+
+    datosVideo_394.anchoPlayer   = anchoReproductor_394;
+    datosVideo_394.altoPlayer    = altoReproductor_394;
+    datosVideo_394.publiActiva   = true;
+    datosVideo_394.keywordsVideo = 'brasil,cultura';
+
+    datosVideo_394.tagsIds               = '42064,48166,19907,48975,17825,56632,51873,65697,126249,136656,52296,76579,52299,76578,24045,65941,156463,24930,24927,52094';
+    datosVideo_394.tagsNombreNormalizado = 'javier_marias_a,juan_benet_a,camilo_jose_cela_a,juan_marse_a,benito_perez_galdos_a,mark_strand_a,leopoldo_alas_clarin_a,pio_baroja_a,boom_latinoamericano_a,libros_del_ano_a,literatura_espanola_a,transicion_espanola_a,literatura_hispanoamericana_a,transicion_democratica_a,conflictos_politicos_a,politica_a,libros_del_ano_2014_a,critica_literaria_a,critica_a,libros_a';
+
+    datosVideo_394.tipo          = 'video';
+    datosVideo_394.idRefBrightcove = '1418914031_580202_1418915984';
+
+    datosVideo_394.urlNoticia  = '/brasil/2014/12/18/cultura/1418914031_580202.html';
+    datosVideo_394.tituloVideo = '‘Assim começa o mau’, de Javier Marías, livro do ano de Babelia';
+    datosVideo_394.playerVideo = '0';
+
+    // Llamada para pintar el reproductor de video
+    EPET_VideoPlayer(datosVideo_394);
+
+
+//]]>
+</script>
+<figcaption class="foto-pie" itemprop="caption"> <span class="foto-texto">Javier Marías lê o começo de 'Así empieza lo malo'.</span></figcaption>
+<meta itemprop="url" content="https://ep01.epimg.net/cultura/videos/2014/12/18/babelia/1418914031_580202_06283700_fotograma_9.jpg">
+<meta itemprop="width" content="640">
+<meta itemprop="height" content="360">
 </figure>
+</div>
 <div class="articulo-cuerpo" id="cuerpo_noticia" itemprop="articleBody">
-<p>Segundo deu a entender a própria diretora em declarações recentes, a relação sentimental que uma Maïwenn de quinze anos teve com o cineasta Luc Besson –e que durou cinco anos- está no centro de <em>Meu Rei</em>, esse filme dilacerante, furioso e visceral sobre a toxicidade dos relacionamentos estruturalmente desequilibrados.</p>
-<section class="sumario_apoyos izquierda" id="sumario_3|apoyos">
-<a name="sumario_3"></a>
+<p>“Meu cardiologista vai brigar comigo por sair fumando nas fotos”, diz <a href="//brasil.elpais.com/tag/javier_marias/a/">Javier Marías</a> em sua casa de Madri, a cidade onde nasceu em setembro de 1951. Seu cardiologista é o doutor José Manuel Vidal, convertido em personagem de ‘<em>Así empieza lo malo</em>’ (Manantial), o romance escolhido pelos críticos da Babelia como melhor livro de 2014. A escolha, conta, surpreendeu-o. “Por duas razões. Uma, porque este ano foi excepcional quanto a livros importantes de escritores importantes: Marsé, Muñoz Molina, Landero, Cercas, Luis Mateo Díez, Gimferrer na poesia, Ferrer Lerín, Guelbenzu… Não li todos mas algum melhor tem de haver. A segunda, porque escrevo cada novo romance mais às escuras e com menos fé. Além disso, surpreende-me que, 43 anos depois de publicar meu primeiro romance, o que faço ainda possa continuar vigente quando tudo cansa tão rapidamente. As pessoas devem estar enjoadas de mim”. Perguntado qual o seu livro do ano particular, toma partido da poesia de Mark Strand, o escritor americano falecido no mês passado que conheceu quando se mudou para Madri. “Ainda acho a poesia a mais alta expressão literária possível”, diz o romancista.</p>
+<section class="sumario_apoyos izquierda" id="sumario_7|apoyos">
+<a name="sumario_7"></a>
 <div class="sumario__interior">
 <header class="sumario-encabezado"><h3 class="sumario-titulo"><span class="sin_enlace">MAIS INFORMAÇÕES</span></h3></header>
 <div class="sumario-texto">
@@ -460,15 +497,22 @@ href="/seccion/cultura" itemprop="url">
 <ul class="apoyos-listado">
 <li class="apoyo_ apoyo_sinfoto">
 <span class="apoyo-titulo">
-<a href="//brasil.elpais.com/brasil/2015/05/22/cultura/1432284728_416655.html">
-Louis Garrel: “Foi com as mulheres que aprendi o que é a amizade”
+<a href="//brasil.elpais.com/brasil/2014/10/15/cultura/1413381412_585189.html">
+Os livros que muito poucos conseguem terminar
 </a>
 </span>
 </li>
 <li class="apoyo_ apoyo_sinfoto">
 <span class="apoyo-titulo">
-<a href="//brasil.elpais.com/brasil/2016/05/22/cultura/1463939568_892845.html">
-Inglês Ken Loach ganha sua segunda Palma de Ouro, por ‘I, Daniel Blake’
+<a href="//brasil.elpais.com/brasil/2014/08/22/cultura/1408741285_362163.html">
+A tecnologia, quem diria, aumentou o gosto dos adolescentes por ler
+</a>
+</span>
+</li>
+<li class="apoyo_ apoyo_sinfoto">
+<span class="apoyo-titulo">
+<a href="//brasil.elpais.com/brasil/2014/10/09/cultura/1412852792_619343.html">
+Escritor francês Patrick Modiano ganha o Nobel de Literatura
 </a>
 </span>
 </li>
@@ -477,32 +521,124 @@ Inglês Ken Loach ganha sua segunda Palma de Ouro, por ‘I, Daniel Blake’
 </div>
 </div> 
 </section>
-<section class="sumario_despiece derecha" id="sumario_4|despiece">
+<p><strong>PERGUNTA. Qual foi a coisa mais extravagante que ouviu sobre o romance desde que foi publicado em setembro?</strong></p>
+<p>RESPOSTA. Em uma sessão de autógrafos uma senhora me disse que estava indignada com o comportamento de uma personagem . Outra lhe respondeu: “É que o marido...”. Acho bom que o leitor se envolva em um romance o bastante para que as vicissitudes das personagens sejam motivo de aprovação ou indignação. Surpreende-me pelo tipo de romance que faço, que não é de técnica realista, mas me agrada, claro. O maior elogio que se pode fazer a um romance é falar de suas personagens como se fossem pessoas reais.</p>
+<p><strong>P. Por que acontece?</strong></p>
+<p>R. Não sei. Eu tentei pôr neste o que me interessa nos romances: ambiguidade moral, prós e contras nos atos das personagens... Sem julgamentos por parte do narrador e menos ainda do autor . Suponho que nenhuma das personagens sai totalmente limpa. Quero que em meus romances haja a mesma ambiguidade que há no mundo. Os romances devem ser ambíguos como a vida. Não sei se essa identificação do leitor é extravagante, mas me surpreende.</p>
+<p><strong>P. Sobretudo tendo em conta que no romance há personagens reais como Francisco Rico. Quem dá mais trabalho: personagens reais ou de ficção?</strong></p>
+<p>R. Tanto o professor Rico como o doutor Vidal são personagens reais ficcionalizados, evidentemente. Não se pode pretender que o professor do romance seja o mesmo que o verdadeiro, que está em sua casa fazendo não sei o que, segundo ele estudando e criando coisas incomparáveis, e provavelmente é isso mesmo porque, de fato, tem coisas incomparáveis [ri]. Todas as personagens têm um pouco de realidade, e sempre há algo de nós mesmos em todas elas. Eu tendo a pôr minhas coisas nas mais desagradáveis. Às vezes são meros detalhes. Outra pessoa que veio à sessão me falou da caixa de comprimidos com bússola que uma personagem carrega e disse a ela: “É esta [tira-a do bolso], foi de um escritor”.</p>
+<section class="sumario_foto izquierda" id="sumario_3|foto">
+<a name="sumario_3"></a>
+<div class="sumario__interior">
+<figure class="foto foto_w300" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<img src="//ep01.epimg.net/cultura/imagenes/2014/12/18/babelia/1418914031_580202_1418918595_sumario_normal.jpg" width="300" height="458" alt="Javier Marías mostra a caixa de comprimidos com bússola que pertenceu ao escritor britânico Norman Douglas e que aparece em seu romance "Así empieza lo malo"." />
+<meta itemprop="width"  content="300">
+<meta itemprop="height" content="458">
+<meta itemprop="url"    content="https://ep01.epimg.net/cultura/imagenes/2014/12/18/babelia/1418914031_580202_1418918595_sumario_normal.jpg">
+<figcaption class="foto-pie"  itemprop="caption"> <span class="foto-texto">Javier Marías mostra a caixa de comprimidos com bússola que pertenceu ao escritor britânico Norman Douglas e que aparece em seu romance "Así empieza lo malo".</span> <span class="foto-firma"><span itemprop="author" class="foto-autor">Bernardo Pérez</span> </span></figcaption>
+</figure>
+<div class="sumario-texto">
+</div>
+</div>
+</section>
+<p><strong>P. De quem?</strong></p>
+<p>R. Do Norman Douglas. Um inglês que vivia em Capri, gay, muito bon vivant e refinado. Comprei porque me agradou por ter sido dele e porque eu sempre digo que, quando escrevo, estou errando com bússola.</p>
+<p><strong>P. ‘<em>Los enamoramientos</em>’ partia de um fato real que uma amiga lhe contou. De onde parte ‘<em>Así empieza lo malo</em>’?</strong></p>
+<p>R. Não sei bem. Não foi uma frase, nem uma imagem. Tinha interesse em falar sobre alguns temas. No romance há uma dimensão coletiva, política, que procurei manter em segundo plano, entrelaçada com as histórias pessoais, porque se não for assim as dimensões políticas dos romances não funcionam. Neste há temas que são frequentes em meus livros: a impossibilidade de saber de tudo com clareza; a conveniência de contar as coisas ou não, a conveniência de saber ou não, as consequências de contar algo em um momento de exaltação...</p>
+<p><strong>P. O romance remete ao pós-guerra, acontece em 1980 e é contado em nossos dias. Teve presente o debate sobre a memória histórica e a Transição?</strong></p>
+<p>R. Sim, no início há um capítulo breve, explicativo, sobre a situação em 1980. Não queria ser didático, mas pensei que não incomodava. Muita gente não sabe como eram as coisas naquele tempo.</p>
+<p><strong>P. E como eram?</strong></p>
+<p>R. Muita gente fala mal <a href="//brasil.elpais.com/tag/transicion_democratica/a/">da Transição</a> e diz ser ela a culpada por tudo o que acontece agora. Demonstram uma ignorância absoluta. Na Transição foram feitas muitas concessões, mas não havia outro remédio. As pessoas esqueceram que o Exército, como se viu em 1981, <a href="//brasil.elpais.com/tag/franquismo/a/">continuava franquista.</a> Cobrar responsabilidades teria sido impossível. Com tudo isso e com as renúncias que isso implica – dá raiva porque tem gente que saiu impune de coisas horrendas na guerra e no pós-guerra – , da Transição saiu, se não o país ideal, um que se parecia com outros. Os causadores dos males atuais são os políticos atuais e a sociedade atual em boa medida, não a Transição. A Transição não foi perfeita, nem muitíssimo menos, mas foi boa, a única coisa que podia ser feita sem chegar a um conflito que ninguém queria.</p>
+<section class="sumario_despiece izquierda" id="sumario_4|despiece">
 <a name="sumario_4"></a>
 <div class="sumario__interior">
 <header class="sumario-encabezado">
-<h4 class="sumario-titulo"><span class="sin_enlace">Festival de cinema francês vai até 22 de junho</span></h4>
+<h4 class="sumario-titulo"><span class="sin_enlace">20 livros de 2014 (em espanhol)</span></h4>
 </header> 
 <div class="sumario-texto">
-<p>Com 15 filmes inéditos na programação, começou nesta quarta-feira e vai até 22 de junho o anual Festival Varilux de Cinema Francês. Nesta edição, 50 cidades brasileiras farão parte do circuito. Além de <em>Meu Rei</em>, estará em cartaz <em>Chocolate</em>, de Roschdy Zem, com Omar Sy, que se popularizou com os  <em>Intocáveis</em>. O clássico da vez é <em> Um Homem, Uma Mulher</em>,  filme de Claude Lelouch ganhador da Palma de Ouro e o Oscar de melhor filme estrangeiro que completa cinco décadas.</p>
-<p><a target="_blank" href="http://variluxcinefrances.com/2016/programacao/">Clique para ver a programação completa.</a></p>
+<p><strong>1. Así empieza lo malo.</strong> Javier Marías. Alfaguara</p>
+<p><strong>2. El impostor. Javier Cercas.</strong> Literatura Random House</p>
+<p><strong>3. José Ortega y Gasset.</strong> Jordi Gracia. Taurus</p>
+<p><strong>4. Un hombre enamorado (Mi lucha II).</strong> Karl Ove Knausgård. Tradução para o espanhol de Kirsti Baggethun e Asunción Lorenzo. Anagrama</p>
+<p><strong>5. Días de mi vida (Vida I).</strong> Juan Ramón Jiménez. Pre-Textos</p>
+<p><strong>6. Hasta aquí.</strong> Wislawa Szymborska. Tradução para o espanhol de Abel Murcia e Gerardo Beltrán. Bartleby</p>
+<p><strong>7. La hierba de las noches.</strong> Patrick Modiano. Tradução para o espanhol de María Teresa Gallago Urrutia. Anagrama</p>
+<p><strong>8. El balcón en invierno. Luis</strong> Landero. Tusquets</p>
+<p><strong>9. Diccionario de la lengua española.</strong> RAE. Espasa</p>
+<p><strong>10. Como la sombra que se va.</strong> Antonio Muñoz Molina. Seix Barral</p>
+<p><strong>11. Sonámbulos. Cómo Europa fue a la guerra en 1914.</strong> Christopher Clark. Tradução para o espanhol de Irene Cifuentes y Alejandro Pradera. Galaxia Gutenberg</p>
+<p><strong>12. Brilla, mar del Edén.</strong> Andrés Ibáñez. Galaxia Gutenberg</p>
+<p><strong>13. Hojas de hierba.Walt Whitman.</strong> Tradução para o espanhol de Eduardo Moga. Galaxia Gutenberg</p>
+<p><strong>14. El invitado amargo.</strong> Vicente Molina Foix e Luis Cremades. Anagrama</p>
+<p><strong>15. Hoy.</strong> Juan Gelman. Visor</p>
+<p><strong>16. Teatro (1989-2014).</strong> Juan Mayorga. La Uña Rota</p>
+<p><strong>17. El capital en el siglo XXI.</strong> Thomas Piketty. Tradução para o espanhol de Eliane Cazenave-Tapie Isoard y Guillermina Cuevas. Fondo de Cultura Económica</p>
+<p><strong>18. Rompiente.</strong> Jorie Graham. Tradução para o espanhol de Rubén Martín. Bartleby</p>
+<p><strong>19. Continuación de ideas diversas.</strong> César Aira. Universidad Diego Portales</p>
+<p><strong>20. Alfabeto.</strong> Inger Christensen. Tradução para o espanhol de Francisco J. Uriz. Sexto Piso</p>
 </div> 
 </div> 
 </section>
-<p>Em <em>Meu Rei</em> [<em>Mon roi</em>], em cartaz no <a href="http://variluxcinefrances.com/" target="_blank">Festival Varilux</a>, Georgio –o personagem interpretado por Vincent Cassel—é uma pessoa que vê uma relação sentimental como um circo com três picadeiros, que divide as suas apresentações pirotécnicas em longos períodos de desapego, ausência e incapacidade de entender que um casal talvez requeira outras circunstâncias além de uma plateia lotada por um público de entusiastas. Sua figura, seu perigo e também o seu encanto indomável são vistos pelos olhos de Tony, uma advogada que parece ter vindo ao mundo para encarnar a lei segundo a qual o ser humano é o único animal capaz de tropeçar duas vezes –ou até duzentas vezes– na mesma pedra. O personagem complexo, contraditório e sofrido de Tony, que rememora essa história passional enquanto passa por um período real, mas também metafórico, de convalescença, é encarnado por Emmanuelle Bercot, que participou do trabalho anterior de Maïwenn –<em>Polisse</em> (2011)—e recebeu o prêmio de melhor atriz pela atuação em <em>Meu Rei</em> <a href="//brasil.elpais.com/brasil/2015/05/24/cultura/1432485791_084303.html">em Cannes no ano passado</a>, que foi aberto justamente com o seu quarto longa-metragem como diretora, <em>De cabeça erguida</em>.</p>
-<section class="sumario_despiece derecha" id="sumario_1|despiece">
-<a name="sumario_1"></a>
+<p><strong>P. Teria sentido fazer agora o que não foi feito na Transição?</strong></p>
+<p>R. Pareceria particularmente absurdo porque a maioria dos responsáveis pelo franquismo já morreu. Diferente é não poder contar as coisas. Talvez tenha sido dito em excesso: não peçamos um acerto de contas. E tampouco se contou nada. Considero positivo que ninguém tenha sido levado ao banco dos réus, mas não que não se saiba o que cada um fez.</p>
+<p><strong>P. Como você era em 1980?</strong></p>
+<p>R. Tinha mais idade que o narrador de meu romance. Ele tem 23, eu tinha 29. Tinha publicado três livros. O terceiro, <em>El monarca del tiempo</em>, é de 1978. Hoje acho-o bastante absurdo. Gosto do livro em parte, mas no conjunto, não. 1980? Estava muito desconcertado. Tinha começado a publicar tão jovem, aos 19 anos, e o normal é que um romancista tenha pouco que contar aos 19 anos. Tinha vivido pouco e pouca visão de tudo.</p>
+<p><strong>P. Em 1979 deram-lhe o Prêmio Nacional de Tradução, mas há dois anos recusou o de Narrativa por <em>Los enamoramientos</em>. Em 1979 não quis recusar?</strong></p>
+<p>R. Naquele momento não duvidei. Traduzir o Tristram Shandy tinha dado muito trabalho, algo meio suicida. São essas coisas que se fazem com a inconsciência da juventude. Quando olho para trás, vejo as dificuldades do livro e que o fiz com 25 ou 26 anos, penso: que atrevimento . Agora não o faria. Naquela altura, esse prêmio alegrou-me, mas eram outros tempos. Não havia nenhum motivo para recusá-lo. Estávamos com a democracia recém-inaugurada e minha postura de não receber nada do Estado – nem prêmios, nem convites, nem viagens – não era a que mantenho há 20 anos.</p>
+<p><strong>&nbsp;P. Então se dizia que você não parecia um escritor espanhol.</strong></p>
+<p>&nbsp;R. Foi um rótulo que durou anos. Muitos colegas ou críticos diziam: “Seus romances parecem traduzidos do inglês” ou “mal traduzidos do inglês”, sem rodeios. Até Umbral, que me chamou de…</p>
+<p>&nbsp;<strong>P. Anglo-chato.</strong></p>
+<p>&nbsp;R. Anglo-saxonifodido. Neologismo feio e mal-sucedido [ri]. Quem dizia isso era gente da geração anterior à minha que me acusava de ser um escritor inglês camuflado.</p>
+<p>&nbsp;<strong>P. O que pensava quando ouvia isso?</strong></p>
+<p>R. Surpreendia-me: sempre escrevi em espanhol e além disso sou de Chamberí. Não podia ser mais madrilenho. Talvez se pautassem pelo fato de que eu e outros de minha geração tínhamos uma atitude beligerante para com a tradição herdada. Os escritores tentaram separar-se da literatura social, que tinha sido dominante. A reação dos que se davam por aludidos também foi beligerante. É normal que cada geração se rebele contra a anterior. Suponho que agora haverá gente de trinta e poucos anos que falará mal de nós. Parece-me normal.</p>
+<p>&nbsp;<strong>P. Que falem mal?</strong></p>
+<p>R. Sim, quando deram o Prêmio Nobel a Zela em 1989, pediram-me umas declarações e disse que me parecia a pior noticia possível para a literatura espanhola premiar àquela altura um tipo de literatura que considerávamos um tanto caduca e afetada. Reconhecendo que Zela tinha feito pelo menos dois bons romances de início, parecia-nos que passara muito tempo sem fazer nada que valesse a pena. Havia então muitos defensores de Zela e ganhei muitas inimizades. Era um sacrilégio. Se agora alguém dissesse algo similar sobre qualquer um de minha geração, não poderíamos nos queixar porque nós também o fizemos, com maior ou menor justiça. No caso de Zela não retiro o que disse, mas pode ser que, no caso de outros autores, tenhamos sido injustos.</p>
+<section class="sumario_html izquierda" id="sumario_5|html">
+<a name="sumario_5"></a>
 <div class="sumario__interior">
 <div class="sumario-texto">
-<p><b>MEU REI<br /></b></p>
-<p><b>Direção: </b>Maïwenn.</p>
-<p><b>Intérpretes:</b> Emmanuelle Bercot, Vincent Cassel, Louis Garrel, Isild Lhe Besco.</p>
-<p><b>Gênero:</b> drama. França, 2015.</p>
-<p><b>Duração:</b> 124 minutos.</p>
+<p class="texto_grande">"<em>Se hoje alguém dissesse sobre qualquer um de minha geração o que nós dissemos de Zela, não poderíamos nos queixar”</em></p>
 </div> 
 </div> 
 </section>
-<p>Bercot e Cassel, apropriadamente estimulados por Maïwenn a improvisar bastante, são tudo nesse filme um tanto cansativo –você se sente como se estivesse casado há 30 anos com o extenuante Goorgio--, mas carregado de nuances significativas. O desfecho deixa uma porta aberta para se discutir se Maïwenn sabe que fez um filme de terror ou se acredita que a sedução sempre dispõe de um cheque em branco para agir e atacar livremente.</p>
+<p>&nbsp;<strong>P. Por exemplo?</strong></p>
+<p>&nbsp;R. Juan Marsé. Não acredito que houvesse beligerância contra ele, mas digamos que, naqueles anos setenta, não o achávamos grande coisa. Logo nos demos conta de que é um grande escritor e que fomos injustos naquele momento.</p>
+<p>&nbsp;<strong>P. E da tradição? O Muriel de seu romance critica Galdós, assim como Benet.</strong></p>
+<p>&nbsp;R. Há um sinal, sim. Reconheço que Galdós tem talento para muitas coisas, mas no conjunto… Tem um romance muito bom que não é dos mais lidos, <em>El amigo manso</em>. Mas em sua obra há coisas que me enervam.</p>
+<p>&nbsp;<strong>P. O que o enerva em Galdós?</strong></p>
+<p>&nbsp;R. Alguns diálogos quase dão vergonha alheia. Tinha muito talento novelesco e sabia como armar um romance, mas tem uns desfalecimentos estilísticos brutais.</p>
+<p><strong>&nbsp;P. Que autores o interessam?</strong></p>
+<p>&nbsp;R. Acho Valle-Inclán um escritor grandioso. Também Clarín. E Baroja, leio com gosto sempre. Tenho admiração por ele.</p>
+<p>&nbsp;<strong>P. E da tradição latino-americana?</strong></p>
+<p>&nbsp;R. Li e leio com admiração Rulfo e <a href="//brasil.elpais.com/tag/gabriel_garcia_marquez/a/">García Márquez</a> e Vargas Llosa. <a href="//brasil.elpais.com/tag/julio_cortazar/a/">Cortázar</a> não, exceto os contos. Rayuela eu nunca gostei. Sou um grande entusiasta de [Horacio] Quiroga, por exemplo. Onetti também gosto. Lendo-os comprovava o que se disse tantas vezes: que o espanhol podia ser menos rígido, mais livre e mais rico do que a tradição recente da literatura espanhola parecia consentir.</p>
+<p>&nbsp;<strong>P. Em seus artigos é muito crítico com o espanhol. O que gosta da Espanha?</strong></p>
+<p>&nbsp;R. Que as pessoas são desprendidas e têm certa alegria de viver, certa despreocupação, certa confiança de que as coisas não estão de todo perdidas, por pior que pareçam. Agora vivemos anos em que isso é mais difícil de manter. As pessoas tinham pouco dinheiro e eram capazes de gastá-lo para pagar uma rodada para os amigos. Não vi isso em outros países. Às vezes justamente o contrário, vi mesquinharia com o dinheiro.</p>
+<p><strong>&nbsp;P. Por escrito parece estar sempre inquieto, irritado.</strong></p>
+<p>&nbsp;R. O mero fato de que alguém se dê ao trabalho de escrever criticando algo indica certa ingenuidade e otimismo, porque a pessoa faz isso com o afã iludido de que algo melhore.</p>
+<p>&nbsp;<strong>P. Também é crítico com a crítica literária. Em um artigo foi muito duro, para dizer o mínimo, com a que se publica na Babelia.</strong></p>
+<p>&nbsp;R. A crítica foi perdendo influência. Em parte devido a novos costumes. Provavelmente a existência da Internet tenha muito a ver com isso, mas em parte também é culpa dos críticos, se é que se pode generalizar. Sempre há exceções. Claro que há críticos muito bons e muito ilustrativos. Falava disso nesse artigo: tinha Babelias atrasadas e pensava que encontraria livros sobre os quais não estava informado e que me atrairiam. Embora houvesse muitos elogios, raras vezes alguma crítica me incitava. Enfim, talvez tenha exagerado. Pensei: é estranho, o que está acontecendo. Talvez tenha havido por parte da crítica certo abandono de suas funções, talvez muitas que não soem de todo sinceras, outras talvez sejam rotineiras. Outras estão cheias de elogios, mas os elogios, para mim, que sou cachorro velho, soam vazios. Foi essa a sensação que tive. Minha intenção não era ofender ninguém. Talvez tenha ofendido escrever aquele artigo e, bem, desculpo-me porque sempre somos injustos quando generalizamos, e há exceções, sem dúvida.</p>
+<p><strong>&nbsp;P. O que aconteceu com a crítica?</strong></p>
+<p>&nbsp;R. Perdeu a fé em si mesma, a fé em – a palavra não é muito simpática – educar o leitor; em orientá-lo, que soa menos desagradável. Essa falta de confiança nas próprias capacidades se transformou em um bumerangue. A prova mais irrefutável é que, assim como nos anos setenta podia influir muito favoravelmente no destino de um livro, sobretudo de um autor que não fosse conhecido, hoje isso acontece muito raramente. Existe uma espécie de desconfiança ou de desdém em relação à crítica. Sou o primeiro a lamentá-lo. Não é um gênero que me pareça fútil. É um gênero como qualquer outro e teve expoentes de primeira categoria.</p>
+<p><strong>&nbsp;P. E não há certa tendência a tomar as críticas como ofensas pessoais?</strong></p>
+<p>&nbsp;R. Isso é uma desgraça, mas em parte acontece porque às vezes foi assim. Tenho 63 anos e acredito que tenho certa capacidade de detectar coisas em um texto. Às vezes leio uma frase em um romance e digo: isto não vai a lugar nenhum. Talvez seja injusto, mas é o defeito de envelhecer, que torna a pessoa mais ressabiada. Isso se nota nas críticas. Às vezes nota que o crítico gostou mais do que está dizendo. E o contrário. Às vezes os elogios são afetados. Muitos críticos utilizaram seu poderzinho para não serem de todo sinceros.</p>
+<section class="sumario_despiece centro" id="sumario_1|despiece">
+<a name="sumario_1"></a>
+<div class="sumario__interior">
+<header class="sumario-encabezado">
+<h4 class="sumario-titulo"><span class="sin_enlace">Foram livros do ano (em espanhol)</span></h4>
+</header> 
+<div class="sumario-texto">
+<p><strong>2013:</strong> <em>En la orilla</em>, de Rafael Chirbes.</p>
+<p><strong>2012:</strong> <em>Pensar el siglo XX</em>, de Tony Judt.</p>
+<p><strong>2011:</strong> <em>Los enamoramientos,</em> de Javier Marías.</p>
+<p><strong>2010:</strong> <em>Verano,</em> de J. M. Coetzee.</p>
+<p><strong>2009:</strong> <em>Anatomía de un instante,</em> de Javier Cercas.</p>
+<p><strong>2008:</strong> <em>Chesil Beach,</em> de Ian McEwan.</p>
+<p><strong>2007:</strong> <em>Vida y destino,</em> de Vasili Grossman.</p>
+</div> 
+</div> 
+</section>
+<p>&nbsp;</p>
 </div> 
 <section class="articulo-tags" id="articulo-tags">
 <header class="articulo-tags-encabezado ">
@@ -512,19 +648,31 @@ Arquivado em:
 </header>
 <div class="articulo-tags__interior" id="articulo-tags__interior">
 <ul class="listado" id="listado">
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/critica_cine/a/" title="Ver m&aacute;s noticias de [Crítica filmes]">Crítica filmes</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/luc_besson/a/" title="Ver m&aacute;s noticias de [Luc Besson]">Luc Besson</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/vincent_cassell/a/" title="Ver m&aacute;s noticias de [Vincent Cassell]">Vincent Cassell</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/peliculas/a/" title="Ver m&aacute;s noticias de [Filmes]">Filmes</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/javier_marias/a/" title="Ver m&aacute;s noticias de [Javier Marías]">Javier Marías</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/juan_benet/a/" title="Ver m&aacute;s noticias de [Juan Benet]">Juan Benet</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/camilo_jose_cela/a/" title="Ver m&aacute;s noticias de [Camilo José Cela]">Camilo José Cela</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/juan_marse/a/" title="Ver m&aacute;s noticias de [Juan Marsé]">Juan Marsé</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/benito_perez_galdos/a/" title="Ver m&aacute;s noticias de [Benito Pérez Galdós]">Benito Pérez Galdós</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/mark_strand/a/" title="Ver m&aacute;s noticias de [Mark Strand]">Mark Strand</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/leopoldo_alas_clarin/a/" title="Ver m&aacute;s noticias de [Leopoldo Alas &quot;Clarín&quot;]">Leopoldo Alas "Clarín"</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/pio_baroja/a/" title="Ver m&aacute;s noticias de [Pío Baroja]">Pío Baroja</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/boom_latinoamericano/a/" title="Ver m&aacute;s noticias de [Boom latinoamericano]">Boom latinoamericano</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/libros_del_ano/a/" title="Ver m&aacute;s noticias de [Libros del año]">Libros del año</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/literatura_espanola/a/" title="Ver m&aacute;s noticias de [Literatura espanhola]">Literatura espanhola</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/transicion_espanola/a/" title="Ver m&aacute;s noticias de [Transición española]">Transición española</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/literatura_hispanoamericana/a/" title="Ver m&aacute;s noticias de [Literatura hispanoamericana]">Literatura hispanoamericana</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/transicion_democratica/a/" title="Ver m&aacute;s noticias de [Transição democrática]">Transição democrática</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/conflictos_politicos/a/" title="Ver m&aacute;s noticias de [Conflitos políticos]">Conflitos políticos</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/politica/a/" title="Ver m&aacute;s noticias de [Política]">Política</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/libros_del_ano_2014/a/" title="Ver m&aacute;s noticias de [Libros del año 2014]">Libros del año 2014</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/critica_literaria/a/" title="Ver m&aacute;s noticias de [Crítica literária]">Crítica literária</a></li>
 <li itemprop="keywords"><a href="//brasil.elpais.com/tag/critica/a/" title="Ver m&aacute;s noticias de [Crítica]">Crítica</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/libros/a/" title="Ver m&aacute;s noticias de [Livros]">Livros</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/generacion_98/a/" title="Ver m&aacute;s noticias de [Generación 98]">Generación 98</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/movimientos_literarios/a/" title="Ver m&aacute;s noticias de [Movimentos literários]">Movimentos literários</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/literatura/a/" title="Ver m&aacute;s noticias de [Literatura]">Literatura</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/movimientos_culturales/a/" title="Ver m&aacute;s noticias de [Movimentos culturais]">Movimentos culturais</a></li>
 <li itemprop="keywords"><a href="//brasil.elpais.com/tag/cultura/a/" title="Ver m&aacute;s noticias de [Cultura]">Cultura</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/festival_cannes_2016/a/" title="Ver m&aacute;s noticias de [Festival Cannes 2016]">Festival Cannes 2016</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/festival_cannes/a/" title="Ver m&aacute;s noticias de [Festival Cannes]">Festival Cannes</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/festivales_cine/a/" title="Ver m&aacute;s noticias de [Festivais cinema]">Festivais cinema</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/festivales/a/" title="Ver m&aacute;s noticias de [Festivais]">Festivais</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/cine/a/" title="Ver m&aacute;s noticias de [Cinema]">Cinema</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/eventos/a/" title="Ver m&aacute;s noticias de [Eventos]">Eventos</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/sociedad/a/" title="Ver m&aacute;s noticias de [Sociedade]">Sociedade</a></li>
 </ul>
 </div>
 </section>
@@ -536,27 +684,6 @@ if (typeof EPETshowHideTags == 'function') {
 
 }
 </script>
-<section class="articulo-apoyos" id="articulo-apoyos">
-<header class="articulo-apoyos-encabezado">
-<h3 class="articulo-apoyos-titulo"><span class="sin_enlace">MAIS INFORMAÇÕES</span></h3>
-</header>
-<div class="articulo-apoyos__interior">
-<div class="apoyos">
-<ul class="apoyos-listado">
-<li class="apoyo_">
-<span class="apoyo-titulo">
-<a href="//brasil.elpais.com/brasil/2015/05/22/cultura/1432284728_416655.html?rel=mas"   >                                         Louis Garrel: “Foi com as mulheres que aprendi o que é a amizade”
-</a>                 </span>
-</li>
-<li class="apoyo_">
-<span class="apoyo-titulo">
-<a href="//brasil.elpais.com/brasil/2016/01/29/cultura/1454073170_405494.html?rel=mas"   >                                         A entrevista que mudou o cinema: Hitchcock e Truffaut
-</a>                 </span>
-</li>
-</ul>
-</div>
-</div>
-</section>
 </div> 
 <div class="envoltorio_publi" id="roba_principal">
 <div id='elpais_gpt-MPU1' class='publi_luto_horizontal'>
@@ -690,55 +817,55 @@ function lmv_cambia_subpestana(idpestana)
 </div>
 <div class="contenido" id="lmv_todo" style="display:none" >
 <ol>
-<li class="estirar"><span class="numero">1</span><a href="http://smoda.elpais.com/moda/nacho-vidal-mi-hija-no-esta-en-un-cuerpo-equivocado-es-una-nina-con-pene/" title="Ver Noticia">Nacho Vidal: “Mi hija no está en un cuerpo equivocado, es una niña con pene”</a></li>
-<li class="estirar"><span class="numero">2</span><a href="//elpais.com/cultura/2018/09/26/television/1537984668_369407.html" title="Ver Noticia">Un error de ‘Pasapalabra’ en el rosco le cuesta la eliminación a un concursante</a></li>
-<li class="estirar"><span class="numero">3</span><a href="//elpais.com/elpais/2018/09/26/ciencia/1537960453_593059.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Abusar de las pantallas lastra la inteligencia de los niños</a></li>
-<li class="estirar"><span class="numero">4</span><a href="//elpais.com/elcomidista/2018/09/26/articulo/1537973518_982629.html" title="Ver Noticia">El restaurante que trata mal y cocina peor</a></li>
-<li class="estirar"><span class="numero">5</span><a href="//elpais.com/cultura/2018/09/27/actualidad/1538025841_320298.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Sexo, alcohol y fiesta en la España de Franco y Ava Gardner</a></li>
-<li class="estirar"><span class="numero">6</span><a href="//elpais.com/elpais/2018/09/24/ciencia/1537789289_801960.html" title="Ver Noticia">La odisea de Katrin, una ‘báscula’ gigante para la partícula más pequeña</a></li>
-<li class="estirar"><span class="numero">7</span><a href="//elpais.com/sociedad/2018/09/27/actualidad/1538048561_887845.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El parricida de Castellón, a su exmujer: “Me voy a cargar lo que más quieres”</a></li>
-<li class="estirar"><span class="numero">8</span><a href="//elpais.com/politica/2018/09/27/actualidad/1538033747_400451.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Duque justifica la compra de un chalé a través de una sociedad: “No hubo un ahorro real de impuestos”</a></li>
-<li class="estirar"><span class="numero">9</span><a href="//elpais.com/politica/2018/09/26/actualidad/1537984724_391033.html" title="Ver Noticia">Una joven, víctima de los disparos de la Marina Real de Marruecos cuando huía a España</a></li>
-<li class="estirar"><span class="numero">10</span><a href="//elpais.com/sociedad/2018/09/27/actualidad/1538032001_854087.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Detenido el principal sospechoso del asesinato de una mujer en Málaga</a></li>
+<li class="estirar"><span class="numero">1</span><a href="//elpais.com/cultura/2018/10/06/actualidad/1538820063_864193.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El curioso caso del ‘banksy’ en la trituradora</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//elpais.com/cultura/2018/10/06/actualidad/1538807004_654748.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Muere Montserrat Caballé, la diva de todos</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//elpais.com/cultura/2018/10/05/actualidad/1538767325_319645.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>La verdadera historia de lo que costó el ‘Guernica’ a la República</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//elpais.com/ccaa/2018/10/06/madrid/1538820179_411579.html" title="Ver Noticia">Una muerte nunca es absurda</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//elpais.com/sociedad/2018/10/05/actualidad/1538756801_690385.html" title="Ver Noticia">Basta ya. España debe actuar antes de que sea demasiado tarde</a></li>
+<li class="estirar"><span class="numero">6</span><a href="http://smoda.elpais.com/moda/las-extranas-fotos-de-los-padres-de-trump-que-han-desenterrado-su-cuestionable-pasado/" title="Ver Noticia">Las extrañas fotos de los padres de Trump que han desenterrado su cuestionable pasado</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//elpais.com/elpais/2018/10/06/gente/1538831398_923883.html" title="Ver Noticia">La boda de Fernando Fitz-James Stuart y Sofía Palazuelo, entre tradición y modernidad</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//elpais.com/elpais/2018/10/06/album/1538825587_617918.html" title="Ver Noticia"><span title="Fotogalería" class="foto">Fotogalería</span>Los invitados a la boda del duque de Huéscar y Sofía Palazuelo, en imágenes</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//elpais.com/politica/2018/10/05/actualidad/1538751420_871293.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El narco más buscado en España reaparece en un videoclip de reguetón</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//elpais.com/sociedad/2018/10/05/actualidad/1538743634_936868.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El drama tras el misterio de la muerte de la familia holandesa en Coín</a></li>
 </ol>
 </div>			<div class="contenido" id="lmv_america" style="display:none" >
 <ol>
-<li class="estirar"><span class="numero">1</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537997982_557864.html" title="Ver Noticia">Carlos Bolsonaro será denunciado por apologia à tortura na Câmara do Rio</a></li>
-<li class="estirar"><span class="numero">2</span><a href="//brasil.elpais.com/brasil/2018/01/12/politica/1515787762_592872.html" title="Ver Noticia">A semana em que as primeiras pedras atingiram a vidraça de Jair Bolsonaro</a></li>
-<li class="estirar"><span class="numero">3</span><a href="//brasil.elpais.com/brasil/2018/09/24/politica/1537815456_213002.html" title="Ver Noticia">José Dirceu: “O problema do Bolsonaro é do PSDB e DEM. Sem Lula, temos Ciro e Haddad”</a></li>
-<li class="estirar"><span class="numero">4</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537987540_575485.html" title="Ver Noticia">Calejados, candidatos à presidência fazem quinto debate equilibrado</a></li>
-<li class="estirar"><span class="numero">5</span><a href="http://smoda.elpais.com/moda/nacho-vidal-mi-hija-no-esta-en-un-cuerpo-equivocado-es-una-nina-con-pene/" title="Ver Noticia">Nacho Vidal: “Mi hija no está en un cuerpo equivocado, es una niña con pene”</a></li>
-<li class="estirar"><span class="numero">6</span><a href="//elpais.com/internacional/2018/07/23/mundo_global/1532345833_454942.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Cadáveres atrapados durante décadas en glaciares suizos salen a la superficie por el calentamiento global</a></li>
-<li class="estirar"><span class="numero">7</span><a href="//elpais.com/sociedad/2018/09/27/actualidad/1538048561_887845.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El parricida de Castellón, a su exmujer: “Me voy a cargar lo que más quieres”</a></li>
-<li class="estirar"><span class="numero">8</span><a href="//elpais.com/internacional/2018/09/27/mexico/1537999590_041505.html" title="Ver Noticia">El exgobernador mexicano Javier Duarte es condenado a nueve años de prisión tras declararse culpable</a></li>
-<li class="estirar"><span class="numero">9</span><a href="//elpais.com/internacional/2018/09/27/estados_unidos/1538010036_433237.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Trump, sobre su discurso en la ONU: “No se reían de mí, se reían conmigo”</a></li>
-<li class="estirar"><span class="numero">10</span><a href="//elpais.com/internacional/2018/09/26/estados_unidos/1537975769_704871.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Cuarta acusación de abuso sexual contra el candidato de Trump al Supremo</a></li>
+<li class="estirar"><span class="numero">1</span><a href="//brasil.elpais.com/brasil/2018/10/05/opinion/1538752101_102353.html" title="Ver Noticia">A mais nova ‘fake news’ de Bolsonaro</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//brasil.elpais.com/brasil/2018/09/19/deportes/1537394219_927623.html" title="Ver Noticia">Juninho Pernambucano: “Se eu fui censurado e ameaçado, toda a imprensa também foi”</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//elpais.com/cultura/2018/10/06/actualidad/1538820063_864193.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El curioso caso del ‘banksy’ en la trituradora</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//brasil.elpais.com/brasil/2018/10/03/politica/1538583736_557680.html" title="Ver Noticia">A tragicomédia das mentiras que moldam as eleições no WhatsApp</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//elpais.com/cultura/2018/10/06/actualidad/1538807004_654748.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Muere Montserrat Caballé, la diva de todos</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//brasil.elpais.com/brasil/2018/01/12/politica/1515787762_592872.html" title="Ver Noticia">A semana em que as primeiras pedras atingiram a vidraça de Jair Bolsonaro</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//brasil.elpais.com/brasil/2018/10/06/opinion/1538852257_174248.html" title="Ver Noticia">Por que votamos em Hitler</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//brasil.elpais.com/brasil/2018/10/06/politica/1538859277_033603.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>O que Bolsonaro já disse de fato sobre mulheres, negros e gays</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//brasil.elpais.com/brasil/2018/10/05/opinion/1538754101_395174.html" title="Ver Noticia">As elites que escolhem Bolsonaro colocam em risco as vidas de outros</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//brasil.elpais.com/brasil/2018/10/04/cultura/1538677664_945391.html" title="Ver Noticia">“Meu livro é sobre a ditadura. Jamais pensei que seria censurado”, diz autor de ‘Meninos Sem Pátria’</a></li>
 </ol>
 </div>			<div class="contenido" id="lmv_brasil" >
 <ol>
-<li class="estirar"><span class="numero">1</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537997982_557864.html" title="Ver Notícia">Carlos Bolsonaro será denunciado por apologia à tortura na Câmara do Rio</a></li>
-<li class="estirar"><span class="numero">2</span><a href="//brasil.elpais.com/brasil/2018/01/12/politica/1515787762_592872.html" title="Ver Notícia">A semana em que as primeiras pedras atingiram a vidraça de Jair Bolsonaro</a></li>
-<li class="estirar"><span class="numero">3</span><a href="//brasil.elpais.com/brasil/2018/09/24/politica/1537815456_213002.html" title="Ver Notícia">José Dirceu: “O problema do Bolsonaro é do PSDB e DEM. Sem Lula, temos Ciro e Haddad”</a></li>
-<li class="estirar"><span class="numero">4</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537987540_575485.html" title="Ver Notícia">Calejados, candidatos à presidência fazem quinto debate equilibrado</a></li>
-<li class="estirar"><span class="numero">5</span><a href="//brasil.elpais.com/brasil/2017/10/25/politica/1508939191_181548.html" title="Ver Notícia">Como era o Brasil quando armas eram vendidas em shoppings</a></li>
-<li class="estirar"><span class="numero">6</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537978764_156884.html" title="Ver Notícia">Bebê morto com tiro na cabeça é um cruel símbolo da situação dos povos indígenas no Brasil</a></li>
-<li class="estirar"><span class="numero">7</span><a href="//brasil.elpais.com/brasil/2018/09/24/opinion/1537805079_256045.html" title="Ver Notícia">Mulheres contra a opressão</a></li>
-<li class="estirar"><span class="numero">8</span><a href="//brasil.elpais.com/brasil/2018/08/29/politica/1535564207_054097.html" title="Ver Notícia">Bolsonaro mentiu ao falar de livro de educação sexual no ‘JN’</a></li>
-<li class="estirar"><span class="numero">9</span><a href="//brasil.elpais.com/brasil/2018/09/20/opinion/1537447119_621795.html" title="Ver Notícia">Mudança no imposto de renda que planeja economista de Bolsonaro pode agravar a desigualdade e a crise</a></li>
-<li class="estirar"><span class="numero">10</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537913905_985857.html" title="Ver Notícia">Ex-mulher de Bolsonaro disse ao Itamaraty que ele a ameaçou de morte</a></li>
+<li class="estirar"><span class="numero">1</span><a href="//brasil.elpais.com/brasil/2018/10/05/opinion/1538752101_102353.html" title="Ver Notícia">A mais nova ‘fake news’ de Bolsonaro</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//brasil.elpais.com/brasil/2018/09/19/deportes/1537394219_927623.html" title="Ver Notícia">Juninho Pernambucano: “Se eu fui censurado e ameaçado, toda a imprensa também foi”</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//brasil.elpais.com/brasil/2018/10/03/politica/1538583736_557680.html" title="Ver Notícia">A tragicomédia das mentiras que moldam as eleições no WhatsApp</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//brasil.elpais.com/brasil/2018/01/12/politica/1515787762_592872.html" title="Ver Notícia">A semana em que as primeiras pedras atingiram a vidraça de Jair Bolsonaro</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//brasil.elpais.com/brasil/2018/10/06/opinion/1538852257_174248.html" title="Ver Notícia">Por que votamos em Hitler</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//brasil.elpais.com/brasil/2018/10/06/politica/1538859277_033603.html" title="Ver Notícia"><span title="Vídeo" class="video">Vídeo</span>O que Bolsonaro já disse de fato sobre mulheres, negros e gays</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//brasil.elpais.com/brasil/2018/10/05/opinion/1538754101_395174.html" title="Ver Notícia">As elites que escolhem Bolsonaro colocam em risco as vidas de outros</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//brasil.elpais.com/brasil/2018/10/04/cultura/1538677664_945391.html" title="Ver Notícia">“Meu livro é sobre a ditadura. Jamais pensei que seria censurado”, diz autor de ‘Meninos Sem Pátria’</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//brasil.elpais.com/brasil/2014/02/14/politica/1392402426_093148.html" title="Ver Notícia">“Os gays não são semideuses. A maioria é fruto das drogas”</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//brasil.elpais.com/brasil/2018/10/02/politica/1538454557_419749.html" title="Ver Notícia">Policiais estupraram meninas durante intervenção no Rio, aponta relatório da Defensoria Pública</a></li>
 </ol>
 </div>			<div class="contenido" id="lmv_catalunya" style="display:none" >
 <ol>
-<li class="estirar"><span class="numero">1</span><a href="//cat.elpais.com/cat/2018/09/27/cultura/1538036752_451427.html" title="Veure Notícia">Stephen King, un català de por</a></li>
-<li class="estirar"><span class="numero">2</span><a href="//cat.elpais.com/cat/2018/09/27/opinion/1538067434_446213.html" title="Veure Notícia">Fora furs!</a></li>
-<li class="estirar"><span class="numero">3</span><a href="//cat.elpais.com/cat/2018/09/26/cultura/1537966086_120196.html" title="Veure Notícia">“Sherlock Holmes és una oportunitat per crear nous espectadors de teatre”</a></li>
-<li class="estirar"><span class="numero">4</span><a href="//cat.elpais.com/cat/2018/09/26/catalunya/1537977632_698457.html" title="Veure Notícia">Colau agraeix a la Guàrdia Urbana la seva feina “en un any que no ha estat fàcil”</a></li>
-<li class="estirar"><span class="numero">5</span><a href="//cat.elpais.com/cat/2018/09/27/catalunya/1538053520_451005.html" title="Veure Notícia">Mor als 74 anys Carles Canut, una icona del teatre català</a></li>
-<li class="estirar"><span class="numero">6</span><a href="//cat.elpais.com/cat/2018/09/27/catalunya/1538045334_900510.html" title="Veure Notícia">Quim Torra, esbroncat durant una visita a Sant Andreu de la Barca</a></li>
-<li class="estirar"><span class="numero">7</span><a href="//cat.elpais.com/cat/2018/09/25/catalunya/1537901121_892098.html" title="Veure Notícia">U d’Octubre, no Primer d’Octubre</a></li>
-<li class="estirar"><span class="numero">8</span><a href="//cat.elpais.com/cat/2018/09/26/espana/1537986129_745997.html" title="Veure Notícia">El partit liberal europeu proposa expulsar el PDeCAT</a></li>
-<li class="estirar"><span class="numero">9</span><a href="//cat.elpais.com/cat/2018/09/26/catalunya/1537959004_543030.html" title="Veure Notícia">La candidatura de Valls es dirà “Barcelona, capital europea”</a></li>
-<li class="estirar"><span class="numero">10</span><a href="//cat.elpais.com/cat/2018/09/26/catalunya/1537985221_555083.html" title="Veure Notícia"><span title="Vídeo" class="video">Vídeo</span>Puigdemont, sobre la seva fugida: “No crec en els màrtirs”</a></li>
+<li class="estirar"><span class="numero">1</span><a href="//cat.elpais.com/cat/2018/10/05/opinion/1538759277_850424.html" title="Veure Notícia">Por de la complexitat</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//cat.elpais.com/cat/2018/10/06/deportes/1538835204_530649.html" title="Veure Notícia">L’escut del Barça i la cara de Messi</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//cat.elpais.com/cat/2018/10/04/cultura/1538662341_032904.html" title="Veure Notícia">La “bufonada” del 6 d’octubre de 1934</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//cat.elpais.com/cat/2018/10/06/opinion/1538843121_814820.html" title="Veure Notícia">El pa fugitiu</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//cat.elpais.com/cat/2018/10/05/catalunya/1538740154_502623.html" title="Veure Notícia">El Govern torna a fer enfadar els Mossos per excloure l’Estat d’un acte oficial</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//cat.elpais.com/cat/2018/10/06/cultura/1538807004_654748.html" title="Veure Notícia"><span title="Vídeo" class="video">Vídeo</span>Mor Montserrat Caballé als 85 anys</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//cat.elpais.com/cat/2018/10/05/catalunya/1538735216_826003.html" title="Veure Notícia">La Universitat de Barcelona retira el doctorat a un càrrec del PDeCAT per plagi</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//cat.elpais.com/cat/2018/10/02/opinion/1538496610_125139.html" title="Veure Notícia">Insensatesa</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//cat.elpais.com/cat/2018/05/11/cultura/1526029019_087401.html" title="Veure Notícia">La ganyota del malestar</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//cat.elpais.com/cat/2018/10/05/catalunya/1538734379_341910.html" title="Veure Notícia">Barcelona canviarà el nom de l’avinguda de Borbó per ‘Els Quinze’</a></li>
 </ol>
 </div>
 <div class="envoltorio_publi estirar">
@@ -766,9 +893,9 @@ function lmv_cambia_subpestana(idpestana)
 </div>
 </div>
 <div id="outbrain" class="outbrain">
-<div class="OUTBRAIN" data-src="http://brasil.elpais.com/brasil/2016/04/14/cultura/1460644032_111554.html" data-widget-id="AR_6" data-ob-template="elpais" ></div>
-<div class="OUTBRAIN" data-src="http://brasil.elpais.com/brasil/2016/04/14/cultura/1460644032_111554.html" data-widget-id="AR_5" data-ob-template="elpais" ></div>
-<div class="OUTBRAIN" data-src="http://brasil.elpais.com/brasil/2016/04/14/cultura/1460644032_111554.html" data-widget-id="AR_4" data-ob-template="elpais" ></div>
+<div class="OUTBRAIN" data-src="http://brasil.elpais.com/brasil/2014/12/18/cultura/1418914031_580202.html" data-widget-id="AR_6" data-ob-template="elpais" ></div>
+<div class="OUTBRAIN" data-src="http://brasil.elpais.com/brasil/2014/12/18/cultura/1418914031_580202.html" data-widget-id="AR_5" data-ob-template="elpais" ></div>
+<div class="OUTBRAIN" data-src="http://brasil.elpais.com/brasil/2014/12/18/cultura/1418914031_580202.html" data-widget-id="AR_4" data-ob-template="elpais" ></div>
 <script type="text/javascript" async src="//widgets.outbrain.com/outbrain.js"></script>
 </div>
 <style>@media(max-width: 728px){.principal--fijo ~ .envoltorio_publi,.principal--fijo .otros .envoltorio_publi:last-child{position: fixed;z-index: 2000;background: #fff;bottom: 0;width: 100%!important;left: 0;}.principal--fijo ~ .envoltorio_publi #elpais_gpt-MLDB3 ~ button,.principal--fijo #elpais_gpt-MLDB3 ~ button{position: absolute;visibility: visible;width: 28px;height: 28px;top: -28px;z-index: 2010;right: 0;background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTMnIGhlaWdodD0nMTMnIHZpZXdCb3g9JzM0MSA4IDEzIDEzJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnPjxwYXRoIGZpbGw9JyM0RjRGNEYnIGQ9J00zNTQgOS4zMUwzNTIuNjkgOGwtNS4xOSA1LjE5TDM0Mi4zMSA4IDM0MSA5LjMxbDUuMTkgNS4xOS01LjE5IDUuMTkgMS4zMSAxLjMxIDUuMTktNS4xOSA1LjE5IDUuMTkgMS4zMS0xLjMxLTUuMTktNS4xOXonIGZpbGwtcnVsZT0nZXZlbm9kZCcvPjwvc3ZnPg==);background-size: 13px 13px;background-position: 9px;background-color: #fff;background-repeat: no-repeat;box-shadow: 0 -1px 1px 0 rgba(0,0,0,0.2);border: none;border-radius: 12px 0 0 0;}.principal--fijo ~ .envoltorio_publi #elpais_gpt-MLDB3[style*=none] ~ button,.principal--fijo #elpais_gpt-MLDB3[style*=none] ~ button {visibility: hidden;}.principal--fijo ~ .envoltorio_publi #elpais_gpt-MLDB3 > div,.principal--fijo #elpais_gpt-MLDB3 > div{margin-bottom: 0;}.principal--fijo ~ .envoltorio_publi #elpais_gpt-MLDB3,.principal--fijo #elpais_gpt-MLDB3{padding-top: 4px;width: 100%;text-align: center;box-shadow: 0 0 5px 0 rgba(0,0,0,0.2)!important;}.principal--fijo ~ .envoltorio_publi #elpais_gpt-MLDB3[style] ~ button,.principal--fijo #elpais_gpt-MLDB3[style] ~ button {display:block !important}}</style>
@@ -802,7 +929,7 @@ function lmv_cambia_subpestana(idpestana)
 <li><a href="/rss/brasil/portada_completo.xml">RSS</a></li>
 </ul>
 </div>
-<!-- date 2018-09-28 12:36:53 AM-->
+<!-- date 2018-10-07 03:21:36 AM-->
 <script type="text/javascript">
 (function(){if(PBS.slm&&PBS.slm.cf&&PBS.slm.cf.biT_){var biT_=function(BIT){var ps=document.querySelectorAll(BIT.sel),el,cls=BIT.cls||"",pos=BIT.pos,min=BIT.min||0,ads=PBS.slm.cf.ads,axm=PBS.axm,sh=0,tel,tds;if(ps&&ps.length&&ps.length>0)for(el in pos){tds=ps[pos[el][0]-1];if(tds||min>sh){tel=axm.h.el("div",{"id":PBS.slm.cf.divid+"-"+el.toUpperCase(),"Cn":cls});tds&&tds.parentNode.insertBefore(tel,tds.nextSibling)||ps[ps.length-1].parentNode.appendChild(tel)}sh++}},c;for(c=0;c<PBS.slm.cf.biT_.length;c++)biT_(PBS.slm.cf.biT_[c])}var publiPbsLoad=document.querySelectorAll("div[class*='publiLoad']");if("object"==typeof publiPbsLoad[0]){var _M=PBS.axm.C.isMovil(),_P=_M?.5:.3,size=[],i=PBS.axm.C.screen().ancho,o=PBS.axm.C.screen().alto;PBS.slm.log.onview={};window.addEventListener("scroll",function(e){for(l=0;l<publiPbsLoad.length;l++){var d=document.getElementById(publiPbsLoad[l].id),s=d.getBoundingClientRect().top,n=d.id.split(gtpdivid+"-")[1];if((o*_P)+o>s&&typeof PBS.slm.log.onview[n]=="undefined"){PBS.slm.log.onview[n]=!0;if(-1!=n.indexOf("MPU")){size=[[300,250]]}else if(-1!=n.indexOf("LDB")){if(i>=980){size=[[728,90],[980,90]]}else if(i>=728){size=[[728,90]]}else{n="M"+n;size=[[320,50]]}}else if(-1!=n.indexOf("NSTD")){size=!1}else if(-1!=n.indexOf("NATAD")){size=[[300,250],"fluid"]};PBS.axm.h.slr([{d:d.id,p:n.toLowerCase(),s:size}]);size=[]}}})}})();
 </script>
@@ -1113,5 +1240,5 @@ if(typeof window['ampliaFoto'] == 'function'){
 </script></div>
 </footer>
 </div>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"de584669e4","applicationID":"81461901","transactionName":"MwFaYEIDWEZQVEENCQpLbUZZTVRHUERcCElOSxIbGk1VQF1DQBYHS0oSXEQPWg==","queueTime":0,"applicationTime":188,"atts":"H0ZZFgoZS0g=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"de584669e4","applicationID":"81461901","transactionName":"MwFaYEIDWEZQVEENCQpLbUZZTVRHUERcCElOSxIbGk1VQF1DQBYHS0oSXEQPWg==","queueTime":0,"applicationTime":97,"atts":"H0ZZFgoZS0g=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>

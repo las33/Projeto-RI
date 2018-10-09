@@ -5,44 +5,44 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQEDUVdSCxAIVVVUBggHVw=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(20),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{h?h-=1:o(c||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:s.now();i("err",[t,n])}var i=t("handle"),a=t(21),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",h=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(13),t(12),"addEventListener"in window&&t(6),s.xhrWrappable&&t(14),d=!0)}c.on("fn-start",function(t,e,n){d&&(h+=1)}),c.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),c.on("fn-end",function(){d&&!this.thrown&&h>0&&(h-=1)}),c.on("internal-error",function(t){i("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){M++,S=y.hash,this[u]=b.now()}function o(){M--,y.hash!==S&&i(0,!0);var t=b.now();this[l]=~~this[l]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=b.now()})}var c="-start",s="-end",f="-body",u="fn"+c,d="fn"+s,p="cb"+c,h="cb"+s,l="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,b=t("loader");if(w[v]&&b.xhrWrappable){var g=t(10),x=t(11),E=t(8),P=t(6),O=t(13),R=t(7),T=t(14),L=t(9),j=t("ee"),N=j.get("tracer");t(15),b.features.spa=!0;var S,M=0;j.on(u,r),j.on(p,r),j.on(d,o),j.on(h,o),j.buffer([u,d,"xhr-done","xhr-resolved"]),P.buffer([u]),O.buffer(["setTimeout"+s,"clearTimeout"+c,u]),T.buffer([u,"new-xhr","send-xhr"+c]),R.buffer([m+c,m+"-done",m+f+c,m+f+s]),E.buffer(["newURL"]),g.buffer([u]),x.buffer(["propagate",p,h,"executor-err","resolve"+c]),N.buffer([u,"no-"+u]),L.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,"send-xhr"+c),a(j,"xhr-resolved"),a(j,"xhr-done"),a(R,m+c),a(R,m+"-done"),a(L,"new-jsonp"),a(L,"jsonp-end"),a(L,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,M>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),c=t(12),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",h="-start",l="-end",m="fn"+h,v="fn"+l,w="bstTimer",y="pushState",b=t("loader");b.features.stn=!0,t(8);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=b.now())}),o.on(v,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,b.now()])}),a.on(m,function(t,e,n){this.bstStart=b.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),this.bstType])}),c.on(m,function(){this.bstStart=b.now()}),c.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),"requestAnimationFrame"])}),o.on(y+h,function(t){this.time=b.now(),this.startPath=location.pathname+location.hash}),o.on(y+l,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(23)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(20);e.exports=o;var a=window,c="fetch-",s=c+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,h="prototype";u&&d&&p&&(i(f,function(t,e){r(u[h],e,s),r(d[h],e,s)}),r(a,"fetch",c),o.on(c+"end",function(t,e){var n=this;e?e.clone().arrayBuffer().then(function(t){n.rxSize=t.byteLength,o.emit(c+"done",[null,e],n)}):o.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(23)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){s.emit("jsonp-error",[],p),s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=c(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),s.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function c(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var s=t("ee").get("jsonp"),f=t(23)(s);if(e.exports=s,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,h=["appendChild","insertBefore","replaceChild"];f.inPlace(HTMLElement.prototype,h,"dom-"),f.inPlace(HTMLHeadElement.prototype,h,"dom-"),f.inPlace(HTMLBodyElement.prototype,h,"dom-"),s.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t(23)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=c(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(23),a=t("ee").get("promise"),c=i(a),s=t(20),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;s(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),c=f.resolve(i);return c}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),s(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=c(t[0],"resolve-",this),t[1]=c(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),c.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=c(t[0],"cb-",this),t[1]=c(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t(23)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(23)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",c)}function i(t){b.push(t),l&&(x?x.then(a):v?v(a):(E=-E,P.data=E))}function a(){for(var t=0;t<b.length;t++)r([],b[t]);b.length&&(b=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(23)(u),p=NREUM.o,h=p.XHR,l=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],b=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(h,g),g.prototype=h.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),l){var x=m&&m.resolve();if(!v&&!m){var E=1,P=document.createTextNode(E);new l(a).observe(P,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=a.now()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return l(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(16),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,p=t("id"),h=t(19),l=t(18),m=window.XMLHttpRequest;a.features.xhr=!0,t(14),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=l(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<d;c++)e.addEventListener(u[c],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)})}},{}],16:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],17:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(20),c=t(21),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var l=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(h+"tracer",[f.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){l[e]=o(h+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],21:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],22:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],23:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(21),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),c=l(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([b,n,r,a]),a}}function h(t,e){w[t]=l(t).concat(e)}function l(t){return w[t]||[]}function m(t){return d[t]=d[t]||o(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var w={},y={},b={on:h,emit:n,get:m,listeners:l,context:e,buffer:v,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var c="nr@context",s=t("gos"),f=t(20),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!x++){var t=g.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)}),s("mark",["onload",a()+g.offset],null,"api");var n=p.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===p.readyState&&i()}function i(){s("mark",["domContent",a()+g.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-g.offset}var c=(new Date).getTime(),s=t("handle"),f=t(20),u=t("ee"),d=window,p=d.document,h="addEventListener",l="attachEvent",m=d.XMLHttpRequest,v=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1071.min.js"},b=m&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:c,now:a,origin:w,features:{},xhrWrappable:b};t(17),p[h]?(p[h]("DOMContentLoaded",i,!1),d[h]("load",r,!1)):(p[l]("onreadystatechange",o),d[l]("onload",r)),s("mark",["firstbyte",c],null,"api");var x=0,E=t(22)},{}]},{},["loader",2,15,5,3,4]);</script>
 <meta name="format-detection" content="address=no,email=no,telephone:no">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<title> Father John Misty: América, Ano zero | Cultura | EL PA&Iacute;S Brasil</title>
+<title> A precariedade como arte | Cultura | EL PA&Iacute;S Brasil</title>
 <meta name="lang" 			content="pt-br" />
-<meta name="author" 		content="Fernando Navarro" />
-<meta name="description" 	content="Músico lança  Pure Comedy , um disco com cheiro de clássico instantâneo, toda uma epifania de 13 canções sobre o grotesco de nossa época" />
-<meta name="keywords" 		content="father john misty américa, ano, zero, músico, lançar, pure comedy, disco, cheiro, clássico, instantâneo, epifania, 13, canção, grotesco, época" />
-<meta name="date" scheme="W3CDTF" content="2017-04-06T20:41:43+02:00" />
-<meta name="DC.date.issued" scheme="W3CDTF" content="2017-04-06" />
-<meta name="DC.date" 		scheme="W3CDTF" 	content="2017-04-06" />
+<meta name="author" 		content="Alan Pauls" />
+<meta name="description" 	content="A artista argentina Ana Gallardo apresenta “Um lugar para viver quando formos velhos” no Museu de Arte Moderna de Buenos Aires" />
+<meta name="keywords" 		content="precariedade, arte, artista, argentina, argentino, ana gallardo, apresentar, exposição, museu de arte moderna de buenos aires" />
+<meta name="date" scheme="W3CDTF" content="2016-01-20T11:48:52+01:00" />
+<meta name="DC.date.issued" scheme="W3CDTF" content="2016-01-20" />
+<meta name="DC.date" 		scheme="W3CDTF" 	content="2016-01-20" />
 <meta name="organization" content="Ediciones EL PAÍS S.L."/>
-<meta property="article:modified_time" content="2017-04-06T20:41:43+02:00" />
+<meta property="article:modified_time" content="2016-01-20T11:48:52+01:00" />
 <meta property="article:publisher" content="https://www.facebook.com/elpaisbrasil" />
-<meta property="article:published_time" content="2017-04-06" />
+<meta property="article:published_time" content="2016-01-20" />
 <meta property="article:section" content="cultura" />
-<meta property="article:tag" content="Crítica discos" />
-<meta property="article:tag" content="Crítica musical" />
-<meta property="article:tag" content="Discos música" />
-<meta property="article:tag" content="Indústria discográfica" />
+<meta property="article:tag" content="Ana Gallardo" />
+<meta property="article:tag" content="Crítica arte" />
+<meta property="article:tag" content="Buenos Aires" />
+<meta property="article:tag" content="Argentina" />
 <meta property="article:tag" content="Crítica" />
-<meta property="article:tag" content="Música" />
+<meta property="article:tag" content="América Latina" />
 <meta property="article:tag" content="Cultura" />
-<meta name="news_keywords" content="Crítica discos,Crítica musical,Discos música,Indústria discográfica,Crítica,Música,Cultura"/>
-<meta property="og:title" content="Crítica | Father John Misty: América, Ano zero"/>
-<meta property="og:description" content="Músico lança  Pure Comedy , um disco com cheiro de clássico instantâneo, toda uma epifania de 13 canções sobre o grotesco de nossa época"/>
-<meta property="og:image" content="https://ep00.epimg.net/cultura/imagenes/2017/04/04/actualidad/1491331135_526675_1491331914_rrss_normal.jpg"/>
-<meta property="og:updated_time" content="2017-04-06T20:41:43+02:00" />
-<meta property="og:url" 	content="https://brasil.elpais.com/brasil/2017/04/04/cultura/1491331135_526675.html" />
+<meta property="article:tag" content="Arte" />
+<meta name="news_keywords" content="Ana Gallardo,Crítica arte,Buenos Aires,Argentina,Crítica,América Latina,Cultura,Arte"/>
+<meta property="og:title" content="A precariedade como arte"/>
+<meta property="og:description" content="A artista argentina Ana Gallardo apresenta “Um lugar para viver quando formos velhos” no Museu de Arte Moderna de Buenos Aires"/>
+<meta property="og:image" content="https://ep00.epimg.net/cultura/imagenes/2016/01/18/babelia/1453120223_711042_1453202058_noticia_normal.jpg"/>
+<meta property="og:updated_time" content="2016-01-20T11:48:52+01:00" />
+<meta property="og:url" 	content="https://brasil.elpais.com/brasil/2016/01/18/cultura/1453120223_711042.html" />
 <meta property="og:type" 		content="article"/>
 <meta property="og:site_name"    	content="EL PAÍS"/>
 <meta property="fb:pages"       content="589843594408928" />
 <meta property="fb:app_id" 		content="94039431626"/>
 <meta property="twitter:card" 	content="summary_large_image" />
 <meta property="twitter:site" 	content="@elpais_brasil" />
-<meta property="twitter:title" content="Crítica | Father John Misty: América, Ano zero; por Fernando Navarro"/>
 <link rel="alternate" href="https://brasil.elpais.com/seccion/rss/cultura/" type="application/rss+xml" title="RSS sobre Cultura"/>
-<link rel="alternate" href="https://brasil.elpais.com/brasil/2017/04/04/cultura/1491331135_526675.html" hreflang="pt-br" />
-<link rel="alternate" href="https://elpais.com/cultura/2017/04/04/actualidad/1491331135_526675.html" hreflang="es" />
-<link rel="amphtml" href="https://brasil.elpais.com/brasil/2017/04/04/cultura/1491331135_526675.amp.html" />
-<link rel="canonical" href="https://brasil.elpais.com/brasil/2017/04/04/cultura/1491331135_526675.html" />
+<link rel="alternate" href="https://brasil.elpais.com/brasil/2016/01/18/cultura/1453120223_711042.html" hreflang="pt-br" />
+<link rel="alternate" href="https://elpais.com/cultura/2016/01/18/babelia/1453120223_711042.html" hreflang="es" />
+<link rel="amphtml" href="https://brasil.elpais.com/brasil/2016/01/18/cultura/1453120223_711042.amp.html" />
+<link rel="canonical" href="https://brasil.elpais.com/brasil/2016/01/18/cultura/1453120223_711042.html" />
 <link rel="icon" 		href="https://ep01.epimg.net/favicon.png" type="image/png" />
 <link rel="publisher" 	href="https://plus.google.com/+elpais"/>
 <link href="//ep01.epimg.net/estilos/v2.x/v2.1/normalizado.css"  rel="stylesheet" />
@@ -70,11 +70,11 @@
 	var marcado_logtrust = true;
 	var prebidVideoPEP = true;
 
-	var listado_norm_tags = 'critica_discos_a,critica_musical_a,discos_musica_a,industria_discografica_a,critica_a,musica_a,cultura_a';
-	var DFP_tags = ["critica_discos_a","critica_musical_a","discos_musica_a","industria_discografica_a","critica_a","musica_a","cultura_a"];
-	var listado_id_tags = '89678,24931,26809,39567,24927,60441,25067';
-	var listado_id_autores = '167707';
-	var listado_norm_autores = 'fernando_navarro_cano_a';
+	var listado_norm_tags = 'ana_gallardo_a,critica_arte_a,buenos_aires_a,argentina_a,critica_a,latinoamerica_a,cultura_a,arte_a';
+	var DFP_tags = ["ana_gallardo_a","critica_arte_a","buenos_aires_a","argentina_a","critica_a","latinoamerica_a","cultura_a","arte_a"];
+	var listado_id_tags = '142690,24928,19243,15333,24927,82947,25067,15634';
+	var listado_id_autores = '156760';
+	var listado_norm_autores = 'alan_pauls_a';
 
 	var referrer = document.referrer;
 	if (referrer.indexOf("//t.co/") >-1 || (referrer.indexOf("twitter.com") > 0 && referrer.indexOf("twitter.com") < 30) )
@@ -100,8 +100,8 @@
 //]]>
 </script>
 <script language="Javascript" type="text/javascript" src="//ep01.epimg.net/js/comun/cx/recomendador.min.js"></script></head>
-<body id="salida_articulo" class="salida_articulo salida_articulo_opinion"><div id="pxlhddncntrl" style="display:none"><script type="text/javascript" src="//ep00.epimg.net/js/prisa/user.js?i=1"></script><script type="text/javascript" src="//ep00.epimg.net/js/v4.x/v4.0/user.js"></script><script type="text/javascript" src="https://ep00.epimg.net/js/comun/avisopcgdpr.js?u=2018"></script><script type="text/javascript" src="https://gdpr.prisa.com/cmp.bundle.js?u=2018"></script><script type="text/javascript" src="//ep00.epimg.net/js/gdt/577c3689ea990d22d8d98c00c4aa568bec64a426/satelliteLib-28ad3885d20336165372ce7de5caf99dd332388c.js?20171005"></script><script type="text/javascript" src="//ep00.epimg.net/js/comun/comun.js"></script></div>
-<script type="text/javascript" src="//ep00.epimg.net/js/pbs/pbs.slots.js?20180917"></script>
+<body id="salida_articulo" class="salida_articulo"><div id="pxlhddncntrl" style="display:none"><script type="text/javascript" src="//ep00.epimg.net/js/prisa/user.js?i=1"></script><script type="text/javascript" src="//ep00.epimg.net/js/v4.x/v4.0/user.js"></script><script type="text/javascript" src="https://ep00.epimg.net/js/comun/avisopcgdpr.js?u=2018"></script><script type="text/javascript" src="https://gdpr.prisa.com/cmp.bundle.js?u=2018"></script><script type="text/javascript" src="//ep00.epimg.net/js/gdt/577c3689ea990d22d8d98c00c4aa568bec64a426/satelliteLib-28ad3885d20336165372ce7de5caf99dd332388c.js?20171005"></script><script type="text/javascript" src="//ep00.epimg.net/js/comun/comun.js"></script></div>
+<script type="text/javascript" src="//ep00.epimg.net/js/pbs/pbs.slots.js?20181002"></script>
 <div id="AdsCode" style="display:none">
 <script type="text/javascript">
 		var gtpadunit= '';
@@ -252,7 +252,7 @@ if (pbs_dimensiones.ancho >= 980) {
 </ul>
 </div>
 <div class="usuario" id="usuario">
-<a class="boton_usuario" id="boton_usuario" href="https://plus.elpais.com/conectar?prod=REG&o=CABEP&backURL=https%3A%2F%2Fbrasil.elpais.com%2Fbrasil%2F2017%2F04%2F04%2Fcultura%2F1491331135_526675.html">Login</a>
+<a class="boton_usuario" id="boton_usuario" href="https://plus.elpais.com/conectar?prod=REG&o=CABEP&backURL=https%3A%2F%2Fbrasil.elpais.com%2Fbrasil%2F2016%2F01%2F18%2Fcultura%2F1453120223_711042.html">Login</a>
 <div id="usuario__interior"  class="oculto">
 <button class="boton_cerrar" id="cerrar_usuario">Cerrar</button>
 <div class="usuario-estado"></div>
@@ -365,16 +365,13 @@ href="/seccion/cultura" itemprop="url">
 </header>
 </div>
 <div class="articulo__envoltorio">
-<article class="articulo articulo--nointro articulo_opinion" itemscope itemprop="mainEntity" itemtype="https://schema.org/NewsArticle" itemref="organizacion">
+<article class="articulo articulo--nointro" itemscope itemprop="mainEntity" itemtype="https://schema.org/NewsArticle" itemref="organizacion">
 <div class="articulo__interior" id="articulo_interior">
 <header class="articulo-encabezado " id="articulo-encabezado" >
-<div class="articulo-antetitulo ">
-<a class="enlace" href="//brasil.elpais.com/tag/musica/a">Música</a>
-</div>
 <div class="articulo-titulares" id="articulo-titulares">
-<h1 class="articulo-titulo " id="articulo-titulo" itemprop="headline">Father John Misty: América, Ano zero</h1>
-<meta itemprop="url" content="//brasil.elpais.com/brasil/2017/04/04/cultura/1491331135_526675.html"/>
-<div class="articulo-subtitulos"><h2  itemprop="alternativeHeadline"  class="articulo-subtitulo">Músico lança 'Pure Comedy', um disco com cheiro de clássico instantâneo, toda uma epifania de 13 canções sobre o grotesco de nossa época</h2>
+<h1 class="articulo-titulo " id="articulo-titulo" itemprop="headline">A precariedade como arte</h1>
+<meta itemprop="url" content="//brasil.elpais.com/brasil/2016/01/18/cultura/1453120223_711042.html"/>
+<div class="articulo-subtitulos"><h2  itemprop="alternativeHeadline"  class="articulo-subtitulo">A artista argentina Ana Gallardo apresenta exposição no Museu de Arte Moderna de Buenos Aires</h2>
 </div>                   </div> 
 <aside class="compartir" id="compartir_superior">
 <div class="compartir__interior">
@@ -392,10 +389,10 @@ href="/seccion/cultura" itemprop="url">
 </div>
 <div class="compartir-varios">
 <div class="favoritos" id="favoritos">
-<a href="https://plus.elpais.com/conectar?backURL=http%3A%2F%2Fbrasil.elpais.com%2Fbrasil%2F2017%2F04%2F04%2Fcultura%2F1491331135_526675.html" id="boton_favoritos" class="boton_favoritos" title="Você precisa ter uma conta no EL PAÍS e estar conectado para poder salvar em favoritos">Login</a>
+<a href="https://plus.elpais.com/conectar?backURL=http%3A%2F%2Fbrasil.elpais.com%2Fbrasil%2F2016%2F01%2F18%2Fcultura%2F1453120223_711042.html" id="boton_favoritos" class="boton_favoritos" title="Você precisa ter uma conta no EL PAÍS e estar conectado para poder salvar em favoritos">Login</a>
 </div>
 <div class="correo" id="correo">
-<a href="https://plus.elpais.com/conectar?backURL=http%3A%2F%2Fbrasil.elpais.com%2Fbrasil%2F2017%2F04%2F04%2Fcultura%2F1491331135_526675.html" id="superior_enviar" class="boton_correo" title="Você precisa ter uma conta no EL PAÍS e estar conectado para poder enviar a notícia por e-mail">Login</a>
+<a href="https://plus.elpais.com/conectar?backURL=http%3A%2F%2Fbrasil.elpais.com%2Fbrasil%2F2016%2F01%2F18%2Fcultura%2F1453120223_711042.html" id="superior_enviar" class="boton_correo" title="Você precisa ter uma conta no EL PAÍS e estar conectado para poder enviar a notícia por e-mail">Login</a>
 </div>
 <button class="boton_imprimir" id="boton_imprimir"><span class="nombre">Imprimir</span></button>
 </div>
@@ -411,48 +408,45 @@ href="/seccion/cultura" itemprop="url">
 </aside>
 </header>
 <div class="articulo-apertura ">
+<figure class="foto centro foto_w980" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img src="//ep01.epimg.net/cultura/imagenes/2016/01/18/babelia/1453120223_711042_1453202058_noticia_normal.jpg" width="980" height="639"  srcset="//ep01.epimg.net/cultura/imagenes/2016/01/18/babelia/1453120223_711042_1453202058_noticia_normal_recorte1.jpg 1960w, //ep01.epimg.net/cultura/imagenes/2016/01/18/babelia/1453120223_711042_1453202058_noticia_normal_recorte2.jpg 720w, //ep01.epimg.net/cultura/imagenes/2016/01/18/babelia/1453120223_711042_1453202058_noticia_normal.jpg 980w"   alt="“Casa Rodante” (2007) imagem do vídeo de Ana Gallardo" />
+<meta itemprop="width"    content="980">
+<meta itemprop="height"   content="639">
+<meta itemprop="url"      content="https://ep01.epimg.net/cultura/imagenes/2016/01/18/babelia/1453120223_711042_1453202058_noticia_normal.jpg">
+<meta itemprop="representativeOfPage" content="true">
+<figcaption class="foto-pie"  itemprop="caption"> <span class="foto-texto">“Casa Rodante” (2007) imagem do vídeo de Ana Gallardo</span> <span class="foto-firma"><span itemprop="author" class="foto-autor">Ana Gallardo</span> </span></figcaption>
+</figure>
 <div class="firma ">
 <div class="autor" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
 <figure class="foto" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-<meta itemprop="url" content="https://ep00.epimg.net/miperfil/avatares/2/E4/fernandonavarro.jpg"/>
-<a class="enlace" href="//brasil.elpais.com/autor/fernando_navarro_cano/a/">
+<meta itemprop="url" content="https://ep01.epimg.net/iconos/v2.x/v2.0/avatar.png"/>
+<a class="enlace" href="/autor/alan_pauls/a/">
 <meta itemprop="width" content="80">
 <meta itemprop="height" content="80">
-<img src="//ep00.epimg.net/miperfil/avatares/2/E4/fernandonavarro.jpg" width="80" height="80" alt="Fernando Navarro"/>
+<img src="//ep01.epimg.net/iconos/v2.x/v2.0/avatar.png" width="80" height="80"/>
 </a>
 </figure>
 <div class="autor-texto">
 <span class="autor-nombre" itemprop="name">
-<a itemprop="url" href="//brasil.elpais.com/autor/fernando_navarro_cano/a/" title="Ver todas as notícias de Fernando Navarro">Fernando Navarro</a>
+<a itemprop="url" href="//brasil.elpais.com/autor/alan_pauls/a/" title="Ver todas as notícias de Alan Pauls">Alan Pauls</a>
 </span>
-<div class="autor-perfiles">
-<ul class="autor-perfiles-listado">
-<li><a class="boton_twitter" itemprop="sameAs" href="http://twitter.com/fernavarro17" rel="nofollow" target="_blank">Twitter</a></li>                                
-</ul>
-</div>
 </div>
 </div>
 </div>
 <div class="articulo-datos">
-<time datetime="2017-04-06T20:41:43+02:00" class="articulo-actualizado">
-<meta content="2017-04-06T20:41:43+02:00" itemprop="datePublished">
-<meta content="2017-04-06T20:41:43+02:00" itemprop="dateModified">
-<a href="//brasil.elpais.com/tag/fecha/20170406 " title="Ver todas as notícias desta data">
-6 ABR 2017 - 20:41					<abbr title="Central European Summer Time">CEST</abbr>				</a>
+<time datetime="2016-01-20T11:48:52+01:00" class="articulo-actualizado">
+<meta content="2016-01-20T23:19:25+01:00" itemprop="datePublished">
+<meta content="2016-01-20T11:48:52+01:00" itemprop="dateModified">
+<a href="//brasil.elpais.com/tag/fecha/20160120 " title="Ver todas as notícias desta data">
+20 JAN 2016 - 11:48					<abbr title="Central European Time">CET</abbr>				</a>
 </time>
 </div>
 </div> 
 <div class="articulo__contenedor" id="articulo_contenedor">
-<figure class="foto centro foto_w980" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-<img src="//ep01.epimg.net/cultura/imagenes/2017/04/04/actualidad/1491331135_526675_1491331899_noticia_normal.jpg" width="980" height="588"  srcset="//ep01.epimg.net/cultura/imagenes/2017/04/04/actualidad/1491331135_526675_1491331899_noticia_normal_recorte1.jpg 1960w, //ep01.epimg.net/cultura/imagenes/2017/04/04/actualidad/1491331135_526675_1491331899_noticia_normal_recorte2.jpg 720w, //ep01.epimg.net/cultura/imagenes/2017/04/04/actualidad/1491331135_526675_1491331899_noticia_normal.jpg 980w"   alt="Father John Misty: América, Ano zero" />
-<meta itemprop="width"    content="980">
-<meta itemprop="height"   content="588">
-<meta itemprop="url"      content="https://ep01.epimg.net/cultura/imagenes/2017/04/04/actualidad/1491331135_526675_1491331899_noticia_normal.jpg">
-<meta itemprop="representativeOfPage" content="true">
-</figure>
 <div class="articulo-cuerpo" id="cuerpo_noticia" itemprop="articleBody">
-<section class="sumario_apoyos derecha" id="sumario_2|apoyos">
-<a name="sumario_2"></a>
+<p>Uma das obras mais atraentes de <a href="http://agendacultural.buenosaires.gob.ar/evento/ana-gallardo-un-lugar-para-vivir-cuando-seamos-viejos/11970#ad-image-0"><em>Un lugar para vivir cuando seamos viejos</em></a> (Um lugar para viver quando formos velhos), a mostra de <a href="//cultura.elpais.com/cultura/2014/07/01/babelia/1404224562_650753.html">Ana Gallardo</a> (Rosário, 1958) no Museu de Arte Moderna de <a href="//brasil.elpais.com/tag/buenos_aires/a/">Buenos Aires</a>, é também uma das mais simples: o currículo da artista. No centro do primeiro dos dois andares que o MAMBA dedica a repassar seus últimos dez anos de trabalho, cinco pares de fones de ouvido estão pendurados do teto em círculo e reproduzem a voz da artista recitando as etapas de seu percurso desde meados dos anos 80 até hoje. Mas trata-se de um percurso de trabalho, ou melhor, de alimento, de mera sobrevivência, no qual a arte, se aparece, acaba sendo apenas como um mundo ideal ou um horizonte inacessível, e cujos marcos compõem a paisagem de insegurança típica do mundo do trabalho contemporâneo.</p>
+<section class="sumario_apoyos izquierda" id="sumario_6|apoyos">
+<a name="sumario_6"></a>
 <div class="sumario__interior">
 <header class="sumario-encabezado"><h3 class="sumario-titulo"><span class="sin_enlace">MAIS INFORMAÇÕES</span></h3></header>
 <div class="sumario-texto">
@@ -460,29 +454,22 @@ href="/seccion/cultura" itemprop="url">
 <ul class="apoyos-listado">
 <li class="apoyo_ apoyo_sinfoto">
 <span class="apoyo-titulo">
-<a href="//brasil.elpais.com/brasil/2017/02/28/cultura/1488286008_433236.html">
-‘Phonk’, o som futurista do hip hop, faz sucesso na Internet
+<a href="//brasil.elpais.com/brasil/2015/12/28/cultura/1451342305_456771.html">
+28 leituras para enxergar a América
 </a>
 </span>
 </li>
 <li class="apoyo_ apoyo_sinfoto">
 <span class="apoyo-titulo">
-<a href="//brasil.elpais.com/brasil/2017/02/17/album/1487333509_986642.html#1487333509_986642_1487333686">
-Kurt Cobain é o músico mais superestimado do rock?
+<a href="//brasil.elpais.com/brasil/2016/01/15/cultura/1452888742_483210.html">
+“Que fermento é esse que colocaram na animação brasileira?”
 </a>
 </span>
 </li>
 <li class="apoyo_ apoyo_sinfoto">
 <span class="apoyo-titulo">
-<a href="//brasil.elpais.com/brasil/2017/02/14/cultura/1487085880_979499.html">
-A travessia de Milton Nascimento
-</a>
-</span>
-</li>
-<li class="apoyo_ apoyo_sinfoto">
-<span class="apoyo-titulo">
-<a href="//brasil.elpais.com/brasil/2017/01/31/cultura/1485886173_990136.html">
-Meio século da irrupção épica e edipiana do The Doors
+<a href="//brasil.elpais.com/brasil/2016/01/16/cultura/1452961893_293098.html">
+Iñárritu: “Tenho uma atração pelo intenso”
 </a>
 </span>
 </li>
@@ -491,32 +478,42 @@ Meio século da irrupção épica e edipiana do The Doors
 </div>
 </div> 
 </section>
-<p>Para além das modas, as obras primas são aquelas que retratam seu tempo, descrevendo com precisão uma paisagem emocional determinada, aderindo à psique social, antecipando respostas, lançando mais perguntas e assentando-se no coração mesmo com o passar dos anos. Ainda é cedo para afirmar sem pestanejar, mas <a href="https://en.wikipedia.org/wiki/Josh_Tillman" target="_blank">Father John Misty</a> acaba de lançar um disco,&nbsp;<em>Pure Comedy</em>, com cheiro de clássico instantâneo, toda uma epifania de 13 canções sobre o grotesco de nossa época, expresso na escolha de <a href="//brasil.elpais.com/tag/donald_trump/a/">Donald Trump</a> para presidente dos <a href="//brasil.elpais.com/tag/estados_unidos/a/">Estados Unidos</a>.</p>
-<p>Depois de abandonar a bateria do Fleet Foxes, esse fenômeno em forma de grupo que fascinou a crítica e o público em 2008, Joshua Tillman&nbsp;– seu nome de batismo – não parou de crescer como músico solo. Foi um grande desafio. Podia ter se dado mal, mas Father John Misty demonstrou um arrojo assombroso para traçar seu próprio caminho. Seus dois lançamentos anteriores, os notáveis <em>Fear Fun</em> (2012) e <em>I Love You, Honeybear</em> (2015), já o haviam situado em uma dimensão destacada no panorama do <em>indie-rock</em> norte-americano atual, ao se firmar como uma figura de peso artístico, capaz de mergulhar sentimentalmente com um cuidadoso estilo <em>folkie</em> de aroma <em>crooner</em>. Mas agora este compositor, que utiliza a ironia como uma arma penetrante, adquire aura de titã, apequenando os Fleet Foxes.</p>
-<p>Narrado em terceira pessoa, <em>Pure Comedy</em> se torna um relato distópico, no mais puro estilo <a href="//brasil.elpais.com/tag/david_bowie/a">David Bowie</a>, que documenta o mundo como um lugar caótico, repleto de verdades vazias, medos inventados e interesses corporativos, uma “piada demente”, nas palavras de seu autor. Desde a poderosa ilustração de sua capa, como se essas figurinhas fossem bonecos grotescos saídos da gravura de <em>El Sueño de la Razón Produce Monstruos</em> (o sonho da razão produz monstros) de Goya, <em>Pure Comedy</em> ajuda a explicar por que o grande experimento da América falhou. Embrenha-se nessa nação que deu seu apoio a um presidente bilionário, racista, machista e manipulador, um produto da doentia sociedade do espetáculo, espelho de um país corroído.</p>
-<p><iframe src="https://www.youtube.com/embed/QVaafph6HSQ" frameborder="0" width="560" height="315"></iframe></p>
-<p>Marcado por seu drama esmagador, o álbum abre com uma composição maiúscula em seu crescendo orquestral, que dá título ao disco e parece sair da tela de uma televisão ligada. Como se os extraterrestres vindos da galáxia de Bowie fossem os que observassem, do outro lado, a comédia de nosso planeta. Misty possui a força sentimental de John Lennon, mas se associa mais ao olho clínico e à elegância soberana e sarcástica de Randy Newman. Sua virtude reside na capacidade de transformar seu relato em algo íntimo, como em ‘A Bigger Paper Bag’ com esse ar de Elliott Smith, em ‘When the God of Love Returns There’ll Be Hell to Pay’ com esse outro ar, de Jeff Buckley, e até mesmo quando se apoia na glória na incomensurável ‘Total Entertaiment Forever’<em>,</em> onde se acham os versos definitivos de sua diatribe humana contra o absurdo, impulsionados por metais pletóricos: “Sem deuses que nos mandem / sem drogas que nos aliviem / sem mitos que nos validem / sem amor que nos confunda / sem nada ruim em uma corrida de macacos dementes”.</p>
-<section class="sumario_despiece izquierda" id="sumario_1|despiece">
+<p>Ao longo de quase 30 anos, Gallardo – cuja trajetória como artista inclui, entre outras coisas, ter participado da <a href="http://www.contemporaryartdaily.com/2015/05/venice-ana-gallardo-at-the-arsenale/" target="_blank">Bienal de Veneza de 2015</a> – foi recepcionista, telefonista, secretária promotora de venda e assistente (de feiras e galerias de arte, incluso da galeria que já a representou). Os poucos momentos de adrenalina que animam este mapa da fragilidade do trabalho são alguns meses como contrabandista de matérias-primas para bijuterias entre a Argentina e a Cidade do México (onde a artista viveu por alguns anos) e outros, também na <a href="//brasil.elpais.com/tag/mexico_df/a/">Cidade do México</a>, de “representante de artistas de cabaré”. Gallardo recita sua lista de empregos, sem qualquer ênfase, fiel à marca subsintática e administrativa do gênero CV, e delega à repetição e acumulação (quantas centrais telefônicas um artista contemporâneo pode se vangloriar de ter atendido?) o humor e a crueldade paradoxal de uma autobiografia onde a arte foi deslocada pela necessidade. Diferente é o tom da peça informativa que comenta a obra, sofrido, estoico, pouco sentimental, sem um pingo de ironia ou de distância: “Não vivo da venda das minhas obras”, escreve Gallardo, “portanto, tenho que fazer outros trabalhos para ganhar meu sustento e da minha família”.</p>
+<section class="sumario_html izquierda" id="sumario_1|html">
 <a name="sumario_1"></a>
 <div class="sumario__interior">
-<figure class="foto foto_miniatura" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-<img alt="Father John Misty: América, Ano zero" src="//ep01.epimg.net/cultura/imagenes/2017/04/04/actualidad/1491331135_526675_1491347028_sumario_normal.jpg" width="360" height="360" />
-<meta itemprop="width"  content="360">
-<meta itemprop="height" content="360">
-<meta itemprop="url"    content="https://ep01.epimg.net/cultura/imagenes/2017/04/04/actualidad/1491331135_526675_1491347028_sumario_normal.jpg">
-</figure>
 <div class="sumario-texto">
-<p>Father John Misty</p>
-<p>Disco<i>: Pure Comedy</i></p>
-<p>Selo: Bella Union / PIAS</p>
-<p><b>Nota: 8,5 numa escala de 10</b></p>
+<p class="texto_grande">Não é raro que um artista não viva da sua arte. O raro é a lógica da vida dupla contundente, quase de super-heroína, em que se coloca Gallardo</p>
 </div> 
 </div> 
 </section>
-<p>Uma intimidade que se faz sagrada nas baladas ‘Smoochie’ e, especialmente, ‘Ballad of a Dying Man’ e ‘Leaving L.A.’, um conto <em>dylaniano</em> de mais de 13 minutos sobre a busca de identidade. O perfil do cidadão norte-americano com o qual as pesquisas não contaram na vitória republicana fica ainda mais delineado em ‘The Memo’, no qual enfrenta a atmosfera country com os avanços eletrônicos, exemplo de um mundo de contradições imperantes, em que sobressai sua ironia fina por encontrar sua própria voz como um artista com quase os dois pés nos clássicos, mas sem fomentar nenhum <em>reviva</em>l.</p>
-<p>A viagem se encerra sem perder a ambição, com as melancólicas ‘So I’m Growing Old on Magic Mountain’ e ‘In Twenty Years or So’, que tem esse lampejo à la Talking Heads quando diz que o piano toca ‘This Must Be the Place’, deixando espaço ao milagre, mas em um ambiente lúgubre, como em ruínas.</p>
-<p>América, ano zero. <em>Pure Comedy</em> é o primeiro grande disco da era Trump, este tempo jocoso em que nos coube viver, esta pura comédia grotesca. Maldita a graça que tudo tem. Bendito Father John Misty.</p>
-<p><iframe src="https://www.youtube.com/embed/J3mfC14MVsM" frameborder="0" width="560" height="315"></iframe></p>
+<p>Não é raro que um artista não viva da sua arte (talvez essa seja a única fusão arte-vida que a milagrosa arte contemporânea ainda não esteja em condições de garantir). O raro é a lógica da vida dupla contundente, quase de super-heroína, em que se coloca Gallardo (promotora de venda de convênios médicos de dia, estrela de bienais à noite), e o modo em que transforma essa desinteligência social – sem dúvida comum a muitos artistas, embora nunca tão visível como no caso dela – no objeto de uma busca de autorrepresentação pela qual se filtra uma figura que pensávamos estar extinta: a figura do <em>artista que sofre</em>. Se a imagem de Gallardo algemada na recepção de uma empresa ou vendendo planos de telefone celular na rua parece injusta, não é tanto porque demonstra as misérias da precarização, da hiperflexibilidade e da desregulamentação do trabalho (uma tendência da qual o artista contemporâneo, por outro lado, é menos vítima que pioneiro) quanto porque postula que não ser dono do seu tempo nem poder ser fiel a seu desejo é o drama máximo que um artista (contemporâneo) pode sofrer.</p>
+<p>Mas Gallardo vai ainda mais longe e imprime ao assunto uma inflexão dickensiana, <em>anacronizando</em> o que poderia ser uma síndrome endêmica do presente e substituindo o reflexo da crítica ou da denúncia pela encenação de uma espécie de calvário pessoal, marcado por uma penúria cuja nudez (cuja manifestação <em>sincera</em>, em primeiro grau, crente) tínhamos desacostumado a ver em um espaço de arte. Ali a temos em plano artista <em>homeless</em>, condenada ao nomadismo e à caridade de outros, passeando por Buenos Aires os despojos de sua casa (alguns poucos móveis, um abajur, um tapete, sua própria filha Rocío) cuidadosamente em um trailer puxado por uma bicicleta (<em>Casa Rodante</em>, 2007). Aí está, empenhada em realizar um projeto em um asilo de prostitutas da Cidade do México, aceitando prestar o “serviço” que a diretora da instituição exigir em troca de uma condição: cuidar de Estela, uma prostituta prostrada em uma cadeira de rodas (<em>Estela</em>, 2012; <em>Extracto de un fracasado proyecto o el retrato de Estela –</em> Extrato de um fracassado projeto ou o retrato de Estela, 2012); mas Estela morre antes que Gallardo cumpra o número de horas de serviço que tinham concordado, de modo que o projeto fica truncado.</p>
+<section class="sumario_foto centro" id="sumario_3|foto">
+<a name="sumario_3"></a>
+<div class="sumario__interior">
+<figure class="foto foto_w980" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+<img src="//ep01.epimg.net/cultura/imagenes/2016/01/18/babelia/1453120223_711042_1453202389_sumario_normal.jpg" width="980" height="551" alt="Dança japonesa." srcset="//ep01.epimg.net/cultura/imagenes/2016/01/18/babelia/1453120223_711042_1453202389_sumario_normal_recorte1.jpg 1960w, //ep01.epimg.net/cultura/imagenes/2016/01/18/babelia/1453120223_711042_1453202389_sumario_normal_recorte2.jpg 720w, //ep01.epimg.net/cultura/imagenes/2016/01/18/babelia/1453120223_711042_1453202389_sumario_normal.jpg 980w" />
+<meta itemprop="width"  content="980">
+<meta itemprop="height" content="551">
+<meta itemprop="url"    content="https://ep01.epimg.net/cultura/imagenes/2016/01/18/babelia/1453120223_711042_1453202389_sumario_normal.jpg">
+<figcaption class="foto-pie"  itemprop="caption"> <span class="foto-texto">Dança japonesa.</span> <span class="foto-firma"><span itemprop="author" class="foto-autor">ANA GALLARDO</span> </span></figcaption>
+</figure>
+<div class="sumario-texto">
+</div>
+</div>
+</section>
+<p>Desses <em>turning points</em> cruéis e desolados, como um melodrama devoto, estão feitos a dramaturgia de <em>Un lugar para vivir cuando seamos viejos</em> e o imaginário desguarnecido de Ana Gallardo. O século XIX, berço do melodrama, propôs uma solução para a ruptura do artista sofredor, inadequado: foi chamada de <em>boêmia</em>. Mas do <em>mix</em> dissonante de lamento e ressentimento da retórica boêmia, Gallardo conserva apenas o primeiro componente – “meu coração nu” – enquanto substitui a veia crítica do segundo pelo arsenal de disposições sensíveis (empatia, solidariedade, vocação terapêutica) que informam o “giro assistencial” de uma região da arte contemporânea. Daí as comunidades específicas de pares com as quais se conecta, marcadas pela marginalidade e o abandono: prostitutas do asilo do bairro Tepito de <em>Estela</em>, as vítimas ensacadas de <em>Mujeres de Juárez</em> (2010) e, claro, os velhos de <em>Un lugar para vivir cuando seamos viejos</em> (2010-2015), a instalação de vídeo exposta no segundo subsolo do museu.</p>
+<section class="sumario_html izquierda" id="sumario_2|html">
+<a name="sumario_2"></a>
+<div class="sumario__interior">
+<div class="sumario-texto">
+<p class="texto_grande">Do <i>mix </i>dissonante de lamento e ressentimento da retórica boêmia, conserva apenas o primeiro componente</p>
+</div> 
+</div> 
+</section>
+<p>Estritamente falando, a “solução Gallardo” para o karma do artista é a terceira idade. Dos velhos inertes dos vídeos do térreo (o pai e o tio da artista, dois imigrantes espanhóis em Rosário e dominados pela adversidade e a melancolia) aos entusiastas que protagonizam os do porão (um elenco de septuagenários que se dedicam, finalmente, ao que sempre quiseram fazer e nunca puderam: danças japonesas, karaokê, horta orgânica, bailes populares), o que muda não é só a densidade do tempo (o peso do passado contra a leveza jovial do presente); é também a posição da artista, que por uma vez troca o <em>pathos</em> autocomplacente da aflição por uma espécie de deslocamento lunático (Gallardo é filmada “aprendendo” com os idosos as destrezas crepusculares a que se dedicam), e as tautologias de uma dor muito conhecida pelos mistérios de uma dimensão – a velhice – cuja marginalidade não é mais sinônimo de calvário mas, talvez, para o artista da penúria, de liberdade e desejo.</p>
+<p class="nota_pie"><em><span lang="ES-AR" xml:lang="ES-AR">Un lugar para vivir cuando seamos viejos</span></em><span lang="ES-AR" xml:lang="ES-AR">.</span> Museu de Arte Moderna de Buenos Aires. Até 3 de abril de 2016</p>
 </div> 
 <section class="articulo-tags" id="articulo-tags">
 <header class="articulo-tags-encabezado ">
@@ -526,13 +523,14 @@ Arquivado em:
 </header>
 <div class="articulo-tags__interior" id="articulo-tags__interior">
 <ul class="listado" id="listado">
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/critica_discos/a/" title="Ver m&aacute;s noticias de [Crítica discos]">Crítica discos</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/critica_musical/a/" title="Ver m&aacute;s noticias de [Crítica musical]">Crítica musical</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/discos_musica/a/" title="Ver m&aacute;s noticias de [Discos música]">Discos música</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/industria_discografica/a/" title="Ver m&aacute;s noticias de [Indústria discográfica]">Indústria discográfica</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/ana_gallardo/a/" title="Ver m&aacute;s noticias de [Ana Gallardo]">Ana Gallardo</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/critica_arte/a/" title="Ver m&aacute;s noticias de [Crítica arte]">Crítica arte</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/buenos_aires/a/" title="Ver m&aacute;s noticias de [Buenos Aires]">Buenos Aires</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/argentina/a/" title="Ver m&aacute;s noticias de [Argentina]">Argentina</a></li>
 <li itemprop="keywords"><a href="//brasil.elpais.com/tag/critica/a/" title="Ver m&aacute;s noticias de [Crítica]">Crítica</a></li>
-<li itemprop="keywords"><a href="//brasil.elpais.com/tag/musica/a/" title="Ver m&aacute;s noticias de [Música]">Música</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/latinoamerica/a/" title="Ver m&aacute;s noticias de [América Latina]">América Latina</a></li>
 <li itemprop="keywords"><a href="//brasil.elpais.com/tag/cultura/a/" title="Ver m&aacute;s noticias de [Cultura]">Cultura</a></li>
+<li itemprop="keywords"><a href="//brasil.elpais.com/tag/arte/a/" title="Ver m&aacute;s noticias de [Arte]">Arte</a></li>
 </ul>
 </div>
 </section>
@@ -552,13 +550,25 @@ if (typeof EPETshowHideTags == 'function') {
 <div class="apoyos">
 <ul class="apoyos-listado">
 <li class="apoyo_">
+<figure class="foto foto_w360" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2016/01/16/cultura/1452961893_293098.html?rel=mas">
+<img itemprop="url" width="360" height="257" alt="Iñárritu: “Tenho uma atração pelo intenso”" title="Iñárritu: “Tenho uma atração pelo intenso”" src="//ep01.epimg.net/brasil/imagenes/2016/01/18/cultura/1453120223_711042_1453247631_noticiarelacionadaprincipal_normal.jpg" srcset="//ep01.epimg.net/brasil/imagenes/2016/01/18/cultura/1453120223_711042_1453247631_noticiarelacionadaprincipal_normal_recorte1.jpg 720w, //ep01.epimg.net/brasil/imagenes/2016/01/18/cultura/1453120223_711042_1453247631_noticiarelacionadaprincipal_normal.jpg 360w" />
+<meta itemprop="width" content="360">
+<meta itemprop="height" content="257">
+</a>                 </figure>
 <span class="apoyo-titulo">
-<a href="//brasil.elpais.com/brasil/2017/01/11/cultura/1484128961_343798.html?rel=mas"   target="_blank" >                                         De Caetano Veloso a Wilco, as ‘playlists’ musicais de Obama
+<a href="//brasil.elpais.com/brasil/2016/01/16/cultura/1452961893_293098.html?rel=mas"   >                                         Iñárritu: “Tenho uma atração pelo intenso”
 </a>                 </span>
 </li>
 <li class="apoyo_">
+<figure class="foto foto_w360" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<a class="enlace" href="//brasil.elpais.com/brasil/2015/12/28/cultura/1451342305_456771.html?rel=mas">
+<img itemprop="url" width="360" height="257" alt="28 leituras para enxergar a América" title="28 leituras para enxergar a América" src="//ep01.epimg.net/brasil/imagenes/2016/01/18/cultura/1453120223_711042_1453247649_noticiarelacionadaprincipal_normal.jpg" srcset="//ep01.epimg.net/brasil/imagenes/2016/01/18/cultura/1453120223_711042_1453247649_noticiarelacionadaprincipal_normal_recorte1.jpg 720w, //ep01.epimg.net/brasil/imagenes/2016/01/18/cultura/1453120223_711042_1453247649_noticiarelacionadaprincipal_normal.jpg 360w" />
+<meta itemprop="width" content="360">
+<meta itemprop="height" content="257">
+</a>                 </figure>
 <span class="apoyo-titulo">
-<a href="//brasil.elpais.com/brasil/2017/01/09/cultura/1483976989_754249.html?rel=mas"   target="_blank" >                                         9 fatos mostram que David Bowie continua muito vivo na cultura pop
+<a href="//brasil.elpais.com/brasil/2015/12/28/cultura/1451342305_456771.html?rel=mas"   >                                         28 leituras para enxergar a América
 </a>                 </span>
 </li>
 </ul>
@@ -698,55 +708,55 @@ function lmv_cambia_subpestana(idpestana)
 </div>
 <div class="contenido" id="lmv_todo" style="display:none" >
 <ol>
-<li class="estirar"><span class="numero">1</span><a href="http://smoda.elpais.com/moda/nacho-vidal-mi-hija-no-esta-en-un-cuerpo-equivocado-es-una-nina-con-pene/" title="Ver Noticia">Nacho Vidal: “Mi hija no está en un cuerpo equivocado, es una niña con pene”</a></li>
-<li class="estirar"><span class="numero">2</span><a href="//elpais.com/cultura/2018/09/26/television/1537984668_369407.html" title="Ver Noticia">Un error de ‘Pasapalabra’ en el rosco le cuesta la eliminación a un concursante</a></li>
-<li class="estirar"><span class="numero">3</span><a href="//elpais.com/elpais/2018/09/26/ciencia/1537960453_593059.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Abusar de las pantallas lastra la inteligencia de los niños</a></li>
-<li class="estirar"><span class="numero">4</span><a href="//elpais.com/elcomidista/2018/09/26/articulo/1537973518_982629.html" title="Ver Noticia">El restaurante que trata mal y cocina peor</a></li>
-<li class="estirar"><span class="numero">5</span><a href="//elpais.com/cultura/2018/09/27/actualidad/1538025841_320298.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Sexo, alcohol y fiesta en la España de Franco y Ava Gardner</a></li>
-<li class="estirar"><span class="numero">6</span><a href="//elpais.com/elpais/2018/09/24/ciencia/1537789289_801960.html" title="Ver Noticia">La odisea de Katrin, una ‘báscula’ gigante para la partícula más pequeña</a></li>
-<li class="estirar"><span class="numero">7</span><a href="//elpais.com/sociedad/2018/09/27/actualidad/1538048561_887845.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El parricida de Castellón, a su exmujer: “Me voy a cargar lo que más quieres”</a></li>
-<li class="estirar"><span class="numero">8</span><a href="//elpais.com/politica/2018/09/27/actualidad/1538033747_400451.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Duque justifica la compra de un chalé a través de una sociedad: “No hubo un ahorro real de impuestos”</a></li>
-<li class="estirar"><span class="numero">9</span><a href="//elpais.com/politica/2018/09/26/actualidad/1537984724_391033.html" title="Ver Noticia">Una joven, víctima de los disparos de la Marina Real de Marruecos cuando huía a España</a></li>
-<li class="estirar"><span class="numero">10</span><a href="//elpais.com/sociedad/2018/09/27/actualidad/1538032001_854087.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Detenido el principal sospechoso del asesinato de una mujer en Málaga</a></li>
+<li class="estirar"><span class="numero">1</span><a href="//elpais.com/cultura/2018/10/06/actualidad/1538820063_864193.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El curioso caso del ‘banksy’ en la trituradora</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//elpais.com/cultura/2018/10/06/actualidad/1538807004_654748.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Muere Montserrat Caballé, la diva de todos</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//elpais.com/cultura/2018/10/05/actualidad/1538767325_319645.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>La verdadera historia de lo que costó el ‘Guernica’ a la República</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//elpais.com/ccaa/2018/10/06/madrid/1538820179_411579.html" title="Ver Noticia">Una muerte nunca es absurda</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//elpais.com/sociedad/2018/10/05/actualidad/1538756801_690385.html" title="Ver Noticia">Basta ya. España debe actuar antes de que sea demasiado tarde</a></li>
+<li class="estirar"><span class="numero">6</span><a href="http://smoda.elpais.com/moda/las-extranas-fotos-de-los-padres-de-trump-que-han-desenterrado-su-cuestionable-pasado/" title="Ver Noticia">Las extrañas fotos de los padres de Trump que han desenterrado su cuestionable pasado</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//elpais.com/elpais/2018/10/06/gente/1538831398_923883.html" title="Ver Noticia">La boda de Fernando Fitz-James Stuart y Sofía Palazuelo, entre tradición y modernidad</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//elpais.com/elpais/2018/10/06/album/1538825587_617918.html" title="Ver Noticia"><span title="Fotogalería" class="foto">Fotogalería</span>Los invitados a la boda del duque de Huéscar y Sofía Palazuelo, en imágenes</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//elpais.com/politica/2018/10/05/actualidad/1538751420_871293.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El narco más buscado en España reaparece en un videoclip de reguetón</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//elpais.com/sociedad/2018/10/05/actualidad/1538743634_936868.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El drama tras el misterio de la muerte de la familia holandesa en Coín</a></li>
 </ol>
 </div>			<div class="contenido" id="lmv_america" style="display:none" >
 <ol>
-<li class="estirar"><span class="numero">1</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537997982_557864.html" title="Ver Noticia">Carlos Bolsonaro será denunciado por apologia à tortura na Câmara do Rio</a></li>
-<li class="estirar"><span class="numero">2</span><a href="//brasil.elpais.com/brasil/2018/01/12/politica/1515787762_592872.html" title="Ver Noticia">A semana em que as primeiras pedras atingiram a vidraça de Jair Bolsonaro</a></li>
-<li class="estirar"><span class="numero">3</span><a href="//brasil.elpais.com/brasil/2018/09/24/politica/1537815456_213002.html" title="Ver Noticia">José Dirceu: “O problema do Bolsonaro é do PSDB e DEM. Sem Lula, temos Ciro e Haddad”</a></li>
-<li class="estirar"><span class="numero">4</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537987540_575485.html" title="Ver Noticia">Calejados, candidatos à presidência fazem quinto debate equilibrado</a></li>
-<li class="estirar"><span class="numero">5</span><a href="http://smoda.elpais.com/moda/nacho-vidal-mi-hija-no-esta-en-un-cuerpo-equivocado-es-una-nina-con-pene/" title="Ver Noticia">Nacho Vidal: “Mi hija no está en un cuerpo equivocado, es una niña con pene”</a></li>
-<li class="estirar"><span class="numero">6</span><a href="//elpais.com/internacional/2018/07/23/mundo_global/1532345833_454942.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Cadáveres atrapados durante décadas en glaciares suizos salen a la superficie por el calentamiento global</a></li>
-<li class="estirar"><span class="numero">7</span><a href="//elpais.com/sociedad/2018/09/27/actualidad/1538048561_887845.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El parricida de Castellón, a su exmujer: “Me voy a cargar lo que más quieres”</a></li>
-<li class="estirar"><span class="numero">8</span><a href="//elpais.com/internacional/2018/09/27/mexico/1537999590_041505.html" title="Ver Noticia">El exgobernador mexicano Javier Duarte es condenado a nueve años de prisión tras declararse culpable</a></li>
-<li class="estirar"><span class="numero">9</span><a href="//elpais.com/internacional/2018/09/27/estados_unidos/1538010036_433237.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Trump, sobre su discurso en la ONU: “No se reían de mí, se reían conmigo”</a></li>
-<li class="estirar"><span class="numero">10</span><a href="//elpais.com/internacional/2018/09/26/estados_unidos/1537975769_704871.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Cuarta acusación de abuso sexual contra el candidato de Trump al Supremo</a></li>
+<li class="estirar"><span class="numero">1</span><a href="//brasil.elpais.com/brasil/2018/10/05/opinion/1538752101_102353.html" title="Ver Noticia">A mais nova ‘fake news’ de Bolsonaro</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//brasil.elpais.com/brasil/2018/09/19/deportes/1537394219_927623.html" title="Ver Noticia">Juninho Pernambucano: “Se eu fui censurado e ameaçado, toda a imprensa também foi”</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//elpais.com/cultura/2018/10/06/actualidad/1538820063_864193.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>El curioso caso del ‘banksy’ en la trituradora</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//brasil.elpais.com/brasil/2018/10/03/politica/1538583736_557680.html" title="Ver Noticia">A tragicomédia das mentiras que moldam as eleições no WhatsApp</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//elpais.com/cultura/2018/10/06/actualidad/1538807004_654748.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>Muere Montserrat Caballé, la diva de todos</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//brasil.elpais.com/brasil/2018/01/12/politica/1515787762_592872.html" title="Ver Noticia">A semana em que as primeiras pedras atingiram a vidraça de Jair Bolsonaro</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//brasil.elpais.com/brasil/2018/10/06/opinion/1538852257_174248.html" title="Ver Noticia">Por que votamos em Hitler</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//brasil.elpais.com/brasil/2018/10/06/politica/1538859277_033603.html" title="Ver Noticia"><span title="Vídeo" class="video">Vídeo</span>O que Bolsonaro já disse de fato sobre mulheres, negros e gays</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//brasil.elpais.com/brasil/2018/10/05/opinion/1538754101_395174.html" title="Ver Noticia">As elites que escolhem Bolsonaro colocam em risco as vidas de outros</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//brasil.elpais.com/brasil/2018/10/04/cultura/1538677664_945391.html" title="Ver Noticia">“Meu livro é sobre a ditadura. Jamais pensei que seria censurado”, diz autor de ‘Meninos Sem Pátria’</a></li>
 </ol>
 </div>			<div class="contenido" id="lmv_brasil" >
 <ol>
-<li class="estirar"><span class="numero">1</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537997982_557864.html" title="Ver Notícia">Carlos Bolsonaro será denunciado por apologia à tortura na Câmara do Rio</a></li>
-<li class="estirar"><span class="numero">2</span><a href="//brasil.elpais.com/brasil/2018/01/12/politica/1515787762_592872.html" title="Ver Notícia">A semana em que as primeiras pedras atingiram a vidraça de Jair Bolsonaro</a></li>
-<li class="estirar"><span class="numero">3</span><a href="//brasil.elpais.com/brasil/2018/09/24/politica/1537815456_213002.html" title="Ver Notícia">José Dirceu: “O problema do Bolsonaro é do PSDB e DEM. Sem Lula, temos Ciro e Haddad”</a></li>
-<li class="estirar"><span class="numero">4</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537987540_575485.html" title="Ver Notícia">Calejados, candidatos à presidência fazem quinto debate equilibrado</a></li>
-<li class="estirar"><span class="numero">5</span><a href="//brasil.elpais.com/brasil/2017/10/25/politica/1508939191_181548.html" title="Ver Notícia">Como era o Brasil quando armas eram vendidas em shoppings</a></li>
-<li class="estirar"><span class="numero">6</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537978764_156884.html" title="Ver Notícia">Bebê morto com tiro na cabeça é um cruel símbolo da situação dos povos indígenas no Brasil</a></li>
-<li class="estirar"><span class="numero">7</span><a href="//brasil.elpais.com/brasil/2018/09/24/opinion/1537805079_256045.html" title="Ver Notícia">Mulheres contra a opressão</a></li>
-<li class="estirar"><span class="numero">8</span><a href="//brasil.elpais.com/brasil/2018/08/29/politica/1535564207_054097.html" title="Ver Notícia">Bolsonaro mentiu ao falar de livro de educação sexual no ‘JN’</a></li>
-<li class="estirar"><span class="numero">9</span><a href="//brasil.elpais.com/brasil/2018/09/20/opinion/1537447119_621795.html" title="Ver Notícia">Mudança no imposto de renda que planeja economista de Bolsonaro pode agravar a desigualdade e a crise</a></li>
-<li class="estirar"><span class="numero">10</span><a href="//brasil.elpais.com/brasil/2018/09/26/politica/1537913905_985857.html" title="Ver Notícia">Ex-mulher de Bolsonaro disse ao Itamaraty que ele a ameaçou de morte</a></li>
+<li class="estirar"><span class="numero">1</span><a href="//brasil.elpais.com/brasil/2018/10/05/opinion/1538752101_102353.html" title="Ver Notícia">A mais nova ‘fake news’ de Bolsonaro</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//brasil.elpais.com/brasil/2018/09/19/deportes/1537394219_927623.html" title="Ver Notícia">Juninho Pernambucano: “Se eu fui censurado e ameaçado, toda a imprensa também foi”</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//brasil.elpais.com/brasil/2018/10/03/politica/1538583736_557680.html" title="Ver Notícia">A tragicomédia das mentiras que moldam as eleições no WhatsApp</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//brasil.elpais.com/brasil/2018/01/12/politica/1515787762_592872.html" title="Ver Notícia">A semana em que as primeiras pedras atingiram a vidraça de Jair Bolsonaro</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//brasil.elpais.com/brasil/2018/10/06/opinion/1538852257_174248.html" title="Ver Notícia">Por que votamos em Hitler</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//brasil.elpais.com/brasil/2018/10/06/politica/1538859277_033603.html" title="Ver Notícia"><span title="Vídeo" class="video">Vídeo</span>O que Bolsonaro já disse de fato sobre mulheres, negros e gays</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//brasil.elpais.com/brasil/2018/10/05/opinion/1538754101_395174.html" title="Ver Notícia">As elites que escolhem Bolsonaro colocam em risco as vidas de outros</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//brasil.elpais.com/brasil/2018/10/04/cultura/1538677664_945391.html" title="Ver Notícia">“Meu livro é sobre a ditadura. Jamais pensei que seria censurado”, diz autor de ‘Meninos Sem Pátria’</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//brasil.elpais.com/brasil/2014/02/14/politica/1392402426_093148.html" title="Ver Notícia">“Os gays não são semideuses. A maioria é fruto das drogas”</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//brasil.elpais.com/brasil/2018/10/02/politica/1538454557_419749.html" title="Ver Notícia">Policiais estupraram meninas durante intervenção no Rio, aponta relatório da Defensoria Pública</a></li>
 </ol>
 </div>			<div class="contenido" id="lmv_catalunya" style="display:none" >
 <ol>
-<li class="estirar"><span class="numero">1</span><a href="//cat.elpais.com/cat/2018/09/27/cultura/1538036752_451427.html" title="Veure Notícia">Stephen King, un català de por</a></li>
-<li class="estirar"><span class="numero">2</span><a href="//cat.elpais.com/cat/2018/09/27/opinion/1538067434_446213.html" title="Veure Notícia">Fora furs!</a></li>
-<li class="estirar"><span class="numero">3</span><a href="//cat.elpais.com/cat/2018/09/26/cultura/1537966086_120196.html" title="Veure Notícia">“Sherlock Holmes és una oportunitat per crear nous espectadors de teatre”</a></li>
-<li class="estirar"><span class="numero">4</span><a href="//cat.elpais.com/cat/2018/09/26/catalunya/1537977632_698457.html" title="Veure Notícia">Colau agraeix a la Guàrdia Urbana la seva feina “en un any que no ha estat fàcil”</a></li>
-<li class="estirar"><span class="numero">5</span><a href="//cat.elpais.com/cat/2018/09/27/catalunya/1538053520_451005.html" title="Veure Notícia">Mor als 74 anys Carles Canut, una icona del teatre català</a></li>
-<li class="estirar"><span class="numero">6</span><a href="//cat.elpais.com/cat/2018/09/27/catalunya/1538045334_900510.html" title="Veure Notícia">Quim Torra, esbroncat durant una visita a Sant Andreu de la Barca</a></li>
-<li class="estirar"><span class="numero">7</span><a href="//cat.elpais.com/cat/2018/09/25/catalunya/1537901121_892098.html" title="Veure Notícia">U d’Octubre, no Primer d’Octubre</a></li>
-<li class="estirar"><span class="numero">8</span><a href="//cat.elpais.com/cat/2018/09/26/espana/1537986129_745997.html" title="Veure Notícia">El partit liberal europeu proposa expulsar el PDeCAT</a></li>
-<li class="estirar"><span class="numero">9</span><a href="//cat.elpais.com/cat/2018/09/26/catalunya/1537959004_543030.html" title="Veure Notícia">La candidatura de Valls es dirà “Barcelona, capital europea”</a></li>
-<li class="estirar"><span class="numero">10</span><a href="//cat.elpais.com/cat/2018/09/26/catalunya/1537985221_555083.html" title="Veure Notícia"><span title="Vídeo" class="video">Vídeo</span>Puigdemont, sobre la seva fugida: “No crec en els màrtirs”</a></li>
+<li class="estirar"><span class="numero">1</span><a href="//cat.elpais.com/cat/2018/10/05/opinion/1538759277_850424.html" title="Veure Notícia">Por de la complexitat</a></li>
+<li class="estirar"><span class="numero">2</span><a href="//cat.elpais.com/cat/2018/10/06/deportes/1538835204_530649.html" title="Veure Notícia">L’escut del Barça i la cara de Messi</a></li>
+<li class="estirar"><span class="numero">3</span><a href="//cat.elpais.com/cat/2018/10/04/cultura/1538662341_032904.html" title="Veure Notícia">La “bufonada” del 6 d’octubre de 1934</a></li>
+<li class="estirar"><span class="numero">4</span><a href="//cat.elpais.com/cat/2018/10/06/opinion/1538843121_814820.html" title="Veure Notícia">El pa fugitiu</a></li>
+<li class="estirar"><span class="numero">5</span><a href="//cat.elpais.com/cat/2018/10/05/catalunya/1538740154_502623.html" title="Veure Notícia">El Govern torna a fer enfadar els Mossos per excloure l’Estat d’un acte oficial</a></li>
+<li class="estirar"><span class="numero">6</span><a href="//cat.elpais.com/cat/2018/10/06/cultura/1538807004_654748.html" title="Veure Notícia"><span title="Vídeo" class="video">Vídeo</span>Mor Montserrat Caballé als 85 anys</a></li>
+<li class="estirar"><span class="numero">7</span><a href="//cat.elpais.com/cat/2018/10/05/catalunya/1538735216_826003.html" title="Veure Notícia">La Universitat de Barcelona retira el doctorat a un càrrec del PDeCAT per plagi</a></li>
+<li class="estirar"><span class="numero">8</span><a href="//cat.elpais.com/cat/2018/10/02/opinion/1538496610_125139.html" title="Veure Notícia">Insensatesa</a></li>
+<li class="estirar"><span class="numero">9</span><a href="//cat.elpais.com/cat/2018/05/11/cultura/1526029019_087401.html" title="Veure Notícia">La ganyota del malestar</a></li>
+<li class="estirar"><span class="numero">10</span><a href="//cat.elpais.com/cat/2018/10/05/catalunya/1538734379_341910.html" title="Veure Notícia">Barcelona canviarà el nom de l’avinguda de Borbó per ‘Els Quinze’</a></li>
 </ol>
 </div>
 <div class="envoltorio_publi estirar">
@@ -774,9 +784,9 @@ function lmv_cambia_subpestana(idpestana)
 </div>
 </div>
 <div id="outbrain" class="outbrain">
-<div class="OUTBRAIN" data-src="http://brasil.elpais.com/brasil/2017/04/04/cultura/1491331135_526675.html" data-widget-id="AR_6" data-ob-template="elpais" ></div>
-<div class="OUTBRAIN" data-src="http://brasil.elpais.com/brasil/2017/04/04/cultura/1491331135_526675.html" data-widget-id="AR_5" data-ob-template="elpais" ></div>
-<div class="OUTBRAIN" data-src="http://brasil.elpais.com/brasil/2017/04/04/cultura/1491331135_526675.html" data-widget-id="AR_4" data-ob-template="elpais" ></div>
+<div class="OUTBRAIN" data-src="http://brasil.elpais.com/brasil/2016/01/18/cultura/1453120223_711042.html" data-widget-id="AR_6" data-ob-template="elpais" ></div>
+<div class="OUTBRAIN" data-src="http://brasil.elpais.com/brasil/2016/01/18/cultura/1453120223_711042.html" data-widget-id="AR_5" data-ob-template="elpais" ></div>
+<div class="OUTBRAIN" data-src="http://brasil.elpais.com/brasil/2016/01/18/cultura/1453120223_711042.html" data-widget-id="AR_4" data-ob-template="elpais" ></div>
 <script type="text/javascript" async src="//widgets.outbrain.com/outbrain.js"></script>
 </div>
 <style>@media(max-width: 728px){.principal--fijo ~ .envoltorio_publi,.principal--fijo .otros .envoltorio_publi:last-child{position: fixed;z-index: 2000;background: #fff;bottom: 0;width: 100%!important;left: 0;}.principal--fijo ~ .envoltorio_publi #elpais_gpt-MLDB3 ~ button,.principal--fijo #elpais_gpt-MLDB3 ~ button{position: absolute;visibility: visible;width: 28px;height: 28px;top: -28px;z-index: 2010;right: 0;background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTMnIGhlaWdodD0nMTMnIHZpZXdCb3g9JzM0MSA4IDEzIDEzJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnPjxwYXRoIGZpbGw9JyM0RjRGNEYnIGQ9J00zNTQgOS4zMUwzNTIuNjkgOGwtNS4xOSA1LjE5TDM0Mi4zMSA4IDM0MSA5LjMxbDUuMTkgNS4xOS01LjE5IDUuMTkgMS4zMSAxLjMxIDUuMTktNS4xOSA1LjE5IDUuMTkgMS4zMS0xLjMxLTUuMTktNS4xOXonIGZpbGwtcnVsZT0nZXZlbm9kZCcvPjwvc3ZnPg==);background-size: 13px 13px;background-position: 9px;background-color: #fff;background-repeat: no-repeat;box-shadow: 0 -1px 1px 0 rgba(0,0,0,0.2);border: none;border-radius: 12px 0 0 0;}.principal--fijo ~ .envoltorio_publi #elpais_gpt-MLDB3[style*=none] ~ button,.principal--fijo #elpais_gpt-MLDB3[style*=none] ~ button {visibility: hidden;}.principal--fijo ~ .envoltorio_publi #elpais_gpt-MLDB3 > div,.principal--fijo #elpais_gpt-MLDB3 > div{margin-bottom: 0;}.principal--fijo ~ .envoltorio_publi #elpais_gpt-MLDB3,.principal--fijo #elpais_gpt-MLDB3{padding-top: 4px;width: 100%;text-align: center;box-shadow: 0 0 5px 0 rgba(0,0,0,0.2)!important;}.principal--fijo ~ .envoltorio_publi #elpais_gpt-MLDB3[style] ~ button,.principal--fijo #elpais_gpt-MLDB3[style] ~ button {display:block !important}}</style>
@@ -810,7 +820,7 @@ function lmv_cambia_subpestana(idpestana)
 <li><a href="/rss/brasil/portada_completo.xml">RSS</a></li>
 </ul>
 </div>
-<!-- date 2018-09-28 12:36:42 AM-->
+<!-- date 2018-10-07 03:21:25 AM-->
 <script type="text/javascript">
 (function(){if(PBS.slm&&PBS.slm.cf&&PBS.slm.cf.biT_){var biT_=function(BIT){var ps=document.querySelectorAll(BIT.sel),el,cls=BIT.cls||"",pos=BIT.pos,min=BIT.min||0,ads=PBS.slm.cf.ads,axm=PBS.axm,sh=0,tel,tds;if(ps&&ps.length&&ps.length>0)for(el in pos){tds=ps[pos[el][0]-1];if(tds||min>sh){tel=axm.h.el("div",{"id":PBS.slm.cf.divid+"-"+el.toUpperCase(),"Cn":cls});tds&&tds.parentNode.insertBefore(tel,tds.nextSibling)||ps[ps.length-1].parentNode.appendChild(tel)}sh++}},c;for(c=0;c<PBS.slm.cf.biT_.length;c++)biT_(PBS.slm.cf.biT_[c])}var publiPbsLoad=document.querySelectorAll("div[class*='publiLoad']");if("object"==typeof publiPbsLoad[0]){var _M=PBS.axm.C.isMovil(),_P=_M?.5:.3,size=[],i=PBS.axm.C.screen().ancho,o=PBS.axm.C.screen().alto;PBS.slm.log.onview={};window.addEventListener("scroll",function(e){for(l=0;l<publiPbsLoad.length;l++){var d=document.getElementById(publiPbsLoad[l].id),s=d.getBoundingClientRect().top,n=d.id.split(gtpdivid+"-")[1];if((o*_P)+o>s&&typeof PBS.slm.log.onview[n]=="undefined"){PBS.slm.log.onview[n]=!0;if(-1!=n.indexOf("MPU")){size=[[300,250]]}else if(-1!=n.indexOf("LDB")){if(i>=980){size=[[728,90],[980,90]]}else if(i>=728){size=[[728,90]]}else{n="M"+n;size=[[320,50]]}}else if(-1!=n.indexOf("NSTD")){size=!1}else if(-1!=n.indexOf("NATAD")){size=[[300,250],"fluid"]};PBS.axm.h.slr([{d:d.id,p:n.toLowerCase(),s:size}]);size=[]}}})}})();
 </script>
@@ -1121,5 +1131,5 @@ if(typeof window['ampliaFoto'] == 'function'){
 </script></div>
 </footer>
 </div>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"de584669e4","applicationID":"81461901","transactionName":"MwFaYEIDWEZQVEENCQpLbUZZTVRHUERcCElOSxIbGk1VQF1DQBYHS0oSXEQPWg==","queueTime":0,"applicationTime":143,"atts":"H0ZZFgoZS0g=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"de584669e4","applicationID":"81461901","transactionName":"MwFaYEIDWEZQVEENCQpLbUZZTVRHUERcCElOSxIbGk1VQF1DQBYHS0oSXEQPWg==","queueTime":0,"applicationTime":149,"atts":"H0ZZFgoZS0g=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>

@@ -1,0 +1,886 @@
+1538571251161	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.LAH41pNVt7vk"
+
+(firefox:21851): Gtk-WARNING **: 09:54:12.661: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:21851): Gtk-WARNING **: 09:54:12.661: Theme parsing error: <data>:1:76: Expected ')' in color definition
+1538571255071	Marionette	INFO	Listening on port 43721
+1538571255172	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538571255228	Marionette	DEBUG	[2147483649] Frame script loaded
+1538571255244	Marionette	DEBUG	[2147483649] Frame script registered
+1538571291541	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.2bNr0bMOzYft"
+
+(firefox:22045): Gtk-WARNING **: 09:54:52.668: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:22045): Gtk-WARNING **: 09:54:52.668: Theme parsing error: <data>:1:76: Expected ')' in color definition
+1538571294683	Marionette	INFO	Listening on port 40623
+1538571294757	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538571294838	Marionette	DEBUG	[2147483649] Frame script loaded
+1538571294839	Marionette	DEBUG	[2147483649] Frame script registered
+1538571294875	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1538571296351	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+1538571300260	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://www.omelete.com.br/criticas
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+1538571303025	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://www.omelete.com.br/criticas
+JavaScript error: https://www.omelete.com.br/criticas, line 9: ReferenceError: rp_inventory is not defined
+1538571337225	Marionette	INFO	Stopped listening on port 43721
+1538571359105	Marionette	INFO	Stopped listening on port 40623
+1538571570231	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.9NeUTSKguNtC"
+
+(firefox:22632): Gtk-WARNING **: 09:59:31.321: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:22632): Gtk-WARNING **: 09:59:31.321: Theme parsing error: <data>:1:76: Expected ')' in color definition
+1538571573389	Marionette	INFO	Listening on port 44807
+1538571573560	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538571573614	Marionette	DEBUG	[2147483649] Frame script loaded
+1538571573615	Marionette	DEBUG	[2147483649] Frame script registered
+1538571573628	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1538571576202	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+1538571581958	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://www.omelete.com.br/criticas
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+1538571586106	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://www.omelete.com.br/criticas
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+1538571647862	Marionette	INFO	Stopped listening on port 44807
+1538571649339	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.mPwvbVKYqCg4"
+
+(firefox:23026): Gtk-WARNING **: 10:00:50.367: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:23026): Gtk-WARNING **: 10:00:50.367: Theme parsing error: <data>:1:76: Expected ')' in color definition
+1538571652270	Marionette	INFO	Listening on port 44437
+1538571652372	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538571652450	Marionette	DEBUG	[2147483649] Frame script loaded
+1538571652452	Marionette	DEBUG	[2147483649] Frame script registered
+1538571652482	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1538571654802	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+1538571742426	Marionette	DEBUG	[2147483649] Received DOM event unload for https://www.omelete.com.br/criticas
+JavaScript error: https://tags.t.tailtarget.com/t3m.js?i=TT-9804-3/CT-153, line 3: NS_ERROR_NOT_INITIALIZED: 
+1538571742430	Marionette	DEBUG	[2147483649] Received observer notification outer-window-destroyed for 2147483649
+[Parent 23026, Gecko_IOThread] WARNING: pipe error (85): Conexão fechada pela outra ponta: file /build/firefox-LCnNpq/firefox-62.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Parent 23026, Gecko_IOThread] WARNING: pipe error (60): Conexão fechada pela outra ponta: file /build/firefox-LCnNpq/firefox-62.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1538571742984	Marionette	INFO	Stopped listening on port 44437
+1538571752269	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.vUDG4cMxB3hd"
+
+(firefox:23260): Gtk-WARNING **: 10:02:33.562: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:23260): Gtk-WARNING **: 10:02:33.563: Theme parsing error: <data>:1:76: Expected ')' in color definition
+1538571755493	Marionette	INFO	Listening on port 40155
+1538571755601	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538571755668	Marionette	DEBUG	[2147483649] Frame script loaded
+1538571755678	Marionette	DEBUG	[2147483649] Frame script registered
+1538571755707	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1538571758049	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+1538571764653	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://www.omelete.com.br/criticas
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+1538571767515	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://www.omelete.com.br/criticas
+1538571769342	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538571772669	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538571775745	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538571778451	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538571787123	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+WebGL(0x7f8255fef000)::ForceLoseContext
+WebGL(0x7f824c20c000)::ForceLoseContext
+JavaScript warning: https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.5/pixi.min.js, line 14: Error: WebGL warning: drawElements: This operation requires zeroing texture data. This is slow.
+JavaScript warning: https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.5/pixi.min.js, line 14: Error: WebGL warning: drawElements: This operation requires zeroing texture data. This is slow.
+1538571789662	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538571792003	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+[Parent 23260, Gecko_IOThread] WARNING: pipe error (85): Conexão fechada pela outra ponta: file /build/firefox-LCnNpq/firefox-62.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1538571794056	Marionette	INFO	Stopped listening on port 40155
+1538572206465	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.sKf9yb9lzDYf"
+
+(firefox:24168): Gtk-WARNING **: 10:10:07.577: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:24168): Gtk-WARNING **: 10:10:07.577: Theme parsing error: <data>:1:76: Expected ')' in color definition
+1538572209688	Marionette	INFO	Listening on port 42923
+1538572209784	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538572209854	Marionette	DEBUG	[2147483649] Frame script loaded
+1538572209855	Marionette	DEBUG	[2147483649] Frame script registered
+1538572209874	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1538572211476	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+1538572216886	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://www.omelete.com.br/criticas
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+1538572221832	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://www.omelete.com.br/criticas
+JavaScript error: https://www.omelete.com.br/criticas, line 9: ReferenceError: rp_inventory is not defined
+[Parent 24168, Gecko_IOThread] WARNING: pipe error (67): Conexão fechada pela outra ponta: file /build/firefox-LCnNpq/firefox-62.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1538572259328	Marionette	INFO	Stopped listening on port 42923
+1538572322934	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.W6kGN4L5qhW6"
+
+(firefox:24572): Gtk-WARNING **: 10:12:04.005: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:24572): Gtk-WARNING **: 10:12:04.005: Theme parsing error: <data>:1:76: Expected ')' in color definition
+1538572326008	Marionette	INFO	Listening on port 36147
+1538572326045	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538572326122	Marionette	DEBUG	[2147483649] Frame script loaded
+1538572326141	Marionette	DEBUG	[2147483649] Frame script registered
+1538572326173	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1538572328045	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+1538572334417	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://www.omelete.com.br/criticas
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+1538572338145	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://www.omelete.com.br/criticas
+JavaScript error: https://www.omelete.com.br/criticas, line 9: ReferenceError: rp_inventory is not defined
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/client/shared/vendor/react-dom.js, line 32: Error: Minified React error #188; visit http://facebook.github.io/react/docs/error-decoder.html?invariant=188 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/box-model.js, line 416: TypeError: quads is undefined
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 202: TypeError: this.win is null
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+[Parent 24572, Gecko_IOThread] WARNING: pipe error (70): Conexão fechada pela outra ponta: file /build/firefox-LCnNpq/firefox-62.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1538572374780	Marionette	INFO	Stopped listening on port 36147
+1538572772723	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.4GbBmB42U029"
+
+(firefox:25351): Gtk-WARNING **: 10:19:33.966: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:25351): Gtk-WARNING **: 10:19:33.966: Theme parsing error: <data>:1:76: Expected ')' in color definition
+1538572776081	Marionette	INFO	Listening on port 43995
+1538572776134	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538572776187	Marionette	DEBUG	[2147483649] Frame script loaded
+1538572776192	Marionette	DEBUG	[2147483649] Frame script registered
+1538572776273	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1538572777638	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+1538572823426	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for https://www.omelete.com.br/criticas
+1538572823427	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://www.omelete.com.br/criticas
+1538572824204	Marionette	DEBUG	[2147483649] Received DOM event unload for https://www.omelete.com.br/criticas
+1538572824274	Marionette	DEBUG	[2147483649] Received observer notification outer-window-destroyed for 2147483653
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+1538572825081	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://www.omelete.com.br/criticas
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+1538572826694	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://www.omelete.com.br/criticas
+WebGL(0x7f7058cbd800)::ForceLoseContext
+WebGL(0x7f704e62e000)::ForceLoseContext
+JavaScript warning: https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.5/pixi.min.js, line 14: Error: WebGL warning: drawElements: This operation requires zeroing texture data. This is slow.
+JavaScript warning: https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.5/pixi.min.js, line 14: Error: WebGL warning: drawElements: This operation requires zeroing texture data. This is slow.
+Handler function NetworkEventActorProxy.addSecurityInfo threw an exception: [Exception... "Component not initialized"  nsresult: "0xc1f30001 (NS_ERROR_NOT_INITIALIZED)"  location: "JS frame :: resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js :: NetworkEventActorProxy.methodFactory/< :: line 1888"  data: no]
+Stack: NetworkEventActorProxy.methodFactory/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:1888:5
+exports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14
+NetworkResponseListener.prototype._getSecurityInfo<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:519:5
+exports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14
+onStartRequest@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:439:5
+Line: 1888, column: 0
+console.error: "Handler function NetworkEventActorProxy.addSecurityInfo threw an exception: [Exception... \"Component not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js :: NetworkEventActorProxy.methodFactory/< :: line 1888\"  data: no]\nStack: NetworkEventActorProxy.methodFactory/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:1888:5\nexports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14\nNetworkResponseListener.prototype._getSecurityInfo<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:519:5\nexports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14\nonStartRequest@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:439:5\nLine: 1888, column: 0"
+Handler function NetworkEventActorProxy.addSecurityInfo threw an exception: [Exception... "Component not initialized"  nsresult: "0xc1f30001 (NS_ERROR_NOT_INITIALIZED)"  location: "JS frame :: resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js :: NetworkEventActorProxy.methodFactory/< :: line 1888"  data: no]
+Stack: NetworkEventActorProxy.methodFactory/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:1888:5
+exports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14
+NetworkResponseListener.prototype._getSecurityInfo<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:519:5
+exports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14
+onStartRequest@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:439:5
+Line: 1888, column: 0
+console.error: "Handler function NetworkEventActorProxy.addSecurityInfo threw an exception: [Exception... \"Component not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js :: NetworkEventActorProxy.methodFactory/< :: line 1888\"  data: no]\nStack: NetworkEventActorProxy.methodFactory/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:1888:5\nexports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14\nNetworkResponseListener.prototype._getSecurityInfo<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:519:5\nexports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14\nonStartRequest@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:439:5\nLine: 1888, column: 0"
+Handler function NetworkEventActorProxy.addSecurityInfo threw an exception: [Exception... "Component not initialized"  nsresult: "0xc1f30001 (NS_ERROR_NOT_INITIALIZED)"  location: "JS frame :: resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js :: NetworkEventActorProxy.methodFactory/< :: line 1888"  data: no]
+Stack: NetworkEventActorProxy.methodFactory/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:1888:5
+exports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14
+NetworkResponseListener.prototype._getSecurityInfo<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:519:5
+exports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14
+onStartRequest@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:439:5
+Line: 1888, column: 0
+console.error: "Handler function NetworkEventActorProxy.addSecurityInfo threw an exception: [Exception... \"Component not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js :: NetworkEventActorProxy.methodFactory/< :: line 1888\"  data: no]\nStack: NetworkEventActorProxy.methodFactory/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:1888:5\nexports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14\nNetworkResponseListener.prototype._getSecurityInfo<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:519:5\nexports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14\nonStartRequest@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:439:5\nLine: 1888, column: 0"
+Handler function NetworkEventActorProxy.addResponseContent threw an exception: [Exception... "Component not initialized"  nsresult: "0xc1f30001 (NS_ERROR_NOT_INITIALIZED)"  location: "JS frame :: resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js :: NetworkEventActorProxy.methodFactory/< :: line 1888"  data: no]
+Stack: NetworkEventActorProxy.methodFactory/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:1888:5
+exports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14
+_onComplete@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:664:5
+onStreamClose@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:621:7
+onInputStreamReady@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:715:7
+Line: 1888, column: 0
+console.error: "Handler function NetworkEventActorProxy.addResponseContent threw an exception: [Exception... \"Component not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js :: NetworkEventActorProxy.methodFactory/< :: line 1888\"  data: no]\nStack: NetworkEventActorProxy.methodFactory/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:1888:5\nexports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14\n_onComplete@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:664:5\nonStreamClose@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:621:7\nonInputStreamReady@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:715:7\nLine: 1888, column: 0"
+Handler function NetworkEventActorProxy.addResponseContent threw an exception: [Exception... "Component not initialized"  nsresult: "0xc1f30001 (NS_ERROR_NOT_INITIALIZED)"  location: "JS frame :: resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js :: NetworkEventActorProxy.methodFactory/< :: line 1888"  data: no]
+Stack: NetworkEventActorProxy.methodFactory/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:1888:5
+exports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14
+_onComplete@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:664:5
+onStreamClose@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:621:7
+onInputStreamReady@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:715:7
+Line: 1888, column: 0
+console.error: "Handler function NetworkEventActorProxy.addResponseContent threw an exception: [Exception... \"Component not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js :: NetworkEventActorProxy.methodFactory/< :: line 1888\"  data: no]\nStack: NetworkEventActorProxy.methodFactory/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:1888:5\nexports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14\n_onComplete@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:664:5\nonStreamClose@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:621:7\nonInputStreamReady@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:715:7\nLine: 1888, column: 0"
+Handler function NetworkEventActorProxy.addResponseContent threw an exception: [Exception... "Component not initialized"  nsresult: "0xc1f30001 (NS_ERROR_NOT_INITIALIZED)"  location: "JS frame :: resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js :: NetworkEventActorProxy.methodFactory/< :: line 1888"  data: no]
+Stack: NetworkEventActorProxy.methodFactory/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:1888:5
+exports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14
+_onComplete@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:664:5
+onStreamClose@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:621:7
+onInputStreamReady@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:715:7
+Line: 1888, column: 0
+console.error: "Handler function NetworkEventActorProxy.addResponseContent threw an exception: [Exception... \"Component not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js :: NetworkEventActorProxy.methodFactory/< :: line 1888\"  data: no]\nStack: NetworkEventActorProxy.methodFactory/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:1888:5\nexports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14\n_onComplete@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:664:5\nonStreamClose@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:621:7\nonInputStreamReady@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:715:7\nLine: 1888, column: 0"
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1538572888763	Marionette	INFO	Stopped listening on port 43995
+1538572894919	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.bBo3cumE0uLK"
+
+(firefox:25685): Gtk-WARNING **: 10:21:36.117: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:25685): Gtk-WARNING **: 10:21:36.117: Theme parsing error: <data>:1:76: Expected ')' in color definition
+1538572898257	Marionette	INFO	Listening on port 43713
+1538572898370	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538572898461	Marionette	DEBUG	[2147483649] Frame script loaded
+1538572898463	Marionette	DEBUG	[2147483649] Frame script registered
+1538572898491	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1538572913983	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+1538572926149	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://www.omelete.com.br/criticas
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+1538572946403	Marionette	DEBUG	[2147483649] Received DOM event unload for https://www.omelete.com.br/criticas
+1538572946409	Marionette	DEBUG	[2147483649] Received observer notification outer-window-destroyed for 2147483653
+1538572946410	Marionette	DEBUG	[2147483649] Received observer notification outer-window-destroyed for 2147483649
+[Parent 25685, Gecko_IOThread] WARNING: pipe error (70): Conexão fechada pela outra ponta: file /build/firefox-LCnNpq/firefox-62.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1538572946982	Marionette	INFO	Stopped listening on port 43713
+1538572970460	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.TUrwIJOgoNHy"
+
+(firefox:25915): Gtk-WARNING **: 10:22:51.525: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:25915): Gtk-WARNING **: 10:22:51.525: Theme parsing error: <data>:1:76: Expected ')' in color definition
+1538572973463	Marionette	INFO	Listening on port 35877
+1538572973470	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538572973546	Marionette	DEBUG	[2147483649] Frame script loaded
+1538572973550	Marionette	DEBUG	[2147483649] Frame script registered
+1538572973565	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1538572975204	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+1538572981074	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://www.omelete.com.br/criticas
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+1538573071852	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://www.omelete.com.br/criticas
+1538573088818	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.LUL15SUy2t9B"
+
+(firefox:26169): Gtk-WARNING **: 10:24:49.849: Theme parsing error: <data>:1:34: Expected ')' in color definition
+
+(firefox:26169): Gtk-WARNING **: 10:24:49.849: Theme parsing error: <data>:1:76: Expected ')' in color definition
+1538573091867	Marionette	INFO	Listening on port 40905
+1538573091955	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538573092017	Marionette	DEBUG	[2147483649] Frame script loaded
+1538573092025	Marionette	DEBUG	[2147483649] Frame script registered
+1538573092044	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1538573093542	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+1538573099319	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://www.omelete.com.br/criticas
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=AW-1062127218, line 73: unreachable code after return statement
+1538573103001	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://www.omelete.com.br/criticas
+1538573108143	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573112513	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573117068	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+WebGL(0x7f0c780df800)::ForceLoseContext
+JavaScript warning: https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.5/pixi.min.js, line 14: Error: WebGL warning: drawElements: This operation requires zeroing texture data. This is slow.
+1538573121663	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573125948	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573130251	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573134539	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573138844	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573143143	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573147436	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573151746	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573156050	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573160359	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573164645	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573168953	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573173234	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573177541	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573181833	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573186132	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573190434	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573194739	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573199032	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573203329	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573207634	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573211931	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573216217	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573220512	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573224816	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573229125	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573233416	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573237712	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573242012	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573246303	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573250605	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573254897	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573259193	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573263483	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573267779	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573272074	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573276397	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573280682	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573284978	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573289275	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573294574	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573298852	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573303134	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573307427	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573311718	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573315992	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573320285	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573324576	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573328873	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573333179	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573337469	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573341775	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573346079	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573350367	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573354677	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573358961	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573363256	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573367563	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573371851	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573376138	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573380445	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573384742	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573389062	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573393351	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573397646	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573401963	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573406283	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573410601	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573414943	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573419264	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573423596	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573427959	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573432300	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573436634	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573440969	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573445281	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573449590	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573453916	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573458243	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573462552	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573466899	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573471233	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573475577	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573479896	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573484234	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573488543	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573492896	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573497242	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573501563	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573505915	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573510264	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573514576	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573518914	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573523252	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573527568	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573531900	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573536252	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573540599	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573544933	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573549261	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573553605	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573557934	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573562276	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573566616	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573570949	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573575283	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573579648	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573583996	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573588324	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573592652	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573596996	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573601330	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573605685	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573610018	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573614380	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573618714	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573623057	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573627386	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573631713	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573636032	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573640352	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573644683	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573649028	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573653365	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573657708	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573662044	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538573666376	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538574022872	Marionette	DEBUG	[2147483707] Frame script loaded
+1538574022881	Marionette	DEBUG	[2147483707] Frame script registered
+1538574022941	Marionette	DEBUG	[4294967297] Frame script loaded
+1538574022942	Marionette	DEBUG	[4294967297] Frame script registered
+[Parent 26169, Gecko_IOThread] WARNING: pipe error (132): Conexão fechada pela outra ponta: file /build/firefox-LCnNpq/firefox-62.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Parent 26169, Gecko_IOThread] WARNING: pipe error (95): Conexão fechada pela outra ponta: file /build/firefox-LCnNpq/firefox-62.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E002A,name=PContent::Msg_UpdateAppLocales) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E002A,name=PContent::Msg_UpdateAppLocales) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E0019,name=PContent::Msg_RegisterChrome) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E0019,name=PContent::Msg_RegisterChrome) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E002A,name=PContent::Msg_UpdateAppLocales) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E002A,name=PContent::Msg_UpdateAppLocales) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E0019,name=PContent::Msg_RegisterChrome) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E0019,name=PContent::Msg_RegisterChrome) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E002A,name=PContent::Msg_UpdateAppLocales) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E002A,name=PContent::Msg_UpdateAppLocales) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E0019,name=PContent::Msg_RegisterChrome) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E0019,name=PContent::Msg_RegisterChrome) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2E001A,name=PContent::Msg_RegisterChromeItem) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x170001,name=PBrowser::Msg_AsyncMessage) Channel error: cannot send/recv
+
+
+(firefox:26169): GVFS-RemoteVolumeMonitor-WARNING **: 11:48:08.394: Owner of volume monitor org.gtk.vfs.UDisks2VolumeMonitor disconnected from the bus; removing drives/volumes/mounts
+
+(firefox:26169): GVFS-RemoteVolumeMonitor-WARNING **: 11:48:08.394: Owner of volume monitor org.gtk.vfs.AfcVolumeMonitor disconnected from the bus; removing drives/volumes/mounts
+
+(firefox:26169): GVFS-RemoteVolumeMonitor-WARNING **: 11:48:08.394: Owner of volume monitor org.gtk.vfs.GoaVolumeMonitor disconnected from the bus; removing drives/volumes/mounts
+
+(firefox:26169): GVFS-RemoteVolumeMonitor-WARNING **: 11:48:08.394: Owner of volume monitor org.gtk.vfs.GPhoto2VolumeMonitor disconnected from the bus; removing drives/volumes/mounts
+
+(firefox:26169): GVFS-RemoteVolumeMonitor-WARNING **: 11:48:08.394: Owner of volume monitor org.gtk.vfs.MTPVolumeMonitor disconnected from the bus; removing drives/volumes/mounts
